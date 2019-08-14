@@ -101,7 +101,7 @@
 		position: absolute;
 		width: rem-calc(24);
 		height: rem-calc(15);
-		background: transparent url(../images/arrow.svg) 50% 50%/24px 15px no-repeat;
+		background: transparent url(/images/arrow.svg) 50% 50%/24px 15px no-repeat;
 		right: rem-calc(25);
 		top: 50%;
 		transform: translateY(-50%);
@@ -112,7 +112,7 @@
 		color: $black;
 
 		&::after{
-			background-image: url(../images/arrow-black.svg);
+			background-image: url(/images/arrow-black.svg);
 		}
 	}
 }

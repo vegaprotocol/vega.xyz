@@ -3,10 +3,10 @@
 @font-face {
 	font-family: 'Karben105Mono-Book';
 	src:
-		url('../fonts/karben.eot');
+		url('/fonts/karben.eot');
 		src:
-			url('../fonts/karben.eot?#iefix') format('embedded-opentype'),
-			url('../fonts/karben.woff2') format('woff2'),
-			url('../fonts/karben.woff') format('woff'),
-			url('../fonts/karben.ttf') format('truetype');
+			url('/fonts/karben.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/karben.woff2') format('woff2'),
+			url('/fonts/karben.woff') format('woff'),
+			url('/fonts/karben.ttf') format('truetype');
 }
