@@ -40,3 +40,7 @@ a:hover{
 	text-decoration: none;
 	border: none;
 }
+
+a:active{
+	border-bottom: solid 1px $vega_yellow;
+}

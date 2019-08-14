@@ -29,8 +29,10 @@ body{
 }
 
 header .column{
-	display: flex;
-	justify-content: space-between;
+	@media (min-width: 31.25rem){
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 header .column .logo{
@@ -38,8 +40,13 @@ header .column .logo{
 }
 
 header .column .connect{
-	text-align: right;
-	width: calc(100% - #{rem-calc(140)});
+	margin-top: rem-calc(20);
+
+	@media (min-width: 31.25rem){
+		margin-top: 0;
+		text-align: right;
+		width: calc(100% - #{rem-calc(140)});
+	}
 }
 
 .section{
@@ -52,6 +59,10 @@ header .column .connect{
 
 .section + .section{
 	padding-top: 0;
+}
+
+.constrain{
+	max-width: rem-calc(510);
 }
 
 .constrain-text{
