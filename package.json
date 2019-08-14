@@ -1,4 +1,7 @@
 {
+    "name": "vega-holiding-page",
+    "version": "1.0.0",
+    "private": true,
     "dependencies": {
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^6.1.0",
@@ -7,9 +10,9 @@
         "gulp-postcss": "8.0.0"
     },
     "browserslist": [
-	    "last 1 version",
-	    "> 1%",
-	    "maintained node versions",
-	    "not dead"
-	]
+        "last 1 version",
+        "> 1%",
+        "maintained node versions",
+        "not dead"
+    ]
 }
