@@ -1,0 +1,71 @@
+body{
+	padding: rem-calc(45 0);
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: rem-calc(0 25);
+
+	@media (min-width: $large) {
+		padding: rem-calc(0 50);
+	}
+}
+
+.column{
+	width: 100%;
+}
+
+header .column{
+	display: flex;
+	justify-content: space-between;
+}
+
+header .column .logo{
+	width: rem-calc(140);
+}
+
+header .column .connect{
+	text-align: right;
+	width: calc(100% - #{rem-calc(140)});
+}
+
+.section{
+	padding: rem-calc(40) 0;
+
+	@media (min-width: $large) {
+		padding: rem-calc(70) 0;
+	}
+}
+
+.section + .section{
+	padding-top: 0;
+}
+
+.constrain-text{
+	max-width: rem-calc(480);
+}
+
+
+@media (min-width: $medium) {
+	.column{
+		width: 75%;
+	}
+}
+
+@media (min-width: $large) {
+	.column{
+		width: 66.6666667%;
+	}
+
+	.constrain{
+		max-width: rem-calc(580);
+	}
+}
+
+@media (min-width: $xlarge) {
+	.column{
+		width: 50%;
+	}
+}

@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+@import "reset";
+@import "mixins";
+@import "variables";
+@import "fonts";
+@import "type";
+@import "layout";
+@import "components";
+
+body{
+	background: #000 url(../images/vega-background-medium.jpg) 100% 0 no-repeat;
+	color: #fff;
+
+	@media (min-width: $medium) {
+		background-image: url(../images/vega-background-large.jpg);
+	}
+
+	@media (min-width: $large) {
+		background-image: url(../images/vega-background-xlarge.jpg);
+	}
+}
