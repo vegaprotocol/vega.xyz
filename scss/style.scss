@@ -19,4 +19,8 @@ body{
 	@media (min-width: $large) {
 		background-image: url(../images/vega-background-xlarge.jpg);
 	}
+
+	@media (min-width: 90rem) {
+		background-size: 100% auto;
+	}
 }
