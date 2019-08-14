@@ -1,1 +1,2 @@
-/email/subscribed /subscribed.html    200
+/email/subscribe /subscribe.html    200
+/email/confirm /confirm.html    200
