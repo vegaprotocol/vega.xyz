@@ -137,9 +137,35 @@
 	}
 }
 
-.thanks{
-	border-bottom: solid 1px $vega_yellow;
-	font-size: rem-calc(20);
-	padding-bottom: rem-calc(3);
-	margin-bottom: rem-calc(30);
+.back{
+	display: inline-block;
+	position: relative;
+	color: $white;
+	border: solid 1px $vega_yellow;
+	border-radius: 100px;
+	font-size: 1.25rem;
+	padding: rem-calc(8 20 10 75);
+	cursor: pointer;
+	text-align: right;
+
+	&::before{
+		content: '';
+		position: absolute;
+		width: rem-calc(24);
+		height: rem-calc(15);
+		background: transparent url(/images/arrow-left.svg) 50% 50%/24px 15px no-repeat;
+		left: rem-calc(25);
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&:hover{
+		border: solid 1px $vega_yellow;
+		background-color: $vega_yellow;
+		color: $black;
+
+		&::before{
+			background-image: url(/images/arrow-black-left.svg);
+		}
+	}
 }
