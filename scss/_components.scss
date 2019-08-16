@@ -1,44 +1,8 @@
-.icon-medium{
-
-	width: rem-calc(21*0.75);
-	height: rem-calc(21*0.75);
+.connect .icon{
+	font-size: rem-calc(18);
 
 	@media (min-width: $medium) {
-		width: rem-calc(21);
-		height: rem-calc(21);
-	}
-}
-
-.icon-youtube{
-
-	width: rem-calc(31*0.75);
-	height: rem-calc(21*0.75);
-
-	@media (min-width: $medium) {
-		width: rem-calc(31);
-		height: rem-calc(21);
-	}
-}
-
-.icon-twitter{
-
-	width: rem-calc(27*0.75);
-	height: rem-calc(21*0.75);
-
-	@media (min-width: $medium) {
-		width: rem-calc(27);
-		height: rem-calc(21);
-	}
-}
-
-.icon-linkedin{
-
-	width: rem-calc(21*0.75);
-	height: rem-calc(21*0.75);
-
-	@media (min-width: $medium) {
-		width: rem-calc(21);
-		height: rem-calc(21);
+		font-size: rem-calc(21);
 	}
 }
 
@@ -55,7 +19,7 @@
 }
 
 .item__title{
-	font-weight: 600;
+	font-weight: 300;
 
 	@media (min-width: $medium) {
 		font-size: rem-calc(20);
@@ -130,11 +94,19 @@
 .connect a{
 	border: none;
 	display: inline-block;
-	margin: 0 rem-calc(8);
+	padding: 0 rem-calc(8);
+	color: $white;
+	transition: color 0.5s;
+	text-align: center;
+	min-width: rem-calc(35);
 
 	&:last-child{
 		margin-right: 0;
 	}
+}
+
+.connect a:hover{
+	color: rgba($white, 0.7);
 }
 
 .back{
