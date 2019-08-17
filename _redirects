@@ -1,2 +1,12 @@
 /email/subscribe /email/subscribe.html    200
 /email/confirm /email/confirm.html    200
+
+/jobs / 301
+/whitepapers/   / 301
+/papers/vega-protocol-whitepaper.pdf   /papers/vega-protocol-whitepaper-20181008.pdf    303
+/jobs/Vega-Quant-role.pdf   /jobs/_Vega-Quant-Q12019.pdf    303
+
+/team/* / 301
+/workwithus/ / 301
+/papers/ / 301
+/concepts/ / 301
