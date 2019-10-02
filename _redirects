@@ -1,4 +1,5 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
+http://vegaprotocol.io/* https://vega.xyz/:splat 301!
 
 # Redirect domain aliases to primary domain
 https://vegaprotocol.io/* https://vega.xyz/:splat 301!
