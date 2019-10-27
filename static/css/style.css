@@ -1,0 +1,41 @@
+
+hr {
+  border: 0;
+  margin: 5rem 0;
+}
+
+.homepage-content a {
+  text-decoration: none
+}
+
+.homepage-content a:focus {
+  text-decoration: underline
+}
+
+#sidebar {
+  top: 10px;
+  right: 0;
+  position: sticky;
+}
+
+#sidebar a {
+  text-decoration: none
+}
+
+#sidebar a:focus, #sidebar a:hover, #sidebar a:active {
+  text-decoration: underline;
+}
+
+#sidebar ul {
+  padding: 1em 0;
+  list-style: none;
+  border-left: 1px solid #000;
+  padding-left: 5px;
+}
+
+#sidebar ul li {
+  margin-left: 20px;
+  padding: 0.8em 0;
+  list-style: none;
+}
+

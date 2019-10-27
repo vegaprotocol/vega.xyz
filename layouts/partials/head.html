@@ -4,14 +4,14 @@
 <!-- https://discourse.gohugo.io/t/range-length-or-last-element/3803/3 -->
 {{ $list := .Site.Menus.main }}
 {{ $len := (len $list) }}
- <nav class="dtc v-mid tr pv1 ph 3" id="site-navigation">
-  <img src="/images/icon.png" class="fl pl4 pt1 v-center" width="30" />
+ <nav class="dtc v-mid tr pv1 ph3" id="site-navigation">
+  <img src="/images/icon.png" class="fl pl4 pt3 v-center" width="30" />
 
   <ul class="list pl0 pa0 ph3 dib">
     {{ range $index, $element := $list }}
       {{ $is := $page.IsMenuCurrent "main" . }}
       {{ $has := $page.HasMenuCurrent "main" . }}
-      <li class="dib lh-copy pa0">
+      <li class="dib lh-copy pa1">
         <a
           {{if or $is $has }}
           class="f6 fw4 no-underline dn dib-ns ph2 bb"

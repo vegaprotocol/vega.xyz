@@ -5,7 +5,6 @@ theme ="hugo-theme-basic"
 languageCode = "en-us"
 googleAnalytics = "UA-XXXXXXXXX-X"
 enableEmoji = true 
-copyright = "© 2018-19 Vega Holdings Limited, Suite 23 Portland House, Glacis Road, Gibraltar, GX11 1AA - Company number 48977"
 description = "Vega"
 
 [params]
@@ -46,14 +45,14 @@ description = "Vega"
     url = "/where/"
 
   [[menu.footer]]
-    identifier = "github"
-    name = "Github"
-    url = "https://github.com/vegaprotocol"
+    identifier = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/vegaprotocol"
 
   [[menu.footer]]
     identifier = "brand"
     name = "Brand assets"
-    url = "https://github.com/vegaprotocol"
+    url = "/static/assets.zip"
 
   [[menu.footer]]
     identifier = "privacy"
@@ -64,7 +63,12 @@ description = "Vega"
     identifier = "contact"
     name = "Contact us"
     url = "mailto:hi@vega.xyz"
- 
+
+  [[menu.footer]]
+    identifier = "impressum"
+    name = "Impressum"
+    url = "/impressum/"
+  
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true

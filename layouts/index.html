@@ -8,11 +8,11 @@
         {{ end }}
       </header>
 
-      <article class="homepage-content mw10 center ph3-ns">
+      <article class="homepage-content mw10 center ph4-ns">
       {{ range .Params.linkblocks }}
-        <section class="fl w-100 w-50-ns pa4">
+        <section class="fl w-100 w-50-ns ph5 pv1">
         <h3 class="f3"><a href="{{.link}}">&#x2192;&nbsp;{{.title}}</a></h3>
-        <ul class="f4 list pl0 lh-copy">{{ range .links }}
+        <ul class="f4 list pl1 lh-copy">{{ range .links }}
         <li>
           <span class="gray">&ndash;&nbsp;</span><a class="dark-gray {{with .highlight}}bg-light-yellow{{end}}" href="{{.link}}">{{.title}}{{if eq .status "true"}}<span class="black f4 b lh-copy">{{$.Page.Param "CurrentNetwork"}}{{end}}</span></span></a>
          {{if eq .count "true"}}

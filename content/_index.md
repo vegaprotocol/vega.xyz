@@ -9,17 +9,17 @@ headerdescription = "Page specific subtitle"
   link = "about"
 
   [[linkblocks.links]]
-  title = "New to Vega"
-  link = "about#new-to-vega"
+  title = "What is vega?"
+  link = "about#what-is-vega"
   highlight = "true"
 
   [[linkblocks.links]]
-  title = "Our mission"
-  link = "about#our-mission"
+  title = "Mission"
+  link = "about#mission"
 
   [[linkblocks.links]]
-  title = "Future"
-  link = "about#future"
+  title = "Concepts"
+  link = "about#concepts"
 
 [[linkblocks]]
   title = "Background"
@@ -27,16 +27,15 @@ headerdescription = "Page specific subtitle"
 
   [[linkblocks.links]]
   title = "Published papers"
-  link = "#thing"
+  link = "background#thing"
 
   [[linkblocks.links]]
-  title = "The Team"
-  link = "#thing4"
+  title = "What people are saying"
+  link = "background#press"
 
   [[linkblocks.links]]
-  title = "Open roles"
-  count = "true"
-  link = "/background/#jobs"
+  title = "Blank link"
+  link = "background#"
 
 
 [[linkblocks]]
@@ -53,7 +52,39 @@ headerdescription = "Page specific subtitle"
   link = "use#current-status"
 
   [[linkblocks.links]]
-  title = "Junk"
-  link = "use#junk"
+  title = "Build on Vega"
+  link = "use#build-on-vega"
 
+[[linkblocks]]
+  title = "Who"
+  link = "who"
+
+  [[linkblocks.links]]
+  title = "Investors"
+  link = "who#investor"
+
+  [[linkblocks.links]]
+  title = "Team"
+  link = "who#team"
+
+  [[linkblocks.links]]
+  title = "Open roles"
+  count = "true"
+  link = "who#jobs"
+
+[[linkblocks]]
+  title = "Where"
+  link = "where"
+
+  [[linkblocks.links]]
+  title = "Read the newsletter"
+  link = "where#newsletter"
+
+  [[linkblocks.links]]
+  title = "Blog"
+  link = "where#blog"
+
+  [[linkblocks.links]]
+  title = "Forum"
+  link = "where#forum"
 +++

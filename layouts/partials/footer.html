@@ -1,15 +1,12 @@
-<footer class="cf mt4 mw8 mw8-ns center pv3 ph5 silver">
+<footer class="cf mt4 mw8 mw8-ns center pv3 silver">
   <div>
    <nav>
     <ul class="list l0 ph0 avenir inline">
       {{range .Site.Menus.footer}}
-      <li class="dib ph2"><a href="{{.URL}}" class="silver no-underline">{{.Name}}</a></li>
+      <li class="dib pr4"><a href="{{.URL}}" class="silver no-underline">{{.Name}}</a></li>
       {{end}}
     </ul>
     </nav>
-    <p class="f6 mt3 lh-copy light-silver mid-gray avenir ph2">
-      {{ .Site.Copyright  | safeHTML }}
-    </p>
    </div>
 </footer>
    

@@ -10,9 +10,12 @@
     <article itemprop="articleBody" id="content" class="fl w-75-ns lh-copy">
       {{ .Content }}
     </article>
-    <aside class="pl5-l pl-2-m fl w-20 dn-s">
+    <aside id="sidebar" class="pl5-l pl-2-m fl w-25 dn-s">
       {{.TableOfContents}}
-    </aside>
+      <ul>
+        <li><a href="#">Back to top</a></li>
+      </ul>
+   </aside>
   </section>
 
   {{ partial "footer.html" . }}
