@@ -1,0 +1,76 @@
+
+baseURL = "https://www.example.com/"
+title = "Vega is super"
+theme ="hugo-theme-basic"
+languageCode = "en-us"
+googleAnalytics = "UA-XXXXXXXXX-X"
+enableEmoji = true 
+copyright = "© 2018-19 Vega Holdings Limited, Suite 23 Portland House, Glacis Road, Gibraltar, GX11 1AA - Company number 48977"
+description = "Vega"
+
+[params]
+  currentNetwork = "Testnet"
+  titleEmoji = ":tada:"
+  twitter = "vegaprotocol"
+
+  [[params.jobs]]
+  title = "Quant guy"
+  pdf = "/1.pdf"
+  description = "We like this guy"
+
+  [[params.jobs]]
+  title = "Dev guy"
+  pdf = "/1.pdf"
+  description = "We like this guy"
+
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+
+  [[menu.main]]
+    identifier = "background"
+    name = "Background"
+    url = "/background/"
+  
+  [[menu.main]]
+    identifier = "use"
+    name = "Use"
+    url = "/use/"
+  
+  [[menu.menu]]
+    identifier = "where"
+    name = "Where"
+    url = "/where/"
+
+  [[menu.footer]]
+    identifier = "github"
+    name = "Github"
+    url = "https://github.com/vegaprotocol"
+
+  [[menu.footer]]
+    identifier = "brand"
+    name = "Brand assets"
+    url = "https://github.com/vegaprotocol"
+
+  [[menu.footer]]
+    identifier = "privacy"
+    name = "Privacy Policy"
+    url = "/privacy/"
+
+  [[menu.footer]]
+    identifier = "contact"
+    name = "Contact us"
+    url = "mailto:hi@vega.xyz"
+ 
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true

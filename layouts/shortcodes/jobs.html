@@ -1,0 +1,14 @@
+{{ $jobs := .Site.Params.jobs }}
+{{ if gt (len $jobs) 0 }}
+  <ul class="">
+  {{ range $jobs}}
+    <li>
+      <h2>{{.title}}</h2>
+      <p>{{.description}}</p>
+      <p><a href="{{.pdf}}">{{.pdf}}</a></p>
+    </li>
+  {{end}}
+  </ul>
+{{else}}
+  We have no open roles at the moment. Check back later!
+{{end}}
