@@ -1,7 +1,10 @@
+{{ $papers := (where .Site.RegularPages "Section" "paper") }}
 <ul class="">
-  {{ range $.Page.Param "paper" }}
+  {{ range $papers }}
   <li>
-    <h2>{{.name}}</h2>
+    <h2>{{.Name}}</h2>
+    <p>{{.Description}}</p>
+    <p><a href="{{.Params.pdf}}">{{.Params.pdf}}</a></p>
   </li>
   {{end}}
 </ul>

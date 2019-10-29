@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $jobs := .Site.Params.jobs }}
+{{ $jobs := (where .Site.RegularPages "Section" "job") }}
     <main aria-role="main" class="cf mw10 mw8-ns center pa3 ph5-ns avenir">
       <header class="homepage-header mw10 center ph3-ns">
         <h1 class="tc f2 tracked-tight">{{.Params.headerline}}</h1>
@@ -10,7 +10,7 @@
 
       <article class="homepage-content mw10 center ph4-ns">
       {{ range .Params.linkblocks }}
-        <section class="fl w-100 w-50-ns ph5 pv1">
+      <section class=" fl w-100 w-50-ns ph5 pv1">
         <h3 class="f3"><a href="{{.link}}">&#x2192;&nbsp;{{.title}}</a></h3>
         <ul class="f4 list pl1 lh-copy">{{ range .links }}
         <li>
@@ -21,7 +21,7 @@
          </li>
         {{ end }}
         </ul>
-        </section>
+      </section>
       {{ end }}
       </article>
   </main>

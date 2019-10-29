@@ -2,7 +2,8 @@
 title = "Vega Protocol"
 headerline = "Vega is a protocol for creating and trading derivatives on a fully decentralised network."
 headerdescription = "Page specific subtitle"
-
+categories = ["Index"]
+currentNetwork = "Testnet"
 
 [[linkblocks]]
   title = "About"
@@ -27,16 +28,11 @@ headerdescription = "Page specific subtitle"
 
   [[linkblocks.links]]
   title = "Published papers"
-  link = "background#thing"
+  link = "background#published-papers"
 
   [[linkblocks.links]]
   title = "What people are saying"
-  link = "background#press"
-
-  [[linkblocks.links]]
-  title = "Blank link"
-  link = "background#"
-
+  link = "background#what-people-are-saying"
 
 [[linkblocks]]
   title = "Use"
@@ -78,7 +74,7 @@ headerdescription = "Page specific subtitle"
 
   [[linkblocks.links]]
   title = "Read the newsletter"
-  link = "where#newsletter"
+  link = "where#read-the-newsletter"
 
   [[linkblocks.links]]
   title = "Blog"

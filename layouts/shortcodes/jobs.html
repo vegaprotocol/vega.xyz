@@ -1,11 +1,11 @@
-{{ $jobs := .Site.Params.jobs }}
+{{ $jobs := (where .Site.RegularPages "Section" "job") }}
 {{ if gt (len $jobs) 0 }}
   <ul class="">
   {{ range $jobs}}
     <li>
-      <h2>{{.title}}</h2>
-      <p>{{.description}}</p>
-      <p><a href="{{.pdf}}">{{.pdf}}</a></p>
+      <h2>{{.Title}}</h2>
+      <p>{{.Description}}</p>
+      <p><a href="{{.Params.pdf}}">{{.Params.pdf}}</a></p>
     </li>
   {{end}}
   </ul>

@@ -1,74 +1,68 @@
 
-baseURL = "https://www.example.com/"
-title = "Vega is super"
+baseURL = "https://vega.xyz/"
+title = "Vega Protocol"
 theme ="hugo-theme-basic"
-languageCode = "en-us"
+languageCode = "en-gb"
 googleAnalytics = "UA-XXXXXXXXX-X"
 enableEmoji = true 
-description = "Vega"
+description = "Vega is a protocol for creating and trading derivatives on a fully decentralised network."
+
+[taxonomies]
+  category = "categories"
 
 [params]
-  currentNetwork = "Testnet"
   titleEmoji = ":tada:"
   twitter = "vegaprotocol"
 
-  [[params.jobs]]
-  title = "Quant guy"
-  pdf = "/1.pdf"
-  description = "We like this guy"
 
-  [[params.jobs]]
-  title = "Dev guy"
-  pdf = "/1.pdf"
-  description = "We like this guy"
-
-
-[menu]
-  [[menu.main]]
+########################################
+# Universal header
+#########################################
+   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-
   [[menu.main]]
     identifier = "background"
     name = "Background"
     url = "/background/"
-  
   [[menu.main]]
     identifier = "use"
     name = "Use"
     url = "/use/"
-  
-  [[menu.menu]]
+  [[menu.main]]
     identifier = "where"
     name = "Where"
     url = "/where/"
 
+#########################################
+# Universal page footer
+#########################################
+#  [[menu.footer]]
+#    identifier = "Github"
+#    name = "Github"
+#    url = "https://github.com/vegaprotocol/"
   [[menu.footer]]
     identifier = "twitter"
     name = "Twitter"
     url = "https://twitter.com/vegaprotocol"
-
   [[menu.footer]]
     identifier = "brand"
     name = "Brand assets"
     url = "/static/assets.zip"
-
   [[menu.footer]]
     identifier = "privacy"
     name = "Privacy Policy"
     url = "/privacy/"
-
   [[menu.footer]]
     identifier = "contact"
     name = "Contact us"
     url = "mailto:hi@vega.xyz"
-
   [[menu.footer]]
     identifier = "impressum"
     name = "Impressum"
     url = "/impressum/"
-  
+   
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
