@@ -1,5 +1,5 @@
 
-baseURL = "https://vega.xyz/"
+baseURL = "/"
 title = "Vega Protocol"
 theme ="hugo-theme-basic"
 languageCode = "en-gb"

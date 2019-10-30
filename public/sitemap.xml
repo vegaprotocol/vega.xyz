@@ -3,15 +3,95 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
+    <loc>https://vega.xyz/background/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://vega.xyz/team/1-barnaby-mannerings/</loc>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://vega.xyz/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/job/2-go-developer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/investor/2-greenfield-one/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/impressum/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/investor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/job/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/categories/jobs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/investor/1-pantera/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/paper/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/privacy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/team/2-ramsey-khoury/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/job/3-sdet/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/categories/team/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/team/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/job/1-trading-systems-engineer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/use/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/where/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/paper/1-white-paper/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vega.xyz/who/</loc>
   </url>
   
 </urlset>
