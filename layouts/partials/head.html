@@ -5,7 +5,7 @@
 {{ $list := .Site.Menus.main }}
 {{ $len := (len $list) }}
  <nav class="dtc v-mid tr pv1 ph3" id="site-navigation">
-  <img src="/images/icon.png" class="fl pl4 pt3 v-center" width="30" />
+  <a href="/" id="logo"><img src="/images/icon.png" class="fl pl4 pt3 v-center" width="30" /></a>
 
   <ul class="list pl0 pa0 ph3 dib">
     {{ range $index, $element := $list }}
@@ -21,10 +21,5 @@
         href="{{.URL}}">{{.Name}}</a> 
     </li>
     {{end}}
-    {{ if not .IsHome }}
-    <li class="dib pa0">
-      <a class="f6 fw4 no-underline dn dib-ns ph2" href="/">Home</a> 
-    </li>
-   {{ end }}
    </ul>
 </nav>
