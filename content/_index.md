@@ -19,8 +19,8 @@ currentNetwork = "Testnet"
   link = "about#mission"
 
   [[linkblocks.links]]
-  title = "Concepts"
-  link = "about#concepts"
+  title = "What we're building"
+  link = "about"
 
 [[linkblocks]]
   title = "Background"
