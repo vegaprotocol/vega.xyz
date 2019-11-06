@@ -73,8 +73,8 @@ currentNetwork = "Testnet"
   link = "where"
 
   [[linkblocks.links]]
-  title = "Read the newsletter"
-  link = "where#read-the-newsletter"
+  title = "Newsletter"
+  link = "where#newsletter"
 
   [[linkblocks.links]]
   title = "Blog"

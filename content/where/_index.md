@@ -1,7 +1,7 @@
 +++
 title = "Where"
 +++
-# Read the Newsletter
+# Newsletter
 Ad ut consectetur enim elit laborum do. Pariatur sit elit qui id nisi cupidatat non. Id deserunt elit qui elit incididunt dolor occaecat nisi pariatur exercitation enim. Aliquip reprehenderit ex ea et. In elit ea eu laborum nulla culpa consequat in nisi cupidatat reprehenderit consequat ex. Mollit proident commodo pariatur nostrud Lorem exercitation. Mollit aliquip reprehenderit qui qui anim ea qui duis tempor cillum ipsum cupidatat.
 
 ---
