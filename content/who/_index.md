@@ -7,6 +7,8 @@ name = "White paper"
 # The team
 In order to assess the 3rd generation blockchain’s ability to whiteboard without lessening our aptitude to incubate without reducing our capability to upgrade.
 
+<img src="/images/team.jpg" alt="Team photo" />
+
 {{<team>}}
 
 ---
