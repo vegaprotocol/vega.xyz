@@ -31,15 +31,15 @@ currentNetwork = "Testnet"
   link = "background#published-papers"
 
   [[linkblocks.links]]
-  title = "What people are saying"
-  link = "background#what-people-are-saying"
+  title = "Conference talks"
+  link = "background#conference-talks"
 
 [[linkblocks]]
   title = "Use"
   link = "use"
 
   [[linkblocks.links]]
-  title = "What can I do with Vega today?"
+  title = "What can I do with Vega?"
   link = "use#what-can-i-do-with-vega-today"
 
   [[linkblocks.links]]
@@ -69,8 +69,8 @@ currentNetwork = "Testnet"
   link = "who#jobs"
 
 [[linkblocks]]
-  title = "Where"
-  link = "where"
+  title = "Connect"
+  link = "connect"
 
   [[linkblocks.links]]
   title = "Newsletter"
