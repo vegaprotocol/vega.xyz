@@ -19,7 +19,7 @@ Sit amet occaecat aliqua irure. Culpa aliquip duis aliquip aliquip id id enim of
 
 Quis ad do Lorem occaecat fugiat voluptate nostrud veniam do sit in do. Consequat in enim fugiat mollit. Culpa sit esse occaecat consequat fugiat anim quis est laborum incididunt ullamco consequat officia. Adipisicing consectetur dolor consequat irure labore quis sunt ut laboris velit culpa.
 
-# Concepts
+# What we're building
 Cupidatat occaecat sunt sunt aliqua enim dolor culpa consequat incididunt aute nostrud. Culpa ex cupidatat ipsum ut id esse aliqua deserunt dolore eu. Eu ipsum amet voluptate eu.
 
 Labore nostrud dolore sit ullamco elit veniam reprehenderit amet sit ullamco aliqua veniam. Ad eu ipsum officia ut incididunt aute anim cillum occaecat voluptate. Laboris laborum esse reprehenderit ad id ullamco.
