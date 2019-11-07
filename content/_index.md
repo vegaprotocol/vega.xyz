@@ -56,12 +56,12 @@ currentNetwork = "Testnet"
   link = "who"
 
   [[linkblocks.links]]
-  title = "Investors"
-  link = "who#investor"
-
-  [[linkblocks.links]]
   title = "Team"
   link = "who#team"
+
+  [[linkblocks.links]]
+  title = "Partners & Backers"
+  link = "who#partners-and-backers"
 
   [[linkblocks.links]]
   title = "Open roles"
