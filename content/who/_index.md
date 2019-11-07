@@ -9,7 +9,6 @@ In order to assess the 3rd generation blockchain’s ability to whiteboard witho
 
 <img src="/images/team.jpg" alt="Team photo" />
 
-{{<team>}}
 
 ---
 
