@@ -32,5 +32,10 @@ description = "A description for the page"
 Text that will be written in the page when a user vists
 ```
 
+## Development
+Hugo is installed with [Homebrew](https://brew.sh/). Install with `brew install hugo`
+
+Hugo uses git submodules for theming. Run `git submodule update --init` to clone the theme.
+
 ## Deploying
 The site is automatically deployed when files change in `master`.
