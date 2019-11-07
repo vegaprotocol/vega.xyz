@@ -1,7 +1,7 @@
 # Proposal for Vega Website 4
 
 ## Editing
-The CMS that produces this site is Hugo.
+The CMS that produces this site is (https://gohugo.io/)[Hugo].
 
 These tables should guide you to the right place. If you keep getting lost, add a guide here.
 
