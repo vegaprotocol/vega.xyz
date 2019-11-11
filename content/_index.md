@@ -64,7 +64,7 @@ currentNetwork = "Testnet"
   link = "who#partners-and-backers"
 
   [[linkblocks.links]]
-  title = "Open roles"
+  title = "Open jobs"
   count = "true"
   link = "who#jobs"
 
