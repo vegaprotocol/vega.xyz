@@ -49,23 +49,19 @@ description = "Vega is a protocol for creating and trading derivatives on a full
     identifier = "twitter"
     name = "Twitter"
     url = "https://twitter.com/vegaprotocol"
-  [[menu.footer]]
-    identifier = "brand"
-    name = "Brand assets"
-    url = "/static/assets.zip"
-  [[menu.footer]]
+ [[menu.footer]]
     identifier = "privacy"
     name = "Privacy Policy"
     url = "/privacy/"
   [[menu.footer]]
     identifier = "contact"
     name = "Contact us"
-    url = "mailto:hi@vega.xyz"
+    url = "/contact/"
   [[menu.footer]]
-    identifier = "impressum"
-    name = "Impressum"
-    url = "/impressum/"
-   
+    identifier = "xbrand"
+    name = "Brand assets"
+    url = "/static/assets.zip"
+    
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
