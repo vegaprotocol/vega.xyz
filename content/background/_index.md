@@ -35,7 +35,7 @@ geography and other properties.
 
 31 October, 2019: San Francisco 
 
-Vega co-hosted an interactive market making workshop for beginners who wanted to learn more about trading on both centralised and decentralised marketplaces by using.simulated marketplcae. The event was run by [Tamlyn Rudolph](https://twitter.com/RudolphTamlyn) and NAME FROM cryptocurrency trading and tech firm [Fractal Wealth](http://www.fractalwealth.com/).
+Vega co-hosted an interactive market making workshop for beginners who wanted to learn more about trading on both centralised and decentralised marketplaces by using.simulated marketplcae. The event was run by [Tamlyn Rudolph](https://twitter.com/RudolphTamlyn) and Carson Cook, PhD, from cryptocurrency trading and tech firm [Fractal Wealth](http://www.fractalwealth.com/).
 
 **Do Blockchains Dream of Cryptographic Sheep?**
 
