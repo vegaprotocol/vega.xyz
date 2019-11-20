@@ -3,7 +3,11 @@ title = "Use"
 # CurrentNetwork is set in config.toml
 +++
 # What can I do with Vega today? 
-Elit aute sint ullamco laboris et ex duis qui et eiusmod aliquip nostrud anim ex. Cupidatat id exercitation do exercitation qui. Elit duis exercitation sit in excepteur qui.
+Right now we're working towards deploying a closed test network. 
+
+Though you can't interact with the testnet just yet, you can sign up to the newsletter (link) to find out when we'll be inviting people to use it and sharing general updates. 
+
+You can also [join our community](https://community.vega.xyz) to pose questions to the team, find out what we've been up to, and share your own ideas of what the future of finance looks like.
 
 ---
 
