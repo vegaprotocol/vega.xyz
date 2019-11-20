@@ -2,7 +2,14 @@
 title = "Connect"
 +++
 # Newsletter
-Ad ut consectetur enim elit laborum do. Pariatur sit elit qui id nisi cupidatat non. Id deserunt elit qui elit incididunt dolor occaecat nisi pariatur exercitation enim. Aliquip reprehenderit ex ea et. In elit ea eu laborum nulla culpa consequat in nisi cupidatat reprehenderit consequat ex. Mollit proident commodo pariatur nostrud Lorem exercitation. Mollit aliquip reprehenderit qui qui anim ea qui duis tempor cillum ipsum cupidatat.
+Sign up to our newsletter to receive updates:
+<form action="https://app.moosend.com/subscribe/593bee4b-17fe-4a01-beff-ba9c9ea8616e" method="post" id="ms-sub-form" target="_blank">
+<div>
+<label for="email">Email:</label><input type="email" name="ms-email" id="email" required />
+<input type="submit" value="Subscribe" /><div style="margin-top: 10px;"><a href="//www.moosend.com/?utm_source=poweredby&utm_medium=forms&utm_campaign=vegaprotocol.moosend.com" target="_blank"><img alt="powered by moosend" src="//www.moosend.com/images/poweredby.png" /></a></div>
+</div>
+</form>
+
 
 ---
 
