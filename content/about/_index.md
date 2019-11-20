@@ -3,8 +3,6 @@ title = "Impressum"
 description = "Our details"
 +++
 
-Cillum irure velit labore eu culpa mollit enim esse fugiat consectetur. Magna mollit nostrud officia anim dolore. Occaecat consectetur occaecat qui reprehenderit eiusmod quis voluptate quis et sunt laborum. Officia anim quis mollit minim. Aliqua voluptate sunt Lorem dolore ipsum consequat elit commodo tempor consectetur amet. Irure elit mollit consequat aute. Occaecat ullamco ullamco veniam tempor ea proident.
-
 # What is Vega?
 Vega is a protocol for creating and trading margined financial products on a fully decentralised network. 
 
