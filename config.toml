@@ -3,7 +3,7 @@ title = "Vega Protocol"
 theme ="hugo-theme-basic"
 languageCode = "en-gb"
 googleAnalytics = "UA-XXXXXXXXX-X"
-enableEmoji = true 
+enableEmoji = true
 description = "Vega is a protocol for creating and trading derivatives on a fully decentralised network."
 
 [taxonomies]
@@ -35,8 +35,8 @@ description = "Vega is a protocol for creating and trading derivatives on a full
     url = "/who/"
   [[menu.main]]
     identifier = "Connect"
-    name = "Where"
-    url = "/where/"
+    name = "Connect"
+    url = "/connect/"
 
 #########################################
 # Universal page footer
@@ -61,7 +61,7 @@ description = "Vega is a protocol for creating and trading derivatives on a full
     identifier = "xbrand"
     name = "Brand assets"
     url = "/static/assets.zip"
-    
+
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true

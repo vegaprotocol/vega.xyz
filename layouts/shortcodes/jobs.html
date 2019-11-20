@@ -1,11 +1,11 @@
-{{ $jobs := (where .Site.RegularPages "Section" "job") }}
+{{ $jobs := (where .Site.RegularPages "Section" "_job") }}
 {{ if gt (len $jobs) 0 }}
   <ul class="">
   {{ range $jobs}}
     <li>
       <h2>{{.Title}}</h2>
       <p>{{.Description}}</p>
-      <p><a href="{{.Params.pdf}}">{{.Params.pdf}}</a></p>
+      <p><a href="{{.Params.link}}">{{.Params.linkText}}</a></p>
     </li>
   {{end}}
   </ul>

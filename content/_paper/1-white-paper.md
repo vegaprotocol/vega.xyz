@@ -1,5 +1,6 @@
 +++
 title = "White Paper"
 description = "Outlines the Vega Protocol"
-pdf = "/assets/vega-white-paper.pdf"
+link = "/assets/vega-white-paper.pdf"
+linkText = "Download PDF"
 +++

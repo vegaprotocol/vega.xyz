@@ -1,10 +1,10 @@
-{{ $papers := (where .Site.RegularPages "Section" "paper") }}
+{{ $papers := (where .Site.RegularPages "Section" "_paper") }}
 <ul class="">
   {{ range $papers }}
   <li>
     <h2>{{.Name}}</h2>
     <p>{{.Description}}</p>
-    <p><a href="{{.Params.pdf}}">{{.Params.pdf}}</a></p>
+    <p><a href="{{.Params.link}}">{{.Params.linkText}}</a></p>
   </li>
   {{end}}
 </ul>
