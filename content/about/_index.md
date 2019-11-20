@@ -23,6 +23,6 @@ Get an update on Vega's current status over at [Use](/use/#current-status)
 
 We're writing rules for rewards and incentives that balance the system, keep it fair, and help it to grow. This protocol must be open and will eventually be free and open source software governed by the community, so that it can develop and evolve with the needs of its users.
 
-# What we're building
+# Why Decentralising Derivatives?
 
 {{< youtube id="DhGD8brS3r0" autoplay="false" >}}
