@@ -17,7 +17,7 @@
         <h3 class="f3"><a href="{{.link}}">&#x2192;&nbsp;{{.title}}</a></h3>
         <ul class="f4 list pl1 lh-copy">{{ range .links }}
         <li>
-          <span class="gray">&ndash;&nbsp;</span><a class="dark-gray {{with .highlight}}bg-light-yellow{{end}}" href="{{.link}}">{{.title}}{{if eq .status "true"}}<span class="black f4 b lh-copy">{{$.Page.Param "CurrentNetwork"}}{{end}}</span></span></a>
+          <span class="gray">&ndash;&nbsp;</span><a class="dark-gray {{with .highlight}}bg-light-yellow{{end}}" style="white-space: nowrap" href="{{.link}}">{{.title}}{{if eq .status "true"}}<span class="black f4 b lh-copy">{{$.Page.Param "CurrentNetwork"}}{{end}}</span></span></a>
          {{if eq .count "true"}}
            &nbsp;<span class="link dim br-pill ph2 dib fw2 dark-gray bg-yellow ">{{len $jobs}}</span>
          {{end}}
