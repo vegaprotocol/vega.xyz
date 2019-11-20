@@ -62,6 +62,7 @@ This panel discussion was on the state of DeFi with Barney Mannerings, and panel
 9 May, 2019: London
 
 A lightning talk called "Why Decentralise Capital Markets and Why Do It in Go?" was presented by Tamlyn Rudolph & Edd Hannay.
+
 ---
 
 # Coverage
