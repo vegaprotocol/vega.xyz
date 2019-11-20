@@ -63,6 +63,14 @@ This panel discussion was on the state of DeFi with Barney Mannerings, and panel
 
 A lightning talk called "Why Decentralise Capital Markets and Why Do It in Go?" was presented by Tamlyn Rudolph & Edd Hannay.
 
+**KR1's Kryptonight London** 
+
+26 February, 2019: London
+
+Barney Mannerings spoke on the emerging DeFi stack and how Vega’s decentralised trading network fits into it, before sharing a short demo. 
+
+<a href="https://www.youtube.com/watch?v=DhGD8brS3r0">Watch a video of the presentation on YouTube.</a> 
+
 ---
 
 # Coverage
