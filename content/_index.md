@@ -19,8 +19,8 @@ currentNetwork = "Testnet"
   link = "about#mission"
 
   [[linkblocks.links]]
-  title = "What we're building"
-  link = "about"
+  title = "Why Decentralise Derivatives?"
+  link = "about#why-decentralise-derivatives"
 
 [[linkblocks]]
   title = "Background"
