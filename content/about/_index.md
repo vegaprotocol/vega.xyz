@@ -25,4 +25,6 @@ We're writing rules for rewards and incentives that balance the system, keep it 
 
 # Why Decentralising Derivatives?
 
+The world of derivatives is huge, and it’s Vega’s goal to build a platform and protocol that lets people trade derivatives in a non-custodial, safe, and margined way. How? By standardising and automating every step of the trade lifecycle.
+
 {{< youtube id="DhGD8brS3r0" autoplay="false" >}}
