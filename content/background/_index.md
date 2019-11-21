@@ -55,7 +55,7 @@ Breakout session on Vega Protocol, led by Barney Mannerings.
 
 1 October 2019: Seoul
 
-This panel discussion was on the state of DeFi with Barney Mannerings, and panelists from Terra, Maker DAO, GBIC, and DXM. 
+Barney Mannerings and panelists from Terra, Maker DAO, GBIC, and DXM discussed the current state of DeFi and its potential future. 
 
 **Women Who Go**
 
@@ -74,5 +74,4 @@ Barney Mannerings spoke on the emerging DeFi stack and how Vega’s decentralise
 ---
 
 # Coverage
-
-Aute commodo anim aliquip reprehenderit. Eiusmod esse irure tempor commodo deserunt adipisicing esse tempor consequat excepteur dolor veniam et dolore. Enim in non ad irure eiusmod nostrud. Ex ad voluptate aliquip est fugiat ad elit. Ex duis aliquip excepteur et tempor sunt laboris qui nostrud ad sit exercitation exercitation. Cupidatat dolore nisi exercitation irure qui id proident laborum duis ad tempor sit incididunt anim.
+Whether it's podcasts, articles, or one-on-one interviews, you can find a selection of them right here. 
