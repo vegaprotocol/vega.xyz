@@ -3,7 +3,7 @@ title = "Background"
 
 +++
 # Published papers
-Ad ut consectetur enim elit laborum do. Pariatur sit elit qui id nisi cupidatat non. Id deserunt elit qui elit incididunt dolor occaecat nisi pariatur exercitation enim. Aliquip reprehenderit ex ea et. In elit ea eu laborum nulla culpa consequat in nisi cupidatat reprehenderit consequat ex. Mollit proident commodo pariatur nostrud Lorem exercitation. Mollit aliquip reprehenderit qui qui anim ea qui duis tempor cillum ipsum cupidatat.
+Research is at the core of Vega, and we share all our published papers and overviews on this page. Some papers focus on technical implementations, while others are explorations of potential future technologies and innovations. 
 
 {{<papers>}}
 
