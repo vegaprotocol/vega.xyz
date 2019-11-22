@@ -1,6 +1,6 @@
 +++
-title = "Impressum"
-description = "Our details"
+title = "About us"
+description = "Learn more about Vega, who are building a decentralised deriviates trading infrastructure."
 +++
 
 # What is Vega?
