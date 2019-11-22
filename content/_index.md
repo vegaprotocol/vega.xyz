@@ -19,7 +19,7 @@ currentNetwork = "Testnet"
   link = "about#mission"
 
   [[linkblocks.links]]
-  title = "Why Decentralise Derivatives?"
+  title = "Why decentralise derivatives?"
   link = "about#why-decentralise-derivatives"
 
 [[linkblocks]]
@@ -60,7 +60,7 @@ currentNetwork = "Testnet"
   link = "who#team"
 
   [[linkblocks.links]]
-  title = "Partners & Backers"
+  title = "Partners & backers"
   link = "who#partners-and-backers"
 
   [[linkblocks.links]]
