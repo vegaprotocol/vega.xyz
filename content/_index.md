@@ -10,7 +10,7 @@ currentNetwork = "Testnet"
   link = "about"
 
   [[linkblocks.links]]
-  title = "What is vega?"
+  title = "What is Vega?"
   link = "about#what-is-vega"
   highlight = "true"
 
