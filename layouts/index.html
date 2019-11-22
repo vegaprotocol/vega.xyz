@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $jobs := (where .Site.RegularPages "Section" "job") }}
+{{ $jobs := (where .Site.RegularPages "Section" "_job") }}
     <main aria-role="main" class="cf mw10 mw8-ns center pa3 ph5-ns avenir">
       <header class="homepage-header mw10 center ph3-ns">
         <h1 class="tc f2 tracked-tight">{{.Params.headerline}}</h1>
