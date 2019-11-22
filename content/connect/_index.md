@@ -21,7 +21,7 @@ Visit our blog for longer-form explanations of the concepts behind Vega, and a b
 ---
 
 # Community forum
-Sign up to our forum to take part in regular AMA sessions, discuss markets you'd like to see one day, or just say hi. No pressure, though. If you just want to read along with what's going on, we're happy to have you! 
+Join our forum to take part in regular AMA sessions, discuss markets you'd like to see one day, or just say hi. No pressure, though. If you just want to read along with what's going on, we're happy to have you! 
 
 [Visit community.vega.xyz.](https://community.vega.xyz)
 
@@ -31,6 +31,8 @@ Sign up to our forum to take part in regular AMA sessions, discuss markets you'd
 You probably know what to do with Twitter and LinkedIn, but just know that you can find us there. 
 
 [Follow Vega on Twitter.](https://www.twitter.com/vegaprotocol)
+
+
 [Follow Vega on LinkedIn.](https://www.linkedin.com/company/vega-protocol/)
 
 ---
