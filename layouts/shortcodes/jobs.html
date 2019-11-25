@@ -1,4 +1,4 @@
-{{ $jobs := (where .Site.RegularPages "Section" "_job") }}
+{{ $jobs := sort (where .Site.RegularPages "Section" "_job") ".File.LogicalName" }}
 {{ if gt (len $jobs) 0 }}
   <ul class="">
   {{ range $jobs}}
