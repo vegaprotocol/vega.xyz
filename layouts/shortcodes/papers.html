@@ -1,6 +1,6 @@
 {{ $papers := (where .Site.RegularPages "Section" "_paper") }}
 <ul class="">
-  {{ range $papers.ByTitle }}
+  {{ range $papers.ByTitle.Reverse }}
   <li>
     <h2>{{.Name}}</h2>
     <p>{{.Description}}</p>
