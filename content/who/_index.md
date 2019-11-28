@@ -7,7 +7,7 @@ name = "White paper"
 # The team
 In order to assess the 3rd generation blockchain’s ability to whiteboard without lessening our aptitude to incubate without reducing our capability to upgrade.
 
-<dl class="fl">
+<dl>
   <dt>Pete Barrow</dt><dd><img src="/images/team/no-photo.png" width="200" alt="Pete Barrow" /></dd>
   <dt>Michael Campbell</dt><dd><img src="/images/team/michael-campbell-gameboy.png" width="200" alt="Michael Campbell" /></dd>
   <dt>Ashley Chaloner</dt><dd><img src="/images/team/ashley-chaloner.png" width="200" alt="Ashley Chaloner" /></dd>
@@ -27,10 +27,6 @@ In order to assess the 3rd generation blockchain’s ability to whiteboard witho
   <dt>Rebecca Simmonds</dt><dd><img src="/images/team/rebecca-simmonds-gameboy.png" width="200" alt="Rebecca Simmonds" /></dd>
   <dt>Elias Van Ootegem</dt><dd><img src="/images/team/no-photo.png" width="200" alt="Elias Van Ootegem" /></dd>
 </dl>
-
-
-<div class="cf"></div>
-
 
 ---
 
