@@ -1,6 +1,6 @@
 +++
-title = "Impressum"
-description = "Our details"
+title = "About us"
+description = "Learn more about Vega, who are building a decentralised deriviates trading infrastructure."
 +++
 
 # What is Vega?
@@ -23,8 +23,8 @@ Get an update on Vega's current status over at [Use](/use/#current-status)
 
 We're writing rules for rewards and incentives that balance the system, keep it fair, and help it to grow. This protocol must be open and will eventually be free and open source software governed by the community, so that it can develop and evolve with the needs of its users.
 
-# Why Decentralising Derivatives?
+# Why decentralise derivatives?
 
-The world of derivatives is huge, and it’s Vega’s goal to build a platform and protocol that lets people trade derivatives in a non-custodial, safe, and margined way. How? By standardising and automating every step of the trade lifecycle.
+The world of derivatives is huge. It’s Vega’s goal to develop a protocol that lets people trade derivatives safely, with margins, and without requiring custody. We're making this possible by standardising and automating every step of the trade lifecycle.
 
 {{< youtube id="DhGD8brS3r0" autoplay="false" >}}

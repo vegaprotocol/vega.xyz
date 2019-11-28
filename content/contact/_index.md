@@ -6,10 +6,10 @@ title = "impressum"
     You can get in touch by emailing <a href="mailto:hi@vega.xyz">hi@vega.xyz</a>.
 </p>
 <address>
-    Vega Holdings Limited,<br />
-    Suite 23 Portland House,<br />
-    Glacis Road,<br />
-    Gibraltar,<br />
+    Vega Holdings Limited<br />
+    Suite 23 Portland House<br />
+    Glacis Road<br />
+    Gibraltar<br />
     GX11 1AA
 </address>
 <p>

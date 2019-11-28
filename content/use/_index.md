@@ -17,9 +17,9 @@ Qui laboris adipisicing est sunt reprehenderit. Duis culpa ea esse exercitation 
 ---
 
 # Build on Vega
-Irure pariatur aliqua cupidatat elit ex esse mollit mollit mollit consequat do et incididunt proident. Officia esse magna cillum exercitation voluptate mollit qui quis anim sunt dolor voluptate consequat. Officia excepteur dolore esse incididunt elit nulla eu minim.
+While we're in the early stages of our testnet, the APIs are changing so signficiatly, we haven't yet published our API documentation. You will be able to integrate with the public Vega network through:
+- GRPC
+- REST
+- GraphQL
 
-Commodo consequat do proident incididunt esse dolore. Voluptate exercitation eiusmod aliqua occaecat laborum fugiat commodo proident. Ut labore mollit labore nisi labore ea commodo anim ad occaecat. Ipsum culpa minim incididunt duis.
-
-Eiusmod labore esse veniam excepteur consectetur. Incididunt ullamco amet laboris labore amet dolore laborum nisi consequat voluptate sint qui sunt sint. Lorem anim anim consectetur laboris laboris in. Cillum aliquip ullamco cillum laboris laboris culpa voluptate anim Lorem mollit elit occaecat ut. Laborum fugiat irure sint amet cupidatat pariatur laboris irure consequat magna anim duis anim. Esse commodo elit officia excepteur elit do nostrud cupidatat adipisicing commodo ex elit consectetur mollit. Velit nulla ipsum ex aute ex eiusmod dolore laboris commodo ullamco veniam.
-
+API documentation should be made available in early 2020. 
