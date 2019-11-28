@@ -1,7 +1,9 @@
 +++
 title = "Vega Protocol"
+description = "Vega is a protocol for creating and trading derivatives on a fully decentralised network."
 headerline = "Vega is a protocol for creating and trading derivatives on a fully decentralised network."
 headerdescription = "Fully automated processes and incentives for trading margined financial products allow for markets that are open and decentralised, with pseudonymous participants."
+keywords = ["vega", "vega protocol", "decentralise", "decentralize"]
 categories = ["Index"]
 currentNetwork = "Testnet"
 

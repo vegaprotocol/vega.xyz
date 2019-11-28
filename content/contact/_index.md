@@ -1,5 +1,7 @@
 +++
-title = "impressum"
+title = "About"
+description = "How can I get in contact with Vega?"
+keywords = ["contact", "email", "address", "company"]
 +++
 <h1>Contact Us</h1>
 <p>

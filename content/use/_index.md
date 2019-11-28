@@ -1,11 +1,13 @@
 +++
 title = "Use"
+description = "What can I do with Vega today? What is the status of the Vega network? How can I build on Vega?"
+keywords = ["build", "develop", "api", "documentation", "status"]
 # CurrentNetwork is set in config.toml
 +++
-# What can I do with Vega today? 
-Right now we're working towards deploying a closed test network. 
+# What can I do with Vega today?
+Right now we're working towards deploying a closed test network.
 
-Though you can't interact with the testnet just yet, you can sign up to the newsletter (link) to find out when we'll be inviting people to use it and sharing general updates. 
+Though you can't interact with the testnet just yet, you can sign up to the newsletter (link) to find out when we'll be inviting people to use it and sharing general updates.
 
 You can also [join our community](https://community.vega.xyz) to pose questions to the team, find out what we've been up to, and share your own ideas of what the future of finance looks like.
 
@@ -22,4 +24,4 @@ While we're in the early stages of our testnet, the APIs are changing so signfic
 - REST
 - GraphQL
 
-API documentation should be made available in early 2020. 
+API documentation should be made available in early 2020.
