@@ -6,6 +6,9 @@ googleAnalytics = "UA-116279298-1"
 enableEmoji = true
 description = "Vega is a protocol for creating and trading derivatives on a fully decentralised network."
 
+[permalinks]
+  _job = "/who/:title"
+
 [taxonomies]
   category = "categories"
 

@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+<body
+  lang="{{ .Site.LanguageCode }}"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  {{ partial "head.html" . }}
+
+  <section id="main" class="mt5 cf sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns">
+    <article itemprop="articleBody" id="content" class="fl w-75-ns lh-copy">
+      {{ .Content }}
+    </article>
+    <aside id="sidebar" class="pl5-l pl-2-m fl w-25 dn-s">
+      <ul>
+        <li><a href="#">Back to top</a></li>
+        <li><a href="../">Back</a></li>
+        <li><a href="/">Home</a></li>
+      </ul>
+   </aside>
+  </section>
+
+  {{ partial "footer.html" . }}
+  </body>
+</html>

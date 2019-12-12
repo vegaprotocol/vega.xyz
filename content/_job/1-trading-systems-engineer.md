@@ -4,3 +4,4 @@ description = "We're looking for an engineer with experience building trading sy
 categories = ["Jobs"]
 pdf = "/assets/Vega-Trading-Systems-Engineer.pdf"
 +++
+No content - see SDET

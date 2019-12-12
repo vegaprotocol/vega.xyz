@@ -4,3 +4,5 @@ description = "We're looking for a software engineer with extensive experience i
 categories = ["Jobs"]
 pdf = "/assets/Vega-Go-developer-role-2019.pdf"
 +++
+
+No content - see SDET
