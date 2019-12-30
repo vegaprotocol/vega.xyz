@@ -9,9 +9,12 @@ keywords = ["papers", "research", "publications", "conferences", "presentations"
 </p>
 {{<papers>}}
 
+
 ---
 
+
 # Talks and events we've taken part in
+
 <p class="highlight">
   We believe that events, talks, and sessions are a great opportunity to catch up with our community members. If you have any ideas for events you'd like us to host or attend, drop us a message on <a href="https://www.twitter.com/vegaprotocol">Twitter</a>.
 </p>
@@ -51,7 +54,7 @@ keywords = ["papers", "research", "publications", "conferences", "presentations"
     <h3>31 October, 2019: San Francisco</h3>
   </div>
   <div class="column">
-    <p>Led by [Dr Klaus Kursawe](https://scholar.google.co.uk/citations?user=ppZLPqsAAAAJ&hl=en), this research seminar explored his recent work focusing on efficiency and flexibility when looking at the architecture, model and various protocol issues o the consensus layer. Klaus discussed how to replace the consensus algorithm on the fly, optimise protocol latency, and go beyond the thresholds to allow taking into account
+    <p>Led by <a href="https://scholar.google.co.uk/citations?user=ppZLPqsAAAAJ&hl=en">Dr Klaus Kursawe</a>, this research seminar explored his recent work focusing on efficiency and flexibility when looking at the architecture, model and various protocol issues o the consensus layer. Klaus discussed how to replace the consensus algorithm on the fly, optimise protocol latency, and go beyond the thresholds to allow taking into account
 geography and other properties.</p>
     </div>
     <div class="column">
@@ -65,7 +68,7 @@ geography and other properties.</p>
     </div>
     <div class="column">
       <p>
-        Vega co-hosted an interactive market making workshop for beginners who wanted to learn more about trading on both centralised and decentralised marketplaces by using.simulated marketplcae. The event was run by [Tamlyn Rudolph](https://twitter.com/RudolphTamlyn) and Carson Cook, PhD, from cryptocurrency trading and tech firm [Fractal Wealth](http://www.fractalwealth.com/).
+        Vega co-hosted an interactive market making workshop for beginners who wanted to learn more about trading on both centralised and decentralised marketplaces by using.simulated marketplcae. The event was run by <a href="https://twitter.com/RudolphTamlyn">Tamlyn Rudolph</a> and Carson Cook, PhD, from cryptocurrency trading and tech firm <a href="http://www.fractalwealth.com/">Fractal Wealth</a>.
       </p>
     </div>
     <div class="column">
