@@ -7,10 +7,12 @@ pdf = "/assets/Vega-Go-developer-role-2019.pdf"
 
 # Blockchain start-up looking for a Software Engineer in Test (SDET)
 <aside>
-   * **Start date:** Immediate
-   * **Location:** London or remote
-   * **Contract type:** Permanent or contract-to-perm
-   * **Website:** [https://vega.xyz](vega.xyz)
+  <ul>
+   <li><strong>Start date:</strong> Immediate</li>
+   <li><strong>Location:</strong> London or remote</li>
+   <li><strong>Contract type:</strong> Permanent or contract-to-perm</li>
+   <li><strong>Website:</strong> <a href="https://vega.xyz">vega.xyz</a></li>
+  </ul>
 </aside>
 
 We are building a blockchain-based derivatives exchange and are looking for a skilled software test engineer to help keep a focus on quality. This is a great opportunity to join a small, VC-funded start-up with an office in London’s fintech hub. We have a working prototype and are well on our way to delivering the first version of the alpha.
