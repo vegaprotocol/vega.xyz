@@ -4,75 +4,149 @@ description = "What papers has Vega published? What conferences has Vega present
 keywords = ["papers", "research", "publications", "conferences", "presentations", "coverage"]
 +++
 # Published papers
-Research is at the core of Vega, and we share all our published papers and overviews on this page. Some papers focus on technical implementations, while others are explorations of potential future technologies and innovations.
-
+<p class="highlight">
+  Research is at the core of Vega, and we share all our published papers and overviews on this page. Some papers focus on technical implementations, while others are explorations of potential future technologies and innovations.
+</p>
 {{<papers>}}
 
 ---
 
 # Talks and events we've taken part in
-We believe that events, talks, and sessions are a great opportunity to catch up with our community members. If you have any ideas for events you'd like us to host or attend, drop us a message on <a href="https://www.twitter.com/vegaprotocol">Twitter</a>.
+<p class="highlight">
+  We believe that events, talks, and sessions are a great opportunity to catch up with our community members. If you have any ideas for events you'd like us to host or attend, drop us a message on <a href="https://www.twitter.com/vegaprotocol">Twitter</a>.
+</p>
 
-**London Blockchain Labs' Blockchain Bootcamp**
+<ol>
+  <li class="talk">
+    <div class="column">
+      <h2>London Blockchain Labs' Blockchain Bootcamp</h2>
+      <h3>16 November, 2019: London</h3>
+    </div>
+    <div class="column">  
+      <p>Tamlyn Rudolph spoke on the current landscape of decentralised exchanges, plus an overview of decentralised derivatives and the parallel financial system.
+      </p>
+    </div>
+    <div class="column">
+      <img src="talk-icon" width="20" height="20" />
+    </div>    
+</li>
 
-16 November, 2019: London
+<li>
+  <div class="column">
+    <h2>Flow State: Decompression and Discussion</h2>
+    <h3>3 November, 2019: San Francisco</h3>
+  </div>
+  <div class="column">
+    <p>
+      Vega's Christina Rud and Xpring's Mahoney Turnbull hosted a multi sensory decompression ceremony, where attendees bathed in sound, consumed cacao, discussed the week and eased back into a (slightly) more centralised realm of life again.
+      </p>
+  </div>
+  <div class="column">
+    <img src="talk-icon" width="20" height="20" />
+  </div>
+</li>
+<li>
+  <div class="column">
+    <h2>Blockchains for traders: On finality, fairness and flocking</h2>
+    <h3>31 October, 2019: San Francisco</h3>
+  </div>
+  <div class="column">
+    <p>Led by [Dr Klaus Kursawe](https://scholar.google.co.uk/citations?user=ppZLPqsAAAAJ&hl=en), this research seminar explored his recent work focusing on efficiency and flexibility when looking at the architecture, model and various protocol issues o the consensus layer. Klaus discussed how to replace the consensus algorithm on the fly, optimise protocol latency, and go beyond the thresholds to allow taking into account
+geography and other properties.</p>
+    </div>
+    <div class="column">
+      <img src="talk-icon" width="20" height="20" />
+    </div>
+</li>
+<li>
+    <div class="column">
+      <h2>Zen and the Art of Price Determination</h2>
+      <h3>31 October, 2019: San Francisco</h3>
+    </div>
+    <div class="column">
+      <p>
+        Vega co-hosted an interactive market making workshop for beginners who wanted to learn more about trading on both centralised and decentralised marketplaces by using.simulated marketplcae. The event was run by [Tamlyn Rudolph](https://twitter.com/RudolphTamlyn) and Carson Cook, PhD, from cryptocurrency trading and tech firm [Fractal Wealth](http://www.fractalwealth.com/).
+      </p>
+    </div>
+    <div class="column">
+      <img src="talk-icon" width="20" height="20" />
+    </div>
+</li>
 
-Tamlyn Rudolph spoke on the current landscape of decentralised exchanges, plus an overview of decentralised derivatives and the parallel financial system.
+<li>
+    <div class="column">
+      <h2>Do Blockchains Dream of Cryptographic Sheep?</h2>
+      <h3>30 October, 2019: San Francisco</h3>
+    </div>
+    <div class="column">
+      <p>
+        At this fishbowl event, attendees had a chance to jump into the conversation on topics like "what happens if inflationary monetary policy bites the dust?" and "what would be the impact of DeFi protocols taking the place of banks?"
+      </p>
+      <p>
+        The event was co-hosted by Vega, Pantera Capital, and NEAR Protocol, and the session was moderated by Tamlyn Rudolph.
+      </p>
+    </div>
+    <div class="column">
+      <img src="talk-icon" width="20" height="20" />
+    </div>
+</li>
 
-**Flow State: Decompression and Discussion**
-
-3 November, 2019: San Francisco
-
-Vega's Christina Rud and Xpring's Mahoney Turnbull hosted a multi sensory decompression ceremony, where attendees bathed in sound, consumed cacao, discussed the week and eased back into a (slightly) more centralised realm of life again.
-
-**Blockchains for traders: On finality, fairness and flocking**
-
-31 October, 2019: San Francisco
-
-Led by [Dr Klaus Kursawe](https://scholar.google.co.uk/citations?user=ppZLPqsAAAAJ&hl=en), this research seminar explored his recent work focusing on efficiency and flexibility when looking at the architecture, model and various protocol issues o the consensus layer. Klaus discussed how to replace the consensus algorithm on the fly, optimise protocol latency, and go beyond the thresholds to allow taking into account
-geography and other properties.
-
-**Zen and the Art of Price Determination**
-
-31 October, 2019: San Francisco
-
-Vega co-hosted an interactive market making workshop for beginners who wanted to learn more about trading on both centralised and decentralised marketplaces by using.simulated marketplcae. The event was run by [Tamlyn Rudolph](https://twitter.com/RudolphTamlyn) and Carson Cook, PhD, from cryptocurrency trading and tech firm [Fractal Wealth](http://www.fractalwealth.com/).
-
-**Do Blockchains Dream of Cryptographic Sheep?**
-
-30 October, 2019: San Francisco
-
-At this fishbowl event, attendees had a chance to jump into the conversation on topics like "what happens if inflationary monetary policy bites the dust?" and "what would be the impact of DeFi protocols taking the place of banks?"
-
-The event was co-hosted by Vega, Pantera Capital, and NEAR Protocol, and the session was moderated by Tamlyn Rudolph.
-
-**Pantera Capital Summit**
-
-22 October, 2019: San Francisco
-
-Breakout session on Vega Protocol, led by Barney Mannerings.
-
-**D.FINE Korea Blockchain Week - DeFi Panel Discussion**
-
-1 October 2019: Seoul
-
-Barney Mannerings and panelists from Terra, Maker DAO, GBIC, and DXM discussed the current state of DeFi and its potential future.
-
-**Women Who Go**
-
-9 May, 2019: London
-
-A lightning talk called "Why Decentralise Capital Markets and Why Do It in Go?" was presented by Tamlyn Rudolph & Edd Hannay.
-
-**KR1's Kryptonight London**
-
-26 February, 2019: London
-
-Barney Mannerings spoke on the emerging DeFi stack and how Vega’s decentralised trading network fits into it, before sharing a short demo.
-
-<a href="https://www.youtube.com/watch?v=DhGD8brS3r0">Watch a video of the presentation on YouTube.</a>
-
----
-
-# Coverage
-Whether it's podcasts, articles, or one-on-one interviews, you can find a selection of them right here.
+<li>
+    <div class="column">
+      <h2>Pantera Capital Summit</h2>
+      <h3>22 October, 2019: San Francisco</h3>
+    </div>
+    <div class="column">
+      <p>
+        Breakout session on Vega Protocol, led by Barney Mannerings.
+      </p>
+    </div>
+    <div class="column">
+      <img src="talk-icon" width="20" height="20" />
+    </div>
+</li>
+<li>
+    <div class="column">
+      <h2>D.FINE Korea Blockchain Week - DeFi Panel Discussion</h2>
+      <h3>1 October 2019: Seoul</h3>
+    </div>
+    <div class="column">
+      <p>
+        Barney Mannerings and panelists from Terra, Maker DAO, GBIC, and DXM discussed the current state of DeFi and its potential future.
+      </p>
+    </div>
+    <div class="column">
+      <img src="talk-icon" width="20" height="20" />
+    </div>
+</li>
+<li>
+    <div class="column">
+      <h2>Women Who Go</h2>
+      <h3>9 May, 2019: London</h3>
+    </div>
+    <div class="column">
+      <p>
+        A lightning talk called "Why Decentralise Capital Markets and Why Do It in Go?" was presented by Tamlyn Rudolph & Edd Hannay.
+      </p>
+    </div>
+    <div class="column">
+      <img src="talk-icon" width="20" height="20" />
+    </div>
+</li>
+<li>
+    <div class="column">
+      <h2>KR1's Kryptonight London</h2>
+      <h3>26 February, 2019: London</h3>
+    </div>
+    <div class="column">
+      <p>
+        Barney Mannerings spoke on the emerging DeFi stack and how Vega’s decentralised trading network fits into it, before sharing a short demo.
+      </p>
+      <p>
+        <a href="https://www.youtube.com/watch?v=DhGD8brS3r0">Watch a video of the presentation on YouTube.</a>
+      </p>
+    </div>
+    <div class="column">
+      <img src="talk-icon" width="20" height="20" />
+    </div>
+</ol>
