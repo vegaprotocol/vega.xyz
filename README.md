@@ -43,6 +43,7 @@ To add a job, add a new file, `4-job-title.md` in the `content/_job/` folder. Th
 #### Papers
 To add a job, add a new file, `4-paper-title.md` in the `content/_paper/` folder. The number at the start is the ordering, so feel free to change the numbers around. On the next build, this new role will appear in the Papers list on the Background page. You can upload PDFs to `static/assets/your-file.pdf`.
 
+
 # Development
 Hugo is installed with [Homebrew](https://brew.sh/). On a mac, install with `brew install hugo` - on Windows or Linux, you're on your own.
 
