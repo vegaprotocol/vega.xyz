@@ -1,25 +1,21 @@
-{{ $page := .Page }}
-{{ $site := .Site }}
-  
-<!-- https://discourse.gohugo.io/t/range-length-or-last-element/3803/3 -->
-{{ $list := .Site.Menus.main }}
-{{ $len := (len $list) }}
- <nav class="dtc v-mid tr pv1 ph3" id="site-navigation">
-  <a href="/" id="logo"><img src="/images/icon.png" class="fl pl4 pt3 v-center" width="30" /></a>
+  <head>
+    <meta charset="utf-8" />
 
-  <ul class="list pl0 pa0 ph3 dib">
-    {{ range $index, $element := $list }}
-      {{ $is := $page.IsMenuCurrent "main" . }}
-      {{ $has := $page.HasMenuCurrent "main" . }}
-      <li class="dib lh-copy pa1">
-        <a
-          {{if or $is $has }}
-          class="f6 fw4 no-underline dn dib-ns ph2 bb"
-          {{else}}
-          class="f6 fw4 no-underline dn dib-ns ph2"
-          {{end}}
-        href="{{.URL}}">{{.Name}}</a> 
-    </li>
-    {{end}}
-   </ul>
-</nav>
+    {{ partial "meta.html" . }}
+
+    <title>{{ .Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}" />
+{{ $title := .Title }}
+{{ with .OutputFormats.Get "RSS" }}
+    <link
+      href="{{ .RelPermalink }}"
+      rel="alternate"
+      type="application/rss+xml"
+      title="{{ $title }}"
+    />
+{{ end }}
+    {{ partial "head_includes.html" . }}
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+

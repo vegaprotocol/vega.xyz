@@ -1,10 +1,13 @@
-{{ partial "header.html" . }}
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
 <body
   lang="{{ .Site.LanguageCode }}"
   itemscope
   itemtype="http://schema.org/Article"
 >
-  {{ partial "head.html" . }}
+  {{ partial "header.html" . }}
+  {{- partial "nav.html" . -}}
 
   <section id="main" class="mt5 cf sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns">
     <article itemprop="articleBody" id="content" class="fl w-75-ns lh-copy">

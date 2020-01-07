@@ -1,0 +1,7 @@
+$border: 2 * 10px;
+$best-colour: #edd;
+
+body {
+  margin: 0;
+  border: $border solid $best-colour;
+}
