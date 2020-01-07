@@ -15,6 +15,7 @@ Other lists (events, for example) are just edited as HTML embedded in the markdo
 The number in the above filenames controls the order that they are rendered in any list. It's never shown, so you can use whatever scheme you want - `001-vega.md` is just as good as `1-vega.md`, and both will appear before `2-stuff.md`.
 
 Or to edit some side wide stuff:
+
 | To edit   | Open |
 |-----------|--------|
 | Top menu    | `config.toml` |
@@ -50,7 +51,6 @@ Hugo uses git submodules for theming. Run `git submodule update --init` to clone
 ## Deploying
 The site is automatically deployed when files change in `master`.
 
-# Notes for turning this in to a production website
-- The templates are slightly messed up, so the header menu is actually rendered in the `<head>` tag
-- Only minimal effort has been put in to responsiveness
-- Titles, meta descriptions and open graph/twitter meta tags are missing
+# Requirements
+- The content of the site should be readable and navigable without JavaScript enabled
+- Site content is in place as of this commit. While section titles may change, future sections maybe be added, the shape of the content is not expected to change significantly in the next month
