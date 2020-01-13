@@ -5,26 +5,26 @@ keywords = ["team", "developers", "founders", "investors", "backers", "jobs"]
 +++
 # The team
 <dl>
-  <dt>Pete Barrow — Developer</dt><dd><img src="/images/team/pete.jpg" width="200" alt="Pete Barrow" /></dd>
+  <dt>Pete Barrow — Engineering</dt><dd><img src="/images/team/pete.jpg" width="200" alt="Pete Barrow" /></dd>
   <dt>Michael Campbell — User Experience</dt><dd><img src="/images/team/michael-campbell-gameboy.png" width="200" alt="Michael Campbell" /></dd>
-  <dt>Ashley Chaloner — Developer</dt><dd><img src="/images/team/ashley-chaloner.png" width="200" alt="Ashley Chaloner" /></dd>
-  <dt>Candida DaFonseca — Writer</dt><dd><img src="/images/team/candida-dafonseca-gameboy.png" width="200" alt="Candida DaFonseca" /></dd>
-  <dt>Witold Gawlikowicz — Developer</dt><dd><img src="/images/team/witold-gameboy.png" width="200" alt="Witold Gawlikowicz" /></dd>
-  <dt>Edd Hannay — Developer</dt><dd><img src="/images/team/edd-hannay-gameboy.png" width="200" alt="Edd Hannay" /></dd>
-  <dt>Danny Holland — Developer</dt><dd><img src="/images/team/danny.png" width="200" alt="Danny Holland" /></dd>
-  <dt>Jeremy Letang — Developer</dt><dd><img src="/images/team/jeremy-letang-gameboy.png" width="200" alt="Jeremy Letang" /></dd>
+  <dt>Ashley Chaloner — Engineering</dt><dd><img src="/images/team/ashley-chaloner.png" width="200" alt="Ashley Chaloner" /></dd>
+  <dt>Candida DaFonseca — Content</dt><dd><img src="/images/team/candida-dafonseca-gameboy.png" width="200" alt="Candida DaFonseca" /></dd>
+  <dt>Witold Gawlikowicz — Quantitative Analysis</dt><dd><img src="/images/team/witold-gameboy.png" width="200" alt="Witold Gawlikowicz" /></dd>
+  <dt>Edd Hannay — Engineering</dt><dd><img src="/images/team/edd-hannay-gameboy.png" width="200" alt="Edd Hannay" /></dd>
+  <dt>Danny Holland — Engineering</dt><dd><img src="/images/team/danny.png" width="200" alt="Danny Holland" /></dd>
+  <dt>Jeremy Letang — Engineering</dt><dd><img src="/images/team/jeremy-letang-gameboy.png" width="200" alt="Jeremy Letang" /></dd>
   <dt>Ramsey Khoury — Founder</dt><dd><img src="/images/team/ramsey-khoury.png" width="200" alt="Ramsey Khoury" /></dd>
   <dt>Klaus Kursawe — Research</dt><dd><img src="/images/team/klaus-kursawe-gameboy.png" width="200" alt="Klaus Kursawe" /></dd>
   <dt>Barney Mannerings — Founder</dt><dd><img src="/images/team/barney-mannerings-gameboy.png" width="200" alt="Barney Mannerings" /></dd>
   <dt>Dave MacLoughlin — </dt><dd><img src="/images/team/dave-mac.png" width="200" alt="Dave MacLoughlin" /></dd>
-  <dt>Christian Moores — Developer</dt><dd><img src="/images/team/chris-moores-gameboy.png" width="200" alt="Christian Moores" /></dd>
-  <dt>Andriy Pastoschuk — Developer</dt><dd><img src="/images/team/no-photo.png" width="200" alt="Andriy Pastoschuk" /></dd>
+  <dt>Christian Moores — Engineering</dt><dd><img src="/images/team/chris-moores-gameboy.png" width="200" alt="Christian Moores" /></dd>
+  <dt>Andriy Pastoschuk — Engineering</dt><dd><img src="/images/team/no-photo.png" width="200" alt="Andriy Pastoschuk" /></dd>
   <dt>Tamlyn Rudolph — Markets</dt><dd><img src="/images/team/tamlyn-rudolph-gameboy.png" width="200" alt="Tamlyn Rudolph" /></dd>
-  <dt>Matt Russell — Developer</dt><dd><img src="/images/team/matt-russell-gameboy.jpg" width="200" alt="Matt Russell" /></dd>
+  <dt>Matt Russell — Engineering</dt><dd><img src="/images/team/matt-russell-gameboy.jpg" width="200" alt="Matt Russell" /></dd>
   <dt>Christina Rud — Community</dt><dd><img src="/images/team/christina-rud-gameboy.png" width="200" alt="Matt Russell" /></dd>
   <dt>Rebecca Simmonds — Operations</dt><dd><img src="/images/team/rebecca-simmonds-gameboy.png" width="200" alt="Rebecca Simmonds" /></dd>
-  <dt>Elias Van Ootegem — Developer</dt><dd><img src="/images/team/no-photo.png" width="200" alt="Elias Van Ootegem" /></dd>
-  <dt>David Siska — Researcher</dt><dd><img src="/images/team/david-siska-gameboy.png" width="200" alt="David Siska" /></dd>
+  <dt>Elias Van Ootegem — Engineering</dt><dd><img src="/images/team/no-photo.png" width="200" alt="Elias Van Ootegem" /></dd>
+  <dt>David Siska — Quantitative Analysis</dt><dd><img src="/images/team/david-siska-gameboy.png" width="200" alt="David Siska" /></dd>
 </dl>
 
 ---
