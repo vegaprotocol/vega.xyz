@@ -20,12 +20,16 @@ Any participant will be able to easily create and launch markets, pseudonymously
 Get an update on Vega's current status over at [Use](/use/#current-status)
 
 # Mission
- It is Vega’s mission to build tools that guarantee the freedom to trade and make that freedom accessible to anyone on earth. We're taking aim at the fundamental problems we see with the current centralised financial system, and creating a parallel financial system that fixes those problems.
+It is Vega’s mission to build tools that guarantee the freedom to trade and make that freedom accessible to anyone on earth. 
+ 
+We're taking aim at the fundamental problems we see with the current centralised financial system, and creating a parallel financial system that fixes those problems.
 
-We're writing rules for rewards and incentives that balance the system, keep it fair, and help it to grow. This protocol must be open and will eventually be free and open source software governed by the community, so that it can develop and evolve with the needs of its users.
+We're writing rules for rewards and incentives that balance the system, keep it fair, and help it to grow. 
+
+This protocol must be open and will eventually be free and open source software governed by the community, so that it can develop and evolve with the needs of its users.
 
 # Why decentralise derivatives?
 
-The world of derivatives is huge. It’s Vega’s goal to develop a protocol that lets people trade derivatives safely, with margins, and without requiring custody. We're making this possible by standardising and automating every step of the trade lifecycle.
+The world of derivatives is huge. Vega is developing a protocol that lets people trade derivatives safely, with margins, and without requiring custody. We're making this possible by standardising and automating every step of the trade lifecycle. Listen to what our co-founder Barney has to say about it:
 
 {{< youtube id="DhGD8brS3r0" autoplay="false" >}}
