@@ -1,6 +1,6 @@
 +++
 title = "Connect"
-description = "Does Vega have newslette? Where is Vega's blog? Is there a Vega forum?"
+description = "Does Vega have a newsletter? Where is Vega's blog? Is there a Vega forum?"
 keywords = ["newsletter", "blog", "community", "forum", "messageboard", "social"]
 +++
 # Newsletter
@@ -8,7 +8,7 @@ Sign up to our newsletter to be among the first to learn about what's happening 
 <form action="https://app.moosend.com/subscribe/593bee4b-17fe-4a01-beff-ba9c9ea8616e" method="post" id="ms-sub-form" target="_blank">
 <div>
 <label for="email">Email:</label><input type="email" name="ms-email" id="email" required />
-<input type="submit" value="Subscribe" /><div style="margin-top: 10px;"><a href="//www.moosend.com/?utm_source=poweredby&utm_medium=forms&utm_campaign=vegaprotocol.moosend.com" target="_blank"><img alt="powered by moosend" src="//www.moosend.com/images/poweredby.png" /></a></div>
+<input type="submit" value="Subscribe" /><div style="margin-top: 10px;"><a href="//www.moosend.com/?utm_source=poweredby&utm_medium=forms&utm_campaign=vegaprotocol.moosend.com" target="_blank"></a></div>
 </div>
 </form>
 
@@ -30,7 +30,7 @@ Join our forum to take part in regular AMA sessions, discuss markets you'd like 
 ---
 
 # Social media
-You probably know what to do with Twitter and LinkedIn, but just know that you can find us there.
+You probably know what to do with Twitter and LinkedIn.
 
 [Follow Vega on Twitter.](https://www.twitter.com/vegaprotocol)
 
