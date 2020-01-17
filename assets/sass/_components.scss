@@ -1,0 +1,69 @@
+.marquee{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	border-top: solid 1px currentColor;
+	height: rem-calc(75);
+	font-size: rem-calc(26);
+	text-transform: uppercase;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.signup{
+	position: relative;
+	border-bottom: solid 3px currentColor;
+	padding-bottom: rem-calc(8);
+	display: flex;
+}
+
+.signup input[type="email"]{
+	flex: 1;
+	font-size: rem-calc(21);
+	background-color: transparent;
+	border: none;
+	color: inherit;
+	padding-right: rem-calc(15);
+	padding: 0;
+
+	&::placeholder{
+		color: inherit;
+	}
+
+	@media (min-width: $reflex-md) {
+		font-size: rem-calc(34);
+	}
+}
+
+.signup button{
+	position: relative;
+	top: 3px;
+	border: none;
+	background-color: transparent;
+	color: inherit;
+	text-transform: uppercase;
+
+	@media (min-width: $reflex-md) {
+		font-size: rem-calc(34);
+	}
+
+	.icon{
+		margin-left: rem-calc(10);
+		font-size: rem-calc(16);
+
+		@media (min-width: $reflex-md) {
+			font-size: 76%;
+		}
+	}
+}
+
+.signup button svg{
+	margin-left: rem-calc(10);
+	width: rem-calc(24);
+	height: rem-calc(24);
+
+	path{
+		fill: currentColor;
+	}
+}

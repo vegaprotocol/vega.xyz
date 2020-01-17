@@ -1,31 +1,54 @@
 {{ define "main" }}
-{{ $jobs := (where .Site.RegularPages "Section" "_job") }}
-    <main aria-role="main" class="cf mw10 mw8-ns center pa3 ph5-ns avenir">
-      <header class="homepage-header mw10 center ph3-ns">
-        <h1 class="tc f2 tracked-tight">{{.Params.headerline}}</h1>
-        {{ with .Params.headerdescription }}
-        <p class="tc f4 subtitle mh5">{{.}}</p>
-        {{ end }}
-        <p class="tc">
-          <a href="/about/" class="f4 black ba br4 ph5 pv3 mv5 dib">Learn more</a>
-        </p>
-      </header>
 
-      <article class="homepage-content mw10 center ph4-ns">
-      {{ range .Params.linkblocks }}
-      <section class=" fl w-100 w-50-ns ph5 pv1" style="height: 11rem">
-        <h3 class="f3"><a href="{{.link}}">&#x2192;&nbsp;{{.title}}</a></h3>
-        <ul class="f4 list pl1 lh-copy">{{ range .links }}
-        <li>
-          <span class="gray">&ndash;&nbsp;</span><a class="dark-gray {{with .highlight}}bg-light-yellow{{end}}" style="white-space: nowrap" href="{{.link}}">{{.title}}{{if eq .status "true"}}<span class="black f4 b lh-copy">{{$.Page.Param "CurrentNetwork"}}{{end}}</span></span></a>
-         {{if eq .count "true"}}
-           &nbsp;<span class="link dim br-pill ph2 dib fw2 dark-gray bg-yellow ">{{len $jobs}}</span>
-         {{end}}
-         </li>
-        {{ end }}
-        </ul>
-      </section>
-      {{ end }}
-      </article>
-  </main>
+<div class="panel no-border-top no-border-right">
+	<div class="grid">
+		<div class="col-6 col-md-6">
+			<div class="heading-intro presentational" aria-hidden="true">Ve<span class="px">g</span>a is a prot<span class="px">o</span>col for<br> <span class="bump px"></span>creating and<br> tr<span class="px">a</span>ding<br> <span class="bump px"></span>derivative<span class="px">s</span> on <br><span class="bump px"></span>a fully de<span class="px">c</span>entralised network.</div>
+		</div>
+		<div class="col-12 col-md-6">
+			<h1 class="heading-intro">Ve<span class="px">g</span>a is a prot<span class="px">o</span>col for<br> <span class="bump px"></span>creating and<br> tr<span class="px">a</span>ding<br> <span class="bump px"></span>derivative<span class="px">s</span> on <br><span class="bump px"></span>a fully de<span class="px">c</span>entralised network.</h1>
+
+			<div class="hidden-md-up">
+				<p>Fully automated processes and incentives for trading margined financial products allow for markets that are open and decentralised, with pseudonymous participants.</p>
+	    		<p><a href="#" class="call-to-action">Learn more</a></p>
+	    	</div>
+		</div>
+	</div>
+</div>
+
+<div class="grid">
+	<div class="col-12 col-md-9 panel no-border-top no-border-right no-border-bottom">
+    	<h2 class="heading-panel">Navigation</h2>
+    	<nav class="page-navigation">
+	    	<ul>
+	    	{{range $index, $element := .Params.linkblocks}}
+	    		{{ $menuindex :=add $index 1 }}
+				<li>
+					<a href="{{.link}}"><span class="section-number">{{ printf "%02d" $menuindex }}</span><span class="section-title">{{.title}}</span></a>
+					<ul>
+						{{ range .links }}
+						<li>
+							<a href="{{.link}}">
+								{{.title}}{{if eq .status "true"}}
+								{{$.Page.Param "CurrentNetwork"}}{{end}}
+							</a>
+						</li>
+						{{ end }}
+					</ul>
+				</li>
+			{{ end }}
+			</ul>
+		</nav>
+    </div>
+    <div class="col-md-3 panel no-border-top no-border-right no-border-bottom hidden visible-md">
+    	<h2 class="heading-panel">Vega in 21 words</h2>
+    	<p class="large">Fully automated processes and incentives for trading margined financial products allow for markets that are open and decentralised, with pseudonymous participants.</p>
+    	<p><a href="#" class="call-to-action">Learn more</a></p>
+
+		<div class="marquee">
+			<marquee behaviour="slide" scrollamount="10">Current status: TESTNET</marquee>
+		</div>
+    </div>
+</div>
+
 {{ end }}

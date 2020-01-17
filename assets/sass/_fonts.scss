@@ -1,0 +1,51 @@
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=53224c0d-b3ac-460b-ae34-1f624cf9685a&fontids=5664093");
+@font-face{
+    font-family:"Helvetica Neue LT W05 55 Roman";
+    src:
+    	url("/fonts/5664093/522972a6-5867-47ae-82fc-a7cf9bd5d4d4.eot?#iefix");
+    src:
+    	url("/fonts/5664093/522972a6-5867-47ae-82fc-a7cf9bd5d4d4.eot?#iefix") format("eot"),
+    	url("/fonts/5664093/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"),
+    	url("/fonts/5664093/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff"),
+    	url("/fonts/5664093/8f4a1705-214a-4dd0-80b8-72252c37e688.ttf") format("truetype");
+}
+
+@font-face{
+    font-family:"Neue Pixel Grotesk Regular";
+    src:
+    	url("/fonts/NeuePixelGrotesk_Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Vega';
+  src:  url('/fonts/vega.eot');
+  src:  url('/fonts/vega.eot#iefix') format('embedded-opentype'),
+        url('/fonts/vega.ttf') format('truetype'),
+        url('/fonts/vega.woff') format('woff'),
+        url('/fonts/vega.svg#vega') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Vega' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-point-up:before {
+  content: "\e900";
+}
+.icon-arrow-diagonal:before {
+  content: "\e901";
+}

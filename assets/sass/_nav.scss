@@ -1,0 +1,98 @@
+.main-navigation{
+	position: absolute;
+	top: 0;
+	width: 100vh;
+	height: rem-calc(60);
+	transform: rotate(90deg) translateY(-60px);
+	transform-origin: top left;
+	text-align: center;
+	margin: 0;
+	font-size: rem-calc(16);
+}
+
+.main-navigation ul{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	list-style-type: none;
+	transform: rotate(-180deg);
+}
+
+.main-navigation ul li{
+	display: inline-block;
+	letter-spacing: 0.01em;
+	line-height: rem-calc(60);
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.main-navigation ul li a{
+	display: inline-block;
+	text-decoration: none;
+	padding: 0 rem-calc(5);
+}
+
+.page-navigation ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.page-navigation > ul{
+	border-bottom: solid 1px currentColor;
+}
+
+.page-navigation ul li{
+	font-size: rem-calc(24);
+	letter-spacing: 0.02em;
+	line-height: 93%;
+	text-transform: uppercase;
+	border-top: solid 1px currentColor;
+
+	@media (min-width: $reflex-md) {
+		font-size: rem-calc(34);
+	}
+}
+
+.page-navigation ul li a{
+	display: block;
+	text-decoration: none;
+	padding: rem-calc(6) 0;
+	transition: padding 0.5s;
+
+	&:hover{
+		padding: rem-calc(12) 0;
+	}
+}
+
+.page-navigation ul li .section-title{
+	@media (min-width: $reflex-md) {
+		display: inline-block;
+		text-indent: 2ch;
+	}
+}
+
+.page-navigation ul li .section-number{
+	display: none;
+
+	@media (min-width: $reflex-md) {
+		display: inline-block;
+	}
+}
+
+.page-navigation ul ul li{
+	@media (min-width: $reflex-md) {
+		text-indent: 4ch;
+	}
+}
+
+.page-navigation ul ul li a{
+	color: $vega_darkgrey;
+
+	.toggle-switch:checked ~ .site-container &{
+		color: $vega_darkyellow2;
+	}
+}

@@ -1,0 +1,13 @@
+body{
+	font-family: 'Helvetica Neue LT W05 55 Roman', Helvetica, Arial, sans-serif;
+	//font-family: 'Neue Pixel Grotesk Regular';
+	background-color: $vega_black;
+	color: $white;
+}
+
+.site-header,
+.site-container{
+	&, a{
+		color: $white;
+	} 
+}

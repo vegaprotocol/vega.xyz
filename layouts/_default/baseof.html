@@ -2,9 +2,20 @@
 <html>
   {{- partial "head.html" . -}}
   <body>
-    {{- partial "header.html" . -}}
-    {{- partial "nav.html" . -}}
-    <div id="content">{{- block "main" . }}{{- end }}</div>
+  	<input type="checkbox" id="toggleSwitch" class="toggle-switch" data-toggle>
+  	<label class="toggle" for="toggleSwitch">
+		<span class="toggle__container">
+			<span class="toggle__switch"></span>
+		</span>
+	</label>
+  	{{- partial "header.html" . -}}
+
+    <div class="site-container">
+
+    	{{- block "main" . }}{{- end }}
+
+    </div>
+
     {{- partial "footer.html" . -}}
   </body>
 </html>
