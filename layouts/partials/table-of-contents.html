@@ -1,0 +1,35 @@
+<!-- ignore empty links with + -->
+{{ $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content }}
+<!-- at least one header to link to -->
+{{ $has_headers := ge (len $headers) 1 }}
+
+{{ if and $has_headers }}
+<div class="table-of-contents toc bd-callout">
+    <div class="title">{{ .Title }}</div>
+    <!-- TOC header -->
+    {{ range $headers }}
+        {{ $header := . }}
+        {{ range first 1 (findRE "<h[1-6]" $header 1) }}
+            {{ range findRE "[1-6]" . 1 }}
+                {{ $next_heading := (int .) }}
+                <!-- generate li array of the proper depth -->
+                {{ range seq $next_heading }}
+                    <ul class="toc-h{{ . }}">
+                {{end}}
+                {{ $base := ($.Page.File.LogicalName) }}
+                {{ $anchorId := ($header | plainify | htmlEscape | urlize) }}
+                {{ $href := delimit (slice $base $anchorId) "#" | string }}
+                <li>
+                    <a href="{{ relref $.Page $href }}">
+                        {{ $header | plainify | htmlEscape }}
+                    </a>
+                </li>
+                <!-- close list -->
+                {{ range seq $next_heading }}
+                    </ul>
+                {{end}}
+            {{end}}
+        {{end}}
+    {{ end }}
+</div>
+{{ end }}

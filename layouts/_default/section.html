@@ -4,23 +4,41 @@
 <body
   lang="{{ .Site.LanguageCode }}"
   itemscope
-  itemtype="http://schema.org/Article"
->
+  itemtype="http://schema.org/Article">
+
+  <input type="checkbox" id="toggleSwitch" class="toggle-switch" data-toggle>
+    <label class="toggle" for="toggleSwitch">
+      <span class="toggle__container">
+        <span class="toggle__switch"></span>
+      </span>
+  </label>
+
   {{ partial "header.html" . }}
   {{- partial "nav.html" . -}}
 
-  <section id="main" class="mt5 cf sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns">
-    <article itemprop="articleBody" id="content" class="fl w-75-ns lh-copy">
-      {{ .Content }}
-    </article>
-    <aside id="sidebar" class="pl5-l pl-2-m fl w-25 dn-s">
-      {{.TableOfContents}}
-      <ul>
-        <li><a href="#">Back to top</a></li>
-        <li><a href="/">Home</a></li>
-      </ul>
-   </aside>
-  </section>
+  <div class="site-container">
+    <section id="main">
+      <div class="grid">
+        <div class="col-12 col-md-9">
+          <article itemprop="articleBody" id="content">
+            {{ .Content }}
+          </article>
+        </div>
+        <div class="col-12 col-md-3">
+          <aside id="sidebar">
+            <div class="panel no-borders">
+              <div class="inner">
+                {{ partial "table-of-contents" . }}
+                <a href="#top" class="back-to-top-hand">
+                  <span class="no-show">Back to top</span>
+                  <span class="icon icon-point-up"></span>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+    </section>
+  </div>
 
   {{ partial "footer.html" . }}
   </body>

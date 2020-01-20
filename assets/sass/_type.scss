@@ -15,7 +15,7 @@ a{
 	font-family:"Neue Pixel Grotesk Regular";
 }
 
-.heading-intro{
+.heading-intro-home{
 	margin: 0 0 rem-calc(15) 0;
 	text-transform: uppercase;
 	line-height: 90%;
@@ -45,14 +45,24 @@ a{
 	}
 }
 
+.heading-intro{
+	margin: 0 0 rem-calc(15) 0;
+	text-transform: uppercase;
+	line-height: 93%;
+	letter-spacing: 0.02em;
+	font-size: rem-calc(44);
+	margin-bottom: rem-calc(25);
+}
+
 .heading-panel{
 	font-size: rem-calc(16);
+	font-weight: normal;
 	display: flex;
 	align-items: center;
 	text-transform: uppercase;
 	letter-spacing: 0.01em;
 	line-height: rem-calc(16);
-	margin: 0 0 rem-calc(28) 0;
+	margin: 0 0 rem-calc(20) 0;
 
 	&::before{
 		position: relative;
@@ -95,6 +105,21 @@ p.larger{
 
 	@media (min-width: $reflex-lg) {
 		font-size: rem-calc(28);
+	}
+}
+
+h2,
+.h2{
+	font-size: rem-calc(16);
+	font-weight: bold;
+	line-height: 130%;
+
+	@media (min-width: $reflex-md) {
+		font-size: rem-calc(18);
+	}
+
+	@media (min-width: $reflex-lg) {
+		font-size: rem-calc(20);
 	}
 }
 

@@ -1,7 +1,9 @@
 <!-- {{ $style := resources.Get "sass/style.scss" | toCSS | minify | fingerprint }} -->
 
 {{ $style := resources.Get "sass/style.scss" | toCSS | fingerprint }}
-
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+{{ $js := resources.Get "js/site.js" | fingerprint }}
+<script src="{{ $js.Permalink }}"></script>
 
 {{ template "_internal/google_analytics_async.html" . }}

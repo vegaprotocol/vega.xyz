@@ -67,3 +67,98 @@
 		fill: currentColor;
 	}
 }
+
+.table-of-contents .title{
+	font-size: rem-calc(26);
+	letter-spacing: 0.02em;
+	line-height: 1;
+	padding: 0 0 rem-calc(10) 0;
+	text-transform: uppercase;
+	border-bottom: solid 1px currentColor;
+}
+
+.table-of-contents ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.table-of-contents .toc-h1 > a{
+	font-size: rem-calc(26);
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	line-height: 93%;
+	padding: rem-calc(5) 0;
+}
+
+.table-of-contents a{
+	font-size: rem-calc(16);
+	position: relative;
+	display: block;
+	text-transform: uppercase;
+	border-bottom: solid 1px currentColor;
+	padding: rem-calc(5) 0;
+	letter-spacing: 0.01em;
+	line-height: 1.1;
+}
+
+.table-of-contents a:hover{
+	padding-left: rem-calc(25);
+
+	&::before{
+		position: absolute;
+		left: 0;
+		top: -3px;
+		content: '\25A0';
+		font-size: rem-calc(25);
+	}
+}
+
+.paper{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border-right: solid 1px currentColor;
+}
+
+.paper li{
+	position: relative;
+	border-bottom: solid 1px currentColor;
+	padding: #{$panel-padding}px;
+
+	@media (min-width: $reflex-md) {
+		padding: #{$panel-md-padding}px;
+	}
+}
+
+.paper li > .grid{
+	padding-right: rem-calc(120);
+
+	&:after{
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-family: 'Vega';
+		content: "\e902";
+		font-size: rem-calc(64);
+	}
+}
+
+.paper .title{
+	margin: 0 0 rem-calc(15) 0;
+	padding: 0 rem-calc(25) 0 0;
+	text-transform: uppercase;
+	line-height: 93%;
+	letter-spacing: 0.02em;
+	font-size: rem-calc(34);
+	margin-bottom: rem-calc(25);
+	font-weight: normal;
+}
+
+
+.back-to-top-hand{
+	font-size: rem-calc(82);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

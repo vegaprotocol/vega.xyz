@@ -1,6 +1,8 @@
 @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=53224c0d-b3ac-460b-ae34-1f624cf9685a&fontids=5664093");
+@import url("//hello.myfonts.net/count/3adeb0");
+
 @font-face{
-    font-family:"Helvetica Neue LT W05 55 Roman";
+    font-family:"Helvetica Neue";
     src:
     	url("/fonts/5664093/522972a6-5867-47ae-82fc-a7cf9bd5d4d4.eot?#iefix");
     src:
@@ -8,6 +10,18 @@
     	url("/fonts/5664093/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"),
     	url("/fonts/5664093/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff"),
     	url("/fonts/5664093/8f4a1705-214a-4dd0-80b8-72252c37e688.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+    src:
+      url('/fonts/3ADEB0_0_0.eot');
+    src:
+      url('/fonts/3ADEB0_0_0.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/3ADEB0_0_0.woff2') format('woff2'),
+      url('/fonts/3ADEB0_0_0.woff') format('woff'),
+      url('/fonts/3ADEB0_0_0.ttf') format('truetype');
+    font-weight: bold;
 }
 
 @font-face{
@@ -43,6 +57,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-paper:before {
+  content: "\e902";
+}
 .icon-point-up:before {
   content: "\e900";
 }
