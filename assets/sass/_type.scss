@@ -60,6 +60,10 @@ a{
 	@media (min-width: $reflex-lg) {
 		font-size: rem-calc(44);
 	}
+
+	a{
+		color: $vega_yellow;
+	}
 }
 
 .heading-panel{
@@ -92,6 +96,7 @@ a{
 p{
 	font-size: rem-calc(16);
 	line-height: 130%;
+	letter-spacing: 0.01em;
 
 	@media (min-width: $reflex-md) {
 		font-size: rem-calc(18);

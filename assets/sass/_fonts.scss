@@ -57,6 +57,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cross:before {
+  content: "\e904";
+}
+.icon-plus:before {
+  content: "\e905";
+}
 .icon-presentation:before {
   content: "\e903";
 }
