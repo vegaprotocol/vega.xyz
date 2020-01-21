@@ -3,10 +3,10 @@
   {{ range $papers }}
   <li>
   	<div class="grid">
-  		<div class="col-6">
-			<h2 class="title">{{.Name}}</h2>
+  		<div class="col-12 col-md-6">
+			<div class="title">{{.Name}}</div>
 		</div>
-		<div class="col-6">
+		<div class="col-12 col-md-6">
 			<p>{{.Description}}</p>
 			<p><a href="{{.Params.link}}" class="call-to-action">{{.Params.linkText}}</a></p>
 		</div>

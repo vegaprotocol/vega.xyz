@@ -9,5 +9,9 @@ body{
 .site-container{
 	&, a{
 		color: $white;
-	} 
+	}
+
+	.link-highlight{
+		color: $vega_yellow;
+	}
 }

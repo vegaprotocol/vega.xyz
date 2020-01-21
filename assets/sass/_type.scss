@@ -50,8 +50,16 @@ a{
 	text-transform: uppercase;
 	line-height: 93%;
 	letter-spacing: 0.02em;
-	font-size: rem-calc(44);
+	font-size: rem-calc(28);
 	margin-bottom: rem-calc(25);
+
+	@media (min-width: $reflex-md) {
+		font-size: rem-calc(32);
+	}
+
+	@media (min-width: $reflex-lg) {
+		font-size: rem-calc(44);
+	}
 }
 
 .heading-panel{

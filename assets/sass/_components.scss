@@ -114,6 +114,7 @@
 	}
 }
 
+.talk,
 .paper{
 	margin: 0;
 	padding: 0;
@@ -121,6 +122,7 @@
 	border-right: solid 1px currentColor;
 }
 
+.talk li,
 .paper li{
 	position: relative;
 	border-bottom: solid 1px currentColor;
@@ -131,30 +133,52 @@
 	}
 }
 
+.talk li > .grid,
 .paper li > .grid{
 	padding-right: rem-calc(120);
-
-	&:after{
-		position: absolute;
-		top: 0;
-		right: 0;
-		font-family: 'Vega';
-		content: "\e902";
-		font-size: rem-calc(64);
-	}
 }
 
+.talk li > .grid:after,
+.paper li > .grid:after{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-family: 'Vega';
+	
+	font-size: rem-calc(48);
+}
+
+.talk li > .grid:after{
+	content: "\e903";
+}
+
+.paper li > .grid:after{
+	content: "\e902";
+}
+
+.talk .title,
 .paper .title{
 	margin: 0 0 rem-calc(15) 0;
-	padding: 0 rem-calc(25) 0 0;
+	padding: 0 rem-calc(35) 0 0;
 	text-transform: uppercase;
 	line-height: 93%;
 	letter-spacing: 0.02em;
-	font-size: rem-calc(34);
+	font-size: rem-calc(26);
 	margin-bottom: rem-calc(25);
 	font-weight: normal;
-}
 
+	@media (min-width: $reflex-md) {
+		font-size: rem-calc(29);
+	}
+
+	@media (min-width: $reflex-md) {
+		font-size: rem-calc(34);
+	}
+
+	.date{
+		color: $vega_darkgrey;
+	}
+}
 
 .back-to-top-hand{
 	font-size: rem-calc(82);

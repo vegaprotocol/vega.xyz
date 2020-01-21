@@ -1545,6 +1545,9 @@ template {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-presentation:before {
+  content: "\e903"; }
+
 .icon-paper:before {
   content: "\e902"; }
 
@@ -1563,6 +1566,10 @@ body {
 .site-container,
 .site-container a {
   color: #ffffff; }
+
+.site-header .link-highlight,
+.site-container .link-highlight {
+  color: #EDFF22; }
 
 @media (max-width: 575px) {
   .visible-xxs {
@@ -1850,8 +1857,14 @@ a {
   text-transform: uppercase;
   line-height: 93%;
   letter-spacing: 0.02em;
-  font-size: 2.75rem;
+  font-size: 1.75rem;
   margin-bottom: 1.5625rem; }
+  @media (min-width: 992px) {
+    .heading-intro {
+      font-size: 2rem; } }
+  @media (min-width: 1200px) {
+    .heading-intro {
+      font-size: 2.75rem; } }
 
 .heading-panel {
   font-size: 1rem;
@@ -2021,39 +2034,62 @@ h2,
     content: '\25A0';
     font-size: 1.5625rem; }
 
+.talk,
 .paper {
   margin: 0;
   padding: 0;
   list-style-type: none;
   border-right: solid 1px currentColor; }
 
+.talk li,
 .paper li {
   position: relative;
   border-bottom: solid 1px currentColor;
   padding: 20px; }
   @media (min-width: 992px) {
+    .talk li,
     .paper li {
       padding: 30px; } }
 
+.talk li > .grid,
 .paper li > .grid {
   padding-right: 7.5rem; }
-  .paper li > .grid:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-family: 'Vega';
-    content: "\e902";
-    font-size: 4rem; }
 
+.talk li > .grid:after,
+.paper li > .grid:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'Vega';
+  font-size: 3rem; }
+
+.talk li > .grid:after {
+  content: "\e903"; }
+
+.paper li > .grid:after {
+  content: "\e902"; }
+
+.talk .title,
 .paper .title {
   margin: 0 0 0.9375rem 0;
-  padding: 0 1.5625rem 0 0;
+  padding: 0 2.1875rem 0 0;
   text-transform: uppercase;
   line-height: 93%;
   letter-spacing: 0.02em;
-  font-size: 2.125rem;
+  font-size: 1.625rem;
   margin-bottom: 1.5625rem;
   font-weight: normal; }
+  @media (min-width: 992px) {
+    .talk .title,
+    .paper .title {
+      font-size: 1.8125rem; } }
+  @media (min-width: 992px) {
+    .talk .title,
+    .paper .title {
+      font-size: 2.125rem; } }
+  .talk .title .date,
+  .paper .title .date {
+    color: #6C6C6C; }
 
 .back-to-top-hand {
   font-size: 5.125rem;
