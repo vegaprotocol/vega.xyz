@@ -93,6 +93,12 @@ a{
 	line-height: 0.8;
 }
 
+ul, ol{
+	padding-left: rem-calc(20);
+	margin-bottom: rem-calc(35);
+}
+
+li,
 p{
 	font-size: rem-calc(16);
 	line-height: 130%;
@@ -119,6 +125,11 @@ p.larger{
 	@media (min-width: $reflex-lg) {
 		font-size: rem-calc(28);
 	}
+}
+
+li{
+	margin-bottom: rem-calc(15);
+	list-style-type: square;
 }
 
 h2,
@@ -152,6 +163,7 @@ h2,
 	font-size: rem-calc(88);
 	font-size: 6vw;
 	line-height: 0.8;
+	color: $vega_yellow;
 
 	.icon{
 		font-size: 77%;

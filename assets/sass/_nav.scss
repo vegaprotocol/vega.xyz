@@ -36,7 +36,6 @@
 }
 
 .page-navigation ul{
-	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
@@ -51,6 +50,8 @@
 	line-height: 93%;
 	text-transform: uppercase;
 	border-top: solid 1px currentColor;
+	list-style-type: none;
+	margin: 0;
 
 	@media (min-width: $reflex-md) {
 		font-size: rem-calc(34);

@@ -71,15 +71,25 @@
 .table-of-contents .title{
 	font-size: rem-calc(26);
 	letter-spacing: 0.02em;
+	display: block;
 	line-height: 1;
 	padding: 0 0 rem-calc(10) 0;
 	text-transform: uppercase;
 	border-bottom: solid 1px currentColor;
+
+	.icon{
+		font-size: rem-calc(20);
+		padding-right: rem-calc(16);
+	}
 }
 
 .table-of-contents ul{
-	list-style-type: none;
 	padding: 0;
+	margin: 0;
+}
+
+.table-of-contents ul li{
+	list-style-type: none;
 	margin: 0;
 }
 
@@ -91,7 +101,7 @@
 	padding: rem-calc(5) 0;
 }
 
-.table-of-contents a{
+.table-of-contents li a{
 	font-size: rem-calc(16);
 	position: relative;
 	display: block;
@@ -102,7 +112,7 @@
 	line-height: 1.1;
 }
 
-.table-of-contents a:hover{
+.table-of-contents li a:hover{
 	padding-left: rem-calc(25);
 
 	&::before{
@@ -266,7 +276,6 @@
 }
 
 .jobs{
-	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	border-top: solid 1px currentColor;
@@ -278,6 +287,8 @@
 }
 
 .jobs li{
+	list-style-type: none;
+	margin: 0;
 	border-bottom: solid 1px currentColor;
 	padding: rem-calc(8) 0;
 }
@@ -300,13 +311,13 @@
 	}
 }
 
-.jobs .attribute{
+.job-attributes .attribute{
 	text-transform: uppercase;
 	letter-spacing: 0.01em;
 	margin-bottom: rem-calc(3);
 }
 
-.jobs .value{
+.job-attributes .value{
 	margin-bottom: rem-calc(18);
 
 	font-size: rem-calc(16);
@@ -317,6 +328,12 @@
 
 	@media (min-width: $reflex-lg) {
 		font-size: rem-calc(20);
+	}
+}
+
+aside.job-attributes{
+	@media (min-width: $reflex-md) {
+		padding-left: rem-calc(35);
 	}
 }
 
@@ -374,4 +391,25 @@
 
 .jobs .job.closed .job-toggle:after{
 	content: "\e905";
+}
+
+.job-apply{
+	position: relative;
+
+	a{
+		display: block;
+	}
+
+	@media (min-width: $reflex-md) {
+		padding-right: rem-calc(60);
+
+		&:after{
+			font-family: 'Vega';
+			font-size: rem-calc(48);
+			position: absolute;
+			top: 0;
+			right: 0;
+			content: "\e906";
+		}
+	}
 }

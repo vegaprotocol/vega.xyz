@@ -1,5 +1,15 @@
 @include responsive-visibility-helpers-2();
 
+.grid.padded{
+	margin-left: -25px;
+	margin-right: -25px;
+
+	[class*="col-"]{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
 .hidden{
 	display: none;
 }
@@ -108,4 +118,8 @@
 	p:last-child{
 		margin-bottom: 0;
 	}
-}	
+
+	+ .panel{
+		border-top: none !important;
+	}
+}

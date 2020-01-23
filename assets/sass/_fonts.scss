@@ -57,6 +57,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-back:before {
+  content: "\e907";
+}
+.icon-cv:before {
+  content: "\e906";
+}
 .icon-cross:before {
   content: "\e904";
 }

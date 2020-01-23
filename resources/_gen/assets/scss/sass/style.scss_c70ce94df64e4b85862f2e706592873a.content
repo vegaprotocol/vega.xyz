@@ -1545,6 +1545,12 @@ template {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-arrow-back:before {
+  content: "\e907"; }
+
+.icon-cv:before {
+  content: "\e906"; }
+
 .icon-cross:before {
   content: "\e904"; }
 
@@ -1616,6 +1622,13 @@ body {
 @media (min-width: 1200px) {
   .hidden-lg-up {
     display: none !important; } }
+
+.grid.padded {
+  margin-left: -25px;
+  margin-right: -25px; }
+  .grid.padded [class*="col-"] {
+    padding-left: 25px;
+    padding-right: 25px; }
 
 .hidden {
   display: none; }
@@ -1694,6 +1707,8 @@ body {
     border: none; }
   .panel p:last-child {
     margin-bottom: 0; }
+  .panel + .panel {
+    border-top: none !important; }
 
 .main-navigation {
   position: absolute;
@@ -1729,7 +1744,6 @@ body {
   padding: 0 0.3125rem; }
 
 .page-navigation ul {
-  list-style-type: none;
   padding: 0;
   margin: 0; }
 
@@ -1741,7 +1755,9 @@ body {
   letter-spacing: 0.02em;
   line-height: 93%;
   text-transform: uppercase;
-  border-top: solid 1px currentColor; }
+  border-top: solid 1px currentColor;
+  list-style-type: none;
+  margin: 0; }
   @media (min-width: 992px) {
     .page-navigation ul li {
       font-size: 2.125rem; } }
@@ -1897,14 +1913,21 @@ a {
   text-transform: uppercase;
   line-height: 0.8; }
 
+ul, ol {
+  padding-left: 1.25rem;
+  margin-bottom: 2.1875rem; }
+
+li,
 p {
   font-size: 1rem;
   line-height: 130%;
   letter-spacing: 0.01em; }
   @media (min-width: 992px) {
+    li,
     p {
       font-size: 1.125rem; } }
   @media (min-width: 1200px) {
+    li,
     p {
       font-size: 1.25rem; } }
 
@@ -1917,6 +1940,10 @@ p.larger {
   @media (min-width: 1200px) {
     p.larger {
       font-size: 1.75rem; } }
+
+li {
+  margin-bottom: 0.9375rem;
+  list-style-type: square; }
 
 h2,
 .h2 {
@@ -1944,7 +1971,8 @@ h2,
   text-transform: uppercase;
   font-size: 5.5rem;
   font-size: 6vw;
-  line-height: 0.8; }
+  line-height: 0.8;
+  color: #EDFF22; }
   .call-to-action-footer .icon {
     font-size: 77%; }
 
@@ -2007,14 +2035,21 @@ h2,
 .table-of-contents .title {
   font-size: 1.625rem;
   letter-spacing: 0.02em;
+  display: block;
   line-height: 1;
   padding: 0 0 0.625rem 0;
   text-transform: uppercase;
   border-bottom: solid 1px currentColor; }
+  .table-of-contents .title .icon {
+    font-size: 1.25rem;
+    padding-right: 1rem; }
 
 .table-of-contents ul {
-  list-style-type: none;
   padding: 0;
+  margin: 0; }
+
+.table-of-contents ul li {
+  list-style-type: none;
   margin: 0; }
 
 .table-of-contents .toc-h1 > a {
@@ -2024,7 +2059,7 @@ h2,
   line-height: 93%;
   padding: 0.3125rem 0; }
 
-.table-of-contents a {
+.table-of-contents li a {
   font-size: 1rem;
   position: relative;
   display: block;
@@ -2034,9 +2069,9 @@ h2,
   letter-spacing: 0.01em;
   line-height: 1.1; }
 
-.table-of-contents a:hover {
+.table-of-contents li a:hover {
   padding-left: 1.5625rem; }
-  .table-of-contents a:hover::before {
+  .table-of-contents li a:hover::before {
     position: absolute;
     left: 0;
     top: -3px;
@@ -2170,7 +2205,6 @@ h2,
   display: block; }
 
 .jobs {
-  list-style-type: none;
   margin: 0;
   padding: 0;
   border-top: solid 1px currentColor;
@@ -2180,6 +2214,8 @@ h2,
       margin-bottom: 3.125rem; } }
 
 .jobs li {
+  list-style-type: none;
+  margin: 0;
   border-bottom: solid 1px currentColor;
   padding: 0.5rem 0; }
 
@@ -2198,20 +2234,24 @@ h2,
     .jobs li .title {
       font-size: 2.125rem; } }
 
-.jobs .attribute {
+.job-attributes .attribute {
   text-transform: uppercase;
   letter-spacing: 0.01em;
   margin-bottom: 0.1875rem; }
 
-.jobs .value {
+.job-attributes .value {
   margin-bottom: 1.125rem;
   font-size: 1rem; }
   @media (min-width: 992px) {
-    .jobs .value {
+    .job-attributes .value {
       font-size: 1.125rem; } }
   @media (min-width: 1200px) {
-    .jobs .value {
+    .job-attributes .value {
       font-size: 1.25rem; } }
+
+@media (min-width: 992px) {
+  aside.job-attributes {
+    padding-left: 2.1875rem; } }
 
 .jobs .number {
   display: inline-block;
@@ -2255,3 +2295,18 @@ h2,
 
 .jobs .job.closed .job-toggle:after {
   content: "\e905"; }
+
+.job-apply {
+  position: relative; }
+  .job-apply a {
+    display: block; }
+  @media (min-width: 992px) {
+    .job-apply {
+      padding-right: 3.75rem; }
+      .job-apply:after {
+        font-family: 'Vega';
+        font-size: 3rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "\e906"; } }

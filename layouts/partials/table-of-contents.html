@@ -4,9 +4,15 @@
 {{ $has_headers := ge (len $headers) 1 }}
 
 {{ if and $has_headers }}
+
 <div class="table-of-contents toc bd-callout">
-    <div class="title">{{ .Title }}</div>
-    <!-- TOC header -->
+
+    {{if eq .CurrentSection.Title "_jobs"}}
+        <a href="/who" class="title"><span class="icon icon-arrow-back"></span>WHO</a>
+    {{ else }}
+        <div class="title">{{ .Title }}</div>
+    {{ end }}
+
     {{ range $headers }}
         {{ $header := . }}
         {{ range first 1 (findRE "<h[1-6]" $header 1) }}
@@ -17,11 +23,11 @@
                     <ul class="toc-h{{ . }}">
                 {{end}}
                 {{ $base := ($.Page.File.LogicalName) }}
-                {{ $anchorId := ($header | plainify | htmlEscape | urlize) }}
+                {{ $anchorId := ($header | plainify | urlize) }}
                 {{ $href := delimit (slice $base $anchorId) "#" | string }}
                 <li>
                     <a href="{{ relref $.Page $href }}">
-                        {{ $header | plainify | htmlEscape }}
+                        {{ $header | plainify }}
                     </a>
                 </li>
                 <!-- close list -->

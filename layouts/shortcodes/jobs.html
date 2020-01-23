@@ -12,18 +12,18 @@
         <div class="grid">
           <div class="col-12 col-md-9">
             <div class="job-description">
-              <p>{{.Description}}</p>
+              <p>{{$element.Description}}</p>
               <p><a href="{{.Permalink}}" class="call-to-action">View full spec</a></p>
             </div>
           </div>
           <div class="col-12 col-md-3">
             <div class="job-attributes">
               <div class="attribute">Start date:</div>
-              <div class="value">Immediate</div>
+              <div class="value">{{.Params.startDate}}</div>
               <div class="attribute">Location:</div>
-              <div class="value">Central London</div>
+              <div class="value">{{.Params.location}}</div>
               <div class="attribute">Type:</div>
-              <div class="value">Temp-to-perm</div>
+              <div class="value">{{.Params.contractType}}</div>
             </div>
           </div>
         </div>
