@@ -1710,6 +1710,21 @@ body {
   .panel + .panel {
     border-top: none !important; }
 
+.call-to-action-footer {
+  display: none; }
+
+.footer-item-content-container {
+  overflow: hidden; }
+
+.footer-item-link-container {
+  position: relative;
+  overflow: hidden; }
+
+.footer-item-content {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 .main-navigation {
   position: absolute;
   top: 0;

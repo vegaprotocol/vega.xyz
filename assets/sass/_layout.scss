@@ -83,8 +83,12 @@
 .bump{
 	@media (min-width: $reflex-md) {
 		display: inline-block;
-		width: 3ch;
+		width: 3.8ch;
 	}
+}
+
+.intro-panel{
+	overflow: hidden;
 }
 
 .panel{
@@ -123,3 +127,32 @@
 		border-top: none !important;
 	}
 }
+
+.footer-item{
+	height: auto;
+	max-height: rem-calc(125);
+	overflow: hidden;
+	transition: max-height 1s;
+}
+
+.footer-item-link{
+	cursor: pointer;
+}
+
+.js .footer-item-content,
+.js .call-to-action-footer{
+	opacity: 0;
+	transform: translateY(100%);
+	transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
+}
+
+.js .footer-item.open{
+	max-height: 300px;
+}
+
+.js .footer-item.open .footer-item-content,
+.js .footer-item.open .call-to-action-footer{
+	transform: translateY(0);
+	opacity: 1;
+}
+

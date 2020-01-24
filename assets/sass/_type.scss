@@ -20,6 +20,12 @@ a{
 	text-transform: uppercase;
 	line-height: 90%;
 	letter-spacing: 0.02em;
+	width: calc(100% + 500px);
+
+	.px{
+		display: inline-block;
+		height: 3.9vw;
+	}
 
 	&.presentational{
 		display: none;
@@ -30,8 +36,8 @@ a{
 	}
 
 	@media (min-width: $reflex-md) {
-		font-size: 4.5vw;
-		transform: translateX(16%);
+		font-size: 6.2vw;
+		transform: translateX(5%);
 		margin-bottom: 0;
 
 		br{
@@ -40,7 +46,18 @@ a{
 
 		&.presentational{
 			display: block;
-			transform: translateX(-66%);
+			width: calc(100% + 1000px);
+    		transform: translateX(-36%);
+		}
+	}
+
+	@media (min-width: $reflex-lg) {
+		font-size: 5.2vw;
+		transform: translateX(0);
+
+		&.presentational{
+			width: calc(100% + 1000px);
+    		transform: translateX(-32%);
 		}
 	}
 }
@@ -159,6 +176,7 @@ h2,
 }
 
 .call-to-action-footer{
+	display: inline-block;
 	text-transform: uppercase;
 	font-size: rem-calc(88);
 	font-size: 6vw;
@@ -168,4 +186,16 @@ h2,
 	.icon{
 		font-size: 77%;
 	}
+}
+
+.flip{
+	//display: inline-block;
+	opacity: 0;
+	transform: translateY(-100%);
+	transition: transform 0.5s, opacity 0;
+}
+
+.flip.flop{
+	transform: translateY(0);
+	opacity: 1;
 }
