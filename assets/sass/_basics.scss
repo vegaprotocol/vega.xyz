@@ -3,6 +3,8 @@ body{
 	//font-family: 'Neue Pixel Grotesk Regular';
 	background-color: $vega_black;
 	color: $white;
+	line-height: 1.4;
+	vertical-align: baseline;
 }
 
 .site-header,
@@ -14,4 +16,13 @@ body{
 	.link-highlight{
 		color: $vega_yellow;
 	}
+}
+
+.vega-logo-anim{
+	position: relative;
+	z-index: 1;
+}
+
+.vega-logo-anim path{
+	fill: $vega_white;
 }

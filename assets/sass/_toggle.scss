@@ -23,6 +23,7 @@
 	height: rem-calc(7);
 	background-color: $vega_black;
 	transition: transform 0.5s;
+	transform: translateY(-1px);
 }
 
 .toggle-switch{
@@ -31,7 +32,7 @@
 
 .toggle-switch:checked ~ .toggle{
 	.toggle__switch{
-		transform: translateY(-6px);
+		transform: translateY(-7px);
 	}
 
 	.toggle__container{
@@ -52,6 +53,13 @@
 
 	a{
 		color: $vega_black;
+	}
+
+	.vega-logo-anim path{
+		fill: $vega_black;
+	}
+	.vega-logo-anim #frame0 rect{
+		fill: $vega_yellow;
 	}
 }
 

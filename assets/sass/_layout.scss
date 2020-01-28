@@ -130,9 +130,21 @@
 
 .footer-item{
 	height: auto;
-	max-height: rem-calc(125);
+	max-height: calc(5.5vw + 40px);
 	overflow: hidden;
 	transition: max-height 1s;
+
+	@media (min-width: $reflex-md) {
+		max-height: calc(5.5vw + 60px);
+	}
+}
+
+.footer-item-content{
+	margin-top: rem-calc(10);
+
+	@media (min-width: $reflex-md) {
+		margin-top: 0;
+	}
 }
 
 .footer-item-link{

@@ -36,10 +36,6 @@ description = "Vega is a protocol for creating and trading derivatives on a full
     identifier = "who"
     name = "Who"
     url = "/who/"
-  # [[menu.main]]
-  #   identifier = "Connect"
-  #   name = "Connect"
-  #   url = "/connect/"
 
 #########################################
 # Universal page footer

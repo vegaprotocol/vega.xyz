@@ -3,6 +3,9 @@ import * as $ from 'jquery';
 $(() => {
 	$('body').addClass('js');
 
+	// let footerItemHeight = $('.footer-item').eq(0).outerHeight();
+	// $('.footer-item').css({'maxHeight': footerItemHeight});
+
 	$('.footer-item-link').click(function(){
 		$('.footer-item').removeClass('open');
 		$(this).closest('.footer-item').addClass('open');

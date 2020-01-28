@@ -16,15 +16,19 @@ a{
 }
 
 .heading-intro-home{
+	font-size: rem-calc(32);
 	margin: 0 0 rem-calc(15) 0;
 	text-transform: uppercase;
-	line-height: 90%;
 	letter-spacing: 0.02em;
-	width: calc(100% + 500px);
+	max-width: rem-calc(560);
+	line-height: 0.9;
+
+	.line{
+		white-space: nowrap;
+	}
 
 	.px{
 		display: inline-block;
-		height: 3.9vw;
 	}
 
 	&.presentational{
@@ -36,9 +40,16 @@ a{
 	}
 
 	@media (min-width: $reflex-md) {
+		max-width: none;
+		width: calc(100% + 500px);
 		font-size: 6.2vw;
+		line-height: 4.6vw;
 		transform: translateX(5%);
 		margin-bottom: 0;
+
+		.line{
+			white-space: normal;
+		}
 
 		br{
 			display: block;
@@ -54,6 +65,7 @@ a{
 	@media (min-width: $reflex-lg) {
 		font-size: 5.2vw;
 		transform: translateX(0);
+		line-height: 4.1vw;
 
 		&.presentational{
 			width: calc(100% + 1000px);
@@ -132,10 +144,11 @@ p{
 
 p.larger{
 	font-size: rem-calc(18);
-	line-height: 115%;
+	line-height: 130%;
 
 	@media (min-width: $reflex-md) {
 		font-size: rem-calc(26);
+		line-height: 115%;
 		
 	}
 
