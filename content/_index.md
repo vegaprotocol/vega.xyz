@@ -69,20 +69,4 @@ currentNetwork = "Testnet"
   title = "Open jobs"
   count = "true"
   link = "who#jobs"
-
-[[linkblocks]]
-  title = "Connect"
-  link = "connect"
-
-  [[linkblocks.links]]
-  title = "Newsletter"
-  link = "where#newsletter"
-
-  [[linkblocks.links]]
-  title = "Blog"
-  link = "where#blog"
-
-  [[linkblocks.links]]
-  title = "Forum"
-  link = "where#forum"
 +++

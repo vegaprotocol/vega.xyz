@@ -101,7 +101,7 @@ a{
 	display: flex;
 	align-items: center;
 	text-transform: uppercase;
-	letter-spacing: 0.01em;
+	letter-spacing: 0.02em;
 	line-height: rem-calc(16);
 	margin: 0 0 rem-calc(20) 0;
 
@@ -157,6 +157,14 @@ p.larger{
 	}
 }
 
+p a{
+	text-decoration: underline;
+
+	&:hover{
+		text-decoration: none;
+	}
+}
+
 li{
 	margin-bottom: rem-calc(15);
 	list-style-type: square;
@@ -177,6 +185,21 @@ h2,
 	}
 }
 
+h3,
+.h3{
+	font-size: rem-calc(15);
+	font-weight: bold;
+	line-height: 130%;
+
+	@media (min-width: $reflex-md) {
+		font-size: rem-calc(16);
+	}
+
+	@media (min-width: $reflex-lg) {
+		font-size: rem-calc(18);
+	}
+}
+
 .call-to-action{
 	text-decoration: none;
 	text-transform: uppercase;
@@ -194,7 +217,10 @@ h2,
 	font-size: rem-calc(88);
 	font-size: 6vw;
 	line-height: 0.8;
-	color: $vega_yellow;
+
+	a{
+		color: $vega_yellow;
+	}
 
 	.icon{
 		font-size: 77%;

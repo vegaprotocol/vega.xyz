@@ -15,8 +15,8 @@
 
     {{ range $headers }}
         {{ $header := . }}
-        {{ range first 1 (findRE "<h[1-6]" $header 1) }}
-            {{ range findRE "[1-6]" . 1 }}
+        {{ range first 1 (findRE "<h[1-2]" $header 1) }}
+            {{ range findRE "[1-2]" . 1 }}
                 {{ $next_heading := (int .) }}
                 <!-- generate li array of the proper depth -->
                 {{ range seq $next_heading }}

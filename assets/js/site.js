@@ -1,52 +1,108 @@
-import * as $ from 'jquery';
+/*
+ * recursively get all text nodes as an array for a given element
+ */
+function getTextNodes(node) {
+    var childTextNodes = [];
 
-$(() => {
-	$('body').addClass('js');
+    if (!node.hasChildNodes()) {
+        return;
+    }
 
-	// let footerItemHeight = $('.footer-item').eq(0).outerHeight();
-	// $('.footer-item').css({'maxHeight': footerItemHeight});
+    var childNodes = node.childNodes;
+    
+    for (var i = 0; i < childNodes.length; i++) {
+        if (childNodes[i].nodeType == Node.TEXT_NODE) {
+            childTextNodes.push(childNodes[i]);
+        }
+        else if (childNodes[i].nodeType == Node.ELEMENT_NODE) {
+            Array.prototype.push.apply(childTextNodes, getTextNodes(childNodes[i]));
+        }
+    }
 
-	$('.footer-item-link').click(function(){
-		$('.footer-item').removeClass('open');
-		$(this).closest('.footer-item').addClass('open');
-	});
+    return childTextNodes;
+}
 
-	function spanify(node){
-		node.contents().each(function(){
-			if (this.nodeType == 3) {
-				$(this).replaceWith($(this).text().replace(/(\w|\.)/g, "<span class='flip'>$&</span>"));
-			}
-			else if(this.nodeType == 1){
-				spanify($(this));
-			}
+/*
+ * given a text node, wrap each character in the given tag.
+ */
+function wrapEachCharacter(textNode, tag, styleClass) {
+    var text = textNode.nodeValue;
+    var parent = textNode.parentNode;
+    var characters = text.split('');
+
+    characters.forEach(function(character) {
+        var element = document.createElement(tag);
+        if(styleClass){
+        	element.classList.add(styleClass)
+        }
+        var characterNode = document.createTextNode(character);
+        element.appendChild(characterNode);
+
+        parent.insertBefore(element, textNode);
+    });
+
+    parent.removeChild(textNode);
+}
+
+/*
+ * find and return closest element
+ */
+function closest(el, selector){
+  const matchesSelector = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector;
+
+  while (el) {
+    if (matchesSelector.call(el, selector)) {
+      return el;
+    } else {
+      el = el.parentElement;
+    }
+  }
+  return null;
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+	document.querySelector('body').classList.add('js');
+
+	// open/close footer link sections
+	const footerItemLinks = document.querySelectorAll('.footer-item-link');
+
+	footerItemLinks.forEach(footerItemLink => footerItemLink.addEventListener('click', el => {
+		document.querySelectorAll('.footer-item').forEach( el => {
+			el.classList.remove('open');
 		});
-	}
+		el.target.closest('.footer-item').classList.add('open');
+	}));
 
-	$('.heading-intro-home').each(function(){
-		spanify($(this));
-	});
-
+	// list of possible letters to scramble to
 	const letters = (" ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,':()&!?").split("");
 
-	$('.heading-intro-home .line').each(function(){
-		let $this = $(this);
+	// wrap all characters in span tag
+	const scrambleHeadings = document.querySelectorAll('.scramble-heading');
+
+	scrambleHeadings.forEach(heading => {
+		var textNodes = getTextNodes(heading);
+		textNodes.forEach(function(textNode) {
+		    wrapEachCharacter(textNode, 'span', 'flip');
+		});
+	});
+
+	// scramble headings
+	const scrambleHeadingLines = document.querySelectorAll('.scramble-heading .line');
+
+	scrambleHeadingLines.forEach( line => {
 		let i = 0;
-
-		let timer = setTimeout(function myTimer() {
-			let el = $this.find('.flip').eq(i);
-			if(el.length){
-				let originalLetter = el.text();
+		let timer = setTimeout(function flipTimer() {
+			const el = line.querySelectorAll('.flip')[i];
+			if(el){
+				let originalLetter = el.textContent;
 				let randomChar = letters[Math.floor(Math.random()*letters.length)];
-
-				el.text(randomChar);
-				el.addClass('flop');
-
+				el.textContent = randomChar;
+				el.classList.add('flop');
 				setTimeout(() => {
-					el.text(originalLetter);
+					el.textContent = originalLetter;
 				}, 500);
-
-				timer = setTimeout(myTimer, 50);
 				i++;
+				timer = setTimeout(flipTimer, 50);
 			}
 		}, 800);
 	});

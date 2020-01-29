@@ -107,7 +107,7 @@
 	display: block;
 	text-transform: uppercase;
 	border-bottom: solid 1px currentColor;
-	padding: rem-calc(5) 0;
+	padding: rem-calc(4) 0 rem-calc(5) 0;
 	letter-spacing: 0.01em;
 	line-height: 1.1;
 }
@@ -137,9 +137,10 @@
 	position: relative;
 	border-bottom: solid 1px currentColor;
 	padding: #{$panel-padding}px;
+	margin-bottom: 0;
 
 	@media (min-width: $reflex-md) {
-		padding: #{$panel-md-padding}px;
+		padding: #{$panel-md-padding}px #{$panel-md-padding}px #{$panel-md-padding*1.5}px #{$panel-md-padding}px;
 	}
 }
 
@@ -151,11 +152,11 @@
 .talk li > .grid:after,
 .paper li > .grid:after{
 	position: absolute;
-	top: 0;
+	top: rem-calc(3);
 	right: 0;
 	font-family: 'Vega';
-	
-	font-size: rem-calc(48);
+	line-height: 1;
+	font-size: rem-calc(58);
 }
 
 .talk li > .grid:after{
@@ -191,7 +192,8 @@
 }
 
 .back-to-top-hand{
-	font-size: rem-calc(82);
+	font-size: rem-calc(105);
+	line-height: 1;
 	position: absolute;
 	bottom: 0;
 	right: 0;

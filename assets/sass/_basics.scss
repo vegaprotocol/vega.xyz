@@ -1,6 +1,9 @@
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	//font-family: 'Neue Pixel Grotesk Regular';
 	background-color: $vega_black;
 	color: $white;
 	line-height: 1.4;
