@@ -1,14 +1,10 @@
 .marquee{
-	position: absolute;
-	display: flex;
-	align-items: center;
 	border-top: solid 1px currentColor;
-	height: rem-calc(75);
 	font-size: rem-calc(26);
 	text-transform: uppercase;
-	bottom: 0;
-	right: 0;
-	left: 0;
+	background-color: $vega_black;
+	line-height: rem-calc(75);
+	height: 100%;
 }
 
 .signup{
@@ -29,6 +25,10 @@
 
 	&::placeholder{
 		color: inherit;
+	}
+	
+	&:focus{
+		outline: none;
 	}
 
 	@media (min-width: $reflex-md) {
@@ -342,7 +342,10 @@ aside.job-attributes{
 
 .jobs .number{
 	display: inline-block;
-	width: rem-calc(80);
+
+	@media (min-width: $reflex-md) {
+		width: rem-calc(80);
+	}
 }
 
 .jobs .job-description{
