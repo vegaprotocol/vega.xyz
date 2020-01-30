@@ -94,7 +94,7 @@
 	padding: rem-calc($panel-padding);
 
 	@media (min-width: $reflex-md) {
-		padding: rem-calc($panel-md-padding) rem-calc($panel-md-padding) rem-calc($panel-md-padding*3) rem-calc($panel-md-padding);
+		padding: rem-calc($panel-md-padding) rem-calc($panel-md-padding) rem-calc($panel-md-padding+40) rem-calc($panel-md-padding);
 	}
 
 	&.no-border-top{
@@ -130,6 +130,12 @@
 	}
 }
 
+.restrict-text-width{
+	@media (min-width: $reflex-md) {
+		padding-right: 15%;
+	}
+}
+
 .intro-panel{
 	overflow: hidden;
 	padding-bottom: rem-calc($panel-padding);
@@ -141,12 +147,15 @@
 
 .footer-item{
 	height: auto;
-	max-height: calc(5.5vw + 40px);
-	overflow: hidden;
-	transition: max-height 1s;
 
-	@media (min-width: $reflex-md) {
-		max-height: calc(5.5vw + 60px);
+	.js &{
+		max-height: calc(5.5vw + 40px);
+		overflow: hidden;
+		transition: max-height 1s;
+
+		@media (min-width: $reflex-md) {
+			max-height: calc(5.5vw + 60px);
+		}
 	}
 }
 
@@ -190,12 +199,9 @@
 	z-index: 1;
 }
 
+/* js footer */
 .js .footer-item-fade-button.hidden{
 	opacity: 0;
-}
-
-.js-hidden{
-	display: none;
 }
 
 .js .footer-item-content,
@@ -224,3 +230,16 @@
 	z-index: 1;
 }
 
+/* js jobs */
+.js .slide-toggle-panel{
+	transition: height .5s ease;
+    overflow: hidden;
+
+    &:not(.active){
+    	display: none;
+    }
+}
+
+.slide-toggle-trigger{
+	cursor: pointer;
+}

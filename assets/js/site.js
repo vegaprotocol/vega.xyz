@@ -73,6 +73,42 @@ document.addEventListener("DOMContentLoaded",()=>{
 		el.target.closest('.footer-item').classList.add('open');
 	}));
 
+	// slide toggle areas
+	document.querySelectorAll('.slide-toggle-area').forEach( slideToggleArea => {
+		slideToggleArea.querySelectorAll('.slide-toggle-trigger').forEach( slideToggleTrigger => {
+			slideToggleTrigger.addEventListener('click', function(){
+				if (!this.classList.contains('active')) {
+					this.classList.add('active');
+				} else{
+					this.classList.remove('active');
+				}
+
+				let slideTogglePanel = closest(this, '.slide-toggle-container').querySelector('.slide-toggle-panel');
+
+				if (!slideTogglePanel.classList.contains('active')) {
+			        slideTogglePanel.classList.add('active');
+			        slideTogglePanel.style.height = 'auto';
+
+			        let height = slideTogglePanel.clientHeight + "px";
+
+			        slideTogglePanel.style.height = '0px';
+
+			        setTimeout(function () {
+			            slideTogglePanel.style.height = height;
+			        }, 0);
+			    } else {
+			        slideTogglePanel.style.height = '0px';
+
+			        slideTogglePanel.addEventListener('transitionend', () => {
+			            slideTogglePanel.classList.remove('active');
+			        },{
+			        	once: true
+			        });
+			    }
+			})
+		})
+	});
+
 	// list of possible letters to scramble to
 	const letters = (" ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,':()&!?").split("");
 

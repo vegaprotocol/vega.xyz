@@ -77,7 +77,7 @@ a{
 .heading-intro{
 	margin: 0 0 rem-calc(15) 0;
 	text-transform: uppercase;
-	line-height: 93%;
+	line-height: 98%;
 	letter-spacing: 0.02em;
 	font-size: rem-calc(28);
 	margin-bottom: rem-calc(25);
@@ -92,6 +92,7 @@ a{
 
 	a{
 		color: $vega_yellow;
+		text-decoration: none;
 	}
 }
 

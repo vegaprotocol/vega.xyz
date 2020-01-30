@@ -139,6 +139,10 @@
 	padding: #{$panel-padding}px;
 	margin-bottom: 0;
 
+	&:last-child{
+		border-bottom: none;
+	}
+
 	@media (min-width: $reflex-md) {
 		padding: #{$panel-md-padding}px #{$panel-md-padding}px #{$panel-md-padding*1.5}px #{$panel-md-padding}px;
 	}
@@ -249,6 +253,7 @@
 	border-bottom: solid 1px currentColor;
 	padding: rem-calc(5) 0;
 	font-size: rem-calc(16);
+	margin-bottom: 0;
 
 	@media (min-width: $reflex-md) {
 		font-size: rem-calc(24);
@@ -282,10 +287,6 @@
 	padding: 0;
 	border-top: solid 1px currentColor;
 	margin-top: rem-calc(50);
-
-	@media (min-width: $reflex-md) {
-		margin-bottom: rem-calc(50);
-	}
 }
 
 .jobs li{
@@ -387,12 +388,13 @@ aside.job-attributes{
 	font-family: 'Vega';
 
 	&:after{
-		content: "\e904";
+		content: "\e905";
 	}
 }
 
-.jobs .job.closed .job-toggle:after{
-	content: "\e905";
+.jobs .job-header.active .job-toggle:after{
+	content: "\e904";
+
 }
 
 .job-apply{
