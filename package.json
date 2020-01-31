@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
     "file-loader": "^4.1.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
@@ -19,6 +22,7 @@
     "webpack-cli": "^3.3.6"
   },
   "dependencies": {
+    "babel-loader": "^8.0.6",
     "jump.js": "^1.0.2"
   }
 }
