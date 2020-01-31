@@ -1,10 +1,15 @@
+.marquee-container{
+	height: rem-calc(75);
+}
+
 .marquee{
 	border-top: solid 1px currentColor;
 	font-size: rem-calc(26);
 	text-transform: uppercase;
 	background-color: $vega_black;
 	line-height: rem-calc(75);
-	height: 100%;
+	height: rem-calc(75);
+	letter-spacing: 0.02em;
 }
 
 .signup{
@@ -66,6 +71,12 @@
 	path{
 		fill: currentColor;
 	}
+}
+
+.table-of-contents{
+	position: sticky;
+	top: 0;
+	padding-bottom: rem-calc(120);
 }
 
 .table-of-contents .title{
@@ -205,6 +216,17 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	padding: rem-calc($panel-padding);
+
+	@media (min-width: $reflex-md) {
+		padding: rem-calc($panel-md-padding);
+	}
+
+	.icon{
+		display: block;
+		position: relative;
+		top: 2px;
+	}
 }
 
 .team-list{

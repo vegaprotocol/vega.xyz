@@ -66,6 +66,11 @@
 	display: none;
 	height: 100%;
 
+	.inner{
+		height: 100%;
+		position: relative;
+	}
+
 	> .panel{
 		display: flex;
 		flex-direction: column;
@@ -73,11 +78,6 @@
 
 		@media (min-width: $reflex-md) {
 			height: calc(100% - #{$panel-md-padding*2}px);
-		}
-
-		> .inner{
-			height: 100%;
-			position: relative;
 		}
 	}
 

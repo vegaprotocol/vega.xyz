@@ -43,6 +43,10 @@
 
 .page-navigation > ul{
 	border-bottom: solid 1px currentColor;
+
+	@media (min-width: $reflex-md) {
+		margin-bottom: rem-calc(20);
+	}
 }
 
 .page-navigation ul li{

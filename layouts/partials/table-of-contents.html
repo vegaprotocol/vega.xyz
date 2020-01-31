@@ -6,7 +6,7 @@
 {{ if and $has_headers }}
 
 <div class="table-of-contents toc bd-callout">
-
+    <div class="panel no-borders">
     {{if eq .CurrentSection.Title "_jobs"}}
         <a href="/who" class="title"><span class="icon icon-arrow-back"></span>WHO</a>
     {{ else }}
@@ -38,5 +38,6 @@
             {{end}}
         {{end}}
     {{ end }}
+    </div>
 </div>
 {{ end }}
