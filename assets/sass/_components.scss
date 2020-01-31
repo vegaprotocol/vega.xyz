@@ -165,7 +165,11 @@
 
 .talk li > .grid,
 .paper li > .grid{
-	padding-right: rem-calc(120);
+	padding-right: 15%;
+
+	@media (min-width: $reflex-md) {
+		padding-right: rem-calc(120);
+	}
 }
 
 .talk li > .grid:after,
@@ -189,7 +193,7 @@
 .talk .title,
 .paper .title{
 	margin: 0 0 rem-calc(15) 0;
-	padding: 0 rem-calc(35) 0 0;
+	padding: 0 rem-calc(85) 0 0;
 	text-transform: uppercase;
 	line-height: 93%;
 	letter-spacing: 0.02em;
@@ -275,11 +279,15 @@
 }
 
 .partners-list li{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 	text-transform: uppercase;
 	border-bottom: solid 1px currentColor;
-	padding: rem-calc(5) 0;
 	font-size: rem-calc(16);
 	margin-bottom: 0;
+	padding: rem-calc(1) 0;
 
 	@media (min-width: $reflex-md) {
 		font-size: rem-calc(24);
@@ -288,13 +296,6 @@
 	@media (min-width: $reflex-lg) {
 		font-size: rem-calc(34);
 	}
-}
-
-.partners-list li{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .partners-list li a{
@@ -411,6 +412,8 @@ aside.job-attributes{
 }
 
 .jobs .job-toggle{
+	position: relative;
+	top: -1px;
 	width: rem-calc(21);
 	height: rem-calc(21);
 	flex-grow: 0;
