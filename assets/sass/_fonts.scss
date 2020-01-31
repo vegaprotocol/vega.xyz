@@ -1,5 +1,5 @@
-@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=53224c0d-b3ac-460b-ae34-1f624cf9685a&fontids=5664093");
-@import url("//hello.myfonts.net/count/3adeb0");
+// @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=53224c0d-b3ac-460b-ae34-1f624cf9685a&fontids=5664093");
+// @import url("//hello.myfonts.net/count/3adeb0");
 
 @font-face{
     font-family:"Helvetica Neue";
@@ -10,7 +10,7 @@
     	url("/fonts/5664093/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"),
     	url("/fonts/5664093/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff"),
     	url("/fonts/5664093/8f4a1705-214a-4dd0-80b8-72252c37e688.ttf") format("truetype");
-    font-display: swap
+    font-display: swap;
 }
 
 @font-face {
@@ -30,7 +30,7 @@
     font-family:"Neue Pixel Grotesk Regular";
     src:
     	url("/fonts/NeuePixelGrotesk_Regular.woff") format("woff");
-    font-display: swap
+    font-display: swap;
 }
 
 @font-face {
@@ -43,7 +43,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  font-display: swap
+  font-display: swap;
 }
 
 [class^="icon-"], [class*=" icon-"] {
