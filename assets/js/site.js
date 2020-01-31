@@ -1,3 +1,5 @@
+import jump from 'jump.js'
+
 /*
  * recursively get all text nodes as an array for a given element
  */
@@ -62,6 +64,26 @@ function closest(el, selector){
 
 document.addEventListener("DOMContentLoaded",()=>{
 	document.querySelector('body').classList.add('js');
+
+	// smooth scroll links
+	if(window.location.hash) {
+  		jump(window.location.hash)
+  	}
+
+  	let anchorlinks = document.querySelectorAll('a[href*="#"]');
+	for (let item of anchorlinks) {
+	    item.addEventListener('click', function(){
+	    	let target;
+	    	let hash = this.getAttribute('href').split('#')[1];
+	    	
+	    	if(hash === 'top'){
+	    		target = 'body';
+	    	} else{
+	    		target = '#' + hash;
+	    	}
+	        jump(target);
+	    })
+	}
 
 	// open/close footer link sections
 	const footerItemLinks = document.querySelectorAll('.footer-item-link');

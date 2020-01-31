@@ -104,7 +104,11 @@ a{
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
 	line-height: rem-calc(16);
-	margin: 0 0 rem-calc(20) 0;
+	margin: 0 0 rem-calc(15) 0;
+
+	@media (min-width: $reflex-md) {
+		margin: 0 0 rem-calc(25) 0;
+	}
 
 	&::before{
 		position: relative;
@@ -113,6 +117,16 @@ a{
 		content: '\25A0';
 		font-size: rem-calc(25);
 	}
+}
+
+.panel > .heading-panel:first-child{
+    margin-top: rem-calc($panel-padding*-1);
+    padding-top: rem-calc($panel-padding);
+
+    @media (min-width: $reflex-md) {
+    	margin-top: rem-calc($panel-md-padding*-1);
+    	padding-top: rem-calc($panel-md-padding);
+    }
 }
 
 .heading-footer{

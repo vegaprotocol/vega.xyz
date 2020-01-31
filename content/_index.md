@@ -34,7 +34,7 @@ currentNetwork = "Testnet"
 
   [[linkblocks.links]]
   title = "Conference talks"
-  link = "background#conference-talks"
+  link = "background#talks-events"
 
 [[linkblocks]]
   title = "Use"
@@ -43,11 +43,6 @@ currentNetwork = "Testnet"
   [[linkblocks.links]]
   title = "What can I do with Vega?"
   link = "use#what-can-i-do-with-vega-today"
-
-  [[linkblocks.links]]
-  title = "Current status: "
-  status = "true"
-  link = "use#current-status"
 
   [[linkblocks.links]]
   title = "Build on Vega"
@@ -63,10 +58,10 @@ currentNetwork = "Testnet"
 
   [[linkblocks.links]]
   title = "Partners & backers"
-  link = "who#partners-and-backers"
+  link = "who#partners-backers"
 
   [[linkblocks.links]]
   title = "Open jobs"
   count = "true"
-  link = "who#jobs"
+  link = "who#open-jobs"
 +++

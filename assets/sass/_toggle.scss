@@ -51,6 +51,10 @@
 	color: $vega_black;
 	border-color: black;
 
+	marquee{
+		background-color: $vega_yellow;
+	}
+
 	a{
 		color: $vega_black;
 	}
@@ -58,13 +62,13 @@
 	.vega-logo-anim path{
 		fill: $vega_black;
 	}
+
 	.vega-logo-anim #frame0 rect{
 		fill: $vega_yellow;
 	}
 }
 
 .toggle-switch:checked ~ .site-footer{
-
 	.heading-footer a,
 	a.call-to-action-footer,
 	.call-to-action-footer a{
