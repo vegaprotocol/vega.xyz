@@ -180,14 +180,12 @@
 .footer-item{
 	height: auto;
 
-	padding: 1.875rem 1.875rem 4.375rem 1.875rem;
-
 	@media (min-width: $reflex-md) {
 		padding: rem-calc($panel-md-padding) rem-calc($panel-md-padding) rem-calc($panel-md-padding+40) rem-calc($panel-md-padding);
 	}
 
 	.js &{
-		max-height: calc(5.5vw + 40px);
+		max-height: calc(5.2vw + 40px);
 		overflow: hidden;
 		transition: max-height 1s;
 
@@ -273,6 +271,10 @@
 .js .footer-item.open .call-to-action-footer{
 	transform: translateY(0);
 	opacity: 1;
+}
+
+.js .footer-item.open .call-to-action-footer{
+	margin-top: rem-calc(3);
 }
 
 .js .footer-item.overlay.open .footer-item-link{
