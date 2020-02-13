@@ -65,6 +65,28 @@ function closest(el, selector){
 document.addEventListener("DOMContentLoaded",()=>{
 	document.querySelector('body').classList.add('js');
 
+	// custom cursor
+	const body = document.querySelector('body');
+	const cursor = document.createElement('div');
+	cursor.id = "cursor";
+	body.appendChild(cursor);
+
+	document.addEventListener("mousemove", (e) => {
+		cursor.style.left = `${e.clientX}px`;
+		cursor.style.top = `${e.clientY}px`;
+	});
+
+	const hoverable = document.querySelectorAll("a, button, input");
+
+	hoverable.forEach((hoverableEl) => {
+		hoverableEl.addEventListener('mouseover', () => {
+			cursor.classList.add('on-link');
+		});
+		hoverableEl.addEventListener('mouseout', () => {
+			cursor.classList.remove('on-link');
+		});
+	});
+
 	// smooth scroll links
 	if(window.location.hash) {
   		jump(window.location.hash)
@@ -93,6 +115,13 @@ document.addEventListener("DOMContentLoaded",()=>{
 			el.classList.remove('open');
 		});
 		el.target.closest('.footer-item').classList.add('open');
+	}));
+
+	// flip last footer element on click
+	const footerSwitchLinks = document.querySelectorAll('.footer-switch-link');
+	footerSwitchLinks.forEach(footerSwitchLink => footerSwitchLink.addEventListener('click', el => {
+		el.currentTarget.classList.add('hidden');
+		el.currentTarget.nextElementSibling.classList.add('visible');
 	}));
 
 	// slide toggle areas

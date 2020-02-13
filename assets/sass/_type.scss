@@ -130,11 +130,20 @@ a{
 }
 
 .heading-footer{
+	display: block;
 	font-size: 6vw;
 	margin: 0;
 	letter-spacing: 0.02em;
 	text-transform: uppercase;
 	line-height: 0.8;
+
+	&.hidden{
+		display: none;
+	}
+
+	@media (min-width: $reflex-lg) {
+		font-size: rem-calc(88);
+	}
 }
 
 ul, ol{
@@ -237,6 +246,10 @@ p .call-to-action{
 	font-size: 6vw;
 	line-height: 0.8;
 
+	@media (min-width: $reflex-lg) {
+		font-size: rem-calc(88);
+	}
+
 	a{
 		color: $vega_yellow;
 	}
@@ -247,7 +260,6 @@ p .call-to-action{
 }
 
 .flip{
-	//display: inline-block;
 	opacity: 0;
 	transform: translateY(-100%);
 	transition: transform 0.5s, opacity 0;

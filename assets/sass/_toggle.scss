@@ -68,6 +68,10 @@
 	}
 }
 
+.toggle-switch:checked ~ #cursor{
+	background-color: $vega_limegreen;
+}
+
 .toggle-switch:checked ~ .site-footer{
 	.heading-footer a,
 	a.call-to-action-footer,
