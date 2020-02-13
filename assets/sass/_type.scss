@@ -24,7 +24,9 @@ a{
 	line-height: 0.9;
 
 	.line{
-		white-space: nowrap;
+		@media (min-width: $reflex-md) {
+			white-space: nowrap;
+		}
 	}
 
 	.px{
