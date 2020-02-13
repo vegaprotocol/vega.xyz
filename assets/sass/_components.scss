@@ -3,6 +3,7 @@
 }
 
 .marquee{
+	position: relative;
 	border-top: solid 1px currentColor;
 	font-size: rem-calc(26);
 	text-transform: uppercase;
@@ -10,6 +11,26 @@
 	line-height: rem-calc(75);
 	height: rem-calc(75);
 	letter-spacing: 0.02em;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.marquee .marquee-inner {
+	display: inline-block;
+	animation: marquee 8s linear infinite;
+}
+
+.marquee .marquee-inner:hover {
+    animation-play-state: paused
+}
+
+@keyframes marquee {
+	0%   { 
+		transform: translateX(100%); 		
+	}
+	100% { 
+		transform: translateX(-100%); 
+	}
 }
 
 .signup{

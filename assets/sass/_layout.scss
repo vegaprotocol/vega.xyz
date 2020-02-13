@@ -168,7 +168,7 @@
 	height: 100%;
 }
 
-.home-intro-sidebar div:last-child{
+.home-intro-sidebar > div:last-child{
 	position: -webkit-sticky;
 	position: sticky;
 	bottom: 0;

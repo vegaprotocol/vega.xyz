@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">>
 {{ partial "head.html" . }}
 <body
   lang="{{ .Site.LanguageCode }}"
@@ -17,7 +17,7 @@
   {{- partial "nav.html" . -}}
 
   <div class="site-container">
-    <section id="main">
+    <div id="main">
       <div class="grid">
         <div class="col-12 col-md-9">
           <article itemprop="articleBody" id="content">
@@ -35,7 +35,8 @@
             </div>
           </aside>
         </div>
-    </section>
+      </div>
+    </div>
   </div>
 
   {{ partial "footer.html" . }}
