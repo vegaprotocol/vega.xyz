@@ -1,4 +1,5 @@
 import jump from 'jump.js'
+import Cookies from 'js-cookie'
 
 /*
  * recursively get all text nodes as an array for a given element
@@ -65,6 +66,21 @@ function closest(el, selector){
 document.addEventListener("DOMContentLoaded",()=>{
 	document.querySelector('body').classList.add('js');
 
+	// persist toggle state across sessions
+	const toggleSwitchCheckbox = document.querySelector('#toggleSwitch');
+	if(Cookies.get('toggle')){
+		toggleSwitchCheckbox.checked = true;
+	}
+
+	toggleSwitchCheckbox.addEventListener('change', function(){
+		if(this.checked){
+			Cookies.set('toggle', 'yes');
+		}
+		else{
+			Cookies.remove('toggle');
+		}
+	});
+
 	// custom cursor
 	const body = document.querySelector('body');
 	const cursor = document.createElement('div');
@@ -94,7 +110,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   	let anchorlinks = document.querySelectorAll('a[href*="#"]');
 	for (let item of anchorlinks) {
-	    item.addEventListener('click', function(){
+	    item.addEventListener('click', () =>{
 	    	let target;
 	    	let hash = this.getAttribute('href').split('#')[1];
 	    	
@@ -104,7 +120,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 	    		target = '#' + hash;
 	    	}
 	        jump(target);
-	    })
+	    });
 	}
 
 	// open/close footer link sections
