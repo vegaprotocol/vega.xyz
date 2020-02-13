@@ -34,14 +34,14 @@ function wrapEachCharacter(textNode, tag, styleClass) {
     var characters = text.split('');
 
     characters.forEach(function(character) {
-        var element = document.createElement(tag);
-        if(styleClass){
-        	element.classList.add(styleClass)
-        }
-        var characterNode = document.createTextNode(character);
-        element.appendChild(characterNode);
+	    var element = document.createElement(tag);
+	    if(styleClass){
+	    	element.classList.add(styleClass)
+	    }
+	    var characterNode = document.createTextNode(character);
+	    element.appendChild(characterNode);
 
-        parent.insertBefore(element, textNode);
+	    parent.insertBefore(element, textNode);
     });
 
     parent.removeChild(textNode);
@@ -185,7 +185,10 @@ document.addEventListener("DOMContentLoaded",()=>{
 	scrambleHeadings.forEach(heading => {
 		var textNodes = getTextNodes(heading);
 		textNodes.forEach(function(textNode) {
-		    wrapEachCharacter(textNode, 'span', 'flip');
+			// don't bother wrapping spaces
+			if(textNode.textContent.trim() !== ''){
+				wrapEachCharacter(textNode, 'span', 'flip');
+			}	
 		});
 	});
 
