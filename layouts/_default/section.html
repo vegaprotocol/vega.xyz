@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
-<body
-  lang="{{ .Site.LanguageCode }}"
-  itemscope
-  itemtype="http://schema.org/Article">
-
+<body>
   <input type="checkbox" id="toggleSwitch" class="toggle-switch" data-toggle>
   <label class="toggle clickable" for="toggleSwitch">
     <span class="toggle__container">
@@ -26,12 +22,12 @@
         </div>
         <div class="col-12 col-md-3">
           <aside id="sidebar">
-              <div class="inner">
-                {{ partial "table-of-contents" . }}
-                <a href="#top" class="back-to-top-hand">
-                  <span class="no-show">Back to top</span>
-                  <span class="icon icon-point-up"></span>
-                </a>
+            <div class="inner">
+              {{ partial "table-of-contents" . }}
+              <a href="#top" class="back-to-top-hand">
+                <span class="no-show">Back to top</span>
+                <span class="icon icon-point-up"></span>
+              </a>
             </div>
           </aside>
         </div>

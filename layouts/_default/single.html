@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
-<body
-  lang="{{ .Site.LanguageCode }}"
-  itemscope
-  itemtype="http://schema.org/Article">
-
+<body>
   <input type="checkbox" id="toggleSwitch" class="toggle-switch" data-toggle>
   <label class="toggle clickable" for="toggleSwitch">
     <span class="toggle__container">
       <span class="toggle__switch"></span>
     </span>
   </label>
+
   {{ partial "header.html" . }}
   {{- partial "nav.html" . -}}
 
