@@ -54,7 +54,7 @@
 	    	{{range $index, $element := .Params.linkblocks}}
 	    		{{ $menuindex :=add $index 1 }}
 				<li>
-					<a href="{{.link}}"><span class="section-number">{{ printf "%02d" $menuindex }}</span><span class="section-title">{{.title}}</span></a>
+					<a href="{{.link}}"><span class="section-number">{{ printf "%02d" $menuindex }}</span><span class="scramble-on-hover section-title">{{.title}}</span></a>
 					<ul>
 						{{ range .links }}
 						<li class="scramble-on-hover">

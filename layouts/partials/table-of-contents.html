@@ -27,7 +27,7 @@
                 {{ $anchorId := replace $header "+" "" | plainify | urlize }}
                 {{ $href := delimit (slice $base $anchorId) "#" | string }}
                 <li>
-                    <a href="{{ relref $.Page $href }}">
+                    <a class="scramble-on-hover" href="{{ relref $.Page $href }}">
                         {{ $header | plainify }}
                     </a>
                 </li>

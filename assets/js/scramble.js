@@ -74,7 +74,7 @@ class Scramble {
 		});
 	}
 
-	scrambler(node, letterDelay, initDelay){
+	sequentialScramble(node, letterDelay, initDelay){
 		if(!node.classList.contains('scrambling')){
 			node.classList.add('scrambling');
 			let i = 0;
@@ -97,6 +97,35 @@ class Scramble {
 					}, 50);
 				}
 			}, initDelay);
+		}
+	}
+
+	parallelScramble(node, letterDelay, initDelay, noOfScrambles){
+		if(!node.classList.contains('scrambling')){
+			node.classList.add('scrambling');
+			const el = node.querySelectorAll('.flip');
+
+			el.forEach(character => {
+
+				if(character.textContent.trim() !== ''){
+					let currentChar = 0;
+					let originalLetter = character.textContent;
+					let timer = setTimeout(function flipTimer() {
+						if(currentChar < noOfScrambles){
+							let randomChar = Scramble.letters()[Math.floor(Math.random()*Scramble.letters().length)];
+							character.textContent = randomChar;
+							currentChar++;
+							timer = setTimeout(flipTimer, letterDelay);
+						}
+						else{
+							character.textContent = originalLetter;
+							setTimeout(function(){
+								node.classList.remove('scrambling');
+							}, 50);
+						}
+					}, initDelay);
+				}
+			});
 		}
 	}
 }

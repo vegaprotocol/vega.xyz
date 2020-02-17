@@ -61,24 +61,23 @@ document.addEventListener("DOMContentLoaded",()=>{
 	});
 
 	// smooth scroll links
-	if(window.location.hash) {
-  		jump(window.location.hash)
-  	}
-
-  	let anchorlinks = document.querySelectorAll('a[href*="#"]');
-	for (let item of anchorlinks) {
-	    item.addEventListener('click', () =>{
-	    	let target;
-	    	let hash = this.getAttribute('href').split('#')[1];
+	// if(window.location.hash) {
+ 	//  		jump(window.location.hash)
+ 	//	}
+ 	//  	let anchorlinks = document.querySelectorAll('a[href*="#"]');
+	// for (let item of anchorlinks) {
+	//     item.addEventListener('click', (el) =>{
+	//     	let target;
+	//     	let hash = el.currentTarget.getAttribute('href').split('#')[1];
 	    	
-	    	if(hash === 'top'){
-	    		target = 'body';
-	    	} else{
-	    		target = '#' + hash;
-	    	}
-	        jump(target);
-	    });
-	}
+	//     	if(hash === 'top'){
+	//     		target = 'body';
+	//     	} else{
+	//     		target = '#' + hash;
+	//     	}
+	//         jump(target);
+	//     });
+	// }
 
 	// open/close footer link sections
 	const footerItemLinks = document.querySelectorAll('.footer-item-link');
@@ -143,7 +142,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 	// scramble headings
 	const scrambleHeadingLines = document.querySelectorAll('.scramble-heading .line');
 	scrambleHeadingLines.forEach( line => {
-		scramble.scrambler(line, 50, 800);
+		scramble.sequentialScramble(line, 50, 800);
 	});
 
 	const scrambleOnHover = document.querySelectorAll('.scramble-on-hover');
@@ -151,7 +150,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 		scramble.scrambleInit(line, true);
 
 		line.addEventListener('mouseenter', function(){
-			scramble.scrambler(this, 60, 0);
+			scramble.parallelScramble(this, 20, 0, 10);
 		});
 	});
 
@@ -200,5 +199,26 @@ document.addEventListener("DOMContentLoaded",()=>{
 	const draggableItem = document.getElementById("appWindow");
 	if(draggableItem){
 		dragElement(draggableItem);
+	}
+
+	// current section highlighting in table of contents
+	const tableOfContents = document.querySelector('.table-of-contents');
+	const firstMenuItem = document.querySelector('.table-of-contents li:first-child');
+	if(tableOfContents){
+		firstMenuItem.classList.add('current');
+
+		document.addEventListener('scroll', () => {
+			let scrollDistance = document.querySelector('html').scrollTop;
+			let pageSections = document.querySelectorAll('#content .heading-panel');
+			pageSections.forEach( (section, index) => {
+				if((section.offsetTop-2) <= scrollDistance){
+					let active = tableOfContents.querySelector('li.current');
+					if(active){
+						active.classList.remove('current');
+					}
+					tableOfContents.querySelectorAll('ul li')[index].classList.add('current');
+				}
+			});
+		});
 	}
 });
