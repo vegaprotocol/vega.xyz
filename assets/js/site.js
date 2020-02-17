@@ -82,62 +82,101 @@ document.addEventListener("DOMContentLoaded",()=>{
 	// open/close footer link sections
 	const footerItemLinks = document.querySelectorAll('.footer-item-link');
 
-	footerItemLinks.forEach(footerItemLink => footerItemLink.addEventListener('click', el => {
+	const openFooterItem = (el) => {
 		document.querySelectorAll('.footer-item').forEach( el => {
 			el.classList.remove('open');
 		});
-		el.target.closest('.footer-item').classList.add('open');
-	}));
+		el.closest('.footer-item').classList.add('open');
+	}
+
+	footerItemLinks.forEach(footerItemLink => {
+		footerItemLink.addEventListener('click', event => {
+			event.currentTarget.blur();
+			event.preventDefault();
+			event.currentTarget.blur();
+			openFooterItem(event.currentTarget);
+		})
+
+		footerItemLink.addEventListener('keyup', event => {
+			const el = event.currentTarget;
+			if (event.keyCode === 13 || event.keyCode === 32) {
+				openFooterItem(el);
+			}
+			event.preventDefault();
+		});
+	});
 
 	// flip last footer element on click
 	const footerSwitchLinks = document.querySelectorAll('.footer-switch-link');
-	footerSwitchLinks.forEach(footerSwitchLink => footerSwitchLink.addEventListener('click', el => {
+
+	const switchFooterItem = (el) => {
 		// close open footer items
 		const openFooterItem = document.querySelector('.footer-item.open');
 		if(openFooterItem){
 			openFooterItem.classList.remove('open');
 		}
 
-		el.currentTarget.classList.add('hidden');
-		el.currentTarget.nextElementSibling.classList.add('visible');
-	}));
+		el.classList.add('hidden');
+		el.nextElementSibling.classList.add('visible');
+	}
+
+	footerSwitchLinks.forEach(footerSwitchLink => {
+		footerSwitchLink.addEventListener('click', el => {
+			switchFooterItem(el.currentTarget);
+		});
+
+		footerSwitchLink.addEventListener('keyup', event => {
+			const el = event.currentTarget;
+			event.currentTarget.blur();
+			if (event.keyCode === 13 || event.keyCode === 32) {
+				switchFooterItem(el);
+			}
+			event.preventDefault();
+		});
+	});
 
 	// slide toggle areas
+	const slideToggle = (el) => {
+		if (!el.classList.contains('active')) {
+			el.classList.add('active');
+		} else{
+			el.classList.remove('active');
+		}
+
+		let slideTogglePanel = closest(el, '.slide-toggle-container').querySelector('.slide-toggle-panel');
+
+		if (!slideTogglePanel.classList.contains('active')) {
+	        slideTogglePanel.classList.add('active');
+	        slideTogglePanel.style.height = 'auto';
+
+	        let height = slideTogglePanel.clientHeight + "px";
+	        slideTogglePanel.style.height = '0px';
+
+	        setTimeout(function () {
+	            slideTogglePanel.style.height = height;
+	        }, 0);
+	    } else {
+	        slideTogglePanel.style.height = '0px';
+	        slideTogglePanel.classList.remove('active');
+	    }
+	}
+
+
 	document.querySelectorAll('.slide-toggle-area').forEach( slideToggleArea => {
 		slideToggleArea.querySelectorAll('.slide-toggle-trigger').forEach( slideToggleTrigger => {
-			slideToggleTrigger.addEventListener('click', function(){
-				if (!this.classList.contains('active')) {
-					this.classList.add('active');
-				} else{
-					this.classList.remove('active');
+			slideToggleTrigger.addEventListener('click', (event) => {
+				slideToggle(event.currentTarget);
+			});
+
+			slideToggleTrigger.addEventListener('keyup', (event) => {
+				event.preventDefault();
+				if (event.keyCode === 13 || event.keyCode === 32) {
+					slideToggle(event.currentTarget);
 				}
-
-				let slideTogglePanel = closest(this, '.slide-toggle-container').querySelector('.slide-toggle-panel');
-
-				if (!slideTogglePanel.classList.contains('active')) {
-			        slideTogglePanel.classList.add('active');
-			        slideTogglePanel.style.height = 'auto';
-
-			        let height = slideTogglePanel.clientHeight + "px";
-			        slideTogglePanel.style.height = '0px';
-
-			        setTimeout(function () {
-			            slideTogglePanel.style.height = height;
-			        }, 0);
-			    } else {
-			        slideTogglePanel.style.height = '0px';
-
-			        slideTogglePanel.addEventListener('transitionend', () => {
-			            slideTogglePanel.classList.remove('active');
-			        },{
-			        	once: true
-			        });
-			    }
-			})
+			});
 		})
 	});
 
-	
 	// scramble init
 	const scrambleHeadings = document.querySelectorAll('.scramble-heading');
 	scrambleHeadings.forEach(heading => {

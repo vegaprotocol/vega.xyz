@@ -4,7 +4,7 @@
     {{range $index, $element := $jobs}}
       {{ $jobindex := add $index 1 }}
     <li class="job slide-toggle-container">
-      <a class="job-header slide-toggle-trigger">
+      <a class="job-header slide-toggle-trigger" tabindex="0">
         <div class="title"><span class="number">{{ printf "%02d" $jobindex }}&nbsp;</span>{{.Title}}</div>
         <div class="job-toggle"></div>
       </a>

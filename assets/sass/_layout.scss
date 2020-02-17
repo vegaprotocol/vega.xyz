@@ -186,7 +186,7 @@
 
 	.js &{
 		max-height: calc(5.2vw + 40px);
-		overflow: hidden;
+		//overflow: hidden;
 		//transition: max-height 1s;
 
 		@media (min-width: $reflex-md) {
@@ -194,7 +194,7 @@
 		}
 
 		@media (min-width: $reflex-lg) {
-			max-height: rem-calc(132);
+			max-height: rem-calc(128);
 		}
 
 	}

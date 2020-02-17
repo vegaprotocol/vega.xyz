@@ -6,6 +6,10 @@ body{
 	vertical-align: baseline;
 }
 
+:focus{
+	outline-color: $vega_yellow;
+}
+
 .site-header,
 .site-container{
 	&, a{

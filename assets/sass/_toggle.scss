@@ -52,6 +52,10 @@
 	color: $vega_black;
 	border-color: black;
 
+	*:focus{
+		outline-color: $vega_limegreen;
+	}
+
 	.marquee{
 		background-color: $vega_yellow;
 	}

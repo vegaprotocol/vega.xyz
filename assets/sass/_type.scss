@@ -132,7 +132,7 @@ a{
 }
 
 .heading-footer{
-	display: block;
+	display: inline-block;
 	font-size: 6vw;
 	margin: 0;
 	letter-spacing: 0.02em;
@@ -144,7 +144,7 @@ a{
 	}
 
 	@media (min-width: $reflex-lg) {
-		font-size: rem-calc(88);
+		font-size: rem-calc(76);
 	}
 }
 
