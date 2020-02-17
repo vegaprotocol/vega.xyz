@@ -34,6 +34,16 @@
 	display: inline-block;
 	text-decoration: none;
 	padding: 0 rem-calc(5);
+
+}
+
+.main-navigation ul li a.current span{
+	padding: rem-calc(1) rem-calc(5) rem-calc(3) rem-calc(5);
+}
+
+.main-navigation ul li a.current span{
+	background-color: $vega_yellow;
+	color: $vega_black;
 }
 
 .page-navigation ul{

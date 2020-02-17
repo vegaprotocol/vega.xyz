@@ -92,6 +92,12 @@ document.addEventListener("DOMContentLoaded",()=>{
 	// flip last footer element on click
 	const footerSwitchLinks = document.querySelectorAll('.footer-switch-link');
 	footerSwitchLinks.forEach(footerSwitchLink => footerSwitchLink.addEventListener('click', el => {
+		// close open footer items
+		const openFooterItem = document.querySelector('.footer-item.open');
+		if(openFooterItem){
+			openFooterItem.classList.remove('open');
+		}
+
 		el.currentTarget.classList.add('hidden');
 		el.currentTarget.nextElementSibling.classList.add('visible');
 	}));
@@ -113,7 +119,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 			        slideTogglePanel.style.height = 'auto';
 
 			        let height = slideTogglePanel.clientHeight + "px";
-
 			        slideTogglePanel.style.height = '0px';
 
 			        setTimeout(function () {

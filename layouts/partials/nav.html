@@ -1,24 +1,17 @@
-{{ $page := .Page }}
-{{ $site := .Site }}
-  
-<!-- https://discourse.gohugo.io/t/range-length-or-last-element/3803/3 -->
+{{ $currentPage := . }}  
 {{ $list := .Site.Menus.main }}
 {{ $len := (len $list) }}
  <nav class="main-navigation" id="site-navigation">
-  <!-- <img src="/images/icon.png" class="fl pl4 pt3 v-center" width="30" /> -->
-
   <ul>
     {{ range $index, $element := $list }}
-      {{ $is := $page.IsMenuCurrent "main" . }}
-      {{ $has := $page.HasMenuCurrent "main" . }}
       <li>
         <a
-          {{if or $is $has }}
-          class=""
+          {{ if or (eq $currentPage.URL .URL) ($currentPage.HasMenuCurrent "main" .) }}
+          class="current"
           {{else}}
           class=""
           {{end}}
-        href="{{.URL}}">{{.Name}}</a> 
+        href="{{.URL}}"><span>{{.Name}}</span></a>
     </li>
     {{end}}
    </ul>
