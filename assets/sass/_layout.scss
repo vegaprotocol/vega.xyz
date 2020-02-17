@@ -187,7 +187,7 @@
 	.js &{
 		max-height: calc(5.2vw + 40px);
 		overflow: hidden;
-		transition: max-height 1s;
+		//transition: max-height 1s;
 
 		@media (min-width: $reflex-md) {
 			max-height: calc(5.5vw + 60px);
@@ -232,7 +232,7 @@
 .footer-item-link{
 	position: relative;
 	cursor: pointer;
-	transition: opacity 0.5s;
+	//transition: opacity 0.5s;
 }
 
 .footer-item-fade{
@@ -260,7 +260,7 @@
 .js .footer-item-content-hidden{
 	opacity: 0;
 	transform: translateY(100%);
-	transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
+	//transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
 }
 
 .js .footer-item.open{
@@ -288,7 +288,7 @@
 
 /* js jobs */
 .js .slide-toggle-panel{
-	transition: height .5s ease;
+	//transition: height .5s ease;
     overflow: hidden;
 
     &:not(.active){
