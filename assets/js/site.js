@@ -1,51 +1,6 @@
-import jump from 'jump.js'
-import Cookies from 'js-cookie'
-
-/*
- * recursively get all text nodes as an array for a given element
- */
-function getTextNodes(node) {
-    var childTextNodes = [];
-
-    if (!node.hasChildNodes()) {
-        return;
-    }
-
-    var childNodes = node.childNodes;
-    
-    for (var i = 0; i < childNodes.length; i++) {
-        if (childNodes[i].nodeType == Node.TEXT_NODE) {
-            childTextNodes.push(childNodes[i]);
-        }
-        else if (childNodes[i].nodeType == Node.ELEMENT_NODE) {
-            Array.prototype.push.apply(childTextNodes, getTextNodes(childNodes[i]));
-        }
-    }
-
-    return childTextNodes;
-}
-
-/*
- * given a text node, wrap each character in the given tag.
- */
-function wrapEachCharacter(textNode, tag, styleClass) {
-    var text = textNode.nodeValue;
-    var parent = textNode.parentNode;
-    var characters = text.split('');
-
-    characters.forEach(function(character) {
-	    var element = document.createElement(tag);
-	    if(styleClass){
-	    	element.classList.add(styleClass)
-	    }
-	    var characterNode = document.createTextNode(character);
-	    element.appendChild(characterNode);
-
-	    parent.insertBefore(element, textNode);
-    });
-
-    parent.removeChild(textNode);
-}
+import jump from 'jump.js';
+import Cookies from 'js-cookie';
+import { scramble } from './scramble.js';
 
 /*
  * find and return closest element
@@ -178,41 +133,26 @@ document.addEventListener("DOMContentLoaded",()=>{
 		})
 	});
 
-	// list of possible letters to scramble to
-	const letters = (" ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,':()&!?").split("");
-
-	// wrap all characters in span tag
+	
+	// scramble init
 	const scrambleHeadings = document.querySelectorAll('.scramble-heading');
-
 	scrambleHeadings.forEach(heading => {
-		var textNodes = getTextNodes(heading);
-		textNodes.forEach(function(textNode) {
-			// don't bother wrapping spaces
-			if(textNode.textContent.trim() !== ''){
-				wrapEachCharacter(textNode, 'span', 'flip');
-			}	
-		});
+		scramble.scrambleInit(heading);
 	});
 
 	// scramble headings
 	const scrambleHeadingLines = document.querySelectorAll('.scramble-heading .line');
-
 	scrambleHeadingLines.forEach( line => {
-		let i = 0;
-		let timer = setTimeout(function flipTimer() {
-			const el = line.querySelectorAll('.flip')[i];
-			if(el){
-				let originalLetter = el.textContent;
-				let randomChar = letters[Math.floor(Math.random()*letters.length)];
-				el.textContent = randomChar;
-				el.classList.add('flop');
-				setTimeout(() => {
-					el.textContent = originalLetter;
-				}, 500);
-				i++;
-				timer = setTimeout(flipTimer, 50);
-			}
-		}, 800);
+		scramble.scrambler(line, 50, 800);
+	});
+
+	const scrambleOnHover = document.querySelectorAll('.scramble-on-hover');
+	scrambleOnHover.forEach( line => {
+		scramble.scrambleInit(line, true);
+
+		line.addEventListener('mouseenter', function(){
+			scramble.scrambler(this, 60, 0);
+		});
 	});
 
 	// draggable 404 window

@@ -57,7 +57,7 @@
 					<a href="{{.link}}"><span class="section-number">{{ printf "%02d" $menuindex }}</span><span class="section-title">{{.title}}</span></a>
 					<ul>
 						{{ range .links }}
-						<li>
+						<li class="scramble-on-hover">
 							<a href="{{.link}}">
 								{{.title}}{{if eq .status "true"}}
 								{{$.Page.Param "CurrentNetwork"}}{{end}}
@@ -80,7 +80,7 @@
 	    	<div class="marquee-container">
 				<div class="marquee" id="marquee">
 					<span class="marquee-inner">
-							Current status: TE<span class="px">S</span>TNET
+						Current status: TE<span class="px">S</span>TNET
 					</span>
 				</div>
 			</div>

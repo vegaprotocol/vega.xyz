@@ -264,7 +264,11 @@ p .call-to-action{
 .flip{
 	opacity: 0;
 	transform: translateY(-100%);
-	transition: transform 0.5s, opacity 0;
+	transition: transform 0.5s;
+
+	&.stay-visible{
+		opacity: 1;
+	}
 }
 
 .flip.flop{
