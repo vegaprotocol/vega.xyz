@@ -10,7 +10,7 @@ contractType = "Permanent or contract-to-perm"
 
 <div class="panel no-border-top">
 	<div class="heading-panel">Opportunity</div>
-	<h1 id="software-engineer-in-test-sdet">Software Engineer in Test (SDET)</h1>
+	<h1 id="go-engineer">Software Engineer in Test (SDET)</h1>
 
 	<div class="grid">
 		<div class="col-12 col-md-9">
