@@ -213,9 +213,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 	// draggable 404 window
 	const dragElement = (el) => {
 		var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-		if (document.getElementById(el.id + "Header")) {
+		if (document.getElementById(el.id + 'Header')) {
 		  // if present, the header is where you move the DIV from:
-		  document.getElementById(el.id + "Header").onmousedown = dragMouseDown;
+		  document.getElementById(el.id + 'Header').onmousedown = dragMouseDown;
 		} else {
 		  // otherwise, move the DIV from anywhere inside the DIV:
 		  el.onmousedown = dragMouseDown;
@@ -241,8 +241,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 			pos3 = e.clientX;
 			pos4 = e.clientY;
 			// set the element's new position:
-			el.style.top = (el.offsetTop - pos2) + "px";
-			el.style.left = (el.offsetLeft - pos1) + "px";
+			el.style.top = (el.offsetTop - pos2) + 'px';
+			el.style.left = (el.offsetLeft - pos1) + 'px';
 		}
 
 		function closeDragElement(){
@@ -252,10 +252,18 @@ document.addEventListener("DOMContentLoaded",()=>{
 		}
 	}
 
-	const draggableItem = document.getElementById("appWindow");
+	const draggableItem = document.getElementById('appWindow');
 	if(draggableItem){
 		dragElement(draggableItem);
 	}
+
+	const fourOhFourClose = document.getElementById('close404');
+	fourOhFourClose.addEventListener('click', (el) => {
+		document.getElementById('appWindow').remove();
+		setTimeout( () => {
+			window.location.href = '/';
+		}, 500);
+	});
 
 	// current section highlighting in table of contents
 	const tableOfContents = document.querySelector('.table-of-contents');

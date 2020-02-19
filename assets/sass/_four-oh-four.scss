@@ -43,12 +43,11 @@
 .application-window__toolbar{
 	border-bottom: solid 3px $vega_black;
 	height: rem-calc(30);
-	padding-left: rem-calc(8);
-	padding-right: rem-calc(8);
 
 	.icon{
 		float: right;
 		line-height: rem-calc(30);
+		padding: 0 rem-calc(10);
 	}
 }
 
