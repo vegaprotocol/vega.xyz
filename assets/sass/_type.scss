@@ -16,14 +16,22 @@ a{
 }
 
 .heading-intro-home{
-	font-size: rem-calc(32);
+	//font-size: rem-calc(32);
 	margin: 0 0 rem-calc(15) 0;
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
-	max-width: rem-calc(560);
+	max-width: rem-calc(672);
 	line-height: 0.9;
 
+	font-size: 5.5vw;
+
+	.word{
+		white-space: nowrap;
+	}
+
 	.line{
+		display: inline-block;
+
 		@media (min-width: $reflex-md) {
 			white-space: nowrap;
 		}

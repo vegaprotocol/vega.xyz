@@ -35,7 +35,7 @@ class Scramble {
 	 * given a text node, wrap each character in the given tag.
 	 */
 	static wrapEachCharacter(textNode, tag, styleClass) {
-	    const text = textNode.nodeValue.trim();
+	    const text = textNode.nodeValue;
 	    const parent = textNode.parentNode;
 	    const characters = text.split('');
 
