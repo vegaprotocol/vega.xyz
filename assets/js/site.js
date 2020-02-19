@@ -21,6 +21,13 @@ function closest(el, selector){
 document.addEventListener("DOMContentLoaded",()=>{
 	document.querySelector('body').classList.add('js');
 
+	// open newsletter on anchor click
+	document.querySelectorAll('a[href="#newsletter"]').forEach( (el) => {
+		el.addEventListener('click', (el) => {
+			document.querySelector('#newsletter').click();
+		});
+	});
+
 	// persist toggle state across sessions
 	const toggleSwitchCheckbox = document.querySelector('#toggleSwitch');
 	if(toggleSwitchCheckbox){
@@ -87,6 +94,12 @@ document.addEventListener("DOMContentLoaded",()=>{
 			el.classList.remove('open');
 		});
 		el.closest('.footer-item').classList.add('open');
+
+		// if newsletter focus email input element
+		if(el.id === 'newsletter'){
+			el.blur();
+			document.querySelector('.signup input[type="email"]').focus();
+		}
 	}
 
 	footerItemLinks.forEach(footerItemLink => {
@@ -160,7 +173,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 	        slideTogglePanel.classList.remove('active');
 	    }
 	}
-
 
 	document.querySelectorAll('.slide-toggle-area').forEach( slideToggleArea => {
 		slideToggleArea.querySelectorAll('.slide-toggle-trigger').forEach( slideToggleTrigger => {
