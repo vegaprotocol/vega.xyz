@@ -15,8 +15,10 @@
     <div id="main">
       <div class="grid">
         <div class="col-12 col-md-9">
-          <article itemprop="articleBody" id="content">
+          <article id="content">
+            <h1 class="no-show">{{ .Page.Title }}</h1>
             {{ .Content }}
+            }
           </article>
         </div>
         <div class="col-12 col-md-3">
