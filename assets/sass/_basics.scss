@@ -6,8 +6,20 @@ body{
 	vertical-align: baseline;
 }
 
-:focus{
-	outline-color: $vega_yellow;
+::selection{
+	background-color: $vega_yellow;
+	color: $vega_black;
+}
+
+.js :focus{
+	outline: none;
+}
+
+body:not(.js) :focus,
+.js.user-is-tabbing :focus{
+	outline: none;
+	background-color: $vega_yellow !important;
+	color: black !important;
 }
 
 .site-header,
@@ -21,7 +33,12 @@ body{
 	}
 }
 
+.vega-logo-anim-anchor{
+	display: block;
+}
+
 .vega-logo-anim{
+	display: block;
 	position: relative;
 	z-index: 1;
 }
@@ -29,6 +46,17 @@ body{
 .vega-logo-anim path{
 	fill: $vega_white;
 }
+
+body:not(.js) .vega-logo-anim-anchor:focus .vega-logo-anim #frame0 rect,
+.js.user-is-tabbing .vega-logo-anim-anchor:focus .vega-logo-anim #frame0 rect{
+	fill: $vega_yellow;
+}
+
+body:not(.js)  .vega-logo-anim-anchor:focus .vega-logo-anim path,
+.js.user-is-tabbing .vega-logo-anim-anchor:focus .vega-logo-anim path{
+	fill: $vega_black;
+}
+
 
 #cursor{
 	position: fixed;

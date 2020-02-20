@@ -258,12 +258,14 @@ document.addEventListener("DOMContentLoaded",()=>{
 	}
 
 	const fourOhFourClose = document.getElementById('close404');
-	fourOhFourClose.addEventListener('click', (el) => {
-		document.getElementById('appWindow').remove();
-		setTimeout( () => {
-			window.location.href = '/';
-		}, 500);
-	});
+	if(fourOhFourClose){
+		fourOhFourClose.addEventListener('click', (el) => {
+			document.getElementById('appWindow').remove();
+			setTimeout( () => {
+				window.location.href = '/';
+			}, 500);
+		});
+	}
 
 	// current section highlighting in table of contents
 	const tableOfContents = document.querySelector('.table-of-contents');
@@ -285,4 +287,14 @@ document.addEventListener("DOMContentLoaded",()=>{
 			});
 		});
 	}
+
+	// watchout for tabbers
+	const handleFirstTab = (e) => {
+		// if user tabbing?
+		if (e.keyCode === 9) {
+		    document.body.classList.add('user-is-tabbing');
+		    window.removeEventListener('keydown', handleFirstTab);
+		}
+	}
+	window.addEventListener('keydown', handleFirstTab);
 });

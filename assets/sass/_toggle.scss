@@ -22,7 +22,6 @@
 	width: rem-calc(7);
 	height: rem-calc(7);
 	background-color: $vega_black;
-	//transition: transform 0.5s;
 	transform: translateY(-1px);
 }
 
@@ -52,10 +51,6 @@
 	color: $vega_black;
 	border-color: black;
 
-	*:focus{
-		outline-color: $vega_limegreen;
-	}
-
 	.marquee{
 		background-color: $vega_yellow;
 	}
@@ -64,13 +59,18 @@
 		color: $vega_black;
 	}
 
-	.vega-logo-anim path{
-		fill: $vega_black;
+	::selection{
+		background-color: $vega_limegreen;
+		color: $vega_black;
 	}
+}
 
-	.vega-logo-anim #frame0 rect{
-		fill: $vega_yellow;
-	}
+.toggle-switch:checked ~ .site-header .vega-logo-anim-anchor .vega-logo-anim path{
+	fill: $vega_black;
+}
+
+.toggle-switch:checked ~ .site-header .vega-logo-anim-anchor .vega-logo-anim #frame0 rect{
+	fill: $vega_yellow;
 }
 
 .toggle-switch:checked ~ .site-header .main-navigation ul li a.current span,
@@ -83,5 +83,32 @@
 	a.call-to-action-footer,
 	.call-to-action-footer a{
 		color: $vega_limegreen;
+	}
+}
+
+// focussing
+body:not(.js),
+.js.user-is-tabbing{
+	.toggle-switch:checked ~ .four-oh-four,
+	.toggle-switch:checked ~ .site-container,
+	.toggle-switch:checked ~ .site-header,
+	.toggle-switch:checked ~ .site-footer{
+		:focus{
+			background-color: $vega_limegreen !important;
+		}
+	}
+}
+
+body:not(.js),
+.js.user-is-tabbing{
+	.toggle-switch:checked ~ .site-header .vega-logo-anim-anchor:focus .vega-logo-anim #frame0 rect{
+		fill: $vega_limegreen !important;
+	}
+}
+
+body:not(.js),
+.js.user-is-tabbing{
+	.toggle-switch:checked ~ .site-header .vega-logo-anim-anchor:focus .vega-logo-anim path{
+		fill: $vega_black;
 	}
 }
