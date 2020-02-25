@@ -74,9 +74,12 @@
 }
 
 .toggle-switch:checked ~ .site-header .main-navigation ul li a.current span,
-.toggle-switch:checked ~ .site-header .main-navigation ul li a:hover span,
 .toggle-switch:checked ~ #cursor{
 	background-color: $vega_limegreen;
+}
+
+.toggle-switch:checked ~ .site-header .main-navigation ul li a:not(.current):hover .word{
+	border-bottom: solid 1px $black;
 }
 
 .toggle-switch:checked ~ .site-footer{

@@ -58,14 +58,21 @@
 
 }
 
-.main-navigation ul li a span{
+.main-navigation ul li a span:not(.word){
 	padding: rem-calc(1) rem-calc(5) rem-calc(3) rem-calc(5);
 }
 
-.main-navigation ul li a:hover span,
 .main-navigation ul li a.current span{
 	background-color: $vega_yellow;
 	color: $vega_black;
+}
+
+.main-navigation ul li .word{
+	padding-bottom: rem-calc(2);
+}
+
+.main-navigation ul li a:not(.current):hover .word{
+	border-bottom: solid 1px $white;
 }
 
 .page-navigation ul{
