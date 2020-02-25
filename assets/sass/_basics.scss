@@ -58,27 +58,27 @@ body:not(.js)  .vega-logo-anim-anchor:focus .vega-logo-anim path,
 }
 
 
-#cursor{
-	position: fixed;
-	width: rem-calc(15);
-	height: rem-calc(15);
-	background-color: $vega_yellow;
-	z-index: 999999;
-	opacity: 1;
-	border-radius: 0;
-	transition: transform 0.5s, opacity 0.5s, border-radius 0.5s;
-	pointer-events: none;
+// #cursor{
+// 	position: fixed;
+// 	width: rem-calc(15);
+// 	height: rem-calc(15);
+// 	background-color: $vega_yellow;
+// 	z-index: 999999;
+// 	opacity: 1;
+// 	border-radius: 0;
+// 	transition: transform 0.5s, opacity 0.5s, border-radius 0.5s;
+// 	pointer-events: none;
 
-	&.on-link{
-		pointer-events: none;
-		transform: scale(2);
-		opacity: 0.4;
-		border-radius: rem-calc(30);
-	}
-}
+// 	&.on-link{
+// 		pointer-events: none;
+// 		transform: scale(2);
+// 		opacity: 0.4;
+// 		border-radius: rem-calc(30);
+// 	}
+// }
 
-body.js{
-	&, a, button, input, .clickable{
-		cursor: none;
-	}
-}
+// body.js{
+// 	&, a, button, input, .clickable{
+// 		cursor: none;
+// 	}
+// }

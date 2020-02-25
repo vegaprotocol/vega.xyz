@@ -46,26 +46,26 @@ document.addEventListener("DOMContentLoaded",()=>{
 	}
 
 	// custom cursor
-	const body = document.querySelector('body');
-	const cursor = document.createElement('div');
-	cursor.id = "cursor";
-	body.appendChild(cursor);
+	// const body = document.querySelector('body');
+	// const cursor = document.createElement('div');
+	// cursor.id = "cursor";
+	// body.appendChild(cursor);
 
-	document.addEventListener("mousemove", (e) => {
-		cursor.style.left = `${e.clientX}px`;
-		cursor.style.top = `${e.clientY}px`;
-	});
+	// document.addEventListener("mousemove", (e) => {
+	// 	cursor.style.left = `${e.clientX}px`;
+	// 	cursor.style.top = `${e.clientY}px`;
+	// });
 
-	const hoverable = document.querySelectorAll("a, button, input");
+	// const hoverable = document.querySelectorAll("a, button, input");
 
-	hoverable.forEach((hoverableEl) => {
-		hoverableEl.addEventListener('mouseover', () => {
-			cursor.classList.add('on-link');
-		});
-		hoverableEl.addEventListener('mouseout', () => {
-			cursor.classList.remove('on-link');
-		});
-	});
+	// hoverable.forEach((hoverableEl) => {
+	// 	hoverableEl.addEventListener('mouseover', () => {
+	// 		cursor.classList.add('on-link');
+	// 	});
+	// 	hoverableEl.addEventListener('mouseout', () => {
+	// 		cursor.classList.remove('on-link');
+	// 	});
+	// });
 
 	// smooth scroll links
 	// if(window.location.hash) {
