@@ -53,7 +53,7 @@ a{
 		width: calc(100% + 500px);
 		font-size: 6.2vw;
 		line-height: 4.6vw;
-		transform: translateX(5%);
+		transform: translateX(3.5%);
 		margin-bottom: 0;
 
 		.line{
@@ -73,7 +73,7 @@ a{
 
 	@media (min-width: $reflex-lg) {
 		font-size: 5.2vw;
-		transform: translateX(0);
+		transform: translateX(-1.5%);
 		line-height: 4.1vw;
 
 		&.presentational{
