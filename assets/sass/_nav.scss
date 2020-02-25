@@ -19,6 +19,10 @@
 	margin: 0;
 	list-style-type: none;
 	transform: rotate(-180deg);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .main-navigation ul li{
@@ -30,6 +34,23 @@
 	text-transform: uppercase;
 }
 
+// reverse menu order so it's still logical when rotated
+.main-navigation ul li:nth-child(1){
+	order: 4;
+}
+
+.main-navigation ul li:nth-child(2){
+	order: 3;
+}
+
+.main-navigation ul li:nth-child(3){
+	order: 2;
+}
+
+.main-navigation ul li:nth-child(4){
+	order: 1;
+}
+
 .main-navigation ul li a{
 	display: inline-block;
 	text-decoration: none;
@@ -37,10 +58,11 @@
 
 }
 
-.main-navigation ul li a.current span{
+.main-navigation ul li a span{
 	padding: rem-calc(1) rem-calc(5) rem-calc(3) rem-calc(5);
 }
 
+.main-navigation ul li a:hover span,
 .main-navigation ul li a.current span{
 	background-color: $vega_yellow;
 	color: $vega_black;
