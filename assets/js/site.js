@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 	// open/close footer link sections
 	const footerItemLinks = document.querySelectorAll('.footer-item-link');
+	const footerItems = document.querySelectorAll('.footer-item');
 
 	const openFooterItem = (el) => {
 		document.querySelectorAll('.footer-item').forEach( el => {
@@ -101,6 +102,14 @@ document.addEventListener("DOMContentLoaded",()=>{
 			document.querySelector('.signup input[type="email"]').focus();
 		}
 	}
+
+	footerItems.forEach(footerItem => {
+		footerItem.addEventListener('click', event => {
+			if(!event.currentTarget.classList.contains('open')){
+				openFooterItem(event.currentTarget);
+			}
+		});
+	});
 
 	footerItemLinks.forEach(footerItemLink => {
 		footerItemLink.addEventListener('click', event => {
@@ -121,6 +130,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 	// flip last footer element on click
 	const footerSwitchLinks = document.querySelectorAll('.footer-switch-link');
+	const footerSwitchItems = document.querySelectorAll('.footer-switch-item');
 
 	const switchFooterItem = (el) => {
 		// close open footer items
@@ -133,9 +143,19 @@ document.addEventListener("DOMContentLoaded",()=>{
 		el.nextElementSibling.classList.add('visible');
 	}
 
+	footerSwitchItems.forEach(footerSwitchItem => {
+		footerSwitchItem.addEventListener('click', el => {
+			const el2 = el.currentTarget.querySelector('.footer-switch-link');
+			if(!el2.classList.contains('open')){
+				switchFooterItem(el2);
+			}
+		});
+	});
+
 	footerSwitchLinks.forEach(footerSwitchLink => {
 		footerSwitchLink.addEventListener('click', el => {
 			switchFooterItem(el.currentTarget);
+			el.preventDefault();
 		});
 
 		footerSwitchLink.addEventListener('keyup', event => {

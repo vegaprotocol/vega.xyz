@@ -201,6 +201,10 @@
 	}
 }
 
+.footer-item:not(.open){
+	cursor: pointer;
+}
+
 .footer-item-social{
 	@media (min-width: $reflex-md) {
 		&, .panel{
