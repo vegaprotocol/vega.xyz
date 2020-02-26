@@ -69,6 +69,7 @@
 	background-color: transparent;
 	color: inherit;
 	text-transform: uppercase;
+	cursor: pointer;
 
 	@media (min-width: $reflex-md) {
 		font-size: rem-calc(31);
