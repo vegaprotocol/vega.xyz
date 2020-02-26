@@ -31,3 +31,5 @@ https://vega.netlify.com/* https://vega.xyz/:splat 301!
 /privacy/ / 301
 
 /teamMembers/* / 301
+
+/* /404.html 404

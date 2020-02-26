@@ -1,0 +1,43 @@
+<!-- ignore empty links with + -->
+{{ $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content }}
+<!-- at least one header to link to -->
+{{ $has_headers := ge (len $headers) 1 }}
+
+{{ if and $has_headers }}
+
+<div class="table-of-contents">
+    <div class="panel no-borders">
+    {{if eq .CurrentSection.Title "_jobs"}}
+        <a href="/who" class="title"><span class="icon icon-arrow-back"></span>WHO</a>
+    {{ else }}
+        <div class="title">{{ .Title }}</div>
+    {{ end }}
+
+    {{ range $headers }}
+        {{ $header := . }}
+        {{ range first 1 (findRE "<h[1-2]" $header 1) }}
+            {{ range findRE "[1-2]" . 1 }}
+                {{ $next_heading := (int .) }}
+                <!-- generate li array of the proper depth -->
+                {{ range seq $next_heading }}
+                    <ul class="toc-h{{ . }}">
+                {{end}}
+                {{ $base := ($.Page.File.LogicalName) }}
+
+                {{ $anchorId := replace $header "+" "" | plainify | urlize }}
+                {{ $href := delimit (slice $base $anchorId) "#" | string }}
+                <li>
+                    <a class="scramble-on-hover" href="{{ relref $.Page $href }}">
+                        {{ $header | plainify }}
+                    </a>
+                </li>
+                <!-- close list -->
+                {{ range seq $next_heading }}
+                    </ul>
+                {{end}}
+            {{end}}
+        {{end}}
+    {{ end }}
+    </div>
+</div>
+{{ end }}

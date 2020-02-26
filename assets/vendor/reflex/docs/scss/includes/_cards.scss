@@ -1,0 +1,156 @@
+.card-header-img {
+    overflow: hidden;
+    padding: 0 0 $reflex-grid-spacing;
+    background-color: $card-bg;
+    border-top: $card-border;
+    border-left: $card-border;
+    border-right: $card-border;
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+}
+
+.card-body {
+    @include flex(1, 1, auto);
+    overflow: hidden;
+    padding: 0 $reflex-grid-spacing;
+    border-left: $card-border;
+    border-right: $card-border;
+    background-color: $card-bg;
+
+    &:first-child {
+        padding-top: $reflex-grid-spacing;
+        border-top: $card-border;
+        border-top-left-radius: $card-border-radius;
+        border-top-right-radius: $card-border-radius;
+    }
+
+    &:only-child {
+        padding-bottom: $reflex-grid-spacing;
+        border-bottom: $card-border;
+        border-bottom-left-radius: $card-border-radius;
+        border-bottom-right-radius: $card-border-radius;
+    }
+}
+
+.direction-row {
+    .card-bg-img {
+        display: block;
+        float: left;
+        width: 40%;
+        max-width: 40%;
+        min-height: 150px;
+        background-color: $card-bg;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-top-left-radius: $card-border-radius;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: $card-border-radius;
+
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 60%;
+        }
+    }
+
+    .card-body {
+        @include display-flex();
+        @include flex-direction(column);
+        @include justify-content-center();
+        @include flex(1, 1, 60%);
+        padding: $reflex-grid-spacing;
+        border-top: $card-border;
+        border-right: $card-border;
+        border-left: 0;
+        border-bottom: $card-border;
+        border-top-right-radius: $card-border-radius;
+        border-bottom-right-radius: $card-border-radius;
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.card-footer {
+    overflow: hidden;
+    @include display-flex();
+    @include align-items(center);
+    @include justify-content-space-between();
+    margin-top: auto;
+    padding: $reflex-grid-spacing;
+    background-color: $card-bg;
+    border-bottom: $card-border;
+    border-left: $card-border;
+    border-right: $card-border;
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+}
+
+.card-center {
+    display: block;
+    overflow: hidden;
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content-center();
+    @include flex(1, 1, auto);
+    text-align: center;
+    padding: $reflex-grid-spacing;
+    background-color: $card-bg;
+    border: $card-border;
+    border-radius: $card-border-radius;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.card-link {
+    color: $colour-text;
+    text-decoration: none;
+    transition: box-shadow .4s, border-color .2s;
+    box-shadow: 0 0 0 2px transparent;
+
+    &:hover,
+    &:focus {
+        color: $colour-text;
+        border-color: darken($colour-col-padding, 40%);
+        outline: none;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px darken($colour-col-padding, 40%);
+    }
+}
+
+.card-footer-link {
+    display: block;
+    overflow: hidden;
+    margin-top: auto;
+    padding: $reflex-grid-spacing;
+    border-bottom: $card-border;
+    border-left: $card-border;
+    border-right: $card-border;
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+    background-color: $colour-col-padding;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        color: $colour-text;
+        border-color: darken($colour-col-padding, 20%);
+        background-color: darken($colour-col-padding, 20%);
+        outline: none;
+    }
+}
+
+.card-img-circle {
+    width: 60%;
+    max-width: 60%;
+    border-radius: 50%;
+    margin: $reflex-grid-spacing auto;
+}

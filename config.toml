@@ -1,0 +1,73 @@
+baseURL = "/"
+title = "Vega Protocol"
+theme ="hugo-theme-basic"
+languageCode = "en-gb"
+googleAnalytics = "UA-116279298-1"
+enableEmoji = true
+description = "Vega is a protocol for creating and trading derivatives on a fully decentralised network."
+disableHugoGeneratorInject = true
+
+[permalinks]
+  _job = "/who/:title"
+
+[taxonomies]
+  category = "categories"
+
+[params]
+  titleEmoji = ":tada:"
+  twitter = "vegaprotocol"
+
+
+########################################
+# Universal header
+#########################################
+   [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+  [[menu.main]]
+    identifier = "background"
+    name = "Background"
+    url = "/background/"
+  [[menu.main]]
+    identifier = "use"
+    name = "Use"
+    url = "/use/"
+  [[menu.main]]
+    identifier = "who"
+    name = "Who"
+    url = "/who/"
+
+#########################################
+# Universal page footer
+#########################################
+#  [[menu.footer]]
+#    identifier = "Github"
+#    name = "Github"
+#    url = "https://github.com/vegaprotocol/"
+  [[menu.footer]]
+    identifier = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/vegaprotocol"
+ [[menu.footer]]
+    identifier = "privacy"
+    name = "Privacy Policy"
+    url = "/privacy/"
+  [[menu.footer]]
+    identifier = "contact"
+    name = "Contact us"
+    url = "/contact/"
+  [[menu.footer]]
+    identifier = "xbrand"
+    name = "Brand assets"
+    url = "/static/assets.zip"
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true

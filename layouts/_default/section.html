@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+<body>
+  <input type="checkbox" id="toggleSwitch" class="toggle-switch" data-toggle>
+  <label class="toggle clickable" for="toggleSwitch">
+    <span class="toggle__container">
+      <span class="toggle__switch"></span>
+    </span>
+  </label>
+
+  {{ partial "header.html" . }}
+
+  <div class="site-container">
+    <div id="main">
+      <div class="grid">
+        <div class="col-12 col-md-9">
+          <article id="content">
+            <h1 class="no-show">{{ .Page.Title }}</h1>
+            {{ .Content }}
+          </article>
+        </div>
+        <div class="col-12 col-md-3">
+          <aside id="sidebar">
+            <div class="inner">
+              {{ partial "table-of-contents" . }}
+              <a href="#top" class="back-to-top-hand">
+                <span class="no-show">Back to top</span>
+                <span class="icon icon-point-up"></span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ partial "footer.html" . }}
+  </body>
+</html>

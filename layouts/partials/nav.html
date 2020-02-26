@@ -1,0 +1,18 @@
+{{ $currentPage := . }}  
+{{ $list := .Site.Menus.main }}
+{{ $len := (len $list) }}
+ <nav class="main-navigation" id="site-navigation">
+  <ul>
+    {{ range $index, $element := $list }}
+      <li>
+        <a
+          {{ if or (eq $currentPage.URL .URL) ($currentPage.HasMenuCurrent "main" .) }}
+          class="current"
+          {{else}}
+          class=""
+          {{end}}
+        href="{{.URL}}"><span><span class="word">{{.Name}}</span></span></a>
+    </li>
+    {{end}}
+   </ul>
+</nav>
