@@ -236,6 +236,10 @@
 
 	.date{
 		color: $vega_darkgrey;
+
+		.toggle-switch:checked ~ .site-container &{
+			color: $vega_darkyellow2;
+		}
 	}
 }
 

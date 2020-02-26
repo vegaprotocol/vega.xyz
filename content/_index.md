@@ -56,7 +56,7 @@ categories = ["Index"]
   link = "who#team"
 
   [[linkblocks.links]]
-  title = "Partners & backers"
+  title = "Partners + backers"
   link = "who#partners-backers"
 
   [[linkblocks.links]]
