@@ -27,41 +27,5 @@
 <meta name="msapplication-wide310x150logo" content="/images/mstile-310x150.png" />
 <meta name="msapplication-square310x310logo" content="/images/mstile-310x310.png" />
 
-<!-- open graph -->
-<meta property="og:type" content="article" />
-<meta property="og:description" content="{{ .Description }}" />
-<meta property="og:title" content="{{ .Title }}" />
-<meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:image" content="" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="" />
-<meta property="og:image:height" content="" />
-<meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:locale" content="{{ .Site.LanguageCode }}" />
-<meta property="article:published_time" content="{{ .Date.Format "2006-01-02"}}
-" /> <meta property="article:modified_time" content="{{ .Date.Format "2006-01-02"}}
-" />
-
-{{if .Keywords }}
-{{ range.Keywords }}<meta property="article:tag" content="{{ . }}" />
-{{ end }}
-{{else if isset .Params "tags" }}
-{{ range.Params.tags }}<meta property="article:tag" content="{{ . }}" />
-{{ end }}
-{{ end }}
-
-{{if .Site.Params.twitter }}
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
-<meta name="twitter:creator" content="@{{ .Site.Params.twitter }}" />
-<meta
-  name="twitter:title"
-  content="{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}"
-/>
-<meta
-  name="twitter:description"
-  content="{{ .Description | default .Summary }}|{{ .Site.Params.Description }}"
-/>
-<meta name="twitter:image:src" content="" />
-<meta name="twitter:domain" content="{{ .Permalink }}" />
-{{ end }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}

@@ -16,6 +16,8 @@ disableHugoGeneratorInject = true
 [params]
   titleEmoji = ":tada:"
   twitter = "vegaprotocol"
+  images = ["/images/vega-og.jpg"]
+  title = "Vega Protocol"
 
 
 ########################################
