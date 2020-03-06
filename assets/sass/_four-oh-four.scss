@@ -2,6 +2,7 @@
 	width: 100%;
 	min-height: 100vh;
 	background: url(../images/404.png) $vega_white;
+	padding-bottom: rem-calc(80);
 }
 
 .four-oh-four-container{
@@ -27,7 +28,7 @@
 	border: solid 3px $vega_black;
 
 	@media (min-width: $reflex-md) {
-		position: absolute;
+		//position: absolute;
 		align-self: flex-end;
 	}
 }
@@ -48,6 +49,7 @@
 		float: right;
 		line-height: rem-calc(30);
 		padding: 0 rem-calc(10);
+		cursor: pointer;
 	}
 }
 
