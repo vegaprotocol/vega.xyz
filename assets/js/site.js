@@ -317,4 +317,65 @@ document.addEventListener("DOMContentLoaded",()=>{
 		}
 	}
 	window.addEventListener('keydown', handleFirstTab);
+
+	// signup testnet
+	const signupTestnetForm = document.querySelector('.signup-testnet');
+	if(signupTestnetForm){
+		const emailInput = signupTestnetForm.querySelector('input[name="ms-email"]');
+		emailInput.name = "ContactEmail";
+		signupTestnetForm.action = signupTestnetForm.dataset.jsAction;
+
+		signupTestnetForm.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const form = e.target;
+			const emailInput = form.querySelector('input[name="ContactEmail"]');
+			const entityIdInput = form.querySelector('input[name="EntityId"]');
+			const mailingListIdInput = form.querySelector('input[name="MailingListId"]');
+			const websiteIdInput = form.querySelector('input[name="WebsiteId"]');
+
+			const email = emailInput.value;
+			const entityId = entityIdInput.value;
+			const mailingListId = mailingListIdInput.value;
+			const websiteId = websiteIdInput.value;
+
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', 'https://forms.m-operations.com/subscribe/c9a73010-9b64-413d-b3a2-585e36a34322');
+			xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+			xhr.onload = function() {
+				if (xhr.status === 200) {
+					window.location.href = '/email/confirm-testnet';
+				}
+				else {
+					const result = JSON.parse(xhr.response);
+					if(result.ValidationErrors){
+						result.ValidationErrors.forEach((err) => {
+							let formErr = document.querySelector('#formError');
+							if(!formErr){
+								formErr = document.createElement('ul');
+								formErr.id = 'formError';
+								formErr.classList.add('error');
+								form.parentNode.insertBefore(formErr, form.nextSibling);
+							}
+							else{
+								while (formErr.hasChildNodes()) {  
+									formErr.removeChild(formErr.firstChild);
+								}
+							}
+							let errEl = document.createElement('li')
+							errEl.innerText = err.Message
+							formErr.appendChild(errEl);
+						});
+					}
+				}
+			};
+
+			const data = {
+				'ContactEmail': email,
+				'EntityId': entityId,
+				'MailingListId': mailingListId,
+				'WebsiteId': websiteId
+			}
+			xhr.send(JSON.stringify(data));
+		});
+	}
 });
