@@ -27,6 +27,10 @@ body:not(.js) :focus,
 	&, a{
 		color: $white;
 	}
+	
+	.marquee-inner a {
+	    text-decoration: underline;
+	}
 
 	.link-highlight{
 		color: $vega_yellow;
