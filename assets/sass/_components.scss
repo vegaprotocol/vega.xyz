@@ -2,6 +2,7 @@
 	height: rem-calc(75);
 }
 
+
 .marquee{
 	position: relative;
 	border-top: solid 1px currentColor;
@@ -18,6 +19,10 @@
 .marquee .marquee-inner {
 	display: inline-block;
 	animation: marquee 8s linear infinite;
+}
+
+.marquee .marquee-inner a {
+    text-decoration: underline;
 }
 
 .marquee .marquee-inner:hover {
