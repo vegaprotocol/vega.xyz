@@ -1,6 +1,8 @@
 # Vega Website 4
 [![Netlify Status](https://api.netlify.com/api/v1/badges/300c8347-d327-4192-a819-b49a684e06df/deploy-status)](https://app.netlify.com/sites/vega/deploys)
 
+![Homepage](https://user-images.githubusercontent.com/6678/77306831-1cd6a000-6cf0-11ea-8b21-4b86f2380a28.png)
+
 ## Editing
 The CMS that produces this site is [Hugo](https://gohugo.io/).
 
@@ -53,6 +55,10 @@ Hugo uses git submodules for theming. Run `git submodule update --init` to clone
 ## Deploying
 The site is automatically deployed when files change in `master`.
 
-# Requirements
-- The content of the site should be readable and navigable without JavaScript enabled
-- Site content is in place as of this commit. While section titles may change, future sections maybe be added, the shape of the content is not expected to change significantly in the next month
+# Credits
+- Design & front-end build by [Big Fan](https://bigfan.agency)
+- Hugo setup by @edd & [Big Fan](https://bigfan.agency)
+- Information Architecture by Vega
+
+
+
