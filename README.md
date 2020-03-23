@@ -1,4 +1,5 @@
-# Proposal for Vega Website 4
+# Vega Website 4
+[![Netlify Status](https://api.netlify.com/api/v1/badges/300c8347-d327-4192-a819-b49a684e06df/deploy-status)](https://app.netlify.com/sites/vega/deploys)
 
 ## Editing
 The CMS that produces this site is [Hugo](https://gohugo.io/).
