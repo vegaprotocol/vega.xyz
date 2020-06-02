@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "hugo --gc --minify --themesDir ./themes && cp -a _redirects public/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "//": "For Mac and Linux, change start command to `webpack & hugo server -D` for convenience",
     "start": "webpack"
