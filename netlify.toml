@@ -1,7 +1,6 @@
 [build]
   publish = "public"
-  command = "hugo --gc --minify --themesDir ./themes"
+  command = "npm run build"
 
 [build.environment]
   HUGO_VERSION = "0.60.1"
-  

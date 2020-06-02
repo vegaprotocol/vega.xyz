@@ -28,7 +28,7 @@ Or to edit some side wide stuff:
 
 
 ### File format
-Text is generally written in MarkDown, although some sections within that are HTML wher a bit of custom layout is needed. This is fine. Each file will also have a section in between three pluses, like so:
+Text is generally written in MarkDown, although some sections within that are HTML where a bit of custom layout is needed. This is fine. Each file will also have a section in between three pluses, like so:
 
 ```toml
 +++
@@ -48,7 +48,7 @@ To add a job, add a new file, `4-paper-title.md` in the `content/_paper/` folder
 
 
 # Development
-Hugo is installed with [Homebrew](https://brew.sh/). On a mac, install with `brew install hugo` - on Windows or Linux, you're on your own.
+For local development, [install Hugo](https://gohugo.io/getting-started/installing/). On MacOSX, use [Brew](https://brew.sh/) (`brew install hugo`).
 
 Hugo uses git submodules for theming. Run `git submodule update --init` to clone the theme.
 
