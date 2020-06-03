@@ -12,7 +12,7 @@ https://vegaprotocol.com/* https://vega.xyz/:splat 301!
 https://www.vegaprotocol.io/* https://vega.xyz/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
-https://vega.netlify.com/* https://vega.xyz/:splat 301!
+https://vega.netlify.app/* https://vega.xyz/:splat 301!
 
 
 /email/confirm.html  https://vega.xyz/email/confirm    200
