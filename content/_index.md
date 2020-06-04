@@ -46,6 +46,10 @@ categories = ["Index"]
   [[linkblocks.links]]
   title = "Build on Vega"
   link = "use#build-on-vega"
+  
+  [[linkblocks.links]]
+  title = "Markets and Liquidity Programme"
+  link = "use#markets-and-liquidity-programme"
 
 [[linkblocks]]
   title = "Who"
@@ -58,6 +62,10 @@ categories = ["Index"]
   [[linkblocks.links]]
   title = "Partners + backers"
   link = "who#partners-backers"
+
+  [[linkblocks.links]]
+  title = "MLP founding members"
+  link = "who/#markets-liquidity-programme-founding-members"
 
   [[linkblocks.links]]
   title = "Open jobs"
