@@ -64,7 +64,7 @@ categories = ["Index"]
   link = "who#partners-backers"
 
   [[linkblocks.links]]
-  title = "Markets and Liquidity Programme Members"
+  title = "MLP founding members"
   link = "who/#markets-liquidity-programme-founding-members"
 
   [[linkblocks.links]]
