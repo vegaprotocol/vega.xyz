@@ -1,6 +1,9 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
 http://vegaprotocol.io/* https://vega.xyz/:splat 301!
 
+# Discord link
+https://vega.xyz/discord https://discord.gg/3hQyGgZ  301
+
 # Redirect domain aliases to primary domain
 https://vegaprotocol.io/* https://vega.xyz/:splat 301!
 https://www.vegaprotocol.com/* https://vega.xyz/:splat 301!
