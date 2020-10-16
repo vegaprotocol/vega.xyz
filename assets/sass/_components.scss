@@ -2,7 +2,6 @@
 	height: rem-calc(75);
 }
 
-
 .marquee{
 	position: relative;
 	border-top: solid 1px currentColor;
@@ -18,7 +17,7 @@
 
 .marquee .marquee-inner {
 	display: inline-block;
-	animation: marquee 8s linear infinite;
+	animation: marquee 20s linear infinite;
 }
 
 .marquee-inner a u {
@@ -30,12 +29,15 @@
 }
 
 @keyframes marquee {
-	0%   { 
-		transform: translateX(100%); 		
-	}
-	100% { 
-		transform: translateX(-100%); 
-	}
+	// 0%   { 
+	// 	transform: translateX(100%); 		
+	// }
+	// 100% { 
+	// 	transform: translateX(-100%); 
+	// }
+
+	0% { transform: translate(30%, 0); }
+  100% { transform: translate(-100%, 0); }
 }
 
 .signup{
