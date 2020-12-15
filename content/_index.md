@@ -45,7 +45,7 @@ categories = ["Index"]
 
   [[linkblocks.links]]
   title = "Build on Vega"
-  link = "use#build-on-vega"
+  link = "use#how-to-build-on-vega"
   
   [[linkblocks.links]]
   title = "Markets and Liquidity Programme"
