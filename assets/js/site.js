@@ -90,17 +90,17 @@ document.addEventListener("DOMContentLoaded",()=>{
 	const footerItemLinks = document.querySelectorAll('.footer-item-link');
 	const footerItems = document.querySelectorAll('.footer-item');
 
+	// flip last footer element on click
+	const footerSwitchLinks = document.querySelectorAll('.footer-switch-link');
+	const footerSwitchItems = document.querySelectorAll('.footer-switch-item');
+
 	const openFooterItem = (el) => {
 		document.querySelectorAll('.footer-item').forEach( el => {
 			el.classList.remove('open');
 		});
 		el.closest('.footer-item').classList.add('open');
 
-		// if newsletter focus email input element
-		if(el.id === 'newsletter'){
-			el.blur();
-			document.querySelector('.signup input[type="email"]').focus();
-		}
+		footerSwitchItems.forEach(el => switchFooterItem(el, true));
 	}
 
 	footerItems.forEach(footerItem => {
@@ -128,19 +128,19 @@ document.addEventListener("DOMContentLoaded",()=>{
 		});
 	});
 
-	// flip last footer element on click
-	const footerSwitchLinks = document.querySelectorAll('.footer-switch-link');
-	const footerSwitchItems = document.querySelectorAll('.footer-switch-item');
-
-	const switchFooterItem = (el) => {
-		// close open footer items
-		const openFooterItem = document.querySelector('.footer-item.open');
-		if(openFooterItem){
-			openFooterItem.classList.remove('open');
+	const switchFooterItem = (el, reset = false) => {
+		if(reset){
+			el.querySelector('.footer-switch-link').classList.remove('hidden');
+			el.querySelector('.footer-switch-link').nextElementSibling.classList.remove('visible');
+		} else{
+			// close open footer items
+			const openFooterItem = document.querySelector('.footer-item.open');
+			if(openFooterItem){
+				openFooterItem.classList.remove('open');
+			}
+			el.classList.add('hidden');
+			el.nextElementSibling.classList.add('visible');
 		}
-
-		el.classList.add('hidden');
-		el.nextElementSibling.classList.add('visible');
 	}
 
 	footerSwitchItems.forEach(footerSwitchItem => {
