@@ -2,7 +2,6 @@ baseURL = "/"
 title = "Vega Protocol"
 theme ="hugo-theme-basic"
 languageCode = "en-gb"
-googleAnalytics = "UA-116279298-1"
 enableEmoji = true
 description = "Vega is a protocol for creating and trading derivatives on a fully decentralised network."
 disableHugoGeneratorInject = true
@@ -66,6 +65,7 @@ disableHugoGeneratorInject = true
 
 [privacy]
   [privacy.googleAnalytics]
+    disable = true
     anonymizeIP = true
     respectDoNotTrack = true
     useSessionStorage = true
