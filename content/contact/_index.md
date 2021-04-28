@@ -8,7 +8,7 @@ keywords = ["contact", "email", "address", "company"]
     You can get in touch by emailing <a href="mailto:hi@vega.xyz">hi@vega.xyz</a>.
 </p>
 <address>
-    Vega Holdings Limited<br />
+    Gobalsky Labs Limited<br />
     Suite 23 Portland House<br />
     Glacis Road<br />
     Gibraltar<br />
