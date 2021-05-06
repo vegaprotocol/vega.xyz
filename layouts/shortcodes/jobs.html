@@ -13,7 +13,11 @@
           <div class="col-12 col-md-9">
             <div class="job-description">
               <p>{{$element.Description}}</p>
-              <p><a href="{{.Permalink}}" class="call-to-action">View full spec</a></p>
+              {{ if (.Params.linkToPdf) }}
+                <p><a href="{{.Params.pdf}}" target="_blank" class="call-to-action">View full spec</a></p>
+              {{ else }}
+                <p><a href="{{.Permalink}}" class="call-to-action">View full spec</a></p>
+              {{ end }}
             </div>
           </div>
           <div class="col-12 col-md-3">
