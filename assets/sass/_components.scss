@@ -364,6 +364,7 @@
 }
 
 .jobs li .title{
+	position: relative;
 	margin: 0;
 	padding: 0 rem-calc(35) 0 0;
 	text-transform: uppercase;
@@ -374,6 +375,7 @@
 
 	@media (min-width: $reflex-md) {
 		font-size: rem-calc(29);
+		padding-left: rem-calc(75);
 	}
 
 	@media (min-width: $reflex-md) {
@@ -412,6 +414,9 @@ aside.job-attributes{
 
 	@media (min-width: $reflex-md) {
 		width: rem-calc(80);
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 }
 
