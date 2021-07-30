@@ -379,19 +379,4 @@ document.addEventListener("DOMContentLoaded",()=>{
 		});
 	}
 
-
-	// beware notice
-	const bewareNotice = document.querySelector('.beware');
-	if(!Cookies.get('beware')){
-		setTimeout(() => {
-			bewareNotice.classList.add('show');
-		}, 1200);	
-	}
-
-	const bewareNoticeClose = document.querySelector('[data-close-beware]');
-	bewareNoticeClose.addEventListener('click', (event) => {
-		Cookies.set('beware', true, { expires: 1 });
-		bewareNotice.classList.remove('show');
-	});
-
 });
