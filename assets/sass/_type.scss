@@ -158,6 +158,10 @@ a{
 ul, ol{
 	padding-left: rem-calc(20);
 	margin-bottom: rem-calc(35);
+
+  ul, ol{
+    margin-top: rem-calc(15);
+  }
 }
 
 li,
