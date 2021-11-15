@@ -379,4 +379,18 @@ document.addEventListener("DOMContentLoaded",()=>{
 		});
 	}
 
+	// banner mainnet
+	const bannerMainnet = document.querySelector('.banner-mainnet');
+	if(!Cookies.get('banner-mainnet')){
+		setTimeout(() => {
+			bannerMainnet.classList.add('show');
+		}, 1200);	
+	}
+
+	const bannerMainnet = document.querySelector('[data-close-banner-mainnet]');
+	bannerMainnet.addEventListener('click', (event) => {
+		Cookies.set('banner-mainnet', true, { expires: 1 });
+		bannerMainnet.classList.remove('show');
+	});
+
 });
