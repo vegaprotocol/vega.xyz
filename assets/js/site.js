@@ -379,18 +379,18 @@ document.addEventListener("DOMContentLoaded",()=>{
 		});
 	}
 
-	// banner mainnet
-	const bannerMainnet = document.querySelector('.banner-mainnet');
-	if(!Cookies.get('banner-mainnet')){
-		setTimeout(() => {
+ 	// banner notice
+ 	const bannerMainnet = document.querySelector('.banner-mainnet');
+ 	if(!Cookies.get('bann6er-mainnet')){
+ 		setTimeout(() => {
 			bannerMainnet.classList.add('show');
-		}, 1200);	
-	}
+ 		}, 1200);	
+ 	}
 
-	const bannerMainnet = document.querySelector('[data-close-banner-mainnet]');
-	bannerMainnet.addEventListener('click', (event) => {
-		Cookies.set('banner-mainnet', true, { expires: 1 });
-		bannerMainnet.classList.remove('show');
-	});
+ 	const bannerMainnetClose = document.querySelector('[data-close-banner]');
+ 	bannerMainnetClose.addEventListener('click', (event) => {
+ 		Cookies.set('banner-mainnet', true, { expires: 1 });
+ 		bannerMainnet.classList.remove('show');
+ 	});
 
 });

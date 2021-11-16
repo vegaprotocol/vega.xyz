@@ -1,4 +1,4 @@
-.beware{
+.banner-mainnet{
 	position: fixed;
   bottom: 0;
   left: 0;
@@ -17,7 +17,7 @@
   }
 }
 
-.beware p{
+.banner-mainnet p{
   font-size: rem-calc(20);
   line-height: 0.9;
   margin: 0 0 3px 0;
@@ -30,7 +30,7 @@
   }
 }
 
-.beware .close{
+.banner-mainnet .close{
   position: absolute;
   top: 0;
   right: 0;
@@ -46,7 +46,7 @@
   }
 }
 
-.beware-cta{
+.banner-mainnet-cta{
   font-size: rem-calc(26);
   text-transform: uppercase;
   padding: 0 6px;
@@ -62,11 +62,11 @@
   }
 }
 
-.beware > div{
+.banner-mainnet > div{
   position: relative;
 }
 
-.beware:after{
+.banner-mainnet:after{
   position: absolute;
   content: '';
   right: 0;
