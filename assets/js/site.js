@@ -1,6 +1,9 @@
 import jump from 'jump.js';
+import 'regenerator-runtime/runtime'
 import Cookies from 'js-cookie';
 import { scramble } from './scramble.js';
+
+const baseApiUrl = "https://api.token.vega.xyz";
 
 /*
  * find and return closest element
@@ -392,5 +395,43 @@ document.addEventListener("DOMContentLoaded",()=>{
  		Cookies.set('banner-mainnet', true, { expires: 1 });
  		bannerMainnet.classList.remove('show');
  	});
+
+	async function getStatistics() {
+		const response = await fetch(baseApiUrl + "/statistics");
+			try {
+				const res = await response.json();
+				console.log(res);
+
+				const statEpoch = document.querySelector('.stat-blocktime');
+				statEpoch.innerHTML =  Math.round(res.statistics.blockDuration/1000000) + "ms";
+			} catch (err) {
+				console.log("Could not load statistics data from API: ", err);
+			}
+		return response;
+	}
+
+	async function getEpochs() {
+		const response = await fetch(baseApiUrl + "/epochs");
+			try {
+			  const res = await response.json();
+			  console.log(res);
+
+			  const statEpoch = document.querySelector('.stat-epoch');
+			  statEpoch.innerHTML = res.epoch.seq;
+
+			  const statValidators = document.querySelector('.stat-total-validators');
+			  statValidators.innerHTML = res.epoch.validators.length;
+
+			} catch (err) {
+			  console.log("Could not load epoch data from API: ", err);
+			}
+		return response;
+	}
+
+	const scrollingBanner = document.querySelector('.marquee-inner');
+	if (scrollingBanner) {
+		getEpochs();
+		setInterval(getStatistics, 3000);
+	}
 
 });
