@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "babel-loader": "^8.0.6",
+    "bignumber.js": "^9.0.1",
     "jump.js": "^1.0.2",
     "regenerator-runtime": "^0.13.9"
   }
