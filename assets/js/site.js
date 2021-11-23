@@ -386,7 +386,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
  	// banner notice
  	const bannerMainnet = document.querySelector('.banner-mainnet');
- 	if(!Cookies.get('bann6er-mainnet')){
+ 	if(!Cookies.get('banner-mainnet')){
  		setTimeout(() => {
 			bannerMainnet.classList.add('show');
  		}, 1200);	
@@ -432,9 +432,11 @@ document.addEventListener("DOMContentLoaded",()=>{
 						let validatorTotal = new BigNumber(v.stakedTotal)
 						stakedTotal = stakedTotal.plus(validatorTotal)
 					}
-					// Display rounded down with no fractional
-					const statTotal = document.querySelector('.stat-vega-staked');
-					statTotal.innerHTML = stakedTotal.dividedBy(Math.pow(10, 18)).dp(2).toFormat(0, 1);
+					if (stakedTotal.isGreaterThan(0)) {
+						// Display rounded down with no fractional
+						const statTotal = document.querySelector('.stat-vega-staked');
+						statTotal.innerHTML = stakedTotal.dividedBy(Math.pow(10, 18)).dp(2).toFormat(0, 1);
+					}
 				}
 			} catch (err) {
 			  console.log("Could not load epoch data from API: ", err);
