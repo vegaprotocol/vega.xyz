@@ -1,6 +1,11 @@
+
+import 'regenerator-runtime/runtime'
 import jump from 'jump.js';
+import BigNumber from 'bignumber.js';
 import Cookies from 'js-cookie';
 import { scramble } from './scramble.js';
+
+const baseApiUrl = 'https://api.token.vega.xyz';
 
 /*
  * find and return closest element
@@ -377,6 +382,73 @@ document.addEventListener("DOMContentLoaded",()=>{
 			}
 			xhr.send(JSON.stringify(data));
 		});
+	}
+
+ 	// banner notice
+ 	const bannerMainnet = document.querySelector('.banner-mainnet');
+ 	if(!Cookies.get('banner-mainnet')){
+ 		setTimeout(() => {
+			bannerMainnet.classList.add('show');
+ 		}, 1200);	
+ 	}
+
+ 	const bannerMainnetClose = document.querySelector('[data-close-banner]');
+ 	bannerMainnetClose.addEventListener('click', (event) => {
+ 		Cookies.set('banner-mainnet', true, { expires: 1 });
+ 		bannerMainnet.classList.remove('show');
+ 	});
+
+	// marquee stats from API.token.vega.xyz
+	// statistics endpoint data
+	async function getStatistics() {
+		const response = await fetch(baseApiUrl + "/statistics");
+			try {
+				const res = await response.json();
+				if (res && res.statistics) {
+					const statEpoch = document.querySelector('.stat-blocktime');
+					statEpoch.innerHTML =  Math.round(res.statistics.blockDuration/1000000) + "ms";
+				}
+			} catch (err) {
+				console.log("Could not load statistics data from API: ", err);
+			}
+		return response;
+	}
+	// epochs endpoint data
+	async function getEpochs() {
+		const response = await fetch(baseApiUrl + "/epochs");
+			try {
+				const res = await response.json();
+				if (res && res.epoch) {
+					const statEpoch = document.querySelector('.stat-epoch');
+					statEpoch.innerHTML = res.epoch.seq;
+				}
+				if (res && res.epoch && res.epoch.validators) {
+					const statValidators = document.querySelector('.stat-total-validators');
+					statValidators.innerHTML = res.epoch.validators.length;
+
+					let stakedTotal = new BigNumber(0);
+					for (var i = 0; i < res.epoch.validators.length; i++) {
+						let v = res.epoch.validators[i]
+						let validatorTotal = new BigNumber(v.stakedTotal)
+						stakedTotal = stakedTotal.plus(validatorTotal)
+					}
+					if (stakedTotal.isGreaterThan(0)) {
+						// Display rounded down with no fractional
+						const statTotal = document.querySelector('.stat-vega-staked');
+						statTotal.innerHTML = stakedTotal.dividedBy(Math.pow(10, 18)).dp(2).toFormat(0, 1);
+					}
+				}
+			} catch (err) {
+			  console.log("Could not load epoch data from API: ", err);
+			}
+		return response;
+	}
+	// only load marquee stats if visible
+	const scrollingBanner = document.querySelector('.marquee-inner');
+	if (scrollingBanner) {
+		getEpochs();
+		getStatistics();
+		setInterval(getStatistics, 3000);
 	}
 
 });

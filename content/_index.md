@@ -40,8 +40,12 @@ categories = ["Index"]
   link = "use"
 
   [[linkblocks.links]]
-  title = "What can I do with Vega?"
+  title = "Stake on Vega's Mainnet"
   link = "use#what-can-i-do-with-vega-today"
+
+  [[linkblocks.links]]
+  title = "Take a ride on Fairground Testnet"
+  link = "use#try-out-fairground-testnet"
 
   [[linkblocks.links]]
   title = "Build on Vega"

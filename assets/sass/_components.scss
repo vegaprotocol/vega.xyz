@@ -2,9 +2,13 @@
 	height: rem-calc(75);
 }
 
+.marquee-panel {
+	padding: 0px;
+}
+
 .marquee{
 	position: relative;
-	border-top: solid 1px currentColor;
+	border-top: solid 0px currentColor;
 	font-size: rem-calc(26);
 	text-transform: uppercase;
 	background-color: $vega_black;
