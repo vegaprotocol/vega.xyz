@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "AlphaLyrae";
+  src: url("../fonts/AlphaLyrae-Medium.woff2");
+}
+
+html {
+  background-color: #000000;
+}
+
+body {
+  font-family: "AlphaLyrae", georgia, serif;
+  font-variant-ligatures: none;
+}
+
+@layer utilities {
+  /* 
+   * Alpha Lyrae font uses "CALT" feature to create glitched effect.
+   * This can be toggled using the following css property.
+   * For more info about font see: https://github.com/vegaprotocol/alpha-lyrae
+   */
+  .font-glitched {
+    font-variant-ligatures: normal;
+  }
+}
