@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import { graphql, useStaticQuery } from "gatsby";
+import Container from "../../components/Container";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
 const JobsPage = () => {
   const data = useStaticQuery(graphql`
@@ -12,6 +13,9 @@ const JobsPage = () => {
               title
               description
             }
+            fields {
+              slug
+            }
           }
         }
       }
@@ -19,16 +23,19 @@ const JobsPage = () => {
   `);
   return (
     <Layout>
-      <ol>
-        {data.allMarkdownRemark.edges.map((edge) => {
-          return (
-            <li>
-              <h2>{edge.node.frontmatter.title}</h2>
-              <p>{edge.node.frontmatter.description}</p>
-            </li>
-          );
-        })}
-      </ol>
+      <Container>
+        <ol>
+          {data.allMarkdownRemark.edges.map((edge) => {
+            return (
+              <li>
+                <Link to={`/job/${edge.node.fields.slug}`}>
+                  {edge.node.frontmatter.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ol>
+      </Container>
     </Layout>
   );
 };
