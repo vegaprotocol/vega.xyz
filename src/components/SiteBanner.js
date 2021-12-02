@@ -29,7 +29,7 @@ const SiteBanner = () => {
   return (
     <div>
       <Banner>
-        <div className="container mx-auto py-6 text-center">
+        <div className="container mx-auto py-3 text-center">
           WATCH OUR KEYNOTE FROM ETH DENVER
         </div>
       </Banner>

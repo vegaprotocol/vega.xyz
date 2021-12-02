@@ -12,11 +12,22 @@ const IndexPage = () => {
         <title>Home Page</title>
 
         <Container>
-          <h1 className="font-glitched text-5xl max-w-2xl uppercase">
-            <ScrambleText
-              text={intl.formatMessage({ id: "page-index-main-title" })}
-            ></ScrambleText>
-          </h1>
+          <div className="max-w-2xl">
+            <h1 className="font-glitched mb-4 text-5xl uppercase">
+              <ScrambleText
+                text={intl.formatMessage({ id: "page-index-hero-title" })}
+              ></ScrambleText>
+            </h1>
+            <p className="mb-6">
+              {intl.formatMessage({ id: "page-index-hero-paragraph" })}
+            </p>
+
+            <p>
+              <Link to="/" className="underline">
+                {intl.formatMessage({ id: "learn-more" })} &raquo;
+              </Link>
+            </p>
+          </div>
         </Container>
       </main>
     </Layout>
