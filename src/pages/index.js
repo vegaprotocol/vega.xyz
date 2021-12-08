@@ -3,14 +3,14 @@ import Layout from "../components/Layout";
 import Container from "../components/Container";
 import ScrambleText from "../components/ScrambleText";
 import { useIntl, Link } from "gatsby-plugin-react-intl";
+import Seo from "../components/Seo";
 
 const IndexPage = () => {
   const intl = useIntl();
   return (
     <Layout>
+      <Seo title={intl.formatMessage({ id: "page-index-title" })} />
       <main>
-        <title>Home Page</title>
-
         <Container>
           <div className="max-w-2xl">
             <h1 className="font-glitched mb-4 text-5xl uppercase">
@@ -21,7 +21,6 @@ const IndexPage = () => {
             <p className="mb-6">
               {intl.formatMessage({ id: "page-index-hero-paragraph" })}
             </p>
-
             <p>
               <Link to="/" className="underline">
                 {intl.formatMessage({ id: "learn-more" })} &raquo;

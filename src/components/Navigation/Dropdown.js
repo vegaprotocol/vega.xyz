@@ -22,6 +22,8 @@ const NavigationDropdown = ({ section }) => {
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="inline-block px-6 py-3 cursor-pointer"
+        role="button"
+        tabIndex={0}
       >
         {intl.formatMessage({ id: section.text })}
       </div>
@@ -39,7 +41,7 @@ const NavigationDropdown = ({ section }) => {
                   <div className="font-glitched uppercase">
                     {intl.formatMessage({ id: link.text })}
                   </div>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-gray-500 text-sm">
                     {intl.formatMessage({ id: link.description })}
                   </p>
                 </Link>

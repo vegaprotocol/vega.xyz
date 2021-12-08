@@ -27,7 +27,7 @@ const Header = () => {
 
           <Navigation />
 
-          <div>Languages</div>
+          <div tabIndex={0}>Languages</div>
         </div>
       </Container>
     </header>

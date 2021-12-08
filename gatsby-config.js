@@ -4,8 +4,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://vega.xzy",
+    url: "https://vega.xyz",
     title: "Vega Protcol",
+    titleTemplate: "%s | Vega Protocol",
+    description:
+      "Vega is a protocol for creating and trading derivatives on a fully decentralised network.",
+    image: "/images/vega-og.jpg",
+    twitter: "@vegaprotocol",
   },
   plugins: [
     "gatsby-plugin-sass",

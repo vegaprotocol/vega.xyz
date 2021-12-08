@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import { graphql, useStaticQuery, Link } from "gatsby";
+import Seo from "../../components/Seo";
 
 const JobsPage = () => {
   const data = useStaticQuery(graphql`
@@ -23,6 +24,7 @@ const JobsPage = () => {
   `);
   return (
     <Layout>
+      <Seo title="Jobs" />
       <Container>
         <ol>
           {data.allMarkdownRemark.edges.map((edge) => {
