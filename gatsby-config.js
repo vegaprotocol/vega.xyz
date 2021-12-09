@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    url: "https://vega.xyz",
+    siteUrl: "https://vega.xyz",
     title: "Vega Protcol",
     titleTemplate: "%s | Vega Protocol",
     description:

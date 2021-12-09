@@ -23,7 +23,6 @@ const PapersPage = () => {
       }
     }
   `);
-  console.log(data.allMarkdownRemark.edges);
   return (
     <Layout>
       <Seo title="Papers" />
