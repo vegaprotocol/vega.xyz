@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useIntl, Link } from "gatsby-plugin-react-intl";
 import { motion } from "framer-motion";
-import Container from "../Container";
+import DropdownArrow from "../Svg/DropdownArrow.js";
 
 const NavigationDropdown = ({ section }) => {
   const intl = useIntl();
@@ -18,37 +18,37 @@ const NavigationDropdown = ({ section }) => {
   };
 
   return (
-    <li>
+    <li className="relative">
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-block px-6 py-3 cursor-pointer"
+        className="hover:text-vega-mid-grey inline-block px-6 py-3 cursor-pointer"
         role="button"
         tabIndex={0}
       >
         {intl.formatMessage({ id: section.text })}
+
+        <div className="inline-block pl-3">
+          <DropdownArrow></DropdownArrow>
+        </div>
       </div>
       <motion.div
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        className="top-[9.1875rem] absolute left-0 right-0 py-12 bg-black border-b"
+        className="w-[10.625rem] top-[3.4375rem] absolute left-0"
       >
-        <Container>
-          <ul className="grid gap-4 grid-cols-4">
-            {section.links.map((link, idx) => (
-              <li key={idx} className="p-6 bg-gray-900">
-                <Link to={link.to}>
-                  <div className="font-glitched uppercase">
-                    {intl.formatMessage({ id: link.text })}
-                  </div>
-                  <p className="text-gray-500 text-sm">
-                    {intl.formatMessage({ id: link.description })}
-                  </p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Container>
+        <ul className="bg-vega-light-grey dark:bg-vega-off-black py-3 w-full text-base">
+          {section.links.map((link, idx) => (
+            <li key={idx}>
+              <Link
+                to={link.to}
+                className="hover:text-vega-mid-grey block px-6 py-2"
+              >
+                {intl.formatMessage({ id: link.text })}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </motion.div>
     </li>
   );

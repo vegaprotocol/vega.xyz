@@ -35,78 +35,15 @@ const navigationSections = [
   },
   {
     text: "navigation-develop",
-    links: [
-      {
-        text: "navigation-key-concepts",
-        description: "navigation-key-concepts-description",
-        to: "/learn/key-concepts/",
-      },
-      {
-        text: "navigation-papers",
-        description: "navigation-papers-description",
-        to: "/learn/papers/",
-      },
-      {
-        text: "navigation-blog",
-        description: "navigation-blog-description",
-        to: "https://blog.vega.xzy",
-      },
-      {
-        text: "navigation-talks",
-        description: "navigation-talks-description",
-        to: "/learn/talks",
-      },
-    ],
+    link: "/develop",
   },
   {
     text: "navigation-use",
-    links: [
-      {
-        text: "navigation-key-concepts",
-        description: "navigation-key-concepts-description",
-        to: "/learn/key-concepts/",
-      },
-      {
-        text: "navigation-papers",
-        description: "navigation-papers-description",
-        to: "/learn/papers/",
-      },
-      {
-        text: "navigation-blog",
-        description: "navigation-blog-description",
-        to: "https://blog.vega.xzy",
-      },
-      {
-        text: "navigation-talks",
-        description: "navigation-talks-description",
-        to: "/learn/talks",
-      },
-    ],
+    link: "/use",
   },
   {
     text: "navigation-join-community",
-    links: [
-      {
-        text: "navigation-key-concepts",
-        description: "navigation-key-concepts-description",
-        to: "/learn/key-concepts/",
-      },
-      {
-        text: "navigation-papers",
-        description: "navigation-papers-description",
-        to: "/learn/papers/",
-      },
-      {
-        text: "navigation-blog",
-        description: "navigation-blog-description",
-        to: "https://blog.vega.xzy",
-      },
-      {
-        text: "navigation-talks",
-        description: "navigation-talks-description",
-        to: "/learn/talks",
-      },
-    ],
+    link: "/community",
   },
 ];
 
@@ -114,7 +51,7 @@ const Navigation = () => {
   const intl = useIntl();
   return (
     <nav>
-      <ul className="text-lg flex tracking-wide">
+      <ul className="flex text-lg tracking-wide">
         {navigationSections.map((section, idx) =>
           section.links ? (
             <NavigationDropdown section={section} key={idx} />
