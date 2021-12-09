@@ -15,7 +15,7 @@ export const query = graphql`
   }
 `;
 
-const Job = (props) => {
+const Jobs = (props) => {
   return (
     <Layout>
       <Container>
@@ -31,4 +31,4 @@ const Job = (props) => {
   );
 };
 
-export default Job;
+export default Jobs;

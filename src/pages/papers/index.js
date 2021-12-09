@@ -4,10 +4,10 @@ import Container from "../../components/Container";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import Seo from "../../components/Seo";
 
-const JobsPage = () => {
+const PapersPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: { collection: { eq: "jobs" } }) {
+      allMarkdownRemark(filter: { collection: { eq: "papers" } }) {
         edges {
           node {
             collection
@@ -23,9 +23,10 @@ const JobsPage = () => {
       }
     }
   `);
+  console.log(data.allMarkdownRemark.edges);
   return (
     <Layout>
-      <Seo title="Jobs" />
+      <Seo title="Papers" />
       <Container>
         <ol>
           {data.allMarkdownRemark.edges.map((edge) => {
@@ -43,4 +44,4 @@ const JobsPage = () => {
   );
 };
 
-export default JobsPage;
+export default PapersPage;

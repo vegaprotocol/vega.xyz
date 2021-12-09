@@ -1,14 +1,16 @@
 const path = require("path");
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
-module.exports.onCreateNode = ({ node, actions }) => {
+module.exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === "MarkdownRemark") {
-    const slug = path.basename(node.fileAbsolutePath, ".md");
+    const slug = createFilePath({ node, getNode, basePath: `content` });
+    node.collection = getNode(node.parent).sourceInstanceName;
 
     createNodeField({
       node,
-      name: "slug",
+      name: `slug`,
       value: slug,
     });
   }
@@ -16,12 +18,13 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const jobTemplate = path.resolve("./src/templates/job.js");
+
   const response = await graphql(`
     query {
       allMarkdownRemark {
         edges {
           node {
+            collection
             fields {
               slug
             }
@@ -32,9 +35,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
   `);
 
   response.data.allMarkdownRemark.edges.forEach((edge) => {
+    const slug = edge.node.fields.slug;
+    const template = edge.node.collection;
+
     createPage({
-      component: jobTemplate,
-      path: `/job/${edge.node.fields.slug}`,
+      component: path.resolve(`./src/templates/${template}.js`),
+      path: `${edge.node.fields.slug}`,
       context: {
         slug: edge.node.fields.slug,
       },
