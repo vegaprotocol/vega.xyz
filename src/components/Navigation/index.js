@@ -50,7 +50,7 @@ const navigationSections = [
 const Navigation = () => {
   const intl = useIntl();
   return (
-    <nav>
+    <nav className="hidden lg:block">
       <ul className="flex text-lg tracking-wide">
         {navigationSections.map((section, idx) =>
           section.links ? (
