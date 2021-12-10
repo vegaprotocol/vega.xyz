@@ -36,6 +36,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `vega.xyz`,
+        short_name: `vega.xyz`,
+        start_url: `/en/`,
+        background_color: `#fff`,
+        theme_color: `#000`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here

@@ -17,7 +17,6 @@ class ScreenMode extends React.Component {
   }
 
   render() {
-    console.log(this.state.theme);
     return (
       <button
         aria-label="Switch theme color"
