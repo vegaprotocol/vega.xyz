@@ -17,15 +17,18 @@ class ScreenMode extends React.Component {
   }
 
   render() {
+    console.log(this.state.theme);
     return (
       <button
         aria-label="Switch theme color"
-        className="cursor-pointer"
+        className="hover:bg-vega-light-grey dark:hover:bg-vega-off-black rounded-full cursor-pointer"
         onClick={() => {
           this.toggleTheme();
         }}
       >
-        <ScreenModeIcon icon={this.state.theme}></ScreenModeIcon>
+        <svg width="45" height="45">
+          <ScreenModeIcon icon={this.state.theme}></ScreenModeIcon>
+        </svg>
       </button>
     );
   }
