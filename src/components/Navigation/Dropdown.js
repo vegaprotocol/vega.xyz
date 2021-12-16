@@ -21,7 +21,7 @@ const NavigationDropdown = ({ section }) => {
     <li className="relative">
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="hover:text-vega-mid-grey inline-block px-6 py-3 cursor-pointer"
+        className="inline-block px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
         role="button"
         tabIndex={0}
       >
@@ -37,15 +37,26 @@ const NavigationDropdown = ({ section }) => {
         variants={variants}
         className="w-[10.625rem] top-[3.4375rem] absolute left-0"
       >
-        <ul className="bg-vega-light-grey dark:bg-vega-off-black py-3 w-full text-base">
+        <ul className="py-3 w-full text-base bg-vega-light-grey dark:bg-vega-off-black">
           {section.links.map((link, idx) => (
             <li key={idx}>
-              <Link
-                to={link.to}
-                className="hover:text-vega-mid-grey block px-6 py-2"
-              >
-                {intl.formatMessage({ id: link.text })}
-              </Link>
+              {link.to.startsWith("http") ? (
+                <a
+                  href={link.to}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block px-6 py-2 hover:text-vega-mid-grey"
+                >
+                  {intl.formatMessage({ id: link.text })}
+                </a>
+              ) : (
+                <Link
+                  to={link.to}
+                  className="block px-6 py-2 hover:text-vega-mid-grey"
+                >
+                  {intl.formatMessage({ id: link.text })}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

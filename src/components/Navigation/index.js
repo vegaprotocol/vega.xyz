@@ -1,13 +1,8 @@
 import React from "react";
 import NavigationDropdown from "./Dropdown";
 import NavigationItem from "./Item";
-import { useIntl, Link } from "gatsby-plugin-react-intl";
 
 const navigationSections = [
-  // {
-  //   text: "navigation-external",
-  //   link: "https://vega.xyz",
-  // },
   {
     text: "navigation-learn",
     links: [
@@ -48,7 +43,6 @@ const navigationSections = [
 ];
 
 const Navigation = () => {
-  const intl = useIntl();
   return (
     <nav className="hidden lg:block">
       <ul className="flex text-lg tracking-wide">

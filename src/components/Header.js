@@ -7,20 +7,25 @@ import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";
 import MobileMenuButton from "../components/Navigation/MobileMenuButton";
-import { motion } from "framer-motion";
 
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuIsOpen(!menuIsOpen);
+
+    if (menuIsOpen) {
+      document.documentElement.style.overflowY = "scroll";
+    } else {
+      document.documentElement.style.overflowY = "hidden";
+    }
   };
 
   return (
-    <header>
+    <header className="relative z-30">
       <SiteBanner />
       <Container>
-        <div className="header flex items-center justify-between py-4 lg:py-8">
+        <div className="header flex items-center justify-between py-4 lg:pt-6">
           <Link to="/">
             <VegaLogo />
           </Link>
