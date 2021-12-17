@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const BoxLinkHero = ({ title, text, linkTitle, link, image }) => {
   const readyimage = getImage(image);
   return (
-    <div className="dark:bg-black bg-vega-light-grey dark:border dark:border-white">
+    <div className="grey-box dark:bg-black bg-vega-light-grey dark:border dark:border-white">
       <div className="grid grid-cols-12 h-full">
         <div className="col-span-8">
           <div className="flex flex-col justify-between p-6 h-full">

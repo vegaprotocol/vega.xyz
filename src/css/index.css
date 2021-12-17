@@ -16,6 +16,14 @@ body {
   font-variant-ligatures: none;
 }
 
+.grey-box .button-link div {
+  @apply bg-vega-light-grey;
+}
+
+.dark .grey-box .button-link div {
+  @apply bg-vega-box-grey;
+}
+
 @layer base {
   p {
     @apply text-vega-mid-grey;

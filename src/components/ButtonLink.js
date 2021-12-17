@@ -11,7 +11,7 @@ const ButtonLink = ({ text, link }) => {
         href={link}
         target="_blank"
         rel="noreferrer"
-        className="relative inline-block"
+        className="button-link relative inline-block"
       >
         <div className="leading-1 text-[0.9375rem] tracking-[0.01rem] relative z-10 inline-block px-8 py-3 dark:bg-black bg-white border border-black dark:border-white hover:-translate-y-1.5 uppercase transition-transform duration-75">
           {text}
@@ -26,7 +26,7 @@ const ButtonLink = ({ text, link }) => {
     );
   } else {
     return (
-      <Link to={link} className="relative inline-block">
+      <Link to={link} className="button-link relative inline-block">
         <div className="leading-1 text-[0.9375rem] tracking-[0.01rem] relative z-10 inline-block px-8 py-3 dark:bg-black bg-white border border-black dark:border-white hover:-translate-y-1.5 uppercase transition-transform duration-75">
           {text}
         </div>
