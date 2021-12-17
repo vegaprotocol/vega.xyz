@@ -1,4 +1,5 @@
 const path = require("path");
+const fetch = require(`node-fetch`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 module.exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -45,5 +46,30 @@ module.exports.createPages = async ({ graphql, actions }) => {
         slug: edge.node.fields.slug,
       },
     });
+  });
+};
+
+exports.sourceNodes = async ({
+  actions,
+  createNodeId,
+  createContentDigest,
+}) => {
+  const result = await fetch(`https://contributors.vega.win/contributors`);
+  const resultData = await result.json();
+
+  resultData.github_contributors.forEach((contributor) => {
+    const node = {
+      username: contributor.login,
+      avatar: contributor.avatar_url,
+      total_contributions: contributor.total_contributions,
+      id: createNodeId(`contributors-${contributor.login}`),
+      parent: null,
+      children: [],
+      internal: {
+        type: `Contributors`,
+        contentDigest: createContentDigest(contributor),
+      },
+    };
+    actions.createNode(node);
   });
 };
