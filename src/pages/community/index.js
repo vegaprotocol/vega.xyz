@@ -13,6 +13,7 @@ import LeadingLine from "../../components/LeadingLine";
 import PageSection from "../../components/PageSection";
 import TwitchEmbed from "../../components/TwitchEmbed";
 import Incentive from "../../components/Incentive";
+import GlitchTitle from "../../components/GlitchTitle";
 import DeadFish from "../../images/dead-fish.svg";
 import { getImage } from "gatsby-plugin-image";
 
@@ -54,9 +55,9 @@ const CommunityPage = ({ data }) => {
         <PageSection>
           <div id="contributions">
             <div className="text-center">
-              <h2 className="title-m max-w-[14.375rem] md:title-l md:max-w-[23.4375rem] lg:title-xxl lg:max-w-[36.25rem] mb-4 mx-auto">
-                Contribute to Vega
-              </h2>
+              <div className="max-w-[14.375rem] md:max-w-[23.4375rem] lg:max-w-[36.25rem] mx-auto">
+                <GlitchTitle text="Contribute to Vega" color="red" />
+              </div>
               <LeadingLine text="There are a number of ways to contribute..." />
             </div>
             <div className="grid gap-x-5 gap-y-14 grid-cols-1 mb-24 mt-12 md:grid-cols-2 xl:grid-cols-2">
@@ -149,9 +150,7 @@ const CommunityPage = ({ data }) => {
         </PageSection>
         <PageSection>
           <div id="calendar">
-            <h2 className="title-m md:title-l lg:title-xxl text-center">
-              Upcoming Events + Meetups
-            </h2>
+            <GlitchTitle text="Upcoming Events + Meetups" color="purple" />
             <div className="text-[#4f4f4f] text-[2.125rem] my-16 p-12 text-center bg-vega-off-black">
               CALENDAR FUNCTIONALITY
             </div>
@@ -173,9 +172,7 @@ const CommunityPage = ({ data }) => {
         </PageSection>
         <PageSection>
           <div id="channels">
-            <h2 className="title-m md:title-l lg:title-xxl text-center">
-              Our Channels
-            </h2>
+            <GlitchTitle text="Our Channels" color="red" />
 
             <div className="max-w-[50rem] grid gap-x-6 gap-y-6 grid-cols-2 mx-auto my-12 md:grid-cols-3 lg:gap-x-12">
               <BoxLinkSimple text="Discord" link="https://vega.xyz/discord" />
