@@ -4,15 +4,11 @@ import LinkArrow from "./Svg/LinkArrow";
 
 const BoxLinkSimple = ({ text, link }) => {
   const isExternal = link.startsWith("http");
+  const buttonClass = `title-s before:absolute relative z-10 before:bottom-1.5 before:left-0 before:right-0 inline-block pb-10 pt-4 px-4 w-full dark:bg-black bg-white border before:border-t before:border-current border-current dark:border-white hover:-translate-y-1.5 transition-transform duration-75`;
 
   if (isExternal) {
     return (
-      <a
-        href={link}
-        target="_blank"
-        rel="noreferrer"
-        className="title-s before:absolute relative z-10 before:bottom-1.5 before:left-0 before:right-0 inline-block pb-10 pt-4 px-4 w-full dark:bg-black bg-white border before:border-t before:border-current border-current dark:border-white hover:-translate-y-1.5 transition-transform duration-75"
-      >
+      <a href={link} target="_blank" rel="noreferrer" className={buttonClass}>
         {text}
         <div className="absolute right-4 top-4">
           <LinkArrow />
@@ -21,10 +17,7 @@ const BoxLinkSimple = ({ text, link }) => {
     );
   } else {
     return (
-      <Link
-        to={link}
-        className="title-s before:absolute relative z-10 before:bottom-1.5 before:left-0 before:right-0 inline-block pb-10 pt-4 px-4 w-full dark:bg-black bg-white border before:border-t before:border-current border-current dark:border-white hover:-translate-y-1.5 transition-transform duration-75"
-      >
+      <Link to={link} className={buttonClass}>
         {text}
       </Link>
     );
