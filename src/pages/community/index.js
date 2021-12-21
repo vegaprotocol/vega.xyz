@@ -16,6 +16,7 @@ import Incentive from "../../components/Incentive";
 import GlitchTitle from "../../components/GlitchTitle";
 import DeadFish from "../../images/dead-fish.svg";
 import { getImage } from "gatsby-plugin-image";
+import GhostParty from "../../components/GhostParty";
 
 const CommunityPage = ({ data }) => {
   const intl = useIntl();
@@ -51,7 +52,11 @@ const CommunityPage = ({ data }) => {
             <ButtonLink text="Try a tutorial" link="/tutorial"></ButtonLink>
           </div>
         </div>
+      </Container>
 
+      <GhostParty />
+
+      <Container>
         <PageSection>
           <div id="contributions">
             <div className="text-center">
