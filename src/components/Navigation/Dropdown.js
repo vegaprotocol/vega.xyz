@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useIntl, Link } from "gatsby-plugin-react-intl";
 import { motion } from "framer-motion";
 import DropdownArrow from "../Svg/DropdownArrow.js";
+import LinkArrow from "../Svg/LinkArrow";
 
 const NavigationDropdown = ({ section }) => {
   const intl = useIntl();
@@ -48,6 +49,9 @@ const NavigationDropdown = ({ section }) => {
                   className="block px-6 py-2 hover:text-vega-mid-grey"
                 >
                   {intl.formatMessage({ id: link.text })}
+                  <span className="inline-block ml-2">
+                    <LinkArrow />
+                  </span>
                 </a>
               ) : (
                 <Link
