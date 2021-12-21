@@ -49,12 +49,17 @@ const CommunityPage = ({ data }) => {
                 link="https://vega.xyz/discord"
               ></ButtonLink>
             </div>
-            <ButtonLink text="Try a tutorial" link="/tutorial"></ButtonLink>
+            <ButtonLink
+              text="Try a tutorial"
+              link="https://www.youtube.com/playlist?list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2"
+            ></ButtonLink>
           </div>
         </div>
       </Container>
 
-      <GhostParty />
+      <div className="relative md:-top-6">
+        <GhostParty />
+      </div>
 
       <Container>
         <PageSection>
@@ -85,20 +90,20 @@ const CommunityPage = ({ data }) => {
                 title="Documentation"
                 text="Share feedback, make suggestions and translations."
                 linkTitle="Learn more"
-                link="https://fairground.wtf"
+                link="https://docs.vega.xyz/"
               />
 
               <BoxLink
-                title="Play on Fairground"
-                text="Help us find bugs and harden Vega's Testnet"
-                linkTitle="Fairground"
-                link="https://fairground.wtf"
+                title="Contribute content"
+                text="Create articles, blog posts and contribute to research papers"
+                linkTitle="Discord"
+                link="https://vega.xyz/discord"
               />
               <BoxLink
-                title="Play on Fairground"
-                text="Help us find bugs and harden Vega's Testnet"
-                linkTitle="Fairground"
-                link="https://fairground.wtf"
+                title="Contribute art"
+                text="https://vega.xyz/discord"
+                linkTitle="Discord"
+                link="https://vega.xyz/discord"
               />
             </div>
           </div>
@@ -135,7 +140,7 @@ const CommunityPage = ({ data }) => {
             <ButtonLink text="Load more..." link="" />
           </div>
 
-          <div className="grid gap-8 grid-cols-1 my-12 md:grid-cols-2">
+          <div className="grid gap-8 grid-cols-1 mt-16 md:grid-cols-2">
             <BoxLinkHero
               title="Join the builders club"
               text="For developers, coders, hackers, dreamers who want to create software on top of Vega."
@@ -156,7 +161,7 @@ const CommunityPage = ({ data }) => {
         <PageSection>
           <div id="calendar">
             <GlitchTitle text="Upcoming Events + Meetups" color="purple" />
-            <div className="text-[#4f4f4f] text-[2.125rem] my-16 p-12 text-center bg-vega-off-black">
+            <div className="text-[#4f4f4f] text-[2.125rem] mt-16 p-12 text-center bg-vega-off-black">
               CALENDAR FUNCTIONALITY
             </div>
           </div>
@@ -179,7 +184,7 @@ const CommunityPage = ({ data }) => {
           <div id="channels">
             <GlitchTitle text="Our Channels" color="red" />
 
-            <div className="max-w-[50rem] grid gap-x-6 gap-y-6 grid-cols-2 mx-auto my-12 md:grid-cols-3 lg:gap-x-12">
+            <div className="max-w-[50rem] grid gap-x-6 gap-y-6 grid-cols-2 mt-12 mx-auto md:grid-cols-3 lg:gap-x-12">
               <BoxLinkSimple text="Discord" link="https://vega.xyz/discord" />
               <BoxLinkSimple
                 text="Telegram"
@@ -197,6 +202,22 @@ const CommunityPage = ({ data }) => {
               <BoxLinkSimple
                 text="Twitch"
                 link="https://www.twitch.tv/vegaprotocol"
+              />
+            </div>
+          </div>
+        </PageSection>
+        <PageSection>
+          <div class="grid grid-cols-12">
+            <div class="col-span-4">
+              <h2 className="title-l md:title-xxxl lg:title-xxxxl">
+                Want
+                <br />
+                Swag?
+              </h2>
+              <div className="my-6">Of course you do!</div>
+              <ButtonLink
+                link="https://www.google.com"
+                text="Ask us on Discord"
               />
             </div>
           </div>
