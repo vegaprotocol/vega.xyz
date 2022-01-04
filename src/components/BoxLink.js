@@ -6,7 +6,7 @@ const BoxLink = ({ title, text, linkTitle, link, icon }) => {
     <div className="relative flex flex-col justify-between border border-black dark:border-white">
       <div className="p-4">
         <div className="relative">
-          <div className="text-[1.5rem] font-glitched leading-[0.85] mb-1 uppercase">
+          <div className="text-[1.5rem] font-glitched leading-[0.85] mb-3">
             {title}
           </div>
           <span className="text-[0.9375rem] leading-[1.3] text-vega-mid-grey">

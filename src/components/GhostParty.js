@@ -105,7 +105,7 @@ const GhostParty = () => {
           height="138.147"
           fill="white"
           stroke="black"
-          stroke-width="1.85286"
+          strokeWidth="1.85286"
         />
         <path
           d="M705.16 132.08H702.844V134.396H705.16V132.08Z"
@@ -146,8 +146,8 @@ const GhostParty = () => {
         <path
           d="M861.842 148.292L693.927 148.292"
           stroke="black"
-          stroke-width="1.85286"
-          stroke-miterlimit="10"
+          strokeWidth="1.85286"
+          strokeMiterlimit="10"
         />
         <path
           d="M340.961 82.6396H338.641V84.9596H340.961V82.6396Z"
@@ -248,7 +248,7 @@ const GhostParty = () => {
           height="68.1471"
           fill="white"
           stroke="black"
-          stroke-width="1.85286"
+          strokeWidth="1.85286"
         />
         <path
           d="M883.159 202.08H880.843V204.396H883.159V202.08Z"
@@ -289,8 +289,8 @@ const GhostParty = () => {
         <path
           d="M1039.84 218.292L871.926 218.292"
           stroke="black"
-          stroke-width="1.85286"
-          stroke-miterlimit="10"
+          strokeWidth="1.85286"
+          strokeMiterlimit="10"
         />
         <rect
           x="1049.93"
@@ -299,7 +299,7 @@ const GhostParty = () => {
           height="138.147"
           fill="white"
           stroke="black"
-          stroke-width="1.85286"
+          strokeWidth="1.85286"
         />
         <path
           d="M1061.16 132.08H1058.84V134.396H1061.16V132.08Z"
@@ -340,8 +340,8 @@ const GhostParty = () => {
         <path
           d="M1217.84 148.292L1049.93 148.292"
           stroke="black"
-          stroke-width="1.85286"
-          stroke-miterlimit="10"
+          strokeWidth="1.85286"
+          strokeMiterlimit="10"
         />
         <rect
           x="515.926"
@@ -350,7 +350,7 @@ const GhostParty = () => {
           height="138.147"
           fill="white"
           stroke="black"
-          stroke-width="1.85286"
+          strokeWidth="1.85286"
         />
         <path
           d="M527.16 132.08H524.844V134.396H527.16V132.08Z"
@@ -391,10 +391,10 @@ const GhostParty = () => {
         <path
           d="M683.842 148.292L515.927 148.292"
           stroke="black"
-          stroke-width="1.85286"
-          stroke-miterlimit="10"
+          strokeWidth="1.85286"
+          strokeMiterlimit="10"
         />
-        <g clip-path="url(#clip0_5369_2)">
+        <g clipPath="url(#clip0_5369_2)">
           <path
             d="M1083.91 57.4185L1079 62.3021V94.5291H1081.42V63.3175L1085.62 59.1108L1083.91 57.4185Z"
             fill="black"
@@ -448,7 +448,7 @@ const GhostParty = () => {
           height="68.1471"
           fill="white"
           stroke="black"
-          stroke-width="1.85286"
+          strokeWidth="1.85286"
         />
         <path
           d="M349.16 202.08H346.844V204.396H349.16V202.08Z"
@@ -489,8 +489,8 @@ const GhostParty = () => {
         <path
           d="M505.842 218.292L337.927 218.292"
           stroke="black"
-          stroke-width="1.85286"
-          stroke-miterlimit="10"
+          strokeWidth="1.85286"
+          strokeMiterlimit="10"
         />
         <rect
           x="159.926"
@@ -499,7 +499,7 @@ const GhostParty = () => {
           height="108.147"
           fill="white"
           stroke="black"
-          stroke-width="1.85286"
+          strokeWidth="1.85286"
         />
         <path
           d="M171.16 162.08H168.844V164.396H171.16V162.08Z"
@@ -540,8 +540,8 @@ const GhostParty = () => {
         <path
           d="M327.842 178.292L159.927 178.292"
           stroke="black"
-          stroke-width="1.85286"
-          stroke-miterlimit="10"
+          strokeWidth="1.85286"
+          strokeMiterlimit="10"
         />
         <rect
           x="-18.0736"
@@ -550,7 +550,7 @@ const GhostParty = () => {
           height="138.147"
           fill="white"
           stroke="black"
-          stroke-width="1.85286"
+          strokeWidth="1.85286"
         />
         <path
           d="M0.108071 139.028H-2.20801V141.344H0.108071V139.028Z"
@@ -563,8 +563,8 @@ const GhostParty = () => {
         <path
           d="M149.842 148.292L-18.0732 148.292"
           stroke="black"
-          stroke-width="1.85286"
-          stroke-miterlimit="10"
+          strokeWidth="1.85286"
+          strokeMiterlimit="10"
         />
         <path
           d="M754.404 94.112V63.0799L757.649 59.8349L777.528 83.6317L779.354 82.0933L757.817 56.2773L752 62.0703V94.112H754.404Z"

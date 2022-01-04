@@ -12,7 +12,7 @@ import BoxLinkHero from "../../components/BoxLinkHero";
 import LeadingLine from "../../components/LeadingLine";
 import PageSection from "../../components/PageSection";
 import TwitchEmbed from "../../components/TwitchEmbed";
-import Incentive from "../../components/Incentive";
+import Bounties from "../../components/Bounties";
 import GlitchTitle from "../../components/GlitchTitle";
 import DeadFish from "../../images/dead-fish.svg";
 import { getImage } from "gatsby-plugin-image";
@@ -108,37 +108,7 @@ const CommunityPage = ({ data }) => {
             </div>
           </div>
 
-          <div className="grey-box my-12 p-6 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
-            <h3 className="text-[2.125rem] leading-[0.85] lg:text-[3.375rem] mb-8 uppercase">
-              Incentives +<br /> Bounties
-            </h3>
-            <Incentive
-              title="Integrate Vega with CCXT trading exchange API library"
-              status="In progress"
-              type="Develop"
-              reward="2001 USDC"
-              difficulty="5"
-              link="https://www.google.com"
-            />
-            <Incentive
-              title="Integrate Vega with CCXT trading exchange API library. Integrate Vega with CCXT trading exchange API library"
-              status="In progress"
-              type="Fairground"
-              reward="2001 USDC"
-              difficulty="5"
-              link="https://www.google.com"
-            />
-            <Incentive
-              title="Integrate Vega with CCXT trading exchange API library"
-              status="In progress"
-              type="Fairground"
-              reward="2001 USDC"
-              difficulty="5"
-              link="https://www.google.com"
-            />
-
-            <ButtonLink text="Load more..." link="" />
-          </div>
+          <Bounties />
 
           <div className="grid gap-8 grid-cols-1 mt-16 md:grid-cols-2">
             <BoxLinkHero
@@ -207,8 +177,8 @@ const CommunityPage = ({ data }) => {
           </div>
         </PageSection>
         <PageSection>
-          <div class="grid grid-cols-12">
-            <div class="col-span-4">
+          <div className="grid grid-cols-12">
+            <div className="col-span-4">
               <h2 className="title-l md:title-xxxl lg:title-xxxxl">
                 Want
                 <br />

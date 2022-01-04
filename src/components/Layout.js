@@ -1,14 +1,18 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SiteBanner from "../components/SiteBanner";
 
 const Layout = (props) => {
   return (
-    <div>
-      <div className="flex flex-col min-h-screen dark:text-white dark:bg-black bg-white">
+    <div className="dark:text-white dark:bg-black bg-white">
+      <SiteBanner />
+      <div className="flex flex-col min-h-screen">
         <div className="flex-grow">
           <Header />
-          {props.children}
+          <div className="max-w-[1536px] mt-8 mx-auto 2xl:border border-vega-border-grey">
+            {props.children}
+          </div>
         </div>
         <Footer />
       </div>

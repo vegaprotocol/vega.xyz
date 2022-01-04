@@ -21,7 +21,7 @@ const Contributors = () => {
       <Container>
         <h1>Contributors</h1>
 
-        <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
+        <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
           {contributors.allContributors.nodes.map((contributor) => (
             <div>
               {contributor.username}

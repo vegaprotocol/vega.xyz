@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "gatsby-plugin-react-intl";
 import Navigation from "./Navigation";
 import Container from "../components/Container";
-import SiteBanner from "../components/SiteBanner";
 import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";
@@ -23,8 +22,7 @@ const Header = () => {
 
   return (
     <header className="relative z-30">
-      <SiteBanner />
-      <Container>
+      <div className="px-4 w-full md:px-6 lg:px-8">
         <div className="header flex items-center justify-between py-4 lg:pt-6">
           <Link to="/">
             <VegaLogo />
@@ -39,7 +37,7 @@ const Header = () => {
             <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
           </div>
         </div>
-      </Container>
+      </div>
     </header>
   );
 };
