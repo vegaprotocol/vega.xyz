@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby-plugin-react-intl";
 import Navigation from "./Navigation";
-import Container from "../components/Container";
 import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";

@@ -13,7 +13,7 @@ const BoxLink = ({ title, text, linkTitle, link, icon }) => {
             {text}
           </span>
           <div className="absolute right-0 top-0">
-            <img src={icon} />
+            <img src={icon} alt="" />
           </div>
         </div>
       </div>

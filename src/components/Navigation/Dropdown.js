@@ -22,6 +22,7 @@ const NavigationDropdown = ({ section }) => {
     <li className="relative">
       <div
         onClick={() => setIsOpen(!isOpen)}
+        onKeyDown={() => setIsOpen(!isOpen)}
         className="inline-block px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
         role="button"
         tabIndex={0}

@@ -24,7 +24,7 @@ const MobileMenu = () => {
         <ul className="max-w-[15rem] text-lg tracking-wide">
           {SiteNavigation.map((section, idx) =>
             section.links ? (
-              <li>
+              <li key={idx}>
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   className="text-[2.125rem] block py-4 uppercase"
@@ -75,7 +75,10 @@ const MobileMenu = () => {
               </li>
             ) : (
               <li>
-                <a href="" className="text-[2.125rem] block py-4 uppercase">
+                <a
+                  href={section.link}
+                  className="text-[2.125rem] block py-4 uppercase"
+                >
                   {intl.formatMessage({ id: section.text })}
                 </a>
               </li>

@@ -6,10 +6,13 @@ import ButtonLink from "../../components/ButtonLink";
 import Blob1 from "../../components/Blob1";
 import Bounties from "../../components/Bounties";
 import PageSection from "../../components/PageSection";
+import GlitchTitle from "../../components/GlitchTitle";
 import BoxLink from "../../components/BoxLink";
+import BoxLinkSimple from "../../components/BoxLinkSimple";
 import StarCrossed from "../../components/StarCrossed";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import BlogPosts from "../../components/BlogPosts";
 import Moshed from "../../video/moshed.mp4";
 import LadderIllustration from "../../components/Svg/LadderIllustration";
 
@@ -169,6 +172,72 @@ const DevelopPage = ({ data }) => {
           </div>
         </div>
       </PageSection>
+
+      <Container>
+        <PageSection>
+          <div className="mb-24">
+            <div className="flex items-end justify-between mb-8">
+              <h2 className="title-m max-w-[15rem] md:title-l md:max-w-[26rem]">
+                Featured tutorials
+              </h2>
+              <div className="hidden md:block">
+                <ButtonLink
+                  link="https://docs.vega.xyz/"
+                  text="Explore the docs"
+                />
+              </div>
+            </div>
+            <div className="grid gap-6 mb-6 md:grid-cols-2">
+              <div className="aspect-w-16 aspect-h-9">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/7ZqIER8KF9E"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="aspect-w-16 aspect-h-9">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/rzOxpWrnv64"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+            <div className="md:hidden">
+              <ButtonLink
+                link="https://docs.vega.xyz/"
+                text="Explore the docs"
+              />
+            </div>
+          </div>
+
+          <BlogPosts />
+        </PageSection>
+
+        <PageSection>
+          <GlitchTitle text="Where next?" color="red" />
+
+          <div className="max-w-[52.5rem] grid gap-6 mt-12 mx-auto md:grid-cols-3">
+            <BoxLinkSimple
+              text="Say hello on Discord"
+              link="https://vega.xyz/discord/"
+            />
+            <BoxLinkSimple
+              text="Explore the community"
+              link="https://community.vega.xyz/"
+            />
+            <BoxLinkSimple text="See the Roadmap" link="" />
+          </div>
+        </PageSection>
+      </Container>
     </Layout>
   );
 };

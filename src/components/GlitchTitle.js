@@ -1,9 +1,14 @@
-import { Link } from "gatsby";
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import TitleGlitchRed from "../images/title-glitch-red.png";
 import TitleGlitchPurple from "../images/title-glitch-purple.png";
-import TitleGlitchOrange from "../images/title-glitch-orange.png";
+// import TitleGlitchOrange from "../images/title-glitch-orange.png";
+
+const blink = keyframes`
+  to {
+    visibility: hidden;
+  }
+`;
 
 const Title = styled.h2`
   div::after {
@@ -17,6 +22,7 @@ const Title = styled.h2`
       props.color === "red" ? TitleGlitchRed : TitleGlitchPurple});
     background-size: cover;
     background-position: 50% 50%;
+    animation: ${blink} 1.5s steps(2, start) infinite;
   }
 `;
 

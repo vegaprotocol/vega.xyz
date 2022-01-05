@@ -1922,6 +1922,11 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
+"@tailwindcss/aspect-ratio@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/aspect-ratio/-/aspect-ratio-0.4.0.tgz#c635dd7331cbcc1b111cebdc2647dd3493ebdd3e"
+  integrity sha512-WJu0I4PpqNPuutpaA9zDUq2JXR+lorZ7PbLcKNLmb6GL9/HLfC7w3CRsMhJF4BbYd/lkY6CfXOvkYpuGnZfkpQ==
+
 "@tokenizer/token@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@tokenizer/token/-/token-0.3.0.tgz#fe98a93fe789247e998c75e74e9c7c63217aa276"
@@ -6089,6 +6094,14 @@ gatsby-source-filesystem@^4.2.0:
     progress "^2.0.3"
     valid-url "^1.0.9"
     xstate "^4.25.0"
+
+gatsby-source-medium@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-medium/-/gatsby-source-medium-4.4.0.tgz#1436335bdca3792bec3311deda8970b216b7cdb4"
+  integrity sha512-MhLkVCiWbcJjJU/G+UPMjGu0B+OioJAjeD0jcxypJ+T5v6P6oUObZxMrbCiFCgkf7ENzq/SBYggPcTvbo6gjoA==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    axios "^0.21.1"
 
 gatsby-telemetry@^3.2.0:
   version "3.2.0"

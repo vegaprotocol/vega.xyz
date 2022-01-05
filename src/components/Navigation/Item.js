@@ -1,6 +1,5 @@
 import React from "react";
 import { useIntl, Link } from "gatsby-plugin-react-intl";
-import LinkArrow from "../Svg/LinkArrow";
 
 const NavigationItem = ({ item }) => {
   const intl = useIntl();

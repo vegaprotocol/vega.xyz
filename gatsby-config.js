@@ -81,5 +81,11 @@ module.exports = {
         path: `${__dirname}/src/content/papers`,
       },
     },
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `vegaprotocol`,
+      },
+    },
   ],
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonLink from "./ButtonLink";
+import SquareBullet from "./Svg/SquareBullet";
 
 const Incentive = ({ title, type, status, reward, difficulty, link }) => {
   return (
@@ -11,17 +12,7 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
         <div className="col-span-12 mb-3 md:col-span-6">
           <div className="text-[1.375rem] leading-[1.3] mb-1 pr-6">{title}</div>
           <span className="text-[0.9375rem] text-vega-mint">
-            <svg
-              width="10"
-              height="10"
-              viewBox="0 0 10 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="relative -top-px inline-block mr-2"
-            >
-              <rect width="10" height="10" fill="currentColor" />
-            </svg>
-            In Progress
+            <SquareBullet size="10" /> In Progress
           </span>
         </div>
         <div className="col-span-4 md:col-span-2">

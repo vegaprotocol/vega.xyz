@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import { graphql, useStaticQuery } from "gatsby";
@@ -25,7 +25,12 @@ const Contributors = () => {
           {contributors.allContributors.nodes.map((contributor) => (
             <div>
               {contributor.username}
-              <img src={contributor.avatar} width="50" height="50" />
+              <img
+                src={contributor.avatar}
+                width="50"
+                height="50"
+                alt={contributor.username}
+              />
               {contributor.total_contributions}
             </div>
           ))}
