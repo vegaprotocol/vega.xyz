@@ -3,7 +3,7 @@ import SquareBullet from "./Svg/SquareBullet";
 
 const BlogPost = ({ post }) => {
   return (
-    <div className="flex flex-col justify-between pb-3 border-b border-white">
+    <div className="flex flex-col justify-between pb-3 border-b border-current">
       <div>
         <a
           href={`https://blog.vega.xyz/${post.node.uniqueSlug}`}
