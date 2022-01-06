@@ -11,7 +11,7 @@ const NavigationItem = ({ item }) => {
           target="_blank"
           rel="noreferrer"
           className="inline-block px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
-          activeClassName="underline underline-offset-8"
+          activeClassName="underline underline-offset-8 decoration-2"
         >
           {intl.formatMessage({ id: item.text })}
         </a>
@@ -20,7 +20,7 @@ const NavigationItem = ({ item }) => {
           <Link
             to={item.link}
             className="inline-block px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
-            activeClassName="underline underline-offset-8"
+            activeClassName="underline underline-offset-8 decoration-2"
           >
             {intl.formatMessage({ id: item.text })}
           </Link>
