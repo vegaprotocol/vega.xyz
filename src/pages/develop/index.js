@@ -4,7 +4,7 @@ import Container from "../../components/Container";
 import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import Blob1 from "../../components/Blob1";
-import Bounties from "../../components/Bounties";
+import Incentives from "../../components/Incentives";
 import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
 import BoxLink from "../../components/BoxLink";
@@ -63,7 +63,7 @@ const DevelopPage = ({ data }) => {
       </Container>
 
       <Container>
-        <Bounties />
+        <Incentives />
       </Container>
 
       <Container>

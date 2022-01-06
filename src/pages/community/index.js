@@ -12,7 +12,7 @@ import BoxLinkHero from "../../components/BoxLinkHero";
 import LeadingLine from "../../components/LeadingLine";
 import PageSection from "../../components/PageSection";
 import TwitchEmbed from "../../components/TwitchEmbed";
-import Bounties from "../../components/Bounties";
+import Incentives from "../../components/Incentives";
 import GlitchTitle from "../../components/GlitchTitle";
 import DeadFish from "../../images/dead-fish.svg";
 import { getImage } from "gatsby-plugin-image";
@@ -108,7 +108,7 @@ const CommunityPage = ({ data }) => {
             </div>
           </div>
 
-          <Bounties />
+          <Incentives />
 
           <div className="grid gap-8 grid-cols-1 mt-16 md:grid-cols-2">
             <BoxLinkHero
