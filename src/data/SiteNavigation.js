@@ -10,7 +10,7 @@ export const SiteNavigation = [
       {
         text: "navigation-papers",
         description: "navigation-papers-description",
-        to: "/learn/papers/",
+        to: "/papers/",
       },
       {
         text: "navigation-blog",

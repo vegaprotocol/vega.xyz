@@ -10,7 +10,7 @@ const Layout = (props) => {
       <div className="flex flex-col min-h-screen">
         <div className="grow-0">
           <Header />
-          <div className="max-w-[1536px] mx-auto 2xl:border border-vega-border-grey">
+          <div className="max-w-[1536px] mx-auto 2xl:border border-vega-border-grey 2xl:pb-32">
             {props.children}
           </div>
         </div>

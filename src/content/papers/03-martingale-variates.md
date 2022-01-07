@@ -1,7 +1,8 @@
 ---
-title: "Unbiased deep solvers for parametric PDEs"
-description: "This research is co-authored by Dr David Siska and provides several algorithms for how to train appropriate neural networks that can be used to price derivatives and tests to validate them."
+title: Unbiased deep solvers for parametric PDEs
+description: This research is co-authored by Dr David Siska and provides several algorithms for how to train appropriate neural networks that can be used to price derivatives and tests to validate them.
+links:
+  - title: View on Arxiv
+    link: https://arxiv.org/abs/1810.05094
+position: 3
 ---
-
-<p>This research is co-authored by <a href="https://twitter.com/dsiska" target="_blank">Dr David Siska</a> and provides several algorithms for how to train appropriate neural networks that can be used to price derivatives and tests to validate them.</p>
-<p><a href="https://arxiv.org/abs/1810.05094" target="_blank">View on Arxiv</a></p>
