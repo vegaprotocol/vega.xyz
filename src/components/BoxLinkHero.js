@@ -10,10 +10,10 @@ const BoxLinkHero = ({ title, text, linkTitle, link, image }) => {
         <div className="col-span-8">
           <div className="flex flex-col justify-between p-6 h-full">
             <div className="mb-6">
-              <div className="title-m font-glitched mb-1">{title}</div>
-              <span className="text-[0.9375rem] leading-[1.3] text-vega-mid-grey">
+              <div className="title-m font-glitched mb-2">{title}</div>
+              <div className="text-[0.9375rem] md:copy-xs leading-[1.3] text-vega-mid-grey">
                 {text}
-              </span>
+              </div>
             </div>
             <div>
               <ButtonLink link={link} text={linkTitle} />

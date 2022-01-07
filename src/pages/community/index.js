@@ -68,11 +68,11 @@ const CommunityPage = ({ data }) => {
               <div className="max-w-[14.375rem] md:max-w-[23.4375rem] lg:max-w-[36.25rem] mx-auto">
                 <GlitchTitle text="Contribute to Vega" color="red" level="2" />
               </div>
-              <LeadingLine text="There are a number of ways to contribute..." />
+              <LeadingLine text="Get involved in the future of DeFi. And you could even get rewarded for it." />
             </div>
-            <div className="grid gap-x-5 gap-y-14 grid-cols-1 mb-24 mt-12 md:grid-cols-2 xl:grid-cols-2">
+            <div className="grid gap-x-12 gap-y-14 grid-cols-1 mb-24 mt-12 md:grid-cols-2 xl:grid-cols-2">
               <BoxLink
-                title="Play on Fairground"
+                title={`Play on Fairground`.toUpperCase()}
                 text="Help us find bugs and harden Vega's Testnet"
                 linkTitle="Fairground"
                 link="https://fairground.wtf"
@@ -80,28 +80,28 @@ const CommunityPage = ({ data }) => {
               />
 
               <BoxLink
-                title="Develop on our apps"
-                text="Contribute to source code and build things with our APIs"
+                title={`Develop on our apps`.toUpperCase()}
+                text="Contribute to the source code, and get building with our APIs."
                 linkTitle="Learn more"
                 link="/develop"
               />
 
               <BoxLink
-                title="Documentation"
-                text="Share feedback, make suggestions and translations."
-                linkTitle="Learn more"
+                title={`Refine documentation`.toUpperCase()}
+                text="Share feedback, make suggestions and help translate."
+                linkTitle="Discord"
                 link="https://docs.vega.xyz/"
               />
 
               <BoxLink
-                title="Contribute content"
+                title={`Write content`.toUpperCase()}
                 text="Create articles, blog posts and contribute to research papers"
                 linkTitle="Discord"
                 link="https://vega.xyz/discord"
               />
               <BoxLink
-                title="Contribute art"
-                text="https://vega.xyz/discord"
+                title={`Make art`.toUpperCase()}
+                text="Create Vega inspired art using our brand assets and help visualise the DeFi and Web 3 revolution."
                 linkTitle="Discord"
                 link="https://vega.xyz/discord"
               />
@@ -121,7 +121,7 @@ const CommunityPage = ({ data }) => {
 
             <BoxLinkHero
               title="Become an ambassador"
-              text="We’re looking for Vega’s top-tier community members to work directly with the team to share what we’re building with those that need to hear about it."
+              text="We're inviting Vega's leading community members to share what we're building with those that need to hear about it - and get rewarded for it."
               linkTitle="Learn more"
               link="https://fairground.wtf"
               image={builderImage}
@@ -130,11 +130,13 @@ const CommunityPage = ({ data }) => {
         </PageSection>
         <PageSection>
           <div id="calendar">
-            <GlitchTitle
-              text="Upcoming Events + Meetups"
-              color="purple"
-              level="2"
-            />
+            <div className="text-center max-w-[50rem] mx-auto">
+              <GlitchTitle
+                text="Upcoming Events + Meetups"
+                color="purple"
+                level="2"
+              />
+            </div>
             <div className="text-[#4f4f4f] text-[2.125rem] mt-16 p-12 text-center bg-vega-off-black">
               CALENDAR FUNCTIONALITY
             </div>
@@ -156,9 +158,11 @@ const CommunityPage = ({ data }) => {
         </PageSection>
         <PageSection>
           <div id="channels">
-            <GlitchTitle text="Our Channels" color="red" level="2" />
+            <div className="text-center">
+              <GlitchTitle text="Our Channels" color="red" level="2" />
+            </div>
 
-            <div className="max-w-[50rem] grid gap-x-6 gap-y-6 grid-cols-2 mt-12 mx-auto md:grid-cols-3 lg:gap-x-12">
+            <div className="max-w-[50rem] grid gap-4 grid-cols-2 mt-12 mx-auto md:grid-cols-3">
               <BoxLinkSimple text="Discord" link="https://vega.xyz/discord" />
               <BoxLinkSimple
                 text="Telegram"
@@ -188,7 +192,7 @@ const CommunityPage = ({ data }) => {
                 <br />
                 Swag?
               </h2>
-              <div className="my-6">Of course you do!</div>
+              <div className="my-6">Get your hands on it here</div>
               <ButtonLink
                 link="https://www.google.com"
                 text="Ask us on Discord"

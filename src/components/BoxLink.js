@@ -21,7 +21,9 @@ const BoxLink = ({
             {locked && <Padlock />}
             {title}
           </div>
-          <div className="leading-[1.3] text-vega-mid-grey mb-3">{text}</div>
+          <div className="leading-[1.3] text-vega-mid-grey mb-3 max-w-[23.75rem]">
+            {text}
+          </div>
           {inlineLinkTitle && (
             <div>
               <UppercaseLink text={inlineLinkTitle} link={inlineLink} />
@@ -33,7 +35,7 @@ const BoxLink = ({
         </div>
       </div>
       <div className="bottom-[-1.5625rem] relative -left-px">
-        <ButtonLink link={link} text={linkTitle} />
+        <ButtonLink link={link} text={linkTitle} minwidth={true} />
       </div>
     </div>
   );
