@@ -10,7 +10,7 @@ const blink = keyframes`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled.div`
   div::after {
     position: relative;
     margin-bottom: -0.1em;
@@ -27,12 +27,27 @@ const Title = styled.h2`
 `;
 
 const GlitchTitle = (props) => {
+  const level = parseInt(props.level);
+
+  const Tag = `h${
+    props.level && [1, 2, 3, 4, 5, 6].includes(props.level) ? props.level : "1"
+  }`;
+
+  const commonStyles = "mb-4 mx-auto";
+  let styles = "";
+
+  if (level === 1) {
+    styles = `${commonStyles} title-l md:title-xxl lg:title-xxxl`;
+  } else {
+    styles = `${commonStyles} title-m md:title-l lg:title-xxl`;
+  }
+
   return (
-    <Title {...props}>
-      <div className="title-m md:title-l lg:title-xxl mb-4 mx-auto text-center">
-        {props.text}
-      </div>
-    </Title>
+    <Tag>
+      <Title {...props}>
+        <div className={styles}>{props.text}</div>
+      </Title>
+    </Tag>
   );
 };
 

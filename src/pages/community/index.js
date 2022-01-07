@@ -66,7 +66,7 @@ const CommunityPage = ({ data }) => {
           <div id="contributions">
             <div className="text-center">
               <div className="max-w-[14.375rem] md:max-w-[23.4375rem] lg:max-w-[36.25rem] mx-auto">
-                <GlitchTitle text="Contribute to Vega" color="red" />
+                <GlitchTitle text="Contribute to Vega" color="red" level="2" />
               </div>
               <LeadingLine text="There are a number of ways to contribute..." />
             </div>
@@ -130,7 +130,11 @@ const CommunityPage = ({ data }) => {
         </PageSection>
         <PageSection>
           <div id="calendar">
-            <GlitchTitle text="Upcoming Events + Meetups" color="purple" />
+            <GlitchTitle
+              text="Upcoming Events + Meetups"
+              color="purple"
+              level="2"
+            />
             <div className="text-[#4f4f4f] text-[2.125rem] mt-16 p-12 text-center bg-vega-off-black">
               CALENDAR FUNCTIONALITY
             </div>
@@ -152,7 +156,7 @@ const CommunityPage = ({ data }) => {
         </PageSection>
         <PageSection>
           <div id="channels">
-            <GlitchTitle text="Our Channels" color="red" />
+            <GlitchTitle text="Our Channels" color="red" level="2" />
 
             <div className="max-w-[50rem] grid gap-x-6 gap-y-6 grid-cols-2 mt-12 mx-auto md:grid-cols-3 lg:gap-x-12">
               <BoxLinkSimple text="Discord" link="https://vega.xyz/discord" />

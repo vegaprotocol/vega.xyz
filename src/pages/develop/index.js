@@ -223,7 +223,9 @@ const DevelopPage = ({ data }) => {
         </PageSection>
 
         <PageSection>
-          <GlitchTitle text="Where next?" color="red" />
+          <div className="text-center">
+            <GlitchTitle text="Where next?" color="red" level="2" />
+          </div>
 
           <div className="max-w-[52.5rem] grid gap-6 mt-12 mx-auto md:grid-cols-3">
             <BoxLinkSimple
