@@ -82,6 +82,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `talks`,
+        path: `${__dirname}/src/content/talks`,
+      },
+    },
+    {
       resolve: `gatsby-source-medium`,
       options: {
         username: `vegaprotocol`,

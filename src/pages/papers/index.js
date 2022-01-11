@@ -60,7 +60,7 @@ const PapersPage = () => {
             <div key={idx}>
               <div className="grid grid-cols-12">
                 <div className="col-span-12 md:col-span-4">
-                  <div className="title-m md:title-s lg:title-m md:pr-12 mb-12 md:mb-0">
+                  <div className="title-m md:title-s xl:title-m md:pr-12 mb-12 md:mb-0 md:sticky md:top-6 md:pb-16">
                     {intl.formatMessage({ id: group.fieldValue })}
                   </div>
                 </div>

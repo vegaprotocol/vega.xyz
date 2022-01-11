@@ -46,13 +46,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const slug = edge.node.fields.slug;
     const template = edge.node.collection;
 
-    createPage({
-      component: path.resolve(`./src/templates/${template}.js`),
-      path: `${edge.node.fields.slug}`,
-      context: {
-        slug: edge.node.fields.slug,
-      },
-    });
+    if (["jobs"].includes(template)) {
+      createPage({
+        component: path.resolve(`./src/templates/${template}.js`),
+        path: `${edge.node.fields.slug}`,
+        context: {
+          slug: edge.node.fields.slug,
+        },
+      });
+    }
   });
 };
 

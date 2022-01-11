@@ -38,8 +38,10 @@ const GlitchTitle = (props) => {
 
   if (level === 1) {
     styles = `${commonStyles} title-l md:title-xxl lg:title-xxxl`;
-  } else {
+  } else if (level === 2) {
     styles = `${commonStyles} title-m md:title-l lg:title-xxl`;
+  } else {
+    styles = `${commonStyles} title-m md:title-l`;
   }
 
   return (

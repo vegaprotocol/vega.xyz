@@ -15,25 +15,25 @@ export const SiteNavigation = [
       {
         text: "navigation-blog",
         description: "navigation-blog-description",
-        to: "https://blog.vega.xzy",
+        to: "https://blog.vega.xzy/",
       },
       {
         text: "navigation-talks",
         description: "navigation-talks-description",
-        to: "/learn/talks",
+        to: "/talks/",
       },
     ],
   },
   {
     text: "navigation-develop",
-    link: "/develop",
+    link: "/develop/",
   },
   {
     text: "navigation-use",
-    link: "/use",
+    link: "/use/",
   },
   {
     text: "navigation-join-community",
-    link: "/community",
+    link: "/community/",
   },
 ];
