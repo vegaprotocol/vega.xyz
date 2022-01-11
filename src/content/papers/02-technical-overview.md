@@ -5,4 +5,5 @@ links:
   - title: Download PDF
     link: /assets/vega-technical-overview.pdf
 position: 2
+category: 1-how-it-works
 ---

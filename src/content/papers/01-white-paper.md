@@ -5,4 +5,5 @@ links:
   - title: Download PDF
     link: /papers/vega-protocol-whitepaper.pdf
 position: 1
+category: 1-how-it-works
 ---

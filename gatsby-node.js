@@ -8,11 +8,18 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === "MarkdownRemark") {
     const slug = createFilePath({ node, getNode, basePath: `content` });
     node.collection = getNode(node.parent).sourceInstanceName;
+    const category = node.frontmatter.category;
 
     createNodeField({
       node,
       name: `slug`,
       value: slug,
+    });
+
+    createNodeField({
+      node,
+      name: `category`,
+      value: category,
     });
   }
 };

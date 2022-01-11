@@ -5,7 +5,7 @@ import LinkArrow from "./Svg/LinkArrow";
 const UppercaseLink = ({ text, link }) => {
   const isExternal = link.startsWith("http");
   const linkClass =
-    "text-[0.9375rem] uppercase underline underline-offset-8 decoration-1";
+    "text-[0.9375rem] uppercase underline underline-offset-4 decoration-1 hover:no-underline";
 
   if (isExternal) {
     return (
