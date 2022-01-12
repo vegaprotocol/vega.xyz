@@ -22,8 +22,8 @@ const EthDenver = () => {
           <video
             autoPlay
             muted
-            loop
-            playsinline
+            loop={true}
+            playsInline
             className="absolute left-0 top-0 w-full h-full object-cover -z-10"
           >
             <source src={Moshed} type="video/mp4" />
