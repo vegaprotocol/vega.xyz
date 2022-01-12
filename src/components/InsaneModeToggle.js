@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Input = styled.input`
   &:checked ~ .dot {
-    transform: translateX(100%);
+    transform: translateX(-100%);
     background-color: #000;
   }
 `;
@@ -31,7 +31,7 @@ const InsaneModeToggle = ({ insaneMode, toggleInsaneMode }) => {
             }`}
           ></div>
           <div
-            className={`dot absolute left-1 top-1  w-6 h-6 bg-white rounded-full transition`}
+            className={`dot absolute right-1 top-1 w-6 h-6 bg-white rounded-full transition`}
           ></div>
         </div>
       </label>

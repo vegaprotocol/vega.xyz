@@ -23,6 +23,7 @@ const EthDenver = () => {
             autoPlay
             muted
             loop
+            playsinline
             className="absolute left-0 top-0 w-full h-full object-cover -z-10"
           >
             <source src={Moshed} type="video/mp4" />
@@ -38,7 +39,10 @@ const EthDenver = () => {
         </header>
 
         <div className="max-w-[68rem] mx-auto px-4 md:px-6 lg:px-8">
-          <EthDenverTitle className="relative inline-block w-full h-auto mb-3 -mt-5" />
+          <EthDenverTitle
+            insaneMode={insaneMode}
+            className="relative inline-block w-full h-auto mb-3 -mt-5"
+          />
 
           <div className="md:flex md:justify-between -mt-[5%]">
             <div className="title-m md:title-l lg:text-[4.25rem] uppercase mb-4 md:mb-0">
