@@ -8,7 +8,7 @@ const Layout = (props) => {
     <div className="dark:text-white dark:bg-black bg-white">
       <SiteBanner />
       <div className="flex flex-col min-h-screen">
-        <div className="grow-0">
+        <div className="grow">
           <Header />
           <div className="max-w-[1536px] mx-auto 2xl:border border-vega-border-grey 2xl:pb-32">
             {props.children}
