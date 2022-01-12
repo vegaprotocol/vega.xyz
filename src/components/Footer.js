@@ -6,7 +6,6 @@ import IconDiscord from "../components/Svg/IconDiscord";
 import IconGithub from "../components/Svg/IconGithub";
 import IconTelegram from "../components/Svg/IconTelegram";
 import IconTwitter from "../components/Svg/IconTwitter";
-import VegaIcon from "../components/Svg/VegaIcon";
 
 const Footer = () => {
   return (
@@ -159,16 +158,32 @@ const Footer = () => {
                 <SquareBullet size="11" />
                 Connect
               </div>
-              <a href="https://twitter.com/vegaprotocol" target="_blank">
+              <a
+                href="https://twitter.com/vegaprotocol"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <IconTwitter />
               </a>
-              <a href="https://vega.xyz/discord" target="_blank">
+              <a
+                href="https://vega.xyz/discord"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <IconDiscord />
               </a>
-              <a href="https://github.com/vegaprotocol" target="_blank">
+              <a
+                href="https://github.com/vegaprotocol"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <IconGithub />
               </a>
-              <a href="https://t.me/vegacommunity/" target="_blank">
+              <a
+                href="https://t.me/vegacommunity/"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <IconTelegram />
               </a>
             </div>
