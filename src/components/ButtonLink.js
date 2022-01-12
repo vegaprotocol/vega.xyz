@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import LinkArrow from "./Svg/LinkArrow";
 
-const ButtonLink = ({ text, link, color, minwidth }) => {
+const ButtonLink = ({ text, link, color, minwidth, className }) => {
   const isExternal = link.startsWith("http");
   const linkClass = `group button-link relative inline-block`;
   let backgroundClass;
@@ -22,7 +22,7 @@ const ButtonLink = ({ text, link, color, minwidth }) => {
     borderClass = "border-black dark:border-white";
   }
 
-  let buttonClass = `leading-1 text-[0.9375rem] tracking-[0.01rem] transition-[top] relative z-10 group-hover:-top-1.5 top-0 inline-block px-4 py-3 ${backgroundClass} border ${borderClass} uppercase ${textClass}`;
+  let buttonClass = `leading-1 text-[0.9375rem] tracking-[0.01rem] transition-[top] relative z-10 group-hover:-top-1.5 top-0 inline-block px-4 py-3 ${backgroundClass} border ${borderClass} uppercase ${textClass} ${className}`;
 
   if (minwidth) {
     buttonClass += ` flex items-center justify-between min-w-[16.25rem]`;
