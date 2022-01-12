@@ -25,6 +25,7 @@ const Wave = () => {
         autoPlay
         muted
         loop
+        playsInline
         className="absolute left-0 top-0 w-full h-full object-cover"
       >
         <source src={Moshed} type="video/mp4" />
