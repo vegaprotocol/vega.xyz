@@ -18,16 +18,18 @@ const EthDenver = () => {
   return (
     <LayoutEthDenver>
       <div class="color-white">
-        {insaneMode ? (
-          <video
-            autoPlay
-            muted
-            loop={true}
-            playsInline
-            className="absolute left-0 top-0 w-full h-full object-cover -z-10"
-          >
-            <source src={Moshed} type="video/mp4" />
-          </video>
+        <video
+          autoPlay
+          muted
+          loop={true}
+          playsInline
+          className="absolute left-0 top-0 w-full h-full object-cover -z-20"
+        >
+          <source src={Moshed} type="video/mp4" />
+        </video>
+
+        {!insaneMode ? (
+          <div className="bg-black absolute top-0 left-0 right-0 h-full -z-10"></div>
         ) : null}
 
         <header className="py-6 px-4 w-full md:px-6 lg:px-8 flex justify-between">
