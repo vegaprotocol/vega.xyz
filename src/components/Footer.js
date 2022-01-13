@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="mt-12 pt-12">
       <div className="border-y border-current pt-8 pb-12">
         <Container>
-          <div class="grid grid-cols-12 gap-y-8 gap-x-6">
+          <div className="grid grid-cols-12 gap-y-8 gap-x-6">
             <div className="col-span-6 md:col-span-6 lg:col-span-3">
               <div className="uppercase text-[0.9375rem] mb-3">
                 <SquareBullet size="11" />

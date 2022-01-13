@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Input = styled.input`
@@ -10,7 +10,7 @@ const Input = styled.input`
 
 const InsaneModeToggle = ({ insaneMode, toggleInsaneMode }) => {
   return (
-    <div class="flex items-center justify-center">
+    <div className="flex items-center justify-center">
       <label
         for="insaneModeToggle"
         className="flex items-center cursor-pointer"
