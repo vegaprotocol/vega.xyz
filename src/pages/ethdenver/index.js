@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import LayoutEthDenver from "../../components/LayoutEthDenver";
-import Container from "../../components/Container";
 import Moshed from "../../video/moshed.mp4";
 import EthDenverTitle from "../../components/Svg/EthDenverTitle";
 import ButtonLinkSimple from "../../components/ButtonLinkSimple";
