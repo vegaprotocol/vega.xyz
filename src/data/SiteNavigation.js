@@ -15,7 +15,7 @@ export const SiteNavigation = [
       {
         text: "navigation-blog",
         description: "navigation-blog-description",
-        to: "https://blog.vega.xzy/",
+        to: "https://blog.vega.xyz/",
       },
       {
         text: "navigation-talks",
