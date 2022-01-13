@@ -39,9 +39,9 @@ const CommunityPage = ({ data }) => {
           </h2>
 
           <div className="max-w-[48rem]">
-            <LeadingLine
-              text={intl.formatMessage({ id: "page-community-hero-text" })}
-            />
+            <LeadingLine>
+              {intl.formatMessage({ id: "page-community-hero-text" })}
+            </LeadingLine>
 
             <div className="inline-block mb-4 mr-4">
               <ButtonLink
@@ -66,7 +66,9 @@ const CommunityPage = ({ data }) => {
           <div id="contributions">
             <div className="text-center">
               <div className="max-w-[14.375rem] md:max-w-[23.4375rem] lg:max-w-[36.25rem] mx-auto">
-                <GlitchTitle text="Contribute to Vega" color="red" level="2" />
+                <GlitchTitle color="red" level="2">
+                  Contribute to Vega
+                </GlitchTitle>
               </div>
               <LeadingLine text="Get involved in the future of DeFi. And you could even get rewarded for it." />
             </div>
@@ -131,11 +133,9 @@ const CommunityPage = ({ data }) => {
         <PageSection>
           <div id="calendar">
             <div className="text-center max-w-[50rem] mx-auto">
-              <GlitchTitle
-                text="Upcoming Events + Meetups"
-                color="purple"
-                level="2"
-              />
+              <GlitchTitle color="purple" level="2">
+                Upcoming Events + Meetups
+              </GlitchTitle>
             </div>
             <div className="text-[#4f4f4f] text-[2.125rem] mt-16 p-12 text-center bg-vega-off-black">
               CALENDAR FUNCTIONALITY
@@ -159,7 +159,9 @@ const CommunityPage = ({ data }) => {
         <PageSection>
           <div id="channels">
             <div className="text-center">
-              <GlitchTitle text="Our Channels" color="red" level="2" />
+              <GlitchTitle color="red" level="2">
+                Our Channels
+              </GlitchTitle>
             </div>
 
             <div className="max-w-[50rem] grid gap-4 grid-cols-2 mt-12 mx-auto md:grid-cols-3">

@@ -14,7 +14,7 @@ const UsePage = () => {
         <Container>
           <div className="mb-12 md:mb-24 lg:pt-16">
             <div className="max-w-[28rem] lg:max-w-[41.875rem]">
-              <GlitchTitle text="Use the network" level="1" />
+              <GlitchTitle level="1">Use the network</GlitchTitle>
             </div>
           </div>
 

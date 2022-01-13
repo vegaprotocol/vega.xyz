@@ -44,10 +44,12 @@ const GlitchTitle = (props) => {
     styles = `${commonStyles} title-m md:title-l`;
   }
 
+  styles = styles + (props.className ? ` ${props.className}` : null);
+
   return (
     <Tag>
       <Title {...props}>
-        <div className={styles}>{props.text}</div>
+        <div className={styles}>{props.children}</div>
       </Title>
     </Tag>
   );

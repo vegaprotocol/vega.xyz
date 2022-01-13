@@ -46,7 +46,7 @@ const PapersPage = () => {
             <div className="mb-3">
               <BoxTitle text="Learn " />
             </div>
-            <GlitchTitle text="Talks" level="1" />
+            <GlitchTitle level="1">Talks</GlitchTitle>
           </div>
         </div>
         <div className="grid grid-cols-12">

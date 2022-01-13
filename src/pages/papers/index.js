@@ -53,7 +53,7 @@ const PapersPage = () => {
             <div className="mb-3">
               <BoxTitle text="Learn " />
             </div>
-            <GlitchTitle text="Papers" level="1" />
+            <GlitchTitle level="1">Papers</GlitchTitle>
           </div>
 
           {data.allMarkdownRemark.group.map((group, idx) => (
