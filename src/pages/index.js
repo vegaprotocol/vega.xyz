@@ -4,6 +4,7 @@ import Container from "../components/Container";
 //import ScrambleText from "../components/ScrambleText";
 import { useIntl } from "gatsby-plugin-react-intl";
 import Seo from "../components/Seo";
+import Ticker from "../components/Ticker";
 import GlitchTitle from "../components/GlitchTitle";
 import LeadingLine from "../components/LeadingLine";
 import ButtonLink from "../components/ButtonLink";
@@ -38,6 +39,13 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+        </Container>
+
+        <div className="mt-24">
+          <Ticker />
+        </div>
+
+        <Container>
           <PageSection>
             <div className="grid grid-cols-12">
               <div className="col-span-8">

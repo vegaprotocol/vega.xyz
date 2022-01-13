@@ -14,7 +14,7 @@ const TextLink = (props) => {
       >
         {props.children}
         {props.to.startsWith("http") && (
-          <span className="inline-block ml-2">
+          <span className="inline-block ml-2 align-middle">
             <LinkArrow />
           </span>
         )}
