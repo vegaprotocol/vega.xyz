@@ -69,10 +69,9 @@ const PapersPage = () => {
         <PageSection>
           <div className="mx-auto max-w-[44rem] text-center">
             <div className="mb-12">
-              <GlitchTitle
-                text="Have an idea for an event or talk you'd like us to attend?"
-                level="3"
-              />
+              <GlitchTitle level="3">
+                Have an idea for an event or talk you'd like us to attend?
+              </GlitchTitle>
             </div>
             <ButtonLink
               text="DM us on Twitter"
