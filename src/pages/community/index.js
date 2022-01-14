@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
@@ -22,6 +22,12 @@ const CommunityPage = ({ data }) => {
   const intl = useIntl();
   const ambassadorImage = getImage(data.ambassadorImage);
   const builderImage = getImage(data.builderImage);
+
+  const [hostname, setHostname] = useState(null);
+
+  useEffect(() => {
+    setHostname(window.location.hostname);
+  });
 
   return (
     <Layout>
@@ -154,9 +160,11 @@ const CommunityPage = ({ data }) => {
                 </h2>
               </div>
               <div className="col-span-9">
-                <TwitchEmbed
-                  iframeUrl={`https://player.twitch.tv/?video=1262390878&autoplay=false&parent=${window.location.hostname}`}
-                ></TwitchEmbed>
+                {hostname ? (
+                  <TwitchEmbed
+                    iframeUrl={`https://player.twitch.tv/?video=1262390878&autoplay=false&parent=${hostname}`}
+                  ></TwitchEmbed>
+                ) : null}
               </div>
             </div>
           </div>
