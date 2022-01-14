@@ -14,7 +14,31 @@ module.exports = {
         "vega-mint": "#00F780",
         "vega-pink": "#FF077F",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            p: {
+              color: "#828282",
+              lineHeight: "1.4",
+            },
+            li: {
+              color: "#828282",
+              lineHeight: "1.4",
+            },
+            h2: {
+              textTransform: "uppercase",
+              borderTop: "solid 1px currentColor",
+              paddingTop: "0.2rem",
+              marginTop: "2rem",
+              marginBottom: "0.75rem",
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
+  ],
 };
