@@ -154,7 +154,9 @@ const CommunityPage = ({ data }) => {
                 </h2>
               </div>
               <div className="col-span-9">
-                <TwitchEmbed iframeUrl="https://player.twitch.tv/?video=1228724466&parent=localhost&autoplay=false"></TwitchEmbed>
+                <TwitchEmbed
+                  iframeUrl={`https://player.twitch.tv/?video=1262390878&autoplay=false&parent=${window.location.hostname}`}
+                ></TwitchEmbed>
               </div>
             </div>
           </div>
