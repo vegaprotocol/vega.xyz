@@ -1,26 +1,12 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
-import ButtonLink from "../../components/ButtonLink";
 import { graphql, useStaticQuery } from "gatsby";
 import BoxTitle from "../../components/BoxTitle";
 import Planets from "../../components/Svg/Planets";
 import Seo from "../../components/Seo";
-import styled from "styled-components";
-
-const Markdown = styled.div`
-  p {
-    margin-bottom: 1rem;
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-`;
+import CareerItem from "../../components/CareerItem";
+import LeadingLine from "../../components/LeadingLine";
 
 const CareersPage = () => {
   const data = useStaticQuery(graphql`
@@ -80,55 +66,25 @@ const CareersPage = () => {
           </div>
         </div>
 
-        <div className="grey-box my-12 p-8 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
-          <h3 className="text-[2.125rem] leading-[0.85] lg:text-[3.375rem] mb-8 uppercase">
-            Open Jobs
-          </h3>
-          <ol className="border-t border-current">
-            {data.allMarkdownRemark.edges.map((edge, idx) => {
-              return (
-                <li key={idx}>
-                  <div className="py-3 border-b border-current">
-                    <div className="pb-8">
-                      <div className="copy-s !mb-1">
-                        {edge.node.frontmatter.title}
-                      </div>
-                      <div className="grid grid-cols-12 gap-12">
-                        <div className="col-span-6">
-                          <Markdown className="text-vega-mid-grey mb-4">
-                            {edge.node.frontmatter.description}
-                          </Markdown>
-                          <ButtonLink
-                            text="View full spec"
-                            link={`${edge.node.fields.slug}`}
-                          />
-                        </div>
-                        <div className="col-span-2 text-[0.9375rem]">
-                          <div className="text-vega-mid-grey uppercase tracking-[0.01rem]">
-                            Start Date:
-                          </div>
-                          {edge.node.frontmatter.start_date}
-                        </div>
-                        <div className="col-span-2 text-[0.9375rem]">
-                          <div className="text-vega-mid-grey uppercase tracking-[0.01rem]">
-                            Location:
-                          </div>
-                          {edge.node.frontmatter.location}
-                        </div>
-                        <div className="col-span-2 text-[0.9375rem]">
-                          <div className="text-vega-mid-grey uppercase tracking-[0.01rem]">
-                            Type:
-                          </div>
-                          {edge.node.frontmatter.contract_type}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
-        </div>
+        {data.allMarkdownRemark.edges.length > 0 ? (
+          <div className="grey-box my-12 p-8 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
+            <h3 className="text-[2.125rem] leading-[0.85] lg:text-[3.375rem] mb-6 uppercase">
+              Open Jobs{" "}
+              <span className="text-vega-mid-grey">
+                ({data.allMarkdownRemark.edges.length})
+              </span>
+            </h3>
+            <ol className="border-t border-current">
+              {data.allMarkdownRemark.edges.map((edge, idx) => {
+                return <CareerItem key={idx} career={edge.node} />;
+              })}
+            </ol>
+          </div>
+        ) : (
+          <LeadingLine className="text-white">
+            We don't currently have any open job roles.
+          </LeadingLine>
+        )}
       </Container>
     </Layout>
   );
