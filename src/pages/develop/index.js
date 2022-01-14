@@ -7,6 +7,7 @@ import Blob1 from "../../components/Blob1";
 import Incentives from "../../components/Incentives";
 import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
+import LeadingLine from "../../components/LeadingLine";
 import BoxLink from "../../components/BoxLink";
 import BoxLinkSimple from "../../components/BoxLinkSimple";
 import StarCrossed from "../../components/StarCrossed";
@@ -42,15 +43,18 @@ const DevelopPage = ({ data }) => {
               <h1>
                 <BoxTitle text="Develop" />
               </h1>
-              <div className="title-m max-w-[38.75rem] md:title-l mb-6 mt-4">
-                Contribute to the protocol source code or create software on top
-                of Vega an earn rewards.
+              <div className="title-m max-w-[38.75rem] md:title-l lg:title-xxl mb-6 mt-4">
+                Creating the future of DeFi together
               </div>
-              <div className="hidden md:block">
+              <LeadingLine className="text-white max-w-[30rem]">
+                Add to the source code or create software using Vega &mdash; and
+                earn rewards.
+              </LeadingLine>
+              <div className="hidden md:block mt-12">
                 <ButtonBlock />
               </div>
             </div>
-            <div className="relative col-span-6 col-start-7 row-span-full -mt-16 md:mt-0">
+            <div className="relative col-span-6 col-start-7 row-span-full md:mt-0">
               <div className="translate-x-4 md:translate-x-6 lg:translate-x-8">
                 <Blob1 />
               </div>
@@ -162,7 +166,7 @@ const DevelopPage = ({ data }) => {
             <h2 className="title-l max-w-[45rem] md:title-xl lg:title-xxl mb-4 mx-auto">
               Join the Builders Club
             </h2>
-            <p className="copy-xs md:copy-s text-white">
+            <p className="copy-xs md:copy-s text-white max-w-[45rem] mx-auto">
               For developers, coders, hackers, dreamers who want to create
               software on top of Vega.
             </p>

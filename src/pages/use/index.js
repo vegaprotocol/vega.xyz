@@ -23,7 +23,7 @@ const UsePage = () => {
               <div className="mb-16">
                 <BoxLink
                   title={`Stake Tokens`.toUpperCase()}
-                  text="Signal your support for a validator by staking tokens. This strengthens the consensus layer, secures the network – and earns you rewards too."
+                  text="Signal your support for a validator by staking tokens. This strengthens the consensus layer, secures the network &mdash; and earns you rewards too."
                   linkTitle="Stake Tokens"
                   link="https://token.vega.xyz"
                   inlineLinkTitle="Read the docs"
@@ -86,17 +86,17 @@ const UsePage = () => {
           <img src={DeadFish} alt="" className="inline-block rotate-90 mb-6" />
 
           <div className="max-w-[18.75rem] md:max-w-[45rem] mx-auto">
-            <GlitchTitle text="Experiment on Fairground" level="2" />
+            <GlitchTitle level="2">Experiment on Fairground</GlitchTitle>
           </div>
-          <div className="mb-12 max-w-[35rem] md:max-w-[45rem] mx-auto">
+          <div className="mb-12 max-w-[35rem] md:max-w-[42rem] mx-auto">
             <p className="copy-xs md:copy-s">
-              Fairground is our test network - a safe and fun place to try out
-              Vega without consequences.
+              Fairground is our test network &mdash; a safe and fun place to try
+              out Vega without consequences.
             </p>
             <p className="copy-xs mb-12">
               Use the powerful Vega Console app, build on the protocol's rich
               decentralised APIs, experiment before using the Mainnet and earn
-              rewards for helping to find bugs and battle harden Vega.
+              rewards for finding bugs and perfecting Vega.
             </p>
           </div>
           <ButtonLink link="https://fairground.wtf" text="Fairground" />

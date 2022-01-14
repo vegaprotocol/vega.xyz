@@ -69,7 +69,7 @@ const PapersPage = () => {
         <PageSection>
           <div className="mx-auto max-w-[44rem] text-center">
             <div className="mb-12">
-              <GlitchTitle level="3">
+              <GlitchTitle level="2">
                 Have an idea for an event or talk you'd like us to attend?
               </GlitchTitle>
             </div>

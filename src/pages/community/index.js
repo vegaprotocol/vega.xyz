@@ -70,19 +70,22 @@ const CommunityPage = ({ data }) => {
                   Contribute to Vega
                 </GlitchTitle>
               </div>
-              <LeadingLine text="Get involved in the future of DeFi. And you could even get rewarded for it." />
+              <LeadingLine>
+                Get involved in the future of DeFi. And you could even get
+                rewarded for it.
+              </LeadingLine>
             </div>
             <div className="grid gap-x-12 gap-y-14 grid-cols-1 mb-24 mt-12 md:grid-cols-2 xl:grid-cols-2">
               <BoxLink
                 title={`Play on Fairground`.toUpperCase()}
-                text="Help us find bugs and harden Vega's Testnet"
+                text="Help us find bugs and harden Vega's Testnet."
                 linkTitle="Fairground"
                 link="https://fairground.wtf"
                 icon={DeadFish}
               />
 
               <BoxLink
-                title={`Develop on our apps`.toUpperCase()}
+                title={`Develop on our APIs`.toUpperCase()}
                 text="Contribute to the source code, and get building with our APIs."
                 linkTitle="Learn more"
                 link="/develop"
@@ -97,7 +100,7 @@ const CommunityPage = ({ data }) => {
 
               <BoxLink
                 title={`Write content`.toUpperCase()}
-                text="Create articles, blog posts and contribute to research papers"
+                text="Create articles, blog posts and contribute to research papers."
                 linkTitle="Discord"
                 link="https://vega.xyz/discord"
               />
@@ -123,7 +126,7 @@ const CommunityPage = ({ data }) => {
 
             <BoxLinkHero
               title="Become an ambassador"
-              text="We're inviting Vega's leading community members to share what we're building with those that need to hear about it - and get rewarded for it."
+              text="We're inviting Vega's leading community members to share what we're building with those that need to hear about it &mdash; and get rewarded for it."
               linkTitle="Learn more"
               link="https://fairground.wtf"
               image={builderImage}

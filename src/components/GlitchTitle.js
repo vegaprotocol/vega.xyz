@@ -33,7 +33,7 @@ const GlitchTitle = (props) => {
     props.level && [1, 2, 3, 4, 5, 6].includes(props.level) ? props.level : "1"
   }`;
 
-  const commonStyles = "mb-4 mx-auto";
+  const commonStyles = "mb-4 mx-auto pr-6";
   let styles = "";
 
   if (level === 1) {
