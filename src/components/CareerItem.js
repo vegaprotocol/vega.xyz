@@ -1,21 +1,6 @@
 import React, { useState, useRef } from "react";
 import ButtonLink from "./ButtonLink";
 import PlusMinus from "./Svg/PlusMinus";
-import styled from "styled-components";
-
-const Markdown = styled.div`
-  p {
-    margin-bottom: 1rem;
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-`;
 
 const CareerItem = ({ career }) => {
   const [active, setActive] = useState(false);
@@ -49,9 +34,9 @@ const CareerItem = ({ career }) => {
         >
           <div className="md:grid md:grid-cols-2 md:gap-12 pb-8">
             <div>
-              <Markdown className="text-vega-mid-grey mb-4">
+              <div className="text-vega-mid-grey mb-4">
                 {career.frontmatter.description}
-              </Markdown>
+              </div>
               <ButtonLink
                 text="View full spec"
                 link={`${career.fields.slug}`}
