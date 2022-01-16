@@ -1,14 +1,5 @@
 import React from "react";
 import Moshed from "../video/moshed.mp4";
-import styled from "styled-components";
-
-const WavePath = styled.path`
-  fill: #fff;
-
-  .dark & {
-    fill: #000;
-  }
-`;
 
 const GhostParty = () => {
   return (
@@ -28,7 +19,10 @@ const GhostParty = () => {
         viewBox="0 0 1197.9 399.5"
         className="absolute left-0 right-0 top-0 h-auto"
       >
-        <WavePath d="M368.4 113.1c138.9 0 165.1 69.7 350.6 69.7S1063.1 22.6 1197.9 0H0v399.5c82.5-167.7 229.5-286.4 368.4-286.4z" />
+        <path
+          className="fill-white dark:fill-black"
+          d="M368.4 113.1c138.9 0 165.1 69.7 350.6 69.7S1063.1 22.6 1197.9 0H0v399.5c82.5-167.7 229.5-286.4 368.4-286.4z"
+        />
       </svg>
 
       <svg
