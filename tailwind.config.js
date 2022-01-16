@@ -21,6 +21,12 @@ module.exports = {
               color: "#828282",
               lineHeight: "1.4",
             },
+            a: {
+              color: "#828282",
+              "&:hover": {
+                color: "#FF077F !important",
+              },
+            },
             li: {
               color: "#828282",
               lineHeight: "1.4",

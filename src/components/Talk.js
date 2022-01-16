@@ -2,21 +2,6 @@ import React from "react";
 import TalkIllustration from "./Svg/Talk";
 import UppercaseLink from "./UppercaseLink";
 import SquareBullet from "./Svg/SquareBullet";
-import styled from "styled-components";
-
-const Markdown = styled.div`
-  p {
-    margin-bottom: 1rem;
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-`;
 
 const Talk = ({ talk }) => {
   return (
@@ -41,8 +26,8 @@ const Talk = ({ talk }) => {
           </div>
         )}
       </div>
-      <Markdown
-        className="w-full mt-2 mb-4"
+      <div
+        className="w-full mt-2 mb-4 prose"
         dangerouslySetInnerHTML={{ __html: talk.html }}
       />
 
