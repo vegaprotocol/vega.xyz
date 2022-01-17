@@ -9,6 +9,7 @@ import ButtonLink from "../../components/ButtonLink";
 import BoxLink from "../../components/BoxLink";
 import BoxLinkSimple from "../../components/BoxLinkSimple";
 import BoxLinkHero from "../../components/BoxLinkHero";
+import Calendar from "../../components/Calendar";
 import LeadingLine from "../../components/LeadingLine";
 import PageSection from "../../components/PageSection";
 import TwitchEmbed from "../../components/TwitchEmbed";
@@ -27,7 +28,7 @@ const CommunityPage = ({ data }) => {
 
   useEffect(() => {
     setHostname(window.location.hostname);
-  });
+  }, []);
 
   return (
     <Layout>
@@ -146,8 +147,8 @@ const CommunityPage = ({ data }) => {
                 Upcoming Events + Meetups
               </GlitchTitle>
             </div>
-            <div className="text-[#4f4f4f] text-[2.125rem] mt-16 p-12 text-center bg-vega-off-black">
-              CALENDAR FUNCTIONALITY
+            <div className="mt-16">
+              <Calendar />
             </div>
           </div>
         </PageSection>
