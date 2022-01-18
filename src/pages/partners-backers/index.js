@@ -81,6 +81,27 @@ const PartnersBackersPage = () => {
     },
   ];
 
+  const Row = ({ member }) => {
+    return (
+      <div className="border-b border-current py-2">
+        <div className="flex justify-between gap-x-5">
+          <div className="title-s">{member.name}</div>
+          {member.link ? (
+            <a
+              href={member.link}
+              rel="noreferrer"
+              className="shrink-0 title-xxs  hover:underline"
+              target="_blank"
+            >
+              What they say
+              <LinkArrow className="inline-block ml-3" />
+            </a>
+          ) : null}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <Layout>
       <Seo title="Partners &amp; Backers" />
@@ -94,53 +115,25 @@ const PartnersBackersPage = () => {
             </div>
             <div className="col-span-12 md:col-span-8 lg:col-span-6 border-t border-current">
               {partnerBackers.map((backer, idx) => {
-                return (
-                  <div key={idx} className="border-b border-current py-2">
-                    <div className="flex justify-between gap-x-5">
-                      <div className="title-s">{backer.name}</div>
-                      {backer.link ? (
-                        <a
-                          href={backer.link}
-                          className="shrink-0 title-xxs hover:underline"
-                          target="_blank"
-                        >
-                          What they say
-                          <LinkArrow className="inline-block ml-3" />
-                        </a>
-                      ) : null}
-                    </div>
-                  </div>
-                );
+                return <Row key={idx} member={backer} />;
               })}
             </div>
           </div>
 
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-4 lg:col-span-6">
-              <h1 className="title-m lg:title-xl md:sticky md:top-6 mb-3">
-                Markets and liquidity programme
-              </h1>
-              <div className="title-s text-vega-mid-grey">Founding Members</div>
+              <div className="md:sticky md:top-6 mb-3">
+                <h1 className="title-m lg:title-xl">
+                  Markets and liquidity programme
+                </h1>
+                <div className="title-s text-vega-mid-grey">
+                  Founding Members
+                </div>
+              </div>
             </div>
             <div className="col-span-12 md:col-span-8 lg:col-span-6 border-t border-current">
               {foundingMembers.map((member, idx) => {
-                return (
-                  <div key={idx} className="border-b border-current py-2">
-                    <div className="flex justify-between gap-x-5">
-                      <div className="title-s">{member.name}</div>
-                      {member.link ? (
-                        <a
-                          href={member.link}
-                          className="shrink-0 title-xxs  hover:underline"
-                          target="_blank"
-                        >
-                          What they say
-                          <LinkArrow className="inline-block ml-3" />
-                        </a>
-                      ) : null}
-                    </div>
-                  </div>
-                );
+                return <Row key={idx} member={member} />;
               })}
             </div>
           </div>
