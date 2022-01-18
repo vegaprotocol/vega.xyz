@@ -14,7 +14,9 @@ const UsePage = () => {
         <Container>
           <div className="mb-12 md:mb-24 lg:pt-16">
             <div className="max-w-[28rem] lg:max-w-[41.875rem]">
-              <GlitchTitle level="1">Use the network</GlitchTitle>
+              <GlitchTitle level="1" size="large">
+                Use the network
+              </GlitchTitle>
             </div>
           </div>
 
@@ -86,7 +88,9 @@ const UsePage = () => {
           <img src={DeadFish} alt="" className="inline-block rotate-90 mb-6" />
 
           <div className="max-w-[18.75rem] md:max-w-[45rem] mx-auto">
-            <GlitchTitle level="2">Experiment on Fairground</GlitchTitle>
+            <GlitchTitle level="2" size="medium">
+              Experiment on Fairground
+            </GlitchTitle>
           </div>
           <div className="mb-12 max-w-[35rem] md:max-w-[42rem] mx-auto">
             <p className="copy-xs md:copy-s">

@@ -46,7 +46,9 @@ const PapersPage = () => {
             <div className="mb-3">
               <BoxTitle text="Learn " />
             </div>
-            <GlitchTitle level="1">Talks</GlitchTitle>
+            <GlitchTitle level="1" size="large">
+              Talks
+            </GlitchTitle>
           </div>
         </div>
         <div className="grid grid-cols-12">
@@ -69,7 +71,7 @@ const PapersPage = () => {
         <PageSection>
           <div className="mx-auto max-w-[44rem] text-center">
             <div className="mb-12">
-              <GlitchTitle level="2">
+              <GlitchTitle level="2" size="medium">
                 Have an idea for an event or talk you'd like us to attend?
               </GlitchTitle>
             </div>

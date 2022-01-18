@@ -63,26 +63,26 @@ exports.sourceNodes = async ({
   createNodeId,
   createContentDigest,
 }) => {
-  const contributorsData = await fetch(
-    `https://contributors.vega.win/contributors`
-  );
-  const contributorsResultData = await contributorsData.json();
+  // const contributorsData = await fetch(
+  //   `https://contributors.vega.win/contributors`
+  // );
+  // const contributorsResultData = await contributorsData.json();
 
-  contributorsResultData.github_contributors.forEach((contributor) => {
-    const node = {
-      username: contributor.login,
-      avatar: contributor.avatar_url,
-      total_contributions: contributor.total_contributions,
-      id: createNodeId(`contributors-${contributor.login}`),
-      parent: null,
-      children: [],
-      internal: {
-        type: `Contributors`,
-        contentDigest: createContentDigest(contributor),
-      },
-    };
-    actions.createNode(node);
-  });
+  // contributorsResultData.github_contributors.forEach((contributor) => {
+  //   const node = {
+  //     username: contributor.login,
+  //     avatar: contributor.avatar_url,
+  //     total_contributions: contributor.total_contributions,
+  //     id: createNodeId(`contributors-${contributor.login}`),
+  //     parent: null,
+  //     children: [],
+  //     internal: {
+  //       type: `Contributors`,
+  //       contentDigest: createContentDigest(contributor),
+  //     },
+  //   };
+  //   actions.createNode(node);
+  // });
 
   const incentivesData = await fetch(
     `https://notion-api.vega.win/query?id=aa64c6a0-0e0d-460d-ad44-ceacc6cd5957`

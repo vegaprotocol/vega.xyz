@@ -29,6 +29,7 @@ const IndexPage = () => {
                 <div>
                   <GlitchTitle
                     level="1"
+                    size="large"
                     className="lg:!text-[5.875rem]"
                     color="red"
                   >

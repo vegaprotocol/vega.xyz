@@ -73,7 +73,7 @@ const CommunityPage = ({ data }) => {
           <div id="contributions">
             <div className="text-center">
               <div className="max-w-[14.375rem] md:max-w-[23.4375rem] lg:max-w-[36.25rem] mx-auto">
-                <GlitchTitle color="red" level="2">
+                <GlitchTitle color="red" level="2" size="medium">
                   Contribute to Vega
                 </GlitchTitle>
               </div>
@@ -143,7 +143,7 @@ const CommunityPage = ({ data }) => {
         <PageSection>
           <div id="calendar">
             <div className="text-center max-w-[50rem] mx-auto">
-              <GlitchTitle color="purple" level="2">
+              <GlitchTitle color="purple" level="2" size="medium">
                 Upcoming Events + Meetups
               </GlitchTitle>
             </div>
@@ -173,7 +173,7 @@ const CommunityPage = ({ data }) => {
         <PageSection>
           <div id="channels">
             <div className="text-center">
-              <GlitchTitle color="red" level="2">
+              <GlitchTitle color="red" level="2" size="medium">
                 Our Channels
               </GlitchTitle>
             </div>

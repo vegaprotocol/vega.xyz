@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "prettier": "^2.5.0",
-    "prettier-plugin-tailwind": "^2.2.12"
+    "prettier-plugin-tailwind": "^2.2.12",
+    "tailwindcss-hyphens": "^0.1.0"
   }
 }
