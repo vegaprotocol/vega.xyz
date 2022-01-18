@@ -6,9 +6,11 @@ import { useIntl } from "gatsby-plugin-react-intl";
 import Seo from "../components/Seo";
 import Ticker from "../components/Ticker";
 import GlitchTitle from "../components/GlitchTitle";
+import BlogPosts from "../components/BlogPosts";
 import LeadingLine from "../components/LeadingLine";
 import ButtonLink from "../components/ButtonLink";
 import PageSection from "../components/PageSection";
+import Calendar from "../components/Calendar";
 import Planet from "../components/Svg/Planet";
 
 const IndexPage = () => {
@@ -47,8 +49,8 @@ const IndexPage = () => {
 
         <Container>
           <PageSection>
-            <div className="grid grid-cols-12">
-              <div className="col-span-8">
+            <div className="md:grid md:grid-cols-12">
+              <div className="md:col-span-8">
                 <div className="title-l mb-4">
                   We're throwing open the doors to the new financial system
                   &mdash; and a truly democratic society.
@@ -65,24 +67,25 @@ const IndexPage = () => {
                   <ButtonLink text="Join the community" link="/community" />
                 </div>
               </div>
-              <div className="col-span-4"></div>
+              <div className="md:col-span-4"></div>
             </div>
           </PageSection>
-          {/* <div className="max-w-2xl">
-            <h1 className="font-glitched mb-4 text-5xl uppercase">
-              <ScrambleText
-                text={intl.formatMessage({ id: "page-index-hero-title" })}
-              ></ScrambleText>
-            </h1>
-            <p className="mb-6">
-              {intl.formatMessage({ id: "page-index-hero-paragraph" })}
-            </p>
-            <p>
-              <Link to="/" className="underline">
-                {intl.formatMessage({ id: "learn-more" })} &raquo;
-              </Link>
-            </p>
-          </div> */}
+
+          <PageSection>
+            <div className="lg:grid lg:grid-cols-12">
+              <div className="lg:col-span-3">
+                <div className="title-l mb-8">Up-coming Events</div>
+              </div>
+
+              <div className="lg:col-span-9">
+                <Calendar />
+              </div>
+            </div>
+          </PageSection>
+
+          <PageSection>
+            <BlogPosts />
+          </PageSection>
         </Container>
       </main>
     </Layout>

@@ -20,7 +20,7 @@ const Calendar = () => {
             (element) => element.name === "Attendees"
           ).values,
           name: elem.properties.find((element) => element.name === "Name")
-            .values,
+            .values[0],
           tags: elem.properties.find((element) => element.name === "Tags")
             .values,
           url: elem.properties.find((element) => element.name === "Sign-up URL")
