@@ -136,6 +136,14 @@ const Footer = () => {
                     Contributors
                   </TextLink>
                 </li>
+                <li>
+                  <TextLink
+                    to="/partners-backers"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Partners and backers
+                  </TextLink>
+                </li>
 
                 <li>
                   <TextLink

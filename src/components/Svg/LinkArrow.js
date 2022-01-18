@@ -1,6 +1,6 @@
 import React from "react";
 
-const LinkArrow = () => {
+const LinkArrow = ({ className }) => {
   return (
     <svg
       width="10"
@@ -8,6 +8,7 @@ const LinkArrow = () => {
       viewBox="0 0 10 10"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         fillRule="evenodd"
