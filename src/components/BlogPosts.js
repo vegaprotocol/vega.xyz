@@ -3,10 +3,10 @@ import ButtonLink from "./ButtonLink";
 import BlogPost from "./BlogPost";
 import { graphql, useStaticQuery } from "gatsby";
 
-const LatestBlogPosts = ({ data }) => {
+const LatestBlogPosts = () => {
   const latestPosts = useStaticQuery(graphql`
     query {
-      allMediumPost(limit: 6, sort: { fields: [createdAt], order: DESC }) {
+      allMediumPost(limit: 3, sort: { fields: [createdAt], order: DESC }) {
         edges {
           node {
             id
