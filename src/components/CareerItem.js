@@ -45,7 +45,7 @@ const CareerItem = ({ career }) => {
             </div>
 
             <div>
-              <div class="md:grid grid-cols-3 gap-6">
+              <div className="md:grid grid-cols-3 gap-6">
                 <div className="text-[0.9375rem] mb-3 md:mb-0">
                   <div className="text-vega-mid-grey uppercase tracking-[0.01rem]">
                     Location:

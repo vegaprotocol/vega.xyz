@@ -30,9 +30,7 @@ const GlitchTitle = (props) => {
   const level = parseInt(props.level);
   const size = props.size;
 
-  const Tag = `h${
-    props.level && [1, 2, 3, 4, 5, 6].includes(props.level) ? props.level : "1"
-  }`;
+  const Tag = `h${level && [1, 2, 3, 4, 5, 6].includes(level) ? level : "1"}`;
 
   const commonStyles = "mb-4 mx-auto pr-6";
   let styles = "";

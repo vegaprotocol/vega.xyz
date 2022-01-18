@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import LinkArrow from "./Svg/LinkArrow";
 
 const Contributor = ({ contributor }) => {
@@ -30,6 +30,7 @@ const Contributor = ({ contributor }) => {
         <div>
           <a
             target="_blank"
+            rel="noreferrer"
             className="text-[0.8125rem] hover:underline"
             href={`https://github.com/${contributor.login}`}
           >

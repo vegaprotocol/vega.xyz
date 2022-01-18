@@ -30,7 +30,7 @@ const CalendarEvent = ({ event }) => {
 
           <div className="copy-s text-current">{event.name}</div>
         </div>
-        <div class="col-span-12 md:col-span-6 grid grid-cols-12 gap-6">
+        <div className="col-span-12 md:col-span-6 grid grid-cols-12 gap-6">
           <div className="col-span-6">
             <div className="title-xxs text-vega-mid-grey mb-1">When?</div>
             <div className="copy-xxs text-current">
