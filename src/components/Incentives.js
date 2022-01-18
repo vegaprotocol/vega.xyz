@@ -20,7 +20,7 @@ const Incentives = () => {
     }
   `);
 
-  const pageSize = 2;
+  const pageSize = 5;
   const allIncentives = incentives.allIncentives.nodes;
   const [list, setList] = useState([...allIncentives.slice(0, pageSize)]);
   const [loadMore, setLoadMore] = useState(false);
