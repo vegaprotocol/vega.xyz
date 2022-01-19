@@ -14,7 +14,7 @@ const KeyConceptsPage = () => {
     <Layout>
       <Seo title="Key Concepts" />
       <div className="grid grid-cols-12">
-        <div className="col-span-3">
+        <div className="col-span-3 overflow-hidden">
           <UniverseLeft className="-translate-x-12" />
         </div>
         <div className="col-span-6">
@@ -43,7 +43,7 @@ const KeyConceptsPage = () => {
             </LeadingLine>
           </div>
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 overflow-hidden">
           <UniverseRight className="translate-x-12" />
         </div>
       </div>
