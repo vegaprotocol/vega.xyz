@@ -26,7 +26,7 @@ const Jobs = (props) => {
             All roles
           </Link>
           <div className="border-t border-current">
-            <div class="md:grid md:grid-cols-2 pt-4">
+            <div className="md:grid md:grid-cols-2 pt-4">
               <div>
                 <h1 className="title-l mb-6 max-w-[25rem]">
                   {props.data.markdownRemark.frontmatter.title}

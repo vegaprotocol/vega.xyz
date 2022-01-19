@@ -34,9 +34,10 @@ module.exports = {
             h2: {
               textTransform: "uppercase",
               borderTop: "solid 1px currentColor",
-              paddingTop: "0.2rem",
+              paddingTop: "0.4rem",
               marginTop: "2rem",
               marginBottom: "0.75rem",
+              lineHeight: "1",
             },
           },
         },

@@ -8,6 +8,15 @@ contract_type: "Permanent or long-term contract"
 
 We are building a blockchain-based fully automated and open derivatives exchange and are looking for a Technical Analyst.
 
+**Start date:**  
+Immediate
+
+**Location:**  
+Remote (between UTC-8 and UTC+1) or London or Edinburgh
+
+**Type:**  
+Permanent or long-term contract
+
 ## About you
 
 You have the training and ideally the experience to understand and reason about complex systems. You know how to gather requirements, turn them into well written technical specification documents and provide test scenarios to verify the specification is implemented correctly. Role is open to graduates.
