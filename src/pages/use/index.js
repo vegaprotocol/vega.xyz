@@ -3,7 +3,9 @@ import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import GlitchTitle from "../../components/GlitchTitle";
 import BoxLink from "../../components/BoxLink";
+import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
+import LeadingLine from "../../components/LeadingLine";
 import Wave from "../../components/Wave";
 import DeadFish from "../../images/dead-fish.svg";
 
@@ -14,9 +16,17 @@ const UsePage = () => {
         <Container>
           <div className="mb-12 md:mb-24 lg:pt-16">
             <div className="max-w-[28rem] lg:max-w-[41.875rem]">
-              <GlitchTitle level="1" size="large">
-                Use the network
+              <h1>
+                <BoxTitle text="Use the network" />
+              </h1>
+              <GlitchTitle level="1" size="small" className="mt-4">
+                Fuel the engine of the new DeFi economy
               </GlitchTitle>
+              <LeadingLine className="text-current">
+                Get started with staking and getting tokens, configuring the
+                network, and trading. Remember to keep an eye out for new
+                features, like proposing markets and providing liquidity.
+              </LeadingLine>
             </div>
           </div>
 
