@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CalendarEvent from "./CalendarEvent";
 
-const Calendar = () => {
+const Calendar = ({ showEthDenver }) => {
   const [events, setEvents] = useState(null);
 
   useEffect(() => {
@@ -56,7 +56,13 @@ const Calendar = () => {
   return (
     <div className="border-t border-current">
       {events &&
-        events.map((event, idx) => <CalendarEvent key={idx} event={event} />)}
+        events.map((event, idx) => (
+          <CalendarEvent
+            showEthDenver={showEthDenver}
+            key={idx}
+            event={event}
+          />
+        ))}
     </div>
   );
 };

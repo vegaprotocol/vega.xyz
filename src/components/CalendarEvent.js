@@ -4,7 +4,7 @@ import ArrowRight from "./Svg/ArrowRight";
 import Moment from "react-moment";
 import { StaticImage } from "gatsby-plugin-image";
 
-const CalendarEvent = ({ event }) => {
+const CalendarEvent = ({ event, showEthDenver }) => {
   const dateFormat = "LLL";
   const dateFormatWithoutTime = "LL";
   const dateParseFormat = "YYYY-MM-DD HH:mm:ss";
@@ -12,7 +12,7 @@ const CalendarEvent = ({ event }) => {
   return (
     <div className="pb-8 pt-6 border-b border-current relative">
       {/* Hard code ETH Denver image */}
-      {event.name === "ETH Denver 2022" ? (
+      {showEthDenver && event.name === "ETH Denver 2022" ? (
         <StaticImage
           src="../images/ethdenver.jpg"
           alt="EthDenver"

@@ -86,7 +86,7 @@ const IndexPage = () => {
               </div>
 
               <div className="lg:col-span-9">
-                <Calendar />
+                <Calendar showEthDenver={true} />
               </div>
             </div>
           </PageSection>
