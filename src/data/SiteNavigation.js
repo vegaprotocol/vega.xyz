@@ -5,7 +5,7 @@ export const SiteNavigation = [
       {
         text: "navigation-key-concepts",
         description: "navigation-key-concepts-description",
-        to: "/learn/key-concepts/",
+        to: "/key-concepts/",
       },
       {
         text: "navigation-papers",
