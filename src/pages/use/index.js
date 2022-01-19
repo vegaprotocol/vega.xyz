@@ -57,7 +57,7 @@ const UsePage = () => {
                   title={`Configure the network`.toUpperCase()}
                   text="Shape the future of DeFi. Propose and vote for governance change and define the optimal network configuration."
                   linkTitle="Configure the network"
-                  link=""
+                  link="https://token.vega.xyz/governance"
                   inlineLinkTitle="Read the docs"
                   inlineLink="https://docs.vega.xyz"
                 />

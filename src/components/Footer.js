@@ -89,7 +89,10 @@ const Footer = () => {
                   </TextLink>
                 </li>
                 <li>
-                  <TextLink to="/" className="py-1.5 block leading-[1.3]">
+                  <TextLink
+                    to="https://token.vega.xyz/governance"
+                    className="py-1.5 block leading-[1.3]"
+                  >
                     Configure the network
                   </TextLink>
                 </li>
