@@ -4,14 +4,14 @@ import Moshed from "../../video/moshed.mp4";
 import EthDenverTitle from "../../components/Svg/EthDenverTitle";
 import ButtonLinkSimple from "../../components/ButtonLinkSimple";
 import VegaLogo from "../../components/Svg/VegaLogo";
-import InsaneModeToggle from "../../components/InsaneModeToggle";
+import DiscoModeToggle from "../../components/DiscoModeToggle";
 import Mountainscape from "../../images/mountainscape.png";
 
 const EthDenver = () => {
-  const [insaneMode, setInsaneMode] = useState(true);
+  const [discoMode, setDiscoMode] = useState(true);
 
-  const toggleInsaneMode = () => {
-    setInsaneMode(!insaneMode);
+  const toggleDiscoMode = () => {
+    setDiscoMode(!discoMode);
   };
 
   return (
@@ -27,21 +27,21 @@ const EthDenver = () => {
           <source src={Moshed} type="video/mp4" />
         </video>
 
-        {!insaneMode ? (
+        {!discoMode ? (
           <div className="bg-black absolute top-0 left-0 right-0 h-full -z-10"></div>
         ) : null}
 
         <header className="py-6 px-4 w-full md:px-6 lg:px-8 flex justify-between">
           <VegaLogo />
-          <InsaneModeToggle
-            insaneMode={insaneMode}
-            toggleInsaneMode={toggleInsaneMode}
+          <DiscoModeToggle
+            discoMode={discoMode}
+            toggleDiscoMode={toggleDiscoMode}
           />
         </header>
 
         <div className="max-w-[68rem] mx-auto px-4 md:px-6 lg:px-8">
           <EthDenverTitle
-            insaneMode={insaneMode}
+            discoMode={discoMode}
             className="relative inline-block w-full h-auto mb-3 -mt-5"
           />
 
