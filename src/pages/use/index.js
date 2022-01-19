@@ -54,7 +54,7 @@ const UsePage = () => {
               </div>
               <div className="mb-16">
                 <BoxLink
-                  title={`Propse new markets and provide liquidity`.toUpperCase()}
+                  title={`Propose new markets and provide liquidity`.toUpperCase()}
                   text="Change the game of value creation. Propose a new market and provide liquidity, or place liquidity on an existing market. Coming soon to Mainnet."
                   linkTitle="Try it out on Fairground"
                   link="https://fairground.wtf"
