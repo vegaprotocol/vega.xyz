@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Incentive from "./Incentive";
 
 const Incentives = () => {
-  const pageSize = 5;
+  const pageSize = 2;
   const [incentives, setIncentives] = useState(null);
   const [list, setList] = useState(null);
   const [loadMore, setLoadMore] = useState(false);
@@ -101,7 +101,7 @@ const Incentives = () => {
             />
           ))}
 
-          {hasMore ? (
+          {hasMore && (
             <button
               onClick={handleLoadMore}
               className="group
@@ -114,8 +114,6 @@ const Incentives = () => {
               </div>
               <div className="absolute inset-0 border bg-white dark:bg-black border-black dark:border-white"></div>
             </button>
-          ) : (
-            <p>No more results</p>
           )}
         </div>
       ) : (
