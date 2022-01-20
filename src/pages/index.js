@@ -9,10 +9,12 @@ import GlitchTitle from "../components/GlitchTitle";
 import BlogPosts from "../components/BlogPosts";
 import LeadingLine from "../components/LeadingLine";
 import ButtonLink from "../components/ButtonLink";
+import ButtonLinkSimple from "../components/ButtonLinkSimple";
 import PageSection from "../components/PageSection";
 import Calendar from "../components/Calendar";
 import Planet from "../components/Svg/Planet";
 import PlanetRocket from "../components/Svg/PlanetRocket";
+import RoadMap from "../components/RoadMap";
 
 const IndexPage = () => {
   const intl = useIntl();
@@ -37,7 +39,7 @@ const IndexPage = () => {
                     Toward a new era of finance
                   </GlitchTitle>
                   <LeadingLine className="text-current">
-                    We are Vega. Web3’s native derivatives layer.
+                    We are Vega. Web3's native derivatives layer.
                   </LeadingLine>
                 </div>
               </div>
@@ -77,6 +79,10 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
+          </PageSection>
+
+          <PageSection>
+            <RoadMap />
           </PageSection>
 
           <PageSection>

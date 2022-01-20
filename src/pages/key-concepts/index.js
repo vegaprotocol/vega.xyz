@@ -78,7 +78,7 @@ const KeyConceptsPage = () => {
         <Sticky enabled={true}>
           <div className="bg-white dark:bg-black">
             <div
-              class="mx-auto"
+              className="mx-auto"
               className="border-b border-vega-mid-grey flex justify-center gap-x-8"
             >
               <ScrollSpy>
@@ -101,12 +101,12 @@ const KeyConceptsPage = () => {
       <Container>
         <div className="mt-20">
           <div id="good">
-            <div class="grid grid-cols-12 mb-12">
+            <div className="grid grid-cols-12 mb-12">
               <div className="col-span-6 title-xl max-w-[32.5rem]">
                 Be as good as CeFi
               </div>
               <div className="col-span-5 border-current border p-4 pb-6 relative mt-12">
-                <div class="copy-s text-white">
+                <div className="copy-s text-white">
                   Vega will rival the current financial system, replacing it
                   with one that puts fairness, efficiency, and accessibility at
                   its heart.
@@ -158,12 +158,12 @@ const KeyConceptsPage = () => {
           </div>
 
           <div id="better">
-            <div class="grid grid-cols-12 mb-12">
+            <div className="grid grid-cols-12 mb-12">
               <div className="col-span-6 title-xl max-w-[32.5rem]">
                 Be better than CeFi
               </div>
               <div className="col-span-5 border-current border p-4 pb-6 relative mt-12">
-                <div class="copy-s text-white">
+                <div className="copy-s text-white">
                   By standardising and automating every step of the trade
                   lifecycle, Vega addresses the shortcomings of traditional
                   trading. And strikes a balance between rigidity and
@@ -367,12 +367,12 @@ const KeyConceptsPage = () => {
           </div>
 
           <div id="mature">
-            <div class="grid grid-cols-12 mb-12">
+            <div className="grid grid-cols-12 mb-12">
               <div className="col-span-6 title-xl max-w-[32.5rem]">
                 Help DeFi mature
               </div>
               <div className="col-span-5 border-current border p-4 pb-6 relative mt-12">
-                <div class="copy-s text-white">
+                <div className="copy-s text-white">
                   Designed from the ground up, and in a modular way to encourage
                   creativity and incentivise participation &mdash; we're
                   creating the critical infrastructure for Web3 and DeFi to
