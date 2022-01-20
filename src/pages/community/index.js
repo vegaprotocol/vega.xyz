@@ -201,7 +201,7 @@ const CommunityPage = ({ data }) => {
             </div>
           </div>
         </PageSection>
-        <PageSection>
+        {/* <PageSection>
           <div className="relative">
             <div className="grid grid-cols-12">
               <div className="col-span-5">
@@ -218,7 +218,7 @@ const CommunityPage = ({ data }) => {
               </div>
             </div>
           </div>
-        </PageSection>
+        </PageSection> */}
         <PageSection>
           <div id="channels">
             <div className="text-center">
