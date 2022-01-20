@@ -18,6 +18,7 @@ import GlitchTitle from "../../components/GlitchTitle";
 import DeadFish from "../../images/dead-fish.svg";
 import { getImage } from "gatsby-plugin-image";
 import GhostParty from "../../components/GhostParty";
+import Contributor from "../../components/Contributor";
 
 const CommunityPage = ({ data }) => {
   const intl = useIntl();
@@ -25,6 +26,18 @@ const CommunityPage = ({ data }) => {
   const builderImage = getImage(data.builderImage);
 
   const [hostname, setHostname] = useState(null);
+  const [contributors, setContributors] = useState(null);
+
+  useEffect(() => {
+    async function fetchContributors() {
+      let response = await fetch(
+        "https://contributors.vega.win/contributors?sort=random"
+      );
+      response = await response.json();
+      setContributors(response.github_contributors);
+    }
+    fetchContributors();
+  }, []);
 
   useEffect(() => {
     setHostname(window.location.hostname);
@@ -120,7 +133,43 @@ const CommunityPage = ({ data }) => {
             </div>
           </div>
 
-          <Incentives />
+          {contributors && (
+            <PageSection>
+              <div className="text-center">
+                <div className="text-center mx-auto max-w-[30rem] mb-8">
+                  <div className="title-l mb-3">Meet our contributors</div>
+                  <LeadingLine>
+                    Short sentence saying something about how Vega has some
+                    great peeps involved
+                  </LeadingLine>
+                </div>
+                <div className="relative flex mx-auto max-w-[49rem] flex-wrap justify-center gap-3 after:content-[''] after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-gradient-to-b after:from-transparent after:to-white dark:after:to-black">
+                  {contributors.slice(0, 26).map((contributor, idx) => {
+                    return (
+                      <div key={idx}>
+                        <img
+                          src={contributor.avatar_url}
+                          width="75"
+                          height="75"
+                          className="rounded-full"
+                          alt={contributor.login}
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+                <ButtonLink
+                  link="/community/contributors"
+                  text="See who's involved"
+                  className="mt-12"
+                />
+              </div>
+            </PageSection>
+          )}
+
+          <PageSection>
+            <Incentives />
+          </PageSection>
 
           <div className="grid gap-8 grid-cols-1 mt-16 md:grid-cols-2">
             <BoxLinkHero

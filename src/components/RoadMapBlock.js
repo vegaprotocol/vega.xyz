@@ -34,7 +34,7 @@ const RoadMapBlock = ({ title, date, position, content }) => {
             {date}
           </div>
         </div>
-        <div className="relative border border-current p-4 pb-8 ">
+        <div className="min-h-[6rem] relative border border-current p-4 pb-8 ">
           <div className="relative">
             <svg
               width="11"
@@ -63,8 +63,11 @@ const RoadMapBlock = ({ title, date, position, content }) => {
           <div className="relative top-[6rem] md:top-1/4 pb-20">
             <div className="border border-current max-w-[32.5rem] mx-auto">
               <div className="border-b border-current h-6 flex items-center p-2">
-                <button onClick={toggleOverlay}>
-                  <CrossSmall />
+                <button
+                  className="dark:bg-black bg-white"
+                  onClick={toggleOverlay}
+                >
+                  <CrossSmall className="block" />
                 </button>
               </div>
               <div className="p-4">
