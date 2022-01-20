@@ -139,8 +139,8 @@ const CommunityPage = ({ data }) => {
                 <div className="text-center mx-auto max-w-[30rem] mb-8">
                   <div className="title-l mb-3">Meet our contributors</div>
                   <LeadingLine>
-                    Short sentence saying something about how Vega has some
-                    great peeps involved
+                    Vega is a collective effort. Explore the high calibre and
+                    cool people who've made the project what it is.
                   </LeadingLine>
                 </div>
                 <div className="relative flex mx-auto max-w-[49rem] flex-wrap justify-center gap-3 after:content-[''] after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-gradient-to-b after:from-transparent after:to-white dark:after:to-black">
