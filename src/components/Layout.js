@@ -14,7 +14,7 @@ const Layout = (props) => {
       />
       <div className="dark:text-white dark:bg-black bg-white">
         <SiteBanner />
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen max-w-[90rem] mx-auto">
           <div className="grow">
             <Header />
             {props.children}
