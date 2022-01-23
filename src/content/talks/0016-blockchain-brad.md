@@ -7,4 +7,4 @@ links:
     link: https://youtu.be/1Kzld4ecdZw
 ---
 
-[Barney Mannerings](https://twitter.com/barnabee) speaks to [Blockchain Brad](https://twitter.com/Brad_Laurie) about Vega and building tools for DeFi trading.
+<a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a> speaks to <a href="https://twitter.com/Brad_Laurie" target="_blank">Blockchain Brad</a> about Vega and building tools for DeFi trading.

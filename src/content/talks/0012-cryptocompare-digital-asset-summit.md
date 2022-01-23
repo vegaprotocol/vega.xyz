@@ -7,4 +7,4 @@ links:
     link: https://www.youtube.com/watch?v=DynJumPTmW0
 ---
 
-[Barney Mannerings](https://twitter.com/barnabee) launched the private Vega Testnet. Audience members were the first to see a live, public demonstration of the protocol and Vega Console.
+<a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a> launched the private Vega Testnet. Audience members were the first to see a live, public demonstration of the protocol and Vega Console.

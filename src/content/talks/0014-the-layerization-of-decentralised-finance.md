@@ -7,4 +7,4 @@ links:
     link: https://youtu.be/WllCpM8ki5o
 ---
 
-[Barney Mannerings](https://twitter.com/barnabee) joins [Synthetic, Unslashed Finance](https://twitter.com/synthetix_io) in a panel moderated by [Mona El Lisa](https://twitter.com/Mona_El_Isa) in a DeFi project deep dive.
+<a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a> joins <a href="https://twitter.com/synthetix_io" target="_blank">Synthetic, Unslashed Finance</a> in a panel moderated by <a href="https://twitter.com/Mona_El_Isa" target="_blank">Mona El Lisa</a> in a DeFi project deep dive.

@@ -7,4 +7,4 @@ links:
     link: https://www.crowdcast.io/e/defi-discussions/85
 ---
 
-[Dr Klaus Kursawe](https://twitter.com/KursaweKlaus) discussed how blockchains can mitigate against front-running for on-chain order book dApps, based on [his latest paper ‘Wendy, the little good little fairness widget’](https://vega.xyz/papers/fairness.pdf).
+<a href="https://twitter.com/KursaweKlaus" target="_blank">Dr Klaus Kursawe</a> discussed how blockchains can mitigate against front-running for on-chain order book dApps, based on <a href="https://vega.xyz/papers/fairness.pdf" target="_blank">his latest paper ‘Wendy, the little good little fairness widget’</a>.

@@ -7,4 +7,4 @@ links:
     link: https://www.youtube.com/watch?v=tU3CYpT5-qM
 ---
 
-[Dmitriy Berenzon](https://twitter.com/dberenzon) leads a discussion with [Klaus Kursawe](https://twitter.com/KursaweKlaus) and [Tamlyn Rudolph](https://twitter.com/RudolphTamlyn) on ordering fairness and why it is a necessary innovation for the DeFi space.
+<a href="https://twitter.com/dberenzon">Dmitriy Berenzon</a> leads a discussion with <a href="https://twitter.com/KursaweKlaus" target="_blank">Klaus Kursawe</a> and <a href="https://twitter.com/RudolphTamlyn" target="_blank">Tamlyn Rudolph</a> on ordering fairness and why it is a necessary innovation for the DeFi space.

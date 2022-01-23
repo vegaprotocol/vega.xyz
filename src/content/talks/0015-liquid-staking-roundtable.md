@@ -7,4 +7,4 @@ links:
     link: https://youtu.be/yJI0jSV_Su4
 ---
 
-[Barney Mannerings](https://twitter.com/barnabee) joins the Cosmos round-table on on-chain staked assets.
+<a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a> joins the Cosmos round-table on on-chain staked assets.

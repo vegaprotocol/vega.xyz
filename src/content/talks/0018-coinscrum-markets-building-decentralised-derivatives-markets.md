@@ -7,4 +7,4 @@ links:
     link: https://www.youtube.com/watch?v=lH4gKkrt42A
 ---
 
-[Barney Mannerings](https://twitter.com/barnabee) joins Paul Yardly (Trustology) and Jose Macedo (Delphi Digital) on this panel.
+<a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a> joins Paul Yardly (Trustology) and Jose Macedo (Delphi Digital) on this panel.
