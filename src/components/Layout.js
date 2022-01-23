@@ -11,7 +11,7 @@ const Layout = (props) => {
           lang: "en",
         }}
       />
-      <div className="dark:text-white dark:bg-black bg-white max-w-full overflow-x-hidden">
+      <div className="dark:text-white dark:bg-black bg-white max-w-full overflow-x-hidden selection:bg-vega-yellow">
         <div className="flex flex-col min-h-screen">
           <div className="grow">
             <Header />
