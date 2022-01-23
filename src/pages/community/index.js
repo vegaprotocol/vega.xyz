@@ -6,6 +6,7 @@ import { useIntl } from "gatsby-plugin-react-intl";
 import JumpNavigation from "../../components/Navigation/JumpNavigation";
 import { CommunityPageSections } from "../../data/CommunityPageSections";
 import ButtonLink from "../../components/ButtonLink";
+import BoxTitle from "../../components/BoxTitle";
 import BoxLink from "../../components/BoxLink";
 import BoxLinkSimple from "../../components/BoxLinkSimple";
 import BoxLinkHero from "../../components/BoxLinkHero";
@@ -54,25 +55,34 @@ const CommunityPage = ({ data }) => {
 
       <Container>
         <div id="overview" className="pt-16">
-          <h2 className="title-m max-w-[48rem] font-glitched md:title-l mb-6">
+          <h1>
+            <BoxTitle text="Community" />
+          </h1>
+          <h2 className="title-m max-w-[48rem] font-glitched md:title-l mb-4 md:mb-6 mt-4">
             {intl.formatMessage({ id: "page-community-hero-title" })}
           </h2>
 
           <div className="max-w-[48rem]">
-            <LeadingLine>
+            <LeadingLine className="!mb-6">
               {intl.formatMessage({ id: "page-community-hero-text" })}
             </LeadingLine>
 
-            <div className="inline-block mb-4 mr-4">
-              <ButtonLink
-                text="Join us on Discord"
-                link="https://vega.xyz/discord"
-              ></ButtonLink>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-none">
+              <div>
+                <ButtonLink
+                  text="Join us on Discord"
+                  link="https://vega.xyz/discord"
+                  className="w-full"
+                ></ButtonLink>
+              </div>
+              <div>
+                <ButtonLink
+                  text="Try a tutorial"
+                  link="https://www.youtube.com/playlist?list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2"
+                  className="w-full"
+                ></ButtonLink>
+              </div>
             </div>
-            <ButtonLink
-              text="Try a tutorial"
-              link="https://www.youtube.com/playlist?list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2"
-            ></ButtonLink>
           </div>
         </div>
       </Container>
@@ -136,8 +146,10 @@ const CommunityPage = ({ data }) => {
           {contributors && (
             <PageSection>
               <div className="text-center">
-                <div className="text-center mx-auto max-w-[30rem] mb-8">
-                  <div className="title-l mb-3">Meet our contributors</div>
+                <div className="text-center mx-auto max-w-[20rem] md:max-w-[30rem] mb-8">
+                  <div className="title-m md:title-l mb-3">
+                    Meet our contributors
+                  </div>
                   <LeadingLine>
                     Vega is a collective effort. Explore the high calibre and
                     cool people who've made the project what it is.
