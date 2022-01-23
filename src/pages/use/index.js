@@ -23,9 +23,9 @@ const UsePage = () => {
                 Fuel the engine of the new DeFi economy
               </GlitchTitle>
               <LeadingLine className="text-current">
-                Get started with staking and getting tokens, configuring the
-                network, and trading. Remember to keep an eye out for new
-                features, like proposing markets and providing liquidity.
+                Get tokens, start staking, configure the network, or trade.
+                Remember to keep an eye out for new features, like proposing
+                markets and providing liquidity.
               </LeadingLine>
             </div>
           </div>
@@ -47,7 +47,7 @@ const UsePage = () => {
                   title={`Get Tokens`.toUpperCase()}
                   text="Join the new era of finance. Find an exchange to get tokens or earn them as rewards for contributing to the community."
                   linkTitle="Earn Rewards"
-                  link=""
+                  link="/community/#contributions"
                 />
               </div>
             </div>
@@ -59,7 +59,7 @@ const UsePage = () => {
                   linkTitle="Configure the network"
                   link="https://token.vega.xyz/governance"
                   inlineLinkTitle="Read the docs"
-                  inlineLink="https://docs.vega.xyz"
+                  inlineLink="https://token.vega.xyz/governance/"
                 />
               </div>
               <div className="mb-16">
