@@ -9,12 +9,13 @@ import GlitchTitle from "../components/GlitchTitle";
 import BlogPosts from "../components/BlogPosts";
 import LeadingLine from "../components/LeadingLine";
 import ButtonLink from "../components/ButtonLink";
-import ButtonLinkSimple from "../components/ButtonLinkSimple";
 import PageSection from "../components/PageSection";
 import Calendar from "../components/Calendar";
 import Planet from "../components/Svg/Planet";
 import PlanetRocket from "../components/Svg/PlanetRocket";
 import RoadMap from "../components/RoadMap";
+import RoadMapBlob1 from "../components/RoadMapBlob1";
+import RoadMapBlob2 from "../components/RoadMapBlob2";
 
 const IndexPage = () => {
   const intl = useIntl();
@@ -23,7 +24,7 @@ const IndexPage = () => {
       <Seo title={intl.formatMessage({ id: "page-index-title" })} />
       <main>
         <Container>
-          <div className="relative">
+          <div className="relative md:mt-12">
             <div className="mx-auto max-w-[50rem]">
               <Planet />
             </div>
@@ -38,7 +39,7 @@ const IndexPage = () => {
                   >
                     Toward a new era of finance
                   </GlitchTitle>
-                  <LeadingLine className="text-current">
+                  <LeadingLine className="text-current !mb-0">
                     We are Vega. Web3's native derivatives layer.
                   </LeadingLine>
                 </div>
@@ -47,34 +48,46 @@ const IndexPage = () => {
           </div>
         </Container>
 
-        <div className="mt-24">
+        <div className="mt-16 md:mt-24">
           <Ticker />
         </div>
 
         <Container>
           <PageSection>
             <div className="md:grid md:grid-cols-12 items-center">
-              <div className="md:col-span-7 pr-12">
-                <div className="max-w-[38.75rem]">
-                  <div className="title-l mb-4">
+              <div className="md:col-span-7 md:pr-12">
+                <div className="max-w-[38.75rem] text-center md:text-left mx-auto">
+                  <div className="title-m md:title-l mb-4">
                     We're throwing open the doors to the new financial system
                     &mdash; and a truly democratic society.
                   </div>
                   <div className="copy-s !mb-8">
-                    Don’t ask for permission. Ask how you can play a part in
+                    Don't ask for permission. Ask how you can play a part in
                     this new world of DeFi. Decentralised derivatives markets
                     are here to stay.
                   </div>
                   <div>
-                    <div className="inline-block mb-4 mr-4">
-                      <ButtonLink text="Learn more" link="/key-concepts" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-none mx-auto">
+                      <div>
+                        <ButtonLink
+                          text="Learn more"
+                          link="/key-concepts"
+                          className="w-full"
+                        />
+                      </div>
+                      <div>
+                        <ButtonLink
+                          text="Join the community"
+                          link="/community"
+                          className="w-full"
+                        />
+                      </div>
                     </div>
-                    <ButtonLink text="Join the community" link="/community" />
                   </div>
                 </div>
               </div>
               <div className="md:col-span-5 mt-20 md:mt-0">
-                <div className="max-w-[32rem] mx-auto">
+                <div className="max-w-[18.75rem] md:max-w-[32rem] mx-auto">
                   <PlanetRocket />
                 </div>
               </div>
@@ -82,7 +95,17 @@ const IndexPage = () => {
           </PageSection>
 
           <PageSection>
-            <RoadMap />
+            <div className="md:grid md:grid-cols-12">
+              <div className="hidden md:block md:col-span-3 -translate-x-1/2 xxl:translate-x-0">
+                <RoadMapBlob1 className="relative top-[30%]" />
+              </div>
+              <div className="md:col-span-6">
+                <RoadMap />
+              </div>
+              <div className="hidden md:block md:col-span-3 translate-x-1/2 xxl:translate-x-0">
+                <RoadMapBlob2 className="relative md:top-[45%] lg:top-[60%]" />
+              </div>
+            </div>
           </PageSection>
 
           <PageSection>

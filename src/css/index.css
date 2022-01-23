@@ -112,6 +112,15 @@ body {
     @apply mb-4;
   }
 
+  .title-xxxs {
+    /* 13px */
+    @apply text-[0.9375rem];
+    @apply leading-[0.9];
+    @apply uppercase;
+    @apply tracking-[0.01rem];
+    font-variant-ligatures: normal;
+  }
+
   .title-xxs {
     /* 15px */
     @apply text-[0.9375rem];

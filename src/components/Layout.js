@@ -12,9 +12,9 @@ const Layout = (props) => {
           lang: "en",
         }}
       />
-      <div className="dark:text-white dark:bg-black bg-white">
+      <div className="dark:text-white dark:bg-black bg-white max-w-full overflow-x-hidden">
         <SiteBanner />
-        <div className="flex flex-col min-h-screen max-w-[90rem] mx-auto">
+        <div className="flex flex-col min-h-screen">
           <div className="grow">
             <Header />
             {props.children}

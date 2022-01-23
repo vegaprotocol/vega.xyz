@@ -32,7 +32,7 @@ const GlitchTitle = (props) => {
 
   const Tag = `h${level && [1, 2, 3, 4, 5, 6].includes(level) ? level : "1"}`;
 
-  const commonStyles = "mb-4 mx-auto pr-6";
+  const commonStyles = "mb-4 mx-auto";
   let styles = "";
 
   if (Array.isArray(size) && size.length === 3) {
@@ -40,7 +40,7 @@ const GlitchTitle = (props) => {
       size[1] / 16
     }rem] lg:text-[${size[2] / 16}rem]`;
   } else if (size === "large") {
-    styles = `${commonStyles} title-l md:title-xxl lg:title-xxxl`;
+    styles = `${commonStyles} title-m md:title-xxl lg:title-xxxl`;
   } else if (size === "medium") {
     styles = `${commonStyles} title-m md:title-l lg:title-xxl`;
   } else {

@@ -4,209 +4,729 @@ import Moshed from "../../video/moshed.mp4";
 const PlanetRocket = ({ className }) => {
   return (
     <div
-      className={`pb-[148.2100239%] relative w-full ${
+      className={`pb-[146.0136674%] relative w-full ${
         className ? className : ""
       }`}
     >
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute left-0 top-0 w-full h-full object-cover"
-      >
-        <source src={Moshed} type="video/mp4" />
-      </video>
+      <div className="absolute inset-px">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute left-0 top-0 w-full h-full object-cover"
+        >
+          <source src={Moshed} type="video/mp4" />
+        </video>
+      </div>
 
       <svg
-        version="1.1"
-        id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        viewBox="0 0 419 621"
+        viewBox="0 0 439 641"
         xmlSpace="preserve"
         className="absolute left-0 right-0 top-0 h-auto"
       >
         <path
-          d="M0,0v621h419V101.5c0,23.5-19,42.5-42.5,42.5S334,125,334,101.5S353,59,376.5,59S419,78,419,101.5V0H0z M383,378
-	c0,102.2-82.8,185-185,185S13,480.2,13,378s82.8-185,185-185S383,275.8,383,378z"
+          d="M0,0v641h439V0H0z M208,573c-102.2,0-185-82.8-185-185s82.8-185,185-185s185,82.8,185,185S310.2,573,208,573z M386.5,154
+	c-23.5,0-42.5-19-42.5-42.5S363,69,386.5,69S429,88,429,111.5S410,154,386.5,154z"
           className="fill-white dark:fill-black"
         />
-        <g className="fill-vega-yellow">
-          <path d="M194,45h-3v3h3V45z" />
-          <path d="M194,54h3v3h3v-3h3v-6h-9V54z" />
-          <path d="M206,45h-3v3h3V45z" />
-          <path d="M197,42h-1h-1h-1v3h3V42z" />
-          <path d="M203,42h-1h-1h-1v3h3V42z" />
+        <g>
+          <path fill="#DFFF0B" d="M204,55h-3v3h3V55z" />
+          <path fill="#DFFF0B" d="M204,64h3v3h3v-3h3v-6h-9V64z" />
+          <path fill="#DFFF0B" d="M216,55h-3v3h3V55z" />
+          <path fill="#DFFF0B" d="M207,52h-1h-1h-1v3h3V52z" />
+          <path fill="#DFFF0B" d="M213,52h-1h-1h-1v3h3V52z" />
         </g>
-        <g className="dark:fill-white fill-black">
+        <g>
           <g>
-            <rect x="197" y="72" width="3" height="3" />
-            <rect x="197" y="63" width="3" height="3" />
-            <rect x="197" y="90" width="3" height="3" />
-            <rect x="197" y="81" width="3" height="3" />
-            <rect x="197" y="108" width="3" height="3" />
-            <rect x="197" y="99" width="3" height="3" />
-            <rect x="197" y="126" width="3" height="3" />
-            <rect x="197" y="117" width="3" height="3" />
-            <rect x="197" y="144" width="3" height="3" />
-            <rect x="197" y="135" width="3" height="3" />
-            <rect x="197" y="162" width="3" height="3" />
-            <rect x="197" y="153" width="3" height="3" />
-            <rect x="197" y="180" width="3" height="3" />
-            <rect x="197" y="171" width="3" height="3" />
-            <rect x="197" y="189" width="3" height="3" />
+            <rect
+              x="207"
+              y="82"
+              fill="#fff"
+              width="3"
+              height="3"
+              className="dark:fill-white fill-black"
+            />
+            <rect
+              x="207"
+              y="73"
+              fill="#fff"
+              width="3"
+              height="3"
+              className="dark:fill-white fill-black"
+            />
+            <rect
+              x="207"
+              y="100"
+              fill="#fff"
+              width="3"
+              height="3"
+              className="dark:fill-white fill-black"
+            />
+            <rect
+              x="207"
+              y="91"
+              fill="#fff"
+              width="3"
+              height="3"
+              className="dark:fill-white fill-black"
+            />
+            <rect
+              x="207"
+              y="109"
+              fill="#fff"
+              width="3"
+              height="3"
+              className="dark:fill-white fill-black"
+            />
+            <rect
+              x="207"
+              y="118"
+              fill="#fff"
+              width="3"
+              height="3"
+              className="dark:fill-white fill-black"
+            />
+            <rect
+              x="207"
+              y="127"
+              fill="#fff"
+              width="3"
+              height="3"
+              className="dark:fill-white fill-black"
+            />
+            <rect
+              x="207"
+              y="136"
+              className="dark:fill-white fill-black"
+              width="3"
+              height="3"
+            />
+            <rect
+              x="207"
+              y="145"
+              className="dark:fill-white fill-black"
+              width="3"
+              height="3"
+            />
+            <rect
+              x="207"
+              y="154"
+              fill="#fff"
+              className="opacity-80 dark:fill-white fill-black"
+              width="3"
+              height="3"
+            />
+            <rect
+              x="207"
+              y="163"
+              fill="#fff"
+              className="opacity-60 dark:fill-white fill-black"
+              width="3"
+              height="3"
+            />
+
+            <rect
+              x="207"
+              y="172"
+              fill="#fff"
+              className="opacity-40 dark:fill-white fill-black"
+              width="3"
+              height="3"
+            />
+
+            <rect
+              x="207"
+              y="181"
+              fill="#fff"
+              className="opacity-30 dark:fill-white fill-black"
+              width="3"
+              height="3"
+            />
+            <rect
+              x="207"
+              y="190"
+              fill="#fff"
+              className="opacity-20 dark:fill-white fill-black"
+              width="3"
+              height="3"
+            />
+            <rect
+              x="207"
+              y="199"
+              fill="#fff"
+              className="opacity-10 dark:fill-white fill-black"
+              width="3"
+              height="3"
+            />
           </g>
-          <path d="M313.6,336.8h-3.2v3.2h3.2V336.8z" />
-          <path d="M316.8,333.6v-3.2h-3.2v3.2v3.2h3.2V333.6z" />
-          <path d="M310.4,339.9H304v3.2h6.4V339.9z" />
-          <path d="M313.6,343.1h-3.2v3.2h3.2V343.1z" />
-          <path d="M316.8,346.3h-3.2v6.4h3.2V346.3z" />
-          <path d="M319.9,343.1h-3.2v3.2h3.2V343.1z" />
-          <path d="M326.3,339.9h-6.4v3.2h6.4V339.9z" />
-          <path d="M319.9,336.8h-3.2v3.2h3.2V336.8z" />
-          <path d="M329.3,327.2h-3.2v3.2h3.2V327.2z" />
-          <path d="M332.5,324h-3.2v3.2h3.2V324z" />
-          <path d="M335.6,320.8h-3.2v3.2h3.2V320.8z" />
-          <path d="M338.8,317.6h-3.2v3.2h3.2V317.6z" />
-          <path d="M342,314.4h-3.2v3.2h3.2V314.4z" />
-          <path d="M345.2,311.3H342v3.2h3.2V311.3z" />
-          <path d="M348.4,308.1h-3.2v3.2h3.2V308.1z" />
-          <path d="M351.6,304.9h-3.2v3.2h3.2V304.9z" />
-          <path d="M354.8,301.7h-3.2v3.2h3.2V301.7z" />
-          <path d="M358,298.5h-3.2v3.2h3.2V298.5z" />
-          <path d="M361.1,295.3H358v3.2h3.2v-3.2H361.1z" />
-          <path d="M364.3,292.1h-3.2v3.2h3.2V292.1z" />
-          <path d="M367.5,288.9h-3.2v3.2h3.2V288.9z" />
-          <path d="M370.7,285.8h-3.2v3.2h3.2V285.8z" />
-          <path d="M373.9,282.6h-3.2v3.2h3.2V282.6z" />
-          <path d="M377.1,279.4h-3.2v3.2h3.2V279.4z" />
-          <path d="M380.3,276.2h-3.2v3.2h3.2V276.2z" />
-          <path d="M383.5,273h-3.2v3.2h3.2V273z" />
-          <path d="M200,0h-3v6h3V0z" />
-          <path d="M197,6h-3v3h3V6z" />
-          <path d="M203,6h-3v3h3V6z" />
-          <path d="M194,33V9h-3v24h-3v3h3v3h3v-3V33z" />
-          <path d="M209,36v-3h-3V9h-3v24v3v3h3v-3H209z" />
-          <path d="M188,36h-3v3h-3v3h9v-3h-3V36z" />
-          <path d="M212,39v-3h-3v3h-3v3h3h3h3v-3H212z" />
-          <path d="M200,33h-3v6h-3v3h3v3h3v-3h3v-3h-3V33z" />
-          <path d="M16.2,480.6H13v3.2h3.2V480.6z" />
-          <path d="M19.4,477.4h-3.2v3.2h3.2V477.4z" />
-          <path d="M22.6,474.2h-3.2v3.2h3.2V474.2z" />
-          <path d="M25.8,471h-3.2v3.2h3.2V471z" />
-          <path d="M28.9,467.8h-3.2v3.2h3.2V467.8z" />
-          <path d="M32.1,464.6h-3.2v3.2h3.2V464.6z" />
-          <path d="M35.3,461.4h-3.2v3.2h3.2V461.4z" />
-          <path d="M38.5,458.3h-3.2v3.2h3.2V458.3z" />
-          <path d="M41.7,455.1h-3.2v3.2h3.2V455.1z" />
-          <path d="M44.9,451.9h-3.2v3.2h3.2V451.9z" />
-          <path d="M48.1,448.7h-3.2v3.2h3.2V448.7z" />
-          <path d="M51.3,445.5h-3.2v3.2h3.2V445.5z" />
-          <path d="M54.4,442.3h-3.2v3.2h3.2V442.3z" />
-          <path d="M57.6,439.1h-3.2v3.2h3.2V439.1z" />
-          <path d="M60.8,435.9h-3.2v3.2h3.2V435.9z" />
-          <path d="M64,432.8h-3.2v3.2H64V432.8z" />
-          <path d="M67.2,429.6H64v3.2h3.2V429.6z" />
-          <path d="M70.4,426.4h-3.2v3.2h3.2V426.4z" />
-          <path d="M73.6,423.2h-3.2v3.2h3.2V423.2z" />
-          <path d="M76.8,420h-3.2v3.2h3.2V420z" />
-          <path d="M80.2,416.6H77v3.2h3.2V416.6z" />
-          <path d="M83.4,413.4h-3.2v3.2h3.2V413.4z" />
-          <path d="M86.6,410.2h-3.2v3.2h3.2V410.2z" />
-          <path d="M89.8,407h-3.2v3.2h3.2V407z" />
-          <path d="M222.3,208.6h-3.2v3.2h3.2V208.6z" />
-          <path d="M225.5,205.4h-3.2v3.2h3.2V205.4z" />
-          <path d="M228.7,202.2h-3.2v3.2h3.2V202.2z" />
-          <path d="M231.9,199h-3.2v3.2h3.2V199z" />
-          <path d="M235.1,195.8h-3.2v3.2h3.2V195.8z" />
-          <path d="M238.2,192.6H235v3.2h3.2V192.6z" />
-          <path d="M241.4,189.4h-3.2v3.2h3.2V189.4z" />
-          <path d="M244.6,186.3h-3.2v3.2h3.2V186.3z" />
-          <path d="M247.8,183.1h-3.2v3.2h3.2V183.1z" />
-          <path d="M251,179.9h-3.2v3.2h3.2V179.9z" />
-          <path d="M254.2,176.7H251v3.2h3.2V176.7z" />
-          <path d="M257.4,173.5h-3.2v3.2h3.2V173.5z" />
-          <path d="M260.6,170.3h-3.2v3.2h3.2V170.3z" />
-          <path d="M263.8,167.1h-3.2v3.2h3.2V167.1z" />
-          <path d="M266.9,163.9h-3.2v3.2h3.2V163.9z" />
-          <path d="M270.1,160.8h-3.2v3.2h3.2V160.8z" />
-          <path d="M273.3,157.6h-3.2v3.2h3.2V157.6z" />
-          <path d="M276.5,154.4h-3.2v3.2h3.2V154.4z" />
-          <path d="M279.7,151.2h-3.2v3.2h3.2V151.2z" />
-          <path d="M282.9,148h-3.2v3.2h3.2V148z" />
-          <path d="M286.3,144.6h-3.2v3.2h3.2V144.6z" />
-          <path d="M289.5,141.4h-3.2v3.2h3.2V141.4z" />
-          <path d="M292.7,138.2h-3.2v3.2h3.2V138.2z" />
-          <path d="M295.9,135h-3.2v3.2h3.2V135z" />
-          <path d="M177.2,253.7H174v3.2h3.2V253.7z" />
-          <path d="M180.4,250.5h-3.2v3.2h3.2V250.5z" />
-          <path d="M183.6,247.3h-3.2v3.2h3.2V247.3z" />
-          <path d="M186.8,244.1h-3.2v3.2h3.2V244.1z" />
-          <path d="M189.9,240.9h-3.2v3.2h3.2V240.9z" />
-          <path d="M193.1,237.8h-3.2v3.2h3.2V237.8z" />
-          <path d="M196.3,234.6h-3.2v3.2h3.2V234.6z" />
-          <path d="M199.5,231.4h-3.2v3.2h3.2V231.4z" />
-          <path d="M202.7,228.2h-3.2v3.2h3.2V228.2z" />
-          <path d="M205.9,225h-3.2v3.2h3.2V225z" />
-          <path d="M209.3,221.6h-3.2v3.2h3.2V221.6z" />
-          <path d="M212.5,218.4h-3.2v3.2h3.2V218.4z" />
-          <path d="M215.7,215.2h-3.2v3.2h3.2V215.2z" />
-          <path d="M218.9,212h-3.2v3.2h3.2V212z" />
-          <path d="M351.6,173.4h-3.2v3.2h3.2V173.4z" />
-          <path d="M354.8,170.2V167h-3.2v3.2v3.2h3.2V170.2z" />
-          <path d="M348.4,176.6H342v3.2h6.4V176.6z" />
-          <path d="M351.6,179.8h-3.2v3.2h3.2V179.8z" />
-          <path d="M354.8,182.9h-3.2v6.4h3.2V182.9z" />
-          <path d="M357.9,179.8h-3.2v3.2h3.2V179.8z" />
-          <path d="M364.3,176.6h-6.4v3.2h6.4V176.6z" />
-          <path d="M357.9,173.4h-3.2v3.2h3.2V173.4z" />
-          <path d="M259.2,69.2H256v3.2h3.2V69.2z" />
-          <path d="M262.4,66h-3.2v3.2h3.2V66z" />
-          <path d="M262.4,72.4h-3.2v3.2h3.2V72.4z" />
-          <path d="M265.6,69.2h-3.2v3.2h3.2V69.2z" />
-          <path d="M100.2,150.2H97v3.2h3.2V150.2z" />
-          <path d="M103.4,147h-3.2v3.2h3.2V147z" />
-          <path d="M103.4,153.4h-3.2v3.2h3.2V153.4z" />
-          <path d="M106.6,150.2h-3.2v3.2h3.2V150.2z" />
-          <path d="M94.2,282.2H91v3.2h3.2V282.2z" />
-          <path d="M97.4,279h-3.2v3.2h3.2V279z" />
-          <path d="M97.4,285.4h-3.2v3.2h3.2V285.4z" />
-          <path d="M100.6,282.2h-3.2v3.2h3.2V282.2z" />
-          <path d="M331.2,549.2H328v3.2h3.2V549.2z" />
-          <path d="M334.4,546h-3.2v3.2h3.2V546z" />
-          <path d="M334.4,552.4h-3.2v3.2h3.2V552.4z" />
-          <path d="M337.6,549.2h-3.2v3.2h3.2V549.2z" />
-          <path d="M3.2,490.2H0v3.2h3.2V490.2z" />
-          <path d="M6.4,487H3.2v3.2h3.2V487z" />
-          <path d="M6.4,493.4H3.2v3.2h3.2V493.4z" />
-          <path d="M9.6,490.2H6.4v3.2h3.2V490.2z" />
-          <path d="M33.6,99.4h-3.2v3.2h3.2V99.4z" />
-          <path d="M36.8,96.2V93h-3.2v3.2v3.2h3.2V96.2z" />
-          <path d="M30.4,102.6H24v3.2h6.4V102.6z" />
-          <path d="M33.6,105.8h-3.2v3.2h3.2V105.8z" />
-          <path d="M36.8,108.9h-3.2v6.4h3.2V108.9z" />
-          <path d="M39.9,105.8h-3.2v3.2h3.2V105.8z" />
-          <path d="M46.3,102.6h-6.4v3.2h6.4V102.6z" />
-          <path d="M39.9,99.4h-3.2v3.2h3.2V99.4z" />
-          <path d="M154.6,604.4h-3.2v3.2h3.2V604.4z" />
-          <path d="M157.8,601.2V598h-3.2v3.2v3.2h3.2V601.2z" />
-          <path d="M151.4,607.6H145v3.2h6.4V607.6z" />
-          <path d="M154.6,610.8h-3.2v3.2h3.2V610.8z" />
-          <path d="M157.8,613.9h-3.2v6.4h3.2V613.9z" />
-          <path d="M160.9,610.8h-3.2v3.2h3.2V610.8z" />
-          <path d="M167.3,607.6h-6.4v3.2h6.4V607.6z" />
-          <path d="M160.9,604.4h-3.2v3.2h3.2V604.4z" />
+          <path
+            className="dark:fill-white fill-black"
+            d="M323.6,346.8h-3.2v3.2h3.2V346.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M326.8,343.6v-3.2h-3.2v3.2v3.2h3.2V343.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M320.4,349.9H314v3.2h6.4V349.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M323.6,353.1h-3.2v3.2h3.2V353.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M326.8,356.3h-3.2v6.4h3.2V356.3z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M329.9,353.1h-3.2v3.2h3.2V353.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M336.3,349.9h-6.4v3.2h6.4V349.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M329.9,346.8h-3.2v3.2h3.2V346.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M339.3,337.2h-3.2v3.2h3.2V337.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M342.5,334h-3.2v3.2h3.2V334z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M345.6,330.8h-3.2v3.2h3.2V330.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M348.8,327.6h-3.2v3.2h3.2V327.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M352,324.4h-3.2v3.2h3.2V324.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M355.2,321.3H352v3.2h3.2V321.3z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M358.4,318.1h-3.2v3.2h3.2V318.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M361.6,314.9h-3.2v3.2h3.2V314.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M364.8,311.7h-3.2v3.2h3.2V311.7z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M368,308.5h-3.2v3.2h3.2V308.5z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M371.1,305.3H368v3.2h3.2v-3.2H371.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M374.3,302.1h-3.2v3.2h3.2V302.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M377.5,298.9h-3.2v3.2h3.2V298.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M380.7,295.8h-3.2v3.2h3.2V295.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M383.9,292.6h-3.2v3.2h3.2V292.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M387.1,289.4h-3.2v3.2h3.2V289.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M390.3,286.2h-3.2v3.2h3.2V286.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M393.5,283h-3.2v3.2h3.2V283z"
+          />
+          <path className="dark:fill-white fill-black" d="M210,10h-3v6h3V10z" />
+          <path className="dark:fill-white fill-black" d="M207,16h-3v3h3V16z" />
+          <path className="dark:fill-white fill-black" d="M213,16h-3v3h3V16z" />
+          <path
+            className="dark:fill-white fill-black"
+            d="M204,43V19h-3v24h-3v3h3v3h3v-3V43z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M219,46v-3h-3V19h-3v24v3v3h3v-3H219z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M198,46h-3v3h-3v3h9v-3h-3V46z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M222,49v-3h-3v3h-3v3h3h3h3v-3H222z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M210,43h-3v6h-3v3h3v3h3v-3h3v-3h-3V43z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M26.2,490.6H23v3.2h3.2V490.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M29.4,487.4h-3.2v3.2h3.2V487.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M32.6,484.2h-3.2v3.2h3.2V484.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M35.8,481h-3.2v3.2h3.2V481z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M38.9,477.8h-3.2v3.2h3.2V477.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M42.1,474.6h-3.2v3.2h3.2V474.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M45.3,471.4h-3.2v3.2h3.2V471.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M48.5,468.3h-3.2v3.2h3.2V468.3z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M51.7,465.1h-3.2v3.2h3.2V465.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M54.9,461.9h-3.2v3.2h3.2V461.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M58.1,458.7h-3.2v3.2h3.2V458.7z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M61.3,455.5h-3.2v3.2h3.2V455.5z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M64.4,452.3h-3.2v3.2h3.2V452.3z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M67.6,449.1h-3.2v3.2h3.2V449.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M70.8,445.9h-3.2v3.2h3.2V445.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M74,442.8h-3.2v3.2H74V442.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M77.2,439.6H74v3.2h3.2V439.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M80.4,436.4h-3.2v3.2h3.2V436.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M83.6,433.2h-3.2v3.2h3.2V433.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M86.8,430h-3.2v3.2h3.2V430z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M90.2,426.6H87v3.2h3.2V426.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M93.4,423.4h-3.2v3.2h3.2V423.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M96.6,420.2h-3.2v3.2h3.2V420.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M99.8,417h-3.2v3.2h3.2V417z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M232.3,218.6h-3.2v3.2h3.2V218.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M235.5,215.4h-3.2v3.2h3.2V215.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M238.7,212.2h-3.2v3.2h3.2V212.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M241.9,209h-3.2v3.2h3.2V209z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M245.1,205.8h-3.2v3.2h3.2V205.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M248.2,202.6H245v3.2h3.2V202.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M251.4,199.4h-3.2v3.2h3.2V199.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M254.6,196.3h-3.2v3.2h3.2V196.3z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M257.8,193.1h-3.2v3.2h3.2V193.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M261,189.9h-3.2v3.2h3.2V189.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M264.2,186.7H261v3.2h3.2V186.7z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M267.4,183.5h-3.2v3.2h3.2V183.5z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M270.6,180.3h-3.2v3.2h3.2V180.3z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M273.8,177.1h-3.2v3.2h3.2V177.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M276.9,173.9h-3.2v3.2h3.2V173.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M280.1,170.8h-3.2v3.2h3.2V170.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M283.3,167.6h-3.2v3.2h3.2V167.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M286.5,164.4h-3.2v3.2h3.2V164.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M289.7,161.2h-3.2v3.2h3.2V161.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M292.9,158h-3.2v3.2h3.2V158z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M296.3,154.6h-3.2v3.2h3.2V154.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M299.5,151.4h-3.2v3.2h3.2V151.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M302.7,148.2h-3.2v3.2h3.2V148.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M305.9,145h-3.2v3.2h3.2V145z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M187.2,263.7H184v3.2h3.2V263.7z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M190.4,260.5h-3.2v3.2h3.2V260.5z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M193.6,257.3h-3.2v3.2h3.2V257.3z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M196.8,254.1h-3.2v3.2h3.2V254.1z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M199.9,250.9h-3.2v3.2h3.2V250.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M203.1,247.8h-3.2v3.2h3.2V247.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M206.3,244.6h-3.2v3.2h3.2V244.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M209.5,241.4h-3.2v3.2h3.2V241.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M212.7,238.2h-3.2v3.2h3.2V238.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M215.9,235h-3.2v3.2h3.2V235z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M219.3,231.6h-3.2v3.2h3.2V231.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M222.5,228.4h-3.2v3.2h3.2V228.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M225.7,225.2h-3.2v3.2h3.2V225.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M228.9,222h-3.2v3.2h3.2V222z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M361.6,183.4h-3.2v3.2h3.2V183.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M364.8,180.2V177h-3.2v3.2v3.2h3.2V180.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M358.4,186.6H352v3.2h6.4V186.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M361.6,189.8h-3.2v3.2h3.2V189.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M364.8,192.9h-3.2v6.4h3.2V192.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M367.9,189.8h-3.2v3.2h3.2V189.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M374.3,186.6h-6.4v3.2h6.4V186.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M367.9,183.4h-3.2v3.2h3.2V183.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M269.2,79.2H266v3.2h3.2V79.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M272.4,76h-3.2v3.2h3.2V76z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M272.4,82.4h-3.2v3.2h3.2V82.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M275.6,79.2h-3.2v3.2h3.2V79.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M110.2,160.2H107v3.2h3.2V160.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M113.4,157h-3.2v3.2h3.2V157z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M113.4,163.4h-3.2v3.2h3.2V163.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M116.6,160.2h-3.2v3.2h3.2V160.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M104.2,292.2H101v3.2h3.2V292.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M107.4,289h-3.2v3.2h3.2V289z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M107.4,295.4h-3.2v3.2h3.2V295.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M110.6,292.2h-3.2v3.2h3.2V292.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M341.2,559.2H338v3.2h3.2V559.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M344.4,556h-3.2v3.2h3.2V556z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M344.4,562.4h-3.2v3.2h3.2V562.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M347.6,559.2h-3.2v3.2h3.2V559.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M13.2,500.2H10v3.2h3.2V500.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M16.4,497h-3.2v3.2h3.2V497z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M16.4,503.4h-3.2v3.2h3.2V503.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M19.6,500.2h-3.2v3.2h3.2V500.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M43.6,109.4h-3.2v3.2h3.2V109.4z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M46.8,106.2V103h-3.2v3.2v3.2h3.2V106.2z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M40.4,112.6H34v3.2h6.4V112.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M43.6,115.8h-3.2v3.2h3.2V115.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M46.8,118.9h-3.2v6.4h3.2V118.9z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M49.9,115.8h-3.2v3.2h3.2V115.8z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M56.3,112.6h-6.4v3.2h6.4V112.6z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M49.9,109.4h-3.2v3.2h3.2V109.4z"
+          />
+
+          <g>
+            <path
+              className="dark:fill-white fill-black"
+              d="M164.6,614.4h-3.2v3.2h3.2V614.4z"
+            />
+            <path
+              className="dark:fill-white fill-black"
+              d="M167.8,611.2V608h-3.2v3.2v3.2h3.2V611.2z"
+            />
+            <path
+              className="dark:fill-white fill-black"
+              d="M161.4,617.6H155v3.2h6.4V617.6z"
+            />
+            <path
+              className="dark:fill-white fill-black"
+              d="M164.6,620.8h-3.2v3.2h3.2V620.8z"
+            />
+            <path
+              className="dark:fill-white fill-black"
+              d="M167.8,623.9h-3.2v6.4h3.2V623.9z"
+            />
+            <path
+              className="dark:fill-white fill-black"
+              d="M170.9,620.8h-3.2v3.2h3.2V620.8z"
+            />
+            <path
+              className="dark:fill-white fill-black"
+              d="M177.3,617.6h-6.4v3.2h6.4V617.6z"
+            />
+            <path
+              className="dark:fill-white fill-black"
+              d="M170.9,614.4h-3.2v3.2h3.2V614.4z"
+            />
+          </g>
         </g>
-        <g className="fill-white">
-          <path d="M210.5,444h-24.8v24.8h24.8V444z" />
-          <path d="M235.3,419.1h-24.8V444h24.8V419.1z" />
-          <path d="M285,394.3h-24.8v24.8H285V394.3z" />
-          <path d="M260.2,294.9h-24.8v99.4h24.8V294.9z" />
-          <path d="M185.7,419.1h-24.8V444h24.8V419.1z" />
-          <path d="M160.8,294.9H136v124.2h24.8V294.9z" />
+        <g>
+          <path className="fill-white" d="M220.5,454h-24.8v24.8h24.8V454z" />
+          <path className="fill-white" d="M245.3,429.1h-24.8V454h24.8V429.1z" />
+          <path className="fill-white" d="M295,404.3h-24.8v24.8H295V404.3z" />
+          <path
+            className="fill-white"
+            d="M270.2,304.9h-24.8v99.4h24.8V304.9z"
+          />
+          <path className="fill-white" d="M195.7,429.1h-24.8V454h24.8V429.1z" />
+          <path className="fill-white" d="M170.8,304.9H146v124.2h24.8V304.9z" />
         </g>
       </svg>
     </div>

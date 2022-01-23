@@ -8,15 +8,17 @@ const Planets = ({ className }) => {
         className ? className : ""
       }`}
     >
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute left-0 top-0 w-full h-full object-cover"
-      >
-        <source src={Moshed} type="video/mp4" />
-      </video>
+      <div className="absolute inset-px">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute left-0 top-0 w-full h-full object-cover"
+        >
+          <source src={Moshed} type="video/mp4" />
+        </video>
+      </div>
       <svg
         viewBox="0 0 811 547"
         className="absolute left-0 right-0 top-0 h-auto"

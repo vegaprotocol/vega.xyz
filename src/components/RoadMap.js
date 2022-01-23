@@ -1,9 +1,8 @@
 import React from "react";
 import RoadMapBlock from "./RoadMapBlock";
 import GlitchTitle from "../components/GlitchTitle";
-import ButtonLinkSimple from "../components/ButtonLinkSimple";
 
-const RoadMap = ({}) => {
+const RoadMap = () => {
   return (
     <div
       className="
@@ -19,7 +18,6 @@ const RoadMap = ({}) => {
                 before:to-white
                 dark:before:from-white
                 dark:before:to-black
-                
                 after:content-['']
                 after:absolute
                 after:top-[3px]
@@ -40,13 +38,13 @@ const RoadMap = ({}) => {
         </div>
 
         <div className="pt-20">
-          <div className="relative border border-current p-8 md:p-12 pb-12 dark:bg-black bg-white">
+          <div className="relative border border-current py-8 px-4 md:p-12 pb-12 dark:bg-black bg-white mx-auto max-w-[35rem]">
             <div className="title-m mb-6">
               Current Status:
               <br />
               <span className="text-vega-mid-grey">Restricted Mainnet</span>
             </div>
-            <div class="copy-xs !mb-0 text-vega-mid-grey">
+            <div className="copy-xs !mb-0 text-vega-mid-grey">
               This is the second of 3 launch phases of the network in which the
               validators are running a decentralised Vega network connected to
               the Ethereum mainnet. This phase provides a proving ground for the
