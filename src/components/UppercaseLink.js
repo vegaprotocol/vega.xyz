@@ -19,11 +19,20 @@ const UppercaseLink = ({ text, link }) => {
       </a>
     );
   } else {
-    return (
-      <Link to={link} className={linkClass}>
-        {text}
-      </Link>
-    );
+    const file = /\.[0-9a-z]+$/i.test(link);
+    if (file) {
+      return (
+        <a href={link} className={linkClass}>
+          {text}
+        </a>
+      );
+    } else {
+      return (
+        <Link to={link} className={linkClass}>
+          {text}
+        </Link>
+      );
+    }
   }
 };
 
