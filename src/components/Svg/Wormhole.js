@@ -1,7 +1,7 @@
 import React from "react";
-import Moshed from "../video/moshed.mp4";
+import Moshed from "../../video/moshed.mp4";
 
-const Blob1 = () => {
+const Wormhhole = () => {
   return (
     <div className="pb-[60.4410143%] relative w-full">
       <div className="absolute inset-px">
@@ -124,4 +124,4 @@ const Blob1 = () => {
   );
 };
 
-export default Blob1;
+export default Wormhhole;

@@ -4,15 +4,17 @@ import Moshed from "../video/moshed.mp4";
 const GhostParty = () => {
   return (
     <div className="pb-[33.9434276%] relative w-full">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute left-0 top-0 w-full h-full object-cover"
-      >
-        <source src={Moshed} type="video/mp4" />
-      </video>
+      <div className="absolute inset-px">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute left-0 top-0 w-full h-full object-cover"
+        >
+          <source src={Moshed} type="video/mp4" />
+        </video>
+      </div>
 
       <svg
         xmlns="http://www.w3.org/2000/svg"

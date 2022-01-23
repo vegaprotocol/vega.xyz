@@ -3,20 +3,18 @@ import Moshed from "../../video/moshed.mp4";
 
 const UniverseRight = ({ className }) => {
   return (
-    <div
-      className={`pb-[149.3959732%] relative w-full ${
-        className ? className : ""
-      }`}
-    >
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute left-0 top-0 w-full h-full object-cover"
-      >
-        <source src={Moshed} type="video/mp4" />
-      </video>
+    <div className="pb-[149.3959732%] relative w-full">
+      <div className="absolute inset-px">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute left-0 top-0 w-full h-full object-cover"
+        >
+          <source src={Moshed} type="video/mp4" />
+        </video>
+      </div>
       <svg
         xmlSpace="preserve"
         viewBox="0 0 447 667.8"
