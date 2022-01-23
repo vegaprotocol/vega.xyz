@@ -2,10 +2,8 @@ import React from "react";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import Seo from "../../components/Seo";
-import LinkArrow from "../../components/Svg/LinkArrow";
 import BoxTitle from "../../components/BoxTitle";
 import Sticky from "react-stickynode";
-import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
 import ConceptBlock from "../../components/ConceptBlock";
 import ButtonLink from "../../components/ButtonLink";
@@ -105,7 +103,7 @@ const KeyConceptsPage = () => {
                 Be as good as CeFi
               </div>
               <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12">
-                <div className="copy-s text-white">
+                <div className="copy-s text-current">
                   Vega will rival the current financial system, replacing it
                   with one that puts fairness, efficiency, and accessibility at
                   its heart.
@@ -164,7 +162,7 @@ const KeyConceptsPage = () => {
                 Be better than CeFi
               </div>
               <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12">
-                <div className="copy-s text-white">
+                <div className="copy-s text-current">
                   By standardising and automating every step of the trade
                   lifecycle, Vega addresses the shortcomings of traditional
                   trading. And strikes a balance between rigidity and
@@ -374,7 +372,7 @@ const KeyConceptsPage = () => {
                 Help DeFi mature
               </div>
               <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12">
-                <div className="copy-s text-white">
+                <div className="copy-s text-current">
                   Designed from the ground up, and in a modular way to encourage
                   creativity and incentivise participation &mdash; we're
                   creating the critical infrastructure for Web3 and DeFi to
