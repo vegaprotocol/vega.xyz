@@ -20,7 +20,7 @@ class ScreenMode extends React.Component {
     return (
       <button
         aria-label="Switch theme color"
-        className="hover:bg-vega-light-grey dark:hover:bg-vega-off-black rounded-full cursor-pointer"
+        className="transition-colors hover:bg-vega-light-grey dark:hover:bg-vega-off-black rounded-full cursor-pointer"
         onClick={() => {
           this.toggleTheme();
         }}
