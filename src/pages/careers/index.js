@@ -34,7 +34,7 @@ const CareersPage = () => {
     <Layout>
       <Seo title="Careers" />
       <Container>
-        <div className="mb-16 lg:pt-16">
+        <div className="pt-6 lg:pt-16">
           <div className="grid grid-cols-12">
             <div className="relative z-10 col-span-12 col-start-1 row-span-full">
               <h1>
@@ -67,7 +67,7 @@ const CareersPage = () => {
         </div>
 
         {data.allMarkdownRemark.edges.length > 0 ? (
-          <div className="grey-box my-12 p-8 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
+          <div className="grey-box mt-8 md:mt-20 p-8 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
             <h3 className="text-[2.125rem] leading-[0.85] lg:text-[3.375rem] mb-6 uppercase">
               Open Jobs{" "}
               <span className="text-vega-mid-grey">

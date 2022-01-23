@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
-import Blob1 from "../../components/Blob1";
+import Wormhole from "../../components/Svg/Wormhole";
 import Incentives from "../../components/Incentives";
 import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
@@ -19,14 +19,21 @@ import LadderIllustration from "../../components/Svg/LadderIllustration";
 
 const ButtonBlock = () => {
   return (
-    <div>
-      <div className="inline-block mb-4 mr-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-[35rem] mx-auto md:mx-0">
+      <div>
         <ButtonLink
           text="Explore the docs"
           link="https://docs.fairground.vega.xyz/"
+          className="w-full text-center"
         />
       </div>
-      <ButtonLink text="Get the code" link="https://github.com/vegaprotocol" />
+      <div>
+        <ButtonLink
+          text="Get the code"
+          link="https://github.com/vegaprotocol"
+          className="w-full text-center"
+        />
+      </div>
     </div>
   );
 };
@@ -37,16 +44,16 @@ const DevelopPage = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <div className="mb-16 lg:pt-16">
+        <div className="pt-6 mb-16 lg:pt-16">
           <div className="md:grid md:grid-cols-12">
             <div className="relative z-10 col-span-8 col-start-1 row-span-full">
               <h1>
                 <BoxTitle text="Develop" />
               </h1>
-              <div className="title-m max-w-[38.75rem] md:title-l lg:title-xxl mb-6 mt-4">
+              <div className="title-m max-w-[38.75rem] md:title-l lg:title-xxl mb-4 mt-4">
                 Creating the future of DeFi together
               </div>
-              <LeadingLine className="text-white max-w-[30rem]">
+              <LeadingLine className="text-current max-w-[30rem]">
                 Add to the source code or create software using Vega &mdash; and
                 earn rewards.
               </LeadingLine>
@@ -55,8 +62,8 @@ const DevelopPage = ({ data }) => {
               </div>
             </div>
             <div className="relative col-span-6 col-start-7 row-span-full md:mt-0">
-              <div className="translate-x-4 md:translate-x-6 lg:translate-x-8">
-                <Blob1 />
+              <div className="md:translate-x-20 md:scale-125 md:translate-y-12 lg:translate-x-1/4 lg:scale-150">
+                <Wormhole />
               </div>
             </div>
           </div>

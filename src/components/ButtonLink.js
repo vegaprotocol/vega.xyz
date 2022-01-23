@@ -22,7 +22,7 @@ const ButtonLink = ({ text, link, color, minwidth, className }) => {
     borderClass = "border-black dark:border-white";
   }
 
-  let buttonClass = `text-center w-full leading-1 text-[0.9375rem] tracking-[0.01rem] transition-[top] relative z-20 group-hover:-top-1.5 top-0 inline-block px-6 py-3 ${backgroundClass} border ${borderClass} uppercase ${textClass}`;
+  let buttonClass = `w-full leading-1 text-[0.9375rem] tracking-[0.01rem] transition-[top] relative z-20 group-hover:-top-1.5 top-0 inline-block px-6 py-3 ${backgroundClass} border ${borderClass} uppercase ${textClass}`;
 
   if (minwidth) {
     buttonClass += ` flex items-center justify-between min-w-[16.25rem]`;

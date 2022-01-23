@@ -106,7 +106,7 @@ const PartnersBackersPage = () => {
     <Layout>
       <Seo title="Partners &amp; Backers" />
       <Container>
-        <div className="mb-12 md:mb-24 lg:pt-16">
+        <div className="mb-12 pt-6 md:mb-24 lg:pt-16">
           <div className="grid grid-cols-12 gap-6 mb-16 lg:mb-24">
             <div className="col-span-12 md:col-span-4 lg:col-span-6">
               <h1 className="title-m lg:title-xl md:sticky md:top-6 md:pb-16">

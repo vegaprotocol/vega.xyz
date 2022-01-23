@@ -35,10 +35,10 @@ const GlitchTitle = (props) => {
   const commonStyles = "mb-4 mx-auto";
   let styles = "";
 
-  if (Array.isArray(size) && size.length === 3) {
+  if (Array.isArray(size) && size.length === 4) {
     styles = `${commonStyles} title-m text-[${size[0] / 16}rem] md:text-[${
       size[1] / 16
-    }rem] lg:text-[${size[2] / 16}rem]`;
+    }rem] lg:text-[${size[2] / 16}rem] xl:text-[${size[3] / 16}rem]`;
   } else if (size === "large") {
     styles = `${commonStyles} title-m md:title-xxl lg:title-xxxl`;
   } else if (size === "medium") {

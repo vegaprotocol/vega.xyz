@@ -48,7 +48,7 @@ const PapersPage = () => {
     <Layout>
       <Seo title="Papers" />
       <Container>
-        <div className="lg:pt-16">
+        <div className="pt-6 lg:pt-16">
           <div className="mb-6 md:mb-16">
             <div className="mb-3">
               <BoxTitle text="Learn " />

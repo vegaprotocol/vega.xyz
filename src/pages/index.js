@@ -96,13 +96,13 @@ const IndexPage = () => {
 
           <PageSection>
             <div className="md:grid md:grid-cols-12">
-              <div className="hidden md:block md:col-span-3 -translate-x-1/2 xxl:translate-x-0">
+              <div className="hidden md:block md:col-span-3 -translate-x-1/2">
                 <RoadMapBlob1 className="relative top-[30%]" />
               </div>
               <div className="md:col-span-6">
                 <RoadMap />
               </div>
-              <div className="hidden md:block md:col-span-3 translate-x-1/2 xxl:translate-x-0">
+              <div className="hidden md:block md:col-span-3 translate-x-1/2">
                 <RoadMapBlob2 className="relative md:top-[45%] lg:top-[60%]" />
               </div>
             </div>

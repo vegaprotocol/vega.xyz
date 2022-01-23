@@ -21,8 +21,8 @@ const Contributors = () => {
   return (
     <Layout>
       <Container>
-        <div className="mb-16 lg:pt-16">
-          <div className="max-w-[21.25rem] md:max-w-[44rem] mx-auto text-center mb-6 md:mb-12">
+        <div className="mb-16 pt-6 lg:pt-16">
+          <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[44rem] mx-auto text-center mb-6 md:mb-12">
             <GlitchTitle level={1} size="medium">
               Meet our contributors
             </GlitchTitle>
@@ -30,7 +30,7 @@ const Contributors = () => {
 
           <div className="mx-auto max-w-[42rem]">
             {contributors ? (
-              <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
+              <div className="grid grid-cols-4 md:grid-cols-6 gap-6">
                 {contributors.map((contributor, idx) => {
                   return (
                     <Contributor

@@ -33,40 +33,42 @@ const KeyConceptsPage = () => {
   return (
     <Layout>
       <Seo title="Key Concepts" />
-      <div className="grid grid-cols-12 mb-20">
-        <div className="col-span-3 overflow-hidden">
-          <UniverseLeft className="-translate-x-12" />
-        </div>
-        <div className="col-span-6">
-          <div className="max-w-[45rem] mx-auto text-center mb-16 lg:pt-16">
-            <h1 className="mb-6">
-              <BoxTitle text="Key concepts" />
-            </h1>
+      <Container>
+        <div className="grid grid-cols-12 mb-20">
+          <div className="col-span-3">
+            <UniverseLeft className="-translate-x-12 xxl:translate-x-0" />
+          </div>
+          <div className="col-span-6">
+            <div className="max-w-[45rem] mx-auto text-center mb-16 lg:pt-16">
+              <h1 className="mb-6">
+                <BoxTitle text="Key concepts" />
+              </h1>
 
-            <GlitchTitle
-              size="medium"
-              level="2"
-              size={[54, 68, 68]}
-              className="mb-6"
-            >
-              We're creating the critical infrastructure for Web3 and DeFi to
-              mature, and birth a thriving new world of finance
-            </GlitchTitle>
-            <LeadingLine className="text-current">
-              We're building a future of finance to rival, or outdo, CeFi
-              &mdash; where control of the markets, products, and fees is in the
-              community's hands.
-            </LeadingLine>
-            <LeadingLine className="text-current">
-              Here, our decentralised marketplace for markets gives centralised
-              versions a run for their money.
-            </LeadingLine>
+              <GlitchTitle
+                size="medium"
+                level="2"
+                size={[54, 54, 54, 68]}
+                className="mb-6"
+              >
+                We're creating the critical infrastructure for Web3 and DeFi to
+                mature, and birth a thriving new world of finance
+              </GlitchTitle>
+              <LeadingLine className="text-current">
+                We're building a future of finance to rival, or outdo, CeFi
+                &mdash; where control of the markets, products, and fees is in
+                the community's hands.
+              </LeadingLine>
+              <LeadingLine className="text-current">
+                Here, our decentralised marketplace for markets gives
+                centralised versions a run for their money.
+              </LeadingLine>
+            </div>
+          </div>
+          <div className="col-span-3">
+            <UniverseRight className="translate-x-12" />
           </div>
         </div>
-        <div className="col-span-3 overflow-hidden">
-          <UniverseRight className="translate-x-12" />
-        </div>
-      </div>
+      </Container>
 
       <Container>
         <div className="max-w-[26.25rem] mx-auto text-center">
@@ -74,18 +76,15 @@ const KeyConceptsPage = () => {
         </div>
       </Container>
 
-      <div className="relative z-20">
+      <div className="relative z-30">
         <Sticky enabled={true}>
           <div className="bg-white dark:bg-black">
-            <div
-              className="mx-auto"
-              className="border-b border-vega-mid-grey flex justify-center gap-x-8"
-            >
+            <div className="mx-auto border-b overflow-x-auto whitespace-nowrap border-vega-mid-grey md:flex md:justify-center md:gap-x-8">
               <ScrollSpy>
                 {sections.map((section, index) => (
                   <a
                     href={`#${section.hash}`}
-                    className={`relative bottom-[-1px] last:mr-0  py-2 text-lg leading-7 border-b-4 hover:border-current border-transparent`}
+                    className={`inline-block relative bottom-[-1px] last:mr-0 py-2 px-4 text-lg leading-7 border-b-4 hover:border-current border-transparent`}
                     ref={React.createRef()}
                     key={index}
                   >
@@ -100,12 +99,12 @@ const KeyConceptsPage = () => {
 
       <Container>
         <div className="mt-20">
-          <div id="good">
-            <div className="grid grid-cols-12 mb-12">
-              <div className="col-span-6 title-xl max-w-[32.5rem]">
+          <div id="good" className="mb-12 md:mb-0">
+            <div className="md:grid md:grid-cols-12 mb-12">
+              <div className="md:col-span-6 title-l md:title-xl max-w-[32.5rem]">
                 Be as good as CeFi
               </div>
-              <div className="col-span-5 border-current border p-4 pb-6 relative mt-12">
+              <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12">
                 <div className="copy-s text-white">
                   Vega will rival the current financial system, replacing it
                   with one that puts fairness, efficiency, and accessibility at
@@ -131,11 +130,12 @@ const KeyConceptsPage = () => {
               <ButtonLink
                 link="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
                 text="Concepts underpinning Vega"
-                className="mr-6 mb-6"
+                className="mr-6 mb-6 text-left"
               />
               <ButtonLink
                 link="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
                 text="White paper"
+                className="text-left"
               />
             </ConceptBlock>
 
@@ -153,16 +153,17 @@ const KeyConceptsPage = () => {
               <ButtonLink
                 link="https://medium.com/wetez-studio/staking-project-vega-an-innovative-decentralized-derivatives-trading-protocol-ec831c4ac62f"
                 text="Staking with Vega"
+                className="text-left"
               />
             </ConceptBlock>
           </div>
 
-          <div id="better">
-            <div className="grid grid-cols-12 mb-12">
-              <div className="col-span-6 title-xl max-w-[32.5rem]">
+          <div id="better" className="mb-12 md:mb-0">
+            <div className="md:grid md:grid-cols-12 mb-12">
+              <div className="md:col-span-6 title-l md:title-xl max-w-[32.5rem]">
                 Be better than CeFi
               </div>
-              <div className="col-span-5 border-current border p-4 pb-6 relative mt-12">
+              <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12">
                 <div className="copy-s text-white">
                   By standardising and automating every step of the trade
                   lifecycle, Vega addresses the shortcomings of traditional
@@ -185,6 +186,7 @@ const KeyConceptsPage = () => {
               <ButtonLink
                 link="https://blog.vega.xyz/what-to-expect-from-restricted-mainnet-616086d9fdaf"
                 text="What to expect from restricted mainnet"
+                className="text-left"
               />
             </ConceptBlock>
 
@@ -367,11 +369,11 @@ const KeyConceptsPage = () => {
           </div>
 
           <div id="mature">
-            <div className="grid grid-cols-12 mb-12">
-              <div className="col-span-6 title-xl max-w-[32.5rem]">
+            <div className="md:grid md:grid-cols-12 mb-12">
+              <div className="md:col-span-6 title-l md:title-xl max-w-[32.5rem]">
                 Help DeFi mature
               </div>
-              <div className="col-span-5 border-current border p-4 pb-6 relative mt-12">
+              <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12">
                 <div className="copy-s text-white">
                   Designed from the ground up, and in a modular way to encourage
                   creativity and incentivise participation &mdash; we're
