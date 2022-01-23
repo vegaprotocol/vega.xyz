@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ButtonLink from "./ButtonLink";
 import PlusMinus from "./Svg/PlusMinus";
 
@@ -11,6 +11,22 @@ const CareerItem = ({ career }) => {
     setActive(active === false ? true : false);
     setHeight(active ? "0px" : `${contentSpace.current.scrollHeight}px`);
   };
+
+  useEffect(() => {
+    let timeoutId = null;
+    const resizeListener = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setHeight(!active ? "0px" : `${contentSpace.current.scrollHeight}px`);
+      }, 150);
+    };
+
+    window.addEventListener("resize", resizeListener);
+
+    return () => {
+      window.removeEventListener("resize", resizeListener);
+    };
+  }, [active]);
 
   return (
     <li>
@@ -30,7 +46,7 @@ const CareerItem = ({ career }) => {
         <div
           ref={contentSpace}
           style={{ maxHeight: `${height}` }}
-          className="overflow-auto transition-max-height duration-700 ease-in-out"
+          className="overflow-hidden transition-max-height duration-700 ease-in-out"
         >
           <div className="md:grid md:grid-cols-2 md:gap-12 pb-8">
             <div>
