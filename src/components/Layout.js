@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import SiteBanner from "../components/SiteBanner";
 import { Helmet } from "react-helmet";
 
 const Layout = (props) => {
@@ -13,7 +12,6 @@ const Layout = (props) => {
         }}
       />
       <div className="dark:text-white dark:bg-black bg-white max-w-full overflow-x-hidden">
-        <SiteBanner />
         <div className="flex flex-col min-h-screen">
           <div className="grow">
             <Header />

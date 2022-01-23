@@ -5,6 +5,9 @@ import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";
 import MobileMenuButton from "../components/Navigation/MobileMenuButton";
+import SiteBanner from "../components/SiteBanner";
+
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -13,31 +16,37 @@ const Header = () => {
     setMenuIsOpen(!menuIsOpen);
 
     if (menuIsOpen) {
-      document.documentElement.style.overflowY = "scroll";
+      enableBodyScroll(document.querySelector("#mobileMenu"));
     } else {
-      document.documentElement.style.overflowY = "hidden";
+      disableBodyScroll(document.querySelector("#mobileMenu"));
     }
   };
 
   return (
-    <header className="relative z-30">
-      <div className="px-4 w-full md:px-6 lg:px-8">
-        <div className="header flex items-center justify-between py-4 lg:pt-6">
-          <Link to="/">
-            <VegaLogo />
-          </Link>
+    <div>
+      <SiteBanner />
 
-          <Navigation />
+      <header className="relative z-30" id="header">
+        <div className="px-4 w-full md:px-6 lg:px-8">
+          <div className="header flex items-center justify-between py-4 lg:pt-6">
+            <Link to="/">
+              <VegaLogo />
+            </Link>
 
-          {menuIsOpen && <MobileMenu />}
+            <Navigation />
 
-          <div>
-            <ScreenMode />
-            <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
+            <div className={`${menuIsOpen ? "block" : "hidden"}`}>
+              <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
+            </div>
+
+            <div>
+              <ScreenMode />
+              <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
 
