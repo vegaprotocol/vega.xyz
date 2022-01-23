@@ -20,6 +20,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-remark",
+    "gatsby-plugin-smoothscroll",
     "gatsby-transformer-sharp",
     {
       resolve: `gatsby-plugin-react-intl`,
