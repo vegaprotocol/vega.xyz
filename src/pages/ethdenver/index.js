@@ -11,6 +11,8 @@ import Mountainscape from "../../images/mountainscape.png";
 import EthDenverLearn from "../../images/ethdenverlearn.svg";
 import EthDenverBuild from "../../images/ethdenverbuild.svg";
 import EthDenverMeet from "../../images/ethdenvermeet.svg";
+import EthDenverEvent from "../../components/EthDenverEvent";
+import PersonBarney from "../../images/person-barney.png";
 
 const EthDenver = () => {
   const [discoMode, setDiscoMode] = useState(true);
@@ -21,7 +23,7 @@ const EthDenver = () => {
 
   return (
     <LayoutEthDenver>
-      <div class="color-white pb-[17.5%] w-full">
+      <div className="color-white pb-[17.5%] w-full">
         <video
           autoPlay
           muted
@@ -84,7 +86,7 @@ const EthDenver = () => {
                 Shill Zone, Floor 3
               </div>
             </div>
-            <div class="copy-xs text-center">
+            <div className="copy-xs text-center">
               Visit us at our booth for an intro to Vega, to meet the team – and
               take part in fun stuff for loads of swag:
             </div>
@@ -119,7 +121,7 @@ const EthDenver = () => {
           </div>
 
           <div className="mb-20">
-            <div className="flex justify-between border-b border-white mb-6">
+            <div className="flex justify-between border-b border-white">
               <h2 className="title-m md:title-l lg:title-xl pb-4">
                 Learn <br />
                 about Vega
@@ -132,6 +134,21 @@ const EthDenver = () => {
                 />
               )}
             </div>
+
+            <EthDenverEvent
+              type="Keynote talk"
+              title="Why derivatives are the cypherpunk future of DeFi"
+              title2="with Barney Mannerings, Vega Founder"
+              when="Thursday 17th Feb, 5:30pm"
+              venue="Official opening ceremony"
+              discoMode={discoMode}
+              people={[PersonBarney]}
+            >
+              Prospective developer in the Hackathon? Let's get up close and
+              personal. We'll talk you through some of the fundamentals of Vega,
+              introduce you to our mentorship team and collaborate in the
+              ongoing Hackathon
+            </EthDenverEvent>
           </div>
 
           <div className="mb-20">
