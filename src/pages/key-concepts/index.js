@@ -34,11 +34,11 @@ const KeyConceptsPage = () => {
     <Layout>
       <Seo title="Key Concepts" />
       <Container>
-        <div className="grid grid-cols-12 mb-20">
-          <div className="col-span-3">
+        <div className="md:grid md:grid-cols-12 mb-20">
+          <div className="hidden md:col-span-3 md:block">
             <UniverseLeft className="-translate-x-12 xxl:translate-x-0" />
           </div>
-          <div className="col-span-6">
+          <div className="md:col-span-6">
             <div className="max-w-[45rem] mx-auto text-center mb-16 lg:pt-16">
               <h1 className="mb-6">
                 <BoxTitle text="Key concepts" />
@@ -64,7 +64,7 @@ const KeyConceptsPage = () => {
               </LeadingLine>
             </div>
           </div>
-          <div className="col-span-3">
+          <div className="hidden md:col-span-3 md:block">
             <UniverseRight className="translate-x-12" />
           </div>
         </div>
@@ -79,7 +79,7 @@ const KeyConceptsPage = () => {
       <div className="relative z-30">
         <Sticky enabled={true}>
           <div className="bg-white dark:bg-black">
-            <div className="mx-auto border-b overflow-x-auto whitespace-nowrap border-vega-mid-grey md:flex md:justify-center md:gap-x-8">
+            <div className="mx-auto border-b overflow-x-scroll overflow-y-hidden whitespace-nowrap border-vega-mid-grey md:flex md:justify-center md:gap-x-8">
               <ScrollSpy>
                 {sections.map((section, index) => (
                   <a
