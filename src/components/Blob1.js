@@ -81,7 +81,7 @@ const Blob1 = () => {
         <clipPath id="b">
           <use xlinkHref="#a" overflow="visible" />
         </clipPath>
-        <g clip-path="url(#b)">
+        <g clipPath="url(#b)">
           <path
             d="M333.9 269.8h-19v19h19v-19zm19-19h-19v19h19v-19zm38-19h-19v19h19v-19zm-19-76h-19v76h19v-76zm-57 95h-19v19h19v-19zm-19-95h-19v95h19v-95z"
             className="fill-white"
