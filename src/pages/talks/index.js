@@ -41,7 +41,7 @@ const PapersPage = () => {
     <Layout>
       <Seo title="Talks" />
       <Container>
-        <div className="lg:pt-16">
+        <div className="pt-6 lg:pt-16">
           <div className="mb-6 md:mb-16">
             <div className="mb-3">
               <BoxTitle text="Learn " />
@@ -72,7 +72,7 @@ const PapersPage = () => {
           <div className="mx-auto max-w-[44rem] text-center">
             <div className="mb-12">
               <GlitchTitle level="2" size="medium">
-                Have an idea for an event or talk you'd like us to attend?
+                Have an idea for an event or talk?
               </GlitchTitle>
             </div>
             <ButtonLink
