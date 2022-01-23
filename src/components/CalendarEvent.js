@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import ButtonLink from "./ButtonLink";
 import ArrowRight from "./Svg/ArrowRight";
 import Moment from "react-moment";
@@ -13,11 +14,13 @@ const CalendarEvent = ({ event, showEthDenver }) => {
     <div className="pb-8 pt-6 border-b border-current relative">
       {/* Hard code ETH Denver image */}
       {showEthDenver && event.name === "ETH Denver 2022" ? (
-        <StaticImage
-          src="../images/ethdenver.jpg"
-          alt="EthDenver"
-          className="mb-6"
-        />
+        <Link to="/ethdenver">
+          <StaticImage
+            src="../images/ethdenver.jpg"
+            alt="EthDenver"
+            className="mb-6"
+          />
+        </Link>
       ) : null}
 
       <div className="grid grid-cols-12 gap-x-6">
