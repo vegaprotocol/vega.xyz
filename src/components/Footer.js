@@ -97,8 +97,11 @@ const Footer = () => {
                   </TextLink>
                 </li>
                 <li>
-                  <TextLink to="/" className="py-1.5 block leading-[1.3]">
-                    Acquire tokens
+                  <TextLink
+                    to="/en/community/#contributions"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Get tokens
                   </TextLink>
                 </li>
                 <li>
@@ -135,7 +138,10 @@ const Footer = () => {
                   </TextLink>
                 </li>
                 <li>
-                  <TextLink to="/" className="py-1.5 block leading-[1.3]">
+                  <TextLink
+                    to="/community/contributors"
+                    className="py-1.5 block leading-[1.3]"
+                  >
                     Contributors
                   </TextLink>
                 </li>
