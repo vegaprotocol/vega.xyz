@@ -21,7 +21,8 @@ const IndexPage = () => {
   const intl = useIntl();
   return (
     <Layout>
-      <Seo title={intl.formatMessage({ id: "page-index-title" })} />
+      <Seo title="Vega Protocol | Crypto derivatives" />
+      <Seo description="Vega is Web3's native derivatives trading platform, where DeFi matures and a world of financial freedom becomes a reality." />
       <main>
         <Container>
           <div className="relative md:mt-12">
@@ -58,13 +59,12 @@ const IndexPage = () => {
               <div className="md:col-span-7 md:pr-12">
                 <div className="max-w-[38.75rem] text-center md:text-left mx-auto">
                   <div className="title-m md:title-l mb-4">
-                    We're throwing open the doors to the new financial system
-                    &mdash; and a truly democratic society.
+                    Throw open the doors to the new financial system
                   </div>
                   <div className="copy-s !mb-8">
-                    Don't ask for permission. Ask how you can play a part in
-                    this new world of DeFi. Decentralised derivatives markets
-                    are here to stay.
+                    And a truly democratic society. Don’t ask for permission.
+                    Ask how you can play a part in this new world of DeFi.
+                    Decentralised derivatives markets are here to stay.
                   </div>
                   <div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-none mx-auto">
@@ -87,7 +87,7 @@ const IndexPage = () => {
                 </div>
               </div>
               <div className="md:col-span-5 mt-20 md:mt-0">
-                <div className="max-w-[18.75rem] md:max-w-[32rem] mx-auto">
+                <div className="max-w-[18.75rem] md:max-w-[25rem] mx-auto">
                   <PlanetRocket />
                 </div>
               </div>

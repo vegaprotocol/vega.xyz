@@ -88,7 +88,7 @@ const DevelopPage = ({ data }) => {
 
             <BoxLink
               title="gRPC"
-              text="For fast and efficient communication with Vega’s APIs, gRPC supports near real time streaming of updates from Vega and is the transport of choice for many web3 apps."
+              text="For fast and efficient communication with Vega's APIs, gRPC supports near real time streaming of updates from Vega and is the transport of choice for many web3 apps."
               linkTitle="Get Started"
               link="/develop"
             />
@@ -138,7 +138,7 @@ const DevelopPage = ({ data }) => {
               <div className="inline-block mb-4 mr-4">
                 <ButtonLink
                   text="Try it out on Fairground"
-                  link="https://fairground.wft/"
+                  link="https://fairground.wtf/"
                 />
               </div>
               <ButtonLink
@@ -170,7 +170,11 @@ const DevelopPage = ({ data }) => {
               For developers, coders, hackers, dreamers who want to create
               software on top of Vega.
             </p>
-            <ButtonLink text="Meet on Discord" link="" color="light" />
+            <ButtonLink
+              text="Meet on Discord"
+              link="https://vega.xyz/discord/"
+              color="light"
+            />
             <div className="mt-16">
               <LadderIllustration />
             </div>
@@ -243,7 +247,7 @@ const DevelopPage = ({ data }) => {
               text="Explore the community"
               link="https://community.vega.xyz/"
             />
-            <BoxLinkSimple text="See the Roadmap" link="" />
+            <BoxLinkSimple text="See the Roadmap" link="/en/#roadmap" />
           </div>
         </PageSection>
       </Container>

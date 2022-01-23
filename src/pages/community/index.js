@@ -188,7 +188,7 @@ const CommunityPage = ({ data }) => {
               title="Join the builders club"
               text="For developers, coders, hackers, dreamers who want to create software on top of Vega."
               linkTitle="Meet on Discord"
-              link="https://fairground.wtf"
+              link="https://vega.xyz/discord/"
               image={ambassadorImage}
             />
 
@@ -271,7 +271,7 @@ const CommunityPage = ({ data }) => {
               </h2>
               <div className="my-6">Get your hands on it here</div>
               <ButtonLink
-                link="https://www.google.com"
+                link="https://vega.xyz/discord/"
                 text="Ask us on Discord"
               />
             </div>
