@@ -1,25 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LayoutEthDenver from "../../components/LayoutEthDenver";
 import Moshed from "../../video/moshed.mp4";
 import EthDenverTitle from "../../components/Svg/EthDenverTitle";
 import ContainerEthDenver from "../../components/ContainerEthDenver";
 import ButtonLinkSimple from "../../components/ButtonLinkSimple";
-import ButtonLink from "../../components/ButtonLink";
+//import ButtonLink from "../../components/ButtonLink";
 import VegaLogo from "../../components/Svg/VegaLogo";
 import DiscoModeToggle from "../../components/DiscoModeToggle";
 import Mountainscape from "../../images/mountainscape.png";
 import EthDenverLearn from "../../images/ethdenverlearn.svg";
 import EthDenverBuild from "../../images/ethdenverbuild.svg";
 import EthDenverMeet from "../../images/ethdenvermeet.svg";
+import EthDenverMap from "../../images/ethdenver-map.svg";
 import EthDenverEvent from "../../components/EthDenverEvent";
 import PersonBarney from "../../images/person-barney.png";
+import CrossLarge from "../../components/Svg/CrossLarge";
 
 const EthDenver = () => {
   const [discoMode, setDiscoMode] = useState(true);
+  const [showMap, setShowMap] = useState(false);
 
   const toggleDiscoMode = () => {
     setDiscoMode(!discoMode);
   };
+
+  const toggleMap = () => {
+    setShowMap(!showMap);
+  };
+
+  const hideCityScape = () => {
+    setTimeout(() => {
+      document
+        .querySelector("#mountainScape")
+        .classList.add("translate-y-[35%]");
+    }, 200);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", hideCityScape, { once: true });
+  }, []);
 
   return (
     <LayoutEthDenver>
@@ -46,7 +65,7 @@ const EthDenver = () => {
           />
         </header>
 
-        <div className="max-w-[68rem] mx-auto px-4 md:px-6 lg:px-8 mb-16 lg:pt-[5rem]">
+        <div className="max-w-[68rem] mx-auto px-4 md:px-6 lg:px-8 mb-8 md:mb-16 lg:pt-[5rem]">
           <EthDenverTitle
             discoMode={discoMode}
             className="relative inline-block w-full h-auto mb-3 lg:-mt-5"
@@ -68,7 +87,7 @@ const EthDenver = () => {
         </div>
 
         <ContainerEthDenver>
-          <div className="copy-s">
+          <div className="copy-xs md:copy-s">
             Excited to be outta lockdowns and straight into sponsoring ETHDenver
             this February. A big bunch of us will be there, including Barney our
             founder, to share what we've been up to, learn what others are
@@ -113,15 +132,12 @@ const EthDenver = () => {
             </div>
 
             <div className="text-center mt-8">
-              <ButtonLinkSimple
-                link="https://google.com"
-                text="View on a map"
-              />
+              <ButtonLinkSimple onClick={toggleMap} text="View on a map" />
             </div>
           </div>
 
           <div className="mb-20">
-            <div className="flex justify-between border-b border-white">
+            <div className="flex justify-between border-b border-white items-end">
               <h2 className="title-m md:title-l lg:title-xl pb-4">
                 Learn <br />
                 about Vega
@@ -130,7 +146,7 @@ const EthDenver = () => {
                 <img
                   src={EthDenverLearn}
                   alt=""
-                  className="shrink-0 self-end"
+                  className="w-[112px] md:w-[190px] shrink-0"
                 />
               )}
             </div>
@@ -142,7 +158,7 @@ const EthDenver = () => {
               when="Thursday 17th Feb, 5:30pm"
               venue="Official opening ceremony"
               discoMode={discoMode}
-              people={[PersonBarney]}
+              people={[PersonBarney, PersonBarney]}
             >
               Prospective developer in the Hackathon? Let's get up close and
               personal. We'll talk you through some of the fundamentals of Vega,
@@ -152,7 +168,7 @@ const EthDenver = () => {
           </div>
 
           <div className="mb-20">
-            <div className="flex justify-between border-b border-white mb-6">
+            <div className="flex justify-between border-b border-white mb-6 items-end">
               <h2 className="title-m md:title-l lg:title-xl pb-4">
                 Build <br />
                 with Vega
@@ -161,7 +177,7 @@ const EthDenver = () => {
                 <img
                   src={EthDenverBuild}
                   alt=""
-                  className="shrink-0 self-end"
+                  className="w-[112px] md:w-[168px] shrink-0"
                 />
               )}
             </div>
@@ -172,18 +188,22 @@ const EthDenver = () => {
             </div>
           </div>
           <div className="mb-20">
-            <div className="flex justify-between border-b border-white mb-6">
+            <div className="flex justify-between border-b border-white mb-6 items-end">
               <h2 className="title-m md:title-l lg:title-xl pb-4">
                 Meet the <br />
                 team
               </h2>
               {discoMode && (
-                <img src={EthDenverMeet} alt="" className="shrink-0 self-end" />
+                <img
+                  src={EthDenverMeet}
+                  alt=""
+                  className="w-[112px] md:w-[210px] shrink-0"
+                />
               )}
             </div>
 
             <div className="border-b border-white pb-6 mb-6">
-              <div className="title-m mb-3">
+              <div className="title-m mb-3 align-bottom">
                 Hacker Meet & Greet
                 <br />
                 <span className="text-vega-yellow">Monday 14th Feb, 6pm</span>
@@ -231,10 +251,27 @@ const EthDenver = () => {
         </ContainerEthDenver>
       </div>
       <img
+        id="mountainScape"
         src={Mountainscape}
-        className="w-full h-auto fixed bottom-0 left-0 right-0"
+        className={`transition w-full h-auto fixed bottom-0 left-0 right-0}`}
         alt=""
       />
+
+      {showMap && (
+        <div className="position fixed z-50 inset-0 bg-white dark:bg-black flex flex-col items-center justify-center">
+          <div className="px-12 text-center">
+            <div className="title-m mb-1">Find us at booth P20</div>
+            <p class="copy-xxs text-current !mb-6">
+              (You can't miss us, look for the yellow hoodies)
+            </p>
+            <img src={EthDenverMap} alt="Floorplan" />
+          </div>
+          <button className="absolute top-5 right-5" onClick={toggleMap}>
+            <span className="title-xxs">Close</span>
+            <CrossLarge className="inline-block ml-4" />
+          </button>
+        </div>
+      )}
     </LayoutEthDenver>
   );
 };
