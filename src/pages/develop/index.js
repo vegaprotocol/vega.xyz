@@ -5,13 +5,13 @@ import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import Wormhole from "../../components/Svg/Wormhole";
 import Incentives from "../../components/Incentives";
+import CustomMarkets from "../../components/Svg/CustomMarkets";
 import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
 import BoxLink from "../../components/BoxLink";
 import BoxLinkSimple from "../../components/BoxLinkSimple";
 import StarCrossed from "../../components/StarCrossed";
-import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BlogPosts from "../../components/BlogPosts";
 import Moshed from "../../video/moshed.mp4";
@@ -39,11 +39,9 @@ const ButtonBlock = () => {
 };
 
 const DevelopPage = ({ data }) => {
-  const placeholderImage = getImage(data.placeholderImage);
-
   return (
     <Layout>
-      <Container>
+      <Container hideXOverflow={true}>
         <div className="pt-6 mb-16 lg:pt-16">
           <div className="md:grid md:grid-cols-12">
             <div className="relative z-10 col-span-8 col-start-1 row-span-full">
@@ -85,7 +83,7 @@ const DevelopPage = ({ data }) => {
             Build decentralised apps, bots and trading clients with our APIs
           </h2>
 
-          <div className="grid gap-x-5 gap-y-14 grid-cols-1 mb-24 mt-12 md:grid-cols-2 xl:grid-cols-2">
+          <div className="grid gap-x-5 gap-y-14 grid-cols-1 mb-12 mt-12 md:grid-cols-2 xl:grid-cols-2">
             <BoxLink
               title="REST"
               text="The ubiquitous protocol for the web, Vega has a set of REST APIs that map directly onto equivalent gRPC API service methods."
@@ -117,14 +115,16 @@ const DevelopPage = ({ data }) => {
         </PageSection>
       </Container>
 
-      <Container>
+      <Container hideXOverflow={true}>
         <PageSection>
-          <div className="md:grid md:grid-cols-2">
-            <div className="hidden px-8 md:block">
-              <GatsbyImage image={placeholderImage} alt="Placeholder" />
+          <div className="md:grid md:grid-cols-2 items-center">
+            <div className="md:px-8">
+              <div className="mb-12 md:mb-0 md:-translate-x-1/2 md:scale-[200%] lg:-translate-x-1/4 lg:scale-150">
+                <CustomMarkets />
+              </div>
             </div>
 
-            <div>
+            <div className="text-center md:text-left">
               <h2 className="title-l lg:title-xl mb-4">
                 Create
                 <br />
@@ -132,10 +132,6 @@ const DevelopPage = ({ data }) => {
                 <br />
                 Markets
               </h2>
-
-              <div className="pb-6 md:hidden">
-                <GatsbyImage image={placeholderImage} alt="Placeholder" />
-              </div>
 
               <div className="text-[0.9375rem] text-vega-mid-grey uppercase">
                 Status:
@@ -263,17 +259,3 @@ const DevelopPage = ({ data }) => {
 };
 
 export default DevelopPage;
-
-export const query = graphql`
-  query {
-    placeholderImage: file(relativePath: { eq: "placeholder.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 600
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
-      }
-    }
-  }
-`;
