@@ -61,7 +61,7 @@ const IndexPage = () => {
                   <div className="title-m md:title-l mb-4">
                     Throw open the doors to the new financial system
                   </div>
-                  <div className="copy-s !mb-8">
+                  <div className="copy-xs md:copy-s !mb-8">
                     And a truly democratic society. Don’t ask for permission.
                     Ask how you can play a part in this new world of DeFi.
                     Decentralised derivatives markets are here to stay.
@@ -72,14 +72,14 @@ const IndexPage = () => {
                         <ButtonLink
                           text="Learn more"
                           link="/key-concepts"
-                          className="w-full"
+                          className="w-full text-center"
                         />
                       </div>
                       <div>
                         <ButtonLink
                           text="Join the community"
                           link="/community"
-                          className="w-full"
+                          className="w-full text-center"
                         />
                       </div>
                     </div>

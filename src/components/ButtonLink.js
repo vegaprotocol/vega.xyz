@@ -4,7 +4,7 @@ import LinkArrow from "./Svg/LinkArrow";
 
 const ButtonLink = ({ text, link, color, minwidth, className }) => {
   const isExternal = link.startsWith("http");
-  const linkClass = `md:max-w-none group button-link relative inline-block ${className}`;
+  const linkClass = `md:max-w-none group button-link relative inline-block z-10 ${className}`;
   let backgroundClass;
   let borderClass;
   let textClass;

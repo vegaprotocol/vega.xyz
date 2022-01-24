@@ -45,7 +45,7 @@ const RoadMap = () => {
               <br />
               <span className="text-vega-mid-grey">Restricted Mainnet</span>
             </div>
-            <div className="copy-xs !mb-0 text-vega-mid-grey">
+            <div className="copy-xxs md:copy-xs !mb-0 text-vega-mid-grey">
               This is the second of 3 launch phases of the network in which the
               validators are running a decentralised Vega network connected to
               the Ethereum mainnet. This phase provides a proving ground for the
