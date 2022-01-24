@@ -5,7 +5,7 @@ import SquareBullet from "./Svg/SquareBullet";
 const Incentive = ({ title, type, status, reward, difficulty, link }) => {
   const statusColours = {
     available: "text-vega-mint",
-    completed: "text-vega-pink",
+    ended: "text-vega-pink",
     inprogress: "text-white",
     upcoming: "text-vega-mid-grey",
   };

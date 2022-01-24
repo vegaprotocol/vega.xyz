@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Incentive from "./Incentive";
 
 const Incentives = () => {
-  const pageSize = 2;
+  const pageSize = 10;
   const [incentives, setIncentives] = useState(null);
   const [list, setList] = useState(null);
   const [loadMore, setLoadMore] = useState(false);
@@ -47,8 +47,8 @@ const Incentives = () => {
         };
       });
 
-      // remove entries with no name (assumed an empty row)
-      result = result.filter((elem) => elem.name);
+      // remove entries with no name (assumed an empty row) and reverse array
+      result = result.filter((elem) => elem.name).reverse();
 
       setIncentives(result);
       setList([...result.slice(0, pageSize)]);
