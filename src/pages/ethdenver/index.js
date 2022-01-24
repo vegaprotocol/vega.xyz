@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "gatsby";
 import LayoutEthDenver from "../../components/LayoutEthDenver";
 import Moshed from "../../video/moshed.mp4";
 import EthDenverTitle from "../../components/Svg/EthDenverTitle";
@@ -28,17 +29,17 @@ const EthDenver = () => {
     setShowMap(!showMap);
   };
 
-  const hideCityScape = () => {
-    setTimeout(() => {
-      document
-        .querySelector("#mountainScape")
-        .classList.add("translate-y-[35%]");
-    }, 200);
-  };
+  // const hideCityScape = () => {
+  //   setTimeout(() => {
+  //     document
+  //       .querySelector("#mountainScape")
+  //       .classList.add("translate-y-[35%]");
+  //   }, 200);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", hideCityScape, { once: true });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", hideCityScape, { once: true });
+  // }, []);
 
   return (
     <LayoutEthDenver>
@@ -58,7 +59,9 @@ const EthDenver = () => {
         )}
 
         <header className="items-center py-6 px-4 w-full md:px-6 lg:px-8 flex justify-between lg:fixed lg:z-10">
-          <VegaLogo />
+          <Link to="/">
+            <VegaLogo />
+          </Link>
           <DiscoModeToggle
             discoMode={discoMode}
             toggleDiscoMode={toggleDiscoMode}
