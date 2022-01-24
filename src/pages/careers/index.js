@@ -38,7 +38,7 @@ const CareersPage = () => {
           <div className="grid grid-cols-12">
             <div className="relative z-10 col-span-12 col-start-1 row-span-full">
               <h1>
-                <BoxTitle text="Develop" />
+                <BoxTitle text="Careers" />
               </h1>
               <div className="title-l md:title-xxl lg:title-xxxl xl:title-xxxl mb-6 mt-4 max-w-[18.75rem] md:max-w-[36rem] lg:max-w-[44rem]">
                 Your career in Defi starts here
