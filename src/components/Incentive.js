@@ -6,7 +6,7 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
   const statusColours = {
     available: "text-vega-mint",
     ended: "text-vega-pink",
-    inprogress: "text-white",
+    inprogress: "text-vega-mint",
     upcoming: "text-vega-mid-grey",
   };
 
