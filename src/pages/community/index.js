@@ -13,20 +13,21 @@ import BoxLinkHero from "../../components/BoxLinkHero";
 import Calendar from "../../components/Calendar";
 import LeadingLine from "../../components/LeadingLine";
 import PageSection from "../../components/PageSection";
-import TwitchEmbed from "../../components/TwitchEmbed";
+//import TwitchEmbed from "../../components/TwitchEmbed";
 import Incentives from "../../components/Incentives";
 import GlitchTitle from "../../components/GlitchTitle";
-import DeadFish from "../../images/dead-fish.svg";
 import { getImage } from "gatsby-plugin-image";
 import GhostParty from "../../components/GhostParty";
-import Contributor from "../../components/Contributor";
+import IconArt from "../../components/Svg/IconArt";
+import IconContent from "../../components/Svg/IconContent";
+import IconDocumentation from "../../components/Svg/IconDocumentation";
+import IconDevelop from "../../components/Svg/IconDevelop";
+import IconFairground from "../../components/Svg/IconFairground";
 
 const CommunityPage = ({ data }) => {
   const intl = useIntl();
   const ambassadorImage = getImage(data.ambassadorImage);
   const builderImage = getImage(data.builderImage);
-
-  const [hostname, setHostname] = useState(null);
   const [contributors, setContributors] = useState(null);
 
   useEffect(() => {
@@ -38,10 +39,6 @@ const CommunityPage = ({ data }) => {
       setContributors(response.github_contributors);
     }
     fetchContributors();
-  }, []);
-
-  useEffect(() => {
-    setHostname(window.location.hostname);
   }, []);
 
   return (
@@ -111,34 +108,35 @@ const CommunityPage = ({ data }) => {
                 text="Help us find bugs and harden Vega's Testnet."
                 linkTitle="Fairground"
                 link="https://fairground.wtf"
-                icon={DeadFish}
+                icon={<IconFairground />}
               />
-
               <BoxLink
                 title={`Develop on our APIs`.toUpperCase()}
                 text="Contribute to the source code, and get building with our APIs."
                 linkTitle="Learn more"
                 link="/develop"
+                icon={<IconDevelop />}
               />
-
               <BoxLink
                 title={`Refine documentation`.toUpperCase()}
                 text="Share feedback, make suggestions and help translate."
                 linkTitle="Discord"
                 link="https://docs.vega.xyz/"
+                icon={<IconDocumentation />}
               />
-
               <BoxLink
                 title={`Write content`.toUpperCase()}
                 text="Create articles, blog posts and contribute to research papers."
                 linkTitle="Discord"
                 link="https://vega.xyz/discord"
+                icon={<IconContent />}
               />
               <BoxLink
                 title={`Make art`.toUpperCase()}
                 text="Create Vega inspired art using our brand assets and help visualise the DeFi and Web 3 revolution."
                 linkTitle="Discord"
                 link="https://vega.xyz/discord"
+                icon={<IconArt />}
               />
             </div>
           </div>

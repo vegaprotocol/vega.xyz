@@ -16,7 +16,7 @@ const BoxLink = ({
   return (
     <div className="relative flex flex-col justify-between border border-black dark:border-white">
       <div className="p-4">
-        <div className="relative pr-12">
+        <div className="relative pr-16">
           <div className="text-[1.5rem] font-glitched leading-[0.85] mb-3">
             {locked && <Padlock />}
             {title}
@@ -29,9 +29,7 @@ const BoxLink = ({
               <UppercaseLink text={inlineLinkTitle} link={inlineLink} />
             </div>
           )}
-          <div className="absolute right-0 top-0">
-            <img src={icon} alt="" />
-          </div>
+          <div className="absolute right-0 top-0">{icon}</div>
         </div>
       </div>
       <div className="bottom-[-1.5625rem] relative -left-px">
