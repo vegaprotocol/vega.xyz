@@ -18,11 +18,13 @@ import RoadMapBlob1 from "../components/RoadMapBlob1";
 import RoadMapBlob2 from "../components/RoadMapBlob2";
 
 const IndexPage = () => {
-  const intl = useIntl();
+  // const intl = useIntl();
   return (
     <Layout>
-      <Seo title="Vega Protocol | Crypto derivatives" />
-      <Seo description="Vega is Web3's native derivatives trading platform, where DeFi matures and a world of financial freedom becomes a reality." />
+      <Seo
+        title="Blockchain derivatives"
+        description="Discover Web3's native derivatives trading platform that is helping DeFi mature."
+      />
       <main>
         <Container>
           <div className="relative md:mt-12">

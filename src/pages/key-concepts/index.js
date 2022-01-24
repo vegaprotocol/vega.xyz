@@ -30,7 +30,10 @@ const KeyConceptsPage = () => {
 
   return (
     <Layout>
-      <Seo title="Key Concepts" />
+      <Seo
+        title="Key Vega Concepts | Vega Protocol"
+        description="Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
+      />
       <Container>
         <div className="pt-6 md:grid md:grid-cols-12 mb-20">
           <div className="hidden md:col-span-3 md:block">

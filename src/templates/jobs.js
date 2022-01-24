@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 import Container from "../components/Container";
 import ArrowLeft from "../components/Svg/ArrowLeft";
 import { Link, graphql } from "gatsby";
@@ -19,6 +20,10 @@ export const query = graphql`
 const Jobs = (props) => {
   return (
     <Layout>
+      <Seo
+        title={props.data.markdownRemark.frontmatter.title}
+        description={props.data.markdownRemark.frontmatter.description}
+      />
       <Container>
         <div>
           <Link to="/careers" className="block uppercase text-[0.9375rem] mb-1">

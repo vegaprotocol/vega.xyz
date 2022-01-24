@@ -1,4 +1,5 @@
 import React from "react";
+import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import GlitchTitle from "../../components/GlitchTitle";
@@ -12,6 +13,10 @@ import DeadFish from "../../images/dead-fish.svg";
 const UsePage = () => {
   return (
     <Layout>
+      <Seo
+        title="Use the network"
+        description="Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy."
+      />
       <div className="relative z-10">
         <Container>
           <div className="mb-12 md:mb-24 lg:pt-16">

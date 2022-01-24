@@ -46,7 +46,10 @@ const PapersPage = () => {
 
   return (
     <Layout>
-      <Seo title="Papers" />
+      <Seo
+        title="Papers & Research"
+        description="Check out the technical, economic and mathematical detail - and innovative thinking behind Vega."
+      />
       <Container>
         <div className="pt-6 lg:pt-16">
           <div className="mb-6 md:mb-16">

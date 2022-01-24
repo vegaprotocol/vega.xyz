@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Seo from "../../components/Seo";
 import { Link } from "gatsby";
 import LayoutEthDenver from "../../components/LayoutEthDenver";
 import Moshed from "../../video/moshed.mp4";
@@ -43,6 +44,10 @@ const EthDenver = () => {
 
   return (
     <LayoutEthDenver>
+      <Seo
+        title="ETHDenver"
+        description="Vega is sponsoring and hitting up ETHDenver 2022. Come meet the team, hear our talks, and take part in our hackathons."
+      />
       <div className="color-white pb-[17.5%] w-full">
         <video
           autoPlay

@@ -104,7 +104,10 @@ const PartnersBackersPage = () => {
 
   return (
     <Layout>
-      <Seo title="Partners &amp; Backers" />
+      <Seo
+        title="Partners & Backers"
+        description="Vega is a community and passion project for all our supporters. Explore the organisations fuelling and supporting this endeavour."
+      />
       <Container>
         <div className="mb-12 pt-6 md:mb-24 lg:pt-16">
           <div className="grid grid-cols-12 gap-6 mb-16 lg:mb-24">

@@ -39,7 +39,10 @@ const PapersPage = () => {
 
   return (
     <Layout>
-      <Seo title="Talks" />
+      <Seo
+        title="Talks"
+        description="Dive in to talks and podcasts by the Vega team on crypto derivatives trading."
+      />
       <Container>
         <div className="pt-6 lg:pt-16">
           <div className="mb-6 md:mb-16">

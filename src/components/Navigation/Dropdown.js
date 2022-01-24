@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useIntl, Link } from "gatsby-plugin-react-intl";
 import DropdownArrow from "../Svg/DropdownArrow.js";
 import LinkArrow from "../Svg/LinkArrow";
@@ -10,7 +10,6 @@ const NavigationDropdown = ({ section }) => {
     <li className="relative">
       <button
         className="group inline-block px-6 py-3 cursor-pointer text-left"
-        role="button"
         tabIndex={0}
       >
         <div className="hover:text-vega-mid-grey transition-colors">

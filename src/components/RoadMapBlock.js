@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Star from "./Svg/Star";
 import CrossSmall from "./Svg/CrossSmall";
 import CrossLarge from "./Svg/CrossLarge";
@@ -12,7 +12,7 @@ const RoadMapBlock = ({ title, date, position, content }) => {
 
   return (
     <div className="cursor-pointer group">
-      <div
+      <button
         onClick={toggleOverlay}
         className={`transition-all top-0 group-hover:-top-2 relative left-1/2 text-left w-[12rem] md:w-[20rem] mb-16  ${
           position === "right"
@@ -57,7 +57,7 @@ const RoadMapBlock = ({ title, date, position, content }) => {
           </div>
           <div className="absolute bottom-0 left-0 right-0 border-t h-1.5 border-current"></div>
         </div>
-      </div>
+      </button>
       {overlayActive && (
         <div className="fixed z-50 top-0 left-0 px-6 right-0 bottom-0 dark:bg-black bg-white overflow-scroll">
           <div className="relative top-[6rem] md:top-1/4 pb-20">

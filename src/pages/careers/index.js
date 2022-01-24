@@ -32,7 +32,10 @@ const CareersPage = () => {
   `);
   return (
     <Layout>
-      <Seo title="Careers" />
+      <Seo
+        title="Careers at Vega"
+        description="Find your career in DeFi. Join the core team at Vega, and help create Web3's native derivatives layer."
+      />
       <Container>
         <div className="pt-6 lg:pt-16">
           <div className="grid grid-cols-12">

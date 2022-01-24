@@ -8,7 +8,7 @@ module.exports = {
     title: "Vega Protcol",
     titleTemplate: "%s | Vega Protocol",
     description:
-      "Vega is a protocol for creating and trading derivatives on a fully decentralised network.",
+      "Discover Web3's native derivatives trading platform that is helping DeFi mature.",
     image: "/images/vega-og.jpg",
     twitter: "@vegaprotocol",
   },

@@ -1,4 +1,5 @@
 import React from "react";
+import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import BoxTitle from "../../components/BoxTitle";
@@ -12,7 +13,6 @@ import LeadingLine from "../../components/LeadingLine";
 import BoxLink from "../../components/BoxLink";
 import BoxLinkSimple from "../../components/BoxLinkSimple";
 import StarCrossed from "../../components/StarCrossed";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BlogPosts from "../../components/BlogPosts";
 import Moshed from "../../video/moshed.mp4";
 import LadderIllustration from "../../components/Svg/LadderIllustration";
@@ -41,6 +41,10 @@ const ButtonBlock = () => {
 const DevelopPage = ({ data }) => {
   return (
     <Layout>
+      <Seo
+        title="Develop with Vega"
+        description="Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi."
+      />
       <Container hideXOverflow={true}>
         <div className="pt-6 mb-16 lg:pt-16">
           <div className="md:grid md:grid-cols-12">

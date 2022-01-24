@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
@@ -43,6 +44,10 @@ const CommunityPage = ({ data }) => {
 
   return (
     <Layout>
+      <Seo
+        title="Community"
+        description="Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
+      />
       <div className="relative z-20">
         <JumpNavigation
           pageTitle={intl.formatMessage({ id: "page-community-title" })}
