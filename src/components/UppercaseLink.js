@@ -22,8 +22,11 @@ const UppercaseLink = ({ text, link }) => {
     const file = /\.[0-9a-z]+$/i.test(link);
     if (file) {
       return (
-        <a href={link} className={linkClass}>
+        <a href={link} className={linkClass} target="_blank">
           {text}
+          <span className="inline-block ml-2">
+            <LinkArrow />
+          </span>
         </a>
       );
     } else {

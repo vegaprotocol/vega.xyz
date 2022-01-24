@@ -3,7 +3,7 @@ title: "Wendy grows up"
 description: "Klaus Kursawe has developed his original research for Wendy, the good little fairness widget, to include a framework for implementation across all blockchains and a simulator to calculate latency and throughput implications."
 
 links:
-  - title: Download PDF
+  - title: View PDF
     link: /papers/Wendy_Grows_Up.pdf
   - title: Try out the Wendy prototype, running on a simulated network
     link: https://github.com/vegaprotocol/wendy/
