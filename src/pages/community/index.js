@@ -64,19 +64,19 @@ const CommunityPage = ({ data }) => {
               {intl.formatMessage({ id: "page-community-hero-text" })}
             </LeadingLine>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-none">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-[32rem]">
               <div>
                 <ButtonLink
                   text="Join us on Discord"
                   link="https://vega.xyz/discord"
-                  className="w-full"
+                  className="w-full text-center"
                 ></ButtonLink>
               </div>
               <div>
                 <ButtonLink
                   text="Try a tutorial"
                   link="https://www.youtube.com/playlist?list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2"
-                  className="w-full"
+                  className="w-full text-center"
                 ></ButtonLink>
               </div>
             </div>
