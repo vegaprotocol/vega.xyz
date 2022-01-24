@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "four-oh-four": "url('/404.png')",
+      },
       colors: {
         "vega-off-black": "#252525",
         "vega-light-grey": "#F2F2F2",
