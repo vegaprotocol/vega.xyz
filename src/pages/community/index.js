@@ -16,7 +16,7 @@ import PageSection from "../../components/PageSection";
 //import TwitchEmbed from "../../components/TwitchEmbed";
 import Incentives from "../../components/Incentives";
 import GlitchTitle from "../../components/GlitchTitle";
-import { getImage } from "gatsby-plugin-image";
+import { getImage, StaticImage } from "gatsby-plugin-image";
 import GhostParty from "../../components/GhostParty";
 import IconArt from "../../components/Svg/IconArt";
 import IconContent from "../../components/Svg/IconContent";
@@ -261,16 +261,26 @@ const CommunityPage = ({ data }) => {
         </PageSection>
         <PageSection>
           <div className="grid grid-cols-12">
-            <div className="col-span-4">
-              <h2 className="title-l md:title-xxxl lg:title-xxxxl">
+            <div className="relative z-10 -mt-6 md:mt-0 order-2 col-span-12 md:col-span-5 md:order-1 self-center">
+              <h2 className="title-l title-xxl lg:title-xxxl xl:title-xxxxl">
                 Want
                 <br />
                 Swag?
               </h2>
-              <div className="my-6">Get your hands on it here</div>
+              <div className="mt-4 !mb-6 copy-s">Get your hands on it here</div>
               <ButtonLink
                 link="https://vega.xyz/discord/"
                 text="Ask us on Discord"
+              />
+            </div>
+            <div className="pt-8 md:pt-0 order-1 md:order-2 col-span-12 md:col-span-7 text-center">
+              <StaticImage
+                src="../../images/vega-swag.png"
+                alt="Vega Swag"
+                placeholder="none"
+                layout="constrained"
+                width={520}
+                height={584}
               />
             </div>
           </div>
