@@ -208,7 +208,7 @@ const DevelopPage = ({ data }) => {
                 <iframe
                   width="560"
                   height="315"
-                  src="https://www.youtube-nocookie.com/embed/7ZqIER8KF9E"
+                  src="https://www.youtube-nocookie.com/embed/hpsHUCU5MwY"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
