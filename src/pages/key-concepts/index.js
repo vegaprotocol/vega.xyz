@@ -34,12 +34,12 @@ const KeyConceptsPage = () => {
         title="Key Vega Concepts | Vega Protocol"
         description="Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
       />
-      <Container>
+      <Container hideXOverflow={true}>
         <div className="pt-6 md:grid md:grid-cols-12 mb-20">
-          <div className="hidden md:col-span-3 md:block">
-            <UniverseLeft className="-translate-x-12 xxl:translate-x-0" />
+          <div className="hidden md:col-span-2 lg:col-span-3 md:block">
+            <UniverseLeft className="translate-y-1/4 -translate-x-2/4 xxl:translate-x-0 scale-150" />
           </div>
-          <div className="md:col-span-6">
+          <div className="md:col-span-8 lg:col-span-6">
             <div className="max-w-[45rem] mx-auto text-center mb-16 lg:pt-16">
               <h1 className="mb-6">
                 <BoxTitle text="Key concepts" />
@@ -59,8 +59,8 @@ const KeyConceptsPage = () => {
               </LeadingLine>
             </div>
           </div>
-          <div className="hidden md:col-span-3 md:block">
-            <UniverseRight className="translate-x-12" />
+          <div className="hidden md:col-span-2 lg:col-span-3 md:block">
+            <UniverseRight className="translate-y-1/4 translate-x-2/4 scale-150" />
           </div>
         </div>
       </Container>

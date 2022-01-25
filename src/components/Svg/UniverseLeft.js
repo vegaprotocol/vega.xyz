@@ -4,7 +4,7 @@ import Moshed from "../../video/moshed.mp4";
 const UniverseLeft = ({ className }) => {
   return (
     <div
-      className={`pb-[246.7692308%] relative w-full ${
+      className={`pb-[172.2658739%] relative w-full ${
         className ? className : ""
       }`}
     >
@@ -21,85 +21,140 @@ const UniverseLeft = ({ className }) => {
       </div>
 
       <svg
-        viewBox="0 0 325 802"
+        viewBox="0 0 470.9 811.2"
         xmlSpace="preserve"
         className="absolute left-0 right-0 top-0 h-auto"
       >
         <path
-          d="M0,0v802h325V0H0z M7,233.5C7,164.2,63.2,108,132.5,108S258,164.2,258,233.5S201.8,359,132.5,359S7,302.8,7,233.5z
-	 M257.5,736c-33.4,0-60.5-27.1-60.5-60.5s27.1-60.5,60.5-60.5c33.4,0,60.5,27.1,60.5,60.5S290.9,736,257.5,736z"
-          className="dark:fill-black fill-white"
+          d="M0,0v811.2h470.9V0H0z M148.1,237.8c0-69.3,56.2-125.5,125.5-125.5s125.5,56.2,125.5,125.5s-56.2,125.5-125.5,125.5
+	S148.1,307.1,148.1,237.8z M398.6,740.3c-33.4,0-60.5-27.1-60.5-60.5s27.1-60.5,60.5-60.5s60.5,27.1,60.5,60.5
+	S432,740.3,398.6,740.3z"
+          className="fill-white dark:fill-black"
         />
-        <path fill="currentColor" d="M255.6,496.4h-3.2v3.2h3.2V496.4z" />
-        <path
-          fill="currentColor"
-          d="M258.8,493.2V490h-3.2v3.2v3.2h3.2V493.2z"
-        />
-        <path fill="currentColor" d="M252.4,499.6H246v3.2h6.4V499.6z" />
-        <path fill="currentColor" d="M255.6,502.8h-3.2v3.2h3.2V502.8z" />
-        <path fill="currentColor" d="M258.8,505.9h-3.2v6.4h3.2V505.9z" />
-        <path fill="currentColor" d="M261.9,502.8h-3.2v3.2h3.2V502.8z" />
-        <path fill="currentColor" d="M268.3,499.6h-6.4v3.2h6.4V499.6z" />
-        <path fill="currentColor" d="M261.9,496.4h-3.2v3.2h3.2V496.4z" />
-        <path fill="currentColor" d="M117.6,405.4h-3.2v3.2h3.2V405.4z" />
-        <path
-          fill="currentColor"
-          d="M120.8,402.2V399h-3.2v3.2v3.2h3.2V402.2z"
-        />
-        <path fill="currentColor" d="M114.4,408.6H108v3.2h6.4V408.6z" />
-        <path fill="currentColor" d="M117.6,411.8h-3.2v3.2h3.2V411.8z" />
-        <path fill="currentColor" d="M120.8,414.9h-3.2v6.4h3.2V414.9z" />
-        <path fill="currentColor" d="M123.9,411.8h-3.2v3.2h3.2V411.8z" />
-        <path fill="currentColor" d="M130.3,408.6h-6.4v3.2h6.4V408.6z" />
-        <path fill="currentColor" d="M123.9,405.4h-3.2v3.2h3.2V405.4z" />
-        <path fill="currentColor" d="M228.6,210.9h-3.2v3.2h3.2V210.9z" />
-        <path
-          fill="currentColor"
-          d="M231.8,207.7v-3.2h-3.2v3.2v3.2h3.2V207.7z"
-        />
-        <path fill="currentColor" d="M225.4,214.1H219v3.2h6.4V214.1z" />
-        <path fill="currentColor" d="M228.6,217.3h-3.2v3.2h3.2V217.3z" />
-        <path fill="currentColor" d="M231.8,220.4h-3.2v6.4h3.2V220.4z" />
-        <path fill="currentColor" d="M234.9,217.3h-3.2v3.2h3.2V217.3z" />
-        <path fill="currentColor" d="M241.3,214.1h-6.4v3.2h6.4V214.1z" />
-        <path fill="currentColor" d="M234.9,210.9h-3.2v3.2h3.2V210.9z" />
-        <path fill="currentColor" d="M244.3,201.3h-3.2v3.2h3.2V201.3z" />
-        <path fill="currentColor" d="M247.5,198.1h-3.2v3.2h3.2V198.1z" />
-        <path fill="currentColor" d="M250.6,194.9h-3.2v3.2h3.2V194.9z" />
-        <path fill="currentColor" d="M253.8,191.8h-3.2v3.2h3.2V191.8z" />
-        <path fill="currentColor" d="M257,188.6h-3.2v3.2h3.2V188.6z" />
-        <path fill="currentColor" d="M260.2,185.4H257v3.2h3.2V185.4z" />
-        <path fill="currentColor" d="M263.4,182.2h-3.2v3.2h3.2V182.2z" />
-        <path fill="currentColor" d="M266.6,179h-3.2v3.2h3.2V179z" />
-        <path fill="currentColor" d="M269.8,175.8h-3.2v3.2h3.2V175.8z" />
-        <path fill="currentColor" d="M273,172.6h-3.2v3.2h3.2V172.6z" />
-        <path fill="currentColor" d="M276.1,169.4H273v3.2h3.2v-3.2H276.1z" />
-        <path fill="currentColor" d="M279.3,166.3h-3.2v3.2h3.2V166.3z" />
-        <path fill="currentColor" d="M282.5,163.1h-3.2v3.2h3.2V163.1z" />
-        <path fill="currentColor" d="M285.7,159.9h-3.2v3.2h3.2V159.9z" />
-        <path fill="currentColor" d="M288.9,156.7h-3.2v3.2h3.2V156.7z" />
-        <path fill="currentColor" d="M292.1,153.5h-3.2v3.2h3.2V153.5z" />
-        <path fill="currentColor" d="M295.3,150.3h-3.2v3.2h3.2V150.3z" />
-        <path fill="currentColor" d="M298.5,147.1h-3.2v3.2h3.2V147.1z" />
-        <path fill="currentColor" d="M301.6,143.9h-3.2v3.2h3.2V143.9z" />
-        <path fill="currentColor" d="M304.8,140.8h-3.2v3.2h3.2V140.8z" />
-        <path fill="currentColor" d="M308,137.6h-3.2v3.2h3.2V137.6z" />
-        <path fill="currentColor" d="M311.2,134.4H308v3.2h3.2V134.4z" />
-        <path fill="currentColor" d="M314.4,131.2h-3.2v3.2h3.2V131.2z" />
-        <path fill="currentColor" d="M317.6,128h-3.2v3.2h3.2V128z" />
-        <path fill="currentColor" d="M208.2,547.2H205v3.2h3.2V547.2z" />
-        <path fill="currentColor" d="M211.4,544h-3.2v3.2h3.2V544z" />
-        <path fill="currentColor" d="M211.4,550.4h-3.2v3.2h3.2V550.4z" />
-        <path fill="currentColor" d="M214.6,547.2h-3.2v3.2h3.2V547.2z" />
-        <path fill="currentColor" d="M176.2,10.2H173v3.2h3.2V10.2z" />
-        <path fill="currentColor" d="M179.4,7h-3.2v3.2h3.2V7z" />
-        <path fill="currentColor" d="M179.4,13.4h-3.2v3.2h3.2V13.4z" />
-        <path fill="currentColor" d="M182.6,10.2h-3.2v3.2h3.2V10.2z" />
-        <path fill="currentColor" d="M151.2,733H148v3.2h3.2V733z" />
-        <path fill="currentColor" d="M286.2,789.2H283v3.2h3.2V789.2z" />
-        <path fill="currentColor" d="M289.4,786h-3.2v3.2h3.2V786z" />
-        <path fill="currentColor" d="M289.4,792.4h-3.2v3.2h3.2V792.4z" />
-        <path fill="currentColor" d="M292.6,789.2h-3.2v3.2h3.2V789.2z" />
+        <g>
+          <path fill="currentColor" d="M396.7,500.7h-3.2v3.2h3.2V500.7z" />
+          <path
+            fill="currentColor"
+            d="M399.9,497.5v-3.2h-3.2v3.2v3.2h3.2V497.5z"
+          />
+          <path fill="currentColor" d="M393.5,503.9h-6.4v3.2h6.4V503.9z" />
+          <path fill="currentColor" d="M396.7,507.1h-3.2v3.2h3.2V507.1z" />
+          <path fill="currentColor" d="M399.9,510.2h-3.2v6.4h3.2V510.2z" />
+          <path fill="currentColor" d="M403.1,507.1h-3.2v3.2h3.2V507.1z" />
+          <path fill="currentColor" d="M409.4,503.9H403v3.2h6.4V503.9z" />
+          <path fill="currentColor" d="M403.1,500.7h-3.2v3.2h3.2V500.7z" />
+          <path fill="currentColor" d="M258.7,409.7h-3.2v3.2h3.2V409.7z" />
+          <path
+            fill="currentColor"
+            d="M261.9,406.5v-3.2h-3.2v3.2v3.2h3.2V406.5z"
+          />
+          <path fill="currentColor" d="M255.5,412.9h-6.4v3.2h6.4V412.9z" />
+          <path fill="currentColor" d="M258.7,416.1h-3.2v3.2h3.2V416.1z" />
+          <path fill="currentColor" d="M261.9,419.2h-3.2v6.4h3.2V419.2z" />
+          <path fill="currentColor" d="M265.1,416.1h-3.2v3.2h3.2V416.1z" />
+          <path fill="currentColor" d="M271.4,412.9H265v3.2h6.4V412.9z" />
+          <path fill="currentColor" d="M265.1,409.7h-3.2v3.2h3.2V409.7z" />
+          <path fill="currentColor" d="M369.7,215.2h-3.2v3.2h3.2V215.2z" />
+          <path fill="currentColor" d="M372.9,212v-3.2h-3.2v3.2v3.2h3.2V212z" />
+          <path fill="currentColor" d="M366.5,218.4h-6.4v3.2h6.4V218.4z" />
+          <path fill="currentColor" d="M369.7,221.6h-3.2v3.2h3.2V221.6z" />
+          <path fill="currentColor" d="M372.9,224.7h-3.2v6.4h3.2V224.7z" />
+          <path fill="currentColor" d="M376.1,221.6h-3.2v3.2h3.2V221.6z" />
+          <path fill="currentColor" d="M382.4,218.4H376v3.2h6.4V218.4z" />
+          <path fill="currentColor" d="M376.1,215.2h-3.2v3.2h3.2V215.2z" />
+          <path fill="currentColor" d="M385.4,205.6h-3.2v3.2h3.2V205.6z" />
+          <path fill="currentColor" d="M388.6,202.4h-3.2v3.2h3.2V202.4z" />
+          <path fill="currentColor" d="M391.8,199.2h-3.2v3.2h3.2V199.2z" />
+          <path fill="currentColor" d="M395,196.1h-3.2v3.2h3.2V196.1z" />
+          <path fill="currentColor" d="M398.1,192.9h-3.2v3.2h3.2V192.9z" />
+          <path fill="currentColor" d="M401.3,189.7h-3.2v3.2h3.2V189.7z" />
+          <path fill="currentColor" d="M404.5,186.5h-3.2v3.2h3.2V186.5z" />
+          <path fill="currentColor" d="M407.7,183.3h-3.2v3.2h3.2V183.3z" />
+          <path fill="currentColor" d="M410.9,180.1h-3.2v3.2h3.2V180.1z" />
+          <path fill="currentColor" d="M414.1,176.9h-3.2v3.2h3.2V176.9z" />
+          <path fill="currentColor" d="M417.3,173.7h-3.2v3.2h3.2V173.7z" />
+          <path fill="currentColor" d="M420.5,170.6h-3.2v3.2h3.2V170.6z" />
+          <path fill="currentColor" d="M423.6,167.4h-3.2v3.2h3.2V167.4z" />
+          <path fill="currentColor" d="M426.8,164.2h-3.2v3.2h3.2V164.2z" />
+          <path fill="currentColor" d="M430,161h-3.2v3.2h3.2V161z" />
+          <path fill="currentColor" d="M433.2,157.8H430v3.2h3.2V157.8z" />
+          <path fill="currentColor" d="M436.4,154.6h-3.2v3.2h3.2V154.6z" />
+          <path fill="currentColor" d="M439.6,151.4h-3.2v3.2h3.2V151.4z" />
+          <path fill="currentColor" d="M442.8,148.2h-3.2v3.2h3.2V148.2z" />
+          <path fill="currentColor" d="M446,145.1h-3.2v3.2h3.2V145.1z" />
+          <path fill="currentColor" d="M449.1,141.9h-3.2v3.2h3.2V141.9z" />
+          <path fill="currentColor" d="M452.3,138.7h-3.2v3.2h3.2V138.7z" />
+          <path fill="currentColor" d="M455.5,135.5h-3.2v3.2h3.2V135.5z" />
+          <path fill="currentColor" d="M458.7,132.3h-3.2v3.2h3.2V132.3z" />
+          <path fill="currentColor" d="M349.3,551.5h-3.2v3.2h3.2V551.5z" />
+          <path fill="currentColor" d="M352.5,548.3h-3.2v3.2h3.2V548.3z" />
+          <path fill="currentColor" d="M352.5,554.7h-3.2v3.2h3.2V554.7z" />
+          <path fill="currentColor" d="M355.7,551.5h-3.2v3.2h3.2V551.5z" />
+          <path fill="currentColor" d="M317.3,14.5h-3.2v3.2h3.2V14.5z" />
+          <path fill="currentColor" d="M320.5,11.3h-3.2v3.2h3.2V11.3z" />
+          <path fill="currentColor" d="M320.5,17.7h-3.2v3.2h3.2V17.7z" />
+          <path fill="currentColor" d="M323.7,14.5h-3.2v3.2h3.2V14.5z" />
+          <path fill="currentColor" d="M292.3,737.3h-3.2v3.2h3.2V737.3z" />
+          <path fill="currentColor" d="M427.3,793.5h-3.2v3.2h3.2V793.5z" />
+          <path fill="currentColor" d="M430.5,790.3h-3.2v3.2h3.2V790.3z" />
+          <path fill="currentColor" d="M430.5,796.7h-3.2v3.2h3.2V796.7z" />
+          <path fill="currentColor" d="M433.7,793.5h-3.2v3.2h3.2V793.5z" />
+          <g>
+            <path fill="currentColor" d="M21.2,559.6H18v3.2h3.2V559.6z" />
+            <path
+              fill="currentColor"
+              d="M24.4,556.5v-3.2h-3.2v3.2v3.2h3.2V556.5z"
+            />
+            <path fill="currentColor" d="M18,562.8h-6.4v3.2H18V562.8z" />
+            <path fill="currentColor" d="M21.2,566H18v3.2h3.2V566z" />
+            <path fill="currentColor" d="M24.4,569.2h-3.2v6.4h3.2V569.2z" />
+            <path fill="currentColor" d="M27.6,566h-3.2v3.2h3.2V566z" />
+            <path fill="currentColor" d="M34,562.8h-6.4v3.2H34V562.8z" />
+            <path fill="currentColor" d="M27.6,559.6h-3.2v3.2h3.2V559.6z" />
+            <path fill="currentColor" d="M36.9,550.1h-3.2v3.2h3.2V550.1z" />
+            <path fill="currentColor" d="M40.1,546.9h-3.2v3.2h3.2V546.9z" />
+            <path fill="currentColor" d="M43.3,543.7h-3.2v3.2h3.2V543.7z" />
+            <path fill="currentColor" d="M46.5,540.5h-3.2v3.2h3.2V540.5z" />
+            <path fill="currentColor" d="M49.7,537.3h-3.2v3.2h3.2V537.3z" />
+            <path fill="currentColor" d="M52.9,534.1h-3.2v3.2h3.2V534.1z" />
+            <path fill="currentColor" d="M56.1,531h-3.2v3.2h3.2V531z" />
+            <path fill="currentColor" d="M59.2,527.8H56v3.2h3.2V527.8z" />
+            <path fill="currentColor" d="M62.4,524.6h-3.2v3.2h3.2V524.6z" />
+            <path fill="currentColor" d="M65.6,521.4h-3.2v3.2h3.2V521.4z" />
+            <path fill="currentColor" d="M68.8,518.2h-3.2v3.2h3.2V518.2z" />
+            <path fill="currentColor" d="M72,515h-3.2v3.2H72V515z" />
+            <path fill="currentColor" d="M75.2,511.8H72v3.2h3.2V511.8z" />
+            <path fill="currentColor" d="M78.4,508.6h-3.2v3.2h3.2V508.6z" />
+            <path fill="currentColor" d="M81.6,505.5h-3.2v3.2h3.2V505.5z" />
+            <path fill="currentColor" d="M84.7,502.3h-3.2v3.2h3.2V502.3z" />
+            <path fill="currentColor" d="M87.9,499.1h-3.2v3.2h3.2V499.1z" />
+            <path fill="currentColor" d="M91.1,495.9h-3.2v3.2h3.2V495.9z" />
+            <path fill="currentColor" d="M94.3,492.7h-3.2v3.2h3.2V492.7z" />
+            <path fill="currentColor" d="M97.5,489.5h-3.2v3.2h3.2V489.5z" />
+            <path fill="currentColor" d="M100.7,486.3h-3.2v3.2h3.2V486.3z" />
+            <path fill="currentColor" d="M103.9,483.1h-3.2v3.2h3.2V483.1z" />
+            <path fill="currentColor" d="M107.1,480h-3.2v3.2h3.2V480z" />
+            <path fill="currentColor" d="M110.2,476.8H107v3.2h3.2V476.8z" />
+            <g>
+              <path fill="currentColor" d="M113.4,473.6h-3.2v3.2h3.2V473.6z" />
+              <path fill="currentColor" d="M116.6,470.4h-3.2v3.2h3.2V470.4z" />
+              <path fill="currentColor" d="M119.8,467.2h-3.2v3.2h3.2V467.2z" />
+              <path fill="currentColor" d="M123,464h-3.2v3.2h3.2V464z" />
+              <path fill="currentColor" d="M126.2,460.8H123v3.2h3.2V460.8z" />
+              <path fill="currentColor" d="M129.4,457.6h-3.2v3.2h3.2V457.6z" />
+              <path fill="currentColor" d="M132.6,454.5h-3.2v3.2h3.2V454.5z" />
+              <path fill="currentColor" d="M135.7,451.3h-3.2v3.2h3.2V451.3z" />
+              <path fill="currentColor" d="M138.9,448.1h-3.2v3.2h3.2V448.1z" />
+              <path fill="currentColor" d="M142.1,444.9h-3.2v3.2h3.2V444.9z" />
+              <path fill="currentColor" d="M145.3,441.7h-3.2v3.2h3.2V441.7z" />
+              <path fill="currentColor" d="M148.5,438.5h-3.2v3.2h3.2V438.5z" />
+              <path fill="currentColor" d="M151.7,435.3h-3.2v3.2h3.2V435.3z" />
+              <path fill="currentColor" d="M154.9,432.1h-3.2v3.2h3.2V432.1z" />
+              <path fill="currentColor" d="M158.1,429h-3.2v3.2h3.2V429z" />
+              <path fill="currentColor" d="M161.2,425.8H158v3.2h3.2V425.8z" />
+            </g>
+          </g>
+        </g>
       </svg>
     </div>
   );
