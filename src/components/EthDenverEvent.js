@@ -11,10 +11,16 @@ const EthDenverEvent = ({
   discoMode,
 }) => {
   return (
-    <div className="relative border-b border-white pt-10 pb-6 mb-6">
-      <div className="absolute top-0 left-0 inline-block bg-white title-xxxs text-black p-1">
-        {type}
-      </div>
+    <div
+      className={`relative border-b border-white first:border-t pb-6 ${
+        type ? "pt-10" : "pt-4"
+      }`}
+    >
+      {type && (
+        <div className="absolute top-0 left-0 inline-block bg-white title-xxxs text-black p-1">
+          {type}
+        </div>
+      )}
       <div className="md:flex">
         <div className="title-m mb-3 md:mb-5">
           {title}

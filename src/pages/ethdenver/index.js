@@ -15,6 +15,7 @@ import EthDenverBuild from "../../images/ethdenverbuild.svg";
 import EthDenverMeet from "../../images/ethdenvermeet.svg";
 import EthDenverMap from "../../images/ethdenver-map.svg";
 import EthDenverEvent from "../../components/EthDenverEvent";
+import EthDenverEvent2 from "../../components/EthDenverEvent2";
 import PersonBarney from "../../images/person-barney.png";
 import CrossLarge from "../../components/Svg/CrossLarge";
 
@@ -95,6 +96,7 @@ const EthDenver = () => {
         </div>
 
         <ContainerEthDenver>
+          <h1 class="title-m mb-3">Catch Vega at ETHDenver</h1>
           <div className="copy-xs md:copy-s">
             Excited to be outta lockdowns and straight into sponsoring ETHDenver
             this February. A big bunch of us will be there, including Barney our
@@ -163,7 +165,7 @@ const EthDenver = () => {
               type="Keynote talk"
               title="Why derivatives are the cypherpunk future of DeFi"
               title2="with Barney Mannerings, Vega Founder"
-              when="Thursday 17th Feb, 5:30pm"
+              when="Thursday 17th Feb, 5:30 - 8:30pm"
               venue="Official opening ceremony"
               discoMode={discoMode}
               people={[PersonBarney, PersonBarney]}
@@ -172,6 +174,59 @@ const EthDenver = () => {
               personal. We'll talk you through some of the fundamentals of Vega,
               introduce you to our mentorship team and collaborate in the
               ongoing Hackathon
+            </EthDenverEvent>
+
+            <EthDenverEvent
+              type="Talks & workshops"
+              title="Virtual address @ #BUIDLathon Kickoff"
+              title2="with Chris"
+              when="Friday, Feb 11th time TBC"
+              venue="Livestream"
+              discoMode={discoMode}
+              people={[]}
+            ></EthDenverEvent>
+
+            <EthDenverEvent
+              type="Talks & workshops"
+              title="Get to know the Vega Protocol"
+              title2="with Chris, Arne & Daigan"
+              when="Thursday, Feb 17th, 11am - 1pm"
+              venue="1134 Broadway (Upstairs)"
+              discoMode={discoMode}
+              people={[]}
+            >
+              A casual evening 'meetup'-style event introducing ETHDenver
+              developers to the Vega Trading Protocol.
+            </EthDenverEvent>
+
+            <EthDenverEvent
+              type="Talks & workshops"
+              title="Official ETHDenver Vega Technical workshop"
+              title2="with Chris, Barney & TBC"
+              when="Friday, Feb 18th, time TBC"
+              venue="Sports Castle & live streamed"
+              discoMode={discoMode}
+              people={[]}
+            >
+              The official technical workshop for developers interested in
+              building with Vega and creating the future of DeFi &mdash; and get
+              rewarded for it. A real Vega 101, with tutorials on navigating
+              testnet / mainnet, with bounties up for grabs!
+            </EthDenverEvent>
+
+            <EthDenverEvent
+              type="Talks & workshops"
+              title="ZK rollups: Tales from the Field (**L2/ scaling/ Infrastructure track)"
+              title2="with Danny Holland, Head of Blockchain Integrations @ Vega"
+              when="Friday & Saturday (2/18-19), time TBC"
+              venue="TBC"
+              discoMode={discoMode}
+              people={[]}
+            >
+              The official technical workshop for developers interested in
+              building with Vega and creating the future of DeFi &mdash; and get
+              rewarded for it. A real Vega 101, with tutorials on navigating
+              testnet / mainnet, with bounties up for grabs!
             </EthDenverEvent>
           </div>
 
@@ -190,9 +245,41 @@ const EthDenver = () => {
               )}
             </div>
 
-            <div className="copy-xs md:copy-s">
-              Hackathon bounties are being published after the official ETH
-              Denver announcement on 11th Feb. Check back then!
+            <div className="copy-xs md:copy-s !mb-12">
+              Bounties are tasks that earn you rewards as you build with Vega.
+              Catch them at different times throughout ETHDenver.
+            </div>
+
+            <div>
+              <EthDenverEvent
+                type=""
+                title="Bounties presentation @ #BUIDLathon Kickoff"
+                title2="with Hackathon mentors"
+                when="Sunday, Feb 20th. 10am - 2pm"
+                venue="Virtual and @ Sports Castle"
+                discoMode={discoMode}
+                people={[]}
+              ></EthDenverEvent>
+
+              <EthDenverEvent
+                type=""
+                title="Let's get techie workshop"
+                title2="with Chris, Barney & TBC"
+                when="Friday, Feb 18th, time TBC"
+                venue="Sports Castle"
+                discoMode={discoMode}
+                people={[]}
+              ></EthDenverEvent>
+
+              <EthDenverEvent
+                type=""
+                title="Vega bounty judging"
+                title2="with Chris"
+                when="Friday, Feb 11th. Virtual @10am, in person @ 11am"
+                venue="Virtual and @ Sports Castle"
+                discoMode={discoMode}
+                people={[]}
+              ></EthDenverEvent>
             </div>
           </div>
           <div className="mb-20">
@@ -210,51 +297,45 @@ const EthDenver = () => {
               )}
             </div>
 
-            <div className="border-b border-white pb-6 mb-6">
-              <div className="title-m mb-3 align-bottom">
-                Hacker Meet & Greet
-                <br />
-                <span className="text-vega-yellow">Monday 14th Feb, 6pm</span>
-                <br />
-                <span
-                  className={`${
-                    discoMode ? "text-black" : "text-vega-mid-grey"
-                  }`}
-                >
-                  DJ Chill Zone, Floor 2.5
-                </span>
-              </div>
+            <EthDenverEvent2
+              title="Hacker Meet & Greet"
+              title2="Feb 15th @ 100 de Agave"
+              title3="5 - 7pm"
+              discoMode={discoMode}
+              people={[]}
+            >
+              Prospective developer in the Hackathon? Let's get you fired up
+              about Vega! Join us for a relaxed evening where you can learn
+              about the fundamentals of Vega, meet our mentorship team and other
+              developers looking to build on Vega. Beers and snacks will keep
+              you going at 100 de Agave, 1 block away from the sports castle.
+            </EthDenverEvent2>
 
-              <div className="copy-xs">
-                Prospective developer in the Hackathon? Let's get up close and
-                personal. We'll talk you through some of the fundamentals of
-                Vega, introduce you to our mentorship team and collaborate in
-                the ongoing Hackathon
-              </div>
-            </div>
+            <EthDenverEvent2
+              title="Party with the DAOs"
+              title2="Feb 16th @ Run for the Roses"
+              title3="6 - 10pm"
+              discoMode={discoMode}
+              people={[]}
+            >
+              We're bringing together some of the most prominent DAOs in DeFi,
+              infrastructure, metaverse, and bankless communities for this
+              invite-only event.
+            </EthDenverEvent2>
 
-            <div className="border-b border-white pb-6">
-              <div className="title-m mb-3">
-                Vega & Friends Hootenanny
-                <br />
-                <span className="text-vega-yellow">
-                  Wednesday 16th Feb, 6pm
-                </span>
-                <br />
-                <span
-                  className={`${
-                    discoMode ? "text-black" : "text-vega-mid-grey"
-                  }`}
-                >
-                  Nike Arena, Room 4
-                </span>
-              </div>
-
-              <div className="copy-xs">
-                Join us for drinks, bites and chats along with our partner DAO
-                (TBC).
-              </div>
-            </div>
+            <EthDenverEvent2
+              title="Programming liquidity on Vega Futures markets"
+              title2="Feb 17th @ Mirus Loft, Art Hotel"
+              title3="11am - 1pm"
+              discoMode={discoMode}
+              people={[]}
+            >
+              Want to build a market or liquidity bot on Vega? We got you
+              covered! Take a deep dive into the fundamentals of Vega trading,
+              how to programmatically manage assets and provide Liquidity Orders
+              via APIs. Lunch will be served at the Mirus Loft, just 1 block
+              from the sports castle.
+            </EthDenverEvent2>
           </div>
         </ContainerEthDenver>
       </div>
