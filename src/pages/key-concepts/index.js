@@ -187,12 +187,12 @@ const KeyConceptsPage = () => {
 
             <ConceptBlock title="Fully decentralised order book">
               <div className="copy-xs text-vega-mid-grey">
-                Vega is a decentralised exchange which uses a limit order book
-                for trade generation. Different nodes receive different orders
-                from different users, and these 'gossip' between themselves and
-                decide which ones to include in the next block. So at any block
-                height, all the nodes have exactly the same representation of
-                the order book.
+                Vega is a protocol for creating decentralised markets which uses
+                a limit order book for trade generation. Different nodes receive
+                different orders from different users, and these 'gossip'
+                between themselves and decide which ones to include in the next
+                block. So at any block height, all the nodes have exactly the
+                same representation of the order book.
               </div>
               <ButtonLink
                 link="https://blog.vega.xyz/designing-programmable-markets-de0650246dd5"
