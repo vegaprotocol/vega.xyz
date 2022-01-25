@@ -60,7 +60,7 @@ const UsePage = () => {
               <div className="mb-16">
                 <BoxLink
                   title={`Configure the network`.toUpperCase()}
-                  text="Shape the future of DeFi. Propose and vote for governance change and define the optimal network configuration."
+                  text="Shape the future of DeFi. Propose and vote on governance actions to define the optimal network configuration."
                   linkTitle="Configure the network"
                   link="https://token.vega.xyz/governance"
                   inlineLinkTitle="Read the docs"
