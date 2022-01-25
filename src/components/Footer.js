@@ -85,7 +85,7 @@ const Footer = () => {
                     to="https://token.vega.xyz/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Stake/Delegate tokens
+                    Stake tokens
                   </TextLink>
                 </li>
                 <li>
