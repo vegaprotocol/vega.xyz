@@ -83,12 +83,12 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
               </li>
             ) : (
               <li key={idx}>
-                <a
-                  href={section.link}
+                <Link
+                  to={section.link}
                   className="text-[2.125rem] block py-4 uppercase"
                 >
                   {intl.formatMessage({ id: section.text })}
-                </a>
+                </Link>
               </li>
             )
           )}
