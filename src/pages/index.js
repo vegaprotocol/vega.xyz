@@ -112,11 +112,11 @@ const IndexPage = () => {
 
           <PageSection>
             <div className="lg:grid lg:grid-cols-12">
-              <div className="lg:col-span-3">
-                <div className="title-l mb-8">Up-coming Events</div>
+              <div className="lg:col-span-4">
+                <div className="title-l mb-8 hyphens-auto">Upcoming Events</div>
               </div>
 
-              <div className="lg:col-span-9">
+              <div className="lg:col-span-8">
                 <Calendar showEthDenver={true} />
               </div>
             </div>
