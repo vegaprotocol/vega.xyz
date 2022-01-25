@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { globalHistory } from "@reach/router";
 import { Link } from "gatsby-plugin-react-intl";
 import Navigation from "./Navigation";
 import ScreenMode from "../components/ScreenMode";
@@ -21,6 +22,12 @@ const Header = () => {
       disableBodyScroll(document.querySelector("#mobileMenu"));
     }
   };
+
+  useEffect(() => {
+    return globalHistory.listen(({ action }) => {
+      enableBodyScroll(document.querySelector("#mobileMenu"));
+    });
+  }, []);
 
   return (
     <div>
