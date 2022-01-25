@@ -56,8 +56,8 @@ const DevelopPage = ({ data }) => {
                 Creating the future of DeFi together
               </div>
               <LeadingLine className="text-current max-w-[30rem]">
-                Add to the source code or create software using Vega &mdash; and
-                earn rewards.
+                Contribute to our open source repositories on GitHub or create
+                software using Vega &mdash; and earn rewards.
               </LeadingLine>
               <div className="hidden md:block mt-12">
                 <ButtonBlock />
@@ -251,7 +251,7 @@ const DevelopPage = ({ data }) => {
               link="https://vega.xyz/discord/"
             />
             <BoxLinkSimple
-              text="Explore the community"
+              text="Explore the forum"
               link="https://community.vega.xyz/"
             />
             <BoxLinkSimple text="See the Roadmap" link="/en/#roadmap" />
