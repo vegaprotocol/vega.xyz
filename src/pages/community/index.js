@@ -50,6 +50,7 @@ const CommunityPage = ({ data }) => {
       />
       <div className="relative z-20">
         <JumpNavigation
+          pageSlug="community"
           pageTitle={intl.formatMessage({ id: "page-community-title" })}
           sections={CommunityPageSections}
         />

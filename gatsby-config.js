@@ -20,7 +20,12 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-remark",
-    "gatsby-plugin-smoothscroll",
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-netlify",
     {

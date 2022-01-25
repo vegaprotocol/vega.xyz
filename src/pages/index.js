@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 //import ScrambleText from "../components/ScrambleText";
-import { useIntl } from "gatsby-plugin-react-intl";
+//import { useIntl } from "gatsby-plugin-react-intl";
 import Seo from "../components/Seo";
 import Ticker from "../components/Ticker";
 import GlitchTitle from "../components/GlitchTitle";

@@ -11,6 +11,8 @@ import LeadingLine from "../../components/LeadingLine";
 import ScrollSpy from "react-scrollspy-navigation";
 import UniverseLeft from "../../components/Svg/UniverseLeft";
 import UniverseRight from "../../components/Svg/UniverseRight";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { useIntl } from "gatsby-plugin-react-intl";
 
 const KeyConceptsPage = () => {
   const sections = [
@@ -28,6 +30,7 @@ const KeyConceptsPage = () => {
     },
   ];
 
+  const intl = useIntl();
   return (
     <Layout>
       <Seo
@@ -77,14 +80,15 @@ const KeyConceptsPage = () => {
             <div className="mx-auto border-b overflow-x-scroll overflow-y-hidden whitespace-nowrap border-vega-mid-grey md:flex md:justify-center md:gap-x-8 px-6 md:px-0">
               <ScrollSpy>
                 {sections.map((section, index) => (
-                  <a
-                    href={`#${section.hash}`}
-                    className={`inline-block relative bottom-[-1px] last:mr-0 py-2 px-4 text-lg leading-7 border-b-4 hover:border-current border-transparent`}
-                    ref={React.createRef()}
+                  <AnchorLink
                     key={index}
+                    className={`inline-block relative bottom-[-1px] last:mr-0 py-2 px-4 text-lg leading-7 border-b-4 hover:border-current border-transparent`}
+                    to={`/${intl.locale}/key-concepts/#${section.hash}`}
+                    title={section.title}
+                    stripHash
                   >
                     {section.title}
-                  </a>
+                  </AnchorLink>
                 ))}
               </ScrollSpy>
             </div>
