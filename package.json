@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
+    "gatsby-plugin-netlify": "^4.0.0",
     "prettier": "^2.5.0",
     "prettier-plugin-tailwind": "^2.2.12",
     "tailwindcss-hyphens": "^0.1.0"

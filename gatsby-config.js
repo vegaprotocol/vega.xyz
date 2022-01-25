@@ -22,6 +22,7 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-plugin-smoothscroll",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-netlify",
     {
       resolve: `gatsby-plugin-react-intl`,
       options: {
