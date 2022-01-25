@@ -10,10 +10,19 @@ const RoadMapBlock = ({ title, date, position, content }) => {
     setOverlayActive(!overlayActive);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      toggleOverlay();
+    }
+  };
+
   return (
     <div className="cursor-pointer group">
-      <button
+      <div
+        role="button"
         onClick={toggleOverlay}
+        onKeyDown={handleKeyPress}
+        tabIndex={0}
         className={`transition-all top-0 group-hover:-top-2 relative left-1/2 text-left w-[12rem] md:w-[20rem] mb-16  ${
           position === "right"
             ? "pl-5 md:pl-10"
@@ -57,9 +66,13 @@ const RoadMapBlock = ({ title, date, position, content }) => {
           </div>
           <div className="absolute bottom-0 left-0 right-0 border-t h-1.5 border-current"></div>
         </div>
-      </button>
+      </div>
       {overlayActive && (
-        <div className="fixed z-50 top-0 left-0 px-6 right-0 bottom-0 dark:bg-black bg-white overflow-scroll">
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed z-50 top-0 left-0 px-6 right-0 bottom-0 dark:bg-black bg-white overflow-scroll"
+        >
           <div className="relative top-[6rem] md:top-1/4 pb-20">
             <div className="border border-current max-w-[32.5rem] mx-auto">
               <div className="border-b border-current h-6 flex items-center p-2">
