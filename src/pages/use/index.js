@@ -64,7 +64,7 @@ const UsePage = () => {
                   linkTitle="Configure the network"
                   link="https://token.vega.xyz/governance"
                   inlineLinkTitle="Read the docs"
-                  inlineLink="https://token.vega.xyz/governance/"
+                  inlineLink="https://docs.vega.xyz/docs/concepts/vega-protocol#governance"
                 />
               </div>
               <div className="mb-16">
