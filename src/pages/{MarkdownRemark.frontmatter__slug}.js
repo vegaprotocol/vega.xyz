@@ -2,8 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Container from "../components/Container";
-import BoxTitle from "../components/BoxTitle";
-import GlitchTitle from "../components/GlitchTitle";
+
 import { graphql } from "gatsby";
 export default function Template({ data }) {
   const { markdownRemark } = data;
