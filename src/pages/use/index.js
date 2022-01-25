@@ -81,7 +81,7 @@ const UsePage = () => {
               <div className="mb-16">
                 <BoxLink
                   title={`Trade`.toUpperCase()}
-                  text="Smarter, fairer trading is the future. Place orders and trade on a fully decentralized network. Coming soon to the Mainnet."
+                  text="Smarter, fairer trading is the future. Place orders and trade on a fully decentralised network. Coming soon to the Mainnet."
                   linkTitle="Try it out on Fairground"
                   link="https://fairground.wtf"
                   locked="true"
