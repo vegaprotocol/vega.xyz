@@ -75,9 +75,9 @@ const RoadMapBlock = ({ title, date, position, content }) => {
         >
           <div className="relative top-[6rem] md:top-1/4 pb-20">
             <div className="border border-current max-w-[32.5rem] mx-auto">
-              <div className="border-b border-current h-6 flex items-center p-2">
+              <div className="border-b border-current h-6 flex items-center">
                 <button
-                  className="dark:bg-black bg-white"
+                  className="dark:bg-black bg-white w-[22px] h-[22px] pl-2"
                   onClick={toggleOverlay}
                 >
                   <CrossSmall className="block" />
