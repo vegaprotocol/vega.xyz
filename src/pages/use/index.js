@@ -50,7 +50,7 @@ const UsePage = () => {
               <div className="mb-16">
                 <BoxLink
                   title={`Get Tokens`.toUpperCase()}
-                  text="Join the new era of finance. Find an exchange to get tokens or earn them as rewards for contributing to the community."
+                  text="Join the new era of finance. Earn tokens as rewards for contributing to the community."
                   linkTitle="Earn Rewards"
                   link="/en/community/#contributions"
                 />
