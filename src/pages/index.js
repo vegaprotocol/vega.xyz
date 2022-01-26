@@ -55,7 +55,7 @@ const IndexPage = () => {
           <Ticker />
         </div>
 
-        <Container>
+        <Container hideXOverflow={true}>
           <PageSection>
             <div className="md:grid md:grid-cols-12 items-center">
               <div className="md:col-span-7 md:pr-12">

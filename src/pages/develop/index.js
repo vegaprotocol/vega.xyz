@@ -120,7 +120,7 @@ const DevelopPage = ({ data }) => {
         </PageSection>
       </Container>
 
-      <Container hideXOverflow={true}>
+      <Container>
         <PageSection>
           <div className="md:grid md:grid-cols-2 items-center">
             <div className="md:px-8">
