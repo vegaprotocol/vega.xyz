@@ -23,7 +23,7 @@ const RoadMapBlock = ({ title, date, position, content }) => {
         onClick={toggleOverlay}
         onKeyDown={handleKeyPress}
         tabIndex={0}
-        className={`transition-all top-0 group-hover:-top-2 relative left-1/2 text-left w-[12rem] md:w-[20rem] mb-16  ${
+        className={`transition-all top-0 group-hover:-top-2 relative left-1/2 text-left w-[11rem] md:w-[20rem] mb-16  ${
           position === "right"
             ? "pl-5 md:pl-10"
             : "-translate-x-full pr-5 md:pr-10"

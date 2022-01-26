@@ -72,13 +72,13 @@ const RoadMap = () => {
           position="right"
         />
         <RoadMapBlock
-          title="Full Mainnet"
+          title="V1 Mainnet"
           content="Full Mainnet begins with successful completion of the launch phases. At this point the community and validators will have signalled their confidence in the software via on-chain governance votes and all remaining temporary limits will have been removed. During this phase, the development of the protocol and software will focus on enabling market innovation and iterating on feedback received from the community. This will include the addition of key features not present in the initial MVP, examples of which could include spot markets, passive liquidity, Ethereum oracles. New bridges to other blockchains and/or L2s will also be introduced during this phase."
           date="H2 2022"
           position="left"
         />
         <RoadMapBlock
-          title="Protocol V2 Alpha"
+          title="V2 Mainnet"
           content="This release will allow the validators to launch an experimental mainnet using the second major release of the Vega protocol. The V2 protocol will use WASM to allow the community to create their own products & risk models, and control other aspects of the protocol. This version will also contain a number of performance and security improvements as well as core protocol upgrades and simplifications."
           date="H1 2023"
           position="right"
