@@ -7,7 +7,7 @@ import BoxLink from "../../components/BoxLink";
 import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import LeadingLine from "../../components/LeadingLine";
-import Wave from "../../components/Wave";
+import Wave from "../../components/Svg/Wave";
 import DeadFish from "../../images/dead-fish.svg";
 
 const UsePage = () => {

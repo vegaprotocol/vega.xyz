@@ -1,5 +1,5 @@
 import React from "react";
-import Moshed from "../video/moshed.mp4";
+import Moshed from "../../video/moshed.mp4";
 
 const RoadMapBlob1 = ({ className }) => {
   return (
@@ -13,6 +13,7 @@ const RoadMapBlob1 = ({ className }) => {
           loop
           playsInline
           className="object-cover object-center w-full h-full"
+          poster="/poster-image.jpg"
         >
           <source src={Moshed} type="video/mp4" />
         </video>

@@ -14,8 +14,8 @@ import Calendar from "../components/Calendar";
 import Planet from "../components/Svg/Planet";
 import PlanetRocket from "../components/Svg/PlanetRocket";
 import RoadMap from "../components/RoadMap";
-import RoadMapBlob1 from "../components/RoadMapBlob1";
-import RoadMapBlob2 from "../components/RoadMapBlob2";
+import RoadMapBlob1 from "../components/Svg/RoadMapBlob1";
+import RoadMapBlob2 from "../components/Svg/RoadMapBlob2";
 
 const IndexPage = () => {
   // const intl = useIntl();

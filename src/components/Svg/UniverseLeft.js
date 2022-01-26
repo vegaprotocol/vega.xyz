@@ -15,6 +15,7 @@ const UniverseLeft = ({ className }) => {
           loop
           playsInline
           className="absolute left-0 top-0 w-full h-full object-cover"
+          poster="/poster-image.jpg"
         >
           <source src={Moshed} type="video/mp4" />
         </video>

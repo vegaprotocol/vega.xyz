@@ -12,7 +12,7 @@ import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
 import BoxLink from "../../components/BoxLink";
 import BoxLinkSimple from "../../components/BoxLinkSimple";
-import StarCrossed from "../../components/StarCrossed";
+import StarCrossed from "../../components/Svg/StarCrossed";
 import BlogPosts from "../../components/BlogPosts";
 import Moshed from "../../video/moshed.mp4";
 import LadderIllustration from "../../components/Svg/LadderIllustration";

@@ -1,33 +1,32 @@
-require("dotenv").config({
+require(`dotenv`).config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://vega.xyz",
-    title: "Vega Protcol",
-    titleTemplate: "%s | Vega Protocol",
-    description:
-      "Discover Web3's native derivatives trading platform that is helping DeFi mature.",
-    image: "/images/vega-og.jpg",
-    twitter: "@vegaprotocol",
+    siteUrl: `https://vega.xyz`,
+    title: `Vega Protcol`,
+    titleTemplate: `%s | Vega Protocol`,
+    description: `Discover Web3's native derivatives trading platform that is helping DeFi mature.`,
+    image: `/images/vega-og.jpg`,
+    twitter: `@vegaprotocol`,
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-remark",
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
-      resolve: "gatsby-plugin-anchor-links",
+      resolve: `gatsby-plugin-anchor-links`,
       options: {
         offset: -100,
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-netlify",
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-react-intl`,
       options: {
@@ -56,21 +55,18 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
+        name: `images`,
         path: `${__dirname}/src/images/`,
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "pages",
+        name: `pages`,
         path: `${__dirname}/src/pages/`,
       },
     },

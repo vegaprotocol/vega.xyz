@@ -18,7 +18,7 @@ import PageSection from "../../components/PageSection";
 import Incentives from "../../components/Incentives";
 import GlitchTitle from "../../components/GlitchTitle";
 import { getImage, StaticImage } from "gatsby-plugin-image";
-import GhostParty from "../../components/GhostParty";
+import GhostParty from "../../components/Svg/GhostParty";
 import IconArt from "../../components/Svg/IconArt";
 import IconContent from "../../components/Svg/IconContent";
 import IconDocumentation from "../../components/Svg/IconDocumentation";
