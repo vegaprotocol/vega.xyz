@@ -151,7 +151,7 @@ const DevelopPage = ({ data }) => {
               </div>
               <ButtonLink
                 text="Explore the Docs"
-                link="https://docs.vega.xyz/"
+                link="https://docs.fairground.vega.xyz/docs/trading-questions/#governance"
               />
             </div>
           </div>
