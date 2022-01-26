@@ -42,7 +42,7 @@ const UsePage = () => {
                   title={`Stake Tokens`.toUpperCase()}
                   text="Signal your support for a validator by staking tokens. This strengthens the consensus layer, secures the network &mdash; and earns you rewards too."
                   linkTitle="Stake Tokens"
-                  link="https://token.vega.xyz/staking"
+                  link="https://token.vega.xyz/staking/"
                   inlineLinkTitle="Read the docs"
                   inlineLink="https://docs.vega.xyz"
                 />

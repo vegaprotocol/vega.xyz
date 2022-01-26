@@ -93,28 +93,28 @@ const DevelopPage = ({ data }) => {
               title="REST"
               text="The ubiquitous protocol for the web, Vega has a set of REST APIs that map directly onto equivalent gRPC API service methods."
               linkTitle="Get Started"
-              link="https://fairground.wtf"
+              link="https://docs.vega.xyz/docs/api/rest/overview/"
             />
 
             <BoxLink
               title="gRPC"
               text="For fast and efficient communication with Vega's APIs, gRPC supports near real time streaming of updates from Vega and is the transport of choice for many web3 apps."
               linkTitle="Get Started"
-              link="/develop"
+              link="https://docs.vega.xyz/docs/api/overview/"
             />
 
             <BoxLink
               title="GraphQL"
               text="Like gRPC, GraphQL supports near real time streaming of updates from Vega. It uses websockets under the hood but follows the specification for streaming as set by GraphQL."
               linkTitle="Get Started"
-              link="https://docs.vega.xyz/"
+              link="https://docs.vega.xyz/docs/graphql/"
             />
 
             <BoxLink
               title="Wallet"
               text="Allows programmatic access to signing and key management and is used to sign transactions with a private and public key pair when submitting orders or other commands to a Vega Node."
               linkTitle="Get Started"
-              link="https://vega.xyz/discord"
+              link="https://docs.vega.xyz/docs/tools/overview#vega-wallet"
             />
           </div>
         </PageSection>

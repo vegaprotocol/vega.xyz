@@ -82,7 +82,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/"
+                    to="https://token.vega.xyz/staking/"
                     className="py-1.5 block leading-[1.3]"
                   >
                     Stake tokens

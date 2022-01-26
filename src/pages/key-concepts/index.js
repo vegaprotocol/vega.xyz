@@ -440,12 +440,7 @@ const KeyConceptsPage = () => {
 
               <ButtonLink
                 className="mr-4 mb-4"
-                link="https://docs.fairground.vega.xyz/docs/api-howtos/"
-                text="How to guides"
-              />
-              <ButtonLink
-                className="mr-4 mb-4"
-                link="https://docs.fairground.vega.xyz/docs/apis/"
+                link="https://docs.vega.xyz/docs/api/overview/"
                 text="Getting started on Vega APIs"
               />
               <ButtonLink
@@ -465,8 +460,8 @@ const KeyConceptsPage = () => {
 
               <ButtonLink
                 className="mr-4 mb-4"
-                link="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
-                text="What pro traders will love about Vega"
+                link="https://docs.vega.xyz/docs/api/overview/"
+                text="Get started on Vega APIs"
               />
               <ButtonLink
                 link="https://docs.fairground.vega.xyz/"
