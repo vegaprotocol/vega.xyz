@@ -57,7 +57,7 @@ const KeyConceptsPage = () => {
                 the community's hands.
               </LeadingLine>
               <LeadingLine className="text-current">
-                Here, our decentralised marketplace for markets gives
+                And the tools to create decentralised markets that give
                 centralised versions a run for their money.
               </LeadingLine>
             </div>
