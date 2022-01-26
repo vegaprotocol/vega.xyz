@@ -169,12 +169,7 @@ const EthDenver = () => {
               venue="Official opening ceremony"
               discoMode={discoMode}
               people={[PersonBarney, PersonBarney]}
-            >
-              Prospective developer in the Hackathon? Let's get up close and
-              personal. We'll talk you through some of the fundamentals of Vega,
-              introduce you to our mentorship team and collaborate in the
-              ongoing Hackathon
-            </EthDenverEvent>
+            ></EthDenverEvent>
 
             <EthDenverEvent
               type="Talks & workshops"
@@ -223,10 +218,16 @@ const EthDenver = () => {
               discoMode={discoMode}
               people={[]}
             >
-              The official technical workshop for developers interested in
-              building with Vega and creating the future of DeFi &mdash; and get
-              rewarded for it. A real Vega 101, with tutorials on navigating
-              testnet / mainnet, with bounties up for grabs!
+              Danny Holland, Head of Blockchain Integrations at Vega, will share
+              tales from the field and his experience using ZK Rollups to scale
+              transactions on Ethereum. ZK rollups are one of the most promising
+              new technologies for any use case with high volumes of
+              transactions, be it for DeFi, NFTs, gaming and beyond. Danny will
+              touch on the Ethereum issues that we know all too well - high gas
+              fees, miner extractable value, and time lag. He'll also discuss
+              the most pressing challenges with ZK rollups and highlight how the
+              ETHDenver community can get involved in building out the ZK
+              rollups landscape.
             </EthDenverEvent>
           </div>
 
