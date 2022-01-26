@@ -16,6 +16,7 @@ import StarCrossed from "../../components/StarCrossed";
 import BlogPosts from "../../components/BlogPosts";
 import Moshed from "../../video/moshed.mp4";
 import LadderIllustration from "../../components/Svg/LadderIllustration";
+import { StaticImage } from "gatsby-plugin-image";
 
 const ButtonBlock = () => {
   return (
@@ -205,26 +206,36 @@ const DevelopPage = ({ data }) => {
             </div>
             <div className="grid gap-6 mb-6 md:grid-cols-2">
               <div className="aspect-w-16 aspect-h-9">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube-nocookie.com/embed/hpsHUCU5MwY"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <a
+                  href="https://www.youtube.com/watch?v=hpsHUCU5MwY"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <StaticImage
+                    src="../../images/vega-wallet-video-poster.jpg"
+                    alt="Vega Wallet Mac OS"
+                    placeholder="none"
+                    layout="constrained"
+                    width={1200}
+                    height={679}
+                  />
+                </a>
               </div>
               <div className="aspect-w-16 aspect-h-9">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube-nocookie.com/embed/rzOxpWrnv64"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <a
+                  href="https://www.youtube.com/watch?v=rzOxpWrnv64"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <StaticImage
+                    src="../../images/vega-deposits-withdrawals-poster.jpg"
+                    alt="Deconstructing Vega - Deposits & Withdrawals"
+                    placeholder="none"
+                    layout="constrained"
+                    width={1200}
+                    height={679}
+                  />
+                </a>
               </div>
             </div>
             <div className="md:hidden">
