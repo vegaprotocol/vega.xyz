@@ -11,7 +11,7 @@ const NotFoundPage = () => {
             <CrossLarge />
           </div>
           <div className="p-[1.875rem]">
-            <p class="title-m md:title-xl text-black mb-8">
+            <p className="title-m md:title-xl text-black mb-8">
               UH. WE CAN'T FIND THE PAGE YOU'RE LOOKING FOR.
             </p>
             <UppercaseLink link="/" text="Go home" />

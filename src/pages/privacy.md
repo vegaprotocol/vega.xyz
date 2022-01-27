@@ -1,18 +1,18 @@
 ---
 slug: privacy
 date: "2022-01-25"
-title: "Privacy and cookie policy"
+title: "Privacy and cookies / local storage policy"
 ---
 
 ## Introduction
 
-Last updated: 24 September 2021.
+Last updated: 27 January 2022.
 
 Protection of your privacy and the security of your personal data are very important to Gobalsky Labs Limited.
 
 This Privacy Policy explains how information about you is collected and used by Gobalsky Labs Limited, along with information about your rights as a data subject. The terms “**Gobalsky**”, “**we**,” “**us**,” and “**our**” includes Gobalsky Labs Limited and its associates. Together with our Cookie Policy (below), this Privacy Policy applies to all users of our website: www.vega.xyz as well as our business partners. The terms “**you**” and “**your**” shall be interpreted accordingly and apply irrespective of whether you have a business relationship with Gobalsky. To the extent that you have such a relationship, this Privacy Policy applies together with any relevant terms of business and other contractual documents we may have with you.
 
-If you are just browsing, we have designed our website so that you may navigate and use it without having to provide Personal Data, subject only to certain data that may be collected via the use of cookies, or data you choose to provide for marketing purposes or to access certain resources. If you do not accept these policies, you should immediately discontinue your use of our website.
+If you are just browsing, we have designed our website so that you may navigate and use it without having to provide Personal Data, subject only to certain data that may be collected via the use of local storage, or data you choose to provide for marketing purposes or to access certain resources. If you do not accept these policies, you should immediately discontinue your use of our website.
 
 By using our website, providing personal information and/or using any of our services, you agree that:
 
@@ -33,7 +33,7 @@ If we determine the purposes and means of processing your personal data, then we
 We are based in Gibraltar, which is no longer part of the European Union (“**EU**”). Gibraltar has its own data protection laws that apply certain EU laws, with such modifications as are necessary. This is referred to as the “**Data Protection Legislation**”, which includes:
 
 - The Data Protection Act 2004 (as amended)(“**DPA 2004**”), and regulations made under that Act; and
-- The “**Gibraltar GDPR**”, which is essentially the EU’s General Data Protection Regulation or (Regulation (EU) 2016/679, or the “**EU GDPR**”) as it forms part of Gibraltar law. This basically means it is read slightly differently to the EU GDPR but still offers privacy protections and guarantees in a similar manner. For more information visit:
+- The “**Gibraltar GDPR**”, which is essentially the EU’s General Data Protection Regulation or (Regulation (EU) 2016/679, or the “**EU GDPR**”) as it forms part of Gibraltar law. This basically means it is read slightly differently to the EU GDPR but still offers privacy protections and guarantees in a similar manner.
 
 If you live or work outside Gibraltar, other laws (including the EU GDPR) may be applicable to your individual circumstances.
 
@@ -64,7 +64,7 @@ Your information may be used:
 - to ensure that content from our website is presented in the most effective manner for you and for your device(s); and/or
 - to administer our website and for internal operations, including troubleshooting, data analysis, testing, research, statistical and survey purposes, or otherwise as part of our efforts to keep our website safe and secure.
 
-We may also use aggregate information and statistics for the purposes of monitoring website usage in order to help us to develop our website and our services. We may also provide such aggregate information to third parties. These statistics will not include information that can be used to identify you, as the information is anonymised and ‘de-identified’. More information is in our Cookie Policy.
+We may also use aggregate information and statistics for the purposes of monitoring website usage in order to help us to develop our website and our services. We may also provide such aggregate information to third parties. These statistics will not include information that can be used to identify you, as the information is anonymised and ‘de-identified’. More information is in our Cookies/Local Storage Policy.
 
 ## Direct marketing
 
@@ -193,32 +193,13 @@ We do not collect or maintain information on our website from those we actually 
 
 ## Revisions to this Privacy Policy
 
-On this website, you can always view the latest version of our Privacy Policy and our Cookie Policy. We may modify this Privacy Policy from time to time. If we make changes to this Privacy Policy, we will provide notice of such changes, such as by sending an email notification, providing notice through our website or updating the ‘Last updated’ date at the beginning of this Privacy Policy. The amended Privacy Policy will be effective immediately after the date it is posted. By continuing to access or use our website after the effective date, you confirm your acceptance of the revised Privacy Policy. If you do not agree to the revised Privacy Policy, you may not access or use this website.
+On this website, you can always view the latest version of our Privacy Policy and our Cookies/Local Storage Policy. We may modify this Privacy Policy from time to time. If we make changes to this Privacy Policy, we will provide notice of such changes, such as by sending an email notification, providing notice through our website or updating the ‘Last updated’ date at the beginning of this Privacy Policy. The amended Privacy Policy will be effective immediately after the date it is posted. By continuing to access or use our website after the effective date, you confirm your acceptance of the revised Privacy Policy. If you do not agree to the revised Privacy Policy, you may not access or use this website.
 
-## Cookie Policy
+## Cookies/Local Storage Policy
 
-A cookie is a small file which asks permission to be placed on your computer’s hard drive. After you have agreed, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences. The data is retained for 26 months.
+A cookie is a small file of letters and numbers that can be stored on your browser or the hard drive of your computer. Cookies contain information that can be transferred to your computer's hard drive. Local storage objects are sets of data that can be stored on your browser and/or hard drive by us. We use local storage objects to recognise you when you return to our website. It enables us to remember your preferences for:
 
-This website uses [Google Analytics](https://www.google.com/analytics/), a web analytics service provided by Google, Inc. (“**Google**”).
+1. language; and
+2. light/dark mode.
 
-We use Google Analytics to identify popular sections of our website. Use of Google Analytics in this way, enables us to adapt the content of our website more specifically to your needs and thereby improve what we can offer to you.
-
-Google will use this information for the purpose of evaluating your use of our website, compiling reports on website activity for website operators and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google’s behalf. Google will not associate your IP address with any other data held by Google.
-
-In particular Google Analytics tells us
-
-- your IP address (last 3 digits are masked);
-- the number of pages visited;
-- the time and duration of the visit;
-- your location;
-- the website you came from (if any);
-- the type of hardware you use (i.e. whether you are browsing from a desktop or a mobile device);
-- the software used (type of browser);
-- your general interaction with our website; and
-- your search history (if you decide to use the search bar at the top of our page).
-
-Cookie-related information is not used to identify you personally, and what is compiled is only aggregate data that tells us, for example, popular locations, but not that you live in a particular country or your precise location when you visited our website (this is because we have only half the information - we know the country the person is browsing from, but not the name of the person). In such an example Google will analyse the number of users for us, but the relevant cookies do not reveal their identities.
-
-By using this website, you consent to the processing of data about you by Google in the manner and for the purposes set out above. Google Analytics, its purpose and function is further explained on the [Google Analytics website](https://www.google.com/analytics/).
-
-For more information about Google Analytics cookies, please see Google’s help pages and privacy policy: [Google’s Privacy Policy](http://www.google.com/intl/en/policies/privacy/) and [Google Analytics Help pages](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage). For further information about the use of these cookies by Google [click here](https://support.google.com/analytics/answer/6004245).
+We do not use cookies or local storage objects for any other purpose. You may erase the local storage objects by deleting your browser's history.

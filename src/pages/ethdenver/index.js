@@ -39,6 +39,7 @@ const EthDenver = () => {
       <Seo
         title="ETHDenver"
         description="Vega is sponsoring and hitting up ETHDenver 2022. Come meet the team, hear our talks, and take part in our hackathons."
+        image="/ethdenver.jpg"
       />
       <div className="color-white pb-[17.5%] w-full">
         <video
@@ -87,7 +88,7 @@ const EthDenver = () => {
         </div>
 
         <ContainerEthDenver>
-          <h1 class="title-m mb-3">Catch Vega at ETHDenver</h1>
+          <h1 className="title-m mb-3">Catch Vega at ETHDenver</h1>
           <div className="copy-xs md:copy-s">
             Excited to be outta lockdowns and straight into sponsoring ETHDenver
             this February. A big bunch of us will be there, including Barney our
@@ -304,11 +305,19 @@ const EthDenver = () => {
                 {" "}
                 We've launched a whole range of new swag and would love our
                 community to be guaranteed to get it! Keep an eye on{" "}
-                <a href="https://discord.com/invite/3hQyGgZ" target="_blank">
+                <a
+                  href="https://discord.com/invite/3hQyGgZ"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Vega Discord
                 </a>{" "}
                 and the{" "}
-                <a href="https://vegacommunity.substack.com/" target="_blank">
+                <a
+                  href="https://vegacommunity.substack.com/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   Community update newsletter
                 </a>{" "}
                 for the soon to be open Community Swag Whitelist.
@@ -328,7 +337,7 @@ const EthDenver = () => {
         <div className="position fixed z-50 inset-0 bg-white dark:bg-black flex flex-col items-center justify-center">
           <div className="px-12 text-center">
             <div className="title-m mb-1">Find us at booth P20</div>
-            <p class="copy-xxs text-current !mb-6">
+            <p className="copy-xxs text-current !mb-6">
               (You can't miss us, look for the yellow hoodies)
             </p>
             <img src={EthDenverMap} alt="Floorplan" />
