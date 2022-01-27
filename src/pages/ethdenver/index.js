@@ -195,7 +195,7 @@ const EthDenver = () => {
 
             <EthDenverEvent
               type="Talks & workshops"
-              title="Virtual address @ #BUIDLathon Kickoff"
+              title="Vega Bounties @buidlthon KICKOFF"
               title2="with Chris"
               when="Friday, Feb 11th time TBC"
               venue="Livestream"
