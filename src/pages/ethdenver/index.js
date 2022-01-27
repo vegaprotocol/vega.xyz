@@ -80,7 +80,7 @@ const EthDenver = () => {
             className="relative inline-block w-full h-auto mb-3 lg:-mt-5"
           />
 
-          <div className="md:flex md:justify-between -mt-[5%]">
+          <div className="relative md:flex md:justify-between -mt-[5%]">
             <div className="title-m md:title-l lg:text-[4.25rem] uppercase mb-4 md:mb-0">
               February 11-20
             </div>
@@ -123,7 +123,7 @@ const EthDenver = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="flex flex-col border border-white">
                 <div className="bg-white text-black p-6 title-s grow">
-                  Derivates trading games
+                  Derivatives trading games
                 </div>
                 <div className="h-1.5 w-auto"></div>
               </div>
