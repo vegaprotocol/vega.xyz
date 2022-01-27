@@ -21,7 +21,7 @@ const EthDenverEvent = ({
           {type}
         </div>
       )}
-      <div className="md:flex">
+      <div className="md:flex md:justify-between">
         <div className="title-m mb-3 md:mb-5">
           {title}
           <br />
