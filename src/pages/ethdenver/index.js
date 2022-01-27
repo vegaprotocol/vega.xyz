@@ -17,6 +17,9 @@ import EthDenverMap from "../../images/ethdenver-map.svg";
 import EthDenverEvent from "../../components/EthDenverEvent";
 import EthDenverEvent2 from "../../components/EthDenverEvent2";
 import PersonBarney from "../../images/person-barney.png";
+import PersonChris from "../../images/person-chris.png";
+import PersonWitold from "../../images/person-witold.png";
+import PersonDanny from "../../images/person-danny.png";
 import CrossLarge from "../../components/Svg/CrossLarge";
 
 const EthDenver = () => {
@@ -30,18 +33,6 @@ const EthDenver = () => {
   const toggleMap = () => {
     setShowMap(!showMap);
   };
-
-  // const hideCityScape = () => {
-  //   setTimeout(() => {
-  //     document
-  //       .querySelector("#mountainScape")
-  //       .classList.add("translate-y-[35%]");
-  //   }, 200);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", hideCityScape, { once: true });
-  // }, []);
 
   return (
     <LayoutEthDenver>
@@ -123,19 +114,19 @@ const EthDenver = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="flex flex-col border border-white">
                 <div className="bg-white text-black p-6 title-s grow">
-                  Derivatives trading games
+                  Easy derivatives trading games
                 </div>
                 <div className="h-1.5 w-auto"></div>
               </div>
               <div className="flex flex-col border border-white">
                 <div className="bg-white text-black p-6 title-s grow">
-                  Ghosts of liquidity past treasure hunt
+                  Ghosts of liquidity treasure (& beer) hunt
                 </div>
                 <div className="h-1.5 w-auto"></div>
               </div>
               <div className="flex flex-col border border-white">
                 <div className="bg-white text-black p-6 title-s grow">
-                  Where's Waldo style game
+                  Spot the ghost
                 </div>
                 <div className="h-1.5 w-auto"></div>
               </div>
@@ -164,11 +155,11 @@ const EthDenver = () => {
             <EthDenverEvent
               type="Keynote talk"
               title="Why derivatives are the cypherpunk future of DeFi"
-              title2="with Barney Mannerings, Vega Founder"
-              when="Thursday 17th Feb, 5:30 - 8:30pm"
-              venue="Official opening ceremony"
+              title2="with Barney, Vega Founder"
+              when="Thursday, Feb 17th 5:30-8:30pm"
+              venue="Web3 Castle, ETHDenver Main Event Opening Ceremony"
               discoMode={discoMode}
-              people={[PersonBarney, PersonBarney]}
+              people={[PersonBarney]}
             ></EthDenverEvent>
 
             <EthDenverEvent
@@ -178,30 +169,33 @@ const EthDenver = () => {
               when="Friday, Feb 11th time TBC"
               venue="Livestream"
               discoMode={discoMode}
-              people={[]}
+              people={[PersonChris]}
             ></EthDenverEvent>
 
             <EthDenverEvent
               type="Talks & workshops"
-              title="Get to know the Vega Protocol"
-              title2="with Chris, Arne & Daigan"
-              when="Thursday, Feb 17th, 11am - 1pm"
-              venue="1134 Broadway (Upstairs)"
+              title="Programming liquidity on Vega Futures markets"
+              title2="with Barney, Chris & Witold"
+              when="Feb 17th 11am - 1pm"
+              venue="Mirus Loft (2nd Floor)"
               discoMode={discoMode}
-              people={[]}
+              people={[PersonBarney, PersonChris, PersonWitold]}
             >
-              A casual evening 'meetup'-style event introducing ETHDenver
-              developers to the Vega Trading Protocol.
+              Want to build a market or liquidity bot on Vega? We got you
+              covered! Take a deep dive into the fundamentals of Vega trading,
+              how to programmatically manage assets and provide Liquidity Orders
+              via APIs. Lunch will be served at the Mirus Loft, just 1 block
+              from the sports castle.
             </EthDenverEvent>
 
             <EthDenverEvent
               type="Talks & workshops"
               title="Official ETHDenver Vega Technical workshop"
-              title2="with Chris, Barney & TBC"
+              title2="with Chris"
               when="Friday, Feb 18th, time TBC"
-              venue="Sports Castle & live streamed"
+              venue="Web3 Castle & live streamed"
               discoMode={discoMode}
-              people={[]}
+              people={[PersonChris]}
             >
               The official technical workshop for developers interested in
               building with Vega and creating the future of DeFi &mdash; and get
@@ -212,22 +206,22 @@ const EthDenver = () => {
             <EthDenverEvent
               type="Talks & workshops"
               title="ZK rollups: Tales from the Field (**L2/ scaling/ Infrastructure track)"
-              title2="with Danny Holland, Head of Blockchain Integrations @ Vega"
-              when="Friday & Saturday (2/18-19), time TBC"
-              venue="TBC"
+              title2="Danny Holland, Head of Blockchain Integrations @ Vega"
+              when="Friday or Saturday (2/18-19), time TBC"
+              venue="Web3 Castle & live streamed"
               discoMode={discoMode}
-              people={[]}
+              people={[PersonDanny]}
             >
               Danny Holland, Head of Blockchain Integrations at Vega, will share
               tales from the field and his experience using ZK Rollups to scale
               transactions on Ethereum. ZK rollups are one of the most promising
               new technologies for any use case with high volumes of
               transactions, be it for DeFi, NFTs, gaming and beyond. Danny will
-              touch on the Ethereum issues that we know all too well - high gas
-              fees, miner extractable value, and time lag. He'll also discuss
-              the most pressing challenges with ZK rollups and highlight how the
-              ETHDenver community can get involved in building out the ZK
-              rollups landscape.
+              touch on the Ethereum issues that we know all too well &mdash;
+              high gas fees, miner extractable value, and time lag. He'll also
+              discuss the most pressing challenges with ZK rollups and highlight
+              how the ETHDenver community can get involved in building out the
+              ZK rollups landscape.
             </EthDenverEvent>
           </div>
 
@@ -255,31 +249,21 @@ const EthDenver = () => {
               <EthDenverEvent
                 type=""
                 title="Bounties presentation @ #BUIDLathon Kickoff"
-                title2="with Hackathon mentors"
-                when="Sunday, Feb 20th. 10am - 2pm"
-                venue="Virtual and @ Sports Castle"
+                title2="with Chris"
+                when="Friday, Feb 11th time TBC"
+                venue="Livestream"
                 discoMode={discoMode}
-                people={[]}
-              ></EthDenverEvent>
-
-              <EthDenverEvent
-                type=""
-                title="Let's get techie workshop"
-                title2="with Chris, Barney & TBC"
-                when="Friday, Feb 18th, time TBC"
-                venue="Sports Castle"
-                discoMode={discoMode}
-                people={[]}
+                people={[PersonChris]}
               ></EthDenverEvent>
 
               <EthDenverEvent
                 type=""
                 title="Vega bounty judging"
-                title2="with Chris"
-                when="Friday, Feb 11th. Virtual @10am, in person @ 11am"
-                venue="Virtual and @ Sports Castle"
+                title2="with Chris, Barney, and Vega team"
+                when="Sunday, Feb 20th. 10am - 2pm (In person)<br/>March 21-25th (Virtual)"
+                venue="Virtual and @ the Web3 Castle"
                 discoMode={discoMode}
-                people={[]}
+                people={[PersonChris, PersonBarney]}
               ></EthDenverEvent>
             </div>
           </div>
@@ -307,43 +291,36 @@ const EthDenver = () => {
             >
               Prospective developer in the Hackathon? Let's get you fired up
               about Vega! Join us for a relaxed evening where you can learn
-              about the fundamentals of Vega, meet our mentorship team and other
-              developers looking to build on Vega. Beers and snacks will keep
-              you going at 100 de Agave, 1 block away from the sports castle.
+              about Vega, meet our mentorship team and other developers looking
+              to build on Vega. Beers and snacks will keep you going at 100 de
+              Agave, 1 block away from the sports castle.
             </EthDenverEvent2>
+          </div>
 
-            <EthDenverEvent2
-              title="Party with the DAOs"
-              title2="Feb 16th @ Run for the Roses"
-              title3="6 - 10pm"
-              discoMode={discoMode}
-              people={[]}
-            >
-              We're bringing together some of the most prominent DAOs in DeFi,
-              infrastructure, metaverse, and bankless communities for this
-              invite-only event.
-            </EthDenverEvent2>
-
-            <EthDenverEvent2
-              title="Programming liquidity on Vega Futures markets"
-              title2="Feb 17th @ Mirus Loft, Art Hotel"
-              title3="11am - 1pm"
-              discoMode={discoMode}
-              people={[]}
-            >
-              Want to build a market or liquidity bot on Vega? We got you
-              covered! Take a deep dive into the fundamentals of Vega trading,
-              how to programmatically manage assets and provide Liquidity Orders
-              via APIs. Lunch will be served at the Mirus Loft, just 1 block
-              from the sports castle.
-            </EthDenverEvent2>
+          <div className="pb-24">
+            <h2 className="title-m md:title-l lg:title-xl pb-4">Swag grab</h2>
+            <div className="prose prose-lg prose-a:text-white dark:prose-p:text-white prose-p:text-white dark:prose-a:text-white">
+              <p>
+                {" "}
+                We've launched a whole range of new swag and would love our
+                community to be guaranteed to get it! Keep an eye on{" "}
+                <a href="https://discord.com/invite/3hQyGgZ" target="_blank">
+                  Vega Discord
+                </a>{" "}
+                and the{" "}
+                <a href="https://vegacommunity.substack.com/" target="_blank">
+                  Community update newsletter
+                </a>{" "}
+                for the soon to be open Community Swag Whitelist.
+              </p>
+            </div>
           </div>
         </ContainerEthDenver>
       </div>
       <img
         id="mountainScape"
         src={Mountainscape}
-        className={`transition w-full h-auto fixed bottom-0 left-0 right-0}`}
+        className={`translate-y-12 w-full h-auto fixed bottom-0 left-0 right-0}`}
         alt=""
       />
 

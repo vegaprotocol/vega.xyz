@@ -29,11 +29,8 @@ const EthDenverEvent = ({
         </div>
         <div className="md:pl-12 shrink-0 flex mb-6 md:mb-0">
           {people.map((person, idx) => (
-            <div
-              key={idx}
-              className="relative mr-3 md:mr-0 md:-right-6 md:last:right-auto"
-            >
-              <img src={person} alt="" className="w-[60px]" />
+            <div key={idx} className="relative mr-3 md:-mr-6 md:last:mr-0">
+              <img src={person} alt="" className="w-[60px] rounded-full" />
             </div>
           ))}
         </div>
@@ -42,11 +39,11 @@ const EthDenverEvent = ({
       <div className="grid grid-cols-2 mb-5">
         <div>
           <div className="title-xxs text-vega-yellow">WHEN:</div>
-          <div>{when}</div>
+          <div dangerouslySetInnerHTML={{ __html: when }} />
         </div>
         <div>
           <div className="title-xxs text-vega-yellow">Venue:</div>
-          <div>{venue}</div>
+          <div dangerouslySetInnerHTML={{ __html: venue }} />
         </div>
       </div>
 
