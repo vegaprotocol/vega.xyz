@@ -96,7 +96,7 @@ const EthDenver = () => {
             epicentre of Ethereum and Blockchain innovation too, come say hello!
           </div>
 
-          <div className="border border-white p-9 my-12">
+          <div className="border border-white py-9 px-6 my-12">
             <div className="title-m text-center mb-3">
               Find us at booth P20,
               <br />
@@ -113,19 +113,19 @@ const EthDenver = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="flex flex-col border border-white">
-                <div className="bg-white text-black p-6 title-s grow">
+                <div className="bg-white text-black p-4 pb-6 title-s grow">
                   Easy derivatives trading games
                 </div>
                 <div className="h-1.5 w-auto"></div>
               </div>
               <div className="flex flex-col border border-white">
-                <div className="bg-white text-black p-6 title-s grow">
+                <div className="bg-white text-black p-4 pb-6 title-s grow">
                   Ghosts of liquidity treasure (& beer) hunt
                 </div>
                 <div className="h-1.5 w-auto"></div>
               </div>
               <div className="flex flex-col border border-white">
-                <div className="bg-white text-black p-6 title-s grow">
+                <div className="bg-white text-black p-4 pb-6 title-s grow">
                   Spot the ghost
                 </div>
                 <div className="h-1.5 w-auto"></div>
