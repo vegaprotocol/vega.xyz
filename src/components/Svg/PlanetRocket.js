@@ -1,5 +1,5 @@
 import React from "react";
-import Moshed from "../../video/moshed.mp4";
+import VideoBackground from "./VideoBackground";
 
 const PlanetRocket = ({ className }) => {
   return (
@@ -8,19 +8,7 @@ const PlanetRocket = ({ className }) => {
         className ? className : ""
       }`}
     >
-      <div className="absolute inset-px">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute left-0 top-0 w-full h-full object-cover"
-          poster="/poster-image.jpg"
-        >
-          <source src={Moshed} type="video/mp4" />
-        </video>
-      </div>
-
+      <VideoBackground />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"

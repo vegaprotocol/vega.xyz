@@ -1,19 +1,10 @@
 import React from "react";
-import Moshed from "../../video/moshed.mp4";
+import VideoBackground from "./VideoBackground";
 
 const Wave = () => {
   return (
     <div className="pb-[37.7192982%] relative w-full overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute left-0 top-0 w-full h-full object-cover"
-        poster="/poster-image.jpg"
-      >
-        <source src={Moshed} type="video/mp4" />
-      </video>
+      <VideoBackground />
       <svg
         id="Layer_1"
         x="0"

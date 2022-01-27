@@ -1,5 +1,5 @@
 import React from "react";
-import Moshed from "../../video/moshed.mp4";
+import VideoBackground from "./VideoBackground";
 
 const UniverseRight = ({ className }) => {
   return (
@@ -8,18 +8,7 @@ const UniverseRight = ({ className }) => {
         className ? className : ""
       }`}
     >
-      <div className="absolute inset-px">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute left-0 top-0 w-full h-full object-cover"
-          poster="/poster-image.jpg"
-        >
-          <source src={Moshed} type="video/mp4" />
-        </video>
-      </div>
+      <VideoBackground />
 
       <svg
         viewBox="0 0 470.9 811.2"

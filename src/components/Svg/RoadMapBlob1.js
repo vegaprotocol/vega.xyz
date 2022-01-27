@@ -1,23 +1,12 @@
 import React from "react";
-import Moshed from "../../video/moshed.mp4";
+import VideoBackground from "./VideoBackground";
 
 const RoadMapBlob1 = ({ className }) => {
   return (
     <div
       className={`pb-[133.1836735%] w-full overflow-hidden relative mx-auto ${className}`}
     >
-      <div className="absolute inset-px">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="object-cover object-center w-full h-full"
-          poster="/poster-image.jpg"
-        >
-          <source src={Moshed} type="video/mp4" />
-        </video>
-      </div>
+      <VideoBackground />
 
       <svg
         viewBox="0 0 490 652.6"

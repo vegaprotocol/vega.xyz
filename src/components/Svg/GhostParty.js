@@ -1,22 +1,10 @@
 import React from "react";
-import Moshed from "../../video/moshed.mp4";
+import VideoBackground from "./VideoBackground";
 
 const GhostParty = () => {
   return (
     <div className="pb-[33.9434276%] relative w-full">
-      <div className="absolute inset-px">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute left-0 top-0 w-full h-full object-cover"
-          poster="/poster-image.jpg"
-        >
-          <source src={Moshed} type="video/mp4" />
-        </video>
-      </div>
-
+      <VideoBackground />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1197.9 399.5"
@@ -27,7 +15,6 @@ const GhostParty = () => {
           d="M368.4 113.1c138.9 0 165.1 69.7 350.6 69.7S1063.1 22.6 1197.9 0H0v399.5c82.5-167.7 229.5-286.4 368.4-286.4z"
         />
       </svg>
-
       <svg
         width="1200"
         height="262"
