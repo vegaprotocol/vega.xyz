@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7efa2620-6d39-4ceb-b8b2-feba1f71057b/deploy-status)](https://app.netlify.com/sites/gallant-meninsky-a3ec1e/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/300c8347-d327-4192-a819-b49a684e06df/deploy-status)](https://app.netlify.com/sites/vega/deploys)
 
 # Vega.xyz website
 
