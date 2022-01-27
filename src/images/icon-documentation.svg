@@ -1,0 +1,12 @@
+<svg width="31" height="39" fill="none">
+  <g fill="#000" clip-path="url(#a)">
+    <path d="M2.05 2.05H0v34.9h2.05V2.05Zm0-2.05v2.05h20.52V0H2.05Zm26.66 36.95h2.05V8.2h-2.05v28.75Zm0 2.05v-2.05H2.04V39h26.67ZM26.67 6.15V4.1h-2.05v2.05h2.05ZM24.62 4.1V2.05h-2.05V4.1h2.05Zm4.1 4.1V6.15h-2.05V8.2h2.05Z"/>
+    <path d="M30.77 10.25V8.2H20.52v2.05h10.25Z"/>
+    <path d="M22.57 10.25V0h-2.05v10.25h2.05Z"/>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <path fill="#000" d="M0 0h30.77v39H0z"/>
+    </clipPath>
+  </defs>
+</svg>

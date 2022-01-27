@@ -1,3 +1,0 @@
-# This domain hosts no advertising
-#
-# https://github.com/gorhill/ublock
