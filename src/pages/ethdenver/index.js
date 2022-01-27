@@ -108,8 +108,8 @@ const EthDenver = () => {
               </div>
             </div>
             <div className="copy-xs text-center">
-              Visit us at our booth for an intro to Vega, to meet the team – and
-              take part in fun stuff for loads of swag:
+              Visit us at our booth for an intro to Vega, to meet the team
+              &madsh; and take part in fun stuff for loads of swag:
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
@@ -121,13 +121,13 @@ const EthDenver = () => {
               </div>
               <div className="flex flex-col border border-white">
                 <div className="bg-white text-black p-4 pb-6 title-s grow">
-                  Ghosts of liquidity treasure (& beer) hunt
+                  Ghosts of liquidity treasure hunt
                 </div>
                 <div className="h-1.5 w-auto"></div>
               </div>
               <div className="flex flex-col border border-white">
                 <div className="bg-white text-black p-4 pb-6 title-s grow">
-                  Spot the ghost
+                  Spot the ghost competition
                 </div>
                 <div className="h-1.5 w-auto"></div>
               </div>
@@ -136,6 +136,36 @@ const EthDenver = () => {
             <div className="text-center mt-8">
               <ButtonLinkSimple onClick={toggleMap} text="View on a map" />
             </div>
+          </div>
+
+          <div className="mb-20">
+            <div className="flex justify-between border-b border-white mb-6 items-end">
+              <h2 className="title-m md:title-l lg:title-xl pb-4">
+                Meet the <br />
+                team
+              </h2>
+              {discoMode && (
+                <img
+                  src={EthDenverMeet}
+                  alt=""
+                  className="w-[112px] md:w-[210px] shrink-0"
+                />
+              )}
+            </div>
+
+            <EthDenverEvent2
+              title="Hacker Meet & Greet"
+              title2="Feb 15th @ 100 de Agave"
+              title3="5 - 7pm"
+              discoMode={discoMode}
+              people={[]}
+            >
+              Prospective developer in the Hackathon? Let's get you fired up
+              about Vega! Join us for a relaxed evening where you can learn
+              about Vega, meet our mentorship team and other developers looking
+              to build on Vega. Beers and snacks will keep you going at 100 de
+              Agave, 1 block away from the sports castle.
+            </EthDenverEvent2>
           </div>
 
           <div className="mb-20">
@@ -155,10 +185,10 @@ const EthDenver = () => {
 
             <EthDenverEvent
               type="Keynote talk"
-              title="Why derivatives are the cypherpunk future of DeFi"
+              title="Keynote talk"
               title2="with Barney, Vega Founder"
-              when="Thursday, Feb 17th 5:30-8:30pm"
-              venue="Web3 Castle, ETHDenver Main Event Opening Ceremony"
+              when="Thursday, Feb 17th 5:30-8:30pm<br/>ETHDenver Main Event Opening Ceremony"
+              venue="Web3 Castle"
               discoMode={discoMode}
               people={[PersonBarney]}
             ></EthDenverEvent>
@@ -267,35 +297,6 @@ const EthDenver = () => {
                 people={[PersonChris, PersonBarney]}
               ></EthDenverEvent>
             </div>
-          </div>
-          <div className="mb-20">
-            <div className="flex justify-between border-b border-white mb-6 items-end">
-              <h2 className="title-m md:title-l lg:title-xl pb-4">
-                Meet the <br />
-                team
-              </h2>
-              {discoMode && (
-                <img
-                  src={EthDenverMeet}
-                  alt=""
-                  className="w-[112px] md:w-[210px] shrink-0"
-                />
-              )}
-            </div>
-
-            <EthDenverEvent2
-              title="Hacker Meet & Greet"
-              title2="Feb 15th @ 100 de Agave"
-              title3="5 - 7pm"
-              discoMode={discoMode}
-              people={[]}
-            >
-              Prospective developer in the Hackathon? Let's get you fired up
-              about Vega! Join us for a relaxed evening where you can learn
-              about Vega, meet our mentorship team and other developers looking
-              to build on Vega. Beers and snacks will keep you going at 100 de
-              Agave, 1 block away from the sports castle.
-            </EthDenverEvent2>
           </div>
 
           <div className="pb-24">
