@@ -463,10 +463,6 @@ const KeyConceptsPage = () => {
                 link="https://docs.vega.xyz/docs/api/overview/"
                 text="Get started on Vega APIs"
               />
-              <ButtonLink
-                link="https://docs.fairground.vega.xyz/"
-                text="Docs"
-              />
             </ConceptBlock>
 
             <ConceptBlock title="Create user-friendly front-ends">
