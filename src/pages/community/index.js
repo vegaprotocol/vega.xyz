@@ -127,7 +127,7 @@ const CommunityPage = ({ data }) => {
                 title={`Refine documentation`.toUpperCase()}
                 text="Share feedback, make suggestions and help translate."
                 linkTitle="Discord"
-                link="https://docs.vega.xyz/"
+                link="https://vega.xyz/discord"
                 icon={<IconDocumentation />}
               />
               <BoxLink

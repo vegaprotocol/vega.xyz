@@ -39,7 +39,7 @@ const EthDenverEvent = ({
       <div className="grid grid-cols-2 mb-5">
         <div>
           <div className="title-xxs text-vega-yellow">WHEN:</div>
-          <div dangerouslySetInnerHTML={{ __html: when }} />
+          <div className="pr-4" dangerouslySetInnerHTML={{ __html: when }} />
         </div>
         <div>
           <div className="title-xxs text-vega-yellow">Venue:</div>
