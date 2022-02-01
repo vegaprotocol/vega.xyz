@@ -42,9 +42,7 @@ const Header = () => {
 
             <Navigation />
 
-            <div className={`${menuIsOpen ? "block" : "hidden"}`}>
-              <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
-            </div>
+            <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
 
             <div>
               <ScreenMode />
