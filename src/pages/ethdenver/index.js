@@ -109,7 +109,7 @@ const EthDenver = () => {
             </div>
             <div className="copy-xs text-center">
               Visit us at our booth for an intro to Vega, to meet the team
-              &madsh; and take part in fun stuff for loads of swag:
+              &mdash; and take part in fun stuff for loads of swag:
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
