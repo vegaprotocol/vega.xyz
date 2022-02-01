@@ -395,7 +395,7 @@ const KeyConceptsPage = () => {
 
               <ButtonLink
                 className="mr-4 mb-4"
-                link="https://vega.xyz/assets/vega-technical-overview.pdf"
+                link="https://vega.xyz/papers/vega-technical-overview.pdf"
                 text="Technical overview"
               />
               <ButtonLink
