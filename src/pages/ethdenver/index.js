@@ -155,7 +155,7 @@ const EthDenver = () => {
 
             <EthDenverEvent2
               title="Hacker Meet & Greet"
-              title2="Feb 15th @ 100 de Agave"
+              title2="Feb 15th @ 100% de Agave (975 Lincoln St, Denver, CO 80203)"
               title3="5 - 7pm"
               discoMode={discoMode}
               people={[]}
@@ -165,6 +165,8 @@ const EthDenver = () => {
               about Vega, meet our mentorship team and other developers looking
               to build on Vega. Beers and snacks will keep you going at 100 de
               Agave, 1 block away from the sports castle.
+
+              <a href="https://www.eventbrite.com/e/vega-protocol-ethdenver-hacker-meet-greet-tickets-258287945197"><ButtonLinkSimple text="Register for event" /></a>
             </EthDenverEvent2>
           </div>
 
