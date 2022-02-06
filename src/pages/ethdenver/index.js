@@ -34,6 +34,10 @@ const EthDenver = () => {
     setShowMap(!showMap);
   };
 
+  const registerMeetGreet = () => {
+    window.location.href = "https://www.eventbrite.com/e/vega-protocol-ethdenver-hacker-meet-greet-tickets-258287945197";
+  };
+
   return (
     <LayoutEthDenver>
       <Seo
@@ -155,7 +159,7 @@ const EthDenver = () => {
 
             <EthDenverEvent2
               title="Hacker Meet & Greet"
-              title2="Feb 15th @ 100% de Agave (975 Lincoln St, Denver, CO 80203)"
+              title2="Feb 15th @ 100% de Agave"
               title3="5 - 7pm"
               discoMode={discoMode}
               people={[]}
@@ -166,7 +170,8 @@ const EthDenver = () => {
               to build on Vega. Beers and snacks will keep you going at 100 de
               Agave, 1 block away from the sports castle.
 
-              <a href="https://www.eventbrite.com/e/vega-protocol-ethdenver-hacker-meet-greet-tickets-258287945197"><ButtonLinkSimple text="Register for event" /></a>
+              <ButtonLinkSimple text="Register for event" onClick={registerMeetGreet} />
+
             </EthDenverEvent2>
           </div>
 
