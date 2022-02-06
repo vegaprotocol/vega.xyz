@@ -11,7 +11,7 @@ const Incentives = () => {
   useEffect(() => {
     async function fetchIncentives() {
       let response = await fetch(
-        "https://notion-api.vega.win/query?id=aa64c6a0-0e0d-460d-ad44-ceacc6cd5957"
+        "https://notion-data-service.ops.vega.xyz/query?id=aa64c6a0-0e0d-460d-ad44-ceacc6cd5957"
       );
       response = await response.json();
 
