@@ -37,6 +37,10 @@ const EthDenver = () => {
   const registerMeetGreet = () => {
     window.location.href = "https://www.eventbrite.com/e/vega-protocol-ethdenver-hacker-meet-greet-tickets-258287945197";
   };
+  
+  const registerLiquidity = () => {
+    window.location.href = "https://www.eventbrite.com/e/vega-futures-markets-how-to-program-liquidity-bots-tickets-261339171497";
+  };
 
   return (
     <LayoutEthDenver>
@@ -170,6 +174,7 @@ const EthDenver = () => {
               to build on Vega. Beers and snacks will keep you going at 100 de
               Agave, 1 block away from the sports castle.
 
+              <br/><br/>
               <ButtonLinkSimple text="Register for event" onClick={registerMeetGreet} />
 
             </EthDenverEvent2>
@@ -224,13 +229,17 @@ const EthDenver = () => {
               how to programmatically manage assets and provide Liquidity Orders
               via APIs. Lunch will be served at the Mirus Loft, just 1 block
               from the sports castle.
+
+              <br/><br/>
+              <ButtonLinkSimple text="Register for event" onClick={registerLiquidity} />
+
             </EthDenverEvent>
 
             <EthDenverEvent
               type="Talks & workshops"
               title="Official ETHDenver Vega Technical workshop"
               title2="with Chris"
-              when="Friday, Feb 18th, time TBC"
+              when="Friday, Feb 18th, 10:40am - 11am"
               venue="Web3 Castle & live streamed"
               discoMode={discoMode}
               people={[PersonChris]}
