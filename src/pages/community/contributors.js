@@ -11,7 +11,7 @@ const Contributors = () => {
   useEffect(() => {
     async function fetchContributors() {
       let response = await fetch(
-        "https://contributors.vega.win/contributors?sort=random"
+        "https://github-contributors-service.ops.vega.xyz/contributors?sort=random"
       );
       response = await response.json();
       setContributors(response.github_contributors);

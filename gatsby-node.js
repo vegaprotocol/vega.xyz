@@ -64,7 +64,7 @@ exports.sourceNodes = async ({
   createContentDigest,
 }) => {
   // const contributorsData = await fetch(
-  //   `https://contributors.vega.win/contributors`
+  //   `https://github-contributors-service.ops.vega.xyz/contributors`
   // );
   // const contributorsResultData = await contributorsData.json();
 
@@ -85,7 +85,7 @@ exports.sourceNodes = async ({
   // });
 
   const incentivesData = await fetch(
-    `https://notion-api.vega.win/query?id=aa64c6a0-0e0d-460d-ad44-ceacc6cd5957`
+    `https://notion-data-service.ops.vega.xyz/query?id=aa64c6a0-0e0d-460d-ad44-ceacc6cd5957`
   );
   const incentivesResultData = await incentivesData.json();
   incentivesResultData.notion_data.forEach((incentive) => {
