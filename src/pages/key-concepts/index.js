@@ -13,7 +13,8 @@ import UniverseRight from "../../components/Svg/UniverseRight";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { useIntl } from "gatsby-plugin-react-intl";
 import PermissionlessMarketCreationDiagramResponsive from "../../components/KeyConcepts/PermissionlessMarketCreationDiagram/Responsive";
-// import PurposeBuiltTable from "../../components/KeyConcepts/PurposeBuiltTable/Diagram";
+import PurposeBuiltTable from "../../components/KeyConcepts/PurposeBuiltTable/Diagram";
+import MarketMakingDiagramResponsive from "../../components/KeyConcepts/MarketMakingDiagram/Responsive";
 
 const KeyConceptsPage = () => {
   const sections = [
@@ -41,10 +42,10 @@ const KeyConceptsPage = () => {
       <Container hideXOverflow={true}>
         <div className="pt-6 md:grid md:grid-cols-12 mb-20">
           <div className="hidden md:col-span-2 lg:col-span-3 md:block">
-            <UniverseLeft className="translate-y-1/4 -translate-x-2/4 xxl:translate-x-0 scale-150" />
+            <UniverseLeft className="translate-y-1/4 -translate-x-2/4 xxl:translate-x-0 scale-135" />
           </div>
-          <div className="md:col-span-8 lg:col-span-6">
-            <div className="max-w-[45rem] mx-auto text-center mb-16 lg:pt-16">
+          <div className="md:col-span-8 lg:col-span-6 lg:pt-16">
+            <div className="max-w-[45rem] mx-auto text-center mb-16">
               <h1 className="mb-6">
                 <BoxTitle text="Key concepts" />
               </h1>
@@ -64,7 +65,7 @@ const KeyConceptsPage = () => {
             </div>
           </div>
           <div className="hidden md:col-span-2 lg:col-span-3 md:block">
-            <UniverseRight className="translate-y-1/4 translate-x-2/4 scale-150" />
+            <UniverseRight className="translate-y-1/4 translate-x-2/4 scale-135" />
           </div>
         </div>
       </Container>
@@ -99,17 +100,20 @@ const KeyConceptsPage = () => {
 
       <Container>
         <div className="mt-20">
-          <div id="good" className="mb-12 md:mb-0">
+          <div id="good" className="relative mb-12 md:mb-24 overflow-x-hidden">
             <div className="md:grid md:grid-cols-12 mb-12">
               <div className="md:col-span-6 title-l md:title-xl max-w-[32.5rem]">
                 Be as good as CeFi
+                <div className="absolute right-0 top-0 title-l md:title-xl max-w-[32.5rem] translate-x-1/2 hidden md:block">
+                  Be as good as CeFi
+                </div>
               </div>
-              <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12">
+              <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12 bg-white dark:bg-black">
                 <div className="copy-s text-current">
                   Vega will rival the current financial system, replacing it
                   with one that puts fairness, efficiency, and accessibility at
                   its heart.
-                  <div className="absolute bottom-0 left-0 right-0 h-1.5 border-t border-currrent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 border-t border-current"></div>
                 </div>
               </div>
             </div>
@@ -126,6 +130,7 @@ const KeyConceptsPage = () => {
                 trading in mind, using high performing, purpose-built smart
                 products for trading &mdash; meaning no fees on orders, and
                 fairness at its core."
+              diagram={<PurposeBuiltTable />}
               links={[
                 {
                   link: "https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c",
@@ -137,7 +142,6 @@ const KeyConceptsPage = () => {
                 },
               ]}
             />
-
             <ConceptBlock
               title="Secure and fair transactions"
               text="Our high-throughput, low-latency platform secures transactions
@@ -157,18 +161,24 @@ const KeyConceptsPage = () => {
             />
           </div>
 
-          <div id="better" className="mb-12 md:mb-0">
+          <div
+            id="better"
+            className="relative mb-12 md:mb-24 overflow-x-hidden"
+          >
             <div className="md:grid md:grid-cols-12 mb-12">
               <div className="md:col-span-6 title-l md:title-xl max-w-[32.5rem]">
                 Be better than CeFi
+                <div className="absolute right-0 top-0 title-l md:title-xl max-w-[32.5rem] translate-x-1/2 hidden md:block">
+                  Be better than CeFi
+                </div>
               </div>
-              <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12">
+              <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12 dark:bg-black bg-white">
                 <div className="copy-s text-current">
                   By standardising and automating every step of the trade
                   lifecycle, Vega addresses the shortcomings of traditional
                   trading. And strikes a balance between rigidity and
                   flexibility, for confidence and growth.
-                  <div className="absolute bottom-0 left-0 right-0 h-1.5 border-t border-currrent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 border-t border-current"></div>
                 </div>
               </div>
             </div>
@@ -334,6 +344,7 @@ const KeyConceptsPage = () => {
                 This opens up new sets of business models, and unlocks a “VC”
                 like approach of incubating a portfolio of markets, or “buying
                 in” to more mature markets."
+              diagram={<MarketMakingDiagramResponsive />}
               links={[
                 {
                   link: "https://cointelegraph.com/news/this-startup-is-on-a-quest-to-make-decentralized-exchanges-viable-for-pros",
@@ -365,18 +376,24 @@ const KeyConceptsPage = () => {
             />
           </div>
 
-          <div id="mature">
+          <div
+            id="mature"
+            className="relative mb-12 md:mb-24 overflow-x-hidden"
+          >
             <div className="md:grid md:grid-cols-12 mb-12">
               <div className="md:col-span-6 title-l md:title-xl max-w-[32.5rem]">
                 Help DeFi mature
+                <div className="absolute right-0 top-0 title-l md:title-xl max-w-[32.5rem] translate-x-1/2 hidden md:block">
+                  Help DeFi mature
+                </div>
               </div>
-              <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12">
+              <div className="md:col-span-5 border-current border p-4 pb-6 relative mt-4 md:mt-12 bg-white dark:bg-black">
                 <div className="copy-s text-current">
                   Designed from the ground up, and in a modular way to encourage
                   creativity and incentivise participation &mdash; we're
                   creating the critical infrastructure for Web3 and DeFi to
                   mature. And birth a thriving new world of finance.
-                  <div className="absolute bottom-0 left-0 right-0 h-1.5 border-t border-currrent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 border-t border-current"></div>
                 </div>
               </div>
             </div>
