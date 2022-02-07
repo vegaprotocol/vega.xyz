@@ -7,7 +7,7 @@ const Calendar = ({ showEthDenver }) => {
   useEffect(() => {
     async function fetchEvents() {
       let response = await fetch(
-        "https://notion-api.vega.win/query?id=3c75eae1-dec3-4b2c-aa38-c1e9adcc7e13"
+        "https://notion-data-service.ops.vega.xyz/query?id=3c75eae1-dec3-4b2c-aa38-c1e9adcc7e13"
       );
       response = await response.json();
 
