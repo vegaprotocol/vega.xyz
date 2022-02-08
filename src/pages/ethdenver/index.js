@@ -349,7 +349,7 @@ const EthDenver = () => {
         <img
           id="mountainScape"
           src={Mountainscape}
-          className="w-full h-full object-cover object-right"
+          className="w-full h-full object-cover object-right-top"
           alt=""
         />
       </div>
