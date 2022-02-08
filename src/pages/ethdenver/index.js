@@ -342,9 +342,17 @@ const EthDenver = () => {
       <img
         id="mountainScape"
         src={Mountainscape}
-        className={`translate-y-12 w-full h-auto fixed bottom-0 left-0 right-0}`}
+        className="hidden md:block translate-y-12 w-full h-auto fixed bottom-0 left-0 right-0"
         alt=""
       />
+      <div className="w-full h-[85px] fixed bottom-0 md:hidden">
+        <img
+          id="mountainScape"
+          src={Mountainscape}
+          className="w-full h-full object-cover object-right"
+          alt=""
+        />
+      </div>
 
       {showMap && (
         <div className="position fixed z-50 inset-0 bg-white dark:bg-black flex flex-col items-center justify-center">
