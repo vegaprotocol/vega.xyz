@@ -5,8 +5,11 @@ import Container from "../../components/Container";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
 import BoxLinkSimple from "../../components/BoxLinkSimple";
-import { StaticImage } from "gatsby-plugin-image";
+import AmbassadorsHero from "../../components/Svg/AmbassadorsHero";
 import IconAmbassador1 from "../../images/icon-ambassador-1.png";
+import IconAmbassador2 from "../../images/icon-ambassador-2.png";
+import IconAmbassador3 from "../../images/icon-ambassador-3.png";
+import IconAmbassador4 from "../../images/icon-ambassador-4.png";
 
 const Clan = ({ icon, title, text }) => {
   return (
@@ -39,16 +42,18 @@ const Ambassadors = () => {
         description="Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community."
       />
       <Container>
-        <div className="mb-16 md:mb-16 pt-6 lg:pt-16">
-          <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[80rem] mx-auto text-center mb-6 md:mb-12">
-            <GlitchTitle level={1} size="large" className="mb-6">
-              Be a Vega+ ambassador
-            </GlitchTitle>
-            <LeadingLine className="text-center text-current mx-auto max-w-[35rem]">
-              Seeking emissaries of the future to co-create the leading crypto
-              derivatives layer.
-            </LeadingLine>
-          </div>
+        <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[80rem] mx-auto text-center md:mb-12 pt-6 lg:pt-16">
+          <GlitchTitle level={1} size="large" className="mb-6">
+            Be a Vega+ ambassador
+          </GlitchTitle>
+          <LeadingLine className="text-center text-current mx-auto max-w-[35rem]">
+            Seeking emissaries of the future to co-create the leading crypto
+            derivatives layer.
+          </LeadingLine>
+        </div>
+
+        <div className="max-w-[55.5rem] mx-auto mb-6 md:mb-0">
+          <AmbassadorsHero />
         </div>
 
         <div className="md:grid md:grid-cols-12 md:gap-x-12">
@@ -85,17 +90,17 @@ const Ambassadors = () => {
                 <Clan
                   title="Builders Club"
                   text="(Technical Work, Hackathon Support, Coding, Documentation)"
-                  icon={IconAmbassador1}
+                  icon={IconAmbassador2}
                 />
                 <Clan
                   title="Research & Finance Circle"
                   text="(Deeper Research, Protocol Comparisons, Protocol Integrations)"
-                  icon={IconAmbassador1}
+                  icon={IconAmbassador3}
                 />
                 <Clan
-                  title="Bilingual Bros"
+                  title="Bilingual Buds"
                   text="(Translations, Language Groups, Specific Events, Vega Chapters)"
-                  icon={IconAmbassador1}
+                  icon={IconAmbassador4}
                 />
               </div>
             </div>
@@ -129,10 +134,10 @@ const Ambassadors = () => {
               </div>
             </div>
 
-            <div className="mb-12 md:mb-20">
+            {/* <div className="mb-12 md:mb-20">
               <h2 className="title-s md:title-l mb-4">Expectations</h2>
               <p className="copy-xs md:copy-s text-current">TBC</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="md:col-span-4 mb-20">
