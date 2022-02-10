@@ -1,9 +1,9 @@
 import React from "react";
 import VideoBackground from "./VideoBackground";
 
-const AmbassadorsHero = () => {
+const AmbassadorsHero = ({ className }) => {
   return (
-    <div className="pb-[43.63%] relative w-full overflow-hidden">
+    <div className={`pb-[43.63%] relative w-full overflow-hidden ${className}`}>
       <VideoBackground />
 
       <svg

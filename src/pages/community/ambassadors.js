@@ -5,6 +5,7 @@ import Container from "../../components/Container";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
 import BoxLinkSimple from "../../components/BoxLinkSimple";
+import ButtonLink from "../../components/ButtonLink";
 import AmbassadorsHero from "../../components/Svg/AmbassadorsHero";
 import IconAmbassador1 from "../../images/icon-ambassador-1.png";
 import IconAmbassador2 from "../../images/icon-ambassador-2.png";
@@ -41,9 +42,9 @@ const Ambassadors = () => {
         title="Be a Vega+ Ambassador"
         description="Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community."
       />
-      <Container>
+      <Container hideXOverflow={true}>
         <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[80rem] mx-auto text-center md:mb-12 pt-6 lg:pt-16">
-          <GlitchTitle level={1} size="large" className="mb-6">
+          <GlitchTitle level={1} size="large" className="md:mb-6">
             Be a Vega+ ambassador
           </GlitchTitle>
           <LeadingLine className="text-center text-current mx-auto max-w-[35rem]">
@@ -53,7 +54,7 @@ const Ambassadors = () => {
         </div>
 
         <div className="max-w-[55.5rem] mx-auto mb-6 md:mb-0">
-          <AmbassadorsHero />
+          <AmbassadorsHero className="scale-125 my-12 md:my-0 md:scale-100" />
         </div>
 
         <div className="md:grid md:grid-cols-12 md:gap-x-12">
@@ -75,6 +76,12 @@ const Ambassadors = () => {
                 Apply now to bring fresh proposals to the table and participate
                 in the community as a key contributor.
               </p>
+
+              <ButtonLink
+                link="https://form.typeform.com/to/lPl6aiNh"
+                text="Apply now"
+                className="md:hidden mt-3"
+              />
             </div>
 
             <div className="mb-12 md:mb-20">
@@ -144,7 +151,7 @@ const Ambassadors = () => {
             <div className="sticky top-6 md:text-right">
               <BoxLinkSimple
                 link="https://form.typeform.com/to/lPl6aiNh"
-                text="Apply<br/>Now"
+                text="Apply <br/>now"
                 className="min-w-[15rem] text-left inline-block"
               />
             </div>
