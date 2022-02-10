@@ -55,14 +55,14 @@ const Ambassadors = () => {
       </Container>
 
       <Container hideXOverflow={true}>
-        <div className="max-w-[55.5rem] mx-auto mb-6 md:mb-0">
+        <div className="max-w-[55.5rem] mx-auto mb-6 md:mb-16">
           <AmbassadorsHero className="scale-125 my-12 md:my-0 md:scale-100" />
         </div>
       </Container>
 
       <Container>
-        <div className="md:grid md:grid-cols-12 md:gap-x-12">
-          <div className="md:col-span-8">
+        <div className="md:grid md:grid-cols-12 md:gap-x-12 lg:gap-x-6">
+          <div className="md:col-span-8 lg:col-span-7">
             <div className="mb-12 md:mb-20">
               <h2 className="title-s md:title-l mb-4">Overview</h2>
               <LeadingLine className="text-current">
@@ -157,12 +157,19 @@ const Ambassadors = () => {
             </div> */}
           </div>
 
-          <div className="md:col-span-4 mb-20">
-            <div className="sticky top-6 md:text-right">
+          <div className="hidden lg:block lg:col-span-1"></div>
+
+          <div className="md:col-span-4 lg:col-span-4 mb-20">
+            <div className="sticky top-6">
+              <div className="title-s mb-3">Interested in joining?</div>
+              <p class="copy-xs text-current">
+                Become one with Vega. Learn, create, and help grow Vega to be a
+                leading derivatives Layer 1 in the crypto space
+              </p>
               <BoxLinkSimple
                 link="https://form.typeform.com/to/lPl6aiNh"
                 text="Apply <br/>now"
-                className="min-w-[15rem] text-left hidden md:inline-block"
+                className="mt-4 min-w-[15rem] text-left hidden md:inline-block"
               />
             </div>
           </div>
