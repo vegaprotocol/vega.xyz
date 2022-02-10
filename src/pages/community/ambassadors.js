@@ -42,7 +42,7 @@ const Ambassadors = () => {
         title="Be a Vega+ Ambassador"
         description="Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community."
       />
-      <Container hideXOverflow={true}>
+      <Container>
         <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[80rem] mx-auto text-center md:mb-12 pt-6 lg:pt-16">
           <GlitchTitle level={1} size="large" className="md:mb-6">
             Be a Vega+ ambassador
@@ -52,11 +52,15 @@ const Ambassadors = () => {
             derivatives layer.
           </LeadingLine>
         </div>
+      </Container>
 
+      <Container hideXOverflow={true}>
         <div className="max-w-[55.5rem] mx-auto mb-6 md:mb-0">
           <AmbassadorsHero className="scale-125 my-12 md:my-0 md:scale-100" />
         </div>
+      </Container>
 
+      <Container>
         <div className="md:grid md:grid-cols-12 md:gap-x-12">
           <div className="md:col-span-8">
             <div className="mb-12 md:mb-20">
@@ -122,7 +126,7 @@ const Ambassadors = () => {
                 look forward to:
               </p>
 
-              <div className="border-t border-current mt-8 md:mt-12">
+              <div className="border-t border-current mt-8 md:mt-12 mb-4 md:mb-0">
                 {benefits.map((benefit, idx) => {
                   return (
                     <div
@@ -139,6 +143,12 @@ const Ambassadors = () => {
                   );
                 })}
               </div>
+
+              <ButtonLink
+                link="https://form.typeform.com/to/lPl6aiNh"
+                text="Apply now"
+                className="md:hidden mt-3"
+              />
             </div>
 
             {/* <div className="mb-12 md:mb-20">
@@ -152,7 +162,7 @@ const Ambassadors = () => {
               <BoxLinkSimple
                 link="https://form.typeform.com/to/lPl6aiNh"
                 text="Apply <br/>now"
-                className="min-w-[15rem] text-left inline-block"
+                className="min-w-[15rem] text-left hidden md:inline-block"
               />
             </div>
           </div>
