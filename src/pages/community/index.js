@@ -56,7 +56,7 @@ const CommunityPage = ({ data }) => {
         />
       </div>
 
-      <Container>
+      <Container dataCy={'main'}>
         <div id="overview" className="pt-16">
           <h1>
             <BoxTitle text="Community" />

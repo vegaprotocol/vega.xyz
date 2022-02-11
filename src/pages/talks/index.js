@@ -43,7 +43,7 @@ const PapersPage = () => {
         title="Talks"
         description="Dive in to talks and podcasts by the Vega team on crypto derivatives trading."
       />
-      <Container>
+      <Container dataCy={'main'}>
         <div className="pt-6 lg:pt-16">
           <div className="mb-6 md:mb-16">
             <div className="mb-3">

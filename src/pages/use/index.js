@@ -18,7 +18,7 @@ const UsePage = () => {
         description="Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy."
       />
       <div className="relative z-10">
-        <Container>
+        <Container dataCy={'main'}>
           <div className="mb-12 md:mb-24 lg:pt-16">
             <div className="max-w-[28rem] lg:max-w-[41.875rem]">
               <h1>
