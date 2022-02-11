@@ -200,7 +200,7 @@ const CommunityPage = ({ data }) => {
               title="Become an ambassador"
               text="We're inviting Vega's leading community members to share what we're building with those that need to hear about it &mdash; and get rewarded for it."
               linkTitle="Learn more"
-              link="https://vega.xyz/discord/"
+              link="/community/ambassadors/"
               image={builderImage}
             />
           </div>
