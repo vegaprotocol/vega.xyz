@@ -50,7 +50,7 @@ const PapersPage = () => {
         title="Papers & Research"
         description="Check out the technical, economic and mathematical detail - and innovative thinking behind Vega."
       />
-      <Container>
+      <Container dataCy={'main'}>
         <div className="pt-6 lg:pt-16">
           <div className="mb-6 md:mb-16">
             <div className="mb-3">
