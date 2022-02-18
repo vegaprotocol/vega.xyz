@@ -25,12 +25,12 @@ const Clan = ({ icon, title, text }) => {
 };
 
 const benefits = [
-  "Access to Premium Discord Lounges (for those that make it past Apprentice)",
   "Gain real-world experience in community building by shaping the Vega movement from the ground up",
+  "Access to Premium Discord Lounges",
   "Early access to bounties, beta testing of products",
   "Priority consideration on protocol feedback",
   "Exclusive meetups - Invitations to all of Vega's events, both offline and online",
-  "Limited Edition Vega Swag",
+  "Limited edition Vega swag",
   "Priority minting of NFT drops (+ enhanced rarities)",
   "Grow with Vega - scaling rewards as you climb the ranks",
 ];
@@ -90,11 +90,11 @@ const Ambassadors = () => {
 
             <div className="mb-12 md:mb-20">
               <h2 className="title-s md:title-l mb-4 max-w-[20rem] md:max-w-none">
-                Which Vega clan would you rally?
+                Which Vega+ Team would you rally?
               </h2>
               <div className="mt-6 md:mt-12">
                 <Clan
-                  title="Content Cove"
+                  title="Content Collective"
                   text="(Awareness, Editorials, Tweets, Infographics)"
                   icon={IconAmbassador1}
                 />
@@ -103,13 +103,13 @@ const Ambassadors = () => {
                   text="(Technical Work, Hackathon Support, Coding, Documentation)"
                   icon={IconAmbassador2}
                 />
-                <Clan
+                {/* <Clan
                   title="Research & Finance Circle"
                   text="(Deeper Research, Protocol Comparisons, Protocol Integrations)"
                   icon={IconAmbassador3}
-                />
+                /> */}
                 <Clan
-                  title="Bilingual Buds"
+                  title="Multilingual League"
                   text="(Translations, Language Groups, Specific Events, Vega Chapters)"
                   icon={IconAmbassador4}
                 />
@@ -151,10 +151,35 @@ const Ambassadors = () => {
               />
             </div>
 
-            {/* <div className="mb-12 md:mb-20">
+            <div className="mb-12 md:mb-20">
               <h2 className="title-s md:title-l mb-4">Expectations</h2>
-              <p className="copy-xs md:copy-s text-current">TBC</p>
-            </div> */}
+              <p className="copy-xs md:copy-s text-current mb-8">
+                There are no exact requirements to being an ambassador; the
+                extent of what you'll work on will depend on your team and role.
+                Nevertheless, these are the non-negotiables:
+              </p>
+              <div className="prose-xl dark:text-white">
+                <ul className="list-disc copy-xs md:copy-s mt-8 md:mt-12">
+                  <li>Agree with the code of conduct; keep to the rules</li>
+                  <li>
+                    Attend most meetings with other ambassadors, engage with
+                    your team
+                  </li>
+                  <li>
+                    Learn with the core team: attend office hours, ask
+                    questions, grow
+                  </li>
+                  <li>
+                    Let us know when things aren't working for you, if you need
+                    a break, that's okay!
+                  </li>
+                  <li>
+                    Be active on Discord - most communication will take place
+                    there
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div className="hidden lg:block lg:col-span-1"></div>
