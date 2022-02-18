@@ -26,7 +26,7 @@ const Clan = ({ icon, title, text }) => {
 
 const benefits = [
   "Gain real-world experience in community building by shaping the Vega movement from the ground up",
-  "Access to Premium Discord Lounges",
+  "Access to exclusive Discord lounges",
   "Early access to bounties, beta testing of products",
   "Priority consideration on protocol feedback",
   "Exclusive meetups - Invitations to all of Vega's events, both offline and online",
