@@ -36,7 +36,7 @@ const CareersPage = () => {
         title="Careers at Vega"
         description="Find your career in DeFi. Join the core team at Vega, and help create Web3's native derivatives layer."
       />
-      <Container>
+      <Container dataCy={'main'}>
         <div className="pt-6 lg:pt-16">
           <div className="grid grid-cols-12">
             <div className="relative z-10 col-span-12 col-start-1 row-span-full">

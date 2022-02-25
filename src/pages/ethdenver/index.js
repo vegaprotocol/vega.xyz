@@ -201,16 +201,6 @@ const EthDenver = () => {
 
             <EthDenverEvent
               type="Talks & workshops"
-              title="Vega Bounties @buidlthon KICKOFF"
-              title2="with Chris"
-              when="Friday, Feb 11th time TBC"
-              venue="Livestream"
-              discoMode={discoMode}
-              people={[PersonChris]}
-            ></EthDenverEvent>
-
-            <EthDenverEvent
-              type="Talks & workshops"
               title="Programming liquidity on Vega Futures markets"
               title2="with Barney, Chris & Witold"
               when="Feb 17th 11am - 1pm"
@@ -250,8 +240,8 @@ const EthDenver = () => {
               type="Talks & workshops"
               title="ZK rollups: Tales from the Field (**L2/ scaling/ Infrastructure track)"
               title2="Danny Holland, Head of Blockchain Integrations @ Vega"
-              when="Friday or Saturday (2/18-19), time TBC"
-              venue="Web3 Castle & live streamed"
+              when="Saturday Feb 19th. 10:20am - 10:40am"
+              venue="Temple Stage in the Web3 Castle & live streamed"
               discoMode={discoMode}
               people={[PersonDanny]}
             >
@@ -293,7 +283,7 @@ const EthDenver = () => {
                 type=""
                 title="Bounties presentation @ #BUIDLathon Kickoff"
                 title2="with Chris"
-                when="Friday, Feb 11th time TBC"
+                when="Friday, Feb 11th. 10am"
                 venue="Livestream"
                 discoMode={discoMode}
                 people={[PersonChris]}
@@ -317,7 +307,7 @@ const EthDenver = () => {
               <p>
                 {" "}
                 We've launched a whole range of new swag and would love our
-                community to be guaranteed to get it! Keep an eye on{" "}
+                community to be guaranteed to get it! Keep an eye on the announcements channel on{" "}
                 <a
                   href="https://discord.com/invite/3hQyGgZ"
                   rel="noreferrer"
@@ -342,9 +332,17 @@ const EthDenver = () => {
       <img
         id="mountainScape"
         src={Mountainscape}
-        className={`translate-y-12 w-full h-auto fixed bottom-0 left-0 right-0}`}
+        className="hidden md:block translate-y-12 w-full h-auto fixed bottom-0 left-0 right-0"
         alt=""
       />
+      <div className="w-full h-[85px] fixed bottom-0 md:hidden">
+        <img
+          id="mountainScape"
+          src={Mountainscape}
+          className="w-full h-full object-cover object-right-top"
+          alt=""
+        />
+      </div>
 
       {showMap && (
         <div className="position fixed z-50 inset-0 bg-white dark:bg-black flex flex-col items-center justify-center">
