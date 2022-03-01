@@ -26,7 +26,7 @@ const IndexPage = () => {
         description="Discover Web3's native derivatives trading platform that is helping DeFi mature."
       />
       <main>
-        <Container dataCy={'main'}>
+        <Container dataCy={"main"}>
           <div className="relative md:mt-12">
             <div className="mx-auto max-w-[50rem]">
               <Planet />
@@ -117,7 +117,7 @@ const IndexPage = () => {
               </div>
 
               <div className="lg:col-span-8">
-                <Calendar showEthDenver={true} />
+                <Calendar />
               </div>
             </div>
           </PageSection>

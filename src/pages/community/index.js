@@ -213,7 +213,7 @@ const CommunityPage = ({ data }) => {
               </GlitchTitle>
             </div>
             <div className="mt-16">
-              <Calendar showEthDenver={false} />
+              <Calendar />
             </div>
           </div>
         </PageSection>

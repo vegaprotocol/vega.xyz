@@ -5,24 +5,13 @@ import ArrowRight from "./Svg/ArrowRight";
 import Moment from "react-moment";
 import { StaticImage } from "gatsby-plugin-image";
 
-const CalendarEvent = ({ event, showEthDenver }) => {
+const CalendarEvent = ({ event }) => {
   const dateFormat = "LLL";
   const dateFormatWithoutTime = "LL";
   const dateParseFormat = "YYYY-MM-DD HH:mm:ss";
 
   return (
     <div className="pb-8 pt-6 border-b border-current relative">
-      {/* Hard code ETH Denver image */}
-      {showEthDenver && event.name === "ETH Denver 2022" ? (
-        <Link to="/ethdenver">
-          <StaticImage
-            src="../images/ethdenver.jpg"
-            alt="EthDenver"
-            className="mb-6"
-          />
-        </Link>
-      ) : null}
-
       <div className="grid grid-cols-12 gap-x-6">
         <div className="col-span-12 md:col-span-6">
           {event.tags.length ? (
