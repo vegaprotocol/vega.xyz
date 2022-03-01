@@ -12,7 +12,7 @@ const RoadMap = () => {
                 before:absolute
                 before:left-1/2
                 before:top-1
-                before:bottom-0
+                before:-bottom-[10rem]
                 before:w-px
                 before:bg-gradient-to-b
                 before:from-black
