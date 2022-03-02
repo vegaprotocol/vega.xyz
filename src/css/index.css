@@ -21,7 +21,7 @@ body {
 }
 
 .dark .grey-box .button-link div {
-  @apply bg-vega-box-grey;
+  @apply bg-black;
 }
 
 @layer base {
