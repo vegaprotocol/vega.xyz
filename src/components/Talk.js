@@ -6,11 +6,8 @@ import SquareBullet from "./Svg/SquareBullet";
 const Talk = ({ talk }) => {
   return (
     <li className="border-t border-current pt-4 pb-8 relative min-w-full clear-both">
-      <div className="inline-block w-[3.0625rem] float-right ml-12 mb-12">
-        <TalkIllustration />
-      </div>
       <div>
-        <div className="title-s mb-2 w-full">{talk.frontmatter.title}</div>
+        <div className="copy-s mb-2 w-full">{talk.frontmatter.title}</div>
 
         {talk.frontmatter.location && (
           <div className="inline-block mr-3">
