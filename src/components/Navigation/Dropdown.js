@@ -1,11 +1,9 @@
 import React from "react";
-import { useIntl, Link } from "gatsby-plugin-react-intl";
+import { Link } from "gatsby";
 import DropdownArrow from "../Svg/DropdownArrow.js";
 import LinkArrow from "../Svg/LinkArrow";
 
 const NavigationDropdown = ({ section }) => {
-  const intl = useIntl();
-
   return (
     <li className="relative">
       <button
@@ -13,7 +11,7 @@ const NavigationDropdown = ({ section }) => {
         tabIndex={0}
       >
         <div className="hover:text-vega-mid-grey transition-colors">
-          {intl.formatMessage({ id: section.text })}
+          {section.text}
 
           <div className="inline-block pl-3">
             <DropdownArrow></DropdownArrow>
@@ -31,7 +29,7 @@ const NavigationDropdown = ({ section }) => {
                     rel="noreferrer"
                     className="transition-colors block px-6 py-2 hover:text-vega-mid-grey"
                   >
-                    {intl.formatMessage({ id: link.text })}
+                    {link.text}
                     <span className="inline-block ml-2">
                       <LinkArrow />
                     </span>
@@ -41,7 +39,7 @@ const NavigationDropdown = ({ section }) => {
                     to={link.to}
                     className="transition-colors block px-6 py-2 hover:text-vega-mid-grey"
                   >
-                    {intl.formatMessage({ id: link.text })}
+                    {link.text}
                   </Link>
                 )}
               </li>

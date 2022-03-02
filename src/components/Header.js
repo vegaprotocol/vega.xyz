@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "gatsby";
 import { globalHistory } from "@reach/router";
-import { Link } from "gatsby-plugin-react-intl";
 import Navigation from "./Navigation";
 import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";

@@ -28,20 +28,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify`,
     {
-      resolve: `gatsby-plugin-react-intl`,
-      options: {
-        // language JSON resource path
-        path: `${__dirname}/src/intl`,
-        // supported language
-        languages: [`en`, `es`],
-        // language file path
-        defaultLanguage: `en`,
-        // option to redirect to `/ko` when connecting `/`
-        redirect: false,
-        fallbackLanguage: `en`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `vega.xyz`,

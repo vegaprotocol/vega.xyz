@@ -3,7 +3,6 @@ import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
-import { useIntl } from "gatsby-plugin-react-intl";
 import JumpNavigation from "../../components/Navigation/JumpNavigation";
 import { CommunityPageSections } from "../../data/CommunityPageSections";
 import ButtonLink from "../../components/ButtonLink";
@@ -26,7 +25,6 @@ import IconDevelop from "../../components/Svg/IconDevelop";
 import IconFairground from "../../components/Svg/IconFairground";
 
 const CommunityPage = ({ data }) => {
-  const intl = useIntl();
   const ambassadorImage = getImage(data.ambassadorImage);
   const builderImage = getImage(data.builderImage);
   const [contributors, setContributors] = useState(null);
@@ -51,7 +49,7 @@ const CommunityPage = ({ data }) => {
       <div className="relative z-20">
         <JumpNavigation
           pageSlug="community"
-          pageTitle={intl.formatMessage({ id: "page-community-title" })}
+          pageTitle="Community"
           sections={CommunityPageSections}
         />
       </div>
@@ -62,12 +60,14 @@ const CommunityPage = ({ data }) => {
             <BoxTitle text="Community" />
           </h1>
           <h2 className="title-m max-w-[48rem] font-glitched md:title-l mb-4 md:mb-6 mt-4">
-            {intl.formatMessage({ id: "page-community-hero-title" })}
+            From the governance to the build, Vega is community with fairness at
+            its core.
           </h2>
 
           <div className="max-w-[48rem]">
             <LeadingLine className="!mb-6">
-              {intl.formatMessage({ id: "page-community-hero-text" })}
+              This is just the beginning. Join us now and earn rewards for
+              contributing to the future of finance.
             </LeadingLine>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-[32rem]">

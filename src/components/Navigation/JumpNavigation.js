@@ -4,10 +4,8 @@ import DropdownArrow from "../Svg/DropdownArrow.js";
 import Sticky from "react-stickynode";
 import ScrollSpy from "react-scrollspy-navigation";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { useIntl } from "gatsby-plugin-react-intl";
 
 const JumpNavigation = ({ pageTitle, pageSlug, sections, current }) => {
-  const intl = useIntl();
   return (
     <Sticky enabled={true}>
       <div className="border-vega-border-grey relative z-50 pt-2 dark:bg-black bg-white border-b">
@@ -18,7 +16,7 @@ const JumpNavigation = ({ pageTitle, pageSlug, sections, current }) => {
                 <AnchorLink
                   key={index}
                   className={`first:ml-0 first:pl-0 bottom-[-1px] inline-block last:mr-0 mx-3 px-3 py-2 text-lg leading-7 border-b-4 hover:border-current border-transparent`}
-                  to={`/${intl.locale}/${pageSlug}/#${section.hash}`}
+                  to={`/${pageSlug}/#${section.hash}`}
                   title={section.title}
                   stripHash
                 >
@@ -40,7 +38,7 @@ const JumpNavigation = ({ pageTitle, pageSlug, sections, current }) => {
                     <AnchorLink
                       key={index}
                       className={`block px-4 py-2 hover:text-vega-mid-grey`}
-                      to={`/${intl.locale}/${pageSlug}/#${section.hash}`}
+                      to={`/${pageSlug}/#${section.hash}`}
                       title={section.title}
                       stripHash
                     >

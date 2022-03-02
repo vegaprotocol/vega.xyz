@@ -1,8 +1,6 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import Container from "../components/Container";
-//import ScrambleText from "../components/ScrambleText";
-//import { useIntl } from "gatsby-plugin-react-intl";
 import Seo from "../components/Seo";
 import Ticker from "../components/Ticker";
 import GlitchTitle from "../components/GlitchTitle";
@@ -18,7 +16,6 @@ import RoadMapBlob1 from "../components/Svg/RoadMapBlob1";
 import RoadMapBlob2 from "../components/Svg/RoadMapBlob2";
 
 const IndexPage = () => {
-  // const intl = useIntl();
   return (
     <Layout>
       <Seo
@@ -64,7 +61,7 @@ const IndexPage = () => {
                     Throw open the doors to the new financial system
                   </div>
                   <div className="copy-xs md:copy-s !mb-8">
-                    And a truly democratic society. Don’t ask for permission.
+                    And a truly democratic society. Don't ask for permission.
                     Ask how you can play a part in this new world of DeFi.
                     Decentralised derivatives markets are here to stay.
                   </div>
