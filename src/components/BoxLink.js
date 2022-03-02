@@ -16,12 +16,16 @@ const BoxLink = ({
   return (
     <div className="relative flex flex-col justify-between border border-black dark:border-white">
       <div className="p-4">
-        <div className="relative pr-16">
+        <div className={`relative ${locked || icon ? "pr-16" : ""}`}>
           <div className="text-[1.5rem] font-glitched leading-[0.85] mb-3">
             {locked && <Padlock />}
             {title}
           </div>
-          <div className="leading-[1.3] text-vega-mid-grey mb-3 max-w-[23.75rem]">
+          <div
+            className={`leading-[1.3] text-vega-mid-grey mb-3 ${
+              locked || icon ? "max-w-[23.75rem]" : ""
+            }`}
+          >
             {text}
           </div>
           {inlineLinkTitle && (
