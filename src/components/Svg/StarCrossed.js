@@ -3,52 +3,95 @@ import VideoBackground from "./VideoBackground";
 
 const StarCrossed = () => {
   return (
-    <div className="w-[235px] h-[151px] relative mx-auto">
+    <div className="w-[273px] h-[179px] relative mx-auto">
       <VideoBackground />
 
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0"
         y="0"
-        viewBox="0 0 235 151"
+        viewBox="0 0 273 179"
         className="absolute left-0 right-0 top-0 h-auto"
       >
         <path
           className="fill-white dark:fill-black"
-          d="M42.1 75.6C42.1 33.8 76 0 117.7 0H0v151.2h117.7c-41.7 0-75.6-33.9-75.6-75.6zM117.7 0c41.7 0 75.6 33.8 75.6 75.6 0 41.7-33.8 75.6-75.6 75.6H235V0H117.7z"
+          d="M0,0v179h273V0H0z M134.5,173.1c-45.6,0-82.5-36.9-82.5-82.5S88.9,8.1,134.5,8.1S217,45,217,90.6
+	S180.1,173.1,134.5,173.1z"
         />
-        <path
-          className="fill-white"
-          d="M123.3 107.5h-11.9v11.9h11.9v-11.9zM135.2 95.6h-11.9v11.9h11.9V95.6zM159 83.7h-11.9v11.9H159V83.7zM147.1 36.1h-11.9v47.6h11.9V36.1zM111.4 95.6H99.5v11.9h11.9V95.6zM99.5 36.1H87.6v59.6h11.9V36.1z"
-        />
-        <path
-          className="fill-black dark:fill-white"
-          d="M108.6 43h-2.9v2.9h2.9V43z"
-        />
-        <path
-          className="fill-black dark:fill-white"
-          d="M158.5 55.5h2.9v2.9h-2.9zM161.4 52.6h2.9v2.9h-2.9zM164.3 49.6h2.9v2.9h-2.9zM167.3 46.7h2.9v2.9h-2.9zM178.9 38H176v2.9h-2.9v2.9h-2.9v2.9h2.9v-2.9h2.9v-2.9h2.9V38h3v-3h-3zM184.8 32.1h-2.9V35h2.9v-2.9h2.9v-2.9h-2.9zM202.3 14.6h-2.9v2.9h-2.9v2.9h-3v3h-2.9v2.9h-2.9v2.9h2.9v-2.9h2.9v-2.9h3v-3h2.9v-2.9h2.9v-2.9h2.9v-2.9h-2.9z"
-        />
-        <path
-          className="fill-black dark:fill-white"
-          d="M208.1 8.8h-2.9v2.9h2.9V8.8h3v-3h-3zM214 2.9h-2.9v2.9h2.9V2.9h2.9V0H214z"
-        />
-        <path
-          className="fill-black dark:fill-white"
-          d="M27.1 118.9h-2.9v2.9h2.9v-2.9zM30 116v-3h-2.9v5.8H30V116zM24.2 121.8h-5.8v2.9h5.8v-2.9zM27.1 124.7h-2.9v2.9h2.9v-2.9zM30 127.7h-2.9v5.8H30v-5.8zM32.9 124.7H30v2.9h2.9v-2.9zM38.8 121.8H33v2.9h5.8v-2.9zM32.9 118.9H30v2.9h2.9v-2.9zM41.5 110.1h-2.9v2.9h2.9v-2.9zM44.4 107.2h-2.9v2.9h2.9v-2.9zM47.3 104.3h-2.9v2.9h2.9v-2.9zM50.2 101.4h-2.9v2.9h2.9v-2.9zM53.2 98.4h-2.9v2.9h2.9v-2.9zM56.1 95.5h-2.9v2.9h2.9v-2.9zM59 92.6h-2.9v2.9H59v-2.9zM61.9 89.7H59v2.9h2.9v-2.9zM64.8 86.8h-2.9v2.9h2.9v-2.9zM67.8 83.8h-2.9v2.9h2.9v-2.9zM70.7 80.9h-2.9v2.9h2.9v-2.9zM73.6 78h-2.9v2.9h2.9V78zM76.5 75.1h-2.9V78h2.9v-2.9zM79.4 72.2h-2.9v2.9h2.9v-2.9zM82.4 69.2h-2.9v2.9h2.9v-2.9zM85.3 66.3h-2.9v2.9h2.9v-2.9zM88.2 63.4h-2.9v2.9h2.9v-2.9zM91.1 60.5h-2.9v2.9h2.9v-2.9zM94 57.6h-2.9v2.9H94v-2.9zM97 54.6h-3v2.9h3v-2.9zM99.9 51.7H97v2.9h2.9v-2.9zM102.8 48.8h-2.9v2.9h2.9v-2.9zM105.7 45.9h-2.9v2.9h2.9v-2.9z"
-        />
-        <path
-          className="fill-black dark:fill-white"
-          d="M2.9 21.6H0v2.9h2.9v-2.9zM5.8 18.7H2.9v2.9h2.9v-2.9zM5.8 24.5H2.9v2.9h2.9v-2.9zM8.8 21.6h-3v2.9h2.9v-2.9z"
-        />
-        <path
-          className="fill-black dark:fill-white"
-          d="M229.2 94h-2.9v2.9h2.9V94zM232.1 91.1h-2.9V94h2.9v-2.9zM232.1 96.9h-2.9v2.9h2.9v-2.9zM235.1 94h-2.9v2.9h2.9V94z"
-        />
-        <path
-          className="fill-black dark:fill-white"
-          d="M196.2 132.5h-2.9v2.9h2.9v-2.9zM199.2 129.5h-2.9v2.9h2.9v-2.9zM199.2 135.4h-2.9v2.9h2.9v-2.9zM202.1 132.5h-2.9v2.9h2.9v-2.9z"
-        />
+        <g fill="#ffffff">
+          <path d="M140.6,127.1h-13v13h13V127.1z" />
+          <path d="M153.6,114.1h-13v13h13V114.1z" />
+          <path d="M179.6,101.1h-13v13h13V101.1z" />
+          <path d="M166.6,49.1h-13v52h13V49.1z" />
+          <path d="M127.6,114.1h-13v13h13V114.1z" />
+          <path d="M114.6,49.1h-13v65h13V49.1z" />
+        </g>
+        <g className="fill-black dark:fill-white">
+          <path d="M182.2,66.7H179v3.2h3.2V66.7z" />
+          <path d="M185.4,63.5h-3.2v3.2h3.2V63.5z" />
+          <path d="M188.6,60.3h-3.2v3.2h3.2V60.3z" />
+          <path d="M191.8,57.1h-3.2v3.2h3.2V57.1z" />
+          <path d="M194.9,53.9h-3.2v3.2h3.2V53.9z" />
+          <path d="M198.1,50.7h-3.2v3.2h3.2V50.7z" />
+          <path d="M201.3,47.5h-3.2v3.2h3.2V47.5z" />
+          <path d="M204.5,44.4h-3.2v3.2h3.2V44.4z" />
+          <path d="M207.7,41.2h-3.2v3.2h3.2V41.2z" />
+          <path d="M210.9,38h-3.2v3.2h3.2V38z" />
+          <path d="M214.1,34.8h-3.2V38h3.2V34.8z" />
+          <path d="M217.3,31.6h-3.2v3.2h3.2V31.6z" />
+          <path d="M220.4,28.4h-3.2v3.2h3.2V28.4z" />
+          <path d="M223.6,25.2h-3.2v3.2h3.2V25.2z" />
+          <path d="M226.8,22h-3.2v3.2h3.2V22z" />
+          <path d="M230,18.9h-3.2V22h3.2V18.9z" />
+          <path d="M233.2,15.7H230v3.2h3.2V15.7z" />
+          <path d="M236.4,12.5h-3.2v3.2h3.2V12.5z" />
+          <path d="M239.6,9.3h-3.2v3.2h3.2V9.3z" />
+          <path d="M242.8,6.1h-3.2v3.2h3.2V6.1z" />
+          <path d="M35.6,139.5h-3.2v3.2h3.2V139.5z" />
+          <path d="M38.8,136.3v-3.2h-3.2v3.2v3.2h3.2V136.3z" />
+          <path d="M32.4,142.7H26v3.2h6.4V142.7z" />
+          <path d="M35.6,145.9h-3.2v3.2h3.2V145.9z" />
+          <path d="M38.8,149.1h-3.2v6.4h3.2V149.1z" />
+          <path d="M41.9,145.9h-3.2v3.2h3.2V145.9z" />
+          <path d="M48.3,142.7h-6.4v3.2h6.4V142.7z" />
+          <path d="M41.9,139.5h-3.2v3.2h3.2V139.5z" />
+          <path d="M51.3,129.9h-3.2v3.2h3.2V129.9z" />
+          <path d="M54.5,126.7h-3.2v3.2h3.2V126.7z" />
+          <path d="M57.6,123.6h-3.2v3.2h3.2V123.6z" />
+          <path d="M60.8,120.4h-3.2v3.2h3.2V120.4z" />
+          <path d="M64,117.2h-3.2v3.2H64V117.2z" />
+          <path d="M67.2,114H64v3.2h3.2V114z" />
+          <path d="M70.4,110.8h-3.2v3.2h3.2V110.8z" />
+          <path d="M73.6,107.6h-3.2v3.2h3.2V107.6z" />
+          <path d="M76.8,104.4h-3.2v3.2h3.2V104.4z" />
+          <path d="M80,101.2h-3.2v3.2H80V101.2z" />
+          <path d="M83.1,98H80v3.2h3.2V98z" />
+          <path d="M86.3,94.9h-3.2V98h3.2V94.9z" />
+          <path d="M89.5,91.7h-3.2v3.2h3.2V91.7z" />
+          <path d="M92.7,88.5h-3.2v3.2h3.2V88.5z" />
+          <path d="M95.9,85.3h-3.2v3.2h3.2V85.3z" />
+          <path d="M99.1,82.1h-3.2v3.2h3.2V82.1z" />
+          <path d="M102.3,78.9h-3.2v3.2h3.2V78.9z" />
+          <path d="M105.5,75.7h-3.2v3.2h3.2V75.7z" />
+          <path d="M108.6,72.5h-3.2v3.2h3.2V72.5z" />
+          <path d="M111.8,69.4h-3.2v3.2h3.2V69.4z" />
+          <path d="M115,66.2h-3.2v3.2h3.2V66.2z" />
+          <path d="M118.2,63H115v3.2h3.2V63z" />
+          <path d="M121.4,59.8h-3.2V63h3.2V59.8z" />
+          <path d="M124.6,56.6h-3.2v3.2h3.2V56.6z" />
+          <path d="M9.2,33.3H6v3.2h3.2V33.3z" />
+          <path d="M12.4,30.1H9.2v3.2h3.2V30.1z" />
+          <path d="M12.4,36.5H9.2v3.2h3.2V36.5z" />
+          <path d="M15.6,33.3h-3.2v3.2h3.2V33.3z" />
+          <path d="M256.2,112.3H253v3.2h3.2V112.3z" />
+          <path d="M259.4,109.1h-3.2v3.2h3.2V109.1z" />
+          <path d="M259.4,115.5h-3.2v3.2h3.2V115.5z" />
+          <path d="M262.6,112.3h-3.2v3.2h3.2V112.3z" />
+          <path d="M220.2,154.3H217v3.2h3.2V154.3z" />
+          <path d="M223.4,151.1h-3.2v3.2h3.2V151.1z" />
+          <path d="M223.4,157.5h-3.2v3.2h3.2V157.5z" />
+          <path d="M226.6,154.3h-3.2v3.2h3.2V154.3z" />
+        </g>
       </svg>
     </div>
   );

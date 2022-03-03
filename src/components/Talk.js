@@ -1,5 +1,4 @@
 import React from "react";
-import TalkIllustration from "./Svg/Talk";
 import UppercaseLink from "./UppercaseLink";
 import SquareBullet from "./Svg/SquareBullet";
 
