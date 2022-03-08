@@ -24,6 +24,46 @@ body {
   @apply bg-black;
 }
 
+/* sets correct placement of hover boxes in the contributors grid - a little too complex to do with tailwind */
+.contributor-block .contributor-block-detail {
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+}
+
+.contributor-block:nth-child(4n) .contributor-block-detail {
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
+.contributor-block:nth-child(4n + 1) .contributor-block-detail {
+  left: 0;
+  right: auto;
+  transform: none;
+}
+
+@screen md {
+  .contributor-block:nth-child(4n) .contributor-block-detail,
+  .contributor-block:nth-child(4n + 1) .contributor-block-detail {
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+  }
+
+  .contributor-block:nth-child(6n + 1) .contributor-block-detail {
+    left: 0;
+    right: auto;
+    transform: none;
+  }
+
+  .contributor-block:nth-child(6n) .contributor-block-detail {
+    right: 0;
+    left: auto;
+    transform: none;
+  }
+}
+
 @layer base {
   p {
     @apply text-vega-mid-grey;
