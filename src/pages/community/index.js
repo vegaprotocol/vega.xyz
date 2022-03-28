@@ -159,7 +159,7 @@ const CommunityPage = ({ data }) => {
                     cool people who've made the project what it is.
                   </LeadingLine>
                 </div>
-                <div className="relative flex mx-auto max-w-[49rem] flex-wrap justify-center gap-3 after:content-[''] after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-gradient-to-b after:from-transparent after:to-white dark:after:to-black">
+                <div className="relative flex mx-auto max-w-[49rem] flex-wrap justify-center gap-3 after:content-[''] after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-gradient-to-b after:from-transparent after:to-white dark:after:to-black" data-cy="contributors">
                   {contributors.slice(0, 26).map((contributor, idx) => {
                     return (
                       <div key={idx}>
