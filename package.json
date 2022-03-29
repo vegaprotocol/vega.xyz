@@ -22,7 +22,7 @@
     "autoprefixer": "^10.4.1",
     "babel-plugin-styled-components": "^2.0.2",
     "bignumber.js": "^9.0.2",
-    "framer-motion": "^5.3.3",
+    "framer-motion": "^6.2.8",
     "gatsby": "^4.2.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-dark-mode": "^1.1.2",

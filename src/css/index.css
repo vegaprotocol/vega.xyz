@@ -80,11 +80,16 @@ body {
     font-variant-ligatures: contextual;
   }
 
+  .font-not-glitched {
+    font-variant-ligatures: none;
+  }
+
   .copy-xxs {
     /* 15px */
     @apply text-[0.9375rem];
     @apply leading-[1.4];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xs {
@@ -92,6 +97,7 @@ body {
     @apply text-[1.125rem];
     @apply leading-[1.4];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-s {
@@ -99,6 +105,7 @@ body {
     @apply text-[1.5rem];
     @apply leading-[1.4];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-m {
@@ -106,6 +113,7 @@ body {
     @apply text-[2.125rem];
     @apply leading-[1.2];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-l {
@@ -113,6 +121,7 @@ body {
     @apply text-[3.375rem];
     @apply leading-[1.1];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xl {
@@ -120,6 +129,7 @@ body {
     @apply text-[4.5rem];
     @apply leading-[1];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xxl {
@@ -127,6 +137,7 @@ body {
     @apply text-[5.25rem];
     @apply leading-[1];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xxxl {
@@ -134,6 +145,7 @@ body {
     @apply text-[7.125rem];
     @apply leading-[1];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xxxxl {
@@ -141,6 +153,7 @@ body {
     @apply text-[9rem];
     @apply leading-[1];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .title-xxxs {
@@ -221,5 +234,9 @@ body {
     @apply leading-[0.85];
     @apply uppercase;
     font-variant-ligatures: normal;
+  }
+
+  .transition-left {
+    transition: left 1s;
   }
 }

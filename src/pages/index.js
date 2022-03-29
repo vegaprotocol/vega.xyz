@@ -12,8 +12,7 @@ import Calendar from "../components/Calendar";
 import Planet from "../components/Svg/Planet";
 import PlanetRocket from "../components/Svg/PlanetRocket";
 import RoadMap from "../components/RoadMap";
-import RoadMapBlob1 from "../components/Svg/RoadMapBlob1";
-import RoadMapBlob2 from "../components/Svg/RoadMapBlob2";
+import RoadMapMobile from "../components/RoadMapMobile";
 
 const IndexPage = () => {
   return (
@@ -94,17 +93,8 @@ const IndexPage = () => {
           </PageSection>
 
           <PageSection>
-            <div className="md:grid md:grid-cols-12">
-              <div className="hidden md:block md:col-span-3 -translate-x-1/2">
-                <RoadMapBlob1 className="relative top-[30%]" />
-              </div>
-              <div className="md:col-span-6">
-                <RoadMap />
-              </div>
-              <div className="hidden md:block md:col-span-3 translate-x-1/2">
-                <RoadMapBlob2 className="relative md:top-[45%] lg:top-[60%]" />
-              </div>
-            </div>
+            <RoadMapMobile className="md:hidden" />
+            <RoadMap className="hidden md:block" />
           </PageSection>
 
           <PageSection>
