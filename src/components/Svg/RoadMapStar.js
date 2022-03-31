@@ -3,7 +3,7 @@ import React from "react";
 const RoadMapStar = (props) => {
   return (
     <div {...props}>
-      <div className="relative bg-black py-3 inline-block">
+      <div className="relative bg-white dark:bg-black py-3 inline-block">
         <svg
           width="21"
           height="21"
@@ -12,8 +12,8 @@ const RoadMapStar = (props) => {
           xmlns="http://www.w3.org/2000/svg"
           className="inline-block"
         >
-          <rect width="21" height="21" fill="black" />
-          <g fill="#ffffff">
+          <rect width="21" height="21" className="fill-white dark:fill-black" />
+          <g className="fill-black dark:fill-white">
             <path d="M8.99996 5.99976H6V8.99972H8.99996V5.99976Z" />
             <path d="M12.0009 2.99996V0H9.00098V2.99996V5.99993H12.0009V2.99996Z" />
             <path d="M5.99993 9H0V12H5.99993V9Z" />

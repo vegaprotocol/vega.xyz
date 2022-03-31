@@ -12,7 +12,7 @@ const RoadMapMobile = ({ title1, title2, content, visible = true }) => {
             }}
           />
           <div
-            className="title-m text-white"
+            className="title-m dark:text-white text-black"
             dangerouslySetInnerHTML={{
               __html: `${title2}`,
             }}

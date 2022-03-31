@@ -80,12 +80,10 @@ const RoadMap = (props) => {
   return (
     <div id="roadmap" {...props}>
       <div className="relative">
-        <div className="pt-20">
-          <div className="dark:bg-black bg-white py-4">
-            <GlitchTitle level={1} className="lg:title-xxl">
-              Where are we in the Roadmap?
-            </GlitchTitle>
-          </div>
+        <div className="dark:bg-black bg-white py-6">
+          <GlitchTitle level={1} className="lg:title-xxl">
+            Where are we in the Roadmap?
+          </GlitchTitle>
         </div>
 
         <div className="flex relative" ref={roadmapBlocks}>
@@ -101,7 +99,7 @@ const RoadMap = (props) => {
           ))}
         </div>
 
-        <div className="flex relative mt-12 justify-between after:contet-none after:absolute after:left-0 after:right-0 after:top-[24px] after:h-px after:bg-white after:z-10">
+        <div className="flex relative mt-12 justify-between after:contet-none after:absolute after:left-0 after:right-0 after:top-[24px] after:h-px dark:after:bg-white after:bg-black after:z-10">
           <button className="pt-12" onClick={previousBlock}>
             <svg
               width="53"
@@ -115,11 +113,19 @@ const RoadMap = (props) => {
                 y1="26.5"
                 x2="13"
                 y2="26.5"
-                stroke={currentBlockIndex > 0 ? "white" : "#828282"}
+                className={
+                  currentBlockIndex > 0
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
+                }
               />
               <path
                 d="M26.9355 39.1292L13.1679 26.5001L26.9355 13.8711"
-                stroke={currentBlockIndex > 0 ? "white" : "#828282"}
+                className={
+                  currentBlockIndex > 0
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
+                }
                 strokeMiterlimit="10"
               />
               <circle
@@ -127,7 +133,11 @@ const RoadMap = (props) => {
                 cy="26.5"
                 r="26"
                 transform="rotate(-180 26.5 26.5)"
-                stroke={currentBlockIndex > 0 ? "white" : "#828282"}
+                className={
+                  currentBlockIndex > 0
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
+                }
               />
             </svg>
           </button>
@@ -169,14 +179,18 @@ const RoadMap = (props) => {
                 y1="26.5"
                 x2="40"
                 y2="26.5"
-                stroke={
-                  currentBlockIndex < blockCount - 1 ? "white" : "#828282"
+                className={
+                  currentBlockIndex < blockCount - 1
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
                 }
               />
               <path
                 d="M26.0645 13.8708L39.8321 26.4999L26.0645 39.1289"
-                stroke={
-                  currentBlockIndex < blockCount - 1 ? "white" : "#828282"
+                className={
+                  currentBlockIndex < blockCount - 1
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
                 }
                 strokeMiterlimit="10"
               />
@@ -184,8 +198,10 @@ const RoadMap = (props) => {
                 cx="26.5"
                 cy="26.5"
                 r="26"
-                stroke={
-                  currentBlockIndex < blockCount - 1 ? "white" : "#828282"
+                className={
+                  currentBlockIndex < blockCount - 1
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
                 }
               />
             </svg>

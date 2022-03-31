@@ -18,17 +18,19 @@ const RoadMapTrackBlock = ({ title1, title2, active }) => {
         </div>
       )}
       <RoadMapStar
-        className={`px-3 bg-black inline-block ${active ? "invisible" : ""}`}
+        className={`px-3 dark:bg-black bg-white inline-block ${
+          active ? "invisible" : ""
+        }`}
       />
       <div className="p-1">
         <div
-          className="title-xs !font-not-glitched text-vega-mid-grey"
+          className="title-xs !font-not-glitched text-black dark:text-vega-mid-grey"
           dangerouslySetInnerHTML={{
             __html: title1,
           }}
         />
         <div
-          className="title-xs !font-not-glitched text-white"
+          className="title-xs !font-not-glitched text-vega-mid-grey dark:text-white"
           dangerouslySetInnerHTML={{
             __html: title2,
           }}
