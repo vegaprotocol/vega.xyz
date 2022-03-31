@@ -32,7 +32,7 @@ const Jobs = (props) => {
           </Link>
           <div className="border-t border-current">
             <div className="md:grid md:grid-cols-12 pt-4">
-              <div class="md:col-span-6 lg:col-span-5">
+              <div className="md:col-span-6 lg:col-span-5">
                 <div className="md:sticky md:top-6 mb-3">
                   <h1 className="title-m lg:title-l mb-6 max-w-[25rem]">
                     {props.data.markdownRemark.frontmatter.title}
@@ -51,7 +51,7 @@ const Jobs = (props) => {
                   </div>
                 </div>
               </div>
-              <div class="md:col-span-6 lg:col-span-7">
+              <div className="md:col-span-6 lg:col-span-7">
                 <div
                   className="prose max-w-none dark:prose-invert"
                   dangerouslySetInnerHTML={{
