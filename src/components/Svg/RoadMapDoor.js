@@ -7,7 +7,7 @@ const RoadMapDoor = () => {
       <VideoBackground />
 
       <svg
-        className="absolute left-0 right-0 top-0 h-auto"
+        className="absolute left-0 right-0 top-px h-auto"
         viewBox="0 0 54 55"
         xmlSpace="preserve"
       >

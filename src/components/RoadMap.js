@@ -146,7 +146,7 @@ const RoadMap = (props) => {
             ref={roadmapTrack}
           >
             <div
-              className="absolute -top-[2px] z-40 -ml-2 transition-left"
+              className="absolute -top-[2px] z-40 -ml-3 transition-left"
               style={{ left: currentTrackPosition }}
             >
               <RoadMapVegaDude />

@@ -52,7 +52,7 @@ const IndexPage = () => {
             </Container>
           </div>
         </div>
-        <div className="">
+        <div className="relative -top-px">
           <Ticker />
         </div>
         <Container hideXOverflow={true}>
@@ -67,7 +67,7 @@ const IndexPage = () => {
                 derivatives markets are here to stay.
               </div>
               <div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[30rem] mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[18rem] md:max-w-[30rem] mx-auto">
                   <div>
                     <ButtonLink
                       text="Learn more"
