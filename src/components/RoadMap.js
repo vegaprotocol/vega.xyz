@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import RoadMapVegaDude from "./Svg/RoadMapVegaDude";
 import { RoadMapContent } from "../data/RoadMap";
 import GlitchTitle from "./GlitchTitle";
+import ButtonLink from "./ButtonLink";
 import RoadMapBlock from "./RoadMapBlock";
 import RoadMapTrackBlock from "./RoadMapTrackBlock";
 
@@ -207,6 +208,12 @@ const RoadMap = (props) => {
             </svg>
           </button>
         </div>
+      </div>
+      <div className="text-center pt-16">
+        <ButtonLink
+          link="https://github.com/orgs/vegaprotocol/projects/114/views/4"
+          text="View detailed Roadmap"
+        />
       </div>
     </div>
   );

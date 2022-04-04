@@ -3,6 +3,7 @@ import RoadMapDoor from "./Svg/RoadMapDoor";
 import RoadMapVegaDude from "./Svg/RoadMapVegaDude";
 import RoadMapBlockMobile from "./RoadMapBlockMobile";
 import { RoadMapContent } from "../data/RoadMap";
+import ButtonLink from "./ButtonLink";
 import GlitchTitle from "./GlitchTitle";
 
 const RoadMapMobile = (props) => {
@@ -48,6 +49,12 @@ const RoadMapMobile = (props) => {
             />
           ))}
         </div>
+      </div>
+      <div className="pb-8">
+        <ButtonLink
+          link="https://github.com/orgs/vegaprotocol/projects/114/views/4"
+          text="View detailed Roadmap"
+        />
       </div>
     </div>
   );
