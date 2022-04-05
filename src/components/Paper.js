@@ -1,5 +1,4 @@
 import React from "react";
-import PaperIllustration from "./Svg/Paper";
 import UppercaseLink from "./UppercaseLink";
 
 const Paper = ({ paper }) => {

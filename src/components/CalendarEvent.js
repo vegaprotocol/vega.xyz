@@ -1,9 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
 import ButtonLink from "./ButtonLink";
 import ArrowRight from "./Svg/ArrowRight";
 import Moment from "react-moment";
-import { StaticImage } from "gatsby-plugin-image";
 
 const CalendarEvent = ({ event }) => {
   const dateFormat = "LLL";
