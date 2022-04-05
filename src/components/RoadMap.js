@@ -36,6 +36,11 @@ const RoadMap = (props) => {
     window.addEventListener("resize", setRoadmapBlocksHeight);
     window.addEventListener("resize", setRoadMapTrackPosition);
     setRoadmapBlocksHeight();
+
+    return () => {
+      window.removeEventListener("resize", setRoadmapBlocksHeight);
+      window.removeEventListener("resize", setRoadMapTrackPosition);
+    };
   });
 
   // set initial position of vega dude
@@ -153,10 +158,9 @@ const RoadMap = (props) => {
               ref={roadmapTrackBlocks}
             >
               {RoadMapContent.map((block, idx) => (
-                <button onClick={() => goToBlock(idx)}>
+                <button onClick={() => goToBlock(idx)} key={idx}>
                   <RoadMapTrackBlock
                     active={currentBlockIndex === idx}
-                    key={idx}
                     title1={block.title1}
                     title2={block.title2}
                   />
