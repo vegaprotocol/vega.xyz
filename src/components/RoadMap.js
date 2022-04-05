@@ -52,16 +52,16 @@ const RoadMap = (props) => {
     );
   };
 
+  const goToBlock = (idx) => {
+    setCurrentBlockIndex(idx);
+    setVegaDudePosition(idx);
+  };
+
   const nextBlock = (event) => {
     let newIndex;
     if (parseInt(currentBlockIndex) < blockCount - 1) {
       newIndex = currentBlockIndex + 1;
-      setCurrentBlockIndex(newIndex);
-      setcurrentTrackPosition(
-        roadmapTrackBlocks.current.children[newIndex].offsetLeft +
-          roadmapTrackBlocks.current.children[newIndex].offsetWidth / 2 +
-          "px"
-      );
+      goToBlock(newIndex);
     }
   };
 
@@ -69,12 +69,7 @@ const RoadMap = (props) => {
     let newIndex;
     if (parseInt(currentBlockIndex) > 0) {
       newIndex = currentBlockIndex - 1;
-      setCurrentBlockIndex(newIndex);
-      setcurrentTrackPosition(
-        roadmapTrackBlocks.current.children[newIndex].offsetLeft +
-          roadmapTrackBlocks.current.children[newIndex].offsetWidth / 2 +
-          "px"
-      );
+      goToBlock(newIndex);
     }
   };
 
@@ -158,12 +153,14 @@ const RoadMap = (props) => {
               ref={roadmapTrackBlocks}
             >
               {RoadMapContent.map((block, idx) => (
-                <RoadMapTrackBlock
-                  active={currentBlockIndex === idx}
-                  key={idx}
-                  title1={block.title1}
-                  title2={block.title2}
-                />
+                <button onClick={() => goToBlock(idx)}>
+                  <RoadMapTrackBlock
+                    active={currentBlockIndex === idx}
+                    key={idx}
+                    title1={block.title1}
+                    title2={block.title2}
+                  />
+                </button>
               ))}
             </div>
           </div>
