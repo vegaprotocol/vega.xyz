@@ -37,7 +37,7 @@ const KeyConceptsPage = () => {
         title="Key Vega Concepts"
         description="Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
       />
-      <Container hideXOverflow={true} dataCy={"test"}>
+      <Container hideXOverflow={true} dataCy={"main"}>
         <div className="pt-6 md:grid md:grid-cols-12 mb-20">
           <div className="hidden md:col-span-2 lg:col-span-3 md:block">
             <UniverseLeft className="translate-y-1/4 -translate-x-2/4 xxl:translate-x-0 scale-135" />

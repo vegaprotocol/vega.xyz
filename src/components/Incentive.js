@@ -14,7 +14,7 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
     statusColours[status.toString().toLowerCase().replace(/\s/g, "")];
 
   return (
-    <div className="relative pb-6 pt-7 border-t border-current">
+    <div className="relative pb-6 pt-7 border-t border-current" data-cy="incentive">
       <div className="text-[0.8125rem] absolute left-0 top-0 px-2 dark:text-black text-white bg-black dark:bg-white uppercase">
         {type}
       </div>
