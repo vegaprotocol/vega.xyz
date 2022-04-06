@@ -26,7 +26,7 @@ const RoadMapBlock = ({ title1, title2, content, startOpen, showDoor }) => {
         {startOpen ||
           (!showMore && (
             <button
-              className="copy-xxs uppercase underline underline-offset-8"
+              className="copy-xxs uppercase underline underline-offset-8 pb-5"
               onClick={toggleShowMore}
             >
               Expand
