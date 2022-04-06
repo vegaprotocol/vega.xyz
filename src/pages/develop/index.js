@@ -24,7 +24,7 @@ const ButtonBlock = () => {
       <div>
         <ButtonLink
           text="Explore the docs"
-          link="https://docs.fairground.vega.xyz/"
+          link="https://docs.vega.xyz/docs/concepts/new-to-vega/"
           className="w-full text-center"
         />
       </div>
