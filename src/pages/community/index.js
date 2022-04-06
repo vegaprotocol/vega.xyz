@@ -103,10 +103,12 @@ const CommunityPage = ({ data }) => {
                   Contribute to Vega
                 </GlitchTitle>
               </div>
-              <LeadingLine>
-                Get involved in the future of DeFi. And you could even get
-                rewarded for it.
-              </LeadingLine>
+              <div className="max-w-[35rem] mx-auto">
+                <LeadingLine>
+                  Get involved in the future of DeFi. And you could even get
+                  rewarded for it.
+                </LeadingLine>
+              </div>
             </div>
             <div className="grid gap-x-12 gap-y-14 grid-cols-1 mb-24 mt-12 md:grid-cols-2 xl:grid-cols-2">
               <BoxLink
