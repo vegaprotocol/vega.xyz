@@ -6,7 +6,7 @@ import DropdownArrow from "../Svg/DropdownArrow.js";
 import LinkArrow from "../Svg/LinkArrow";
 import VegaLogo from "../../components/Svg/VegaLogo";
 import MobileMenuButton from "../../components/Navigation/MobileMenuButton";
-import SiteBanner from "../../components/SiteBanner";
+// import SiteBanner from "../../components/SiteBanner";
 
 const MobileMenu = ({ toggleMenu, isOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,7 +18,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
       }`}
       id="mobileMenu"
     >
-      <SiteBanner />
+      {/* <SiteBanner /> */}
       <Container>
         <div className="w-full">
           <div className="header flex items-center justify-between py-4 lg:pt-6">
