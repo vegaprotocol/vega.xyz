@@ -101,7 +101,7 @@ const RoadMap = (props) => {
         </div>
 
         <div className="flex relative mt-12 justify-between after:contet-none after:absolute after:left-0 after:right-0 after:top-[24px] after:h-px dark:after:bg-white after:bg-black after:z-10">
-          <button className="pt-12" onClick={previousBlock}>
+          <button className="mt-12" onClick={previousBlock}>
             <svg
               width="53"
               height="53"
@@ -168,7 +168,7 @@ const RoadMap = (props) => {
               ))}
             </div>
           </div>
-          <button className="pt-12" onClick={nextBlock}>
+          <button className="mt-12" onClick={nextBlock}>
             <svg
               width="53"
               height="53"
