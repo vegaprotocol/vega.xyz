@@ -35,18 +35,18 @@ const Calendar = () => {
       // sort events by date
       let sortedEvents = result.sort(
         (a, b) =>
-          b.date[b.date.length - 1].getTime() -
-          a.date[a.date.length - 1].getTime()
+          a.date[a.date.length - 1].getTime() -
+          b.date[b.date.length - 1].getTime()
       );
 
       // find where past events start
       const startOfOldEvents = sortedEvents.findIndex(
         (event) =>
-          event.date[event.date.length - 1].getTime() < new Date().getTime()
+          event.date[event.date.length - 1].getTime() > new Date().getTime()
       );
 
       // return only future events
-      sortedEvents = sortedEvents.slice(0, startOfOldEvents);
+      sortedEvents = sortedEvents.slice(startOfOldEvents, sortedEvents.length);
 
       setEvents(sortedEvents);
     }
