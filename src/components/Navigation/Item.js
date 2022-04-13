@@ -1,8 +1,7 @@
 import React from "react";
-import { useIntl, Link } from "gatsby-plugin-react-intl";
+import { Link } from "gatsby";
 
 const NavigationItem = ({ item }) => {
-  const intl = useIntl();
   return (
     <li>
       {item.link.startsWith("http") ? (
@@ -13,7 +12,7 @@ const NavigationItem = ({ item }) => {
           className="transition-colors inline-block px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
           activeClassName="underline underline-offset-8 decoration-2"
         >
-          {intl.formatMessage({ id: item.text })}
+          {item.text}
         </a>
       ) : (
         <div>
@@ -22,7 +21,7 @@ const NavigationItem = ({ item }) => {
             className="transition-colors inline-block px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
             activeClassName="underline underline-offset-8 decoration-2"
           >
-            {intl.formatMessage({ id: item.text })}
+            {item.text}
           </Link>
         </div>
       )}

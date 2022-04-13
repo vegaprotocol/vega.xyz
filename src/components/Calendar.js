@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CalendarEvent from "./CalendarEvent";
 
-const Calendar = ({ showEthDenver }) => {
+const Calendar = () => {
   const [events, setEvents] = useState(null);
 
   useEffect(() => {
@@ -35,18 +35,18 @@ const Calendar = ({ showEthDenver }) => {
       // sort events by date
       let sortedEvents = result.sort(
         (a, b) =>
-          b.date[b.date.length - 1].getTime() -
-          a.date[a.date.length - 1].getTime()
+          a.date[a.date.length - 1].getTime() -
+          b.date[b.date.length - 1].getTime()
       );
 
       // find where past events start
       const startOfOldEvents = sortedEvents.findIndex(
         (event) =>
-          event.date[event.date.length - 1].getTime() < new Date().getTime()
+          event.date[event.date.length - 1].getTime() > new Date().getTime()
       );
 
       // return only future events
-      sortedEvents = sortedEvents.slice(0, startOfOldEvents);
+      sortedEvents = sortedEvents.slice(startOfOldEvents, sortedEvents.length);
 
       setEvents(sortedEvents);
     }
@@ -56,13 +56,7 @@ const Calendar = ({ showEthDenver }) => {
   return (
     <div className="border-t border-current">
       {events &&
-        events.map((event, idx) => (
-          <CalendarEvent
-            showEthDenver={showEthDenver}
-            key={idx}
-            event={event}
-          />
-        ))}
+        events.map((event, idx) => <CalendarEvent key={idx} event={event} />)}
     </div>
   );
 };

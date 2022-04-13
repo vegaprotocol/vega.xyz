@@ -62,23 +62,30 @@ const Ticker = () => {
   return (
     <div className="overflow-hidden whitespace-nowrap border-t border-b border-current">
       {stats ? (
-        <Marquee speed={60} gradient={false} pauseOnHover={true}>
-          <div className="flex h-[5.625rem] border-r border-current">
-            <div className="bg-black dark:bg-white text-white dark:text-black text-[1.875rem] leading-none uppercase px-6 py-4 min-w-[12.5rem]">
-              Status:
-              <br />
-              Mainnet
-            </div>
-            <TickerCell title="Validators" value={stats.validators} />
-            <TickerCell title="Total Staked" value={stats.stakedTotal} />
-            <TickerCell title="Avg. Block Time" value={stats.blockDuration} />
-            <TickerCell title="Current Epoch" value={stats.currentEpoch} />
-            <TickerCell
-              text="Learn more about restricted mainnet"
-              link="https://blog.vega.xyz/what-to-expect-from-restricted-mainnet-616086d9fdaf"
-            />
+        <div className="relative">
+          <div className="absolute flex items-center z-10 h-[5rem] md:h-[5.625rem] left-0 top-0 bg-black dark:bg-white text-white dark:text-black text-[1.5rem] lg:text-[1.875rem] leading-none uppercase px-3 md:px-6 py-2 md:py-4 w-[9rem] md:w-[12.5rem]">
+            Status:
+            <br />
+            Mainnet
           </div>
-        </Marquee>
+          <Marquee
+            speed={60}
+            gradient={false}
+            pauseOnHover={true}
+            className="pl-[12.5rem]"
+          >
+            <div className="flex h-[5rem] md:h-[5.625rem] border-r border-current">
+              <TickerCell title="Validators" value={stats.validators} />
+              <TickerCell title="Total Staked" value={stats.stakedTotal} />
+              <TickerCell title="Avg. Block Time" value={stats.blockDuration} />
+              <TickerCell title="Current Epoch" value={stats.currentEpoch} />
+              <TickerCell
+                text="Learn more about restricted mainnet"
+                link="https://blog.vega.xyz/what-to-expect-from-restricted-mainnet-616086d9fdaf"
+              />
+            </div>
+          </Marquee>
+        </div>
       ) : (
         <div className="flex h-[5.625rem] border-current items-center justify-center text-[1.875rem] leading-none uppercase text-center">
           <div>LOADING...</div>

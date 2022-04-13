@@ -31,27 +31,29 @@ const Jobs = (props) => {
             All roles
           </Link>
           <div className="border-t border-current">
-            <div className="md:grid md:grid-cols-2 pt-4">
-              <div>
-                <h1 className="title-l mb-6 max-w-[25rem]">
-                  {props.data.markdownRemark.frontmatter.title}
-                </h1>
-                <div className="text-vega-mid-grey uppercase text-[0.9375rem]">
-                  Want to apply?
-                </div>
-                <div className="copy-s text-current">
-                  Send your CV to{" "}
-                  <a
-                    href="mailto:jobs@vega.xyz"
-                    className="text-vega-pink dark:text-vega-yellow"
-                  >
-                    jobs@vega.xyz
-                  </a>
+            <div className="md:grid md:grid-cols-12 pt-4">
+              <div className="md:col-span-6 lg:col-span-5">
+                <div className="md:sticky md:top-6 mb-3">
+                  <h1 className="title-m lg:title-l mb-6 max-w-[25rem]">
+                    {props.data.markdownRemark.frontmatter.title}
+                  </h1>
+                  <div className="text-vega-mid-grey uppercase text-[0.9375rem]">
+                    Want to apply?
+                  </div>
+                  <div className="copy-s text-current">
+                    Send your CV to{" "}
+                    <a
+                      href="mailto:jobs@vega.xyz"
+                      className="text-vega-pink dark:text-vega-yellow"
+                    >
+                      jobs@vega.xyz
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div>
+              <div className="md:col-span-6 lg:col-span-7">
                 <div
-                  className="prose dark:prose-invert"
+                  className="prose max-w-none dark:prose-invert"
                   dangerouslySetInnerHTML={{
                     __html: props.data.markdownRemark.html,
                   }}

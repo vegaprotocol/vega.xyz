@@ -3,7 +3,7 @@ import LinkArrow from "./Svg/LinkArrow";
 
 const Contributor = ({ contributor }) => {
   return (
-    <div className="relative group">
+    <div className="contributor-block relative group">
       <img
         src={contributor.avatar_url}
         width="50"
@@ -12,7 +12,7 @@ const Contributor = ({ contributor }) => {
         alt={contributor.login}
       />
       <div
-        className={`hidden group-hover:block cursor-pointer w-[16rem] absolute z-10 top-1/2 bg-white dark:bg-black p-3 text-current border border-black dark:border-white pb-6`}
+        className={`contributor-block-detail hidden group-hover:block cursor-pointer w-[16rem] absolute z-10 top-1/2 bg-white dark:bg-black p-3 text-current border border-black dark:border-white pb-6`}
       >
         <img
           src={contributor.avatar_url}

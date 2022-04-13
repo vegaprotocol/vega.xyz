@@ -11,7 +11,6 @@ import ScrollSpy from "react-scrollspy-navigation";
 import UniverseLeft from "../../components/Svg/UniverseLeft";
 import UniverseRight from "../../components/Svg/UniverseRight";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { useIntl } from "gatsby-plugin-react-intl";
 import PermissionlessMarketCreationDiagramResponsive from "../../components/KeyConcepts/PermissionlessMarketCreationDiagram/Responsive";
 import PurposeBuiltTable from "../../components/KeyConcepts/PurposeBuiltTable/Diagram";
 import MarketMakingDiagramResponsive from "../../components/KeyConcepts/MarketMakingDiagram/Responsive";
@@ -32,14 +31,13 @@ const KeyConceptsPage = () => {
     },
   ];
 
-  const intl = useIntl();
   return (
     <Layout>
       <Seo
         title="Key Vega Concepts"
         description="Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
       />
-      <Container hideXOverflow={true} dataCy={'main'}>
+      <Container hideXOverflow={true} dataCy={"main"}>
         <div className="pt-6 md:grid md:grid-cols-12 mb-20">
           <div className="hidden md:col-span-2 lg:col-span-3 md:block">
             <UniverseLeft className="translate-y-1/4 -translate-x-2/4 xxl:translate-x-0 scale-135" />
@@ -85,7 +83,7 @@ const KeyConceptsPage = () => {
                   <AnchorLink
                     key={index}
                     className={`inline-block relative bottom-[-1px] last:mr-0 py-2 px-4 text-lg leading-7 border-b-4 hover:border-current border-transparent`}
-                    to={`/${intl.locale}/key-concepts/#${section.hash}`}
+                    to={`/key-concepts/#${section.hash}`}
                     title={section.title}
                     stripHash
                   >

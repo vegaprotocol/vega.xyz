@@ -1,39 +1,35 @@
 export const SiteNavigation = [
   {
-    text: "navigation-learn",
+    text: "Learn",
     links: [
       {
-        text: "navigation-key-concepts",
-        description: "navigation-key-concepts-description",
+        text: "Key concepts",
         to: "/key-concepts/",
       },
       {
-        text: "navigation-papers",
-        description: "navigation-papers-description",
+        text: "Papers",
         to: "/papers/",
       },
       {
-        text: "navigation-blog",
-        description: "navigation-blog-description",
+        text: "Blog",
         to: "https://blog.vega.xyz/",
       },
       {
-        text: "navigation-talks",
-        description: "navigation-talks-description",
+        text: "Talks",
         to: "/talks/",
       },
     ],
   },
   {
-    text: "navigation-develop",
+    text: "Develop",
     link: "/develop/",
   },
   {
-    text: "navigation-use",
+    text: "Use the network",
     link: "/use/",
   },
   {
-    text: "navigation-join-community",
+    text: "Join the community",
     link: "/community/",
   },
 ];

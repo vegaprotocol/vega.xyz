@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "gatsby";
 import { globalHistory } from "@reach/router";
-import { Link } from "gatsby-plugin-react-intl";
 import Navigation from "./Navigation";
 import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";
 import MobileMenuButton from "../components/Navigation/MobileMenuButton";
-import SiteBanner from "../components/SiteBanner";
+// import SiteBanner from "../components/SiteBanner";
 
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <div>
-      <SiteBanner />
+      {/* <SiteBanner /> */}
 
       <header className="relative z-30" id="header">
         <div className="px-4 w-full md:px-6 lg:px-8">

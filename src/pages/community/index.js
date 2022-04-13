@@ -3,7 +3,6 @@ import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
-import { useIntl } from "gatsby-plugin-react-intl";
 import JumpNavigation from "../../components/Navigation/JumpNavigation";
 import { CommunityPageSections } from "../../data/CommunityPageSections";
 import ButtonLink from "../../components/ButtonLink";
@@ -26,7 +25,6 @@ import IconDevelop from "../../components/Svg/IconDevelop";
 import IconFairground from "../../components/Svg/IconFairground";
 
 const CommunityPage = ({ data }) => {
-  const intl = useIntl();
   const ambassadorImage = getImage(data.ambassadorImage);
   const builderImage = getImage(data.builderImage);
   const [contributors, setContributors] = useState(null);
@@ -51,23 +49,25 @@ const CommunityPage = ({ data }) => {
       <div className="relative z-20">
         <JumpNavigation
           pageSlug="community"
-          pageTitle={intl.formatMessage({ id: "page-community-title" })}
+          pageTitle="Community"
           sections={CommunityPageSections}
         />
       </div>
 
       <Container dataCy={"main"}>
-        <div id="overview" className="pt-16">
+        <div id="overview" className="pt-6 lg:pt-16">
           <h1>
             <BoxTitle text="Community" />
           </h1>
           <h2 className="title-m max-w-[48rem] font-glitched md:title-l mb-4 md:mb-6 mt-4">
-            {intl.formatMessage({ id: "page-community-hero-title" })}
+            From the governance to the build, Vega is community with fairness at
+            its core.
           </h2>
 
           <div className="max-w-[48rem]">
             <LeadingLine className="!mb-6">
-              {intl.formatMessage({ id: "page-community-hero-text" })}
+              This is just the beginning. Join us now and earn rewards for
+              contributing to the future of finance.
             </LeadingLine>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-[32rem]">
@@ -103,10 +103,12 @@ const CommunityPage = ({ data }) => {
                   Contribute to Vega
                 </GlitchTitle>
               </div>
-              <LeadingLine>
-                Get involved in the future of DeFi. And you could even get
-                rewarded for it.
-              </LeadingLine>
+              <div className="max-w-[35rem] mx-auto">
+                <LeadingLine>
+                  Get involved in the future of DeFi. And you could even get
+                  rewarded for it.
+                </LeadingLine>
+              </div>
             </div>
             <div className="grid gap-x-12 gap-y-14 grid-cols-1 mb-24 mt-12 md:grid-cols-2 xl:grid-cols-2">
               <BoxLink
@@ -159,7 +161,10 @@ const CommunityPage = ({ data }) => {
                     cool people who've made the project what it is.
                   </LeadingLine>
                 </div>
-                <div className="relative flex mx-auto max-w-[49rem] flex-wrap justify-center gap-3 after:content-[''] after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-gradient-to-b after:from-transparent after:to-white dark:after:to-black" data-cy="contributors">
+                <div
+                  className="h-[16rem] overflow-hidden md:h-auto relative flex mx-auto max-w-[49rem] flex-wrap justify-center gap-3 after:content-[''] after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-gradient-to-b after:from-transparent after:to-white dark:after:to-black"
+                  data-cy="contributors"
+                >
                   {contributors.slice(0, 26).map((contributor, idx) => {
                     return (
                       <div key={idx}>
@@ -213,7 +218,7 @@ const CommunityPage = ({ data }) => {
               </GlitchTitle>
             </div>
             <div className="mt-16">
-              <Calendar showEthDenver={false} />
+              <Calendar />
             </div>
           </div>
         </PageSection>

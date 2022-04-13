@@ -21,7 +21,47 @@ body {
 }
 
 .dark .grey-box .button-link div {
-  @apply bg-vega-box-grey;
+  @apply bg-black;
+}
+
+/* sets correct placement of hover boxes in the contributors grid - a little too complex to do with tailwind */
+.contributor-block .contributor-block-detail {
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+}
+
+.contributor-block:nth-child(4n) .contributor-block-detail {
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
+.contributor-block:nth-child(4n + 1) .contributor-block-detail {
+  left: 0;
+  right: auto;
+  transform: none;
+}
+
+@screen md {
+  .contributor-block:nth-child(4n) .contributor-block-detail,
+  .contributor-block:nth-child(4n + 1) .contributor-block-detail {
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+  }
+
+  .contributor-block:nth-child(6n + 1) .contributor-block-detail {
+    left: 0;
+    right: auto;
+    transform: none;
+  }
+
+  .contributor-block:nth-child(6n) .contributor-block-detail {
+    right: 0;
+    left: auto;
+    transform: none;
+  }
 }
 
 @layer base {
@@ -40,76 +80,80 @@ body {
     font-variant-ligatures: contextual;
   }
 
+  .font-not-glitched {
+    font-variant-ligatures: none;
+  }
+
   .copy-xxs {
     /* 15px */
     @apply text-[0.9375rem];
     @apply leading-[1.4];
-    @apply tracking-[0.01rem];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xs {
     /* 18px */
     @apply text-[1.125rem];
     @apply leading-[1.4];
-    @apply tracking-[0.01rem];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-s {
     /* 24px */
     @apply text-[1.5rem];
     @apply leading-[1.4];
-    @apply tracking-[0.01rem];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-m {
     /* 34px */
     @apply text-[2.125rem];
     @apply leading-[1.2];
-    @apply tracking-[0.01rem];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-l {
     /* 54px */
     @apply text-[3.375rem];
     @apply leading-[1.1];
-    @apply tracking-[0.01rem];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xl {
     /* 72px */
     @apply text-[4.5rem];
     @apply leading-[1];
-    @apply tracking-[0.01rem];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xxl {
     /* 84px */
     @apply text-[5.25rem];
     @apply leading-[1];
-    @apply tracking-[0.01rem];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xxxl {
     /* 114px */
     @apply text-[7.125rem];
     @apply leading-[1];
-    @apply tracking-[0.01rem];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .copy-xxxxl {
     /* 144px */
     @apply text-[9rem];
     @apply leading-[1];
-    @apply tracking-[0.01rem];
     @apply mb-4;
+    font-variant-ligatures: none;
   }
 
   .title-xxxs {
@@ -117,7 +161,6 @@ body {
     @apply text-[0.9375rem];
     @apply leading-[0.9];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
   }
 
@@ -126,7 +169,6 @@ body {
     @apply text-[0.9375rem];
     @apply leading-[0.9];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
   }
 
@@ -135,7 +177,6 @@ body {
     @apply text-[1.125rem];
     @apply leading-[0.9];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
   }
 
@@ -144,7 +185,6 @@ body {
     @apply text-[1.5rem];
     @apply leading-[0.9];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
   }
 
@@ -153,7 +193,6 @@ body {
     @apply text-[2.125rem];
     @apply leading-[0.9];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
   }
 
@@ -162,7 +201,6 @@ body {
     @apply text-[3.375rem];
     @apply leading-[0.9];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
   }
 
@@ -171,7 +209,6 @@ body {
     @apply text-[4.5rem];
     @apply leading-[0.9];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
   }
 
@@ -180,7 +217,6 @@ body {
     @apply text-[5.25rem];
     @apply leading-[0.85];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
   }
 
@@ -189,7 +225,6 @@ body {
     @apply text-[7.125rem];
     @apply leading-[0.85];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
   }
 
@@ -198,7 +233,10 @@ body {
     @apply text-[9rem];
     @apply leading-[0.85];
     @apply uppercase;
-    @apply tracking-[0.01rem];
     font-variant-ligatures: normal;
+  }
+
+  .transition-left {
+    transition: left 0.5s;
   }
 }

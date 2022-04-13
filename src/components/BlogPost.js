@@ -9,12 +9,14 @@ const BlogPost = ({ post }) => {
           href={`https://blog.vega.xyz/${post.node.uniqueSlug}`}
           target="_blank"
           rel="noreferrer"
+          className="block"
         >
-          <img
-            className="mb-4"
-            src={`https://cdn-images-1.medium.com/${post.node.virtuals.previewImage.imageId}`}
-            alt={post.node.title}
-          />
+          <div
+            className="aspect-w-16 aspect-h-9 bg-cover bg-center mb-4"
+            style={{
+              backgroundImage: `url(https://cdn-images-1.medium.com/${post.node.virtuals.previewImage.imageId})`,
+            }}
+          ></div>
           <div className="text-[1.5rem] leading-[1.1] mb-4">
             {post.node.title}
           </div>

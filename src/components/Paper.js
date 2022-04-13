@@ -1,14 +1,10 @@
 import React from "react";
-import PaperIllustration from "./Svg/Paper";
 import UppercaseLink from "./UppercaseLink";
 
 const Paper = ({ paper }) => {
   return (
     <li className="border-t border-current pt-4 pb-16 relative">
-      <div className="inline-block float-right ml-12 mb-12">
-        <PaperIllustration />
-      </div>
-      <div className="title-s mb-4">{paper.frontmatter.title}</div>
+      <div className="copy-s mb-4">{paper.frontmatter.title}</div>
       <p className="copy-xs">{paper.frontmatter.description}</p>
 
       {paper.frontmatter.links.map((link, idx) => {

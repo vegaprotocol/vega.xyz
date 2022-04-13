@@ -51,5 +51,6 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/typography"),
     require("tailwindcss-hyphens"),
+    require("@tailwindcss/line-clamp"),
   ],
 };

@@ -1,15 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "gatsby";
 import Container from "../../components/Container";
 import { SiteNavigation } from "../../data/SiteNavigation";
-import { useIntl, Link } from "gatsby-plugin-react-intl";
 import DropdownArrow from "../Svg/DropdownArrow.js";
 import LinkArrow from "../Svg/LinkArrow";
 import VegaLogo from "../../components/Svg/VegaLogo";
 import MobileMenuButton from "../../components/Navigation/MobileMenuButton";
-import SiteBanner from "../../components/SiteBanner";
+// import SiteBanner from "../../components/SiteBanner";
 
 const MobileMenu = ({ toggleMenu, isOpen }) => {
-  const intl = useIntl();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
@@ -19,7 +18,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
       }`}
       id="mobileMenu"
     >
-      <SiteBanner />
+      {/* <SiteBanner /> */}
       <Container>
         <div className="w-full">
           <div className="header flex items-center justify-between py-4 lg:pt-6">
@@ -45,9 +44,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className="text-[2.125rem] block py-4 uppercase"
                 >
-                  <span className="pr-3">
-                    {intl.formatMessage({ id: section.text })}
-                  </span>
+                  <span className="pr-3">{section.text}</span>
                   <div
                     className={`inline-block align-top ${
                       isDropdownOpen ? "rotate-180" : null
@@ -66,7 +63,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
                           rel="noreferrer"
                           className="block py-2 hover:text-vega-mid-grey"
                         >
-                          {intl.formatMessage({ id: link.text })}
+                          {link.text}
                           <span className="inline-block ml-2">
                             <LinkArrow />
                           </span>
@@ -76,7 +73,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
                           to={link.to}
                           className="block py-2 hover:text-vega-mid-grey"
                         >
-                          {intl.formatMessage({ id: link.text })}
+                          {link.text}
                         </Link>
                       )}
                     </li>
@@ -89,7 +86,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
                   to={section.link}
                   className="text-[2.125rem] block py-4 uppercase"
                 >
-                  {intl.formatMessage({ id: section.text })}
+                  {section.text}
                 </Link>
               </li>
             )

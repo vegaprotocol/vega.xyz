@@ -1,97 +1,220 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import RoadMapVegaDude from "./Svg/RoadMapVegaDude";
+import { RoadMapContent } from "../data/RoadMap";
+import GlitchTitle from "./GlitchTitle";
+import ButtonLink from "./ButtonLink";
 import RoadMapBlock from "./RoadMapBlock";
-import GlitchTitle from "../components/GlitchTitle";
+import RoadMapTrackBlock from "./RoadMapTrackBlock";
 
-const RoadMap = () => {
+const RoadMap = (props) => {
+  const roadmapTrack = useRef(null);
+  const roadmapBlocks = useRef(null);
+  const roadmapTrackBlocks = useRef(null);
+  const blockCount = RoadMapContent.length;
+  const [currentBlockIndex, setCurrentBlockIndex] = useState(0);
+  const [currentTrackPosition, setcurrentTrackPosition] = useState(0);
+
+  useEffect(() => {
+    // fix height so it doesn't jump around as you click through the roadmap
+    const setRoadmapBlocksHeight = () => {
+      let tallest = 0;
+
+      for (let el of roadmapBlocks.current.children) {
+        let height = el.offsetHeight;
+        if (height > tallest) {
+          tallest = height;
+        }
+      }
+      roadmapBlocks.current.style.height = tallest + "px";
+    };
+
+    const setRoadMapTrackPosition = () => {
+      setVegaDudePosition(currentBlockIndex);
+    };
+
+    // update height and position of vega dude when window is resized
+    window.addEventListener("resize", setRoadmapBlocksHeight);
+    window.addEventListener("resize", setRoadMapTrackPosition);
+    setRoadmapBlocksHeight();
+
+    return () => {
+      window.removeEventListener("resize", setRoadmapBlocksHeight);
+      window.removeEventListener("resize", setRoadMapTrackPosition);
+    };
+  });
+
+  // set initial position of vega dude
+  useEffect(() => {
+    setVegaDudePosition(0);
+  }, []);
+
+  // calculate and set position of vega dude along the track
+  const setVegaDudePosition = (index) => {
+    setcurrentTrackPosition(
+      roadmapTrackBlocks.current.children[index].offsetLeft +
+        roadmapTrackBlocks.current.children[index].offsetWidth / 2 +
+        "px"
+    );
+  };
+
+  const goToBlock = (idx) => {
+    setCurrentBlockIndex(idx);
+    setVegaDudePosition(idx);
+  };
+
+  const nextBlock = (event) => {
+    let newIndex;
+    if (parseInt(currentBlockIndex) < blockCount - 1) {
+      newIndex = currentBlockIndex + 1;
+      goToBlock(newIndex);
+    }
+  };
+
+  const previousBlock = (event) => {
+    let newIndex;
+    if (parseInt(currentBlockIndex) > 0) {
+      newIndex = currentBlockIndex - 1;
+      goToBlock(newIndex);
+    }
+  };
+
   return (
-    <div
-      id="roadmap"
-      className="
-                relative
-                before:content-['']
-                before:absolute
-                before:left-1/2
-                before:top-1
-                before:bottom-0
-                before:w-px
-                before:bg-gradient-to-b
-                before:from-black
-                before:to-white
-                dark:before:from-white
-                dark:before:to-black
-                after:content-['']
-                after:absolute
-                after:top-[3px]
-                after:left-1/2
-                after:w-[2.5rem]
-                after:h-px
-                after:bg-black
-                dark:after:bg-white
-                after:-translate-x-1/2"
-    >
-      <div className="relative text-center max-w-[50rem] mx-auto">
-        <div className="pt-20">
-          <div className="dark:bg-black bg-white py-4">
-            <GlitchTitle level={1} size="medium">
-              Where are we in the Roadmap?
-            </GlitchTitle>
-          </div>
+    <div id="roadmap" {...props}>
+      <div className="relative">
+        <div className="dark:bg-black bg-white py-6">
+          <GlitchTitle level={1} className="lg:title-xxl">
+            Where are we in the Roadmap?
+          </GlitchTitle>
         </div>
 
-        <div className="pt-20">
-          <div className="relative border border-current py-8 px-4 md:p-12 pb-12 dark:bg-black bg-white mx-auto max-w-[35rem]">
-            <div className="title-m mb-6">
-              Current Status:
-              <br />
-              <span className="text-vega-mid-grey">Restricted Mainnet</span>
+        <div className="flex relative" ref={roadmapBlocks}>
+          {RoadMapContent.map((block, idx) => (
+            <div key={idx} className="absolute left-0 right-0">
+              <RoadMapBlock
+                title1={block.title1}
+                title2={block.title2}
+                content={block.content}
+                visible={currentBlockIndex === idx}
+              />
             </div>
-            <div className="copy-xxs md:copy-xs !mb-0 text-vega-mid-grey">
-              This is the first of 3 launch phases of the network in which the
-              validators are running a decentralised Vega network connected to
-              the Ethereum mainnet. This phase provides a proving ground for the
-              proof of stake network, allows time for the community to learn how
-              to reliably operate nodes, and introduces on-chain governance.
-              Token holders can participate in governance, and stake and
-              delegate their tokens.
+          ))}
+        </div>
+
+        <div className="flex relative mt-12 justify-between after:contet-none after:absolute after:left-0 after:right-0 after:top-[24px] after:h-px dark:after:bg-white after:bg-black after:z-10">
+          <button className="mt-12" onClick={previousBlock}>
+            <svg
+              width="53"
+              height="53"
+              viewBox="0 0 53 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="40"
+                y1="26.5"
+                x2="13"
+                y2="26.5"
+                className={
+                  currentBlockIndex > 0
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
+                }
+              />
+              <path
+                d="M26.9355 39.1292L13.1679 26.5001L26.9355 13.8711"
+                className={
+                  currentBlockIndex > 0
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
+                }
+                strokeMiterlimit="10"
+              />
+              <circle
+                cx="26.5"
+                cy="26.5"
+                r="26"
+                transform="rotate(-180 26.5 26.5)"
+                className={
+                  currentBlockIndex > 0
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
+                }
+              />
+            </svg>
+          </button>
+          <div
+            className="flex w-full relative justify-between mx-12"
+            ref={roadmapTrack}
+          >
+            <div
+              className="absolute -top-[2px] z-40 -ml-3 transition-left"
+              style={{ left: currentTrackPosition }}
+            >
+              <RoadMapVegaDude />
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 h-1.5 border-t border-current"></div>
+            <div
+              className="flex w-full relative justify-between"
+              ref={roadmapTrackBlocks}
+            >
+              {RoadMapContent.map((block, idx) => (
+                <button onClick={() => goToBlock(idx)} key={idx}>
+                  <RoadMapTrackBlock
+                    active={currentBlockIndex === idx}
+                    title1={block.title1}
+                    title2={block.title2}
+                  />
+                </button>
+              ))}
+            </div>
           </div>
+          <button className="mt-12" onClick={nextBlock}>
+            <svg
+              width="53"
+              height="53"
+              viewBox="0 0 53 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="13"
+                y1="26.5"
+                x2="40"
+                y2="26.5"
+                className={
+                  currentBlockIndex < blockCount - 1
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
+                }
+              />
+              <path
+                d="M26.0645 13.8708L39.8321 26.4999L26.0645 39.1289"
+                className={
+                  currentBlockIndex < blockCount - 1
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
+                }
+                strokeMiterlimit="10"
+              />
+              <circle
+                cx="26.5"
+                cy="26.5"
+                r="26"
+                className={
+                  currentBlockIndex < blockCount - 1
+                    ? "dark:stroke-white stroke-black"
+                    : "stroke-vega-mid-grey"
+                }
+              />
+            </svg>
+          </button>
         </div>
-
-        <div className="pt-20">
-          <div className="dark:bg-black bg-white py-8">
-            <div className="title-m">What's up next?</div>
-          </div>
-        </div>
-
-        <RoadMapBlock
-          title="Alpha Mainnet"
-          content="In this phase the validators will upgrade the decentralised Vega mainnet by deploying the MVP of the trading feature set. This will allow the creation of markets and trading for the first time in mainnet. As this is an early launch phase, the network is expected to be configured by the community to initially place fairly conservative temporary limits on the amount of funds that may be risked. Community early adopters and ecosystem members will be able to use this phase to try out their ideas for markets and test integrations with their own projects and protocols."
-          date="H1 2022"
-          position="right"
+      </div>
+      <div className="text-center pt-16">
+        <ButtonLink
+          link="https://github.com/orgs/vegaprotocol/projects/114/views/4"
+          text="View detailed Roadmap"
         />
-        <RoadMapBlock
-          title="V1 Mainnet"
-          content="Full Mainnet begins with successful completion of the launch phases. At this point the community and validators will have signalled their confidence in the software via on-chain governance votes and all remaining temporary limits will have been removed. During this phase, the development of the protocol and software will focus on enabling market innovation and iterating on feedback received from the community. This will include the addition of key features not present in the initial MVP, examples of which could include spot markets, passive liquidity, Ethereum oracles. New bridges to other blockchains and/or L2s will also be introduced during this phase."
-          date="H2 2022"
-          position="left"
-        />
-        <RoadMapBlock
-          title="V2 Mainnet"
-          content="This release will allow the validators to launch an experimental mainnet using the second major release of the Vega protocol. The V2 protocol will use WASM to allow the community to create their own products & risk models, and control other aspects of the protocol. This version will also contain a number of performance and security improvements as well as core protocol upgrades and simplifications."
-          date="H1 2023"
-          position="right"
-        />
-
-        {/* <div className="pt-20">
-          <div className="bg-black">
-            <ButtonLinkSimple
-              text="Github public roadmap"
-              link="https://github.com/vegaprotcol"
-            />
-          </div>
-        </div> */}
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import ButtonLink from "../../components/ButtonLink";
 import AmbassadorsHero from "../../components/Svg/AmbassadorsHero";
 import IconAmbassador1 from "../../images/icon-ambassador-1.png";
 import IconAmbassador2 from "../../images/icon-ambassador-2.png";
-import IconAmbassador3 from "../../images/icon-ambassador-3.png";
+//import IconAmbassador3 from "../../images/icon-ambassador-3.png";
 import IconAmbassador4 from "../../images/icon-ambassador-4.png";
 
 const Clan = ({ icon, title, text }) => {
@@ -69,14 +69,14 @@ const Ambassadors = () => {
                 Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to
                 be a driving force of the Vega community.
               </LeadingLine>
-              <p class="copy-xs">
+              <p className="copy-xs">
                 You'll already be passionate about blockchain technologies, with
                 a willingness to learn the ins and outs of Vega. A penchant for
                 original thinking. And an appetite to share, as you drive
                 conversations and engagement in pursuit of vibrancy within the
                 community.
               </p>
-              <p class="copy-xs">
+              <p className="copy-xs">
                 Apply now to bring fresh proposals to the table and participate
                 in the community as a key contributor.
               </p>
@@ -187,7 +187,7 @@ const Ambassadors = () => {
           <div className="hidden md:block md:col-span-4 lg:col-span-4 mb-20">
             <div className="sticky top-6">
               <div className="title-s mb-3">Interested in joining?</div>
-              <p class="copy-xs text-current">
+              <p className="copy-xs text-current">
                 Become one with Vega. Learn, create, and help grow Vega to be a
                 leading derivatives Layer 1 in the crypto space
               </p>

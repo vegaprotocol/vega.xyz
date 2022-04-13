@@ -1,7 +1,7 @@
 import React, { createRef, useEffect, useState } from "react";
 import Moshed from "../../video/moshed.mp4";
 
-const VideoBackground = () => {
+const VideoBackground = ({ className }) => {
   const video = createRef();
   const [replaceVideoWithPoster, setReplaceVideoWithPoster] = useState(false);
 
@@ -19,7 +19,7 @@ const VideoBackground = () => {
   }, [video, replaceVideoWithPoster]);
 
   return (
-    <div className="absolute inset-px">
+    <div className={`absolute inset-px ${className}`}>
       {replaceVideoWithPoster ? (
         <img
           src="/poster-image.jpg"
