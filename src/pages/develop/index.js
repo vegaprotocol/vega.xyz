@@ -114,7 +114,7 @@ const DevelopPage = ({ data }) => {
               title="Wallet"
               text="Allows programmatic access to signing and key management and is used to sign transactions with a private and public key pair when submitting orders or other commands to a Vega Node."
               linkTitle="Get Started"
-              link="https://docs.vega.xyz/docs/tools/overview#vega-wallet"
+              link="https://docs.vega.xyz/docs/tools/vega-wallet/"
             />
           </div>
         </PageSection>
