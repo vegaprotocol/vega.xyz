@@ -96,8 +96,10 @@ const IndexPage = () => {
         </div>
         <Container hideXOverflow={true}>
           <div className="pt-10 md:pt-20 md:pb-10">
-            <RoadMapMobile className="md:hidden" />
-            <RoadMap className="hidden md:block" />
+            <div id="roadmap">
+              <RoadMapMobile className="md:hidden" />
+              <RoadMap className="hidden md:block" />
+            </div>
           </div>
 
           <PageSection>

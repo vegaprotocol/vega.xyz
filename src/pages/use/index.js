@@ -52,7 +52,7 @@ const UsePage = () => {
                   title={`Get Tokens`.toUpperCase()}
                   text="Join the new era of finance. Earn tokens as rewards for contributing to the community."
                   linkTitle="Earn Rewards"
-                  link="/en/community/#contributions"
+                  link="/community/#contributions"
                 />
               </div>
             </div>
@@ -75,7 +75,7 @@ const UsePage = () => {
                   link="https://fairground.wtf"
                   locked="true"
                   inlineLinkTitle="See where it is on our roadmap"
-                  inlineLink="/en/#roadmap"
+                  inlineLink="/#roadmap"
                 />
               </div>
               <div className="mb-16">
@@ -86,7 +86,7 @@ const UsePage = () => {
                   link="https://fairground.wtf"
                   locked="true"
                   inlineLinkTitle="See where it is on our roadmap"
-                  inlineLink="/en/#roadmap"
+                  inlineLink="/#roadmap"
                 />
               </div>
             </div>
