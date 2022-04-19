@@ -32,7 +32,7 @@ module.exports = {
       options: {
         name: `vega.xyz`,
         short_name: `vega.xyz`,
-        start_url: `/en/`,
+        start_url: `/`,
         background_color: `#fff`,
         theme_color: `#000`,
         display: `standalone`,
