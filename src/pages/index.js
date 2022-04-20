@@ -39,7 +39,7 @@ const IndexPage = () => {
                 <div>
                   <GlitchTitle
                     level="1"
-                    className="!title-l md:!title-xl lg:!text-[5.875rem] mb-2"
+                    className="title-l md:title-xl lg:text-[5.875rem] mb-2"
                     color="red"
                   >
                     Toward a new era of finance

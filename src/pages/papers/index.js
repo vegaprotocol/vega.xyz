@@ -54,7 +54,10 @@ const PapersPage = () => {
             <div className="mb-3">
               <BoxTitle text="Learn " />
             </div>
-            <GlitchTitle level="1" size="large">
+            <GlitchTitle
+              level="1"
+              className="title-l md:title-xxl lg:title-xxxl mb-16"
+            >
               Papers
             </GlitchTitle>
           </div>

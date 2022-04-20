@@ -11,7 +11,7 @@ const RoadMapMobile = (props) => {
     <div id="roadmap" {...props}>
       <div className="relative">
         <div className="dark:bg-black bg-white py-4">
-          <GlitchTitle level={1} className="title-l md:title-xl">
+          <GlitchTitle level={2} className="mb-4 title-l md:title-xl">
             Where are we in the Roadmap?
           </GlitchTitle>
         </div>
