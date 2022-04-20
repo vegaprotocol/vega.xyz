@@ -5,5 +5,5 @@ links:
   - title: View PDF
     link: /papers/vega-technical-overview.pdf
 position: 2
-category: 1-how-it-works
+category: How it works
 ---

@@ -5,5 +5,5 @@ links:
   - title: View on Arxiv
     link: https://arxiv.org/abs/1810.05094
 position: 3
-category: 2-implementations
+category: Implementations
 ---
