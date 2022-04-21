@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         "vega-off-black": "#252525",
         "vega-light-grey": "#F2F2F2",
-        "vega-mid-grey": "#828282",
+        "vega-mid-grey": "#C0C0C0",
         "vega-border-grey": "#4f4f4f",
         "vega-box-grey": "#161616",
         "vega-yellow": "#DFFF0B",
