@@ -44,7 +44,10 @@ const Ambassadors = () => {
       />
       <Container>
         <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[80rem] mx-auto text-center md:mb-12 pt-6 lg:pt-16">
-          <GlitchTitle level={1} size="large" className="md:mb-6">
+          <GlitchTitle
+            level={1}
+            className="mb-4 title-m md:title-xxl lg:title-xxxl md:mb-6"
+          >
             Be a Vega+ ambassador
           </GlitchTitle>
           <LeadingLine className="text-center text-current mx-auto max-w-[35rem]">
@@ -205,8 +208,7 @@ const Ambassadors = () => {
             <GlitchTitle
               color="red"
               level="2"
-              size="medium"
-              className="md:max-w-[35rem] mx-auto"
+              className="mb-4 title-m md:title-l lg:title-xxl md:max-w-[35rem] mx-auto"
             >
               Join the community
             </GlitchTitle>

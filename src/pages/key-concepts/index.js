@@ -47,7 +47,7 @@ const KeyConceptsPage = () => {
               <h1 className="mb-6">
                 <BoxTitle text="Key concepts" />
               </h1>
-              <GlitchTitle level="2" size={[54, 54, 54, 68]} className="mb-6">
+              <GlitchTitle level="2" className="mb-6 title-l xl:title-xl">
                 We're creating the critical infrastructure for Web3 and DeFi to
                 mature, and birth a thriving new world of finance
               </GlitchTitle>

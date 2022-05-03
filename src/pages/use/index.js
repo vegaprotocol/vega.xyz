@@ -24,7 +24,7 @@ const UsePage = () => {
               <h1>
                 <BoxTitle text="Use the network" />
               </h1>
-              <GlitchTitle level="1" size="small" className="mt-4">
+              <GlitchTitle level="1" className="my-4 title-m md:title-l">
                 Fuel the engine of the new DeFi economy
               </GlitchTitle>
               <LeadingLine className="text-current">
@@ -103,7 +103,10 @@ const UsePage = () => {
           <img src={DeadFish} alt="" className="inline-block rotate-90 mb-6" />
 
           <div className="max-w-[18.75rem] md:max-w-[45rem] mx-auto">
-            <GlitchTitle level="2" size="medium">
+            <GlitchTitle
+              level="2"
+              className="mb-4 title-m md:title-l lg:title-xxl"
+            >
               Experiment on Fairground
             </GlitchTitle>
           </div>

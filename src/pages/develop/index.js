@@ -251,7 +251,11 @@ const DevelopPage = ({ data }) => {
 
         <PageSection>
           <div className="text-center">
-            <GlitchTitle color="red" level="2" size="medium">
+            <GlitchTitle
+              color="red"
+              level="2"
+              className="mb-4 title-m md:title-l lg:title-xxl"
+            >
               Where next?
             </GlitchTitle>
           </div>

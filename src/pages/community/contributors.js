@@ -28,14 +28,20 @@ const Contributors = () => {
       <Container dataCy={"main"}>
         <div className="mb-16 pt-6 lg:pt-16">
           <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[44rem] mx-auto text-center mb-6 md:mb-12">
-            <GlitchTitle level={1} size="medium">
+            <GlitchTitle
+              level={1}
+              className="mb-4 title-m md:title-l lg:title-xxl"
+            >
               Meet our contributors
             </GlitchTitle>
           </div>
 
           <div className="mx-auto max-w-[42rem]">
             {contributors ? (
-              <div className="grid grid-cols-4 md:grid-cols-6 gap-6" data-cy="contributors">
+              <div
+                className="grid grid-cols-4 md:grid-cols-6 gap-6"
+                data-cy="contributors"
+              >
                 {contributors.map((contributor, idx) => {
                   return (
                     <Contributor
