@@ -11,6 +11,11 @@ import UniverseLeft from "../../components/Svg/UniverseLeft";
 import UniverseRight from "../../components/Svg/UniverseRight";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import PurposeBuiltBlock from "../../components/KeyConcepts/Blocks/PurposeBuilt";
+import TextLink from "../../components/TextLink";
+import BlockA from "../../components/KeyConcepts/Blocks/BlockA";
+import BlockB from "../../components/KeyConcepts/Blocks/BlockB";
+import HighCapitalEfficiencyDiagram from "../../components/KeyConcepts/Diagrams/HighCapitalEfficiencyDiagram";
+import EfficientPriceDiscoveryDiagram from "../../components/KeyConcepts/Diagrams/EfficientPriceDiscoveryDiagram";
 
 const KeyConceptsPage = () => {
   const sections = [
@@ -66,7 +71,7 @@ const KeyConceptsPage = () => {
       </Container>
 
       <Container>
-        <div className="relative max-w-[26.25rem] mt-4 pt-[10.5rem] mx-auto text-center after:content-[''] after:absolute after:w-px after:bg-white after:top-0 after:h-[8rem] after:left-1/2">
+        <div className="relative max-w-[26.25rem] mt-4 pt-[10.5rem] mx-auto text-center after:content-[''] after:absolute after:w-px dark:after:bg-white after:bg-black after:top-0 after:h-[8rem] after:left-1/2">
           <h2 className="title-m mb-6">Vega is designed to:</h2>
         </div>
       </Container>
@@ -107,6 +112,70 @@ const KeyConceptsPage = () => {
 
       <Container>
         <PurposeBuiltBlock />
+
+        <BlockA
+          title="Optimised for high capital efficiency"
+          diagram={<HighCapitalEfficiencyDiagram />}
+        >
+          <p>
+            Vega's live, automated cross margining significantly lowers capital
+            costs meaning markets can exist that previously wouldn't due to
+            forbidding costs. Traditional derivatives exchanges charge an
+            initial margin on open positions and then conduct a daily mark to
+            market across all traders with open positions as a way of covering
+            their risk. Instead, Vega runs SPAN-type calculations, ie it
+            evaluates overall portfolio risk by calculating the worst possible
+            loss that a portfolio of derivative and physical instruments might
+            reasonably incur. But it does this live instead of over the course
+            of one trading day. And it does this on-chain. Meanwhile, built-in
+            cross margining routes a trader's gains made on one market (realised
+            and/or unrealised), to offset positions on other markets. These
+            combined innovations open up hedging instruments to a far greater
+            range of people and businesses.
+          </p>
+          <div class="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
+            Read more:
+          </div>
+          <TextLink
+            to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
+            colour="grey"
+            underline={true}
+            className="block mb-2"
+          >
+            The concepts underpinning Vega
+          </TextLink>
+          <TextLink
+            to="/papers/vega-protocol-whitepaper.pdf"
+            colour="grey"
+            underline={true}
+            className="block mb-2"
+          >
+            Download the whitepaper
+          </TextLink>
+        </BlockA>
+
+        <BlockB
+          title="Efficient Price Discovery"
+          diagram={<EfficientPriceDiscoveryDiagram />}
+        >
+          <p>
+            Knowing the latest and most accurate price is key to making good
+            trading decisions. Vega offers subsecond latency together with price
+            protection mechanisms/circuit breakers and auctions in low liquidity
+            regimes to discover true market prices.
+          </p>
+          <div class="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
+            Read more:
+          </div>
+          <TextLink
+            to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
+            colour="grey"
+            underline={true}
+            className="block mb-2"
+          >
+            The concepts underpinning Vega
+          </TextLink>
+        </BlockB>
       </Container>
     </Layout>
   );
