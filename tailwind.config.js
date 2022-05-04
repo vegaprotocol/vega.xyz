@@ -50,11 +50,10 @@ module.exports = {
         dark: {
           css: {
             color: "#C0C0C0",
-
+            li: "#C0C0C0",
             p: {
               color: "#C0C0C0",
             },
-
             a: {
               color: "#C0C0C0",
               "&:hover": {

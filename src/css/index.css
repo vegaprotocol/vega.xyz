@@ -68,6 +68,10 @@ body {
   p {
     @apply text-vega-mid-grey;
   }
+
+  .dark p {
+    @apply text-vega-grey;
+  }
 }
 
 @layer utilities {
@@ -82,6 +86,10 @@ body {
 
   .font-not-glitched {
     font-variant-ligatures: none;
+  }
+
+  .font-glitch-all {
+    font-feature-settings: "ss01" on;
   }
 
   .copy-xxs {
