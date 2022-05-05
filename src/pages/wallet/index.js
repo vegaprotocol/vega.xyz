@@ -5,6 +5,8 @@ import Container from "../../components/Container";
 import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
 import WalletRip from "../../components/Svg/WalletRip";
+import WalletHowTo from "../../components/Svg/WalletHowTo";
+import WalletHowToSmall from "../../components/Svg/WalletHowToSmall";
 import LeadingLine from "../../components/LeadingLine";
 import DropdownArrow from "../../components/Svg/DropdownArrow";
 import IconPlatformMac from "../../components/Svg/IconPlatformMac";
@@ -148,7 +150,6 @@ const WalletPage = () => {
           <div className="text-center">
             <h2 className="title-m">With the wallet you can:</h2>
           </div>
-
           <div className="grid grid-cols-3 lg:grid-cols-6 gap-8 text-center text-[1.125rem] leading-snug pt-12 pb-12 md:pb-6 font-thin">
             <div>
               <svg
@@ -310,7 +311,6 @@ const WalletPage = () => {
               </div>
             </div>
           </div>
-
           <p className="text-center copy-xs">
             It's also the starting point for trading, staking tokens, and voting
             on community proposals.
@@ -318,6 +318,7 @@ const WalletPage = () => {
         </PageSection>
 
         <PageSection>
+          <WalletHowToSmall className="md:hidden mb-8" />
           <div className="grid grid-cols-12 md:gap-12 lg:gap-21 max-w-[62rem] mx-auto">
             <div className="col-span-12 md:col-span-4">
               <h2 className="title-l md:title-xl mb-3 max-w-[17rem] md:max-w-none">
@@ -342,6 +343,7 @@ const WalletPage = () => {
               </ol>
             </div>
           </div>
+          <WalletHowTo className="hidden md:block mt-5" />
         </PageSection>
       </Container>
     </Layout>
