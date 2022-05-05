@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef } from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
@@ -6,8 +7,11 @@ import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
 import WalletRip from "../../components/Svg/WalletRip";
 import WalletHowTo from "../../components/Svg/WalletHowTo";
+import WalletLeft from "../../components/Svg/WalletLeft";
+import WalletRight from "../../components/Svg/WalletRight";
 import WalletHowToSmall from "../../components/Svg/WalletHowToSmall";
 import LeadingLine from "../../components/LeadingLine";
+import ButtonLink from "../../components/ButtonLink";
 import DropdownArrow from "../../components/Svg/DropdownArrow";
 import IconPlatformMac from "../../components/Svg/IconPlatformMac";
 import IconPlatformWindows from "../../components/Svg/IconPlatformWindows";
@@ -52,40 +56,42 @@ const binaries = [
   {
     icon: "windows",
     platform: "Windows",
-    file: "https://github.com/vegaprotocol/vegawallet/releases/download/v0.13.2/vegawallet-windows-amd64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-windows-amd64.zip",
   },
   {
     icon: "windows",
     platform: "Windows (ARM64)",
-    file: "https://github.com/vegaprotocol/vegawallet/releases/download/v0.13.2/vegawallet-windows-arm64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-windows-arm64.zip",
   },
   {
     icon: "mac",
     platform: "MacOS",
-    file: "https://github.com/vegaprotocol/vegawallet/releases/download/v0.13.2/vegawallet-darwin-amd64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-darwin-amd64.zip",
   },
   {
     icon: "mac",
     platform: "MacOS (ARM64)",
-    file: "https://github.com/vegaprotocol/vegawallet/releases/download/v0.13.2/vegawallet-darwin-arm64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-darwin-arm64.zip",
   },
   {
     icon: "linux",
     platform: "Linux",
-    file: "https://github.com/vegaprotocol/vegawallet/releases/download/v0.13.2/vegawallet-linux-amd64.zip",
-  },
-  {
-    icon: "linux",
-    platform: "Linux (ARM64)",
-    file: "https://github.com/vegaprotocol/vegawallet/releases/download/v0.13.2/vegawallet-linux-arm64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-linux-amd64.zip",
   },
 ];
 
 const WalletPage = () => {
   const [downloadDropdown, setDownloadDropdown] = useState(false);
+  const [selectedBinary, setSelectedBinary] = useState(binaries[0]);
+  const dropDownMenuButton = useRef(null);
 
-  const toggleDownloadMenu = () => {
-    setDownloadDropdown(!downloadDropdown);
+  const showDownloadMenu = (state) => {
+    setDownloadDropdown(state);
+  };
+
+  const chooseBinary = (idx) => {
+    setSelectedBinary(binaries[idx]);
+    dropDownMenuButton.current.blur();
   };
 
   return (
@@ -95,7 +101,7 @@ const WalletPage = () => {
         description="Download the Vega Wallet desktop app, to help you manage multiple wallets, multiple keys — and get access to the Vega network."
       />
       <Container dataCy={"main"}>
-        <div className="pt-6 lg:pt-16">
+        <div className="pt-6 lg:pt-16 max-w-[38rem] md:max-w-none mx-auto">
           <div className="mx-auto max-w-[28rem] md:max-w-[38rem] lg:max-w-[42rem] text-center">
             <GlitchTitle level="1" className="my-4 title-l md:title-xxl">
               Get the Vega Wallet
@@ -106,51 +112,89 @@ const WalletPage = () => {
             wallets, multiple keys — and get access to the Vega network.
           </LeadingLine>
 
-          <div className="w-[16rem] mx-auto relative mt-10">
+          <div
+            ref={dropDownMenuButton}
+            className="w-[16rem] mx-auto relative mt-10 cursor-pointer"
+            tabIndex={0}
+            onFocus={() => showDownloadMenu(true)}
+            onBlur={() => showDownloadMenu(false)}
+          >
             <div className="border border-current flex items-center">
-              <button
-                className="py-3 px-3.5 flex items-center"
-                onClick={toggleDownloadMenu}
-              >
-                <div className="pr-2.5">{PlatformIcon("mac")}</div>
+              <div className="py-3 px-3.5 flex items-center">
+                <div className="pr-2.5">
+                  {PlatformIcon(selectedBinary.icon)}
+                </div>
                 <DropdownArrow />
-              </button>
-              <div className="text-center relative py-3 px-3 border-px border-l border-current uppercase copy-xxs !mb-0 flex-grow">
-                Get Desktop App
+                {downloadDropdown && (
+                  <div className="absolute z-10 top-[2.9375rem] left-0 right-0 border border-t-0 border-current bg-white dark:bg-black">
+                    <ul className="py-3 px-2">
+                      {binaries.map((binary, idx) => {
+                        return (
+                          <li className="cursor-pointer my-1" key={idx}>
+                            <div
+                              onClick={() => chooseBinary(idx)}
+                              className="flex items-center w-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"
+                            >
+                              <div className="px-3.5 py-2">
+                                {PlatformIcon(binary.icon)}
+                              </div>
+                              <div className="py-2 copy-xxs !mb-0 text-vega-mid-grey dark:text-vega-grey">
+                                {binary.platform}
+                              </div>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                )}
+              </div>
+              <div className="text-center relative border-px border-l border-current uppercase copy-xxs !mb-0 flex-grow">
+                <a
+                  href={selectedBinary.file}
+                  className="block py-3 px-3"
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => showDownloadMenu(false)}
+                >
+                  Get Desktop App
+                </a>
               </div>
             </div>
-            {downloadDropdown && (
-              <div className="absolute z-10 top-[2.9375rem] left-0 right-0 border border-t-0 border-current bg-white dark:bg-black">
-                <ul className="py-3 px-2">
-                  {binaries.map((binary) => {
-                    return (
-                      <li className="cursor-pointer my-1">
-                        <button className="flex items-center w-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10">
-                          <div className="px-3.5 py-2">
-                            {PlatformIcon(binary.icon)}
-                          </div>
-                          <div className="py-2 copy-xxs !mb-0 text-vega-mid-grey dark:text-vega-grey">
-                            {binary.platform}
-                          </div>
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            )}
           </div>
         </div>
       </Container>
 
-      <WalletRip />
+      <div className="relative pt-16 md:pt-36 md:mt-12">
+        <StaticImage
+          src="../../images/wallet-small.png"
+          alt="Vega Wallet"
+          placeholder="none"
+          layout="fullWidth"
+          className="relative z-10 md:hidden mr-8"
+        />
+
+        <WalletRip className="relative -mt-16 md:mt-16 lg:mt-0" />
+
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3 hidden md:block">
+          <StaticImage
+            src="../../images/wallet.png"
+            alt="Vega Wallet"
+            placeholder="none"
+            layout="constrained"
+            width={894}
+            height={561}
+            className="md:scale-150 lg:scale-110"
+          />
+        </div>
+      </div>
 
       <Container>
         <PageSection>
           <div className="text-center">
             <h2 className="title-m">With the wallet you can:</h2>
           </div>
-          <div className="grid grid-cols-3 lg:grid-cols-6 gap-8 text-center text-[1.125rem] leading-snug pt-12 pb-12 md:pb-6 font-thin">
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-8 text-center text-[1.125rem] leading-snug pt-12 pb-12 md:pb-6">
             <div>
               <svg
                 width="38"
@@ -338,7 +382,7 @@ const WalletPage = () => {
             <div className="col-span-12 md:col-span-8 lg:pl-12">
               <ol className="list-none p-0 mt-6 md:mt-0">
                 {howToText.map((text, idx) => {
-                  return <ListItem idx={idx} text={text} />;
+                  return <ListItem idx={idx} key={idx} text={text} />;
                 })}
               </ol>
             </div>
@@ -346,6 +390,108 @@ const WalletPage = () => {
           <WalletHowTo className="hidden md:block mt-5" />
         </PageSection>
       </Container>
+
+      <PageSection>
+        <div className="flex justify-between items-center">
+          <div className="w-[200px] hidden md:block">
+            <WalletLeft />
+          </div>
+          <div className="text-center max-w-[30rem] md:max-w-[42rem] mx-auto">
+            <Container>
+              <h2 className="title-s md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto">
+                Need the command line (CLI) wallet app?
+              </h2>
+              <p className="copy-xs md:copy-s">
+                If you're comfortable with a non-visual interface and want
+                additional or programmer functionality to that of the desktop
+                app, CLI also lets you:
+              </p>
+              <div className="grid grid-cols-3 gap-8 text-center text-[1.125rem] leading-snug pt-8 pb-8">
+                <div>
+                  <svg
+                    width="38"
+                    height="49"
+                    viewBox="0 0 38 49"
+                    fill="none"
+                    className="inline-block"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g fill="currentColor">
+                      <path d="M36 0H2V1.9943H36V0Z" />
+                      <path d="M36 47.0057H2V49H36V47.0057Z" />
+                      <path d="M0 1.9942L0 47.0057H2L2 1.9942H0Z" />
+                      <path d="M36 1.9942V47.0057H38V1.9942H36Z" />
+                      <path d="M21.9004 33.2949H15.9004V35.2892H21.9004V33.2949Z" />
+                      <path d="M18.9004 9.97144C16.3407 9.97008 13.8559 10.8332 11.8509 12.42C9.84587 14.0068 8.43877 16.224 7.85895 18.7101C7.27912 21.1963 7.5607 23.8049 8.65777 26.1111C9.75485 28.4173 11.6027 30.2851 13.9004 31.4102V33.2949H15.9004V30.1141L15.2906 29.8548C13.3036 29.0234 11.6663 27.5317 10.657 25.6332C9.6478 23.7347 9.32872 21.5465 9.75397 19.44C10.1792 17.3335 11.3225 15.4389 12.9898 14.0776C14.6571 12.7164 16.7456 11.9726 18.9004 11.9726C21.0553 11.9726 23.1438 12.7164 24.8111 14.0776C26.4784 15.4389 27.6217 17.3335 28.0469 19.44C28.4722 21.5465 28.1531 23.7347 27.1439 25.6332C26.1346 27.5317 24.4976 29.0234 22.5106 29.8548L21.9004 30.1141V33.2949H23.9004V31.4102C26.1982 30.2851 28.0461 28.4173 29.1431 26.1111C30.2402 23.8049 30.5218 21.1963 29.942 18.7101C29.3621 16.224 27.9553 14.0068 25.9503 12.42C23.9452 10.8332 21.4602 9.97008 18.9004 9.97144Z" />
+                      <path d="M15.9004 35.2892H13.9004V37.2835H15.9004V35.2892Z" />
+                      <path d="M23.9004 35.2892H21.9004V37.2835H23.9004V35.2892Z" />
+                      <path d="M21.9004 37.2834H15.9004V39.2777H21.9004V37.2834Z" />
+                      <path d="M19.9004 21.6282H17.9004V33.2849H19.9004V21.6282Z" />
+                    </g>
+                  </svg>
+                  <div className="mt-4">Customise key details</div>
+                </div>
+                <div>
+                  <svg
+                    width="38"
+                    height="49"
+                    viewBox="0 0 38 49"
+                    fill="none"
+                    className="inline-block"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g fill="currentColor">
+                      <path d="M36 0H2V1.9943H36V0Z" />
+                      <path d="M36 47.0057H2V49H36V47.0057Z" />
+                      <path d="M0 1.9942L0 47.0057H2L2 1.9942H0Z" />
+                      <path d="M36 1.9942V47.0057H38V1.9942H36Z" />
+                      <path d="M21.9004 33.2949H15.9004V35.2892H21.9004V33.2949Z" />
+                      <path d="M18.9004 9.97144C16.3407 9.97008 13.8559 10.8332 11.8509 12.42C9.84587 14.0068 8.43877 16.224 7.85895 18.7101C7.27912 21.1963 7.5607 23.8049 8.65777 26.1111C9.75485 28.4173 11.6027 30.2851 13.9004 31.4102V33.2949H15.9004V30.1141L15.2906 29.8548C13.3036 29.0234 11.6663 27.5317 10.657 25.6332C9.6478 23.7347 9.32872 21.5465 9.75397 19.44C10.1792 17.3335 11.3225 15.4389 12.9898 14.0776C14.6571 12.7164 16.7456 11.9726 18.9004 11.9726C21.0553 11.9726 23.1438 12.7164 24.8111 14.0776C26.4784 15.4389 27.6217 17.3335 28.0469 19.44C28.4722 21.5465 28.1531 23.7347 27.1439 25.6332C26.1346 27.5317 24.4976 29.0234 22.5106 29.8548L21.9004 30.1141V33.2949H23.9004V31.4102C26.1982 30.2851 28.0461 28.4173 29.1431 26.1111C30.2402 23.8049 30.5218 21.1963 29.942 18.7101C29.3621 16.224 27.9553 14.0068 25.9503 12.42C23.9452 10.8332 21.4602 9.97008 18.9004 9.97144Z" />
+                      <path d="M15.9004 35.2892H13.9004V37.2835H15.9004V35.2892Z" />
+                      <path d="M23.9004 35.2892H21.9004V37.2835H23.9004V35.2892Z" />
+                      <path d="M21.9004 37.2834H15.9004V39.2777H21.9004V37.2834Z" />
+                      <path d="M19.9004 21.6282H17.9004V33.2849H19.9004V21.6282Z" />
+                    </g>
+                  </svg>
+                  <div className="mt-4">Isolate keys</div>
+                </div>
+                <div>
+                  <svg
+                    width="38"
+                    height="49"
+                    viewBox="0 0 38 49"
+                    fill="none"
+                    className="inline-block"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g fill="currentColor">
+                      <path d="M36 0H2V1.9943H36V0Z" />
+                      <path d="M36 47.0057H2V49H36V47.0057Z" />
+                      <path d="M0 1.9942L0 47.0057H2L2 1.9942H0Z" />
+                      <path d="M36 1.9942V47.0057H38V1.9942H36Z" />
+                      <path d="M21.9004 33.2949H15.9004V35.2892H21.9004V33.2949Z" />
+                      <path d="M18.9004 9.97144C16.3407 9.97008 13.8559 10.8332 11.8509 12.42C9.84587 14.0068 8.43877 16.224 7.85895 18.7101C7.27912 21.1963 7.5607 23.8049 8.65777 26.1111C9.75485 28.4173 11.6027 30.2851 13.9004 31.4102V33.2949H15.9004V30.1141L15.2906 29.8548C13.3036 29.0234 11.6663 27.5317 10.657 25.6332C9.6478 23.7347 9.32872 21.5465 9.75397 19.44C10.1792 17.3335 11.3225 15.4389 12.9898 14.0776C14.6571 12.7164 16.7456 11.9726 18.9004 11.9726C21.0553 11.9726 23.1438 12.7164 24.8111 14.0776C26.4784 15.4389 27.6217 17.3335 28.0469 19.44C28.4722 21.5465 28.1531 23.7347 27.1439 25.6332C26.1346 27.5317 24.4976 29.0234 22.5106 29.8548L21.9004 30.1141V33.2949H23.9004V31.4102C26.1982 30.2851 28.0461 28.4173 29.1431 26.1111C30.2402 23.8049 30.5218 21.1963 29.942 18.7101C29.3621 16.224 27.9553 14.0068 25.9503 12.42C23.9452 10.8332 21.4602 9.97008 18.9004 9.97144Z" />
+                      <path d="M15.9004 35.2892H13.9004V37.2835H15.9004V35.2892Z" />
+                      <path d="M23.9004 35.2892H21.9004V37.2835H23.9004V35.2892Z" />
+                      <path d="M21.9004 37.2834H15.9004V39.2777H21.9004V37.2834Z" />
+                      <path d="M19.9004 21.6282H17.9004V33.2849H19.9004V21.6282Z" />
+                    </g>
+                  </svg>
+                  <div className="mt-4">Build & send commands</div>
+                </div>
+              </div>
+
+              <ButtonLink
+                text="Get the CLI App"
+                link="https://github.com/vegaprotocol/vegawallet/releases/"
+              />
+            </Container>
+          </div>
+          <div className="w-[200px] hidden md:block">
+            <WalletRight />
+          </div>
+        </div>
+      </PageSection>
     </Layout>
   );
 };
