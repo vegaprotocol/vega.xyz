@@ -7,12 +7,12 @@ const PurposeBuiltBlock = () => {
     <div className="pt-20 md:pt-32">
       <div className="md:px-12 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-0 mb-12">
         <div className="lg:col-span-6">
-          <h2 className="title-m md:title-l max-w-[30rem] mb-3 md:mb-6">
+          <h2 className="title-m md:title-l max-w-[30rem] md:max-w-none mb-3 md:mb-6">
             Purpose built, bespoke blockchain
           </h2>
         </div>
         <div className="lg:col-span-6">
-          <div className="prose">
+          <div className="prose max-w-none">
             <p>
               Ethereum and other blockchains suffer slow performance since
               they're generalist tools, with smart contracts for everything -
@@ -28,7 +28,7 @@ const PurposeBuiltBlock = () => {
               meaning no fees on orders, and fairness at its core.
             </p>
 
-            <div class="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
+            <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more:
             </div>
 

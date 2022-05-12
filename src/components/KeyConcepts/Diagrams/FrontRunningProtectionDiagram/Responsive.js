@@ -1,9 +1,10 @@
 import React from "react";
 import Small from "./Small";
 import Medium from "./Medium";
+import Large from "./Large";
 import { MQLarge, MQMedium, MQSmall } from "../../../../utils/media-queries.js";
 
-const PermissionlessMarketCreationDiagramResponsive = () => {
+const FrontRunningProtectionDiagramResponsive = () => {
   return (
     <div>
       <MQSmall>
@@ -13,9 +14,9 @@ const PermissionlessMarketCreationDiagramResponsive = () => {
         <Medium />
       </MQMedium>
       <MQLarge>
-        <Medium />
+        <Large />
       </MQLarge>
     </div>
   );
 };
-export default PermissionlessMarketCreationDiagramResponsive;
+export default FrontRunningProtectionDiagramResponsive;

@@ -3,7 +3,7 @@ import Small from "./Small";
 import Medium from "./Medium";
 import { MQLarge, MQMedium, MQSmall } from "../../../../utils/media-queries.js";
 
-const PermissionlessMarketCreationDiagramResponsive = () => {
+const PeggedOrdersDiagramResponsive = () => {
   return (
     <div>
       <MQSmall>
@@ -18,4 +18,4 @@ const PermissionlessMarketCreationDiagramResponsive = () => {
     </div>
   );
 };
-export default PermissionlessMarketCreationDiagramResponsive;
+export default PeggedOrdersDiagramResponsive;

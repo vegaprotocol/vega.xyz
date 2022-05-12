@@ -15,7 +15,7 @@ const HighCapitalEfficiencyDiagram = ({ className }) => {
         <path
           d="M61.55 58.79H222.84"
           strokeWidth="1.5"
-          strokeMiterLimit="10"
+          strokeMiterlimit="10"
           className="stroke-black dark:stroke-white"
         />
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const EfficientPriceDiscoveryDiagram = ({ className }) => {
+const EfficientPriceDiscoveryDiagramLarge = ({ className }) => {
   return (
     <svg viewBox="0 0 502 570" className={className}>
       <motion.g
@@ -13,7 +13,7 @@ const EfficientPriceDiscoveryDiagram = ({ className }) => {
         }}
         style={{ originX: "251px", originY: "277px" }}
       >
-        <g id="Animated_Radar">
+        <g>
           <path
             className="opacity-15 dark:fill-white fill-black"
             d="M427.5,100.3L250.7,277h250c0,0,2.1-41-17.2-90.9c0,0-1.9-4.8-5.1-12.6c-2.3-5.6-5.3-10.7-5.3-10.7
@@ -400,4 +400,4 @@ const EfficientPriceDiscoveryDiagram = ({ className }) => {
   );
 };
 
-export default EfficientPriceDiscoveryDiagram;
+export default EfficientPriceDiscoveryDiagramLarge;

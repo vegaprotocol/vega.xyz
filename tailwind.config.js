@@ -7,6 +7,9 @@ module.exports = {
       backgroundImage: {
         "four-oh-four": "url('/404.png')",
       },
+      opacity: {
+        15: ".15",
+      },
       colors: {
         "vega-off-black": "#252525",
         "vega-light-grey": "#F2F2F2",
