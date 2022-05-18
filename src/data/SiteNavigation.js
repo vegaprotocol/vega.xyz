@@ -1,5 +1,17 @@
 export const SiteNavigation = [
   {
+    text: "Use Vega",
+    link: "/use/",
+  },
+  {
+    text: "Community",
+    link: "/community/",
+  },
+  {
+    text: "Develop",
+    link: "/develop/",
+  },
+  {
     text: "Learn",
     links: [
       {
@@ -19,17 +31,5 @@ export const SiteNavigation = [
         to: "/talks/",
       },
     ],
-  },
-  {
-    text: "Develop",
-    link: "/develop/",
-  },
-  {
-    text: "Use the network",
-    link: "/use/",
-  },
-  {
-    text: "Join the community",
-    link: "/community/",
   },
 ];
