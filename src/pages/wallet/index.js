@@ -483,7 +483,7 @@ const WalletPage = () => {
 
               <ButtonLink
                 text="Get the CLI App"
-                link="https://github.com/vegaprotocol/vegawallet/releases/"
+                link="https://docs.vega.xyz/docs/mainnet/tools/vega-wallet/cli-wallet/"
               />
             </Container>
           </div>
