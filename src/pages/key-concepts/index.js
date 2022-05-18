@@ -469,7 +469,7 @@ const KeyConceptsPage = () => {
         </BlockD>
       </Container>
 
-      <div id="better" className="relative pt-20 md:pt-32 overflow-x-hidden">
+      <div id="mature" className="relative pt-20 md:pt-32 overflow-x-hidden">
         <div className="text-center max-w-[30rem] md:max-w-[44rem] mx-auto">
           <div className="title-l md:title-xl max-w-[25rem] md:max-w-[30rem] mx-auto mb-3">
             Help DeFi mature
