@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
@@ -23,14 +23,14 @@ const platformIcons = {
   linux: IconPlatformLinux,
 };
 
-function PlatformIcon(platform) {
+const PlatformIcon = (platform) => {
   const PlatformIcon = platformIcons[platform];
   return (
     <div className="flex items-center">
       <PlatformIcon />
     </div>
   );
-}
+};
 
 const ListItem = ({ idx, text }) => {
   return (
@@ -41,6 +41,41 @@ const ListItem = ({ idx, text }) => {
       <div className="copy-xs !mb-0">{text}</div>
     </li>
   );
+};
+
+const getArch = () => {
+  var platform =
+      window.navigator?.userAgentData?.platform ?? window.navigator.platform,
+    macosPlatforms = ["macOS", "Macintosh", "MacIntel", "Mac68K"],
+    windowsPlatforms = ["Win32", "Win64", "Windows"],
+    linuxPlatforms = "Linux";
+
+  if (macosPlatforms.includes(platform)) {
+    const w = document.createElement("canvas").getContext("webgl");
+    const d = w.getExtension("WEBGL_debug_renderer_info");
+    const g = (d && w.getParameter(d.UNMASKED_RENDERER_WEBGL)) || "";
+    if (
+      (g.match(/Apple/) && !g.match(/Apple GPU/)) ||
+      (g.match(/Apple GPU/) &&
+        w
+          .getSupportedExtensions()
+          .indexOf("WEBGL_compressed_texture_s3tc_srgb") === -1)
+    ) {
+      return "MacOS (ARM64)";
+    } else {
+      return "MacOS";
+    }
+  } else if (windowsPlatforms.includes(platform)) {
+    if (platform.match(/\barm/i)) {
+      return "Windows (ARM64)";
+    } else {
+      return "Windows";
+    }
+  } else if (linuxPlatforms.includes(platform)) {
+    return "Linux";
+  } else {
+    return "Linux";
+  }
 };
 
 const howToText = [
@@ -94,6 +129,14 @@ const WalletPage = () => {
     dropDownMenuButton.current.blur();
   };
 
+  useEffect(() => {
+    setSelectedBinary(
+      binaries.find((element) => element.platform === getArch())
+    );
+
+    return () => {};
+  }, []);
+
   return (
     <Layout>
       <Seo
@@ -116,6 +159,7 @@ const WalletPage = () => {
             ref={dropDownMenuButton}
             className="w-[16rem] mx-auto relative mt-10 cursor-pointer"
             tabIndex={0}
+            role="button"
             onFocus={() => showDownloadMenu(true)}
             onBlur={() => showDownloadMenu(false)}
           >
@@ -133,6 +177,9 @@ const WalletPage = () => {
                           <li className="cursor-pointer my-1" key={idx}>
                             <div
                               onClick={() => chooseBinary(idx)}
+                              onKeyDown={() => chooseBinary(idx)}
+                              role="button"
+                              tabIndex={0}
                               className="flex items-center w-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"
                             >
                               <div className="px-3.5 py-2">
