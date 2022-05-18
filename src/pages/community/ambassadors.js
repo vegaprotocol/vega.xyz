@@ -195,7 +195,7 @@ const Ambassadors = () => {
                 leading derivatives Layer 1 in the crypto space
               </p>
               <BoxLinkSimple
-                link="https://form.typeform.com/to/lPl6aiNh"
+                link="https://vegaprotocol.typeform.com/ambassadorappQ2"
                 text="Apply <br/>now"
                 className="mt-4 min-w-[15rem] text-left hidden md:inline-block"
               />
