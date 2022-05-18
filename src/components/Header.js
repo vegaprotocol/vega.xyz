@@ -6,6 +6,7 @@ import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";
 import MobileMenuButton from "../components/Navigation/MobileMenuButton";
+import ButtonLink from "../components/ButtonLink";
 // import SiteBanner from "../components/SiteBanner";
 
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
@@ -44,9 +45,15 @@ const Header = () => {
 
             <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
 
-            <div>
+            <div className="flex items-center">
               <ScreenMode />
               <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
+              <ButtonLink
+                link="https://console.fairground.wtf/"
+                className="ml-5 hidden lg:block"
+                hideArrowForExternal="true"
+                text="Trade (testnet)"
+              />
             </div>
           </div>
         </div>
