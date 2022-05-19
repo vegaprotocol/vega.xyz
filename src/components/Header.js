@@ -6,7 +6,7 @@ import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";
 import MobileMenuButton from "../components/Navigation/MobileMenuButton";
-import ButtonLink from "../components/ButtonLink";
+import HeaderCta from "../components/HeaderCta";
 // import SiteBanner from "../components/SiteBanner";
 
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
@@ -43,25 +43,28 @@ const Header = () => {
 
             <Navigation />
 
-            <div className="flex">
-              <ButtonLink
-                link="https://console.fairground.wtf/"
-                className="ml-5 hidden md:block lg:hidden mr-5"
-                hideArrowForExternal="true"
-                text="Trade (testnet)"
-              />
+            <div className="flex items-center">
+              {!menuIsOpen && (
+                <HeaderCta
+                  link="https://console.fairground.wtf/"
+                  text="Trade (Testnet)"
+                  className="hidden md:block lg:hidden mr-3"
+                />
+              )}
 
               <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
 
               <div className="flex items-center">
                 <ScreenMode />
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
-                <ButtonLink
-                  link="https://console.fairground.wtf/"
-                  className="ml-5 hidden lg:block"
-                  hideArrowForExternal="true"
-                  text="Trade (testnet)"
-                />
+
+                {!menuIsOpen && (
+                  <HeaderCta
+                    link="https://console.fairground.wtf/"
+                    text="Trade (Testnet)"
+                    className="ml-3 hidden lg:block"
+                  />
+                )}
               </div>
             </div>
           </div>
