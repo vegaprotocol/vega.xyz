@@ -285,12 +285,11 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           width="9"
           height="9"
         />
-        <rect x="116.7" y="485.3" class="st3" width="13.5" height="13.5" />
+        <rect x="116.7" y="485.3" width="13.5" height="13.5" />
         <rect
           x="110.5"
           y="426.7"
           transform="matrix(-0.9439 -0.3303 0.3303 -0.9439 81.0904 876.218)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -298,7 +297,6 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="61.9"
           y="46.5"
           transform="matrix(0.7564 -0.6541 0.6541 0.7564 -17.1985 55.8589)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -306,7 +304,6 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="25.1"
           y="363"
           transform="matrix(-0.6804 -0.7328 0.7328 -0.6804 -219.6586 639.2866)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -315,7 +312,6 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="209.5"
           y="1.5"
           transform="matrix(1 -1.118090e-03 1.118090e-03 1 -6.578709e-03 0.2393)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -323,7 +319,6 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="301.2"
           y="86.8"
           transform="matrix(0.8368 0.5475 -0.5475 0.8368 99.8951 -152.4697)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -331,7 +326,6 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="36.7"
           y="159.5"
           transform="matrix(0.2933 -0.956 0.956 0.2933 -127.6363 155.266)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -340,7 +334,6 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="291.3"
           y="365.4"
           transform="matrix(-0.7863 0.6178 -0.6178 -0.7863 756.9077 477.9919)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -349,7 +342,6 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="247.2"
           y="386.4"
           transform="matrix(-0.9284 0.3715 -0.3715 -0.9284 630.6725 660.2446)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -358,17 +350,15 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="354.6"
           y="288.5"
           transform="matrix(-0.3105 0.9506 -0.9506 -0.3105 749.1913 42.6447)"
-          class="st3"
           width="9"
           height="9"
         />
-        <rect x="209.8" y="101.5" class="st3" width="9" height="9" />
+        <rect x="209.8" y="101.5" width="9" height="9" />
 
         <rect
           x="308.4"
           y="176.2"
           transform="matrix(0.4836 0.8753 -0.8753 0.4836 319.7986 -180.5415)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -377,7 +367,6 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="103.3"
           y="301.7"
           transform="matrix(-0.7338 -0.6793 0.6793 -0.7338 -21.0712 604.1454)"
-          class="st3"
           width="9"
           height="9"
         />
@@ -385,7 +374,6 @@ const EfficientPriceDiscoveryDiagramMedium = ({ className }) => {
           x="160.1"
           y="106.7"
           transform="matrix(0.9149 -0.4038 0.4038 0.9149 -30.8883 75.9154)"
-          class="st3"
           width="9"
           height="9"
         />

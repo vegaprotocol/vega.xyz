@@ -177,27 +177,27 @@ const CommunityCurationOfMarketsDiagramLarge = ({ className }) => {
         <path d="M552.1,67.9V53h-1v14.9" />
       </g>
       <g className="fill-vega-mint">
-        <path class="st2" d="M640.2,32.8h-9v9h9V32.8z" />
-        <path class="st2" d="M177.7,36.8h-9v9h9V36.8z" />
-        <path class="st2" d="M345.9,40.8h-9v9h9V40.8z" />
-        <path class="st2" d="M387.9,44.8h-9v9h9V44.8z" />
-        <path class="st2" d="M219.8,44.8h-9v9h9V44.8z" />
-        <path class="st2" d="M850,44.8h-9v9h9V44.8z" />
-        <path class="st2" d="M514.1,48.8h-9v9h9V48.8z" />
-        <path class="st2" d="M766.3,48.8h-9v9h9V48.8z" />
-        <path class="st2" d="M808.4,48.8h-9v9h9V48.8z" />
-        <path class="st2" d="M682.2,48.8h-9v9h9V48.8z" />
-        <path class="st2" d="M598.2,48.8h-9v9h9V48.8z" />
-        <path class="st2" d="M430,52.8h-9v9h9V52.8z" />
-        <path class="st2" d="M135.7,52.8h-9v9h9V52.8z" />
+        <path d="M640.2,32.8h-9v9h9V32.8z" />
+        <path d="M177.7,36.8h-9v9h9V36.8z" />
+        <path d="M345.9,40.8h-9v9h9V40.8z" />
+        <path d="M387.9,44.8h-9v9h9V44.8z" />
+        <path d="M219.8,44.8h-9v9h9V44.8z" />
+        <path d="M850,44.8h-9v9h9V44.8z" />
+        <path d="M514.1,48.8h-9v9h9V48.8z" />
+        <path d="M766.3,48.8h-9v9h9V48.8z" />
+        <path d="M808.4,48.8h-9v9h9V48.8z" />
+        <path d="M682.2,48.8h-9v9h9V48.8z" />
+        <path d="M598.2,48.8h-9v9h9V48.8z" />
+        <path d="M430,52.8h-9v9h9V52.8z" />
+        <path d="M135.7,52.8h-9v9h9V52.8z" />
       </g>
       <g className="fill-vega-pink">
-        <path class="st3" d="M472,40.8h-9v9h9V40.8z" />
-        <path class="st3" d="M94,40.8h-9v9h9V40.8z" />
-        <path class="st3" d="M303.8,52.8h-9v9h9V52.8z" />
-        <path class="st3" d="M724.3,52.8h-9v9h9V52.8z" />
-        <path class="st3" d="M261.8,52.8h-9v9h9V52.8z" />
-        <path class="st3" d="M556.1,52.8h-9v9h9V52.8z" />
+        <path d="M472,40.8h-9v9h9V40.8z" />
+        <path d="M94,40.8h-9v9h9V40.8z" />
+        <path d="M303.8,52.8h-9v9h9V52.8z" />
+        <path d="M724.3,52.8h-9v9h9V52.8z" />
+        <path d="M261.8,52.8h-9v9h9V52.8z" />
+        <path d="M556.1,52.8h-9v9h9V52.8z" />
       </g>
     </svg>
   );

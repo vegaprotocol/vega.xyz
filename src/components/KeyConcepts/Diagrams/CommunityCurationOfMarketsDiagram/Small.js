@@ -60,15 +60,15 @@ const CommunityCurationOfMarketsDiagramSmall = ({ className }) => {
         <path d="M265.6,68.6V53.7h-1v14.9" />
       </g>
       <g className="fill-vega-mint">
-        <path class="st2" d="M101.4,45.5h-9v9h9V45.5z" />
-        <path class="st2" d="M227.6,49.5h-9v9h9V49.5z" />
-        <path class="st2" d="M311.7,49.5h-9v9h9V49.5z" />
-        <path class="st2" d="M143.5,53.5h-9v9h9V53.5z" />
+        <path d="M101.4,45.5h-9v9h9V45.5z" />
+        <path d="M227.6,49.5h-9v9h9V49.5z" />
+        <path d="M311.7,49.5h-9v9h9V49.5z" />
+        <path d="M143.5,53.5h-9v9h9V53.5z" />
       </g>
       <g className="fill-vega-pink">
-        <path class="st3" d="M185.5,41.5h-9v9h9V41.5z" />
-        <path class="st3" d="M59.3,53.5h-9v9h9V53.5z" />
-        <path class="st3" d="M269.6,53.5h-9v9h9V53.5z" />
+        <path d="M185.5,41.5h-9v9h9V41.5z" />
+        <path d="M59.3,53.5h-9v9h9V53.5z" />
+        <path d="M269.6,53.5h-9v9h9V53.5z" />
       </g>
     </svg>
   );
