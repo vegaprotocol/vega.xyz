@@ -179,8 +179,12 @@ const WalletPage = () => {
                               onClick={() => chooseBinary(idx)}
                               onKeyDown={() => chooseBinary(idx)}
                               role="button"
-                              tabIndex={0}
-                              className="flex items-center w-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"
+                              // tabIndex={0}
+                              className={`flex items-center w-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10 ${
+                                selectedBinary === binary
+                                  ? "bg-black dark:bg-white bg-opacity-10 dark:bg-opacity-10"
+                                  : ""
+                              }`}
                             >
                               <div className="px-3.5 py-2">
                                 {PlatformIcon(binary.icon)}
