@@ -6,6 +6,7 @@ import DropdownArrow from "../Svg/DropdownArrow.js";
 import LinkArrow from "../Svg/LinkArrow";
 import VegaLogo from "../../components/Svg/VegaLogo";
 import MobileMenuButton from "../../components/Navigation/MobileMenuButton";
+import HeaderCta from "../../components/HeaderCta";
 // import SiteBanner from "../../components/SiteBanner";
 
 const MobileMenu = ({ toggleMenu, isOpen }) => {
@@ -26,17 +27,15 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
               <VegaLogo />
             </Link>
 
-            <div>
-              <MobileMenuButton
-                open={isOpen}
-                toggleMenu={toggleMenu}
-                showOnMobileOnly={false}
-              />
-            </div>
+            <MobileMenuButton
+              open={isOpen}
+              toggleMenu={toggleMenu}
+              showOnMobileOnly={false}
+            />
           </div>
         </div>
 
-        <ul className="max-w-[15rem] text-lg tracking-wide w-full pb-12">
+        <ul className="max-w-[15rem] text-lg tracking-wide w-full pb-4">
           {SiteNavigation.map((section, idx) =>
             section.links ? (
               <li key={idx}>
@@ -92,6 +91,12 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
             )
           )}
         </ul>
+
+        <HeaderCta
+          link="https://console.fairground.wtf/"
+          text="Trade (Testnet)"
+          className="inline-block"
+        />
       </Container>
     </div>
   );
