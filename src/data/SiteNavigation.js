@@ -1,7 +1,16 @@
 export const SiteNavigation = [
   {
     text: "Use Vega",
-    link: "/use/",
+    links: [
+      {
+        text: "Use the network",
+        to: "/use",
+      },
+      {
+        text: "Get the Vega wallet",
+        to: "/wallet",
+      },
+    ],
   },
   {
     text: "Community",
