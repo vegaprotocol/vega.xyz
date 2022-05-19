@@ -43,17 +43,26 @@ const Header = () => {
 
             <Navigation />
 
-            <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
-
-            <div className="flex items-center">
-              <ScreenMode />
-              <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
+            <div className="flex">
               <ButtonLink
                 link="https://console.fairground.wtf/"
-                className="ml-5 hidden lg:block"
+                className="ml-5 hidden md:block lg:hidden mr-5"
                 hideArrowForExternal="true"
                 text="Trade (testnet)"
               />
+
+              <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
+
+              <div className="flex items-center">
+                <ScreenMode />
+                <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
+                <ButtonLink
+                  link="https://console.fairground.wtf/"
+                  className="ml-5 hidden lg:block"
+                  hideArrowForExternal="true"
+                  text="Trade (testnet)"
+                />
+              </div>
             </div>
           </div>
         </div>
