@@ -11,7 +11,7 @@ const CommunityCurationOfMarketsDiagramSmall = ({ className }) => {
           height="1"
         >
           <use
-            xlinkHref="#communityCurationOfMarketsSmallnBackground"
+            xlinkHref="#communityCurationOfMarketsSmallBackground"
             transform="translate(-0.0776411 -0.174408) scale(0.00205691 0.00466174)"
           />
         </pattern>
