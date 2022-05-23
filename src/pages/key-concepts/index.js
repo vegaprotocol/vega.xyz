@@ -4,6 +4,7 @@ import Container from "../../components/Container";
 import Seo from "../../components/Seo";
 import BoxTitle from "../../components/BoxTitle";
 import Sticky from "react-stickynode";
+import Parallax from "../../components/Parallax";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
 import ScrollSpy from "react-scrollspy-navigation";
@@ -48,36 +49,46 @@ const KeyConceptsPage = () => {
         title="Key Vega Concepts"
         description="Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
       />
-      <Container hideXOverflow={true} dataCy={"main"}>
+      <div datacy={"main"}>
         <div className="pt-6 md:grid md:grid-cols-12">
           <div className="hidden md:col-span-2 lg:col-span-3 xl:col-span-2 md:block">
-            <UniverseLeft className="translate-y-1/4 -translate-x-2/4 xxl:translate-x-0 scale-135" />
+            <Parallax offset={600}>
+              <UniverseLeft />
+            </Parallax>
           </div>
           <div className="md:col-span-8 lg:col-span-6 xl:col-span-8 lg:pt-16">
             <div className="max-w-[45rem] xl:max-w-[50rem] mx-auto text-center">
-              <h1 className="mb-6">
-                <BoxTitle text="Key concepts" />
-              </h1>
-              <GlitchTitle level="2" className="mb-6 title-l xl:title-xl px-3">
-                We're creating the critical infrastructure for Web3 and DeFi to
-                mature, and birth a thriving new world of finance
-              </GlitchTitle>
-              <LeadingLine className="text-current">
-                We're building a future of finance to rival, or outdo, CeFi
-                &mdash; where control of the markets, products, and fees is in
-                the community's hands.
-              </LeadingLine>
-              <LeadingLine className="text-current">
-                And the tools to create decentralised markets that give
-                centralised versions a run for their money.
-              </LeadingLine>
+              <Parallax offset={300}>
+                <h1 className="mb-6">
+                  <BoxTitle text="Key concepts" />
+                </h1>
+                <GlitchTitle
+                  level="2"
+                  className="mb-6 title-l xl:title-xl px-3"
+                >
+                  We're creating the critical infrastructure for Web3 and DeFi
+                  to mature, and birth a thriving new world of finance
+                </GlitchTitle>
+
+                <LeadingLine className="text-current">
+                  We're building a future of finance to rival, or outdo, CeFi
+                  &mdash; where control of the markets, products, and fees is in
+                  the community's hands.
+                </LeadingLine>
+                <LeadingLine className="text-current">
+                  And the tools to create decentralised markets that give
+                  centralised versions a run for their money.
+                </LeadingLine>
+              </Parallax>
             </div>
           </div>
           <div className="hidden md:col-span-2 lg:col-span-3 xl:col-span-2 md:block">
-            <UniverseRight className="translate-y-1/4 translate-x-2/4 scale-135" />
+            <Parallax offset={600}>
+              <UniverseRight />
+            </Parallax>
           </div>
         </div>
-      </Container>
+      </div>
 
       <Container>
         <div className="relative max-w-[26.25rem] mt-4 pt-[10.5rem] mx-auto text-center after:content-[''] after:absolute after:w-px dark:after:bg-white after:bg-black after:top-0 after:h-[8rem] after:left-1/2">

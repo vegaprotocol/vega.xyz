@@ -15,7 +15,6 @@ const MarketMakingDiagramLarge = ({ className }) => {
           <use
             xlinkHref="#marketMakingDiagramLargeImage"
             style={{ overflow: `visible` }}
-            s
           />
         </clipPath>
         <g
@@ -33,33 +32,6 @@ const MarketMakingDiagramLarge = ({ className }) => {
           ></image>
         </g>
       </g>
-
-      {/* <defs>
-        <path
-          id="marketMakingDiagramLargeImage"
-          d="M197.1,177h-58.3c39-14,55.1-90.7,109.2-88.5c49.3,2,67.5,67.2,105.7,88.2L197.1,177z M918.4,177.8
-			c-7.9-15.1-21.2-34.7-43-46.4c-35.9-19.3-75.2,7.8-120.2,8.9c-83,2.1-89.2-51.2-152.6-61.8c-44.5-7.4-87,22.9-113.9,99.3"
-        />
-      </defs>
-      <clipPath id="marketMakingDiagramLargeClipPath">
-        <use
-          xlinkHref="#marketMakingDiagramLargeImage"
-          style={{ overflow: `visible` }}
-        />
-      </clipPath>
-      <g
-        style={{
-          clipPath: `url(#marketMakingDiagramLargeClipPath)`,
-        }}
-      >
-        <image
-          style={{ overflow: `visible` }}
-          width="1080"
-          height="338"
-          xlinkHref="/key-concepts-background.jpg"
-          // transform="matrix(1.1722 0 0 1.1722 5.4406 -30.8621)"
-        ></image>
-      </g> */}
 
       <g className="fill-white">
         <path d="M269,97.2h-36v56.9h36V97.2z" />
