@@ -218,7 +218,7 @@ const KeyConceptsPage = () => {
               title="Permissionless market creation"
               text="The freedom to transact and create markets is central to Vega
                 delivering on the promise of blockchain and DeFi. Anyone can
-                create markets on any underlying asset &mdash; and easily
+                create markets on any underlying &mdash; and easily
                 attract liquidity with our built-in incentive mechanism that
                 matches traders and market makers."
               diagram={<PermissionlessMarketCreationDiagramResponsive />}
