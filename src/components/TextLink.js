@@ -4,13 +4,21 @@ import LinkArrow from "./Svg/LinkArrow";
 
 const TextLink = (props) => {
   const isExternal = props.to.startsWith("http");
+  const colourClass =
+    props.colour === `grey`
+      ? `text-vega-mid-grey dark:text-vega-grey`
+      : `text-black dark:text-white`;
+  const underlineClass = props.underline
+    ? `underline hover:no-underline`
+    : `hover:underline`;
+
   if (isExternal) {
     return (
       <a
         href={props.to}
         target="_blank"
         rel="noreferrer"
-        className={`${props.className} hover:underline`}
+        className={`underline-offset-1 ${props.className} ${colourClass} ${underlineClass}`}
       >
         {props.children}
         {props.to.startsWith("http") && (
@@ -22,7 +30,10 @@ const TextLink = (props) => {
     );
   } else {
     return (
-      <Link to={props.to} className={`${props.className} hover:underline`}>
+      <Link
+        to={props.to}
+        className={`underline-offset-1 ${props.className} ${colourClass} ${underlineClass}`}
+      >
         {props.children}
       </Link>
     );

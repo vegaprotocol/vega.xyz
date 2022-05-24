@@ -18,7 +18,7 @@ const NavigationDropdown = ({ section }) => {
           </div>
         </div>
 
-        <div className="w-[10.625rem] top-[3rem] absolute left-0">
+        <div className="w-[12.625rem] top-[3rem] absolute left-0">
           <ul className="hidden group-hover:block py-3 w-full text-base bg-vega-light-grey dark:bg-vega-off-black">
             {section.links.map((link, idx) => (
               <li key={idx}>

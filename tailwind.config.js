@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         "vega-off-black": "#252525",
         "vega-light-grey": "#F2F2F2",
+        "vega-grey": "#C0C0C0",
         "vega-mid-grey": "#828282",
         "vega-border-grey": "#4f4f4f",
         "vega-box-grey": "#161616",
@@ -20,6 +21,8 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            lineHeight: "1.4",
+
             p: {
               color: "#828282",
               lineHeight: "1.4",
@@ -41,6 +44,21 @@ module.exports = {
               marginTop: "2rem",
               marginBottom: "0.75rem",
               lineHeight: "1",
+            },
+          },
+        },
+        dark: {
+          css: {
+            color: "#C0C0C0",
+            li: "#C0C0C0",
+            p: {
+              color: "#C0C0C0",
+            },
+            a: {
+              color: "#C0C0C0",
+              "&:hover": {
+                color: "#C0C0C0",
+              },
             },
           },
         },

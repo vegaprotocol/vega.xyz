@@ -43,13 +43,16 @@ const PapersPage = () => {
         title="Talks"
         description="Dive in to talks and podcasts by the Vega team on crypto derivatives trading."
       />
-      <Container dataCy={'main'}>
+      <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16">
           <div className="mb-6 md:mb-16">
             <div className="mb-3">
               <BoxTitle text="Learn " />
             </div>
-            <GlitchTitle level="1" size="large">
+            <GlitchTitle
+              level="1"
+              className="title-l md:title-xxl lg:title-xxxl mb-16"
+            >
               Talks
             </GlitchTitle>
           </div>
@@ -72,9 +75,12 @@ const PapersPage = () => {
         </div>
 
         <PageSection>
-          <div className="mx-auto max-w-[44rem] text-center">
+          <div className="mx-auto max-w-[26rem] md:max-w-[44rem] text-center">
             <div className="mb-12">
-              <GlitchTitle level="2" size="medium">
+              <GlitchTitle
+                level="2"
+                className="title-m md:title-l lg:title-xxl"
+              >
                 Have an idea for an event or talk?
               </GlitchTitle>
             </div>

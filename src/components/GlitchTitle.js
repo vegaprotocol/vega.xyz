@@ -28,31 +28,15 @@ const Title = styled.div`
 
 const GlitchTitle = (props) => {
   const level = parseInt(props.level);
-  const size = props.size;
-
   const Tag = `h${level && [1, 2, 3, 4, 5, 6].includes(level) ? level : "1"}`;
-
-  const commonStyles = "mb-4 mx-auto";
-  let styles = "";
-
-  if (Array.isArray(size) && size.length === 4) {
-    styles = `${commonStyles} title-m text-[${size[0] / 16}rem] md:text-[${
-      size[1] / 16
-    }rem] lg:text-[${size[2] / 16}rem] xl:text-[${size[3] / 16}rem]`;
-  } else if (size === "large") {
-    styles = `${commonStyles} title-m md:title-xxl lg:title-xxxl`;
-  } else if (size === "medium") {
-    styles = `${commonStyles} title-m md:title-l lg:title-xxl`;
-  } else {
-    styles = `${commonStyles} title-m md:title-l`;
-  }
-
-  props.className && (styles += ` ${props.className}`);
+  const commonStyles = "title-s";
 
   return (
     <Tag>
-      <Title {...props}>
-        <div className={styles}>{props.children}</div>
+      <Title color={props.color}>
+        <div className={`${commonStyles} ${props.className}`}>
+          {props.children}
+        </div>
       </Title>
     </Tag>
   );

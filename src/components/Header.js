@@ -6,6 +6,7 @@ import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";
 import MobileMenuButton from "../components/Navigation/MobileMenuButton";
+import HeaderCta from "../components/HeaderCta";
 // import SiteBanner from "../components/SiteBanner";
 
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
@@ -42,11 +43,29 @@ const Header = () => {
 
             <Navigation />
 
-            <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
+            <div className="flex items-center">
+              {!menuIsOpen && (
+                <HeaderCta
+                  link="https://console.fairground.wtf/"
+                  text="Trade (Testnet)"
+                  className="hidden md:block lg:hidden mr-3"
+                />
+              )}
 
-            <div>
-              <ScreenMode />
-              <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
+              <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
+
+              <div className="flex items-center">
+                <ScreenMode />
+                <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
+
+                {!menuIsOpen && (
+                  <HeaderCta
+                    link="https://console.fairground.wtf/"
+                    text="Trade (Testnet)"
+                    className="ml-3 hidden lg:block"
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>
