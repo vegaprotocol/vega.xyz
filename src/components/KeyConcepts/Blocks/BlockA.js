@@ -14,7 +14,7 @@ const BlockA = (props) => {
           </div>
         </div>
         <div className="md:columns-2 md:gap-x-12 pt-6">
-          <div className="prose">{props.children}</div>
+          <div className="prose md:text-lg">{props.children}</div>
         </div>
       </div>
     </Container>

@@ -16,7 +16,7 @@ const BlockD = (props) => {
             <h2 className="title-m md:title-l pb-6 max-w-[40rem]">
               {props.title}
             </h2>
-            <div className="prose">{props.children}</div>
+            <div className="prose md:text-lg">{props.children}</div>
           </div>
         </>
       </Container>

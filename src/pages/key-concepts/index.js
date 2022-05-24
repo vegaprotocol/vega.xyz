@@ -27,6 +27,7 @@ import MarketMakingDiagram from "../../components/KeyConcepts/Diagrams/MarketMak
 import PeggedOrdersDiagram from "../../components/KeyConcepts/Diagrams/PeggedOrdersDiagram/Responsive";
 import DecentralisedNetworkDiagram from "../../components/KeyConcepts/Diagrams/DecentralisedNetworkDiagram";
 import CrossChainSupportDiagramResponsive from "../../components/KeyConcepts/Diagrams/CrossChainSupportDiagram/Responsive";
+import ScalableDefiInfrastructureDiagramResponsive from "../../components/KeyConcepts/Diagrams/ScalableDefiInfrastructureDiagram/Responsive";
 
 const KeyConceptsPage = () => {
   const sections = [
@@ -134,34 +135,22 @@ const KeyConceptsPage = () => {
       <PurposeBuiltBlock />
 
       <BlockD
-        title="Front-running protection"
+        title="Anti front-running protection"
         diagram={<FrontRunningProtectionDiagramResponsive />}
       >
         <p>
-          Vega has anti-frontrunning protection built in at the consensus layer.
-          Our pre-protocol widget, 'Wendy', provides cryptographic proof that a
-          trader has had fair access to the order book. Something not even
-          sophisticated traditional exchanges can offer.
+          Our high-throughput, low-latency platform secures transactions by
+          Tendermint, the proof-of-stake consensus layer with anti front-running
+          protection built in. The consensus algorithm ensures all nodes see the
+          same sequence of transactions, maintaining the integrity of the
+          platform and ensuring transparency and auditability of trading
+          outcomes. In this way, we can create a fair marketplace where no
+          participant can routinely gain advantage through malicious actions -
+          and market governance is decentralised. Our pre-protocol widget,
+          'Wendy', provides cryptographic proof that a trader has had fair
+          access to the order book. Something not even sophisticated traditional
+          exchanges can offer.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          Download the whitepaper
-        </TextLink>
       </BlockD>
 
       <div id="better" className="relative pt-20 md:pt-32 overflow-x-hidden">
@@ -184,12 +173,14 @@ const KeyConceptsPage = () => {
       >
         <p>
           The freedom to transact and create markets is central to Vega
-          delivering on the promise of blockchain and DeFi. Anyone can create
-          markets on any underlying asset - and easily attract liquidity with
-          our built-in incentive mechanism that matches traders and market
-          makers.
+          delivering on the promise of blockchain and DeFi. Unlike other
+          decentralised exchanges where market creation is centrally controlled,
+          with Vega, anyone can propose a market on any underlying asset - which
+          the community must then approve. They can then easily attract
+          liquidity with our built-in incentive mechanism that matches traders
+          and market makers.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
+        {/* <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
           Read more:
         </div>
         <TextLink
@@ -207,7 +198,7 @@ const KeyConceptsPage = () => {
           className="block mb-2"
         >
           Download the whitepaper
-        </TextLink>
+        </TextLink> */}
       </BlockD>
 
       <BlockD
@@ -222,25 +213,6 @@ const KeyConceptsPage = () => {
           incubating a portfolio of markets, or “buying in” to more mature
           markets.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          Download the whitepaper
-        </TextLink>
       </BlockD>
 
       <BlockA
@@ -248,40 +220,17 @@ const KeyConceptsPage = () => {
         diagram={<HighCapitalEfficiencyDiagram />}
       >
         <p>
-          Vega's live, automated cross margining significantly lowers capital
-          costs meaning markets can exist that previously wouldn't due to
-          forbidding costs. Traditional derivatives exchanges charge an initial
-          margin on open positions and then conduct a daily mark to market
-          across all traders with open positions as a way of covering their
-          risk. Instead, Vega runs SPAN-type calculations, ie it evaluates
-          overall portfolio risk by calculating the worst possible loss that a
-          portfolio of derivative and physical instruments might reasonably
-          incur. But it does this live instead of over the course of one trading
-          day. And it does this on-chain. Meanwhile, built-in cross margining
-          routes a trader's gains made on one market (realised and/or
-          unrealised), to offset positions on other markets. These combined
-          innovations open up hedging instruments to a far greater range of
-          people and businesses.
+          Vega's innovations open up hedging instruments to a far greater range
+          of people and businesses. live, automated cross margining
+          significantly lowers capital costs allowing markets to exist that
+          previously wouldn't due to cost. Vega runs SPAN-type calculations, ie
+          it evaluates overall portfolio risk by calculating the worst possible
+          loss that a portfolio of derivative and physical instruments might
+          reasonably incur. And it does this live, and on-chain, instead of over
+          the course of one trading day. Meanwhile, built-in cross margining
+          routes a trader's gains made on one market to offset positions on
+          other markets.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
-        <TextLink
-          to="/papers/vega-protocol-whitepaper.pdf"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          Download the whitepaper
-        </TextLink>
       </BlockA>
 
       <BlockB
@@ -289,22 +238,15 @@ const KeyConceptsPage = () => {
         diagram={<EfficientPriceDiscoveryDiagramResponsive />}
       >
         <p>
-          Knowing the latest and most accurate price is key to making good
-          trading decisions. Vega offers subsecond latency together with price
-          protection mechanisms/circuit breakers and auctions in low liquidity
-          regimes to discover true market prices.
+          Launch a new market on Vega, or trade, confident in the knowledge that
+          the latest and most accurate price is available to you. Unlike other
+          decentralised exchanges, we don't charge gas fees meaning better price
+          discovery. What's more, Vega offers subsecond latency together with
+          price protection mechanisms/circuit breakers and auctions in low
+          liquidity regimes to discover true market prices. Automated market
+          makers rely on other price services, whereas with Vega you can have an
+          initial offering of something that has never been traded before.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
       </BlockB>
 
       <BlockC
@@ -316,17 +258,6 @@ const KeyConceptsPage = () => {
           pseudonymous identities. In this way, the Vega network is accessible
           to anyone in the world without restriction.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
       </BlockC>
 
       <BlockD
@@ -335,55 +266,24 @@ const KeyConceptsPage = () => {
       >
         <p>
           Vega's market governance is designed so the network can operate and
-          grow freely, without manual intervention — while minimising risks
+          grow freely, without manual intervention - while minimising risks
           posed by bad actors. Weighted voting happens through the community
           allocating, or staking, their tokens to validator nodes. And decisions
           made include creation and closure of markets, and the setting of
           parameters that influence market behaviour.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
       </BlockD>
 
       <BlockD title="Dynamic margins with cross margining" diagram="">
         <p>
-          Vega protocol's rigorous framework continuously monitors whether there
-          is sufficient committed liquidity for a market — and manages credit
-          risk much more efficiently than centralised exchanges. With a
+          Vega protocol's rigorous framework continuously monitors and manages
+          credit risk much more efficiently than centralised exchanges. With a
           plugin-like architecture for risk models, it is easy to implement
           whichever risk model is appropriate for a new market. And we run
           best-in-class stochastic models fast enough to support frequent margin
-          evaluations — allowing liquidity providers to quickly take appropriate
-          action.
+          evaluations - allowing traders with positions to quickly take
+          appropriate action.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          Download the whitepaper
-        </TextLink>
       </BlockD>
 
       <BlockD
@@ -391,30 +291,12 @@ const KeyConceptsPage = () => {
         diagram={<PeggedOrdersDiagram />}
       >
         <p>
-          Track the best offer when selling a stock and the best bid when buying
-          a security, with pegged orders. This feature also enables advanced
-          trading strategies, and reduces the number of transactions needed to
-          maintain liquidity provider orders.
+          Forget worrying about latency, or manually tracking order prices. Use
+          pegged orders on any market, at any time to place orders and track
+          another price on the market. By automating this feature, Vega enables
+          advanced trading strategies, fast reaction times - while reducing the
+          number of transactions needed to maintain liquidity provider orders.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          Download the whitepaper
-        </TextLink>
       </BlockD>
 
       <BlockB
@@ -432,17 +314,6 @@ const KeyConceptsPage = () => {
           - and no black boxes - doing away with the risks that come with
           centralised servers and single points of failure and control.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
       </BlockB>
 
       <BlockD title="No gas fees on trading" diagram="">
@@ -450,28 +321,9 @@ const KeyConceptsPage = () => {
           Vega does not charge gas fees. It uses a different fee structure that
           rewards participants and stimulates trading activity. Fees are
           incurred on every trade on a market in continuous trading, but it is
-          the price taker who pays the fee. During a market's opening auction,
+          the price taker who pays the fee. During a market’s opening auction,
           no fees are collected.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          Download the whitepaper
-        </TextLink>
       </BlockD>
 
       <div id="mature" className="relative pt-20 md:pt-32 overflow-x-hidden">
@@ -496,31 +348,12 @@ const KeyConceptsPage = () => {
         <p>
           Vega lets users choose which digital asset they want to use as
           collateral, including Bitcoin, Ethereum, ERC-20 tokens, stable coins,
-          and more — though currently it only supports Ether. By making the
+          and more - though currently it only supports Ether. By making the
           protocol blockchain-agnostic, trades will be able to settle in any
           crypto-asset on a supported chain, paving the way for physically
           settled and cash settled products, as commodity and asset tokenisation
           become widespread.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          Download the whitepaper
-        </TextLink>
       </BlockD>
 
       <BlockD title="Scalable DeFi infrastructure" diagram="">
@@ -533,32 +366,13 @@ const KeyConceptsPage = () => {
           integration is so simple, you could, for example, easily create
           responsive markets to monitor various real world/spot dynamics and
           automatically propose a hedging market when volatility exceeds a
-          threshold. What’s more, you can create status quo-challenging user
+          threshold. What's more, you can create status quo-challenging user
           interfaces with WebSocket for communication between your app and the
           server, GraphQL or gRPC APIs for streaming market data. You can also
           show simple graphs of data from markets using an open source library
           (such as Vega Pennant graphing library). The possibilities are
           endless.
         </p>
-        <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-          Read more:
-        </div>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          The concepts underpinning Vega
-        </TextLink>
-        <TextLink
-          to="https://blog.vega.xyz/the-concepts-underpinning-vega-ad1d64f1a55c"
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          Download the whitepaper
-        </TextLink>
       </BlockD>
     </Layout>
   );
