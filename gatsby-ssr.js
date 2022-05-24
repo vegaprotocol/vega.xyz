@@ -38,7 +38,8 @@ void function() {
     window.__setPreferredTheme(e.matches ? 'dark' : 'light')
   })
 
-  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+  //setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+  setTheme(preferredTheme || 'dark')
 }()
     `,
       },

@@ -29,7 +29,6 @@ const PartnersBackersPage = () => {
       link: "https://medium.com/@KR1/kr1-october-update-986f8614c9fe",
     },
     { name: "Eden Block", link: "" },
-    { name: "Focus Labs", link: "" },
     {
       name: "Greenfield One",
       link: "https://medium.com/@greenfield_one/greenfield-one-backs-vega-to-develop-decentralized-derivatives-protocol-e1ec49f98cac",
