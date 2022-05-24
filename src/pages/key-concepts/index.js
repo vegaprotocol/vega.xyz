@@ -175,10 +175,10 @@ const KeyConceptsPage = () => {
           The freedom to transact and create markets is central to Vega
           delivering on the promise of blockchain and DeFi. Unlike other
           decentralised exchanges where market creation is centrally controlled,
-          with Vega, anyone can propose a market on any underlying asset - which
-          the community must then approve. They can then easily attract
-          liquidity with our built-in incentive mechanism that matches traders
-          and market makers.
+          with Vega, anyone can propose a market on any underlying - which the
+          community must then approve. They can then easily attract liquidity
+          with our built-in incentive mechanism that matches traders and market
+          makers.
         </p>
         {/* <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
           Read more:
