@@ -4,7 +4,6 @@ import Container from "../../components/Container";
 import Seo from "../../components/Seo";
 import BoxTitle from "../../components/BoxTitle";
 import Sticky from "react-stickynode";
-import Parallax from "../../components/Parallax";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
 import ScrollSpy from "react-scrollspy-navigation";
@@ -28,6 +27,8 @@ import PeggedOrdersDiagram from "../../components/KeyConcepts/Diagrams/PeggedOrd
 import DecentralisedNetworkDiagram from "../../components/KeyConcepts/Diagrams/DecentralisedNetworkDiagram";
 import CrossChainSupportDiagramResponsive from "../../components/KeyConcepts/Diagrams/CrossChainSupportDiagram/Responsive";
 import ScalableDefiInfrastructureDiagramResponsive from "../../components/KeyConcepts/Diagrams/ScalableDefiInfrastructureDiagram/Responsive";
+import NoGasFeesDiagramResponsive from "../../components/KeyConcepts/Diagrams/NoGasFeesDiagram/Responsive";
+import DynamicMarginsDiagramResponsive from "../../components/KeyConcepts/Diagrams/DynamicMarginsDiagram/Responsive";
 
 const KeyConceptsPage = () => {
   const sections = [
@@ -54,13 +55,11 @@ const KeyConceptsPage = () => {
       <div datacy={"main"}>
         <div className="pt-6 md:grid md:grid-cols-12">
           <div className="hidden md:col-span-2 lg:col-span-3 xl:col-span-2 md:block">
-            <Parallax offset={600}>
-              <UniverseLeft />
-            </Parallax>
+            <UniverseLeft />
           </div>
           <div className="md:col-span-8 lg:col-span-6 xl:col-span-8 lg:pt-16">
             <div className="max-w-[45rem] xl:max-w-[50rem] mx-auto text-center">
-              <Parallax offset={300}>
+              <Parallax offset={300} initial={0}>
                 <h1 className="mb-6">
                   <BoxTitle text="Key concepts" />
                 </h1>
@@ -85,9 +84,7 @@ const KeyConceptsPage = () => {
             </div>
           </div>
           <div className="hidden md:col-span-2 lg:col-span-3 xl:col-span-2 md:block">
-            <Parallax offset={600}>
-              <UniverseRight />
-            </Parallax>
+            <UniverseRight />
           </div>
         </div>
       </div>
@@ -274,7 +271,10 @@ const KeyConceptsPage = () => {
         </p>
       </BlockD>
 
-      <BlockD title="Dynamic margins with cross margining" diagram="">
+      <BlockD
+        title="Dynamic margins with cross margining"
+        diagram={<DynamicMarginsDiagramResponsive />}
+      >
         <p>
           Vega protocol's rigorous framework continuously monitors and manages
           credit risk much more efficiently than centralised exchanges. With a
@@ -316,12 +316,15 @@ const KeyConceptsPage = () => {
         </p>
       </BlockB>
 
-      <BlockD title="No gas fees on trading" diagram="">
+      <BlockD
+        title="No gas fees on trading"
+        diagram={<NoGasFeesDiagramResponsive />}
+      >
         <p>
           Vega does not charge gas fees. It uses a different fee structure that
           rewards participants and stimulates trading activity. Fees are
           incurred on every trade on a market in continuous trading, but it is
-          the price taker who pays the fee. During a market’s opening auction,
+          the price taker who pays the fee. During a market's opening auction,
           no fees are collected.
         </p>
       </BlockD>
@@ -356,7 +359,10 @@ const KeyConceptsPage = () => {
         </p>
       </BlockD>
 
-      <BlockD title="Scalable DeFi infrastructure" diagram="">
+      <BlockD
+        title="Scalable DeFi infrastructure"
+        diagram={<ScalableDefiInfrastructureDiagramResponsive />}
+      >
         <p>
           From providing dev-friendly APIs, to streamlining integration and
           allowing for custom creation of user-friendly front-ends, Vega makes
