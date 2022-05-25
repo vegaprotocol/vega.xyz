@@ -59,28 +59,23 @@ const KeyConceptsPage = () => {
           </div>
           <div className="md:col-span-8 lg:col-span-6 xl:col-span-8 lg:pt-16">
             <div className="max-w-[45rem] xl:max-w-[50rem] mx-auto text-center">
-              <Parallax offset={300} initial={0}>
-                <h1 className="mb-6">
-                  <BoxTitle text="Key concepts" />
-                </h1>
-                <GlitchTitle
-                  level="2"
-                  className="mb-6 title-l xl:title-xl px-3"
-                >
-                  We're creating the critical infrastructure for Web3 and DeFi
-                  to mature, and birth a thriving new world of finance
-                </GlitchTitle>
+              <h1 className="mb-6">
+                <BoxTitle text="Key concepts" />
+              </h1>
+              <GlitchTitle level="2" className="mb-6 title-l xl:title-xl px-3">
+                We're creating the critical infrastructure for Web3 and DeFi to
+                mature, and birth a thriving new world of finance
+              </GlitchTitle>
 
-                <LeadingLine className="text-current">
-                  We're building a future of finance to rival, or outdo, CeFi
-                  &mdash; where control of the markets, products, and fees is in
-                  the community's hands.
-                </LeadingLine>
-                <LeadingLine className="text-current">
-                  And the tools to create decentralised markets that give
-                  centralised versions a run for their money.
-                </LeadingLine>
-              </Parallax>
+              <LeadingLine className="text-current">
+                We're building a future of finance to rival, or outdo, CeFi
+                &mdash; where control of the markets, products, and fees is in
+                the community's hands.
+              </LeadingLine>
+              <LeadingLine className="text-current">
+                And the tools to create decentralised markets that give
+                centralised versions a run for their money.
+              </LeadingLine>
             </div>
           </div>
           <div className="hidden md:col-span-2 lg:col-span-3 xl:col-span-2 md:block">
