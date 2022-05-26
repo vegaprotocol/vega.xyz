@@ -64,6 +64,10 @@ body {
   }
 }
 
+a {
+  @apply transition-colors;
+}
+
 @layer utilities {
   /* 
    * Alpha Lyrae font uses "CALT" feature to create glitched effect.
