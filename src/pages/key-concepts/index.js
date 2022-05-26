@@ -228,6 +228,18 @@ const KeyConceptsPage = () => {
             approach of incubating a portfolio of markets, or “buying in” to
             more mature markets.
           </p>
+          <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
+            Read more about:
+          </div>
+          <p>
+            Earning liquidity rewards in the Vega blog
+            <TextLink
+              to="https://blog.vega.xyz/sushiswap-how-to-get-vega-liquidity-rewards-9848e4cadee9"
+              className="inline-block"
+            >
+              'Getting liquidity rewards'
+            </TextLink>
+          </p>
         </BlockD>
 
         <BlockA
@@ -242,9 +254,11 @@ const KeyConceptsPage = () => {
             ie it evaluates overall portfolio risk by calculating the worst
             possible loss that a portfolio of derivative and physical
             instruments might reasonably incur. And it does this live, and
-            on-chain, instead of over the course of one trading day. Meanwhile,
-            built-in cross margining routes a trader's gains made on one market
-            to offset positions on other markets.
+            on-chain, instead of over the course of one trading day.
+          </p>
+          <p>
+            Meanwhile, built-in cross margining routes a trader's gains made on
+            one market to offset positions on other markets.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more about:
@@ -260,7 +274,7 @@ const KeyConceptsPage = () => {
           </p>
           <p>
             How Vega optimises for high capital efficiency in sections 3.5 and
-            6.6 of the
+            6.6 of the Vega
             <TextLink
               to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
               className="inline-block"
@@ -312,8 +326,8 @@ const KeyConceptsPage = () => {
             Read more about:
           </div>
           <p>
-            The risk considerations behind pseudonymous environment and Vega's
-            protective measure in the Vega{" "}
+            The risk considerations behind pseudonymous environments and Vega's
+            protective measures in the Vega{" "}
             <TextLink
               to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
               className="inline-block"
