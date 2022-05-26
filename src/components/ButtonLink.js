@@ -2,7 +2,14 @@ import { Link } from "gatsby";
 import React from "react";
 import LinkArrow from "./Svg/LinkArrow";
 
-const ButtonLink = ({ text, link, color, minwidth, className }) => {
+const ButtonLink = ({
+  text,
+  link,
+  color,
+  minwidth,
+  hideArrowForExternal,
+  className,
+}) => {
   const isExternal = link.startsWith("http");
   const linkClass = `md:max-w-none group button-link relative inline-block z-10 ${className}`;
   let backgroundClass;
@@ -35,7 +42,7 @@ const ButtonLink = ({ text, link, color, minwidth, className }) => {
       <a href={link} target="_blank" rel="noreferrer" className={linkClass}>
         <div className={buttonClass}>
           {text}
-          {link.startsWith("http") && (
+          {link.startsWith("http") && !hideArrowForExternal && (
             <span className="inline-block ml-2">
               <LinkArrow />
             </span>

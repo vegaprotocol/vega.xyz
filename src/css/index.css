@@ -82,6 +82,10 @@ a {
     font-variant-ligatures: none;
   }
 
+  .font-glitch-all {
+    font-feature-settings: "ss01" on;
+  }
+
   .copy-xxs {
     /* 15px */
     @apply text-[0.9375rem];
