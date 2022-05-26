@@ -152,7 +152,7 @@ const KeyConceptsPage = () => {
             sophisticated traditional exchanges can offer.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
+            Read more about:
           </div>
           <p>
             Vega's front running protection in the papers
@@ -247,7 +247,7 @@ const KeyConceptsPage = () => {
             to offset positions on other markets.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
+            Read more about:
           </div>
           <p>
             High capital efficiency in section 3 of the Vega blog{" "}
@@ -286,7 +286,7 @@ const KeyConceptsPage = () => {
             been traded before.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
+            Read more about:
           </div>
           <p>
             Different methods of price discovery in section 5 of the Vega blog{" "}
@@ -309,7 +309,7 @@ const KeyConceptsPage = () => {
             to anyone in the world without restriction.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
+            Read more about:
           </div>
           <p>
             The risk considerations behind pseudonymous environment and Vega's
@@ -336,7 +336,7 @@ const KeyConceptsPage = () => {
             setting of parameters that influence market behaviour.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
+            Read more about:
           </div>
           <p>
             Market curation in section 3.4 of the Vega{" "}
@@ -363,7 +363,7 @@ const KeyConceptsPage = () => {
             appropriate action.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
+            Read more about:
           </div>
           <p>
             Cross margining in the Vega blog{" "}
@@ -398,7 +398,7 @@ const KeyConceptsPage = () => {
             provider orders.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
+            Read more about:
           </div>
           <p>
             Pegged orders for automated management in the Vega blog{" "}
@@ -441,7 +441,7 @@ const KeyConceptsPage = () => {
             no fees are collected.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
+            Read more about:
           </div>
           <p>
             Gas fees under 'Miner extractable value (MEV) on blockchains' on the
@@ -486,7 +486,7 @@ const KeyConceptsPage = () => {
             tokenisation become widespread.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
+            Read more about:
           </div>
           <p>
             Cross chain support and multi-chain collateral in the Vega paper
