@@ -14,7 +14,7 @@ const PurposeBuiltBlock = () => {
             </h2>
           </div>
           <div className="lg:col-span-6">
-            <div className="prose max-w-none">
+            <div className="prose dark:prose-invert max-w-none">
               <p className="md:text-lg">
                 Ethereum and other blockchains suffer slow performance since
                 they're generalist tools, with smart contracts for everything -

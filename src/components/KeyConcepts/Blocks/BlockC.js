@@ -12,7 +12,9 @@ const BlockC = (props) => {
           <div className="shrink-0 md:w-[15.625rem]">{props.diagram}</div>
         </div>
         <div className="pt-8">
-          <div className="prose max-w-none md:text-lg">{props.children}</div>
+          <div className="prose dark:prose-invert max-w-none md:text-lg">
+            {props.children}
+          </div>
         </div>
       </div>
     </Container>

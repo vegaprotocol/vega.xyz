@@ -53,7 +53,7 @@ const Jobs = (props) => {
               </div>
               <div className="md:col-span-6 lg:col-span-7">
                 <div
-                  className="prose max-w-none dark:prose-invert"
+                  className="prose dark:prose-invert max-w-none"
                   dangerouslySetInnerHTML={{
                     __html: props.data.markdownRemark.html,
                   }}
