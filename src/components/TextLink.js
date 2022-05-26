@@ -37,9 +37,7 @@ import LinkArrow from "./Svg/LinkArrow";
 const TextLink = (props) => {
   const isExternal = props.to.startsWith("http");
   const colourClass =
-    props.colour === `grey`
-      ? `text-vega-mid-grey dark:text-vega-grey`
-      : `text-black dark:text-white`;
+    props.colour === `blackwhite` ? `text-black dark:text-white` : "";
   const underlineClass = props.underline
     ? `underline hover:no-underline`
     : `hover:underline`;
@@ -54,7 +52,7 @@ const TextLink = (props) => {
       >
         {props.children}
         {props.to.startsWith("http") && (
-          <span className="inline-block ml-2 align-middle">
+          <span className="inline-block ml-1.5 mr-1.5 align-middle">
             <LinkArrow />
           </span>
         )}
