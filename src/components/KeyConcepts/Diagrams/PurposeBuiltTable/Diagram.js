@@ -44,7 +44,7 @@ const PurposeBuiltTableDiagram = () => {
         <tbody>
           {tableData.map((row, idx) => (
             <tr key={idx}>
-              <td className="text-vega-mid-grey py-5 px-10 text-center border-r border-b lg:border-r-0 border-vega-border-grey">
+              <td className="text-vega-mid-grey dark:text-vega-grey py-5 px-10 text-center border-r border-b lg:border-r-0 border-vega-border-grey">
                 {row[0]}
               </td>
               <td className="py-5 px-10 text-center border-b border-vega-border-grey">

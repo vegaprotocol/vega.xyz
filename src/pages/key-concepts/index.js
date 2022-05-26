@@ -144,31 +144,45 @@ const KeyConceptsPage = () => {
             integrity of the platform and ensuring transparency and auditability
             of trading outcomes. In this way, we can create a fair marketplace
             where no participant can routinely gain advantage through malicious
-            actions - and market governance is decentralised. Our pre-protocol
-            widget, 'Wendy', provides cryptographic proof that a trader has had
-            fair access to the order book. Something not even sophisticated
-            traditional exchanges can offer.
+            actions - and market governance is decentralised.
+          </p>
+          <p>
+            Our pre-protocol widget, 'Wendy', provides cryptographic proof that
+            a trader has had fair access to the order book. Something not even
+            sophisticated traditional exchanges can offer.
           </p>
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more:
           </div>
-          <TextLink
-            to="https://vega.xyz/papers/fairness.pdf"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About front running protection in the Vega widget white paper
-          </TextLink>
-          <TextLink
-            to="https://vega.xyz/papers/fairness.pdf"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About the evolution of Vega front running protection in the Vega
-            widget white paper pt 2
-          </TextLink>
+          <p>
+            Vega's front running protection in the papers
+            <TextLink
+              to="https://vega.xyz/papers/fairness.pdf"
+              className="inline-block"
+            >
+              'Wendy, the Good Little Fairness Widget'
+            </TextLink>{" "}
+            and{" "}
+            <TextLink
+              to="https://vega.xyz/papers/Wendy_Grows_Up.pdf"
+              className="inline-block"
+            >
+              'Wendy grows up'
+            </TextLink>
+            {"  "}
+            (development on the original research to include a framework for
+            implementation)
+          </p>
+          <p>
+            Or try out the{" "}
+            <TextLink
+              to="https://github.com/vegaprotocol/wendy/"
+              className="inline-block"
+            >
+              Wendy prototype
+            </TextLink>{" "}
+            on a simulated network
+          </p>
         </BlockD>
       </div>
 
@@ -200,25 +214,6 @@ const KeyConceptsPage = () => {
             attract liquidity with our built-in incentive mechanism that matches
             traders and market makers.
           </p>
-          <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
-          </div>
-          <TextLink
-            to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About permissionless market creation in the white paper
-          </TextLink>
-          {/* <TextLink
-          to=""
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          About market creation on the Vega
-        </TextLink> */}
         </BlockD>
 
         <BlockD
@@ -233,26 +228,6 @@ const KeyConceptsPage = () => {
             approach of incubating a portfolio of markets, or “buying in” to
             more mature markets.
           </p>
-          <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-            Read more:
-          </div>
-          <TextLink
-            to="https://blog.vega.xyz/sushiswap-how-to-get-vega-liquidity-rewards-9848e4cadee9"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About earning liquidity rewards in the Vega blog 'Getting liquidity
-            rewards'
-          </TextLink>
-          {/* <TextLink
-          to=""
-          colour="grey"
-          underline={true}
-          className="block mb-2"
-        >
-          About market creation
-        </TextLink> */}
         </BlockD>
 
         <BlockA
@@ -274,24 +249,25 @@ const KeyConceptsPage = () => {
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more:
           </div>
-          <TextLink
-            to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About high capital efficiency in point 3 of the Vega blog 'Capital
-            efficient trading with automated cross margining'
-          </TextLink>
-          <TextLink
-            to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About how Vega optimises for high capital efficiency in points 3.5
-            and 6.6 of the Vega white paper
-          </TextLink>
+          <p>
+            High capital efficiency in section 3 of the Vega blog{" "}
+            <TextLink
+              to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
+              className="inline-block"
+            >
+              Pro traders & Vega
+            </TextLink>
+          </p>
+          <p>
+            How Vega optimises for high capital efficiency in sections 3.5 and
+            6.6 of the
+            <TextLink
+              to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
+              className="inline-block"
+            >
+              whitepaper
+            </TextLink>
+          </p>
         </BlockA>
 
         <BlockB
@@ -312,15 +288,15 @@ const KeyConceptsPage = () => {
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more:
           </div>
-          <TextLink
-            to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About different methods of price discovery in point 5 of the Vega
-            blog '7 things pro traders love about Vega'
-          </TextLink>
+          <p>
+            Different methods of price discovery in section 5 of the Vega blog{" "}
+            <TextLink
+              to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
+              className="inline-block"
+            >
+              Pro traders & Vega
+            </TextLink>
+          </p>
         </BlockB>
 
         <BlockC
@@ -335,15 +311,16 @@ const KeyConceptsPage = () => {
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more:
           </div>
-          <TextLink
-            to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About the considerations behind pseudonymous environments and Vega's
-            protective measure in the Vega white paper
-          </TextLink>
+          <p>
+            The risk considerations behind pseudonymous environment and Vega's
+            protective measure in the Vega{" "}
+            <TextLink
+              to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
+              className="inline-block"
+            >
+              whitepaper
+            </TextLink>
+          </p>
         </BlockC>
 
         <BlockD
@@ -361,14 +338,15 @@ const KeyConceptsPage = () => {
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more:
           </div>
-          <TextLink
-            to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About the market curation in point 3.4 of the Vega white paper
-          </TextLink>
+          <p>
+            Market curation in section 3.4 of the Vega{" "}
+            <TextLink
+              to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
+              className="inline-block"
+            >
+              whitepaper
+            </TextLink>
+          </p>
         </BlockD>
 
         <BlockD
@@ -387,24 +365,24 @@ const KeyConceptsPage = () => {
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more:
           </div>
-          <TextLink
-            to="https://blog.vega.xyz/credit-risk-and-margins-on-vega-e72bbac06723"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About cross margining in point 5 of the Vega blog 'Credit risk &
-            margins'
-          </TextLink>
-          <TextLink
-            to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About automated cross margining in point 3 of the Vega blog 'Capital
-            efficient trading with automated cross margining'
-          </TextLink>
+          <p>
+            Cross margining in the Vega blog{" "}
+            <TextLink
+              to="https://blog.vega.xyz/credit-risk-and-margins-on-vega-e72bbac06723"
+              className="inline-block"
+            >
+              'Credit Risk and Margins on Vega'
+            </TextLink>
+          </p>
+          <p>
+            Automated cross margining in section 3 of the Vega blog{" "}
+            <TextLink
+              to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
+              className="inline-block"
+            >
+              'Pro traders & Vega'
+            </TextLink>
+          </p>
         </BlockD>
 
         <BlockD
@@ -422,15 +400,15 @@ const KeyConceptsPage = () => {
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more:
           </div>
-          <TextLink
-            to="https://blog.vega.xyz/pegged-orders-on-vega-d78e55c17bb5"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About pegged orders for automated management in the Vega blog 'How
-            pegged orders work'
-          </TextLink>
+          <p>
+            Pegged orders for automated management in the Vega blog{" "}
+            <TextLink
+              to="https://blog.vega.xyz/pegged-orders-on-vega-d78e55c17bb5"
+              className="inline-block"
+            >
+              'How pegged orders work'
+            </TextLink>
+          </p>
         </BlockD>
 
         <BlockB
@@ -465,15 +443,16 @@ const KeyConceptsPage = () => {
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more:
           </div>
-          <TextLink
-            to="https://medium.com/greenfield-one/vega-protocol-fair-access-to-efficient-resilient-derivatives-markets-dba11fe281aa"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            About gas fees under 'Miner extractable value (MEV) on blockchains'
-            on the blog Fair access to efficient derivatives markets'
-          </TextLink>
+          <p>
+            Gas fees under 'Miner extractable value (MEV) on blockchains' on the
+            blog{" "}
+            <TextLink
+              to="https://medium.com/greenfield-one/vega-protocol-fair-access-to-efficient-resilient-derivatives-markets-dba11fe281aa"
+              className="inline-block"
+            >
+              'Fair access to efficient derivatives markets'
+            </TextLink>
+          </p>
         </BlockD>
       </div>
 
@@ -509,14 +488,15 @@ const KeyConceptsPage = () => {
           <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
             Read more:
           </div>
-          <TextLink
-            to="https://vega.xyz/papers/vega-technical-overview.pdf"
-            colour="grey"
-            underline={true}
-            className="block mb-2"
-          >
-            Read about "Multi-chain collateral" in the vega technical overview
-          </TextLink>
+          <p>
+            Cross chain support and multi-chain collateral in the Vega paper
+            <TextLink
+              to="https://vega.xyz/papers/vega-technical-overview.pdf"
+              className="inline-block"
+            >
+              'Vega Technical Overview'
+            </TextLink>
+          </p>
         </BlockD>
 
         <BlockD
