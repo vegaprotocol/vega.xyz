@@ -117,7 +117,7 @@ const KeyConceptsPage = () => {
       </div>
 
       <div id="good">
-        <div className="relative mt-20 md:mt-24 overflow-x-hidden">
+        <div className="relative mt-20 md:mt-24 lg:mt-52 overflow-x-hidden">
           <div className="text-center max-w-[30rem] md:max-w-[44rem] mx-auto">
             <div className="title-l md:title-xl max-w-[25rem] md:max-w-[30rem] mx-auto mb-3">
               Be as good as CeFi
@@ -166,7 +166,7 @@ const KeyConceptsPage = () => {
             underline={true}
             className="block mb-2"
           >
-            bout the evolution of Vega front running protection in the Vega
+            About the evolution of Vega front running protection in the Vega
             widget white paper pt 2
           </TextLink>
         </BlockD>
