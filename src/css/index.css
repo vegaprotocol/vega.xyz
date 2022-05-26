@@ -64,12 +64,6 @@ body {
   }
 }
 
-@layer base {
-  p {
-    @apply text-vega-mid-grey;
-  }
-}
-
 @layer utilities {
   /* 
    * Alpha Lyrae font uses "CALT" feature to create glitched effect.
