@@ -27,6 +27,19 @@ const PurposeBuiltBlock = () => {
                 mind, using high performing, purpose-built smart contracts for
                 trading - meaning no fees on orders, and fairness at its core.
               </p>
+
+              <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
+                Read more:
+              </div>
+              <TextLink
+                to="https://blog.vega.xyz/innovating-in-decentralised-financial-markets-e7ed1fc9eca1"
+                colour="grey"
+                underline={true}
+                className="block mb-2"
+              >
+                About the importance of a purpose built blockchain for trading
+                on the Vega blog 'Innovating in decentralised financial markets'
+              </TextLink>
             </div>
           </div>
         </div>
