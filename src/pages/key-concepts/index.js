@@ -232,7 +232,7 @@ const KeyConceptsPage = () => {
             Read more about:
           </div>
           <p>
-            Earning liquidity rewards in the Vega blog
+            Earning liquidity rewards in the Vega blog{" "}
             <TextLink
               to="https://blog.vega.xyz/sushiswap-how-to-get-vega-liquidity-rewards-9848e4cadee9"
               className="inline-block"
@@ -248,7 +248,7 @@ const KeyConceptsPage = () => {
         >
           <p>
             Vega's innovations open up hedging instruments to a far greater
-            range of people and businesses. live, automated cross margining
+            range of people and businesses. Live, automated cross margining
             significantly lowers capital costs allowing markets to exist that
             previously wouldn't due to cost. Vega runs SPAN-type calculations,
             ie it evaluates overall portfolio risk by calculating the worst
@@ -400,7 +400,7 @@ const KeyConceptsPage = () => {
         </BlockD>
 
         <BlockD
-          title="Pegged order for automated order management"
+          title="Pegged orders for automated order management"
           diagram={<PeggedOrdersDiagram />}
         >
           <p>
@@ -434,7 +434,7 @@ const KeyConceptsPage = () => {
             Most decentralised exchanges use a centralised order book, and
             centrally control what can be traded. With Vega, everything from the
             order book to market creation and maintenance, liquidity provision
-            and rewards, prices, management of margin, how that position
+            and rewards, prices, management of margin and how that position
             eventually settles happen on chain as part of the network - all of
             it is managed and governed by the community. This is trading with
             full transparency - and no black boxes - doing away with the risks
@@ -526,10 +526,13 @@ const KeyConceptsPage = () => {
             integration is so simple, you could, for example, easily create
             responsive markets to monitor various real world/spot dynamics and
             automatically propose a hedging market when volatility exceeds a
-            threshold. What's more, you can create status quo-challenging user
-            interfaces with WebSocket for communication between your app and the
-            server, GraphQL or gRPC APIs for streaming market data. You can also
-            show simple graphs of data from markets using an open source library
+            threshold.
+          </p>
+          <p>
+            What's more, you can create status quo-challenging user interfaces
+            with WebSocket for communication between your app and the server,
+            GraphQL or gRPC APIs for streaming market data. You can also show
+            simple graphs of data from markets using an open source library
             (such as Vega Pennant graphing library). The possibilities are
             endless.
           </p>
