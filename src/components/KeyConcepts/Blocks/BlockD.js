@@ -13,7 +13,7 @@ const BlockD = (props) => {
       <Container>
         <>
           <div className="md:grid md:grid-cols-2 md:gap-x-12 pt-6" lang="en">
-            <h2 className="title-m md:title-l pb-6 max-w-[40rem]">
+            <h2 className="title-m md:title-l pb-6 max-w-[40rem] break-words">
               {props.title}
             </h2>
             <div className="prose dark:prose-invert md:text-lg">
