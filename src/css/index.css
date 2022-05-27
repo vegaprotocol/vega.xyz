@@ -64,14 +64,8 @@ body {
   }
 }
 
-@layer base {
-  p {
-    @apply text-vega-mid-grey;
-  }
-
-  .dark p {
-    @apply text-vega-grey;
-  }
+a {
+  @apply transition-colors;
 }
 
 @layer utilities {

@@ -7,6 +7,9 @@ module.exports = {
       backgroundImage: {
         "four-oh-four": "url('/404.png')",
       },
+      opacity: {
+        15: ".15",
+      },
       colors: {
         "vega-off-black": "#252525",
         "vega-light-grey": "#F2F2F2",
@@ -18,23 +21,52 @@ module.exports = {
         "vega-mint": "#00F780",
         "vega-pink": "#FF077F",
       },
-      typography: {
-        DEFAULT: {
+      typography: (theme) => ({
+        gray: {
           css: {
+            "--tw-prose-body": theme("colors.vega-mid-grey"),
+            "--tw-prose-headings": theme("colors.vega-mid-grey"),
+            "--tw-prose-lead": theme("colors.vega-mid-grey"),
+            "--tw-prose-links": theme("colors.vega-mid-grey"),
+            "--tw-prose-bold": theme("colors.vega-mid-grey"),
+            "--tw-prose-counters": theme("colors.vega-mid-grey"),
+            "--tw-prose-bullets": theme("colors.vega-mid-grey"),
+            "--tw-prose-hr": theme("colors.vega-mid-grey"),
+            "--tw-prose-quotes": theme("colors.vega-mid-grey"),
+            "--tw-prose-quote-borders": theme("colors.vega-mid-grey"),
+            "--tw-prose-captions": theme("colors.vega-mid-grey"),
+            "--tw-prose-code": theme("colors.vega-mid-grey"),
+            "--tw-prose-pre-code": theme("colors.vega-mid-grey"),
+            "--tw-prose-pre-bg": theme("colors.vega-mid-grey"),
+            "--tw-prose-th-borders": theme("colors.vega-mid-grey"),
+            "--tw-prose-td-borders": theme("colors.vega-mid-grey"),
+            "--tw-prose-invert-body": theme("colors.vega-grey"),
+            "--tw-prose-invert-headings": theme("colors.vega-grey"),
+            "--tw-prose-invert-lead": theme("colors.vega-grey"),
+            "--tw-prose-invert-links": theme("colors.vega-grey"),
+            "--tw-prose-invert-bold": theme("colors.vega-grey"),
+            "--tw-prose-invert-counters": theme("colors.vega-grey"),
+            "--tw-prose-invert-bullets": theme("colors.vega-grey"),
+            "--tw-prose-invert-hr": theme("colors.vega-grey"),
+            "--tw-prose-invert-quotes": theme("colors.vega-grey"),
+            "--tw-prose-invert-quote-borders": theme("colors.vega-grey"),
+            "--tw-prose-invert-captions": theme("colors.vega-grey"),
+            "--tw-prose-invert-code": theme("colors.vega-grey"),
+            "--tw-prose-invert-pre-code": theme("colors.vega-grey"),
+            "--tw-prose-invert-pre-bg": theme("colors.vega-grey"),
+            "--tw-prose-invert-th-borders": theme("colors.vega-grey"),
+            "--tw-prose-invert-td-borders": theme("colors.vega-grey"),
             lineHeight: "1.4",
 
             p: {
-              color: "#828282",
               lineHeight: "1.4",
             },
             a: {
-              color: "#828282",
               "&:hover": {
                 color: "#FF077F !important",
               },
             },
             li: {
-              color: "#828282",
               lineHeight: "1.4",
             },
             h2: {
@@ -47,22 +79,7 @@ module.exports = {
             },
           },
         },
-        dark: {
-          css: {
-            color: "#C0C0C0",
-            li: "#C0C0C0",
-            p: {
-              color: "#C0C0C0",
-            },
-            a: {
-              color: "#C0C0C0",
-              "&:hover": {
-                color: "#C0C0C0",
-              },
-            },
-          },
-        },
-      },
+      }),
     },
   },
   plugins: [

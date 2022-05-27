@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../../components/Container";
 import DropdownArrow from "../Svg/DropdownArrow.js";
 import Sticky from "react-stickynode";
-import ScrollSpy from "react-scrollspy-navigation";
+import ScrollSpy from "react-scrollspy";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const JumpNavigation = ({ pageTitle, pageSlug, sections, current }) => {

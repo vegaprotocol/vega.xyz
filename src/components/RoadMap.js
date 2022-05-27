@@ -100,7 +100,7 @@ const RoadMap = (props) => {
           ))}
         </div>
 
-        <div className="flex relative mt-12 justify-between after:contet-none after:absolute after:left-0 after:right-0 after:top-[24px] after:h-px dark:after:bg-white after:bg-black after:z-10">
+        <div className="flex relative mt-12 justify-between after:content-[''] after:absolute after:left-0 after:right-0 after:top-[24px] after:h-px dark:after:bg-white after:bg-black after:z-10">
           <button className="mt-12" onClick={previousBlock}>
             <svg
               width="53"

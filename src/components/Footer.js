@@ -205,21 +205,13 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex items-center gap-x-5 gap-y-1 flex-wrap">
-              <TextLink
-                to="https://github.com/vegaprotocol/brand"
-                className="text-vega-mid-grey"
-              >
+              <TextLink to="https://github.com/vegaprotocol/brand">
                 Brand assets
               </TextLink>
-              <TextLink
-                to="https://github.com/vegaprotocol/"
-                className="text-vega-mid-grey"
-              >
+              <TextLink to="https://github.com/vegaprotocol/">
                 Contribute to Vega
               </TextLink>
-              <TextLink to="/privacy/" className="text-vega-mid-grey">
-                Privacy & Cookie Policy
-              </TextLink>
+              <TextLink to="/privacy/">Privacy & Cookie Policy</TextLink>
             </div>
           </div>
         </Container>

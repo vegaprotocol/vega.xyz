@@ -55,7 +55,9 @@ const Talk = ({ talk }) => {
 
       <div
         ref={containerRef}
-        className={`long-text w-full mb-3 prose ${clamped && "line-clamp-4"}`}
+        className={`long-text w-full mb-3 prose dark:prose-invert ${
+          clamped && "line-clamp-4"
+        }`}
       >
         <div dangerouslySetInnerHTML={{ __html: talk.html }} />
         {talk.frontmatter.links &&

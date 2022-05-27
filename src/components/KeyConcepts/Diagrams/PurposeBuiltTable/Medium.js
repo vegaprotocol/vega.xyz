@@ -73,7 +73,6 @@ const PurposeBuiltTableDiagramMedium = ({ className }) => {
         <rect x="614.5" y="126.1" width="1.7" height="1.7" />
         <rect x="612.7" y="124.3" width="1.7" height="1.7" />
         <rect x="616.2" y="124.4" width="1.7" height="1.7" />
-        <polyline points="708,137.7 0,137.7 0,139.7 708,139.7 	" />
       </g>
       <g fill="#fff">
         <path d="M601.2,59.3h-36v56.9h36V59.3z" />
@@ -87,8 +86,8 @@ const PurposeBuiltTableDiagramMedium = ({ className }) => {
             height="25.3"
           />
           <g>
-            <polyline points="281.4,138.7 281.4,57.1 256.1,57.1 256.1,138.7 			" />
-            <polyline points="296.9,138.7 296.9,113.4 215.4,113.4 215.4,138.7 			" />
+            <polyline points="281.4,138.7 281.4,57.1 256.1,57.1 256.1,138.7" />
+            <polyline points="296.9,138.7 296.9,113.4 215.4,113.4 215.4,138.7" />
             <g>
               <rect
                 x="151.3"
@@ -137,7 +136,7 @@ const PurposeBuiltTableDiagramMedium = ({ className }) => {
                   width="14.8"
                   height="37.8"
                 />
-                <polyline points="153.4,138.8 153.7,101 138.9,100.9 138.6,138.7 					" />
+                <polyline points="153.4,138.8 153.7,101 138.9,100.9 138.6,138.7" />
               </g>
             </g>
           </g>
