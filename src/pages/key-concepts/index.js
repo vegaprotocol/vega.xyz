@@ -52,7 +52,7 @@ const KeyConceptsPage = () => {
         title="Key Vega Concepts"
         description="Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
       />
-      <div datacy={"main"}>
+      <div>
         <div className="pt-6 md:grid md:grid-cols-12">
           <div className="hidden md:col-span-2 lg:col-span-3 xl:col-span-2 md:block">
             <UniverseLeft />
@@ -84,7 +84,7 @@ const KeyConceptsPage = () => {
         </div>
       </div>
 
-      <Container>
+      <Container dataCy={"main"}>
         <div className="relative max-w-[26.25rem] mt-4 pt-[10.5rem] mx-auto text-center after:content-[''] after:absolute after:w-px dark:after:bg-white after:bg-black after:top-0 after:h-[8rem] after:left-1/2">
           <h2 className="title-m mb-6">Vega is designed to:</h2>
         </div>
