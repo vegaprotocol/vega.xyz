@@ -2,7 +2,11 @@ import React from "react";
 import Small from "./Small";
 import Medium from "./Medium";
 import Large from "./Large";
-import { MQLarge, MQMedium, MQSmall } from "../../../../utils/media-queries.js";
+import {
+  MQLargeUp,
+  MQMedium,
+  MQSmall,
+} from "../../../../utils/media-queries.js";
 
 const NoGasFeesDiagramResponsive = () => {
   return (
@@ -13,9 +17,9 @@ const NoGasFeesDiagramResponsive = () => {
       <MQMedium>
         <Medium />
       </MQMedium>
-      <MQLarge>
+      <MQLargeUp>
         <Large />
-      </MQLarge>
+      </MQLargeUp>
     </div>
   );
 };
