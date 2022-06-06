@@ -534,7 +534,7 @@ const WalletPage = () => {
 
               <ButtonLink
                 text="Get the CLI App"
-                link="https://docs.vega.xyz/docs/mainnet/tools/vega-wallet/cli-wallet/"
+                link="https://docs.vega.xyz/docs/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet/"
               />
             </Container>
           </div>
