@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
-import Arrow from "../../components/Svg/Arrow";
-import GovernanceResponsive from "../../components/Svg/Governance/Responsive";
+import GovernanceResponsive from "../../components/Svg/Governance/Hero/Responsive";
 import PageSection from "../../components/PageSection";
 import BoxTitle from "../../components/BoxTitle";
+import TextLink from "../../components/TextLink";
+import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
 import ForumIcon from "../../images/governance-icon-forum.png";
 import TokenInterfaceIcon from "../../images/governance-icon-token.png";
 import MakeProposalIcon from "../../images/governance-icon-proposal.png";
-import TextLink from "../../components/TextLink";
+import Accordion from "../../components/Accordion/Accordion";
+import Arrow from "../../components/Svg/Arrow";
+import VotingIllustration from "../../components/Svg/Governance/Voting";
 
 const governanceProcess = [
   {
@@ -73,7 +76,9 @@ const GovernanceTool = ({ icon, title, link, text, type }) => {
   return (
     <div className="border border-current p-6 relative">
       <img src={icon} className="mb-6" width="96" height="96" alt={title} />
-      <div className="uppercase title-s mb-4">{title}</div>
+      <TextLink className="title-s block mb-4" to={link}>
+        {title}
+      </TextLink>
       <div className="md:copy-xs text-vega-mid-grey">{text}</div>
       <div className="border border-current uppercase copy-xxs inline-block px-3 font-light">
         {type}
@@ -84,6 +89,8 @@ const GovernanceTool = ({ icon, title, link, text, type }) => {
 };
 
 const GovernancePage = () => {
+  const [accordionSection, setAccordionSection] = useState(0);
+
   return (
     <Layout>
       <Seo
@@ -117,28 +124,28 @@ const GovernancePage = () => {
 
       <Container>
         <PageSection>
-          <h2 className="text-center title-s md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto">
+          <h2 className="text-center title-m md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto">
             Governance Tools
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 lg:gap-12 my-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-12 mt-10 md:mt-20">
             <GovernanceTool
               icon={ForumIcon}
               title="Forum"
-              link=""
+              link="https://community.vega.xyz/c/governance/25"
               text="Discuss governance and governance proposals on Vega networks."
               type="Tool"
             />
             <GovernanceTool
               icon={TokenInterfaceIcon}
               title="Token interface"
-              link=""
+              link="https://token.vega.xyz/governance"
               text="Signal your support for a validator by staking tokens, create, submit and vote on governance actions and  proposals for network parameters, markets and assets."
               type="DAPP"
             />
             <GovernanceTool
               icon={MakeProposalIcon}
               title="Make a proposal"
-              link=""
+              link="https://docs.fairground.vega.xyz/docs/api-howtos/create-market/"
               text="Create and submit a proposal for a new market, change to network parameters, community and assets using Vega APIs."
               type="DOCS"
             />
@@ -146,50 +153,58 @@ const GovernancePage = () => {
         </PageSection>
 
         <PageSection>
-          <h2 className="title-s md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto">
+          <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-none mx-auto">
             Governance process
           </h2>
 
-          <div className="border-t border-current">
-            {governanceProcess.map((process, idx) => (
-              <div className="py-5 border-b border-vega-mid-grey">
-                <div className="grid grid-cols-12 title-s">
-                  <div className="col-span-3 text-vega-mid-grey">
-                    {process.phase}
-                  </div>
-                  <div className="col-span-9 flex justify-between items-center">
-                    <div>{process.title}</div>
-                    <Arrow />
-                  </div>
-                </div>
-                <div className="h-0 overflow-hidden">
-                  <div className="grid grid-cols-12 pt-4">
-                    <div className="col-span-3"></div>
-                    <div className="col-span-9">
-                      <div className="copy-xs mb-6 text-vega-grey">
-                        {process.text}
-                      </div>
-                      {process.links && (
-                        <div className="uppercase font-light copy-xxs !mb-2 mt-8">
-                          Read more:
-                        </div>
-                      )}
+          <Accordion data={governanceProcess} />
+        </PageSection>
 
-                      {process.links &&
-                        process.links.map((link, idx2) => (
-                          <TextLink
-                            to={link.url}
-                            className="text-vega-mid-grey mr-8 copy-xs"
-                            underline={true}
-                          >
-                            {link.title}
-                          </TextLink>
-                        ))}
-                    </div>
-                  </div>
-                </div>
+        <PageSection>
+          <h2 className="title-m md:title-l lg:title-xl text-center mb-12">
+            Get started voting
+          </h2>
+
+          <div className="max-w-[31.25rem] mx-auto relative top-[3px]">
+            <VotingIllustration />
+          </div>
+
+          <div className="border-2 border-current grid grid-cols-1 md:grid-cols-3 text-center">
+            <div className="relative border-b-2 border-current md:border-b-0  md:border-r-2 p-12 md:p-6 lg:p-12">
+              <div className="title-s mb-6">Get $VEGA tokens</div>
+              <div className="lg:prose-lg">
+                <p className="copy-xxs lg:copy-xs">
+                  And store in an Ethereum wallet. You can purchase VEGA using
+                  Ethereum (ETH) on decentralized exchanges.
+                </p>
               </div>
-            ))}
+              <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg] bg-white dark:bg-black p-3">
+                <Arrow />
+              </div>
+            </div>
+            <div className="relative border-b-2 border-current md:border-b-0 md:border-r-2 p-12 md:p-6 lg:p-12">
+              <div className="title-s mb-6">Get a Vega Wallet</div>
+              <div className="lg:prose-lg mb-6">
+                <p className="copy-xxs lg:copy-xs">
+                  A Vega wallet is used to access and sign transactions and
+                  connect to any dApp running on Vega.
+                </p>
+              </div>
+              <ButtonLink link="/wallet" text="Get a Vega Wallet" />
+              <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg] bg-white dark:bg-black p-3">
+                <Arrow />
+              </div>
+            </div>
+            <div className="relative border-current p-12 md:p-6 lg:p-12">
+              <div className="title-s mb-6">Vote on proposals</div>
+              <div className="mb-6">
+                <p className="copy-xxs lg:copy-xs">Use our governance tools.</p>
+                <p className="copy-xxs lg:copy-xs">
+                  Note, you'll need some ETH to pay any transaction fees.
+                </p>
+              </div>
+              <ButtonLink link="https://vega.xyz" text="Governance tools" />
+            </div>
           </div>
         </PageSection>
       </Container>

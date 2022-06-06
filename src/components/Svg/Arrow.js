@@ -1,6 +1,6 @@
 import React from "react";
 
-const Arrow = ({ className }) => {
+const Arrow = (props) => {
   return (
     <svg
       width="18"
@@ -8,6 +8,7 @@ const Arrow = ({ className }) => {
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g fill="currentColor">
         <path d="M10 18L10 0L8 -8.74228e-08L8 18L10 18Z" />

@@ -1,5 +1,5 @@
 import React from "react";
-import VideoBackground from "../VideoBackground";
+import VideoBackground from "../../VideoBackground";
 
 const Medium = () => {
   return (

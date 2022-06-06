@@ -8,7 +8,7 @@ import {
   MQLarge,
   MQMedium,
   MQSmall,
-} from "../../../utils/media-queries.js";
+} from "../../../../utils/media-queries.js";
 
 const GovernanceResponsive = () => {
   return (
