@@ -5,13 +5,19 @@ import AccordionSection from "./AccordionSection";
 const Accordion = ({ data }) => {
   const [accordionSection, setAccordionSection] = useState(0);
 
+  const setAccordionSectionFn = (idx) => {
+    idx === accordionSection
+      ? setAccordionSection(null)
+      : setAccordionSection(idx);
+  };
+
   return (
     <div className="border-t border-current">
       {data.map((item, idx) => (
         <div className="py-5 border-b border-vega-mid-grey" key={idx}>
           <button
             className="grid grid-cols-12 gap-x-3 title-s w-full text-left"
-            onClick={() => setAccordionSection(idx)}
+            onClick={() => setAccordionSectionFn(idx)}
           >
             <div className="col-span-1 md:col-span-3 text-vega-mid-grey">
               <div className="hidden md:block">{item.phase}</div>

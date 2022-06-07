@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
@@ -99,8 +99,6 @@ const GovernanceTool = ({ icon, title, link, text, type }) => {
 };
 
 const GovernancePage = () => {
-  const [accordionSection, setAccordionSection] = useState(0);
-
   return (
     <Layout>
       <Seo
