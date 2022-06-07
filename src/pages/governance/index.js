@@ -69,7 +69,7 @@ const governanceProcess = [
     links: [
       {
         title: "Vote for propoals",
-        url: "https://token.vega.xyz/",
+        url: "https://token.vega.xyz/governance",
       },
     ],
     image: <Phase4 />,
