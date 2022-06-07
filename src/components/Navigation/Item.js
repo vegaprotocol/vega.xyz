@@ -9,7 +9,7 @@ const NavigationItem = ({ item }) => {
           href={item.link}
           target="_blank"
           rel="noreferrer"
-          className="transition-colors inline-block px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
+          className="transition-colors inline-block px-3 xl:px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
           activeClassName="underline underline-offset-8 decoration-2"
         >
           {item.text}
@@ -18,7 +18,7 @@ const NavigationItem = ({ item }) => {
         <div>
           <Link
             to={item.link}
-            className="transition-colors inline-block px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
+            className="transition-colors inline-block px-3 xl:px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
             activeClassName="underline underline-offset-8 decoration-2"
           >
             {item.text}
