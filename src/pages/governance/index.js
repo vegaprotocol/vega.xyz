@@ -25,7 +25,7 @@ const governanceProcess = [
   {
     phase: "Phase 1",
     title: "Sense check",
-    text: "Share an outline of your proposed action informally on Discord and in the forum. Get an idea of whether there is support for the proposal and refine your plans to be able to find out if there is sufficient interest in making a change.",
+    text: "Share an outline of your proposed action on the forum. Get an idea of whether there is support for the proposal and refine your plans to be able to find out if there is sufficient interest in making a change.",
     links: [
       {
         title: "Chat on Discord",
@@ -116,7 +116,7 @@ const GovernancePage = () => {
             color="red"
             className="title-m md:title-l lg:title-xl mb-4 md:mb-6 mt-4 text-center"
           >
-            The Vega Protocol is owned and governed by Vega token holders
+            The Vega Protocol is governed by VEGA token holders
           </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
