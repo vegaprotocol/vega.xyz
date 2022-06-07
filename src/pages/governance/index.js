@@ -134,7 +134,10 @@ const GovernancePage = () => {
 
       <Container>
         <PageSection>
-          <h2 className="text-center title-m md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto">
+          <h2
+            className="text-center title-m md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto"
+            id="governanceTools"
+          >
             Governance Tools
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-12 mt-10 md:mt-20">
@@ -213,7 +216,7 @@ const GovernancePage = () => {
                   Note, you'll need some ETH to pay any transaction fees.
                 </p>
               </div>
-              <ButtonLink link="https://vega.xyz" text="Governance tools" />
+              <ButtonLink link="#governanceTools" text="Governance tools" />
             </div>
           </div>
         </PageSection>
