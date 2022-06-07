@@ -15,6 +15,11 @@ import MakeProposalIcon from "../../images/governance-icon-proposal.png";
 import Accordion from "../../components/Accordion/Accordion";
 import Arrow from "../../components/Svg/Arrow";
 import VotingIllustration from "../../components/Svg/Governance/Voting";
+import Phase1 from "../../components/Svg/Governance/Process/Phase1";
+import Phase2 from "../../components/Svg/Governance/Process/Phase2";
+import Phase3 from "../../components/Svg/Governance/Process/Phase3";
+import Phase4 from "../../components/Svg/Governance/Process/Phase4";
+import Phase5 from "../../components/Svg/Governance/Process/Phase5";
 
 const governanceProcess = [
   {
@@ -27,6 +32,7 @@ const governanceProcess = [
         url: "https://discord.com/invite/3hQyGgZ",
       },
     ],
+    image: <Phase1 />,
   },
   {
     phase: "Phase 2",
@@ -42,6 +48,7 @@ const governanceProcess = [
         url: "https://community.vega.xyz/c/governance/25",
       },
     ],
+    image: <Phase2 />,
   },
   {
     phase: "Phase 3",
@@ -53,6 +60,7 @@ const governanceProcess = [
         url: "https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol/#governance",
       },
     ],
+    image: <Phase3 />,
   },
   {
     phase: "Phase 4",
@@ -64,11 +72,13 @@ const governanceProcess = [
         url: "https://token.vega.xyz/",
       },
     ],
+    image: <Phase4 />,
   },
   {
     phase: "Phase 5",
     title: "Apply changes",
     text: "If a proposal receives enough votes within the enactment period, the network parameters automatically change (except for a free form proposal)",
+    image: <Phase5 />,
   },
 ];
 
@@ -97,19 +107,19 @@ const GovernancePage = () => {
         title="Governance"
         description="Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject."
       />
+
       <Container dataCy={"main"}>
         <div className="max-w-[61rem] mx-auto text-center pt-6 lg:pt-24">
           <h1>
             <BoxTitle text="Governance" />
           </h1>
-          <h2 className="text-center">
-            <GlitchTitle
-              color="red"
-              className="title-m md:title-l lg:title-xl mb-4 md:mb-6 mt-4"
-            >
-              The Vega Protocol is owned and governed by Vega token holders
-            </GlitchTitle>
-          </h2>
+          <GlitchTitle
+            level="2"
+            color="red"
+            className="title-m md:title-l lg:title-xl mb-4 md:mb-6 mt-4 text-center"
+          >
+            The Vega Protocol is owned and governed by Vega token holders
+          </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">

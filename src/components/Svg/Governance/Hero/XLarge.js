@@ -128,8 +128,8 @@ const XLarge = () => {
           <path d="M400.1,227.9h-24.7v30.2h24.7V227.9z" />
         </g>
         <g className="fill-vega-pink">
-          <path class="st3" d="M616.6,227.6h-24.7v30.2h24.7V227.6z" />
-          <path class="st3" d="M1174.4,226.9h-24.7v30.2h24.7V226.9z" />
+          <path d="M616.6,227.6h-24.7v30.2h24.7V227.6z" />
+          <path d="M1174.4,226.9h-24.7v30.2h24.7V226.9z" />
         </g>
         <g className="dark:fill-white fill-black">
           <path d="M604.1,116.6h-2.6v2.6h2.6V116.6z" />

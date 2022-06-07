@@ -8,7 +8,7 @@ const Accordion = ({ data }) => {
   return (
     <div className="border-t border-current">
       {data.map((item, idx) => (
-        <div className="py-5 border-b border-vega-mid-grey">
+        <div className="py-5 border-b border-vega-mid-grey" key={idx}>
           <button
             className="grid grid-cols-12 gap-x-3 title-s w-full text-left"
             onClick={() => setAccordionSection(idx)}
@@ -19,12 +19,15 @@ const Accordion = ({ data }) => {
             </div>
             <div className="col-span-11 md:col-span-9 flex justify-between items-center">
               <div>{item.title}</div>
-              <Arrow />
+              <Arrow
+                className={`${idx === accordionSection ? "rotate-180" : ""}`}
+              />
             </div>
           </button>
           <AccordionSection
             text={item.text}
             links={item.links}
+            image={item.image}
             open={idx === accordionSection}
           />
         </div>

@@ -127,8 +127,8 @@ const Large = () => {
           <path d="M107.4,189.1H86.9v25.1h20.6L107.4,189.1L107.4,189.1z" />
         </g>
         <g className="fill-vega-pink">
-          <path class="st3" d="M287.5,188.8h-20.6v25.1h20.6V188.8z" />
-          <path class="st3" d="M751.4,188.3h-20.6v25.1h20.6V188.3z" />
+          <path d="M287.5,188.8h-20.6v25.1h20.6V188.8z" />
+          <path d="M751.4,188.3h-20.6v25.1h20.6V188.3z" />
         </g>
         <g className="dark:fill-white fill-black">
           <path d="M277.1,96.5h-2.2v2.2h2.2V96.5z" />
