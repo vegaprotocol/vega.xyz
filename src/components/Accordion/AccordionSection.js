@@ -11,11 +11,6 @@ const AccordionSection = ({ text, links, image, open }) => {
             <div className="copy-xs mb-6 prose dark:prose-invert max-w-none">
               {text}
             </div>
-            {links && (
-              <div className="uppercase font-light copy-xxs !mb-2 mt-8">
-                Read more:
-              </div>
-            )}
 
             {links &&
               links.map((link, idx2) => (
