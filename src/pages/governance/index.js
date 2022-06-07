@@ -89,7 +89,7 @@ const GovernanceTool = ({ icon, title, link, text, type }) => {
       <TextLink className="title-s block mb-4" to={link}>
         {title}
       </TextLink>
-      <div className="md:copy-xs text-vega-mid-grey">{text}</div>
+      <div className="copy-xs text-vega-mid-grey">{text}</div>
       <div className="border border-current uppercase copy-xxs inline-block px-3 font-light">
         {type}
       </div>
