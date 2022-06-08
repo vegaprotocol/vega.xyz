@@ -17,6 +17,10 @@ export const SiteNavigation = [
     link: "/community/",
   },
   {
+    text: "Governance",
+    link: "/governance/",
+  },
+  {
     text: "Develop",
     link: "/develop/",
   },

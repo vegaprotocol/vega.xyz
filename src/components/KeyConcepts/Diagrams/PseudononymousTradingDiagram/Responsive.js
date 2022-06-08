@@ -1,7 +1,11 @@
 import React from "react";
 import Small from "./Small";
 import Medium from "./Medium";
-import { MQLarge, MQMedium, MQSmall } from "../../../../utils/media-queries.js";
+import {
+  MQLargeUp,
+  MQMedium,
+  MQSmall,
+} from "../../../../utils/media-queries.js";
 
 const PseudononymousTradingDiagramResponsive = () => {
   return (
@@ -12,9 +16,9 @@ const PseudononymousTradingDiagramResponsive = () => {
       <MQMedium>
         <Medium />
       </MQMedium>
-      <MQLarge>
+      <MQLargeUp>
         <Medium />
-      </MQLarge>
+      </MQLargeUp>
     </div>
   );
 };

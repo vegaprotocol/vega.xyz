@@ -2,25 +2,32 @@ import React from "react";
 import Small from "./Small";
 import Medium from "./Medium";
 import Large from "./Large";
+import XLarge from "./XLarge";
 import {
-  MQLargeUp,
+  MQXLarge,
+  MQLarge,
   MQMedium,
   MQSmall,
 } from "../../../../utils/media-queries.js";
 
-const PermissionlessMarketCreationDiagramResponsive = () => {
+const GovernanceResponsive = () => {
   return (
     <div>
       <MQSmall>
-        <Small className="max-w-[17rem] mx-auto" />
+        <Small />
       </MQSmall>
       <MQMedium>
         <Medium />
       </MQMedium>
-      <MQLargeUp>
+      <MQLarge>
         <Large />
-      </MQLargeUp>
+      </MQLarge>
+      <MQXLarge>
+        <div className="max-w-[100rem] mx-auto">
+          <XLarge />
+        </div>
+      </MQXLarge>
     </div>
   );
 };
-export default PermissionlessMarketCreationDiagramResponsive;
+export default GovernanceResponsive;
