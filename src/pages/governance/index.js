@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
@@ -85,7 +84,12 @@ const governanceProcess = [
 
 const GovernanceTool = ({ icon, title, link, text, type }) => {
   return (
-    <Link to={link} className="block group relative">
+    <a
+      href={link}
+      className="block group relative"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className="group-hover:-translate-y-2 border border-current p-6 relative h-full dark:bg-black bg-white">
         <img src={icon} className="mb-6" width="96" height="96" alt={title} />
         <div className="title-s block mb-4">{title}</div>
@@ -95,7 +99,7 @@ const GovernanceTool = ({ icon, title, link, text, type }) => {
         </div>
       </div>
       <div className="group-hover:block hidden border-b border-l border-r border-current absolute bottom-0 left-0 right-0 h-3" />
-    </Link>
+    </a>
   );
 };
 
