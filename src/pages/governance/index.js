@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import GovernanceResponsive from "../../components/Svg/Governance/Hero/Responsive";
 import PageSection from "../../components/PageSection";
 import BoxTitle from "../../components/BoxTitle";
-import TextLink from "../../components/TextLink";
+//import TextLink from "../../components/TextLink";
 import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
@@ -84,17 +85,17 @@ const governanceProcess = [
 
 const GovernanceTool = ({ icon, title, link, text, type }) => {
   return (
-    <div className="border border-current p-6 relative">
-      <img src={icon} className="mb-6" width="96" height="96" alt={title} />
-      <TextLink className="title-s block mb-4" to={link}>
-        {title}
-      </TextLink>
-      <div className="copy-xs text-vega-mid-grey">{text}</div>
-      <div className="border border-current uppercase copy-xxs inline-block px-3 font-light">
-        {type}
+    <Link to={link} className="block group relative">
+      <div className="group-hover:-translate-y-2 border border-current p-6 relative h-full dark:bg-black bg-white">
+        <img src={icon} className="mb-6" width="96" height="96" alt={title} />
+        <div className="title-s block mb-4">{title}</div>
+        <div className="copy-xs text-vega-mid-grey">{text}</div>
+        <div className="border border-current uppercase copy-xxs inline-block px-3 font-light">
+          {type}
+        </div>
       </div>
-      <div className="border-t border-current absolute bottom-1.5 left-0 right-0 h-px" />
-    </div>
+      <div className="group-hover:block hidden border-b border-l border-r border-current absolute bottom-0 left-0 right-0 h-3" />
+    </Link>
   );
 };
 
@@ -138,7 +139,7 @@ const GovernancePage = () => {
           >
             Governance Tools
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-12 mt-10 md:mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-10 mt-10 md:mt-20 max-w-[75rem] mx-auto">
             <GovernanceTool
               icon={ForumIcon}
               title="Forum"
