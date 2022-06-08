@@ -29,8 +29,8 @@ const governanceProcess = [
     text: "Share an outline of your proposed action on the forum. Get an idea of whether there is support for the proposal and refine your plans to be able to find out if there is sufficient interest in making a change.",
     links: [
       {
-        title: "Chat on Discord",
-        url: "https://discord.com/invite/3hQyGgZ",
+        title: "Start a topic on the forum",
+        url: "https://community.vega.xyz/c/governance/25",
       },
     ],
     image: <Phase1 />,
