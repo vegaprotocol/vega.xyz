@@ -21,6 +21,7 @@ import Phase2 from "../../components/Svg/Governance/Process/Phase2";
 import Phase3 from "../../components/Svg/Governance/Process/Phase3";
 import Phase4 from "../../components/Svg/Governance/Process/Phase4";
 import Phase5 from "../../components/Svg/Governance/Process/Phase5";
+import Proposals from "../../components/Proposals";
 
 const governanceProcess = [
   {
@@ -218,6 +219,10 @@ const GovernancePage = () => {
               <ButtonLink link="#governanceTools" text="Governance tools" />
             </div>
           </div>
+        </PageSection>
+
+        <PageSection>
+          <Proposals />
         </PageSection>
       </Container>
     </Layout>

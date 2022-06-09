@@ -83,5 +83,11 @@ module.exports = {
         username: `vegaprotocol`,
       },
     },
+    {
+      resolve: `gatsby-plugin-apollo`,
+      options: {
+        uri: "https://lb.testnet.vega.xyz/query",
+      },
+    },
   ],
 };
