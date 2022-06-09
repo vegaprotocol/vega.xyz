@@ -26,7 +26,9 @@ const Accordion = ({ data }) => {
             <div className="col-span-11 md:col-span-9 flex justify-between items-center">
               <div>{item.title}</div>
               <Arrow
-                className={`${idx === accordionSection ? "rotate-180" : ""}`}
+                className={`shrink-0 ${
+                  idx === accordionSection ? "rotate-180" : ""
+                }`}
               />
             </div>
           </button>
