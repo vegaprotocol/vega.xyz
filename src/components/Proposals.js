@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
-import Proposal from "./proposal";
+import Proposal from "./Proposal";
 import Arrow from "./Svg/Arrow";
 
 const proposalsQuery = gql`
