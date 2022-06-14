@@ -105,47 +105,51 @@ const Proposals = () => {
     setProposalState(state);
   };
 
-  return (
-    <div className="grey-box p-6 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
-      <div className="md:flex md:justify-between md:items-center">
-        <h3 className="text-[2.125rem] leading-[0.85] lg:text-[3.375rem] mb-4 md:mb-8 uppercase">
-          Latest
-          <br /> Proposals
-        </h3>
-        <div className="mb-5 md:mb-0">
-          <Selector
-            title="Status"
-            options={["Open", "Enacted"]}
-            selected={proposalState}
-            callback={updateProposalState}
-          />
+  if (data && data.proposals) {
+    return (
+      <div className="grey-box p-6 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
+        <div className="md:flex md:justify-between md:items-center">
+          <h3 className="text-[2.125rem] leading-[0.85] lg:text-[3.375rem] mb-4 md:mb-8 uppercase">
+            Latest
+            <br /> Proposals
+          </h3>
+          <div className="mb-5 md:mb-0">
+            <Selector
+              title="Status"
+              options={["Open", "Enacted"]}
+              selected={proposalState}
+              callback={updateProposalState}
+            />
+          </div>
         </div>
+
+        {loading && <p className="copy-xxs md:copy-s">Loading...</p>}
+        {error && (
+          <p className="copy-xxs md:copy-s">Error fetching proposals...</p>
+        )}
+
+        {data && !data.proposals && (
+          <p className="copy-xxs md:copy-s">No proposals found...</p>
+        )}
+
+        <div className="mb-8">
+          {data &&
+            data.proposals &&
+            data.proposals
+              .slice(0, 3)
+              .map((proposal, idx) => <Proposal key={idx} data={proposal} />)}
+        </div>
+
+        <ButtonLinkSimple
+          text="Explore all proposals"
+          className="bg-vega-box-grey"
+          link={`${process.env.GATSBY_TOKEN_FRONTEND}governance`}
+        />
       </div>
-
-      {loading && <p className="copy-xxs md:copy-s">Loading...</p>}
-      {error && (
-        <p className="copy-xxs md:copy-s">Error fetching proposals...</p>
-      )}
-
-      {data && !data.proposals && (
-        <p className="copy-xxs md:copy-s">No proposals found...</p>
-      )}
-
-      <div className="mb-8">
-        {data &&
-          data.proposals &&
-          data.proposals
-            .slice(0, 3)
-            .map((proposal, idx) => <Proposal key={idx} data={proposal} />)}
-      </div>
-
-      <ButtonLinkSimple
-        text="Explore all proposals"
-        className="bg-vega-box-grey"
-        link={`${process.env.GATSBY_TOKEN_FRONTEND}governance`}
-      />
-    </div>
-  );
+    );
+  } else {
+    return <div></div>;
+  }
 };
 
 export default Proposals;
