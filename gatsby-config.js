@@ -86,7 +86,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-apollo`,
       options: {
-        uri: "https://lb.testnet.vega.xyz/query",
+        uri: process.env.VEGA_API,
       },
     },
   ],
