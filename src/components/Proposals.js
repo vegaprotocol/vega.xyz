@@ -83,8 +83,8 @@ const Selector = ({ title, options, selected, callback }) => {
             onClick={() => selectOption(option)}
             className={`border border-t-0 px-4 py-3 w-full border-current last:border-b-0 text-left ${
               option === selected
-                ? "dark:bg-black bg-white"
-                : "dark:hover:bg-black hover:bg-white"
+                ? "dark:bg-white dark:text-black bg-black text-white border-black dark:border-white"
+                : "dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white hover:border-black dark:hover:border-white"
             }`}
           >
             {option}
@@ -142,7 +142,7 @@ const Proposals = () => {
 
         <ButtonLinkSimple
           text="Explore all proposals"
-          className="bg-vega-box-grey"
+          className="dark:bg-vega-box-grey"
           link={`${process.env.GATSBY_TOKEN_FRONTEND}governance`}
         />
       </div>
