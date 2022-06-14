@@ -1,5 +1,7 @@
 import React from "react";
 import SquareBullet from "./Svg/SquareBullet";
+import Moment from "react-moment";
+import ButtonLinkSimple from "../components/ButtonLinkSimple";
 
 const getProposalType = (proposal) => {
   const { change } = proposal.terms;
@@ -46,19 +48,24 @@ const getProposalName = (proposal) => {
 };
 
 const Proposal = ({ data }) => {
+  const dateFormat = "LLL";
+  const dateParseFormat = "YYYY-MM-DD HH:mm:ss";
+
   const stateColour =
     stateColours[data.state.toString().toLowerCase().replace(/\s/g, "")];
 
+  console.log(data);
+
   return (
     <div
-      className="relative pb-6 pt-7 border-t border-current"
+      className="relative pb-6 pt-7 border-t border-current last:border-b"
       data-cy="incentive"
     >
       <div className="text-[0.8125rem] absolute left-0 top-0 px-2 dark:text-black text-white bg-black dark:bg-white uppercase">
         {getProposalType(data)}
       </div>
-      <div className="grid grid-cols-12">
-        <div className="col-span-12 mb-3 md:col-span-6">
+      <div className="grid grid-cols-12 gap-x-6">
+        <div className="col-span-12 mb-3 md:col-span-5 lg:col-span-6">
           <div className="text-[1.375rem] leading-[1.3] mb-1 pr-6">
             {getProposalName(data)}
           </div>
@@ -66,21 +73,30 @@ const Proposal = ({ data }) => {
             <SquareBullet size="10" /> {data.state}
           </span>
         </div>
-        <div className="col-span-6 md:col-span-3">
+        <div className="col-span-6 md:col-span-2">
           <span className="text-[0.9375rem] tracking-[0.01rem] text-vega-mid-grey uppercase">
             Closed On:
           </span>
           <br />
-          {data.terms.closingDatetime}
+          <Moment format={dateFormat} parse={dateParseFormat}>
+            {data.terms.closingDatetime}
+          </Moment>
         </div>
-        <div className="col-span-6 md:col-span-3">
+        <div className="col-span-6 md:col-span-2">
           <span className="text-[0.9375rem] tracking-[0.01rem] text-vega-mid-grey uppercase">
             Enacted On:
           </span>
           <br />
-          {data.terms.enactmentDatetime}
+          <Moment format={dateFormat} parse={dateParseFormat}>
+            {data.terms.enactmentDatetime}
+          </Moment>
         </div>
-        <div className="col-span-6 text-right md:col-span-3"></div>
+        <div className="col-span-6 md:text-right md:col-span-3 lg:col-span-2 pt-6 md:pt-0">
+          <ButtonLinkSimple
+            link={`${process.env.TOKEN_FRONTEND}governance/${data.id}`}
+            text="View"
+          />
+        </div>
       </div>
     </div>
   );

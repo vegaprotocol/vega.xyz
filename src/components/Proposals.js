@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import Proposal from "./Proposal";
 import Arrow from "./Svg/Arrow";
+import ButtonLinkSimple from "../components/ButtonLinkSimple";
 
 const proposalsQuery = gql`
   query Proposals($proposalState: ProposalState!) {
@@ -130,11 +131,19 @@ const Proposals = () => {
         <p className="copy-xxs md:copy-s">No proposals found...</p>
       )}
 
-      {data &&
-        data.proposals &&
-        data.proposals
-          .slice(0, 3)
-          .map((proposal, idx) => <Proposal key={idx} data={proposal} />)}
+      <div className="mb-8">
+        {data &&
+          data.proposals &&
+          data.proposals
+            .slice(0, 3)
+            .map((proposal, idx) => <Proposal key={idx} data={proposal} />)}
+      </div>
+
+      <ButtonLinkSimple
+        text="Explore all proposals"
+        className="bg-vega-box-grey"
+        link={process.env.TOKEN_FRONTEND}
+      />
     </div>
   );
 };
