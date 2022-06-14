@@ -5,8 +5,10 @@
 [build.environment]
   NODE_VERSION = "14.18.1"
 
-[context.production]
-  environment = { VEGA_API = "https://lb.testnet.vega.xyz/query" }
+[context.production.environment]
+  TOKEN_FRONTEND = "https://token.vega.xyz/"
+  VEGA_API = "https://lb.testnet.vega.xyz/query"
 
-[context.deploy-preview]
-  environment = { VEGA_API = "https://lb.testnet.vega.xyz/query" }
+[context.deploy-preview.environment]
+  TOKEN_FRONTEND = "https://token.fairground.wtf/"
+  VEGA_API = "https://lb.testnet.vega.xyz/query"
