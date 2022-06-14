@@ -142,7 +142,7 @@ const Proposals = () => {
       <ButtonLinkSimple
         text="Explore all proposals"
         className="bg-vega-box-grey"
-        link={process.env.TOKEN_FRONTEND}
+        link={`${process.env.GATSBY_TOKEN_FRONTEND}governance`}
       />
     </div>
   );
