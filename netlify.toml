@@ -4,3 +4,11 @@
 
 [build.environment]
   NODE_VERSION = "14.18.1"
+
+[context.production.environment]
+  GATSBY_TOKEN_FRONTEND = "https://token.vega.xyz/"
+  GATSBY_VEGA_API = "http://mainnet-observer.ops.vega.xyz:3008/query"
+
+[context.deploy-preview.environment]
+  GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
+  GATSBY_VEGA_API = "https://lb.testnet.vega.xyz/query"
