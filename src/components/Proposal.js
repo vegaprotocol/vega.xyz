@@ -93,7 +93,7 @@ const Proposal = ({ data }) => {
         </div>
         <div className="col-span-6 md:text-right md:col-span-3 lg:col-span-2 pt-6 md:pt-0">
           <ButtonLinkSimple
-            link={`${process.env.TOKEN_FRONTEND}governance/${data.id}`}
+            link={`${process.env.GATSBY_TOKEN_FRONTEND}governance/${data.id}`}
             text="View"
           />
         </div>
