@@ -4,6 +4,14 @@ import Proposal from "./Proposal";
 import Arrow from "./Svg/Arrow";
 import ButtonLinkSimple from "../components/ButtonLinkSimple";
 
+const allProposalsQuery = gql`
+  query Proposals {
+    proposals {
+      id
+    }
+  }
+`;
+
 const proposalsQuery = gql`
   query Proposals($proposalState: ProposalState!) {
     proposals(inState: $proposalState) {
@@ -97,6 +105,8 @@ const Selector = ({ title, options, selected, callback }) => {
 
 const Proposals = () => {
   const [proposalState, setProposalState] = useState("Enacted");
+
+  const { data: anyProposals } = useQuery(allProposalsQuery);
   const { data, loading, error } = useQuery(proposalsQuery, {
     variables: { proposalState },
   });
@@ -105,7 +115,7 @@ const Proposals = () => {
     setProposalState(state);
   };
 
-  if (data && data.proposals) {
+  if (anyProposals && anyProposals.proposals) {
     return (
       <div className="grey-box p-6 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
         <div className="md:flex md:justify-between md:items-center">
