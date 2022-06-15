@@ -2,13 +2,13 @@ import React from "react";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
-import GovernanceResponsive from "../../components/Svg/Governance/Hero/Responsive";
+import MarketMakingResponsive from "../../components/Svg/MarketMaking/Hero/Responsive";
 import PageSection from "../../components/PageSection";
 import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
-import Accordion from "../../components/Accordion";
+import Accordion from "../../components/Accordion/Accordion";
 import Phase1 from "../../components/Svg/Governance/Process/Phase1";
 import Phase2 from "../../components/Svg/Governance/Process/Phase2";
 import Phase3 from "../../components/Svg/Governance/Process/Phase3";
@@ -18,24 +18,28 @@ import Phase5 from "../../components/Svg/Governance/Process/Phase5";
 const governanceProcess = [
   {
     phase: "Phase 1",
-    title: "Sense check",
-    text: "Share an outline of your proposed action on the forum. Get an idea of whether there is support for the proposal and refine your plans to be able to find out if there is sufficient interest in making a change.",
+    title: "Sense check your market idea",
+    text: "<p>Anyone with the minimum number of $VEGA tokens can propose a futures market. Share an outline of the market you propose on the forum to see if there's support for it - and then refine your plan based on community feedback.</p>",
     links: [
       {
         title: "Start a topic on the forum",
         url: "https://community.vega.xyz/c/governance/25",
+      },
+      {
+        title: "See what markets exist already",
+        url: "https://console.fairground.wtf/",
       },
     ],
     image: <Phase1 />,
   },
   {
     phase: "Phase 2",
-    title: "Formalise Proposal",
-    text: "Share the detailed proposal on the forum, including rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.",
+    title: "Formalise your proposal",
+    text: "<p>Create a detailed proposal with specifics of the market and data (JSON or similar) that would be submitted on chain, including: market description, Oracle / data source the market will use for settlement, and risk model (to calculate margin requirements and ensure safe trading).</p><p>Then head to the forum to invite debate and discussion - and make updates until the proposal is ready to submit.</p>",
     links: [
       {
-        title: "Read the docs to make a proposal",
-        url: "https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol/#governance",
+        title: "Read the docs to make a proposal (Testnet)",
+        url: "https://docs.fairground.vega.xyz/docs/api-howtos/create-market/",
       },
       {
         title: "Check out the forum",
@@ -46,32 +50,44 @@ const governanceProcess = [
   },
   {
     phase: "Phase 3",
-    title: "Submit a proposal",
-    text: "As a token holder, you can submit the proposal using the APIs to create a new market, change an existing market, change network parameters, add an external asset to Vega, authorise a transfer to or from the Network Treasury and make a freeform proposal (for changes that will not change network behaviour). For each, you will define specific inputs for a set list of parameters, which are validated by the nodes before entering into the voting period you set. Then it's time to rally the community on the forum to vote for your proposal.",
+    title: "Submit for validation",
+    text: "<p>As a token holder, you can submit the proposal using the APIs.</p><p>This is validated by the nodes before entering the voting period - at which point head to the forum and rally the community to vote.</p>",
     links: [
       {
-        title: "Read the docs to make a proposal",
-        url: "https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol/#governance",
+        title: "Read the docs to make a proposal (Testnet)",
+        url: "https://docs.fairground.vega.xyz/docs/api-howtos/create-market/",
       },
     ],
     image: <Phase3 />,
   },
   {
     phase: "Phase 4",
-    title: "Vote to exercise your influence",
-    text: "Token holders consider and vote for or against active proposals using the governance tools. Tokens used for voting are not locked or transferred - they can also be used for staking. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.",
+    title: "Get voting",
+    text: "<p>If all your proposals inputs pass validation, community token holders consider and vote for or against active proposals using the governance tools.</p><p>Share your market ideas on the Vega forum to get the community motivated to vote for your proposal.</p>",
     links: [
       {
         title: "Vote for propoals",
-        url: "https://token.vega.xyz/governance",
+        url: "https://token.fairground.wtf/",
       },
     ],
     image: <Phase4 />,
   },
   {
     phase: "Phase 5",
-    title: "Apply changes",
-    text: "If a proposal receives enough votes within the enactment period, the network parameters automatically change (except for a free form proposal)",
+    title: "Attract liquidity",
+    text: "<p>Any Vega participant with sufficient collateral* can provide liquidity for a market by submitting a transaction to the network. What's more, Vega makes it easy to attract liquidity with its built-in incentive mechanism that matches traders and market makers.</p><p><i>*the size of the nominated liquidity commitment amount and the margins required to support the orders generated from that commitment.</i></p>",
+    links: [
+      {
+        title: "Read the docs about liquidity provision (Testnet)",
+        url: "https://docs.fairground.vega.xyz/docs/providing-liquidity/",
+      },
+    ],
+    image: <Phase5 />,
+  },
+  {
+    phase: "Phase 6",
+    title: "Launch Market",
+    text: "<p>If a proposal passes the vote, the network parameters automatically change and the market is created – as soon as the market has received enough committed liquidity.</p>",
     image: <Phase5 />,
   },
 ];
@@ -106,7 +122,7 @@ const MarketMakingPage = () => {
         </div>
       </Container>
 
-      <GovernanceResponsive />
+      <MarketMakingResponsive />
 
       <Container>
         <PageSection>
@@ -120,10 +136,9 @@ const MarketMakingPage = () => {
         </PageSection>
 
         <PageSection>
-          <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-none mx-auto">
+          <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-[40rem] mx-auto md:mx-0">
             How to create a new market on Vega
           </h2>
-
           <Accordion data={governanceProcess} />
         </PageSection>
       </Container>
