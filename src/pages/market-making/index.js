@@ -4,9 +4,11 @@ import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import MarketMakingResponsive from "../../components/Svg/MarketMaking/Hero/Responsive";
 import PageSection from "../../components/PageSection";
+import MarketMakingFooter from "../../components/Svg/MarketMaking/Footer";
 import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
+import BoxLinkSimple from "../../components/BoxLinkSimple";
 import LeadingLine from "../../components/LeadingLine";
 import Accordion from "../../components/Accordion/Accordion";
 import Phase1 from "../../components/Svg/Governance/Process/Phase1";
@@ -15,7 +17,7 @@ import Phase3 from "../../components/Svg/Governance/Process/Phase3";
 import Phase4 from "../../components/Svg/Governance/Process/Phase4";
 import Phase5 from "../../components/Svg/Governance/Process/Phase5";
 
-const governanceProcess = [
+const marketMakingProcess = [
   {
     phase: "Phase 1",
     title: "Sense check your market idea",
@@ -99,7 +101,6 @@ const MarketMakingPage = () => {
         title="Governance"
         description="Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject."
       />
-
       <Container dataCy={"main"}>
         <div className="max-w-[52rem] mx-auto text-center pt-6 lg:pt-24">
           <h1>
@@ -121,9 +122,7 @@ const MarketMakingPage = () => {
           </LeadingLine>
         </div>
       </Container>
-
       <MarketMakingResponsive />
-
       <Container>
         <PageSection>
           <div className="max-w-[40rem] mx-auto text-center">
@@ -139,9 +138,24 @@ const MarketMakingPage = () => {
           <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-[40rem] mx-auto md:mx-0">
             How to create a new market on Vega
           </h2>
-          <Accordion data={governanceProcess} />
+          <Accordion data={marketMakingProcess} />
+        </PageSection>
+
+        <PageSection>
+          <div className="text-center">
+            <h2 className="title-m md:title-l lg:title-xxl mb-10">
+              Get started
+            </h2>
+
+            <BoxLinkSimple
+              className="max-w-[20rem] text-left"
+              link="https://console.fairground.wtf/"
+              text="See what markets already exist (Testnet)"
+            />
+          </div>
         </PageSection>
       </Container>
+      <MarketMakingFooter className="text-center translate-y-24" />
     </Layout>
   );
 };
