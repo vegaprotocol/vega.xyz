@@ -12,19 +12,19 @@ const TextLink = (props) => {
 
   if (isExternal) {
     return (
-      <a
-        href={props.to}
-        target="_blank"
-        rel="noreferrer"
-        className={`underline-offset-1 ${props.className} ${colourClass} ${underlineClass}`}
-      >
-        {props.children}
-        {props.to.startsWith("http") && (
-          <span className="inline-block ml-1.5 mr-1.5 align-middle">
-            <LinkArrow />
-          </span>
-        )}
-      </a>
+      <span className={`${props.className}`}>
+        <a
+          href={props.to}
+          target="_blank"
+          rel="noreferrer"
+          className={`underline-offset-1 ${colourClass} ${underlineClass}`}
+        >
+          {props.children}
+        </a>
+        &nbsp;&nbsp;
+        {props.to.startsWith("http") && <LinkArrow className="inline" />}
+        &nbsp;
+      </span>
     );
   } else {
     return (

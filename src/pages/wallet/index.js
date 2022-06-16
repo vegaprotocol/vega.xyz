@@ -170,7 +170,7 @@ const WalletPage = () => {
                 </div>
                 <DropdownArrow />
                 {downloadDropdown && (
-                  <div className="absolute z-10 top-[2.9375rem] left-0 right-0 border border-t-0 border-current bg-white dark:bg-black">
+                  <div className="absolute z-20 top-[2.9375rem] left-0 right-0 border border-t-0 border-current bg-white dark:bg-black">
                     <ul className="py-3 px-2">
                       {binaries.map((binary, idx) => {
                         return (
