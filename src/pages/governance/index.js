@@ -174,7 +174,7 @@ const GovernancePage = () => {
         </PageSection>
 
         <PageSection>
-          <h2 className="title-m md:title-l lg:title-xl text-center mb-12">
+          <h2 className="title-m md:title-l lg:title-xl text-center mb-12 px-1">
             Get started voting
           </h2>
 
