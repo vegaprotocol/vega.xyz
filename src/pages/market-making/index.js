@@ -98,8 +98,10 @@ const MarketMakingPage = () => {
   return (
     <Layout>
       <Seo
-        title="Governance"
-        description="Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject."
+        title=" Market Making with Vega"
+        description="Bring the future of DeFi within reach - and create a market on any
+            underlying. It's easy to attract liquidity with Vega's built-in
+            incentive mechanism that matches traders and market makers."
       />
       <Container dataCy={"main"}>
         <div className="max-w-[52rem] mx-auto text-center pt-6 lg:pt-24">
