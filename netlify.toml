@@ -3,7 +3,7 @@
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "14.18.1"
+  NODE_VERSION = "16.15.1"
 
 [context.production.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.vega.xyz/"
