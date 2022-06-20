@@ -69,7 +69,7 @@ const marketMakingProcess = [
     links: [
       {
         title: "Vote for propoals",
-        url: "https://token.fairground.wtf/",
+        url: "https://token.fairground.wtf/governance/",
       },
     ],
     image: <Phase4 />,
@@ -132,7 +132,7 @@ const MarketMakingPage = () => {
               Creating a market is part of Vega governance. To get started, get
               and hold $VEGA tokens in your wallet.
             </LeadingLine>
-            <ButtonLink link="https://www.google.com/" text="Find out more" />
+            <ButtonLink link="/governance/" text="Find out more" />
           </div>
         </PageSection>
 
