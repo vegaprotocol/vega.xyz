@@ -2,22 +2,23 @@ import React from "react";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
-import MarketMakingResponsive from "../../components/Svg/MarketMaking/Hero/Responsive";
+import MarketCreationResponsive from "../../components/Svg/MarketCreation/Hero/Responsive";
 import PageSection from "../../components/PageSection";
-import MarketMakingFooter from "../../components/Svg/MarketMaking/Footer";
+import MarketCreationFooter from "../../components/Svg/MarketCreation/Footer";
 import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
 import BoxLinkSimple from "../../components/BoxLinkSimple";
 import LeadingLine from "../../components/LeadingLine";
 import Accordion from "../../components/Accordion/Accordion";
-import Phase1 from "../../components/Svg/Governance/Process/Phase1";
-import Phase2 from "../../components/Svg/Governance/Process/Phase2";
-import Phase3 from "../../components/Svg/Governance/Process/Phase3";
-import Phase4 from "../../components/Svg/Governance/Process/Phase4";
-import Phase5 from "../../components/Svg/Governance/Process/Phase5";
+import Phase1 from "../../components/Svg/MarketCreation/Process/Phase1";
+import Phase2 from "../../components/Svg/MarketCreation/Process/Phase2";
+import Phase3 from "../../components/Svg/MarketCreation/Process/Phase3";
+import Phase4 from "../../components/Svg/MarketCreation/Process/Phase4";
+import Phase5 from "../../components/Svg/MarketCreation/Process/Phase5";
+import Phase6 from "../../components/Svg/MarketCreation/Process/Phase6";
 
-const marketMakingProcess = [
+const marketCreationProcess = [
   {
     phase: "Phase 1",
     title: "Sense check your market idea",
@@ -90,15 +91,15 @@ const marketMakingProcess = [
     phase: "Phase 6",
     title: "Launch Market",
     text: "<p>If a proposal passes the vote, the network parameters automatically change and the market is created – as soon as the market has received enough committed liquidity.</p>",
-    image: <Phase5 />,
+    image: <Phase6 />,
   },
 ];
 
-const MarketMakingPage = () => {
+const MarketCreationPage = () => {
   return (
     <Layout>
       <Seo
-        title=" Market Making with Vega"
+        title=" Market Creation with Vega"
         description="Bring the future of DeFi within reach - and create a market on any
             underlying. It's easy to attract liquidity with Vega's built-in
             incentive mechanism that matches traders and market makers."
@@ -113,7 +114,7 @@ const MarketMakingPage = () => {
             color="red"
             className="title-m md:title-l lg:title-xxl mb-4 md:mb-6 mt-4 text-center"
           >
-            Market Making with Vega
+            Market Creation with Vega
           </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
@@ -124,7 +125,7 @@ const MarketMakingPage = () => {
           </LeadingLine>
         </div>
       </Container>
-      <MarketMakingResponsive />
+      <MarketCreationResponsive />
       <Container>
         <PageSection>
           <div className="max-w-[40rem] mx-auto text-center">
@@ -140,7 +141,7 @@ const MarketMakingPage = () => {
           <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-[40rem] mx-auto md:mx-0">
             How to create a new market on Vega
           </h2>
-          <Accordion data={marketMakingProcess} />
+          <Accordion data={marketCreationProcess} />
         </PageSection>
 
         <PageSection>
@@ -157,9 +158,9 @@ const MarketMakingPage = () => {
           </div>
         </PageSection>
       </Container>
-      <MarketMakingFooter className="text-center translate-y-24" />
+      <MarketCreationFooter className="text-center translate-y-24" />
     </Layout>
   );
 };
 
-export default MarketMakingPage;
+export default MarketCreationPage;

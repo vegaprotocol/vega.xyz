@@ -24,8 +24,8 @@ export const SiteNavigation = [
         to: "/governance/",
       },
       {
-        text: "Market making",
-        to: "/market-making",
+        text: "Market creation",
+        to: "/market-creation",
       },
     ],
   },
