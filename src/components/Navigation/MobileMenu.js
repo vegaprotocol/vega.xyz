@@ -35,7 +35,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
           </div>
         </div>
 
-        <ul className="max-w-[15rem] text-lg tracking-wide w-full pb-4">
+        <ul className="max-w-[20rem] text-lg tracking-wide w-full pb-4">
           {SiteNavigation.map((section, idx) =>
             section.links ? (
               <li key={idx}>
