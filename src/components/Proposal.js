@@ -54,8 +54,6 @@ const Proposal = ({ data }) => {
   const stateColour =
     stateColours[data.state.toString().toLowerCase().replace(/\s/g, "")];
 
-  console.log(data);
-
   return (
     <div
       className="relative pb-6 pt-7 border-t border-current last:border-b"
