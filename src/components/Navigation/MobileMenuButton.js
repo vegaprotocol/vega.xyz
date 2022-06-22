@@ -7,7 +7,7 @@ const MobileMenuButton = ({ open, toggleMenu, showOnMobileOnly = true }) => {
     <button
       aria-label="Toggle navigation menu"
       onClick={() => toggleMenu()}
-      className={`hover:bg-vega-light-grey dark:hover:bg-vega-off-black ml-1 rounded-full cursor-pointer ${
+      className={`font-not-glitched hover:bg-vega-light-grey dark:hover:bg-vega-off-black ml-1 rounded-full cursor-pointer ${
         showOnMobileOnly ? "lg:hidden" : ""
       }`}
     >
