@@ -1,7 +1,7 @@
 ---
 title: ACM conference on advances in financial technologies
 location: Virtual
-date: "2020-10-21"
+date: 2020-10-21
 links:
 ---
 

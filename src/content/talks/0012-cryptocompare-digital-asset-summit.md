@@ -1,7 +1,7 @@
 ---
 title: CryptoCompare Digital Asset Summit
 location: London
-date: "2020-03-09"
+date: 2020-03-09
 links:
   - title: Watch the presentation on YouTube
     link: https://www.youtube.com/watch?v=DynJumPTmW0
