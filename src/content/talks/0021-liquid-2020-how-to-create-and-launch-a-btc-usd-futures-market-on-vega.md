@@ -1,7 +1,7 @@
 ---
 title: "Liquidity 2020: How to create & launch a BTC/USD futures market on Vega"
 location: Virtual
-date: "2020-11-18"
+date: 2020-11-18
 links:
   - title: Watch Tamlyn's talk at dystopian labs liquidity 2020.
     link: https://www.crowdcast.io/e/liquidity2020summit/53

@@ -1,7 +1,7 @@
 ---
 title: "Coinscrum Markets: Building decentralised derivatives markets"
 location: Virtual
-date: "2020-10-02"
+date: 2020-10-02
 links:
   - title: Watch on YouTube
     link: https://www.youtube.com/watch?v=lH4gKkrt42A

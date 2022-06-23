@@ -1,7 +1,7 @@
 ---
 title: Deconstructing derivatives
 location: Virtual
-date: "2020-11-11"
+date: 2020-11-11
 links:
   - title: Watch the full day on YouTube
     link: https://www.youtube.com/playlist?list=PLtgXvHMJ2nYLdzEYZ2_QRwS9vTx44PMFh

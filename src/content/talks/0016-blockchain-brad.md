@@ -1,7 +1,7 @@
 ---
 title: Blockchain Brad
 location: Virtual
-date: "2020-07-09"
+date: 2020-07-09
 links:
   - title: Watch this interview on YouTube
     link: https://youtu.be/1Kzld4ecdZw
