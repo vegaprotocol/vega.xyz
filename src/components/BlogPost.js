@@ -28,7 +28,7 @@ const BlogPost = ({ post }) => {
 
       <div>
         <SquareBullet size="10" />
-        {post.node.createdAt}
+        {post.node.firstPublishedAt}
         &nbsp;&nbsp;&nbsp;
         <SquareBullet size="5" />
         <span className="text-vega-mid-grey">
