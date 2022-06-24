@@ -41,7 +41,7 @@ const TalksPage = () => {
     <Layout>
       <Seo
         title="Talks"
-        description="Dive in to talks and podcasts by the Vega team on crypto derivatives trading."
+        description="Dive into talks and podcasts by the Vega team on crypto derivatives trading."
       />
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16">
