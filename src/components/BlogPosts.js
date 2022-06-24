@@ -6,13 +6,16 @@ import { graphql, useStaticQuery } from "gatsby";
 const LatestBlogPosts = () => {
   const latestPosts = useStaticQuery(graphql`
     query {
-      allMediumPost(limit: 3, sort: { fields: [createdAt], order: DESC }) {
+      allMediumPost(
+        limit: 3
+        sort: { fields: [firstPublishedAt], order: DESC }
+      ) {
         edges {
           node {
             id
             title
             uniqueSlug
-            createdAt(formatString: "ll")
+            firstPublishedAt(formatString: "ll")
             virtuals {
               subtitle
               readingTime
