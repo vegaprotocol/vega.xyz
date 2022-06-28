@@ -1,7 +1,7 @@
 ---
 title: "Dystopia Labs: DeFi Discussions"
 location: Virtual
-date: "2020-04-03"
+date: 2020-04-03
 links:
   - title: Watch his session on Crowdcast
     link: https://www.crowdcast.io/e/defi-discussions/85

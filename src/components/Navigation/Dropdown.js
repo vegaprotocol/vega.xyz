@@ -7,7 +7,7 @@ const NavigationDropdown = ({ section }) => {
   return (
     <li className="relative">
       <button
-        className="group inline-block px-6 py-3 cursor-pointer text-left"
+        className="font-not-glitched group inline-block px-6 py-3 cursor-pointer text-left"
         tabIndex={0}
       >
         <div className="hover:text-vega-mid-grey transition-colors">

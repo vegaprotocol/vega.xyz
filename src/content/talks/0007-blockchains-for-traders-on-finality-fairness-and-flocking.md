@@ -1,7 +1,7 @@
 ---
 title: "Blockchains for traders: On finality, fairness and flocking"
 location: San Francisco
-date: "2019-10-31"
+date: 2019-10-31
 links:
   - title: Watch this presentation on YouTube
     link: https://www.youtube.com/watch?v=Dd-U0ynFH14

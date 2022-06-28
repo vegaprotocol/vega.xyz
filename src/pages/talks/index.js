@@ -9,7 +9,7 @@ import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
 import Talk from "../../components/Talk";
 
-const PapersPage = () => {
+const TalksPage = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -41,7 +41,7 @@ const PapersPage = () => {
     <Layout>
       <Seo
         title="Talks"
-        description="Dive in to talks and podcasts by the Vega team on crypto derivatives trading."
+        description="Dive into talks and podcasts by the Vega team on crypto derivatives trading."
       />
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16">
@@ -95,4 +95,4 @@ const PapersPage = () => {
   );
 };
 
-export default PapersPage;
+export default TalksPage;

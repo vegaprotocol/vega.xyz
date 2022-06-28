@@ -1,7 +1,7 @@
 ---
 title: KR1's Kryptonight London
 location: London
-date: "2019-02-26"
+date: 2019-02-26
 links:
   - title: Watch his talk on YouTube
     link: https://www.youtube.com/watch?v=DhGD8brS3r0
