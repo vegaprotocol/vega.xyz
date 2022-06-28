@@ -17,6 +17,8 @@ import RoadMapMobile from "../components/RoadMapMobile";
 import Rip from "../components/Svg/Rip";
 import RipSmall from "../components/Svg/RipSmall";
 
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+
 const IndexPage = () => {
   return (
     <Layout>

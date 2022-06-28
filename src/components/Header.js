@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
 import { globalHistory } from "@reach/router";
 import Navigation from "./Navigation";
 import ScreenMode from "../components/ScreenMode";
@@ -9,9 +8,11 @@ import MobileMenuButton from "../components/Navigation/MobileMenuButton";
 import HeaderCta from "../components/HeaderCta";
 // import SiteBanner from "../components/SiteBanner";
 
+import { Link, useI18next } from "gatsby-plugin-react-i18next";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const Header = () => {
+  const { languages, changeLanguage } = useI18next();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -33,6 +34,21 @@ const Header = () => {
   return (
     <div>
       {/* <SiteBanner /> */}
+      <ul className="languages">
+        {languages.map((lng) => (
+          <li key={lng}>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                changeLanguage(lng);
+              }}
+            >
+              {lng}
+            </a>
+          </li>
+        ))}
+      </ul>
 
       <header className="relative z-30" id="header">
         <div className="px-4 w-full md:px-6 lg:px-8">
