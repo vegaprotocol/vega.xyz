@@ -90,7 +90,7 @@ const marketCreationProcess = [
   {
     phase: "Phase 6",
     title: "Launch Market",
-    text: "<p>If a proposal passes the vote, the network parameters automatically change and the market is created – as soon as the market has received enough committed liquidity.</p>",
+    text: "<p>If a proposal passes the vote, the market is enacted automatically, as soon as it has received enough committed liquidity.</p>",
     image: <Phase6 />,
   },
 ];
