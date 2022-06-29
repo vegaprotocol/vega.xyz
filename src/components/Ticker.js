@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import TickerCell from "./TickerCell";
 import BigNumber from "bignumber.js";
 import Marquee from "react-fast-marquee";
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Ticker = () => {
+  const { t } = useTranslation();
   const [stats, setStats] = useState(0);
 
   const updateStats = ({ name, value }) => {
@@ -64,7 +66,7 @@ const Ticker = () => {
       {stats ? (
         <div className="relative">
           <div className="absolute flex items-center z-10 h-[5rem] md:h-[5.625rem] left-0 top-0 bg-black dark:bg-white text-white dark:text-black text-[1.5rem] lg:text-[1.875rem] leading-none uppercase px-3 md:px-6 py-2 md:py-4 w-[9rem] md:w-[12.5rem]">
-            Status:
+            <Trans>Status</Trans>:
             <br />
             Mainnet
           </div>
@@ -75,12 +77,18 @@ const Ticker = () => {
             className="pl-[12.5rem]"
           >
             <div className="flex h-[5rem] md:h-[5.625rem] border-r border-current">
-              <TickerCell title="Validators" value={stats.validators} />
-              <TickerCell title="Total Staked" value={stats.stakedTotal} />
-              <TickerCell title="Avg. Block Time" value={stats.blockDuration} />
-              <TickerCell title="Current Epoch" value={stats.currentEpoch} />
+              <TickerCell title={t("Validators")} value={stats.validators} />
+              <TickerCell title={t("Total Staked")} value={stats.stakedTotal} />
               <TickerCell
-                text="Learn more about restricted mainnet"
+                title={t("Avg. Block Time")}
+                value={stats.blockDuration}
+              />
+              <TickerCell
+                title={t("Current Epoch")}
+                value={stats.currentEpoch}
+              />
+              <TickerCell
+                text={t("Learn more about restricted mainnet")}
                 link="https://blog.vega.xyz/what-to-expect-from-restricted-mainnet-616086d9fdaf"
               />
             </div>

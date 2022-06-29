@@ -5,8 +5,10 @@ import GlitchTitle from "./GlitchTitle";
 import ButtonLink from "./ButtonLink";
 import RoadMapBlock from "./RoadMapBlock";
 import RoadMapTrackBlock from "./RoadMapTrackBlock";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const RoadMap = (props) => {
+  const { t } = useTranslation();
   const roadmapTrack = useRef(null);
   const roadmapBlocks = useRef(null);
   const roadmapTrackBlocks = useRef(null);
@@ -83,7 +85,7 @@ const RoadMap = (props) => {
       <div className="relative">
         <div className="dark:bg-black bg-white py-6">
           <GlitchTitle level={2} className="mb-4 title-l lg:title-xxl">
-            Where are we in the Roadmap?
+            <Trans>Where are we in the Roadmap?</Trans>
           </GlitchTitle>
         </div>
 
@@ -213,7 +215,7 @@ const RoadMap = (props) => {
       <div className="text-center pt-16">
         <ButtonLink
           link="https://github.com/orgs/vegaprotocol/projects/114/views/4"
-          text="View detailed Roadmap"
+          text={t("View detailed Roadmap")}
         />
       </div>
     </div>

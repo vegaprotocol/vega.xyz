@@ -16,14 +16,15 @@ import RoadMap from "../components/RoadMap";
 import RoadMapMobile from "../components/RoadMapMobile";
 import Rip from "../components/Svg/Rip";
 import RipSmall from "../components/Svg/RipSmall";
-
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { graphql } from "gatsby";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const IndexPage = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <Seo
-        title="Blockchain derivatives"
+        title={t("Blockchain derivatives")}
         description="Discover Web3's native derivatives trading platform that is helping DeFi mature."
       />
       <main>
@@ -44,10 +45,10 @@ const IndexPage = () => {
                     className="title-l md:title-xl lg:text-[5.875rem] mb-2"
                     color="red"
                   >
-                    Toward a new era of finance
+                    <Trans>Toward a new era of finance</Trans>
                   </GlitchTitle>
                   <LeadingLine className="text-current !mb-0">
-                    We are Vega. Web3's native derivatives layer.
+                    <Trans>We are Vega. Web3's native derivatives layer.</Trans>
                   </LeadingLine>
                 </div>
               </div>
@@ -61,18 +62,20 @@ const IndexPage = () => {
           <PageSection>
             <div className="max-w-[58.75rem] text-center mx-auto">
               <div className="title-m md:title-l mb-4">
-                Throw open the doors to the new financial system
+                <Trans>Throw open the doors to the new financial system</Trans>
               </div>
               <div className="copy-xs md:copy-s !mb-8">
-                And a truly democratic society. Don't ask for permission. Ask
-                how you can play a part in this new world of DeFi. Decentralised
-                derivatives markets are here to stay.
+                <Trans>
+                  And a truly democratic society. Don't ask for permission. Ask
+                  how you can play a part in this new world of DeFi.
+                  Decentralised derivatives markets are here to stay.
+                </Trans>
               </div>
               <div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[18rem] md:max-w-[30rem] mx-auto">
                   <div>
                     <ButtonLink
-                      text="Learn more"
+                      text={t("Learn more")}
                       link="/key-concepts"
                       className="w-full text-center"
                       color="light"
@@ -80,7 +83,7 @@ const IndexPage = () => {
                   </div>
                   <div>
                     <ButtonLink
-                      text="Join the community"
+                      text={t("Join the community")}
                       link="/community"
                       className="w-full text-center"
                     />
@@ -126,3 +129,17 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
