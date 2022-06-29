@@ -79,7 +79,7 @@ const governanceProcess = [
   {
     phase: "Phase 5",
     title: "Apply changes",
-    text: "If a proposal receives enough votes within the enactment period, the network parameters automatically change (except for a free form proposal)",
+    text: "If a proposal receives enough votes within the enactment period, the change is automatically enacted (except for a free form proposal).",
     image: <Phase5 />,
   },
 ];
