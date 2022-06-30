@@ -111,11 +111,6 @@ const Ambassadors = () => {
                   text="(Deeper Research, Protocol Comparisons, Protocol Integrations)"
                   icon={IconAmbassador3}
                 /> */}
-                <Clan
-                  title="Multilingual League"
-                  text="(Translations, Language Groups, Specific Events, Vega Chapters)"
-                  icon={IconAmbassador4}
-                />
               </div>
             </div>
 
