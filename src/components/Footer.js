@@ -82,6 +82,14 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
+                    to="/wallet/"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Get the Vega Wallet
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
                     to="https://token.vega.xyz/staking/"
                     className="py-1.5 block leading-[1.3]"
                   >
