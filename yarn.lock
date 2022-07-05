@@ -11612,6 +11612,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-to-jsx@npm:^7.1.7":
+  version: 7.1.7
+  resolution: "markdown-to-jsx@npm:7.1.7"
+  peerDependencies:
+    react: ">= 0.14.0"
+  checksum: b2c0ea7d0988fad0c709989b3b1b3a5600d1e80b60266f9618386f7afead4a6b5eba9ee1a3943df6a3dcb1599ea89e58467d1b17b6dd3af3c60984c60a85d06d
+  languageName: node
+  linkType: hard
+
 "matchmediaquery@npm:^0.3.0":
   version: 0.3.1
   resolution: "matchmediaquery@npm:0.3.1"
@@ -17605,6 +17614,7 @@ __metadata:
     gatsby-transformer-sharp: ^4.16.0
     graphql: ^16.5.0
     gsap: ^3.10.4
+    markdown-to-jsx: ^7.1.7
     postcss: ^8.4.14
     prettier: ^2.7.1
     prettier-plugin-tailwind: ^2.2.12

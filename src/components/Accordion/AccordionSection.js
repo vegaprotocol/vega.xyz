@@ -1,5 +1,6 @@
 import React from "react";
 import TextLink from "../TextLink";
+import Markdown from "markdown-to-jsx";
 
 const AccordionSection = ({ text, links, image, open }) => {
   return (
@@ -8,8 +9,8 @@ const AccordionSection = ({ text, links, image, open }) => {
         <div className="md:col-span-3"></div>
         <div className="col-span-12 md:col-span-9 flex flex-col md:flex-row md:gap-x-12">
           <div className="flex-shrink order-2 md:order-1">
-            <div className="copy-xs mb-6 prose dark:prose-invert max-w-none">
-              {text}
+            <div className="copy-xs mb-6 prose dark:prose-invert max-w-none prose-p:mt-0">
+              <Markdown>{text}</Markdown>
             </div>
 
             {links &&

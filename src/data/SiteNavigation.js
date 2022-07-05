@@ -18,7 +18,16 @@ export const SiteNavigation = [
   },
   {
     text: "Governance",
-    link: "/governance/",
+    links: [
+      {
+        text: "Governance on Vega",
+        to: "/governance/",
+      },
+      {
+        text: "Market creation",
+        to: "/market-creation",
+      },
+    ],
   },
   {
     text: "Develop",
