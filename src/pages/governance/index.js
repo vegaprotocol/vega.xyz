@@ -78,7 +78,7 @@ const governanceProcess = [
   },
   {
     phase: "Phase 5",
-    title: "Apply changes",
+    title: "Enacting changes",
     text: "If a proposal receives enough votes within the enactment period, the change is automatically enacted (except for a free form proposal).",
     image: <Phase5 />,
   },
