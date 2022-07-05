@@ -167,7 +167,7 @@ const GovernancePage = () => {
 
         <PageSection>
           <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-none mx-auto">
-            Governance process
+            Governance lifecycle
           </h2>
 
           <Accordion data={governanceProcess} />
