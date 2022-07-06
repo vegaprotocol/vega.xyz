@@ -6,6 +6,7 @@ import Container from "../../components/Container";
 import GovernanceResponsive from "../../components/Svg/Governance/Hero/Responsive";
 import PageSection from "../../components/PageSection";
 import BoxTitle from "../../components/BoxTitle";
+import ToolBox from "../../components/ToolBox";
 //import TextLink from "../../components/TextLink";
 import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
@@ -84,22 +85,6 @@ const governanceProcess = [
   },
 ];
 
-const GovernanceTool = ({ icon, title, link, text, type }) => {
-  return (
-    <Link to={link} className="block group relative">
-      <div className="group-hover:-translate-y-2 border border-current p-6 relative h-full dark:bg-black bg-white">
-        <img src={icon} className="mb-6" width="96" height="96" alt={title} />
-        <div className="title-s block mb-4">{title}</div>
-        <div className="copy-xs text-vega-mid-grey">{text}</div>
-        <div className="border border-current uppercase copy-xxs inline-block px-3 font-light">
-          {type}
-        </div>
-      </div>
-      <div className="group-hover:block hidden border-b border-l border-r border-current absolute bottom-0 left-0 right-0 h-3" />
-    </Link>
-  );
-};
-
 const GovernancePage = () => {
   return (
     <Layout>
@@ -141,21 +126,21 @@ const GovernancePage = () => {
             Governance Tools
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-10 mt-10 md:mt-20 max-w-[75rem] mx-auto">
-            <GovernanceTool
+            <ToolBox
               icon={ForumIcon}
               title="Forum"
               link="https://community.vega.xyz/c/governance/25"
               text="Discuss governance and governance proposals on Vega networks."
               type="Tool"
             />
-            <GovernanceTool
+            <ToolBox
               icon={TokenInterfaceIcon}
               title="Token interface"
               link="https://token.vega.xyz/governance"
               text="Signal your support for a validator by staking tokens and vote on governance actions and proposals for network parameters, markets and assets."
               type="DAPP"
             />
-            <GovernanceTool
+            <ToolBox
               icon={MakeProposalIcon}
               title="Make a proposal"
               link="https://docs.fairground.vega.xyz/docs/api-howtos/create-market/"
