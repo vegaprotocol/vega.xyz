@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import LinkArrow from "./Svg/LinkArrow";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const LinkWrapper = ({
   link,
@@ -19,18 +20,18 @@ const ToolBox = ({ icon, title, link, text, type }) => {
     <LinkWrapper
       link={link}
       internalLinkWrapper={(children) => (
-        <Link to={link} className="block group relative">
+        <Link to={link} className="block group relative h-full">
           {children}
         </Link>
       )}
       externalLinkWrapper={(children) => (
-        <a target="_blank" className="block group relative" href={link}>
+        <a target="_blank" className="block group relative h-full" href={link}>
           {children}
         </a>
       )}
     >
       <div className="group-hover:-translate-y-2 border border-current p-6 relative h-full dark:bg-black bg-white">
-        <img src={icon} className="mb-6" width="96" height="96" alt={title} />
+        <GatsbyImage image={icon} alt={title} className="mb-5" />
         <div className="title-s block mb-4">
           {title}
           {isExternal && (

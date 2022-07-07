@@ -1,0 +1,83 @@
+[
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/console.png",
+    "title": "Console",
+    "link": "https://console.fairground.wtf/",
+    "description": "A fully featured professional trading front end.",
+    "category": "trading",
+    "type": "DAPP"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/console-lite.png",
+    "title": "Console Lite",
+    "link": "",
+    "description": "A mobile first, simplified trading app for the trading curious.",
+    "category": "trading",
+    "type": "DAPP"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/token-interface.png",
+    "title": "Token Interface",
+    "link": "https://token.vega.xyz/",
+    "description": "Signal your support for a validator by staking $VEGA tokens, create, submit and vote on governance actions and proposals for network parameters, markets and assets.",
+    "category": "governance",
+    "type": "DOCS"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/block-explorer.png",
+    "title": "Block Explorer",
+    "link": "https://explorer.vega.xyz/",
+    "description": "Dashboard with real-time and historical information about the Vega blockchain.",
+    "category": "trading",
+    "type": "TOOL"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/data-dashboard.png",
+    "title": "Data Dashboard",
+    "link": "",
+    "description": "See trading activity levels and understand trading stats.",
+    "category": "trading",
+    "type": "TOOL"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/desktop-wallet.png",
+    "title": "Desktop Wallet",
+    "link": "/wallet/",
+    "description": "An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.",
+    "category": "wallet",
+    "type": "TOOL"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/network-status.png",
+    "title": "Network Status",
+    "link": "https://status.vega.trading/",
+    "description": "Check on the health of the Vega network; nodes, staking and uptime.",
+    "category": "trading",
+    "type": "TOOL"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/cli-wallet.png",
+    "title": "CLI Wallet",
+    "link": "https://docs.vega.xyz/docs/mainnet/tools/vega-wallet/cli-wallet",
+    "description": "Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.",
+    "category": "wallet",
+    "type": "WALLET"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/data-node.png",
+    "title": "Data Node",
+    "link": "",
+    "description": "Query our APIs to retrieve on-chain data.",
+    "category": "trading",
+    "type": "WALLET"
+  }
+]

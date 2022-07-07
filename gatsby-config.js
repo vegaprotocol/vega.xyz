@@ -78,6 +78,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "tools",
+        path: `${__dirname}/src/content/tools`,
+      },
+    },
+    {
       resolve: `gatsby-source-medium`,
       options: {
         username: `vegaprotocol`,
@@ -87,6 +94,14 @@ module.exports = {
       resolve: `gatsby-plugin-apollo`,
       options: {
         uri: process.env.GATSBY_VEGA_API,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: ({ node, object, isArray }) =>
+          object.collection[0].toUpperCase() +
+          object.collection.slice(1).toLowerCase(),
       },
     },
   ],
