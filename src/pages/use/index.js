@@ -27,19 +27,19 @@ const UsePage = () => {
       />
       <Container dataCy={"main"}>
         <div className="md:grid md:grid-cols-2 md:gap-x-12 md:border-b-2 md:border-current pt-6 lg:pt-16">
-          <div className="relative -bottom-[2px] border-b-2 md:border-0 self-end">
+          <div className="relative -bottom-[2px] self-end">
             <UseVegaResponsive />
           </div>
           <div className="py-10 md:py-12 self-center">
             <BoxTitle text="Tools built on Vega" />
-            <h1>
-              <GlitchTitle
-                color="red"
-                className="mt-4 md:mt-8 title-l lg:title-xl max-w-[80%]"
-              >
-                Vega-powered tools and services
-              </GlitchTitle>
-            </h1>
+
+            <GlitchTitle
+              color="red"
+              className="mt-4 md:mt-8 title-l lg:title-xl max-w-[80%]"
+              level={1}
+            >
+              Vega-powered tools and services
+            </GlitchTitle>
             <div className="prose copy-xs">
               <p className="mt-4">
                 Trade on a fully decentralised network and propose new markets,
@@ -53,7 +53,7 @@ const UsePage = () => {
           <div>
             <div className="text-center">
               <h2 className="title-m md:title-l">Tools built on Vega</h2>
-              <div class="prose mx-auto copy-xs md:copy-s">
+              <div className="prose mx-auto copy-xs md:copy-s">
                 <div>
                   <p>
                     Together we are building the future of finance where control
