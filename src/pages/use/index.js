@@ -8,8 +8,10 @@ import PageSection from "../../components/PageSection";
 import BoxTitle from "../../components/BoxTitle";
 import ToolBox from "../../components/ToolBox";
 import UseVegaResponsive from "../../components/Svg/Use/Hero/Responsive";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const UsePage = ({ data }) => {
+  const { t } = useTranslation();
   const tabs = useRef(null);
   const [filter, setFilter] = useState(null);
 
@@ -83,7 +85,7 @@ const UsePage = ({ data }) => {
                 : "border-transparent hover:border-current"
             }`}
           >
-            All
+            {t("All", { ns: "tools" })}
           </button>
           <button
             tabIndex={0}
@@ -94,7 +96,7 @@ const UsePage = ({ data }) => {
                 : "border-transparent over:border-current"
             }`}
           >
-            Wallets
+            {t("Wallets", { ns: "tools" })}
           </button>
           <button
             tabIndex={0}
@@ -105,7 +107,7 @@ const UsePage = ({ data }) => {
                 : "border-transparent hover:border-current"
             }`}
           >
-            Trading
+            {t("Trading", { ns: "tools" })}
           </button>
           <button
             tabIndex={0}
@@ -116,7 +118,7 @@ const UsePage = ({ data }) => {
                 : "border-transparent hover:border-current"
             }`}
           >
-            Governance
+            {t("Governance", { ns: "tools" })}
           </button>
         </div>
       </div>
@@ -130,10 +132,10 @@ const UsePage = ({ data }) => {
             <div className={tool.category.toLowerCase()} key={idx}>
               <ToolBox
                 icon={tool.icon.childImageSharp.gatsbyImageData}
-                title={tool.title}
+                title={t(tool.title, { ns: "tools" })}
                 link={tool.link}
-                text={tool.description}
-                type={tool.type}
+                text={t(tool.description, { ns: "tools" })}
+                type={t(tool.type, { ns: "tools" })}
               />
             </div>
           ))}
@@ -146,7 +148,16 @@ const UsePage = ({ data }) => {
 export default UsePage;
 
 export const query = graphql`
-  query ToolsQuery {
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     allTools {
       nodes {
         title

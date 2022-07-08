@@ -107,7 +107,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`en`, `es`, `语言`],
+        languages: [`en`, `es`],
         defaultLanguage: `en`,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
         siteUrl: `https://vega.xyz`,
@@ -127,8 +127,10 @@ module.exports = {
       resolve: `gatsby-transformer-json`,
       options: {
         typeName: ({ node, object, isArray }) =>
-          object.collection[0].toUpperCase() +
-          object.collection.slice(1).toLowerCase(),
+          object.collection
+            ? object.collection[0].toUpperCase() +
+              object.collection.slice(1).toLowerCase()
+            : `Json`,
       },
     },
   ],
