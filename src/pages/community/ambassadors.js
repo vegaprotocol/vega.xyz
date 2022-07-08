@@ -63,7 +63,7 @@ const Ambassadors = () => {
         </div>
       </Container>
 
-      <Container>
+      <Container dataCy={"main"}>
         <div className="md:grid md:grid-cols-12 md:gap-x-12 lg:gap-x-6">
           <div className="md:col-span-8 lg:col-span-7">
             <div className="mb-12 md:mb-20">
