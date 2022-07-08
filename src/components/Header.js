@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
 import { globalHistory } from "@reach/router";
 import Navigation from "./Navigation";
 import ScreenMode from "../components/ScreenMode";
@@ -7,8 +6,10 @@ import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";
 import MobileMenuButton from "../components/Navigation/MobileMenuButton";
 import HeaderCta from "../components/HeaderCta";
+import LanguageToggle from "../components/LanguageToggle";
 // import SiteBanner from "../components/SiteBanner";
 
+import { Link } from "gatsby-plugin-react-i18next";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const Header = () => {
@@ -33,7 +34,6 @@ const Header = () => {
   return (
     <div>
       {/* <SiteBanner /> */}
-
       <header className="relative z-30" id="header">
         <div className="px-4 w-full md:px-6 lg:px-8">
           <div className="header flex items-center justify-between py-4 lg:pt-6">
@@ -55,9 +55,9 @@ const Header = () => {
               <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
 
               <div className="flex items-center">
+                <LanguageToggle />
                 <ScreenMode />
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
-
                 {!menuIsOpen && (
                   <HeaderCta
                     link="https://console.fairground.wtf/"

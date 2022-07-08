@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require(`path`);
 const fetch = require(`node-fetch`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
@@ -6,9 +6,24 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === "MarkdownRemark") {
-    const slug = createFilePath({ node, getNode, basePath: `content` });
+    const path = createFilePath({ node, getNode, basePath: `content` });
+    const pathComponents = path.split("/").slice(1, -1);
     node.collection = getNode(node.parent).sourceInstanceName;
     const category = node.frontmatter.category;
+    const slug = pathComponents[0];
+
+    let locale = "en";
+
+    // extract locale from file extension
+    if (pathComponents[1]) {
+      locale = pathComponents[1].split(".").slice(-1).pop();
+    }
+
+    createNodeField({
+      node,
+      name: `locale`,
+      value: locale,
+    });
 
     createNodeField({
       node,
@@ -35,6 +50,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
             collection
             fields {
               slug
+              locale
             }
           }
         }
