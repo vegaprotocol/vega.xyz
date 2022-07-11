@@ -4,27 +4,36 @@
     "icon": "../../images/tool-icons/console.png",
     "title": "Console",
     "link": "https://console.fairground.wtf/",
-    "description": "A fully featured professional trading front end.",
+    "description": "A dapp for trading on the Vega network.",
     "category": "trading",
     "type": "DAPP"
   },
   {
     "collection": "tools",
-    "icon": "../../images/tool-icons/console-lite.png",
-    "title": "Console Lite",
-    "link": "",
-    "description": "A mobile first, simplified trading app for the trading curious.",
+    "icon": "../../images/tool-icons/staking.png",
+    "title": "Staking",
+    "link": "https://token.vega.xyz/staking",
+    "description": "Stake $VEGA tokens and get rewarded.",
     "category": "trading",
     "type": "DAPP"
   },
   {
     "collection": "tools",
-    "icon": "../../images/tool-icons/token-interface.png",
-    "title": "Token Interface",
-    "link": "https://token.vega.xyz/",
-    "description": "Signal your support for a validator by staking $VEGA tokens, create, submit and vote on governance actions and proposals for network parameters, markets and assets.",
+    "icon": "../../images/tool-icons/governance.png",
+    "title": "Governance",
+    "link": "https://token.vega.xyz/governance",
+    "description": "Review and vote on governance proposals.",
     "category": "governance",
     "type": "DOCS"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/vesting.png",
+    "title": "Vesting",
+    "link": "https://token.vega.xyz/vesting",
+    "description": "Redeem locked vega tokens.",
+    "category": "wallets",
+    "type": "TOOL"
   },
   {
     "collection": "tools",
@@ -32,15 +41,6 @@
     "title": "Block Explorer",
     "link": "https://explorer.vega.xyz/",
     "description": "Dashboard with real-time and historical information about the Vega blockchain.",
-    "category": "trading",
-    "type": "TOOL"
-  },
-  {
-    "collection": "tools",
-    "icon": "../../images/tool-icons/data-dashboard.png",
-    "title": "Data Dashboard",
-    "link": "",
-    "description": "See trading activity levels and understand trading stats.",
     "category": "trading",
     "type": "TOOL"
   },
@@ -55,10 +55,10 @@
   },
   {
     "collection": "tools",
-    "icon": "../../images/tool-icons/network-status.png",
-    "title": "Network Status",
+    "icon": "../../images/tool-icons/network-stats.png",
+    "title": "Network Stats",
     "link": "https://status.vega.trading/",
-    "description": "Check on the health of the Vega network; nodes, staking and uptime.",
+    "description": "Technical network stats on the health of the Vega network; nodes, staking and uptime.",
     "category": "trading",
     "type": "TOOL"
   },
@@ -75,8 +75,26 @@
     "collection": "tools",
     "icon": "../../images/tool-icons/data-node.png",
     "title": "Data Node",
-    "link": "",
-    "description": "Query our APIs to retrieve on-chain data.",
+    "link": "https://lb.testnet.vega.xyz/playground",
+    "description": "Query the Vega network APIs to retrieve on chain data.",
+    "category": "trading",
+    "type": "WALLET"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/vega-capsule.png",
+    "title": "Vega Capsule",
+    "link": "https://github.com/vegaprotocol/vegacapsule",
+    "description": "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.",
+    "category": "trading",
+    "type": "WALLET"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/nodes-guru.png",
+    "title": "Nodes Guru",
+    "link": "https://nodes.guru/vega",
+    "description": "Who the validators are and reward history, stake history.",
     "category": "trading",
     "type": "WALLET"
   }

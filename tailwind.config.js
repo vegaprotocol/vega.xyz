@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         "four-oh-four": "url('/404.png')",
+        fairground: "url('/fairground-bg.png')",
+        "experiment-on-fairground": "url('/experiment-on-fairground.svg')",
       },
       opacity: {
         15: ".15",
@@ -80,6 +82,15 @@ module.exports = {
           },
         },
       }),
+      keyframes: {
+        "fairground-marquee": {
+          from: { backgroundPositionX: 0 },
+          to: { backgroundPositionX: "-1326px" },
+        },
+      },
+      animation: {
+        "fairground-marquee": "fairground-marquee 10s linear infinite;",
+      },
     },
   },
   plugins: [
