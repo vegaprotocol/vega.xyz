@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const XLarge = () => {
   return (
@@ -18,6 +19,31 @@ const XLarge = () => {
           fill="url(#useHeroBackgroundPattern)"
         />
 
+        <motion.g
+          style={{ originX: 0.7, originY: 0 }}
+          animate={{ rotate: [-8, 10] }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+        >
+          <path
+            d="M427.419 133.88V77.7598"
+            strokeMiterlimit="10"
+            className="dark:stroke-white stroke-black"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M407.99 138.37L412.229 142.61L414.349 144.73L422.84 153.22L424.96 151.1L429.199 155.34L431.319 153.22L427.079 148.98L429.199 146.86L433.439 151.1L435.56 148.98L431.319 144.74L433.439 142.62L424.949 134.13L422.829 132.01L418.59 127.77L407.979 138.38L407.99 138.37ZM416.479 142.61L414.359 140.49L416.479 138.37L418.599 140.49L416.479 142.61ZM422.84 136.25L420.719 138.37L418.599 136.25L420.719 134.13L422.84 136.25Z"
+          />
+          <path
+            className="dark:fill-white fill-black"
+            d="M428.879 129.9H425.869V138.92H428.879V129.9Z"
+          />
+        </motion.g>
+
         <g className="dark:stroke-white stroke-black">
           <path d="M0 155.34H350" strokeWidth="2" strokeMiterlimit="10" />
           <path
@@ -33,7 +59,6 @@ const XLarge = () => {
           <path d="M458 316.34H520.96" strokeWidth="2" strokeMiterlimit="10" />
           <path d="M175 316.34H417.52" strokeWidth="2" strokeMiterlimit="10" />
           <path d="M211.9 316.34V147.4" strokeWidth="2" strokeMiterlimit="10" />
-          <path d="M427.419 133.88V77.7598" strokeMiterlimit="10" />
           <path d="M231.9 232.67H211.9" strokeWidth="2" strokeMiterlimit="10" />
           <path d="M231.9 220.67H211.9" strokeWidth="2" strokeMiterlimit="10" />
           <path d="M231.9 208.67H211.9" strokeWidth="2" strokeMiterlimit="10" />
@@ -86,8 +111,6 @@ const XLarge = () => {
           <path d="M140.23 127.88V148.88H143.23V154.88H146.23V148.88H149.23V154.88H152.23V148.88H155.23V127.88H140.23ZM143.23 136.88V133.88H146.23V136.88H143.23ZM152.23 136.88H149.23V133.88H152.23V136.88Z" />
           <path d="M160.68 127.88V148.88H163.68V154.88H166.68V148.88H169.68V154.88H172.68V148.88H175.68V127.88H160.68ZM163.68 136.88V133.88H166.68V136.88H163.68ZM172.68 136.88H169.68V133.88H172.68V136.88Z" />
           <path d="M181.71 139.88H172.69V142.89H181.71V139.88Z" />
-          <path d="M407.99 138.37L412.229 142.61L414.349 144.73L422.84 153.22L424.96 151.1L429.199 155.34L431.319 153.22L427.079 148.98L429.199 146.86L433.439 151.1L435.56 148.98L431.319 144.74L433.439 142.62L424.949 134.13L422.829 132.01L418.59 127.77L407.979 138.38L407.99 138.37ZM416.479 142.61L414.359 140.49L416.479 138.37L418.599 140.49L416.479 142.61ZM422.84 136.25L420.719 138.37L418.599 136.25L420.719 134.13L422.84 136.25Z" />
-          <path d="M428.879 129.9H425.869V138.92H428.879V129.9Z" />
           <path d="M89.7996 468.37V450.34H88.8496V468.37" />
           <path d="M71.3096 450.35V471.35H74.3096V477.35H77.3096V471.35H80.3096V477.35H83.3096V471.35H86.3096V450.35H71.3096ZM74.3096 459.35V456.35H77.3096V459.35H74.3096ZM83.3096 459.35H80.3096V456.35H83.3096V459.35Z" />
           <path d="M92.3403 462.35H83.3203V465.36H92.3403V462.35Z" />

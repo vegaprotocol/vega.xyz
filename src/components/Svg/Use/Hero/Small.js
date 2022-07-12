@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Small = () => {
   return (
@@ -18,13 +19,33 @@ const Small = () => {
           fill="url(#useHeroBackgroundPattern)"
         />
 
-        <g className="dark:stroke-white stroke-black">
+        <motion.g
+          style={{ originX: 0.6, originY: 0 }}
+          animate={{ rotate: [-8, 10] }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+        >
+          <path
+            className="dark:fill-white fill-black"
+            d="M246.46 107.892L249.766 111.198L251.419 112.851L258.039 119.471L259.692 117.818L262.998 121.124L264.651 119.471L261.345 116.165L262.998 114.512L266.304 117.818L267.957 116.165L264.651 112.859L266.304 111.206L259.684 104.586L258.031 102.933L254.725 99.627L246.452 107.9L246.46 107.892ZM253.08 111.198L251.427 109.545L253.08 107.892L254.733 109.545L253.08 111.198ZM258.039 106.239L256.386 107.892L254.733 106.239L256.386 104.586L258.039 106.239Z"
+          />
           <path
             d="M261.618 104.391V60.6318"
             strokeWidth="0.779736"
             strokeMiterlimit="10"
+            className="dark:stroke-white stroke-black"
           />
+          <path
+            className="dark:fill-white fill-black"
+            d="M262.757 101.288H260.41V108.321H262.757V101.288Z"
+          />
+        </motion.g>
 
+        <g className="dark:stroke-white stroke-black">
           <path
             d="M315.007 152.662H335.35"
             strokeWidth="1.55947"
@@ -50,8 +71,6 @@ const Small = () => {
         </g>
 
         <g className="dark:fill-white fill-black">
-          <path d="M246.46 107.892L249.766 111.198L251.419 112.851L258.039 119.471L259.692 117.818L262.998 121.124L264.651 119.471L261.345 116.165L262.998 114.512L266.304 117.818L267.957 116.165L264.651 112.859L266.304 111.206L259.684 104.586L258.031 102.933L254.725 99.627L246.452 107.9L246.46 107.892ZM253.08 111.198L251.427 109.545L253.08 107.892L254.733 109.545L253.08 111.198ZM258.039 106.239L256.386 107.892L254.733 106.239L256.386 104.586L258.039 106.239Z" />
-          <path d="M262.757 101.288H260.41V108.321H262.757V101.288Z" />
           <path d="M273.742 238.066H310.39V236.507H273.742" />
           <path d="M273.742 249.014V238.097H272.183V249.014" />
           <path d="M311.949 249.014V238.097H310.39V249.014" />

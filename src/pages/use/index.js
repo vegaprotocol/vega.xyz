@@ -51,7 +51,7 @@ const UsePage = ({ data }) => {
           <div className="relative -bottom-[2px] self-end">
             <UseVegaResponsive />
           </div>
-          <div className="py-10 md:py-12 self-center">
+          <div className="pt-10 md:py-12 self-center">
             <BoxTitle text="Tools built on Vega" />
 
             <GlitchTitle
@@ -72,7 +72,7 @@ const UsePage = ({ data }) => {
         </div>
         <PageSection>
           <div>
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 md:mb-12">
               <h2 className="title-m md:title-l">Tools built on Vega</h2>
             </div>
           </div>
@@ -130,7 +130,7 @@ const UsePage = ({ data }) => {
 
       <Container>
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 py-16 md:mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10 py-16 md:mb-12"
           ref={tabs}
         >
           {data.allTools.nodes.map((tool, idx) => (
@@ -165,7 +165,7 @@ const UsePage = ({ data }) => {
           <div className="animate-fairground-marquee bg-experiment-on-fairground bg-[length:1326px_62px] w-full h-[62px]"></div>
 
           <Container>
-            <div className="md:grid md:grid-cols-12 mt-16 mb-8 md:mt-36 md:mb-20">
+            <div className="md:grid md:grid-cols-12 mt-8 mb-8 md:mt-36 md:mb-20">
               <div className="md:col-span-2 relative">
                 <div className="md:relative md:top-[10%]">
                   <img
@@ -176,7 +176,7 @@ const UsePage = ({ data }) => {
               </div>
               <div className="md:col-span-8 text-center">
                 <div className="max-w-[40rem] mx-auto w-full">
-                  <h2 className="title-l lg:title-xl text-black mb-8">
+                  <h2 className="title-m md:title-l lg:title-xl text-black mb-8">
                     Use Fairground, the Vega testnet, to play without
                     consquences.
                   </h2>
