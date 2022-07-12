@@ -269,7 +269,7 @@ const DevelopPage = ({ data }) => {
               text="Explore the forum"
               link="https://community.vega.xyz/"
             />
-            <BoxLinkSimple text="See the Roadmap" link="/en/#roadmap" />
+            <BoxLinkSimple text="See the Roadmap" link="/#roadmap" />
           </div>
         </PageSection>
       </Container>
