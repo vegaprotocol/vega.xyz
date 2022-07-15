@@ -9,6 +9,7 @@ import BoxTitle from "../../components/BoxTitle";
 import ToolBox from "../../components/ToolBox";
 import AddGraphic from "../../components/Svg/Use/Add/Add";
 import UseVegaResponsive from "../../components/Svg/Use/Hero/Responsive";
+import { Link } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import FairgroundConsolIllustration from "../../images/fairground-console-illustration.svg";
 import FairgroundBugIllustration from "../../images/fairground-bug-illustration.svg";
@@ -101,29 +102,29 @@ const UsePage = ({ data }) => {
                 : "border-transparent over:border-current"
             }`}
           >
-            {t("Wallets", { ns: "tools" })}
+            {t("WALLETS", { ns: "tools" })}
           </button>
           <button
             tabIndex={0}
-            onClick={() => changeFilter("trading")}
+            onClick={() => changeFilter("dapp")}
             className={`inline-block title-s px-3 py-5 border-b-2 ${
-              filter === "trading"
+              filter === "dapp"
                 ? "border-current"
                 : "border-transparent hover:border-current"
             }`}
           >
-            {t("Trading", { ns: "tools" })}
+            {t("DAPPS", { ns: "tools" })}
           </button>
           <button
             tabIndex={0}
-            onClick={() => changeFilter("governance")}
+            onClick={() => changeFilter("tool")}
             className={`inline-block title-s px-3 py-5 border-b-2 ${
-              filter === "governance"
+              filter === "tool"
                 ? "border-current"
                 : "border-transparent hover:border-current"
             }`}
           >
-            {t("Governance", { ns: "tools" })}
+            {t("Tools", { ns: "tools" })}
           </button>
         </div>
       </div>
@@ -142,8 +143,9 @@ const UsePage = ({ data }) => {
                 icon={tool.icon.childImageSharp.gatsbyImageData}
                 title={t(tool.title, { ns: "tools" })}
                 link={tool.link}
+                author={tool.author}
                 text={t(tool.description, { ns: "tools" })}
-                type={t(tool.type, { ns: "tools" })}
+                category={tool.category}
               />
             </div>
           ))}
@@ -153,8 +155,10 @@ const UsePage = ({ data }) => {
           <div>
             <p className="title-m mb-3">Want to add something to this list?</p>
             <p className="prose copy-s text-vega-mid-grey">
-              <a href="">Chat to us on Discord</a> and{" "}
-              <a href="">start building</a>.
+              <a href="https://vega.xyz/discord/" target="_blank">
+                Chat to us on Discord
+              </a>{" "}
+              and <Link to="/develop">start building</Link>.
             </p>
           </div>
           <AddGraphic className="max-w-[16rem] w-full self-end" />
@@ -247,8 +251,8 @@ export const query = graphql`
       nodes {
         title
         description
+        author
         link
-        type
         category
         icon {
           childImageSharp {
