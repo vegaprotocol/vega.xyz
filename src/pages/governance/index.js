@@ -1,18 +1,16 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import GovernanceResponsive from "../../components/Svg/Governance/Hero/Responsive";
 import PageSection from "../../components/PageSection";
 import BoxTitle from "../../components/BoxTitle";
-//import TextLink from "../../components/TextLink";
+import ToolBox from "../../components/ToolBox";
 import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
-import ForumIcon from "../../images/governance-icon-forum.png";
-import TokenInterfaceIcon from "../../images/governance-icon-token.png";
-import MakeProposalIcon from "../../images/governance-icon-proposal.png";
 import Accordion from "../../components/Accordion/Accordion";
 import Arrow from "../../components/Svg/Arrow";
 import VotingIllustration from "../../components/Svg/Governance/Voting";
@@ -84,23 +82,7 @@ const governanceProcess = [
   },
 ];
 
-const GovernanceTool = ({ icon, title, link, text, type }) => {
-  return (
-    <Link to={link} className="block group relative">
-      <div className="group-hover:-translate-y-2 border border-current p-6 relative h-full dark:bg-black bg-white">
-        <img src={icon} className="mb-6" width="96" height="96" alt={title} />
-        <div className="title-s block mb-4">{title}</div>
-        <div className="copy-xs text-vega-mid-grey">{text}</div>
-        <div className="border border-current uppercase copy-xxs inline-block px-3 font-light">
-          {type}
-        </div>
-      </div>
-      <div className="group-hover:block hidden border-b border-l border-r border-current absolute bottom-0 left-0 right-0 h-3" />
-    </Link>
-  );
-};
-
-const GovernancePage = () => {
+const GovernancePage = ({ data }) => {
   return (
     <Layout>
       <Seo
@@ -141,22 +123,22 @@ const GovernancePage = () => {
             Governance Tools
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-10 mt-10 md:mt-20 max-w-[75rem] mx-auto">
-            <GovernanceTool
-              icon={ForumIcon}
+            <ToolBox
+              icon={getImage(data.forumIcon)}
               title="Forum"
               link="https://community.vega.xyz/c/governance/25"
               text="Discuss governance and governance proposals on Vega networks."
               type="Tool"
             />
-            <GovernanceTool
-              icon={TokenInterfaceIcon}
+            <ToolBox
+              icon={getImage(data.tokenInterfaceIcon)}
               title="Token interface"
               link="https://token.vega.xyz/governance"
               text="Signal your support for a validator by staking tokens and vote on governance actions and proposals for network parameters, markets and assets."
               type="DAPP"
             />
-            <GovernanceTool
-              icon={MakeProposalIcon}
+            <ToolBox
+              icon={getImage(data.makeProposalIcon)}
               title="Make a proposal"
               link="https://docs.fairground.vega.xyz/docs/api-howtos/create-market/"
               text="Create and submit a proposal for a new market, change to network parameters, community and assets using Vega APIs."
@@ -230,3 +212,39 @@ const GovernancePage = () => {
 };
 
 export default GovernancePage;
+
+export const query = graphql`
+  query {
+    forumIcon: file(relativePath: { eq: "governance-icon-forum.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    tokenInterfaceIcon: file(
+      relativePath: { eq: "governance-icon-token.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    makeProposalIcon: file(
+      relativePath: { eq: "governance-icon-proposal.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+  }
+`;

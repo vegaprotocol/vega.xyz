@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import Seo from "../../components/Seo";
@@ -29,6 +30,7 @@ import CrossChainSupportDiagramResponsive from "../../components/KeyConcepts/Dia
 import ScalableDefiInfrastructureDiagramResponsive from "../../components/KeyConcepts/Diagrams/ScalableDefiInfrastructureDiagram/Responsive";
 import NoGasFeesDiagramResponsive from "../../components/KeyConcepts/Diagrams/NoGasFeesDiagram/Responsive";
 import DynamicMarginsDiagramResponsive from "../../components/KeyConcepts/Diagrams/DynamicMarginsDiagram/Responsive";
+import { Trans } from "gatsby-plugin-react-i18next";
 
 const KeyConceptsPage = () => {
   const sections = [
@@ -67,18 +69,24 @@ const KeyConceptsPage = () => {
                   level="2"
                   className="mb-6 title-m md:title-l xl:title-xl px-3"
                 >
-                  We're creating the critical infrastructure for Web3 and DeFi
-                  to mature, and birth a thriving new world of finance
+                  <Trans>
+                    We're creating the critical infrastructure for Web3 and DeFi
+                    to mature, and birth a thriving new world of finance
+                  </Trans>
                 </GlitchTitle>
 
                 <LeadingLine className="text-current">
-                  We're building a future of finance to rival, or outdo, CeFi
-                  &mdash; where control of the markets, products, and fees is in
-                  the community's hands.
+                  <Trans>
+                    We're building a future of finance to rival, or outdo, CeFi
+                    where control of the markets, products, and fees is in the
+                    community's hands.
+                  </Trans>
                 </LeadingLine>
                 <LeadingLine className="text-current">
-                  And the tools to create decentralised markets that give
-                  centralised versions a run for their money.
+                  <Trans>
+                    And the tools to create decentralised markets that give
+                    centralised versions a run for their money.
+                  </Trans>
                 </LeadingLine>
               </div>
             </div>
@@ -549,3 +557,17 @@ const KeyConceptsPage = () => {
 };
 
 export default KeyConceptsPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

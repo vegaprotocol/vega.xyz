@@ -1,0 +1,92 @@
+[
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/desktop-wallet.png",
+    "title": "Desktop Wallet",
+    "author": "Vega",
+    "link": "/wallet/",
+    "description": "An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.",
+    "category": "WALLET"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/console.png",
+    "title": "Console",
+    "author": "Vega",
+    "link": "https://console.fairground.wtf/",
+    "description": "A dapp for trading on the Vega network.",
+    "category": "DAPP"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/governance.png",
+    "title": "Governance",
+    "author": "Vega",
+    "link": "https://token.vega.xyz/governance",
+    "description": "Review and vote on governance proposals.",
+    "category": "DAPP"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/block-explorer.png",
+    "title": "Block Explorer",
+    "author": "Vega",
+    "link": "https://explorer.vega.xyz/",
+    "description": "Dashboard with real-time information about the Vega blockchain.",
+    "category": "TOOL"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/staking.png",
+    "title": "Staking",
+    "author": "Vega",
+    "link": "https://token.vega.xyz/staking",
+    "description": "Stake $VEGA tokens and get rewarded.",
+    "category": "DAPP"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/cli-wallet.png",
+    "title": "CLI Wallet",
+    "author": "Vega",
+    "link": "https://docs.vega.xyz/docs/mainnet/tools/vega-wallet/cli-wallet",
+    "description": "Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.",
+    "category": "WALLET"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/nodes-guru.png",
+    "title": "Vega World",
+    "author": "Nodes Guru",
+    "link": "https://nodes.guru/vega",
+    "description": "Who the validators are and reward history, stake history.",
+    "category": "TOOL"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/vesting.png",
+    "title": "Vesting",
+    "author": "Vega",
+    "link": "https://token.vega.xyz/vesting",
+    "description": "Redeem locked vega tokens.",
+    "category": "TOOL"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/data-node.png",
+    "title": "Data Node",
+    "author": "Vega",
+    "link": "https://lb.testnet.vega.xyz/playground",
+    "description": "Query the Vega network APIs to retrieve on chain data.",
+    "category": "TOOL"
+  },
+  {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/vega-capsule.png",
+    "title": "Vega Capsule",
+    "author": "Vega",
+    "link": "https://github.com/vegaprotocol/vegacapsule",
+    "description": "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.",
+    "category": "TOOL"
+  }
+]

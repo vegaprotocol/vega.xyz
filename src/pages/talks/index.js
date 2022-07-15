@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import PageSection from "../../components/PageSection";
 import BoxTitle from "../../components/BoxTitle";
@@ -9,34 +9,7 @@ import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
 import Talk from "../../components/Talk";
 
-const TalksPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(
-        filter: { collection: { eq: "talks" } }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              title
-              date(formatString: "ll")
-              location
-              links {
-                title
-                link
-              }
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `);
-
+const TalksPage = ({ data }) => {
   return (
     <Layout>
       <Seo
@@ -96,3 +69,34 @@ const TalksPage = () => {
 };
 
 export default TalksPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    allMarkdownRemark(
+      filter: {
+        collection: { eq: "talks" }
+        fields: { locale: { eq: $language } }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            date(formatString: "ll")
+            location
+            links {
+              title
+              link
+            }
+          }
+          fields {
+            slug
+            locale
+          }
+        }
+      }
+    }
+  }
+`;
