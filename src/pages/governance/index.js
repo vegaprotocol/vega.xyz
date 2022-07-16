@@ -132,7 +132,7 @@ const GovernancePage = ({ data }) => {
             />
             <ToolBox
               icon={getImage(data.tokenInterfaceIcon)}
-              title="Token interface"
+              title="Governance"
               link="https://token.vega.xyz/governance"
               text="Signal your support for a validator by staking tokens and vote on governance actions and proposals for network parameters, markets and assets."
               type="DAPP"
