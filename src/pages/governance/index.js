@@ -134,7 +134,7 @@ const GovernancePage = ({ data }) => {
               icon={getImage(data.tokenInterfaceIcon)}
               title="Governance"
               link="https://token.vega.xyz/governance"
-              text="Signal your support for a validator by staking tokens and vote on governance actions and proposals for network parameters, markets and assets."
+              text="Review and vote on governance proposals."
               type="DAPP"
             />
             <ToolBox
