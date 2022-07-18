@@ -65,7 +65,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     if (["jobs"].includes(template)) {
       createPage({
         component: path.resolve(`./src/templates/${template}.js`),
-        path: `${edge.node.fields.slug}`,
+        path: `careers/${edge.node.fields.slug}`,
         context: {
           slug: edge.node.fields.slug,
         },
