@@ -140,8 +140,8 @@ const GovernancePage = ({ data }) => {
             <ToolBox
               icon={getImage(data.makeProposalIcon)}
               title="Make a proposal"
-              link="https://docs.fairground.vega.xyz/docs/api-howtos/create-market/"
-              text="Create and submit a proposal for a new market, change to network parameters, community and assets using Vega APIs."
+              link="https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol"
+              text="Read the docs to create and submit a proposal using Vega APIs."
               type="DOCS"
             />
           </div>
