@@ -24,7 +24,7 @@
     "author": "Vega",
     "link": "https://token.vega.xyz/governance",
     "description": "Review and vote on governance proposals.",
-    "category": "DAPP"
+    "category": "TOOL"
   },
   {
     "collection": "tools",
@@ -42,7 +42,7 @@
     "author": "Vega",
     "link": "https://token.vega.xyz/staking",
     "description": "Stake $VEGA tokens and get rewarded.",
-    "category": "DAPP"
+    "category": "TOOL"
   },
   {
     "collection": "tools",
