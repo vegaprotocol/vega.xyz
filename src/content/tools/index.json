@@ -14,7 +14,7 @@
     "title": "Console",
     "author": "Vega",
     "link": "https://console.fairground.wtf/",
-    "description": "A dapp for trading on the Vega network.",
+    "description": "A dapp for trading on the Vega network (Testnet).",
     "category": "DAPP"
   },
   {
@@ -24,7 +24,7 @@
     "author": "Vega",
     "link": "https://token.vega.xyz/governance",
     "description": "Review and vote on governance proposals.",
-    "category": "DAPP"
+    "category": "TOOL"
   },
   {
     "collection": "tools",
@@ -42,7 +42,7 @@
     "author": "Vega",
     "link": "https://token.vega.xyz/staking",
     "description": "Stake $VEGA tokens and get rewarded.",
-    "category": "DAPP"
+    "category": "TOOL"
   },
   {
     "collection": "tools",
@@ -76,7 +76,7 @@
     "icon": "../../images/tool-icons/data-node.png",
     "title": "Data Node",
     "author": "Vega",
-    "link": "https://lb.testnet.vega.xyz/playground",
+    "link": "https://github.com/vegaprotocol/data-node",
     "description": "Query the Vega network APIs to retrieve on chain data.",
     "category": "TOOL"
   },
