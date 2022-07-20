@@ -76,7 +76,7 @@
     "icon": "../../images/tool-icons/data-node.png",
     "title": "Data Node",
     "author": "Vega",
-    "link": "https://lb.testnet.vega.xyz/playground",
+    "link": "https://github.com/vegaprotocol/data-node",
     "description": "Query the Vega network APIs to retrieve on chain data.",
     "category": "TOOL"
   },
