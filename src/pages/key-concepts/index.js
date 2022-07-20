@@ -77,7 +77,7 @@ const KeyConceptsPage = () => {
 
                 <LeadingLine className="text-current">
                   <Trans>
-                    We're building a future of finance to rival, or outdo, CeFi where control of the markets, products, and fees is in the community's hands.
+                    We're building a future of finance to rival, or outdo, CeFi - where control of the markets, products, and fees is in the community's hands.
                   </Trans>
                 </LeadingLine>
                 <LeadingLine className="text-current">
