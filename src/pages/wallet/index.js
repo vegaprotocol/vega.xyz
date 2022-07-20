@@ -91,27 +91,27 @@ const binaries = [
   {
     icon: "windows",
     platform: "Windows",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-windows-amd64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.2.1/vegawallet-desktop-windows-amd64.zip",
   },
   {
     icon: "windows",
     platform: "Windows (ARM64)",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-windows-arm64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.2.1/vegawallet-desktop-windows-arm64.zip",
   },
   {
     icon: "mac",
     platform: "MacOS",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-darwin-amd64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.2.1/vegawallet-desktop-darwin-amd64.zip",
   },
   {
     icon: "mac",
     platform: "MacOS (ARM64)",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-darwin-arm64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.2.1/vegawallet-desktop-darwin-arm64.zip",
   },
   {
     icon: "linux",
     platform: "Linux",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.1.1/vegawallet-desktop-linux-amd64.zip",
+    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.2.1/vegawallet-desktop-linux-amd64.zip",
   },
 ];
 
