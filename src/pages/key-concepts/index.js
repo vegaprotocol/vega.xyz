@@ -143,7 +143,7 @@ const KeyConceptsPage = () => {
           <PurposeBuiltBlock />
 
           <BlockD
-            title="Built in anti front-running protection"
+            title="Anti front-running protection"
             diagram={<FrontRunningProtectionDiagramResponsive />}
           >
             <p>
@@ -168,8 +168,6 @@ const KeyConceptsPage = () => {
                 'Wendy grows up'
               </TextLink>
               {"  "}
-              (development on the original research to include a framework for
-              implementation)
             </p>
             <p>
               Or try out the{" "}
@@ -209,16 +207,11 @@ const KeyConceptsPage = () => {
           </BlockD>
 
           <BlockD
-            title="Market making with built-in liquidity incentives"
+            title="Built-in liquidity incentives"
             diagram={<MarketMakingDiagram />}
           >
             <p>
-              Successful markets need enough liquidity to generate bustling
-              activity. Vega shifts power and reward away from rent-seeking
-              exchange owners, towards the liquidity providers of markets. This
-              opens up new sets of business models, and unlocks a “VC” like
-              approach of incubating a portfolio of markets, or “buying in” to
-              more mature markets.
+              Unlock a “VC” like approach of incubating a portfolio of new markets with built in liquidity incentives, or “buying in” to more mature markets - shifting the power and reward away from exchange owners to market liquidity providers. Successful markets have enough liquidity to generate bustling activity. 
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -239,18 +232,13 @@ const KeyConceptsPage = () => {
             diagram={<HighCapitalEfficiencyDiagram />}
           >
             <p>
-              Vega's innovations open up hedging instruments to a far greater
-              range of people and businesses. Live, automated cross margining
-              significantly lowers capital costs allowing markets to exist that
-              previously wouldn't due to cost. Vega runs SPAN-type calculations,
-              ie it evaluates overall portfolio risk by calculating the worst
-              possible loss that a portfolio of derivative and physical
-              instruments might reasonably incur. And it does this live, and
-              on-chain, instead of over the course of one trading day.
+              Vega’s cross margining and portfolio risk evaluation innovations significantly lower capital costs opening up hedging instruments to a far greater range of people and businesses and allowing markets to exist that previously wouldn't due to cost. 
             </p>
             <p>
-              Meanwhile, built-in cross margining routes a trader's gains made
-              on one market to offset positions on other markets.
+              Overall portfolio risk is evaluated by calculating the worst possible loss that a portfolio of derivative and physical instruments might reasonably incur - live, and on-chain, instead of over the course of one trading day.
+            </p>
+            <p>
+              Built-in live, automated cross margining routes a trader’s gains made on one market to offset positions on other markets.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -281,15 +269,10 @@ const KeyConceptsPage = () => {
             diagram={<EfficientPriceDiscoveryDiagramResponsive />}
           >
             <p>
-              Launch a new market on Vega, or trade, confident in the knowledge
-              that the latest and most accurate price is available to you.
-              Unlike other decentralised exchanges, we don't charge gas fees
-              meaning better price discovery. What's more, Vega offers subsecond
-              latency together with price protection mechanisms/circuit breakers
-              and auctions in low liquidity regimes to discover true market
-              prices. Automated market makers rely on other price services,
-              whereas with Vega you can have an initial offering of something
-              that has never been traded before.
+              Unlike other decentralised exchanges, we don’t charge gas fees for price discovery. What’s more, Vega offers subsecond latency together with price protection mechanisms/circuit breakers and auctions in low liquidity regimes to discover true market prices. 
+            </p>
+            <p>
+              Launch a new market on Vega, or trade, confident in the knowledge that the latest and most accurate price is available to you.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
