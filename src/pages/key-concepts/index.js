@@ -143,24 +143,11 @@ const KeyConceptsPage = () => {
           <PurposeBuiltBlock />
 
           <BlockD
-            title="Anti front-running protection"
+            title="Built in anti front-running protection"
             diagram={<FrontRunningProtectionDiagramResponsive />}
           >
             <p>
-              Our high-throughput, low-latency platform secures transactions by
-              Tendermint, the proof-of-stake consensus layer with anti
-              front-running protection built in. The consensus algorithm ensures
-              all nodes see the same sequence of transactions, maintaining the
-              integrity of the platform and ensuring transparency and
-              auditability of trading outcomes. In this way, we can create a
-              fair marketplace where no participant can routinely gain advantage
-              through malicious actions - and market governance is
-              decentralised.
-            </p>
-            <p>
-              Our pre-protocol widget, 'Wendy', provides cryptographic proof
-              that a trader has had fair access to the order book. Something not
-              even sophisticated traditional exchanges can offer.
+              Vega's pre-protocol widget, 'Wendy', ensures all nodes see the same sequence of transactions and provides cryptographic proof that all traders have fair access to the order book. <strong>Creating a fair marketplace where no participant can gain unfair advantage</strong>, an issue rampant in DeFi and something not even sophisticated traditional exchanges can offer.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -217,13 +204,7 @@ const KeyConceptsPage = () => {
             diagram={<PermissionlessMarketCreationDiagram />}
           >
             <p>
-              The freedom to transact and create markets is central to Vega
-              delivering on the promise of blockchain and DeFi. Unlike other
-              decentralised exchanges where market creation is centrally
-              controlled, with Vega, anyone can propose a market on any
-              underlying - which the community must then approve. They can then
-              easily attract liquidity with our built-in incentive mechanism
-              that matches traders and market makers.
+              Key to delivering on the promise of blockchain and DeFi, <strong>anyone can propose a market on any underlying and the community decides what gets created</strong> (unlike other decentralised exchanges).
             </p>
           </BlockD>
 
