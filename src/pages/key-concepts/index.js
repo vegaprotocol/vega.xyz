@@ -147,7 +147,7 @@ const KeyConceptsPage = () => {
             diagram={<FrontRunningProtectionDiagramResponsive />}
           >
             <p>
-              Vega's pre-protocol widget, 'Wendy', ensures all nodes see the same sequence of transactions and provides cryptographic proof that all traders have fair access to the order book. <strong>Creating a fair marketplace where no participant can gain unfair advantage</strong>, an issue rampant in DeFi and something not even sophisticated traditional exchanges can offer.
+              Vega's pre-protocol widget, 'Wendy', ensures all nodes see the same sequence of transactions and provides cryptographic proof that all traders have fair access to the order book. <strong>This creates a fair marketplace where no participant can gain an unfair advantage</strong>, an issue rampant in DeFi and something not even sophisticated traditional exchanges can offer.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
