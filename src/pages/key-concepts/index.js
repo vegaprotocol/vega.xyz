@@ -269,7 +269,7 @@ const KeyConceptsPage = () => {
             diagram={<EfficientPriceDiscoveryDiagramResponsive />}
           >
             <p>
-              Unlike other decentralised exchanges, we don’t charge gas fees for price discovery. What’s more, Vega offers subsecond latency together with price protection mechanisms/circuit breakers and auctions in low liquidity regimes to discover true market prices. 
+               Unlike other decentralised exchanges, Vega doesn't charge gas fees, allowing better price discovery. What’s more, Vega offers subsecond latency together with price protection mechanisms/circuit breakers and auctions in low liquidity regimes to discover true market prices. 
             </p>
             <p>
               Launch a new market on Vega, or trade, confident in the knowledge that the latest and most accurate price is available to you.
