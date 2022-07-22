@@ -269,7 +269,7 @@ const KeyConceptsPage = () => {
             diagram={<EfficientPriceDiscoveryDiagramResponsive />}
           >
             <p>
-              Unlike other decentralised exchanges, we don’t charge gas fees for price discovery. What’s more, Vega offers subsecond latency together with price protection mechanisms/circuit breakers and auctions in low liquidity regimes to discover true market prices. 
+               Unlike other decentralised exchanges, Vega doesn't charge gas fees, allowing better price discovery. What’s more, Vega offers subsecond latency together with price protection mechanisms/circuit breakers and auctions in low liquidity regimes to discover true market prices. 
             </p>
             <p>
               Launch a new market on Vega, or trade, confident in the knowledge that the latest and most accurate price is available to you.
@@ -317,12 +317,7 @@ const KeyConceptsPage = () => {
             diagram={<CommunityCurationOfMarketsDiagramResponsive />}
           >
             <p>
-              Vega's market governance is designed so the network can operate
-              and grow freely, without manual intervention - while minimising
-              risks posed by bad actors. Weighted voting happens through the
-              community allocating, or staking, their tokens to validator nodes.
-              And decisions made include creation and closure of markets, and
-              the setting of parameters that influence market behaviour.
+              <strong>Vega’s market governance is designed to allow the network to operate and grow freely, without manual or centralised intervention</strong>. Weighted voting happens by the community allocating, or staking, their tokens to validator nodes. Governance decisions include creation and closure of markets, and the setting of parameters that influence market behaviour.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -343,13 +338,7 @@ const KeyConceptsPage = () => {
             diagram={<DynamicMarginsDiagramResponsive />}
           >
             <p>
-              Vega protocol's rigorous framework continuously monitors and
-              manages credit risk much more efficiently than centralised
-              exchanges. With a plugin-like architecture for risk models, it is
-              easy to implement whichever risk model is appropriate for a new
-              market. And we run best-in-class stochastic models fast enough to
-              support frequent margin evaluations - allowing traders with
-              positions to quickly take appropriate action.
+              Vega protocol’s rigorous framework continuously monitors and manages credit risk more efficiently than centralised exchanges. A plugin-like architecture for risk models and best-in-class stochastic models that run fast enough to support frequent margin evaluations allows traders with positions to adjust quickly.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -379,12 +368,7 @@ const KeyConceptsPage = () => {
             diagram={<PeggedOrdersDiagram />}
           >
             <p>
-              Forget worrying about latency, or manually tracking order prices.
-              Use pegged orders on any market, at any time to place orders and
-              track another price on the market. By automating this feature,
-              Vega enables advanced trading strategies, fast reaction times -
-              while reducing the number of transactions needed to maintain
-              liquidity provider orders.
+              Use pegged orders on any market, at any time, to place orders and automatically track another price on the market. This enables advanced trading strategies and fast reaction times while removing concerns about latency and reducing the number of manual transactions needed to maintain liquidity provider orders.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -493,23 +477,10 @@ const KeyConceptsPage = () => {
             diagram={<ScalableDefiInfrastructureDiagramResponsive />}
           >
             <p>
-              From providing dev-friendly APIs, to streamlining integration and
-              allowing for custom creation of user-friendly front-ends, Vega
-              makes it easy for developers to unlock fairer and faster trading
-              for the masses. Vega works alongside other layer 1 blockchains so
-              devs can easily build immersive web, mobile or desktop apps. And
-              because integration is so simple, you could, for example, easily
-              create responsive markets to monitor various real world/spot
-              dynamics and automatically propose a hedging market when
-              volatility exceeds a threshold.
+              Vega works alongside other layer 1 blockchains - with open source APIs and libraries - making it easy to build status quo-challenging user interfaces.
             </p>
             <p>
-              What's more, you can create status quo-challenging user interfaces
-              with WebSocket for communication between your app and the server,
-              GraphQL or gRPC APIs for streaming market data. You can also show
-              simple graphs of data from markets using an open source library
-              (such as Vega Pennant graphing library). The possibilities are
-              endless.
+              For example, by using WebSocket for communication between your app and the server, GraphQL or gRPC APIs for streaming market data and Vega Pennant for simple graphs you could easily create responsive markets to monitor real world/spot dynamics and automatically propose a hedging market when volatility exceeds a threshold.
             </p>
           </BlockD>
         </div>
