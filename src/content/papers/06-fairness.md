@@ -4,6 +4,6 @@ description: "Current blockchains either provide explicit ways to front run or l
 links:
   - title: View on IACR EPrint
     link: https://eprint.iacr.org/2020/885
-position: 5
+position: 6
 category: Implementations
 ---

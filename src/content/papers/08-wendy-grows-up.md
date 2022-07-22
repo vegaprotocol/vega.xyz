@@ -9,6 +9,6 @@ links:
     link: https://github.com/vegaprotocol/wendy/
   - title: Published in FC 2021 International Workshops
     link: https://link.springer.com/chapter/10.1007/978-3-662-63958-0_17
-position: 7
+position: 8
 category: Implementations
 ---
