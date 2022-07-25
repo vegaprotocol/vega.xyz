@@ -25,7 +25,7 @@ const governanceProcess = [
   {
     phase: "Phase 1",
     title: "Sense check",
-    text: "Start a topic and share an outline of your proposl on the forum. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.",
+    text: "Start a topic and share an outline of your proposal on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.",
     links: [
       {
         title: "Start a topic on the forum",
@@ -37,7 +37,7 @@ const governanceProcess = [
   {
     phase: "Phase 2",
     title: "Formalise Proposal",
-    text: "Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.",
+    text: "Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.",
     links: [
       {
         title: "Read the docs to make a proposal",
