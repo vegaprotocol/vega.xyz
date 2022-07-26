@@ -97,13 +97,13 @@ const Ambassadors = () => {
               </h2>
               <div className="mt-6 md:mt-12">
                 <Clan
-                  title="Content Collective"
-                  text="(Awareness, Editorials, Tweets, Infographics)"
+                  title="Content Collective (Non-Technical)"
+                  text="(Tweets, Translations, Editorials, Infographics, Bounties)"
                   icon={IconAmbassador1}
                 />
                 <Clan
-                  title="Builders Club"
-                  text="(Technical Work, Hackathon Support, Coding, Documentation)"
+                  title="Builders Club (Technical)"
+                  text="(Vega Capsule, Documentation, Hackathon Support, Coding)"
                   icon={IconAmbassador2}
                 />
                 {/* <Clan
