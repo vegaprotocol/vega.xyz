@@ -30,7 +30,7 @@ const marketCreationProcess = [
       },
       {
         title: "See what markets exist already",
-        url: "https://console.fairground.wtf/",
+        url: "https://console.fairground.wtf/markets",
       },
     ],
     image: <Phase1 />,
@@ -42,7 +42,7 @@ const marketCreationProcess = [
     links: [
       {
         title: "Read the docs to make a proposal (Testnet)",
-        url: "https://docs.fairground.vega.xyz/docs/api-howtos/create-market/",
+        url: "https://docs.vega.xyz/docs/testnet/tutorials/proposals/new-market-proposal",
       },
       {
         title: "Check out the forum",
@@ -58,7 +58,7 @@ const marketCreationProcess = [
     links: [
       {
         title: "Read the docs to make a proposal (Testnet)",
-        url: "https://docs.fairground.vega.xyz/docs/api-howtos/create-market/",
+        url: "https://docs.vega.xyz/docs/testnet/tutorials/proposals/new-market-proposal",
       },
     ],
     image: <Phase3 />,
@@ -69,7 +69,7 @@ const marketCreationProcess = [
     text: "<p>If all your proposals inputs pass validation, community token holders consider and vote for or against active proposals using the governance tools.</p><p>Share your market ideas on the Vega forum to get the community motivated to vote for your proposal.</p>",
     links: [
       {
-        title: "Vote for propoals",
+        title: "Vote for proposals (Testnet)",
         url: "https://token.fairground.wtf/governance/",
       },
     ],
@@ -82,7 +82,7 @@ const marketCreationProcess = [
     links: [
       {
         title: "Read the docs about liquidity provision (Testnet)",
-        url: "https://docs.fairground.vega.xyz/docs/providing-liquidity/",
+        url: "https://docs.vega.xyz/docs/testnet/tutorials/providing-liquidity",
       },
     ],
     image: <Phase5 />,
