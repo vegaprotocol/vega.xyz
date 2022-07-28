@@ -3,7 +3,7 @@ import VideoBackground from "./VideoBackground";
 
 const GhostParty = () => {
   return (
-    <div className="pb-[33.9434276%] relative w-full">
+    <div className="pb-[33.3500292%] relative w-full">
       <VideoBackground />
       <svg
         xmlns="http://www.w3.org/2000/svg"

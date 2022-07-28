@@ -7,22 +7,12 @@ import JumpNavigation from "../../components/Navigation/JumpNavigation";
 import { CommunityPageSections } from "../../data/CommunityPageSections";
 import ButtonLink from "../../components/ButtonLink";
 import BoxTitle from "../../components/BoxTitle";
-import BoxLink from "../../components/BoxLink";
-import BoxLinkSimple from "../../components/BoxLinkSimple";
-import BoxLinkHero from "../../components/BoxLinkHero";
-import Calendar from "../../components/Calendar";
+import Fairground from "../../components/Fairground";
 import LeadingLine from "../../components/LeadingLine";
-import PageSection from "../../components/PageSection";
-//import TwitchEmbed from "../../components/TwitchEmbed";
-import Incentives from "../../components/Incentives";
-import GlitchTitle from "../../components/GlitchTitle";
-import { getImage, StaticImage } from "gatsby-plugin-image";
+import Callout from "../../components/Callout";
+import { getImage } from "gatsby-plugin-image";
 import GhostParty from "../../components/Svg/GhostParty";
-import IconArt from "../../components/Svg/IconArt";
-import IconContent from "../../components/Svg/IconContent";
-import IconDocumentation from "../../components/Svg/IconDocumentation";
-import IconDevelop from "../../components/Svg/IconDevelop";
-import IconFairground from "../../components/Svg/IconFairground";
+import ToolBox from "../../components/ToolBox";
 
 const CommunityPage = ({ data }) => {
   const ambassadorImage = getImage(data.ambassadorImage);
@@ -53,7 +43,6 @@ const CommunityPage = ({ data }) => {
           sections={CommunityPageSections}
         />
       </div>
-
       <Container dataCy={"main"}>
         <div id="overview" className="pt-6 lg:pt-16">
           <h1>
@@ -89,12 +78,116 @@ const CommunityPage = ({ data }) => {
           </div>
         </div>
       </Container>
-
-      <div className="relative md:-top-6">
+      <div className="relative md:-top-6 md:mb-10">
         <GhostParty />
       </div>
-
       <Container>
+        <h2 className="title-m font-glitched md:title-l mb-14">Where we are</h2>
+
+        <div className="grid grid-cols-3 gap-5 lg:gap-8 mb-16">
+          <ToolBox
+            title="Discord"
+            text="Hangout, chat, get support, suggest new content and art - we're all here!"
+            link="https://vega.xyz/discord"
+            icon={getImage(data.iconDiscord)}
+          />
+          <ToolBox
+            title="Forum"
+            text="Discuss governance and governance proposals on Vega Networks"
+            link="https://community.vega.xyz/c/governance/25"
+            icon={getImage(data.iconForum)}
+          />
+          <ToolBox
+            title="Telegram"
+            text="Official Telegram Group for Vega Protocol"
+            link="https://t.me/vegacommunity/"
+            icon={getImage(data.iconTelegram)}
+          />
+          <ToolBox
+            title="Twitter"
+            text="@vegaprotocol"
+            link="https://twitter.com/vegaprotocol"
+            icon={getImage(data.iconTwitter)}
+          />
+          <ToolBox
+            title="Substack"
+            text="Roll up! Roll up! Vega's bi-weekly highlights newsletter"
+            link="https://vegacommunity.substack.com/subscribe"
+            icon={getImage(data.iconSubstack)}
+          />
+          <ToolBox
+            title="YouTube"
+            text="Video tutorials, presentations, development updates, and milestones of the Vega project."
+            link="https://www.youtube.com/vegaprotocol"
+            icon={getImage(data.iconYouTube)}
+          />
+          <ToolBox
+            title="Twitch"
+            text="Weekly live-streams, Thursdays 6pm BST/UTC+1!"
+            link="https://www.twitch.tv/vegaprotocol"
+            icon={getImage(data.iconTwitch)}
+          />
+          <ToolBox
+            title="Medium"
+            text="Blog"
+            link="https://medium.com/@Vega_Protocol"
+            icon={getImage(data.iconMedium)}
+          />
+        </div>
+
+        <Callout
+          title="Upcoming events"
+          text="Livestreams, conferences, research office hours and community calls"
+          linkText="Events and meetups"
+          link="/community/events"
+        />
+
+        <h2 className="title-m font-glitched md:title-l mb-14">
+          Contribute and get rewarded
+        </h2>
+
+        <div className="grid grid-cols-3 gap-5 lg:gap-8 mb-16">
+          <ToolBox
+            title="Ambassador program"
+            text="Leading community members share what we're building with those that need to hear it — and get rewarded."
+            link="/community/ambassadors/"
+            icon={getImage(data.iconAmbassador)}
+          />
+          <ToolBox
+            title="Builders Club"
+            text="For developers, coders, hackers, dreamers who want to create software on top of Vega."
+            link="https://vega.xyz/discord/"
+            icon={getImage(data.iconBuildersClub)}
+          />
+          <ToolBox
+            title="Feedback"
+            text="Feedback and feature requests on Github"
+            link="https://github.com/vegaprotocol/vega/issues"
+            icon={getImage(data.iconFeedback)}
+          />
+          <ToolBox
+            title="Github"
+            text="Contribute to the source code, and get building with our APIs."
+            link="https://github.com/vegaprotocol/"
+            icon={getImage(data.iconGithub)}
+          />
+          <ToolBox
+            title="Docs"
+            text="Share feedback, make suggestions and help translate."
+            link="https://docs.vega.xyz/"
+            icon={getImage(data.iconDocs)}
+          />
+        </div>
+
+        <Callout
+          title="Incentives"
+          text="Get rewarded for your efforts testing the network"
+          linkText="Earn rewards"
+          link="/community/incentives"
+        />
+      </Container>
+      <Fairground />
+      {/* <Container>
         <PageSection>
           <div id="contributions">
             <div className="text-center">
@@ -247,7 +340,7 @@ const CommunityPage = ({ data }) => {
               </div>
             </div>
           </div>
-        </PageSection> */}
+        </PageSection>
         <PageSection>
           <div id="channels">
             <div className="text-center">
@@ -308,7 +401,7 @@ const CommunityPage = ({ data }) => {
             </div>
           </div>
         </PageSection>
-      </Container>
+      </Container> */}
     </Layout>
   );
 };
@@ -330,6 +423,127 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 600
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconDiscord: file(relativePath: { eq: "social-icons/discord.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconForum: file(relativePath: { eq: "social-icons/forum.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconTelegram: file(relativePath: { eq: "social-icons/telegram.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconTwitter: file(relativePath: { eq: "social-icons/twitter.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconSubstack: file(relativePath: { eq: "social-icons/substack.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconYouTube: file(relativePath: { eq: "social-icons/youtube.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconTwitch: file(relativePath: { eq: "social-icons/twitch.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconMedium: file(relativePath: { eq: "social-icons/medium.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconAmbassador: file(
+      relativePath: { eq: "contribute-icons/ambassador.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconBuildersClub: file(
+      relativePath: { eq: "contribute-icons/builders-club.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconFeedback: file(relativePath: { eq: "contribute-icons/feedback.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconGithub: file(relativePath: { eq: "contribute-icons/github.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconDocs: file(relativePath: { eq: "contribute-icons/docs.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )

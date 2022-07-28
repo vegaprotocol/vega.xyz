@@ -9,7 +9,7 @@ import IconTwitter from "../components/Svg/IconTwitter";
 
 const Footer = () => {
   return (
-    <footer className="mt-12 pt-12">
+    <footer>
       <div className="border-y border-current pt-8 pb-12">
         <Container>
           <div className="grid grid-cols-12 gap-y-8 gap-x-6">
