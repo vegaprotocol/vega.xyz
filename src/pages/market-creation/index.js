@@ -78,7 +78,7 @@ const marketCreationProcess = [
   {
     phase: "Phase 5",
     title: "Attract liquidity",
-    text: "<p>Any Vega participant with sufficient collateral* can provide liquidity for a market by submitting a transaction to the network. What's more, Vega makes it easy to attract liquidity with its built-in incentive mechanism that matches traders and market makers.</p><p><i>*the size of the nominated liquidity commitment amount and the margins required to support the orders generated from that commitment.</i></p>",
+    text: "<p>Any Vega participant with sufficient collateral* can provide liquidity for a market by submitting a transaction to the network. Attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers.</p><p><i>*the size of the nominated liquidity commitment amount and the margins required to support the orders generated from that commitment.</i></p>",
     links: [
       {
         title: "Read the docs about liquidity provision (Testnet)",
@@ -101,7 +101,7 @@ const MarketCreationPage = () => {
       <Seo
         title=" Market Creation with Vega"
         description="Bring the future of DeFi within reach - and create a market on any
-            underlying. It's easy to attract liquidity with Vega's built-in
+            underlying. Attract liquidity with Vega's built-in
             incentive mechanism that matches traders and market makers."
       />
       <Container dataCy={"main"}>
@@ -114,14 +114,12 @@ const MarketCreationPage = () => {
             color="red"
             className="title-m md:title-l lg:title-xxl mb-4 md:mb-6 mt-4 text-center"
           >
-            Market Creation with Vega
+            Create markets
           </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">
-            Bring the future of DeFi within reach - and create a market on any
-            underlying. It's easy to attract liquidity with Vega's built-in
-            incentive mechanism that matches traders and market makers.
+             Create a market on any underlying, and attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers.
           </LeadingLine>
         </div>
       </Container>
