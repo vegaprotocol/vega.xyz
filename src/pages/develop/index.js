@@ -54,7 +54,7 @@ const DevelopPage = ({ data }) => {
                 <BoxTitle text="Develop" />
               </h1>
               <div className="title-m max-w-[38.75rem] md:title-l lg:title-xxl mb-4 mt-4">
-                Creating the future of DeFi together
+                Develop on Vega
               </div>
               <LeadingLine className="text-current max-w-[30rem]">
                 Contribute to our open source repositories on GitHub or create
