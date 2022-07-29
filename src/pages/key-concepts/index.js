@@ -8,8 +8,6 @@ import Sticky from "react-stickynode";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
 import ScrollSpy from "react-scrollspy";
-import UniverseLeft from "../../components/Svg/UniverseLeft";
-import UniverseRight from "../../components/Svg/UniverseRight";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import PurposeBuiltBlock from "../../components/KeyConcepts/Blocks/PurposeBuilt";
 import TextLink from "../../components/TextLink";
@@ -55,43 +53,23 @@ const KeyConceptsPage = () => {
         description="Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
       />
       <div data-cy="main">
-        <div>
-          <div className="pt-6 md:grid md:grid-cols-12">
-            <div className="hidden md:col-span-2 lg:col-span-3 xl:col-span-2 md:block">
-              <UniverseLeft />
-            </div>
-            <div className="md:col-span-8 lg:col-span-6 xl:col-span-8 flex items-center">
-              <div className="max-w-[45rem] px-4 md:px-0 xl:max-w-[50rem] mx-auto text-center">
-                <h1 className="mb-6">
-                  <BoxTitle text="Key concepts" />
-                </h1>
-                <GlitchTitle
-                  level="2"
-                  className="mb-6 title-m md:title-l xl:title-xl px-3"
-                >
-                  <Trans>
-                    We're creating the critical infrastructure for Web3 and DeFi
-                    to mature, and birth a thriving new world of finance
-                  </Trans>
-                </GlitchTitle>
+        <div className="max-w-[45rem] px-4 md:px-0 xl:max-w-[50rem] mx-auto text-center pt-16">
+          <h1 className="mb-6">
+            <BoxTitle text="Key concepts" />
+          </h1>
+          <GlitchTitle
+            level="2"
+            className="mb-6 title-m md:title-l xl:title-xl px-3"
+          >
+            <Trans>What makes Vega different</Trans>
+          </GlitchTitle>
 
-                <LeadingLine className="text-current">
-                  <Trans>
-                    We're building a future of finance to rival, or outdo, CeFi - where control of the markets, products, and fees is in the community's hands.
-                  </Trans>
-                </LeadingLine>
-                <LeadingLine className="text-current">
-                  <Trans>
-                    And the tools to create decentralised markets that give
-                    centralised versions a run for their money.
-                  </Trans>
-                </LeadingLine>
-              </div>
-            </div>
-            <div className="hidden md:col-span-2 lg:col-span-3 xl:col-span-2 md:block">
-              <UniverseRight />
-            </div>
-          </div>
+          <LeadingLine className="text-current">
+            <Trans>
+              Explore the features that enable you to trade and create
+              derivatives on a fully decentralised network.
+            </Trans>
+          </LeadingLine>
         </div>
 
         <Container>
@@ -127,19 +105,6 @@ const KeyConceptsPage = () => {
         </div>
 
         <div id="good">
-          <div className="relative mt-20 md:mt-24 lg:mt-52 overflow-x-hidden">
-            <div className="text-center max-w-[30rem] md:max-w-[44rem] mx-auto">
-              <div className="title-l md:title-xl max-w-[25rem] md:max-w-[30rem] mx-auto mb-3">
-                Be as good as CeFi
-              </div>
-              <div className="copy-s text-current !mb-0">
-                Vega will rival the current financial system, replacing it with
-                one that puts fairness, efficiency, and accessibility at its
-                heart.
-              </div>
-            </div>
-          </div>
-
           <PurposeBuiltBlock />
 
           <BlockD
@@ -147,7 +112,15 @@ const KeyConceptsPage = () => {
             diagram={<FrontRunningProtectionDiagramResponsive />}
           >
             <p>
-              Vega's pre-protocol widget, 'Wendy', ensures all nodes see the same sequence of transactions and provides cryptographic proof that all traders have fair access to the order book. <strong>This creates a fair marketplace where no participant can gain an unfair advantage</strong>, an issue rampant in DeFi and something not even sophisticated traditional exchanges can offer.
+              Vega's pre-protocol widget, 'Wendy', ensures all nodes see the
+              same sequence of transactions and provides cryptographic proof
+              that all traders have fair access to the order book.{" "}
+              <strong>
+                This creates a fair marketplace where no participant can gain an
+                unfair advantage
+              </strong>
+              , an issue rampant in DeFi and something not even sophisticated
+              traditional exchanges can offer.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -183,26 +156,17 @@ const KeyConceptsPage = () => {
         </div>
 
         <div id="better">
-          <div className="relative pt-20 md:pt-32 lg:pt-52 overflow-x-hidden">
-            <div className="text-center max-w-[30rem] md:max-w-[44rem] mx-auto">
-              <div className="title-l md:title-xl max-w-[25rem] md:max-w-[30rem] mx-auto mb-3">
-                Be better than CeFi
-              </div>
-              <div className="copy-s text-current !mb-0">
-                By standardising and automating every step of the trade
-                lifecycle, Vega addresses the shortcomings of traditional
-                trading. And strikes a balance between rigidity and flexibility,
-                for confidence and growth.
-              </div>
-            </div>
-          </div>
-
           <BlockD
             title="Permissionless market creation"
             diagram={<PermissionlessMarketCreationDiagram />}
           >
             <p>
-              Key to delivering on the promise of blockchain and DeFi, <strong>anyone can propose a market on any underlying and the community decides what gets created</strong> (unlike other decentralised exchanges).
+              Key to delivering on the promise of blockchain and DeFi,{" "}
+              <strong>
+                anyone can propose a market on any underlying and the community
+                decides what gets created
+              </strong>{" "}
+              (unlike other decentralised exchanges).
             </p>
           </BlockD>
 
@@ -211,7 +175,11 @@ const KeyConceptsPage = () => {
             diagram={<MarketMakingDiagram />}
           >
             <p>
-              Unlock a “VC” like approach of incubating a portfolio of new markets with built in liquidity incentives, or “buying in” to more mature markets - shifting the power and reward away from exchange owners to market liquidity providers. Successful markets have enough liquidity to generate bustling activity. 
+              Unlock a “VC” like approach of incubating a portfolio of new
+              markets with built in liquidity incentives, or “buying in” to more
+              mature markets - shifting the power and reward away from exchange
+              owners to market liquidity providers. Successful markets have
+              enough liquidity to generate bustling activity.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -232,13 +200,20 @@ const KeyConceptsPage = () => {
             diagram={<HighCapitalEfficiencyDiagram />}
           >
             <p>
-              Vega’s cross margining and portfolio risk evaluation innovations significantly lower capital costs opening up hedging instruments to a far greater range of people and businesses and allowing markets to exist that previously wouldn't due to cost. 
+              Vega’s cross margining and portfolio risk evaluation innovations
+              significantly lower capital costs opening up hedging instruments
+              to a far greater range of people and businesses and allowing
+              markets to exist that previously wouldn't due to cost.
             </p>
             <p>
-              Overall portfolio risk is evaluated by calculating the worst possible loss that a portfolio of derivative and physical instruments might reasonably incur - live, and on-chain, instead of over the course of one trading day.
+              Overall portfolio risk is evaluated by calculating the worst
+              possible loss that a portfolio of derivative and physical
+              instruments might reasonably incur - live, and on-chain, instead
+              of over the course of one trading day.
             </p>
             <p>
-              Built-in live, automated cross margining routes a trader’s gains made on one market to offset positions on other markets.
+              Built-in live, automated cross margining routes a trader’s gains
+              made on one market to offset positions on other markets.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -269,10 +244,15 @@ const KeyConceptsPage = () => {
             diagram={<EfficientPriceDiscoveryDiagramResponsive />}
           >
             <p>
-               Unlike other decentralised exchanges, Vega doesn't charge gas fees, allowing better price discovery. What’s more, Vega offers subsecond latency together with price protection mechanisms/circuit breakers and auctions in low liquidity regimes to discover true market prices. 
+              Unlike other decentralised exchanges, Vega doesn't charge gas
+              fees, allowing better price discovery. What’s more, Vega offers
+              subsecond latency together with price protection
+              mechanisms/circuit breakers and auctions in low liquidity regimes
+              to discover true market prices.
             </p>
             <p>
-              Launch a new market on Vega, or trade, confident in the knowledge that the latest and most accurate price is available to you.
+              Launch a new market on Vega, or trade, confident in the knowledge
+              that the latest and most accurate price is available to you.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -317,7 +297,15 @@ const KeyConceptsPage = () => {
             diagram={<CommunityCurationOfMarketsDiagramResponsive />}
           >
             <p>
-              <strong>Vega’s market governance is designed to allow the network to operate and grow freely, without manual or centralised intervention</strong>. Weighted voting happens by the community allocating, or staking, their tokens to validator nodes. Governance decisions include creation and closure of markets, and the setting of parameters that influence market behaviour.
+              <strong>
+                Vega’s market governance is designed to allow the network to
+                operate and grow freely, without manual or centralised
+                intervention
+              </strong>
+              . Weighted voting happens by the community allocating, or staking,
+              their tokens to validator nodes. Governance decisions include
+              creation and closure of markets, and the setting of parameters
+              that influence market behaviour.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -338,7 +326,11 @@ const KeyConceptsPage = () => {
             diagram={<DynamicMarginsDiagramResponsive />}
           >
             <p>
-              Vega protocol’s rigorous framework continuously monitors and manages credit risk more efficiently than centralised exchanges. A plugin-like architecture for risk models and best-in-class stochastic models that run fast enough to support frequent margin evaluations allows traders with positions to adjust quickly.
+              Vega protocol’s rigorous framework continuously monitors and
+              manages credit risk more efficiently than centralised exchanges. A
+              plugin-like architecture for risk models and best-in-class
+              stochastic models that run fast enough to support frequent margin
+              evaluations allows traders with positions to adjust quickly.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -368,7 +360,11 @@ const KeyConceptsPage = () => {
             diagram={<PeggedOrdersDiagram />}
           >
             <p>
-              Use pegged orders on any market, at any time, to place orders and automatically track another price on the market. This enables advanced trading strategies and fast reaction times while removing concerns about latency and reducing the number of manual transactions needed to maintain liquidity provider orders.
+              Use pegged orders on any market, at any time, to place orders and
+              automatically track another price on the market. This enables
+              advanced trading strategies and fast reaction times while removing
+              concerns about latency and reducing the number of manual
+              transactions needed to maintain liquidity provider orders.
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               Read more about:
@@ -430,20 +426,6 @@ const KeyConceptsPage = () => {
         </div>
 
         <div id="mature">
-          <div className="relative pt-20 md:pt-32 lg:pt-52 overflow-x-hidden">
-            <div className="text-center max-w-[30rem] md:max-w-[44rem] mx-auto">
-              <div className="title-l md:title-xl max-w-[25rem] md:max-w-[30rem] mx-auto mb-3">
-                Help DeFi mature
-              </div>
-              <div className="copy-s text-current !mb-0">
-                Designed from the ground up, and in a modular way to encourage
-                creativity and incentivise participation — we're creating the
-                critical infrastructure for Web3 and DeFi to mature. And birth a
-                thriving new world of finance.
-              </div>
-            </div>
-          </div>
-
           <BlockD
             title="Cross chain support"
             diagram={<CrossChainSupportDiagramResponsive />}
@@ -477,10 +459,16 @@ const KeyConceptsPage = () => {
             diagram={<ScalableDefiInfrastructureDiagramResponsive />}
           >
             <p>
-              Vega works alongside other layer 1 blockchains - with open source APIs and libraries - making it easy to build status quo-challenging user interfaces.
+              Vega works alongside other layer 1 blockchains - with open source
+              APIs and libraries - making it easy to build status
+              quo-challenging user interfaces.
             </p>
             <p>
-              For example, by using WebSocket for communication between your app and the server, GraphQL or gRPC APIs for streaming market data and Vega Pennant for simple graphs you could easily create responsive markets to monitor real world/spot dynamics and automatically propose a hedging market when volatility exceeds a threshold.
+              For example, by using WebSocket for communication between your app
+              and the server, GraphQL or gRPC APIs for streaming market data and
+              Vega Pennant for simple graphs you could easily create responsive
+              markets to monitor real world/spot dynamics and automatically
+              propose a hedging market when volatility exceeds a threshold.
             </p>
           </BlockD>
         </div>
