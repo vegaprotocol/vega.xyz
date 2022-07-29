@@ -83,10 +83,7 @@ const Incentives = () => {
   };
 
   return (
-    <div className="grey-box my-12 p-6 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
-      <h3 className="text-[2.125rem] leading-[0.85] lg:text-[3.375rem] mb-8 uppercase">
-        Incentives +<br /> Bounties
-      </h3>
+    <div className="grey-box mb-16 p-6 md:p-8 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
       {list ? (
         <div>
           {list.map((incentive, idx) => (
@@ -109,7 +106,7 @@ const Incentives = () => {
               relative
               inline-block"
             >
-              <div className="leading-1 text-[0.9375rem] tracking-[0.01rem] transition-[top] relative z-10 group-hover:-top-1.5 top-0 inline-block px-8 py-3 bg-white dark:bg-black border border-black dark:border-white uppercase">
+              <div className="leading-1 text-[0.9375rem] tracking-[0.01rem] transition-[top] relative z-10 group-hover:-top-1.5 top-0 inline-block px-8 py-3 bg-vega-light-grey dark:bg-vega-box-grey border border-black dark:border-white uppercase">
                 Load more...
               </div>
               <div className="absolute inset-0 border bg-white dark:bg-black border-black dark:border-white"></div>

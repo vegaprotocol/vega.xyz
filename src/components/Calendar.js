@@ -54,7 +54,7 @@ const Calendar = () => {
   }, []);
 
   return (
-    <div className="border-t border-current">
+    <div className="border-t border-current mb-16">
       {events &&
         events.map((event, idx) => <CalendarEvent key={idx} event={event} />)}
     </div>

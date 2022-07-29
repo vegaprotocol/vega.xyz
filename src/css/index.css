@@ -21,7 +21,7 @@ body {
 }
 
 .dark .grey-box .button-link div {
-  @apply bg-black;
+  @apply bg-vega-box-grey;
 }
 
 /* sets correct placement of hover boxes in the contributors grid - a little too complex to do with tailwind */
