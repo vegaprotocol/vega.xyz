@@ -114,13 +114,12 @@ const MarketCreationPage = () => {
             color="red"
             className="title-m md:title-l lg:title-xxl mb-4 md:mb-6 mt-4 text-center"
           >
-            Market Creation with Vega
+            Create markets
           </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">
-            Bring the future of DeFi within reach - and create a market on any
-            underlying. It's easy to attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers.
+             Create a market on any underlying, and attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers.
           </LeadingLine>
         </div>
       </Container>
