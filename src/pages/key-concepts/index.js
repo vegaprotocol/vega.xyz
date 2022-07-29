@@ -70,20 +70,13 @@ const KeyConceptsPage = () => {
                   className="mb-6 title-m md:title-l xl:title-xl px-3"
                 >
                   <Trans>
-                    We're creating the critical infrastructure for Web3 and DeFi
-                    to mature, and birth a thriving new world of finance
+                    What makes Vega different
                   </Trans>
                 </GlitchTitle>
 
                 <LeadingLine className="text-current">
                   <Trans>
-                    We're building a future of finance to rival, or outdo, CeFi - where control of the markets, products, and fees is in the community's hands.
-                  </Trans>
-                </LeadingLine>
-                <LeadingLine className="text-current">
-                  <Trans>
-                    And the tools to create decentralised markets that give
-                    centralised versions a run for their money.
+                    Explore the features that enable you to trade and create derivatives on a fully decentralised network. 
                   </Trans>
                 </LeadingLine>
               </div>
@@ -127,18 +120,6 @@ const KeyConceptsPage = () => {
         </div>
 
         <div id="good">
-          <div className="relative mt-20 md:mt-24 lg:mt-52 overflow-x-hidden">
-            <div className="text-center max-w-[30rem] md:max-w-[44rem] mx-auto">
-              <div className="title-l md:title-xl max-w-[25rem] md:max-w-[30rem] mx-auto mb-3">
-                Be as good as CeFi
-              </div>
-              <div className="copy-s text-current !mb-0">
-                Vega will rival the current financial system, replacing it with
-                one that puts fairness, efficiency, and accessibility at its
-                heart.
-              </div>
-            </div>
-          </div>
 
           <PurposeBuiltBlock />
 
@@ -183,19 +164,6 @@ const KeyConceptsPage = () => {
         </div>
 
         <div id="better">
-          <div className="relative pt-20 md:pt-32 lg:pt-52 overflow-x-hidden">
-            <div className="text-center max-w-[30rem] md:max-w-[44rem] mx-auto">
-              <div className="title-l md:title-xl max-w-[25rem] md:max-w-[30rem] mx-auto mb-3">
-                Be better than CeFi
-              </div>
-              <div className="copy-s text-current !mb-0">
-                By standardising and automating every step of the trade
-                lifecycle, Vega addresses the shortcomings of traditional
-                trading. And strikes a balance between rigidity and flexibility,
-                for confidence and growth.
-              </div>
-            </div>
-          </div>
 
           <BlockD
             title="Permissionless market creation"
@@ -430,19 +398,6 @@ const KeyConceptsPage = () => {
         </div>
 
         <div id="mature">
-          <div className="relative pt-20 md:pt-32 lg:pt-52 overflow-x-hidden">
-            <div className="text-center max-w-[30rem] md:max-w-[44rem] mx-auto">
-              <div className="title-l md:title-xl max-w-[25rem] md:max-w-[30rem] mx-auto mb-3">
-                Help DeFi mature
-              </div>
-              <div className="copy-s text-current !mb-0">
-                Designed from the ground up, and in a modular way to encourage
-                creativity and incentivise participation — we're creating the
-                critical infrastructure for Web3 and DeFi to mature. And birth a
-                thriving new world of finance.
-              </div>
-            </div>
-          </div>
 
           <BlockD
             title="Cross chain support"
