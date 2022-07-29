@@ -30,7 +30,7 @@ const marketCreationProcess = [
       },
       {
         title: "See what markets exist already",
-        url: "https://console.fairground.wtf/",
+        url: "https://console.fairground.wtf/markets",
       },
     ],
     image: <Phase1 />,
@@ -42,7 +42,7 @@ const marketCreationProcess = [
     links: [
       {
         title: "Read the docs to make a proposal (Testnet)",
-        url: "https://docs.fairground.vega.xyz/docs/api-howtos/create-market/",
+        url: "https://docs.vega.xyz/docs/testnet/tutorials/proposals/new-market-proposal",
       },
       {
         title: "Check out the forum",
@@ -58,7 +58,7 @@ const marketCreationProcess = [
     links: [
       {
         title: "Read the docs to make a proposal (Testnet)",
-        url: "https://docs.fairground.vega.xyz/docs/api-howtos/create-market/",
+        url: "https://docs.vega.xyz/docs/testnet/tutorials/proposals/new-market-proposal",
       },
     ],
     image: <Phase3 />,
@@ -69,7 +69,7 @@ const marketCreationProcess = [
     text: "<p>If all your proposals inputs pass validation, community token holders consider and vote for or against active proposals using the governance tools.</p><p>Share your market ideas on the Vega forum to get the community motivated to vote for your proposal.</p>",
     links: [
       {
-        title: "Vote for propoals",
+        title: "Vote for proposals (Testnet)",
         url: "https://token.fairground.wtf/governance/",
       },
     ],
@@ -78,11 +78,11 @@ const marketCreationProcess = [
   {
     phase: "Phase 5",
     title: "Attract liquidity",
-    text: "<p>Any Vega participant with sufficient collateral* can provide liquidity for a market by submitting a transaction to the network. What's more, Vega makes it easy to attract liquidity with its built-in incentive mechanism that matches traders and market makers.</p><p><i>*the size of the nominated liquidity commitment amount and the margins required to support the orders generated from that commitment.</i></p>",
+    text: "<p>Any Vega participant with sufficient collateral* can provide liquidity for a market by submitting a transaction to the network. Attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers.</p><p><i>*the size of the nominated liquidity commitment amount and the margins required to support the orders generated from that commitment.</i></p>",
     links: [
       {
         title: "Read the docs about liquidity provision (Testnet)",
-        url: "https://docs.fairground.vega.xyz/docs/providing-liquidity/",
+        url: "https://docs.vega.xyz/docs/testnet/tutorials/providing-liquidity",
       },
     ],
     image: <Phase5 />,
@@ -101,7 +101,7 @@ const MarketCreationPage = () => {
       <Seo
         title=" Market Creation with Vega"
         description="Bring the future of DeFi within reach - and create a market on any
-            underlying. It's easy to attract liquidity with Vega's built-in
+            underlying. Attract liquidity with Vega's built-in
             incentive mechanism that matches traders and market makers."
       />
       <Container dataCy={"main"}>
@@ -114,14 +114,12 @@ const MarketCreationPage = () => {
             color="red"
             className="title-m md:title-l lg:title-xxl mb-4 md:mb-6 mt-4 text-center"
           >
-            Market Creation with Vega
+            Create markets
           </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">
-            Bring the future of DeFi within reach - and create a market on any
-            underlying. It's easy to attract liquidity with Vega's built-in
-            incentive mechanism that matches traders and market makers.
+             Create a market on any underlying, and attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers.
           </LeadingLine>
         </div>
       </Container>

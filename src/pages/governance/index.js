@@ -100,14 +100,12 @@ const GovernancePage = ({ data }) => {
             color="red"
             className="title-m md:title-l lg:title-xl mb-4 md:mb-6 mt-4 text-center"
           >
-            The Vega Protocol is governed by VEGA token holders
+            Govern the network
           </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">
-            Governance allows the Vega network to arrive at on-chain decisions,
-            where tokenholders can create proposals that other tokenholders can
-            vote to approve or reject.
+             Decisions on the Vega network are on-chain, with tokenholders creating proposals that other tokenholders vote to approve or reject.
           </LeadingLine>
         </div>
       </Container>
