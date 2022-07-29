@@ -49,32 +49,18 @@ const CommunityPage = ({ data }) => {
             <BoxTitle text="Community" />
           </h1>
           <h2 className="title-m max-w-[48rem] font-glitched md:title-l mb-4 md:mb-6 mt-4">
-            From the governance to the build, Vega is community with fairness at
-            its core.
+            Join the Vega community
           </h2>
 
           <div className="max-w-[48rem]">
-            <LeadingLine className="!mb-6">
-              This is just the beginning. Join us now and earn rewards for
-              contributing to the future of finance.
+            <LeadingLine className="!mb-14">
+              Earn rewards for contributing to the future of finance.
             </LeadingLine>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-[32rem]">
-              <div>
-                <ButtonLink
-                  text="Join us on Discord"
-                  link="https://vega.xyz/discord"
-                  className="w-full text-center"
-                ></ButtonLink>
-              </div>
-              <div>
-                <ButtonLink
-                  text="Try a tutorial"
-                  link="https://www.youtube.com/playlist?list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2"
-                  className="w-full text-center"
-                ></ButtonLink>
-              </div>
-            </div>
+            <ButtonLink
+              text="Join us on Discord"
+              link="https://vega.xyz/discord"
+            ></ButtonLink>
           </div>
         </div>
       </Container>
