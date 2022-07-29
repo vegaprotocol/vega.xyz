@@ -125,7 +125,7 @@ const GovernancePage = ({ data }) => {
               icon={getImage(data.forumIcon)}
               title="Forum"
               link="https://community.vega.xyz/c/governance/25"
-              text="Discuss governance and governance proposals on Vega networks."
+              text="Discuss governance, sense check and formalise governance proposals for the Vega network."
               type="Tool"
             />
             <ToolBox
