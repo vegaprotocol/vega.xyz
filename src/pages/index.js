@@ -48,7 +48,7 @@ const IndexPage = () => {
                     <Trans>Toward a new era of finance</Trans>
                   </GlitchTitle>
                   <LeadingLine className="text-current !mb-0">
-                    <Trans>We are Vega. Web3's native derivatives layer.</Trans>
+                    <Trans>Decentralised infrastructure for the fair creation and trading of derivatives.</Trans>
                   </LeadingLine>
                 </div>
               </div>
