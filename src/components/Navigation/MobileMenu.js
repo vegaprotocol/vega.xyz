@@ -10,7 +10,7 @@ import HeaderCta from "../../components/HeaderCta";
 const MobileMenu = ({ toggleMenu, isOpen }) => {
   return (
     <div
-      className={`top-0 fixed bottom-0 left-0 right-0 dark:bg-black bg-white overflow-y-scroll ${
+      className={`top-0 fixed bottom-0 left-0 right-0 pb-12 dark:bg-black bg-white overflow-y-scroll ${
         isOpen ? "fixed" : "hidden"
       }`}
       id="mobileMenu"
