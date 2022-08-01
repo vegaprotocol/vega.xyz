@@ -8,7 +8,13 @@ import MobileDropdown from "./MobileDropdown";
 
 const MobileNavigation = () => {
   const [showId, setShowId] = useState();
-  const handleShow = (id) => setShowId(id);
+  const handleShow = (id) => {
+    if (id !== showId) {
+      setShowId(id);
+    } else {
+      setShowId(-1);
+    }
+  };
 
   return (
     <nav>

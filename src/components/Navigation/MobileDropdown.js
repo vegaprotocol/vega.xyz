@@ -12,7 +12,6 @@ const MobileDropdown = (props) => {
           className="uppercase font-not-glitched text-[2.125rem]"
         >
           {props.title}
-
           <div
             className={`inline-block align-top ml-2 ${
               props.show ? "rotate-180" : null
