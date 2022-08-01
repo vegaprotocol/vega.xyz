@@ -5,8 +5,8 @@ import NavigationList from "../List";
 
 const Community = () => {
   return (
-    <div className="grid grid-cols-12">
-      <div className="col-span-4">
+    <div className="lg:grid lg:grid-cols-12 gap-6">
+      <div className="lg:col-span-4">
         <NavigationHeading>Meet</NavigationHeading>
         <NavigationList>
           <NavigationItem text="Use the network" link="/use" />
@@ -17,7 +17,7 @@ const Community = () => {
           />
         </NavigationList>
       </div>
-      <div className="col-span-4">
+      <div className="lg:col-span-4">
         <NavigationHeading>Join</NavigationHeading>
         <NavigationList>
           <NavigationItem text="Discord" link="https://vega.xyz/discord" />
@@ -37,7 +37,7 @@ const Community = () => {
           />
         </NavigationList>
       </div>
-      <div className="col-span-4">
+      <div className="lg:col-span-4">
         <NavigationHeading>Contribute</NavigationHeading>
         <NavigationList>
           <NavigationItem

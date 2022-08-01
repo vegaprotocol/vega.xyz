@@ -5,7 +5,7 @@ import NavigationHeading from "../Heading";
 
 const Learn = () => {
   return (
-    <div className="grid grid-cols-3">
+    <div className="lg:grid lg:grid-cols-3 gap-6">
       <div>
         <NavigationHeading>Explore</NavigationHeading>
         <NavigationList>

@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import Container from "../../components/Container";
-//import { SiteNavigation } from "../../data/SiteNavigation";
 import VegaLogo from "../../components/Svg/VegaLogo";
 import MobileMenuButton from "./MobileMenuButton";
-import MobileMenuDropdown from "./MobileMenuDropdown";
+import Container from "../../components/Container";
+import MobileNavigation from "./MobileNavigation";
 import HeaderCta from "../../components/HeaderCta";
 // import SiteBanner from "../../components/SiteBanner";
 
@@ -17,7 +16,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
       id="mobileMenu"
     >
       {/* <SiteBanner /> */}
-      {/* <Container>
+      <Container>
         <div className="w-full">
           <div className="header flex items-center justify-between py-4 lg:pt-6">
             <Link to="/">
@@ -31,32 +30,14 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
             />
           </div>
         </div>
-
-        <ul className="max-w-[20rem] text-lg tracking-wide w-full pb-4">
-          {SiteNavigation.map((section, idx) =>
-            section.links ? (
-              <li key={idx}>
-                <MobileMenuDropdown section={section} />
-              </li>
-            ) : (
-              <li key={idx}>
-                <Link
-                  to={section.link}
-                  className="text-[2.125rem] block py-4 uppercase"
-                >
-                  {section.text}
-                </Link>
-              </li>
-            )
-          )}
-        </ul>
+        <MobileNavigation />
 
         <HeaderCta
           link="https://console.fairground.wtf/"
           text="Trade (Testnet)"
           className="inline-block"
         />
-      </Container> */}
+      </Container>
     </div>
   );
 };

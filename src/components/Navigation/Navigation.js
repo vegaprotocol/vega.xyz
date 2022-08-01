@@ -9,8 +9,8 @@ import Dropdown from "./Dropdown";
 
 const Navigation = () => {
   return (
-    <nav className="hidden lg:block">
-      <ul className="flex text-lg tracking-wide">
+    <nav>
+      <ul className="lg:flex text-lg tracking-wide">
         <Dropdown title="Use Vega">
           <Use />
         </Dropdown>

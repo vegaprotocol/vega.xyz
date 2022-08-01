@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { globalHistory } from "@reach/router";
-import Navigation from "./Navigation";
+import Navigation from "./Navigation/Navigation";
 import ScreenMode from "../components/ScreenMode";
 import VegaLogo from "../components/Svg/VegaLogo";
 import MobileMenu from "../components/Navigation/MobileMenu";
@@ -41,7 +41,9 @@ const Header = () => {
               <VegaLogo />
             </Link>
 
-            <Navigation />
+            <div className="hidden lg:block">
+              <Navigation />
+            </div>
 
             <div className="flex items-center">
               {!menuIsOpen && (
