@@ -25,11 +25,11 @@ const marketCreationProcess = [
     text: "<p>Anyone with the minimum number of $VEGA tokens can propose a futures market. Share an outline of the market you propose on the forum to see if there's support for it - and then refine your plan based on community feedback.</p>",
     links: [
       {
-        title: "Start a topic on the forum",
-        url: "https://community.vega.xyz/c/governance/25",
+        title: "Start a topic on the forum (Testnet)",
+        url: "https://community.vega.xyz/c/fairground-testnet-governance/32",
       },
       {
-        title: "See what markets exist already",
+        title: "See what markets exist already (Testnet)",
         url: "https://console.fairground.wtf/markets",
       },
     ],
@@ -45,8 +45,8 @@ const marketCreationProcess = [
         url: "https://docs.vega.xyz/docs/testnet/tutorials/proposals/new-market-proposal",
       },
       {
-        title: "Check out the forum",
-        url: "https://community.vega.xyz/c/governance/25",
+        title: "Check out the forum (Testnet)",
+        url: "https://community.vega.xyz/c/fairground-testnet-governance/32",
       },
     ],
     image: <Phase2 />,
