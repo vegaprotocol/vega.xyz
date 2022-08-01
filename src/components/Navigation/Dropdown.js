@@ -1,54 +1,20 @@
 import React from "react";
-import { Link } from "gatsby";
-import DropdownArrow from "../Svg/DropdownArrow.js";
-import LinkArrow from "../Svg/LinkArrow";
+import Container from "../Container";
 
-const NavigationDropdown = ({ section }) => {
+const Dropdown = (props) => {
   return (
-    <li className="relative">
-      <button
-        className="font-not-glitched group inline-block px-5 xl:px-8 py-3 cursor-pointer text-left"
-        tabIndex={0}
+    <li className="group">
+      <div className="transition-colors inline-block px-3 xl:px-6 py-3 hover:text-vega-mid-grey cursor-default group-hover:underline underline-offset-8">
+        {props.title}
+      </div>
+
+      <div
+        className={`hidden group-hover:block absolute left-0 right-0 px-4 w-full md:px-8 top-[4.65rem] pt-16 pb-12 dark:bg-black bg-white border-b border-[#525252]`}
       >
-        <div className="hover:text-vega-mid-grey transition-colors">
-          {section.text}
-
-          <div className="inline-block pl-2 relative top-px">
-            <DropdownArrow></DropdownArrow>
-          </div>
-        </div>
-
-        <div className="w-[12.625rem] top-[3rem] absolute left-0">
-          <ul className="hidden group-hover:block py-3 w-full text-base bg-vega-light-grey dark:bg-vega-off-black">
-            {section.links.map((link, idx) => (
-              <li key={idx}>
-                {link.to.startsWith("http") ? (
-                  <a
-                    href={link.to}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="transition-colors block px-6 py-2 hover:text-vega-mid-grey"
-                  >
-                    {link.text}
-                    <span className="inline-block ml-2">
-                      <LinkArrow />
-                    </span>
-                  </a>
-                ) : (
-                  <Link
-                    to={link.to}
-                    className="transition-colors block px-6 py-2 hover:text-vega-mid-grey"
-                  >
-                    {link.text}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </button>
+        <Container>{props.children}</Container>
+      </div>
     </li>
   );
 };
 
-export default NavigationDropdown;
+export default Dropdown;

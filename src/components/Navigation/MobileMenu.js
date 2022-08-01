@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import Container from "../../components/Container";
-import { SiteNavigation } from "../../data/SiteNavigation";
+//import { SiteNavigation } from "../../data/SiteNavigation";
 import VegaLogo from "../../components/Svg/VegaLogo";
 import MobileMenuButton from "./MobileMenuButton";
 import MobileMenuDropdown from "./MobileMenuDropdown";
@@ -17,7 +17,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
       id="mobileMenu"
     >
       {/* <SiteBanner /> */}
-      <Container>
+      {/* <Container>
         <div className="w-full">
           <div className="header flex items-center justify-between py-4 lg:pt-6">
             <Link to="/">
@@ -56,7 +56,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
           text="Trade (Testnet)"
           className="inline-block"
         />
-      </Container>
+      </Container> */}
     </div>
   );
 };

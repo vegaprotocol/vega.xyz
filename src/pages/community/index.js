@@ -3,8 +3,6 @@ import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
-import JumpNavigation from "../../components/Navigation/JumpNavigation";
-import { CommunityPageSections } from "../../data/CommunityPageSections";
 import ButtonLink from "../../components/ButtonLink";
 import BoxTitle from "../../components/BoxTitle";
 import Fairground from "../../components/Fairground";
@@ -36,15 +34,8 @@ const CommunityPage = ({ data }) => {
         title="Community"
         description="Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
       />
-      <div className="relative z-20">
-        <JumpNavigation
-          pageSlug="community"
-          pageTitle="Community"
-          sections={CommunityPageSections}
-        />
-      </div>
       <Container dataCy={"main"}>
-        <div id="overview" className="pt-6 lg:pt-16">
+        <div className="pt-6 lg:pt-16">
           <h1>
             <BoxTitle text="Community" />
           </h1>
