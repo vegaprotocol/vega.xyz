@@ -150,7 +150,7 @@ const MarketCreationPage = () => {
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
-              link="https://console.fairground.wtf/"
+              link="https://console.fairground.wtf/markets"
               text="See what markets already exist (Testnet)"
             />
           </div>
