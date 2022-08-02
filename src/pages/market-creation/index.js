@@ -66,7 +66,7 @@ const marketCreationProcess = [
   {
     phase: "Phase 4",
     title: "Get voting",
-    text: "<p>If all your proposals inputs pass validation, community token holders consider and vote for or against active proposals using the governance tools.</p><p>Share your market ideas on the Vega forum to get the community motivated to vote for your proposal. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.</p>",
+    text: "<p>If all your proposals inputs pass validation, community token holders consider and vote for or against active proposals using the governance dApp.</p><p>Share your market ideas on the Vega forum to get the community motivated to vote for your proposal. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.</p>",
     links: [
       {
         title: "Vote for proposals (Testnet)",
