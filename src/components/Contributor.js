@@ -24,9 +24,6 @@ const Contributor = ({ contributor }) => {
         <div className="leading-none text-[1.125rem] !mb-0">
           {contributor.login}
         </div>
-        <div className="text-vega-mid-grey">
-          {contributor.total_contributions} contributions
-        </div>
         <div>
           <a
             target="_blank"
