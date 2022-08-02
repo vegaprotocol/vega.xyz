@@ -22,7 +22,7 @@ const marketCreationProcess = [
   {
     phase: "Phase 1",
     title: "Sense check your market idea",
-    text: "<p>Anyone with the minimum number of $VEGA tokens can propose a futures market. Share an outline of the market you propose on the forum to see if there's support for it - and then refine your plan based on community feedback.</p>",
+    text: "<p>Start a topic and share an outline of the market you propose on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.</p>",
     links: [
       {
         title: "Start a topic on the forum (Testnet)",
@@ -38,7 +38,7 @@ const marketCreationProcess = [
   {
     phase: "Phase 2",
     title: "Formalise your proposal",
-    text: "<p>Create a detailed proposal with specifics of the market and data (JSON or similar) that would be submitted on chain, including: market description, Oracle / data source the market will use for settlement, and risk model (to calculate margin requirements and ensure safe trading).</p><p>Then head to the forum to invite debate and discussion - and make updates until the proposal is ready to submit.</p>",
+    text: "<p>Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the the market, including the data (JSON or similar) that would be submitted on chain i.e. market name and code, Oracle / data source the market will use for settlement, and risk model (to calculate margin requirements and ensure safe trading).</p><p>Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.</p>",
     links: [
       {
         title: "Read the docs to make a proposal (Testnet)",
@@ -53,8 +53,8 @@ const marketCreationProcess = [
   },
   {
     phase: "Phase 3",
-    title: "Submit for validation",
-    text: "<p>As a token holder, you can submit the proposal using the APIs.</p><p>This is validated by the nodes before entering the voting period - at which point head to the forum and rally the community to vote.</p>",
+    title: "Submit your proposal",
+    text: "<p>Once you have formalised your proposal and made any final amends, it is time to submit the proposal to the public chain using the APIs. Use the templates provided in the docs to convert your market definition from the forum post into a formal on-chain proposal.</p><p>A proposal cannot be changed once submitted - it will be validated by the nodes and enter straight into the voting period - therefore it's important to submit only when you are happy with the proposal's content. Anyone with the minimum number of $VEGA tokens, who has staked to a validator, can submit a new market proposal. Once submitted, head back to the forum to rally the community to vote.</p>",
     links: [
       {
         title: "Read the docs to make a proposal (Testnet)",
@@ -66,7 +66,7 @@ const marketCreationProcess = [
   {
     phase: "Phase 4",
     title: "Get voting",
-    text: "<p>If all your proposals inputs pass validation, community token holders consider and vote for or against active proposals using the governance tools.</p><p>Share your market ideas on the Vega forum to get the community motivated to vote for your proposal.</p>",
+    text: "<p>If all your proposals inputs pass validation, community token holders consider and vote for or against active proposals using the governance dApp.</p><p>Share your market ideas on the Vega forum to get the community motivated to vote for your proposal. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.</p>",
     links: [
       {
         title: "Vote for proposals (Testnet)",
@@ -150,7 +150,7 @@ const MarketCreationPage = () => {
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
-              link="https://console.fairground.wtf/"
+              link="https://console.fairground.wtf/markets"
               text="See what markets already exist (Testnet)"
             />
           </div>
