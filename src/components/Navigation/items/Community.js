@@ -9,12 +9,9 @@ const Community = () => {
       <div className="lg:col-span-4">
         <NavigationHeading>Meet</NavigationHeading>
         <NavigationList>
-          <NavigationItem text="Use the network" link="/use" />
-          <NavigationItem text="Get the Vega Wallet" link="/wallet" />
-          <NavigationItem
-            text="Experiment on Fairground Testnet"
-            link="https://fairground.wtf"
-          />
+          <NavigationItem text="The Vega Community" link="/community" />
+          <NavigationItem text="Events and meetups" link="/community/events" />
+          <NavigationItem text="Contributors" link="/community/contributors" />
         </NavigationList>
       </div>
       <div className="lg:col-span-4">
