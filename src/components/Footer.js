@@ -12,64 +12,8 @@ const Footer = () => {
     <footer>
       <div className="border-y border-current pt-8 pb-12">
         <Container>
-          <div className="grid grid-cols-12 gap-y-8 gap-x-6">
-            <div className="col-span-6 md:col-span-6 lg:col-span-3">
-              <div className="uppercase text-[0.9375rem] mb-3">
-                <SquareBullet size="11" />
-                Learn
-              </div>
-              <ul>
-                <li>
-                  <TextLink to="/key-concepts/" className="py-1 block">
-                    Key concepts
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink to="/papers/" className="py-1 block">
-                    Papers
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink to="https://blog.vega.xyz/" className="py-1 block">
-                    Blog
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink to="/talks/" className="py-1 block">
-                    Talks
-                  </TextLink>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-span-6 md:col-span-6 lg:col-span-3">
-              <div className="uppercase text-[0.9375rem] mb-3">
-                <SquareBullet size="11" />
-                Develop
-              </div>
-              <ul>
-                <li>
-                  <TextLink to="/develop/" className="py-1 block">
-                    Get started
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink to="https://docs.vega.xyz" className="py-1 block">
-                    Explore the docs
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://github.com/vegaprotocol"
-                    className="py-1 block"
-                  >
-                    Get the code
-                  </TextLink>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-span-6 md:col-span-6 lg:col-span-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-6">
+            <div>
               <div className="uppercase text-[0.9375rem] mb-3">
                 <SquareBullet size="11" />
                 Use
@@ -85,15 +29,15 @@ const Footer = () => {
                     to="/wallet/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Get the Vega Wallet
+                    Vega Wallet
                   </TextLink>
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/staking/"
+                    to="https://console.fairground.wtf/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Stake tokens
+                    Trade
                   </TextLink>
                 </li>
                 <li>
@@ -101,29 +45,28 @@ const Footer = () => {
                     to="https://token.vega.xyz/governance"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Configure the network
+                    Govern
                   </TextLink>
                 </li>
                 <li>
                   <TextLink
-                    to="/community/#contributions"
+                    to="https://token.vega.xyz/staking"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Get tokens
+                    Stake
                   </TextLink>
                 </li>
                 <li>
                   <TextLink
-                    to="https://fairground.wtf/"
+                    to="https://explorer.vega.xyz/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Fairground (Testnet)
+                    Block Explorer
                   </TextLink>
                 </li>
               </ul>
             </div>
-
-            <div className="col-span-6 md:col-span-6 lg:col-span-3">
+            <div>
               <div className="uppercase text-[0.9375rem] mb-3">
                 <SquareBullet size="11" />
                 Community
@@ -134,15 +77,15 @@ const Footer = () => {
                     to="/community/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Join the community
+                    Vega Community
                   </TextLink>
                 </li>
                 <li>
                   <TextLink
-                    to="/careers/"
+                    to="/community/events"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Careers
+                    Events + meetups
                   </TextLink>
                 </li>
                 <li>
@@ -155,19 +98,180 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="/partners-backers"
+                    to="https://vega.xyz/discord"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Partners and backers
+                    Discord
                   </TextLink>
                 </li>
-
                 <li>
                   <TextLink
-                    to="https://vegacommunity.substack.com/subscribe"
-                    className="py-1.5 block mt-8 leading-[1.3]"
+                    to="/community/ambassadors"
+                    className="py-1.5 block leading-[1.3]"
                   >
-                    Newsletter sign up
+                    Ambassadors
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://vega.xyz/discord"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Builders club
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="/community/incentives-bounties"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Incetives + bounties
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="/community/swag"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Swag
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://fairground.wtf/"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Fairground Testnet
+                  </TextLink>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="uppercase text-[0.9375rem] mb-3">
+                <SquareBullet size="11" />
+                Governance
+              </div>
+              <ul>
+                <li>
+                  <TextLink
+                    to="/governance/"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Vega Governance
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="/market-creation"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Market creation
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://community.vega.xyz/"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Forum
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://token.vega.xyz/governance"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Governance dApp
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Governance docs
+                  </TextLink>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="uppercase text-[0.9375rem] mb-3">
+                <SquareBullet size="11" />
+                Develop
+              </div>
+              <ul>
+                <li>
+                  <TextLink
+                    to="/develop/"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Get started
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://github.com/vegaprotocol"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Github
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://docs.vega.xyz"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Documentation
+                  </TextLink>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className="uppercase text-[0.9375rem] mb-3">
+                <SquareBullet size="11" />
+                Learn
+              </div>
+              <ul>
+                <li>
+                  <TextLink
+                    to="/key-concepts"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Key concepts
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink to="/papers" className="py-1.5 block leading-[1.3]">
+                    Vega papers
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Whitepaper
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://vega.xyz/papers/vega-technical-overview.pdf"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Technical overview
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink to="/talks" className="py-1.5 block leading-[1.3]">
+                    Talks
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://blog.vega.xyz"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    Blog
                   </TextLink>
                 </li>
               </ul>
