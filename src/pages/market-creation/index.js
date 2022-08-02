@@ -53,7 +53,7 @@ const marketCreationProcess = [
   },
   {
     phase: "Phase 3",
-    title: "Submit",
+    title: "Submit your proposal",
     text: "<p>Once you have formalised your proposal and made any final amends, it is time to submit the proposal to the public chain using the APIs. Use the templates provided in the docs to convert your market definition from the forum post into a formal on-chain proposal.</p><p>A proposal cannot be changed once submitted - it will be validated by the nodes and enter straight into the voting period - therefore it's important to submit only when you are happy with the proposal's content. Anyone with the minimum number of $VEGA tokens, who has staked to a validator, can submit a new market proposal. Once submitted, head back to the forum to rally the community to vote.</p>",
     links: [
       {
