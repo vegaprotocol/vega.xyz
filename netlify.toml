@@ -12,3 +12,6 @@
 [context.deploy-preview.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
   GATSBY_VEGA_API = "https://lb.testnet.vega.xyz/query"
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
