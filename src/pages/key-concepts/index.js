@@ -181,18 +181,6 @@ const KeyConceptsPage = () => {
               owners to market liquidity providers. Successful markets have
               enough liquidity to generate bustling activity.
             </p>
-            <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-              Read more about:
-            </div>
-            <p>
-              Earning liquidity rewards in the Vega blog{" "}
-              <TextLink
-                to="https://blog.vega.xyz/sushiswap-how-to-get-vega-liquidity-rewards-9848e4cadee9"
-                className="inline-block"
-              >
-                'Getting liquidity rewards'
-              </TextLink>
-            </p>
           </BlockD>
 
           <BlockA
