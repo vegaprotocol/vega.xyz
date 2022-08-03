@@ -160,7 +160,7 @@ const CommunityPage = ({ data }) => {
           title="Incentives"
           text="Get rewarded for your efforts testing the network"
           linkText="Earn rewards"
-          link="/community/incentives"
+          link="/community/incentives-bounties"
         />
       </Container>
       <Fairground />
