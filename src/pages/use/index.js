@@ -48,29 +48,6 @@ const UsePage = ({ data }) => {
         description="Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy."
       />
       <Container dataCy={"main"}>
-        {/* <div className="md:grid md:grid-cols-2 md:gap-x-12 md:border-b-2 md:border-current pt-6 lg:pt-16">
-          <div className="relative -bottom-[2px] self-end">
-            <UseVegaResponsive />
-          </div>
-          <div className="pt-10 md:py-12 self-center">
-            <BoxTitle text="Tools built on Vega" />
-
-            <GlitchTitle
-              color="red"
-              className="mt-4 md:mt-8 title-l lg:title-xl max-w-[80%]"
-              level={1}
-            >
-              Vega-powered tools and services
-            </GlitchTitle>
-            <div className="prose copy-xs">
-              <p className="mt-4">
-                Trade on a fully decentralised network and propose new markets,
-                provide liquidity, start staking or configure the network
-                through governance.
-              </p>
-            </div>
-          </div>
-        </div> */}
         <div className="text-center mb-8 md:mb-12 pt-6 md:pt-16">
           <div className="max-w-[61rem] mx-auto text-center">
             <h1>
