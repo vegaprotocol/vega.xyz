@@ -85,7 +85,7 @@ const RoadMap = (props) => {
       <div className="relative">
         <div className="dark:bg-black bg-white py-6">
           <GlitchTitle level={2} className="mb-4 title-l lg:title-xxl">
-            <Trans>Where are we in the Roadmap?</Trans>
+            <Trans>Roadmap</Trans>
           </GlitchTitle>
         </div>
 
