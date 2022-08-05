@@ -1,5 +1,4 @@
 exports.handler = async (event) => {
-  const path = require("path");
   require(`dotenv`).config({
     path: `.env.${process.env.NODE_ENV}`,
   });
@@ -12,13 +11,10 @@ exports.handler = async (event) => {
   let message = requestParams.message;
   const emailAddress = process.env.BUG_SUBMISSION_EMAIL;
 
-  const publicKeyArmored = fs.readFileSync(
-    path.resolve(__dirname, "../vega-public-key.asc"),
-    {
-      encoding: "utf8",
-      flag: "r",
-    }
-  );
+  const publicKeyArmored = fs.readFileSync("./vega-public-key.asc", {
+    encoding: "utf8",
+    flag: "r",
+  });
 
   AWS.config.update({
     accessKeyId: process.env.VEGA_AWS_ACCESS_KEY_ID,

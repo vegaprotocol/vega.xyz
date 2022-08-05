@@ -13,3 +13,6 @@
 [context.deploy-preview.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
   GATSBY_VEGA_API = "https://lb.testnet.vega.xyz/query"
+
+[functions."send-bug-report"]
+  included_files = ["vega-public-key.asc"]
