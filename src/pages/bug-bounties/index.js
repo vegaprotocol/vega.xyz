@@ -1,10 +1,71 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Layout from "../../components/Layout";
 import Seo from "../../components/Seo";
 import Container from "../../components/Container";
 import Callout from "../../components/Callout";
+import axios from "axios";
+import pgpKeyFile from "../../../vega-public-key.asc";
+import Loader from "../../components/Loader";
 
 const BugBountiesPage = ({ data }) => {
+  const [message, setMessage] = useState("");
+  const [confirmDialog, setConfirmDialog] = useState(false);
+  const [formError, setFormError] = useState({ error: true, message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [confirmationMessage, setConfirmationMessage] = useState("");
+  const form = useRef();
+
+  const checkForm = () => {
+    if (confirmationMessage) {
+      setConfirmationMessage("");
+    }
+    if (form.current.value === "") {
+      setFormError({
+        error: true,
+        message: "You cannot send an empty submission",
+      });
+    } else {
+      setFormError({ error: false, message: "" });
+    }
+    return false;
+  };
+
+  const confirmSubmit = () => {
+    if (formError.error) {
+      checkForm();
+      return false;
+    } else {
+      setConfirmDialog(true);
+    }
+  };
+
+  const send = (e) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+    axios
+      .post("/.netlify/functions/send-bug-report", {
+        message,
+      })
+      .then((res) => {
+        setIsSubmitting(false);
+        setConfirmDialog(false);
+        setFormError({ error: false, message: "" });
+        form.current.value = "";
+        setConfirmationMessage(
+          "Your message was successfully encrypted and delivered."
+        );
+      })
+      .catch((error) => {
+        setIsSubmitting(false);
+        setConfirmDialog(false);
+        setFormError({
+          error: false,
+          message: "Sorry, your submission failed, please try again later.",
+        });
+      });
+  };
+
   return (
     <Layout>
       <Seo
@@ -100,17 +161,86 @@ const BugBountiesPage = ({ data }) => {
                     security@vegaprotocol.io, you can use our PGP key, which is
                     detailed below.
                   </p>
-                  <p>For anonymous submissions, you can use the form below</p>
-                  <p>FORM</p>
+                  <p>
+                    For anonymous submissions, you can use the following form:
+                  </p>
+
+                  <form className="mt-12">
+                    <textarea
+                      ref={form}
+                      required
+                      className="font-not-glitched mb-6 w-full bg-vega-box-grey rounded-xl p-3 focus:outline-vega-pink border border-white/20 focus:border-white/20"
+                      rows="15"
+                      onChange={(e) => {
+                        setMessage(e.target.value);
+                        checkForm();
+                      }}
+                    />
+                    {formError.message !== "" && (
+                      <div class="text-vega-pink">{formError.message}</div>
+                    )}
+                    {confirmationMessage !== "" && (
+                      <div className="text-vega-mint">
+                        {confirmationMessage}
+                      </div>
+                    )}
+                    <br />
+                    <button
+                      className="inline-block px-8 py-3 leading-1 text-[0.9375rem] tracking-[0.01rem] border border-current text-current uppercase"
+                      type="button"
+                      onClick={(e) => confirmSubmit()}
+                    >
+                      Send Message
+                    </button>
+                  </form>
                 </div>
+
+                {confirmDialog && (
+                  <div className="fixed bg-vega-box-grey/80 top-0 left-0 right-0 bottom-0 grid place-items-center">
+                    <div className="bg-black w-full min-w-[17.5rem] max-w-[30rem]">
+                      <div className="p-6">
+                        <div className="title-s">Submit bug report</div>
+                      </div>
+
+                      <div className="px-6">
+                        <p className="text-m">
+                          Are you sure you want to submit the form?
+                        </p>
+                      </div>
+
+                      <div className="flex items-center justify-end mt-6 px-6 py-3">
+                        <a
+                          className="ml-6 uppercase cursor-pointer"
+                          onClick={(e) => setConfirmDialog(false)}
+                        >
+                          Cancel
+                        </a>
+                        {isSubmitting ? (
+                          <Loader className="ml-3" />
+                        ) : (
+                          <a
+                            className="ml-6 uppercase cursor-pointer"
+                            onClick={(e) => send(e)}
+                          >
+                            Submit
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <Callout
                   title="PGP Key"
                   text="This is the PGP key that can be used to securely submit security issues to the project team. Please note that this
                     is the only usage of the key; especially, this key will never be used to issue signatures that are in any way meaningful or binding. We also may change the key at any time, so please make sure to check here for the current version."
                 >
-                  <div className="font-mono whitespace-pre pt-6">
-                    &lt;0xFF...&gt;
-                  </div>
+                  {/* prettier-ignore */}
+                  <pre className="font-mono">
+                    <div className="overflow-x-auto mt-8 mb-3">
+                    {pgpKeyFile}
+                    </div>
+                  </pre>
                 </Callout>
               </div>
             </div>
