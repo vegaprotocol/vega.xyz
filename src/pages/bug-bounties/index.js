@@ -169,7 +169,7 @@ const BugBountiesPage = ({ data }) => {
                     <textarea
                       ref={form}
                       required
-                      className="font-not-glitched mb-6 w-full bg-vega-box-grey rounded-xl p-3 focus:outline-vega-pink border border-white/20 focus:border-white/20"
+                      className="font-not-glitched mb-6 w-full bg-vega-box-grey p-3 focus:outline-vega-pink border border-white/20 focus:border-white/20"
                       rows="15"
                       onChange={(e) => {
                         setMessage(e.target.value);
@@ -177,7 +177,7 @@ const BugBountiesPage = ({ data }) => {
                       }}
                     />
                     {formError.message !== "" && (
-                      <div class="text-vega-pink">{formError.message}</div>
+                      <div className="text-vega-pink">{formError.message}</div>
                     )}
                     {confirmationMessage !== "" && (
                       <div className="text-vega-mint">
