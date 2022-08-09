@@ -43,10 +43,10 @@ exports.handler = async (event) => {
       },
       Subject: {
         Charset: "UTF-8",
-        Data: "Bug bounty submission",
+        Data: "Security issue submission from vega.xyz",
       },
     },
-    Source: emailAddress,
+    Source: process.env.BUG_SUBMISSION_FROM_EMAIL,
   };
 
   return ses
@@ -59,6 +59,7 @@ exports.handler = async (event) => {
       };
     })
     .catch((error) => {
+      console.log(error);
       return {
         statusCode: 500,
         body: `Message could not be sent`,
