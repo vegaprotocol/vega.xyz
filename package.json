@@ -18,7 +18,6 @@
     "@apollo/client": "^3.6.8",
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
-    "@netlify/plugin-sitemap": "^0.8.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
