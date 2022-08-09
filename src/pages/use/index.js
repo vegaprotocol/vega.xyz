@@ -9,6 +9,7 @@ import BoxTitle from "../../components/BoxTitle";
 import ToolBox from "../../components/ToolBox";
 import AddGraphic from "../../components/Svg/Use/Add/Add";
 import UseVegaResponsive from "../../components/Svg/Use/Hero/Responsive";
+import { Link } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import FairgroundConsolIllustration from "../../images/fairground-console-illustration.svg";
 import FairgroundBugIllustration from "../../images/fairground-bug-illustration.svg";
@@ -52,21 +53,20 @@ const UsePage = ({ data }) => {
             <UseVegaResponsive />
           </div>
           <div className="pt-10 md:py-12 self-center">
-            <BoxTitle text={t("Tools built on Vega", { ns: "page.use" })} />
+            <BoxTitle text="Tools built on Vega" />
 
             <GlitchTitle
               color="red"
               className="mt-4 md:mt-8 title-l lg:title-xl max-w-[80%]"
               level={1}
             >
-              {t("Vega-powered tools and services", { ns: "page.use" })}
+              Vega-powered tools and services
             </GlitchTitle>
             <div className="prose copy-xs">
               <p className="mt-4">
-                {t(
-                  "Trade on a fully decentralised network and propose new markets, provide liquidity, start staking or configure the network through governance.",
-                  { ns: "page.use" }
-                )}
+                Trade on a fully decentralised network and propose new markets,
+                provide liquidity, start staking or configure the network
+                through governance.
               </p>
             </div>
           </div>
@@ -74,9 +74,7 @@ const UsePage = ({ data }) => {
         <PageSection>
           <div>
             <div className="text-center mb-8 md:mb-12">
-              <h2 className="title-m md:title-l">
-                {t("Tools built on Vega", { ns: "page.use" })}
-              </h2>
+              <h2 className="title-m md:title-l">Tools built on Vega</h2>
             </div>
           </div>
         </PageSection>
@@ -104,29 +102,29 @@ const UsePage = ({ data }) => {
                 : "border-transparent over:border-current"
             }`}
           >
-            {t("Wallets", { ns: "tools" })}
+            {t("WALLETS", { ns: "tools" })}
           </button>
           <button
             tabIndex={0}
-            onClick={() => changeFilter("trading")}
+            onClick={() => changeFilter("dapp")}
             className={`inline-block title-s px-3 py-5 border-b-2 ${
-              filter === "trading"
+              filter === "dapp"
                 ? "border-current"
                 : "border-transparent hover:border-current"
             }`}
           >
-            {t("Trading", { ns: "tools" })}
+            {t("DAPPS", { ns: "tools" })}
           </button>
           <button
             tabIndex={0}
-            onClick={() => changeFilter("governance")}
+            onClick={() => changeFilter("tool")}
             className={`inline-block title-s px-3 py-5 border-b-2 ${
-              filter === "governance"
+              filter === "tool"
                 ? "border-current"
                 : "border-transparent hover:border-current"
             }`}
           >
-            {t("Governance", { ns: "tools" })}
+            {t("Tools", { ns: "tools" })}
           </button>
         </div>
       </div>
@@ -145,8 +143,9 @@ const UsePage = ({ data }) => {
                 icon={tool.icon.childImageSharp.gatsbyImageData}
                 title={t(tool.title, { ns: "tools" })}
                 link={tool.link}
+                author={tool.author}
                 text={t(tool.description, { ns: "tools" })}
-                type={t(tool.type, { ns: "tools" })}
+                category={tool.category}
               />
             </div>
           ))}
@@ -154,12 +153,12 @@ const UsePage = ({ data }) => {
 
         <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
           <div>
-            <p className="title-m mb-3">
-              {t("Want to add something to this list?", { ns: "page.use" })}
-            </p>
+            <p className="title-m mb-3">Want to add something to this list?</p>
             <p className="prose copy-s text-vega-mid-grey">
-              <a href="">{t("Chat to us on Discord", { ns: "page.use" })}</a>{" "}
-              <a href="">{t("and start building", { ns: "page.use" })})</a>.
+              <a href="https://vega.xyz/discord/" target="_blank">
+                Chat to us on Discord
+              </a>{" "}
+              and <Link to="/develop">start building</Link>.
             </p>
           </div>
           <AddGraphic className="max-w-[16rem] w-full self-end" />
@@ -182,17 +181,15 @@ const UsePage = ({ data }) => {
               <div className="md:col-span-8 text-center">
                 <div className="max-w-[40rem] mx-auto w-full">
                   <h2 className="title-m md:title-l lg:title-xl text-black mb-8">
-                    {t(
-                      "Use Fairground, the Vega testnet, to play without consquences.",
-                      { ns: "page.use" }
-                    )}
+                    Use Fairground, the Vega testnet, to play without
+                    consquences.
                   </h2>
                   <a
                     className="bg-black text-white inline-block py-5 px-16 uppercase title-xxxs !font-not-glitched mx-auto"
                     href="https://fairground.wtf"
                     target="_blank"
                   >
-                    {t("Go to Fairground", { ns: "page.use" })}
+                    Go to Fairground
                   </a>
                 </div>
               </div>
@@ -209,7 +206,7 @@ const UsePage = ({ data }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="border-b-2 border-current flex gap-x-6 justify-between items-end">
                 <div className="copy-s !mb-2 lg:copy-m  order-2 md:order-1">
-                  {t("Use the powerful Vega Console app", { ns: "page.use" })}
+                  Use the powerful Vega Console app
                 </div>
                 <div className="w-full max-w-[30%] order-1 md:order-2">
                   <img
@@ -220,7 +217,7 @@ const UsePage = ({ data }) => {
               </div>
               <div className="border-b-2 border-current flex gap-x-6 justify-between items-end">
                 <div className="copy-s !mb-2 lg:copy-m">
-                  {t("Earn rewards for finding bugs", { ns: "page.use" })}
+                  Earn rewards for finding bugs
                 </div>
                 <div className="w-full max-w-[20%] md:max-w-[30%]">
                   <img
@@ -254,8 +251,8 @@ export const query = graphql`
       nodes {
         title
         description
+        author
         link
-        type
         category
         icon {
           childImageSharp {

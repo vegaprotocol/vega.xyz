@@ -54,7 +54,7 @@ const DevelopPage = ({ data }) => {
                 <BoxTitle text="Develop" />
               </h1>
               <div className="title-m max-w-[38.75rem] md:title-l lg:title-xxl mb-4 mt-4">
-                Creating the future of DeFi together
+                Develop on Vega
               </div>
               <LeadingLine className="text-current max-w-[30rem]">
                 Contribute to our open source repositories on GitHub or create
@@ -93,21 +93,21 @@ const DevelopPage = ({ data }) => {
               title="REST"
               text="The ubiquitous protocol for the web, Vega has a set of REST APIs that map directly onto equivalent gRPC API service methods."
               linkTitle="Get Started"
-              link="https://docs.vega.xyz/docs/api/rest/overview/"
+              link="https://docs.vega.xyz/docs/mainnet/api/rest/overview/"
             />
 
             <BoxLink
               title="gRPC"
               text="For fast and efficient communication with Vega's APIs, gRPC supports near real time streaming of updates from Vega and is the transport of choice for many web3 apps."
               linkTitle="Get Started"
-              link="https://docs.vega.xyz/docs/api/overview/"
+              link="https://docs.vega.xyz/docs/mainnet/grpc/vega/vega.proto"
             />
 
             <BoxLink
               title="GraphQL"
               text="Like gRPC, GraphQL supports near real time streaming of updates from Vega. It uses websockets under the hood but follows the specification for streaming as set by GraphQL."
               linkTitle="Get Started"
-              link="https://docs.vega.xyz/docs/graphql/"
+              link="https://docs.vega.xyz/docs/mainnet/graphql"
             />
 
             <BoxLink
@@ -269,7 +269,7 @@ const DevelopPage = ({ data }) => {
               text="Explore the forum"
               link="https://community.vega.xyz/"
             />
-            <BoxLinkSimple text="See the Roadmap" link="/en/#roadmap" />
+            <BoxLinkSimple text="See the Roadmap" link="/#roadmap" />
           </div>
         </PageSection>
       </Container>

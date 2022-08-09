@@ -25,7 +25,7 @@ const governanceProcess = [
   {
     phase: "Phase 1",
     title: "Sense check",
-    text: "Share an outline of your proposed action on the forum. Get an idea of whether there is support for the proposal and refine your plans to be able to find out if there is sufficient interest in making a change.",
+    text: "Start a topic and share an outline of your proposal on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.",
     links: [
       {
         title: "Start a topic on the forum",
@@ -37,7 +37,7 @@ const governanceProcess = [
   {
     phase: "Phase 2",
     title: "Formalise Proposal",
-    text: "Share the detailed proposal on the forum, including rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.",
+    text: "Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.",
     links: [
       {
         title: "Read the docs to make a proposal",
@@ -53,7 +53,7 @@ const governanceProcess = [
   {
     phase: "Phase 3",
     title: "Submit a proposal",
-    text: "As a token holder, you can submit the proposal using the APIs to create a new market, change an existing market, change network parameters, add an external asset to Vega and make a freeform proposal (for changes that will not change network behaviour). For each, you will define specific inputs for a set list of parameters, which are validated by the nodes before entering into the voting period you set. Then it's time to rally the community on the forum to vote for your proposal.",
+    text: "As a token holder, you can submit the proposal using the command line to create a new market, change an existing market, change network parameters, add an external asset to Vega and make a freeform proposal (for changes that will not change network behaviour). For each, you will define specific inputs for a set list of parameters, which are validated by the nodes before entering into the voting period you set. Then it's time to rally the community on the forum to vote for your proposal.",
     links: [
       {
         title: "Read the docs to make a proposal",
@@ -100,14 +100,12 @@ const GovernancePage = ({ data }) => {
             color="red"
             className="title-m md:title-l lg:title-xl mb-4 md:mb-6 mt-4 text-center"
           >
-            The Vega Protocol is governed by VEGA token holders
+            Govern the network
           </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">
-            Governance allows the Vega network to arrive at on-chain decisions,
-            where tokenholders can create proposals that other tokenholders can
-            vote to approve or reject.
+             Decisions on the Vega network are on-chain, with tokenholders creating proposals that other tokenholders vote to approve or reject.
           </LeadingLine>
         </div>
       </Container>
@@ -127,21 +125,21 @@ const GovernancePage = ({ data }) => {
               icon={getImage(data.forumIcon)}
               title="Forum"
               link="https://community.vega.xyz/c/governance/25"
-              text="Discuss governance and governance proposals on Vega networks."
+              text="Discuss governance, sense check and formalise governance proposals for the Vega network."
               type="Tool"
             />
             <ToolBox
               icon={getImage(data.tokenInterfaceIcon)}
-              title="Token interface"
+              title="Governance"
               link="https://token.vega.xyz/governance"
-              text="Signal your support for a validator by staking tokens and vote on governance actions and proposals for network parameters, markets and assets."
+              text="Review and vote on governance proposals."
               type="DAPP"
             />
             <ToolBox
               icon={getImage(data.makeProposalIcon)}
               title="Make a proposal"
-              link="https://docs.fairground.vega.xyz/docs/api-howtos/create-market/"
-              text="Create and submit a proposal for a new market, change to network parameters, community and assets using Vega APIs."
+              link="https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol"
+              text="Read the docs to create and submit a proposal using Vega APIs."
               type="DOCS"
             />
           </div>
@@ -225,7 +223,7 @@ export const query = graphql`
       }
     }
     tokenInterfaceIcon: file(
-      relativePath: { eq: "governance-icon-token.png" }
+      relativePath: { eq: "tool-icons/governance.png" }
     ) {
       childImageSharp {
         gatsbyImageData(
