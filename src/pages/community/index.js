@@ -117,6 +117,7 @@ const CommunityPage = ({ data }) => {
           text="Livestreams, conferences, research office hours and community calls"
           linkText="Events and meetups"
           link="/community/events"
+          image={getImage(data.eventsGraphic)}
         />
 
         <h2 className="title-m font-glitched md:title-l mb-14">
@@ -161,6 +162,7 @@ const CommunityPage = ({ data }) => {
           text="Get rewarded for your efforts testing the network"
           linkText="Earn rewards"
           link="/community/incentives-bounties"
+          image={getImage(data.incentivesGraphic)}
         />
       </Container>
       <Fairground />
@@ -306,6 +308,26 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    incentivesGraphic: file(relativePath: { eq: "incentives-graphic.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1080
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    eventsGraphic: file(relativePath: { eq: "events-graphic.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1080
+          layout: CONSTRAINED
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
