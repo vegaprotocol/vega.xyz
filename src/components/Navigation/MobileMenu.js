@@ -1,17 +1,16 @@
 import React from "react";
 import { Link } from "gatsby";
-import Container from "../../components/Container";
-import { SiteNavigation } from "../../data/SiteNavigation";
 import VegaLogo from "../../components/Svg/VegaLogo";
 import MobileMenuButton from "./MobileMenuButton";
-import MobileMenuDropdown from "./MobileMenuDropdown";
+import Container from "../../components/Container";
+import MobileNavigation from "./MobileNavigation";
 import HeaderCta from "../../components/HeaderCta";
 // import SiteBanner from "../../components/SiteBanner";
 
 const MobileMenu = ({ toggleMenu, isOpen }) => {
   return (
     <div
-      className={`top-0 fixed bottom-0 left-0 right-0 dark:bg-black bg-white overflow-y-scroll ${
+      className={`top-0 fixed bottom-0 left-0 right-0 pb-12 dark:bg-black bg-white overflow-y-scroll ${
         isOpen ? "fixed" : "hidden"
       }`}
       id="mobileMenu"
@@ -31,25 +30,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
             />
           </div>
         </div>
-
-        <ul className="max-w-[20rem] text-lg tracking-wide w-full pb-4">
-          {SiteNavigation.map((section, idx) =>
-            section.links ? (
-              <li key={idx}>
-                <MobileMenuDropdown section={section} />
-              </li>
-            ) : (
-              <li key={idx}>
-                <Link
-                  to={section.link}
-                  className="text-[2.125rem] block py-4 uppercase"
-                >
-                  {section.text}
-                </Link>
-              </li>
-            )
-          )}
-        </ul>
+        <MobileNavigation />
 
         <HeaderCta
           link="https://console.fairground.wtf/"
