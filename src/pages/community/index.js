@@ -9,7 +9,7 @@ import Fairground from "../../components/Fairground";
 import LeadingLine from "../../components/LeadingLine";
 import Callout from "../../components/Callout";
 import { getImage } from "gatsby-plugin-image";
-import GhostParty from "../../components/Svg/GhostParty";
+import CommunityResponsive from "../../components/Svg/Community/Hero/Responsive";
 import ToolBox from "../../components/ToolBox";
 
 const CommunityPage = ({ data }) => {
@@ -55,13 +55,13 @@ const CommunityPage = ({ data }) => {
           </div>
         </div>
       </Container>
-      <div className="relative md:-top-6 md:mb-10">
-        <GhostParty />
+      <div className="relative md:-top-6 mb-10">
+        <CommunityResponsive />
       </div>
       <Container>
         <h2 className="title-m font-glitched md:title-l mb-14">Where we are</h2>
 
-        <div className="grid grid-cols-3 gap-5 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 mb-16">
           <ToolBox
             title="Discord"
             text="Hangout, chat, get support, suggest new content and art - we're all here!"
@@ -123,7 +123,7 @@ const CommunityPage = ({ data }) => {
           Contribute and get rewarded
         </h2>
 
-        <div className="grid grid-cols-3 gap-5 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 mb-16">
           <ToolBox
             title="Ambassador program"
             text="Leading community members share what we're building with those that need to hear it — and get rewarded."
