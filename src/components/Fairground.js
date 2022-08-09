@@ -23,7 +23,7 @@ const Fairground = () => {
           <div className="md:col-span-8 text-center">
             <div className="max-w-[40rem] mx-auto w-full">
               <h2 className="title-m md:title-l lg:title-xl text-black mb-8">
-                Use Fairground, the Vega testnet, to play without consquences.
+                Use Fairground, the Vega testnet, to play without consequences.
               </h2>
               <a
                 className="bg-black text-white inline-block py-5 px-16 uppercase title-xxxs !font-not-glitched mx-auto"
