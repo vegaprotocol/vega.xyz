@@ -70,13 +70,13 @@ const CommunityPage = ({ data }) => {
           />
           <ToolBox
             title="Forum"
-            text="Discuss governance and governance proposals on Vega Networks"
+            text="Discuss governance and governance proposals on Vega Networks."
             link="https://community.vega.xyz/c/governance/25"
             icon={getImage(data.iconForum)}
           />
           <ToolBox
             title="Telegram"
-            text="Official Telegram Group for Vega Protocol"
+            text="Official Telegram Group for Vega Protocol."
             link="https://t.me/vegacommunity/"
             icon={getImage(data.iconTelegram)}
           />
@@ -88,7 +88,7 @@ const CommunityPage = ({ data }) => {
           />
           <ToolBox
             title="Substack"
-            text="Roll up! Roll up! Vega's bi-weekly highlights newsletter"
+            text="Roll up! Roll up! Vega's bi-weekly highlights newsletter."
             link="https://vegacommunity.substack.com/subscribe"
             icon={getImage(data.iconSubstack)}
           />
@@ -106,7 +106,7 @@ const CommunityPage = ({ data }) => {
           />
           <ToolBox
             title="Medium"
-            text="Blog"
+            text="Latest news on the Vega blog."
             link="https://medium.com/@Vega_Protocol"
             icon={getImage(data.iconMedium)}
           />
