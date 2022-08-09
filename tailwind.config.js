@@ -23,6 +23,9 @@ module.exports = {
         "vega-mint": "#00F780",
         "vega-pink": "#FF077F",
       },
+      scale: {
+        185: "1.85",
+      },
       typography: (theme) => ({
         gray: {
           css: {

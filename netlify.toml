@@ -16,3 +16,6 @@
 
 [functions."send-bug-report"]
   included_files = ["vega-public-key.asc"]
+  
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
