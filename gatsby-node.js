@@ -19,6 +19,14 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
       locale = pathComponents[1].split(".").slice(-1).pop();
     }
 
+    if (pathComponents.length > 0 && parseInt(pathComponents[0])) {
+      createNodeField({
+        node,
+        name: `order`,
+        value: parseInt(pathComponents[0]),
+      });
+    }
+
     createNodeField({
       node,
       name: `locale`,
@@ -79,27 +87,6 @@ exports.sourceNodes = async ({
   createNodeId,
   createContentDigest,
 }) => {
-  // const contributorsData = await fetch(
-  //   `https://github-contributors-service.ops.vega.xyz/contributors`
-  // );
-  // const contributorsResultData = await contributorsData.json();
-
-  // contributorsResultData.github_contributors.forEach((contributor) => {
-  //   const node = {
-  //     username: contributor.login,
-  //     avatar: contributor.avatar_url,
-  //     total_contributions: contributor.total_contributions,
-  //     id: createNodeId(`contributors-${contributor.login}`),
-  //     parent: null,
-  //     children: [],
-  //     internal: {
-  //       type: `Contributors`,
-  //       contentDigest: createContentDigest(contributor),
-  //     },
-  //   };
-  //   actions.createNode(node);
-  // });
-
   const incentivesData = await fetch(
     `https://notion-data-service.ops.vega.xyz/query?id=aa64c6a0-0e0d-460d-ad44-ceacc6cd5957`
   );

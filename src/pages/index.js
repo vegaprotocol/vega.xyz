@@ -1,4 +1,5 @@
 import * as React from "react";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 import Seo from "../components/Seo";
@@ -16,10 +17,9 @@ import RoadMap from "../components/RoadMap";
 import RoadMapMobile from "../components/RoadMapMobile";
 import Rip from "../components/Svg/Rip";
 import RipSmall from "../components/Svg/RipSmall";
-import { graphql } from "gatsby";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   const { t } = useTranslation("page.index");
   return (
     <Layout>
@@ -109,8 +109,8 @@ const IndexPage = () => {
         <Container hideXOverflow={true}>
           <div className="pt-10 md:pt-20 md:pb-10">
             <div id="roadmap">
-              <RoadMapMobile className="md:hidden" />
-              <RoadMap className="hidden md:block" />
+              <RoadMapMobile data={data.roadmap} className="md:hidden" />
+              <RoadMap data={data.roadmap} className="hidden md:block" />
             </div>
           </div>
 
@@ -147,6 +147,28 @@ export const query = graphql`
           ns
           data
           language
+        }
+      }
+    }
+    roadmap: allMarkdownRemark(
+      filter: {
+        collection: { eq: "roadmap" }
+        fields: { locale: { eq: $language } }
+      }
+      sort: { fields: [fields___order], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            step_title
+            title
+          }
+          fields {
+            locale
+            order
+            slug
+          }
+          html
         }
       }
     }

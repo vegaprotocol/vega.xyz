@@ -73,6 +73,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `roadmap`,
+        path: `${__dirname}/src/content/roadmap`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `talks`,
         path: `${__dirname}/src/content/talks`,
       },

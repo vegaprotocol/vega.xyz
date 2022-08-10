@@ -2,17 +2,18 @@ import React from "react";
 import RoadMapDoor from "./Svg/RoadMapDoor";
 import RoadMapVegaDude from "./Svg/RoadMapVegaDude";
 import RoadMapBlockMobile from "./RoadMapBlockMobile";
-import { RoadMapContent } from "../data/RoadMap";
 import ButtonLink from "./ButtonLink";
 import GlitchTitle from "./GlitchTitle";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const RoadMapMobile = (props) => {
+  const { t } = useTranslation("component.roadmap");
   return (
     <div id="roadmap" {...props}>
       <div className="relative">
         <div className="dark:bg-black bg-white py-4">
           <GlitchTitle level={2} className="mb-4 title-l md:title-xl">
-            Roadmap
+            {t("Roadmap")}
           </GlitchTitle>
         </div>
 
@@ -38,13 +39,12 @@ const RoadMapMobile = (props) => {
               <RoadMapVegaDude className="absolute bottom-px left-1/2 -translate-x-1/4" />
             </div>
           </div>
-
-          {RoadMapContent.map((block, idx) => (
+          {props.data.edges.map((block, idx) => (
             <RoadMapBlockMobile
               key={idx}
-              title1={block.title1}
-              title2={block.title2}
-              content={block.content}
+              title1={block.node.frontmatter.step_title}
+              title2={block.node.frontmatter.title}
+              content={block.node.html}
               startOpen={idx === 0}
             />
           ))}
@@ -53,7 +53,7 @@ const RoadMapMobile = (props) => {
       <div className="pb-8">
         <ButtonLink
           link="https://github.com/orgs/vegaprotocol/projects/114/views/4"
-          text="View detailed Roadmap"
+          text={t("View detailed Roadmap")}
         />
       </div>
     </div>

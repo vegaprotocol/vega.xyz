@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import RoadMapVegaDude from "./Svg/RoadMapVegaDude";
-import { RoadMapContent } from "../data/RoadMap";
 import GlitchTitle from "./GlitchTitle";
 import ButtonLink from "./ButtonLink";
 import RoadMapBlock from "./RoadMapBlock";
@@ -12,9 +11,9 @@ const RoadMap = (props) => {
   const roadmapTrack = useRef(null);
   const roadmapBlocks = useRef(null);
   const roadmapTrackBlocks = useRef(null);
-  const blockCount = RoadMapContent.length;
   const [currentBlockIndex, setCurrentBlockIndex] = useState(0);
   const [currentTrackPosition, setcurrentTrackPosition] = useState(0);
+  const blockCount = props.data.edges.length;
 
   useEffect(() => {
     // fix height so it doesn't jump around as you click through the roadmap
@@ -85,17 +84,17 @@ const RoadMap = (props) => {
       <div className="relative">
         <div className="dark:bg-black bg-white py-6">
           <GlitchTitle level={2} className="mb-4 title-l lg:title-xxl">
-            <Trans>Roadmap</Trans>
+            <Trans t={t}>Roadmap</Trans>
           </GlitchTitle>
         </div>
 
         <div className="flex relative" ref={roadmapBlocks}>
-          {RoadMapContent.map((block, idx) => (
+          {props.data.edges.map((block, idx) => (
             <div key={idx} className="absolute left-0 right-0">
               <RoadMapBlock
-                title1={block.title1}
-                title2={block.title2}
-                content={block.content}
+                title1={block.node.frontmatter.step_title}
+                title2={block.node.frontmatter.title}
+                content={block.node.html}
                 visible={currentBlockIndex === idx}
               />
             </div>
@@ -159,12 +158,17 @@ const RoadMap = (props) => {
               className="flex w-full relative justify-between"
               ref={roadmapTrackBlocks}
             >
-              {RoadMapContent.map((block, idx) => (
-                <button onClick={() => goToBlock(idx)} key={idx}>
+              {props.data.edges.map((block, idx) => (
+                <button
+                  className="flex justify-between items-end"
+                  onClick={() => goToBlock(idx)}
+                  key={idx}
+                >
                   <RoadMapTrackBlock
+                    key={idx}
                     active={currentBlockIndex === idx}
-                    title1={block.title1}
-                    title2={block.title2}
+                    title1={block.node.frontmatter.step_title}
+                    title2={block.node.frontmatter.title}
                   />
                 </button>
               ))}
