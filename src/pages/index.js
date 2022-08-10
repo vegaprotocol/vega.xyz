@@ -20,12 +20,14 @@ import { graphql } from "gatsby";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const IndexPage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("page.index");
   return (
     <Layout>
       <Seo
         title={t("Blockchain derivatives")}
-        description="Discover Web3's native derivatives trading platform that is helping DeFi mature."
+        description={t(
+          "Discover Web3's native derivatives trading platform that is helping DeFi mature."
+        )}
       />
       <main>
         <PlanetStars className="max-w-[7.5rem] mx-auto hidden md:block" />
@@ -45,10 +47,10 @@ const IndexPage = () => {
                     className="title-l md:title-xl lg:text-[5.875rem] mb-2"
                     color="red"
                   >
-                    <Trans>Toward a new era of finance</Trans>
+                    <Trans t={t}>Toward a new era of finance</Trans>
                   </GlitchTitle>
                   <LeadingLine className="text-current !mb-0">
-                    <Trans>
+                    <Trans t={t}>
                       Decentralised infrastructure for the fair creation and
                       trading of derivatives.
                     </Trans>
@@ -65,10 +67,12 @@ const IndexPage = () => {
           <PageSection>
             <div className="max-w-[58.75rem] text-center mx-auto">
               <div className="title-m md:title-l mb-4">
-                <Trans>Throw open the doors to the new financial system</Trans>
+                <Trans t={t}>
+                  Throw open the doors to the new financial system
+                </Trans>
               </div>
               <div className="copy-xs md:copy-s !mb-8">
-                <Trans>
+                <Trans t={t}>
                   And a truly democratic society. Don't ask for permission. Ask
                   how you can play a part in this new world of DeFi.
                   Decentralised derivatives markets are here to stay.
@@ -113,7 +117,9 @@ const IndexPage = () => {
           <PageSection>
             <div className="lg:grid lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <div className="title-l mb-8 hyphens-auto">Events</div>
+                <div className="title-l mb-8 hyphens-auto">
+                  <Trans t={t}>Events</Trans>
+                </div>
               </div>
 
               <div className="lg:col-span-8">

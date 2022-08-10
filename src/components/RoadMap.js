@@ -8,7 +8,7 @@ import RoadMapTrackBlock from "./RoadMapTrackBlock";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const RoadMap = (props) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("component.roadmap");
   const roadmapTrack = useRef(null);
   const roadmapBlocks = useRef(null);
   const roadmapTrackBlocks = useRef(null);
