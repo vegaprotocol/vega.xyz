@@ -33,7 +33,7 @@
     "gatsby-plugin-manifest": "^4.16.0",
     "gatsby-plugin-mdx": "^3.16.1",
     "gatsby-plugin-react-helmet": "^5.16.0",
-    "gatsby-plugin-react-i18next": "^1.2.3",
+    "gatsby-plugin-react-i18next": "^2.0.4",
     "gatsby-plugin-sass": "^5.16.0",
     "gatsby-plugin-sharp": "^4.16.1",
     "gatsby-plugin-sitemap": "^5.16.0",
