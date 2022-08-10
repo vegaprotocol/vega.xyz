@@ -48,7 +48,10 @@ const IndexPage = () => {
                     <Trans>Toward a new era of finance</Trans>
                   </GlitchTitle>
                   <LeadingLine className="text-current !mb-0">
-                    <Trans>Decentralised infrastructure for the fair creation and trading of derivatives.</Trans>
+                    <Trans>
+                      Decentralised infrastructure for the fair creation and
+                      trading of derivatives.
+                    </Trans>
                   </LeadingLine>
                 </div>
               </div>
@@ -110,7 +113,7 @@ const IndexPage = () => {
           <PageSection>
             <div className="lg:grid lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <div className="title-l mb-8 hyphens-auto">Upcoming Events</div>
+                <div className="title-l mb-8 hyphens-auto">Events</div>
               </div>
 
               <div className="lg:col-span-8">

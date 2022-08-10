@@ -198,7 +198,7 @@ const Ambassadors = () => {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-20 mb-16">
           <div className="text-center">
             <GlitchTitle
               color="red"

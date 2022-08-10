@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import GlitchTitle from "../../components/GlitchTitle";
 import Contributor from "../../components/Contributor";
+import BoxTitle from "../../components/BoxTitle";
 
 const Contributors = () => {
   const [contributors, setContributors] = useState(null);
@@ -26,11 +27,12 @@ const Contributors = () => {
         description="Explore the people who have made Vega the exciting DeFi solution that it is."
       />
       <Container dataCy={"main"}>
-        <div className="mb-16 pt-6 lg:pt-16">
+        <div className="mb-14 pt-6 lg:pt-16">
           <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[44rem] mx-auto text-center mb-6 md:mb-12">
+            <BoxTitle text="Community" />
             <GlitchTitle
               level={1}
-              className="mb-4 title-m md:title-l lg:title-xxl"
+              className="mt-4 title-m md:title-l lg:title-xxl"
             >
               Meet our contributors
             </GlitchTitle>

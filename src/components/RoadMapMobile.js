@@ -12,7 +12,7 @@ const RoadMapMobile = (props) => {
       <div className="relative">
         <div className="dark:bg-black bg-white py-4">
           <GlitchTitle level={2} className="mb-4 title-l md:title-xl">
-            Where are we in the Roadmap?
+            Roadmap
           </GlitchTitle>
         </div>
 

@@ -1,27 +1,27 @@
 import React from "react";
 import { Link } from "gatsby";
+import LinkArrow from "../Svg/LinkArrow";
 
-const NavigationItem = ({ item }) => {
+const NavigationItem = ({ text, link }) => {
   return (
     <li>
-      {item.link.startsWith("http") ? (
+      {link.startsWith("http") ? (
         <a
-          href={item.link}
+          href={link}
           target="_blank"
           rel="noreferrer"
-          className="transition-colors inline-block px-3 xl:px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
-          activeClassName="underline underline-offset-8 decoration-2"
+          className="transition-colors inline-block py-0.5 hover:text-vega-mid-grey cursor-pointer"
         >
-          {item.text}
+          {text}
+          <LinkArrow className="inline ml-2 relative -top-px" />
         </a>
       ) : (
         <div>
           <Link
-            to={item.link}
-            className="transition-colors inline-block px-3 xl:px-6 py-3 hover:text-vega-mid-grey cursor-pointer"
-            activeClassName="underline underline-offset-8 decoration-2"
+            to={link}
+            className="transition-colors inline-block py-0.5 hover:text-vega-mid-grey cursor-pointer"
           >
-            {item.text}
+            {text}
           </Link>
         </div>
       )}
