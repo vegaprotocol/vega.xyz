@@ -35,7 +35,7 @@ const LatestBlogPosts = () => {
     <div className="mb-14">
       <div className="flex items-end justify-between mb-8">
         <h2 className="title-m max-w-[15rem] md:title-l md:max-w-[26rem]">
-          Latest blog posts
+          Blog posts
         </h2>
         <div className="hidden md:block">
           <ButtonLink link="https://blog.vega.xyz" text="View all posts" />
