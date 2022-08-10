@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Callout = ({ title, text, linkText, link, image = false, children }) => {
-  console.log(image);
   return (
     <div className="border border-white/20 rounded-xl bg-vega-box-grey mb-16">
       <div className={`${image ? "grid place-content-end grid-cols-2" : ""}`}>
