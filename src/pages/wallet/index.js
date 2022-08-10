@@ -16,6 +16,8 @@ import DropdownArrow from "../../components/Svg/DropdownArrow";
 import IconPlatformMac from "../../components/Svg/IconPlatformMac";
 import IconPlatformWindows from "../../components/Svg/IconPlatformWindows";
 import IconPlatformLinux from "../../components/Svg/IconPlatformLinux";
+import WalletVideoWebM from "../../video/wallet-hero.webm";
+import WalletVideoMP4 from "../../video/wallet-hero.mp4";
 
 const platformIcons = {
   mac: IconPlatformMac,
@@ -217,26 +219,28 @@ const WalletPage = () => {
       </Container>
 
       <div className="relative pt-16 md:pt-36 md:mt-12">
-        <StaticImage
-          src="../../images/wallet-small.png"
-          alt="Vega Wallet"
-          placeholder="none"
-          layout="fullWidth"
-          className="relative z-10 md:hidden mr-8"
-        />
+        <video
+          className="md:hidden w-full h-auto max-w-[90%] mx-auto"
+          autoPlay
+          muted
+          loop
+        >
+          <source type="video/webm" src={WalletVideoWebM} />
+          <source type="video/mp4" src={WalletVideoMP4} />
+        </video>
 
-        <WalletRip className="relative -mt-16 md:mt-16 lg:mt-0" />
+        <WalletRip className="relative md:mt-16 lg:mt-0" />
 
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3 hidden md:block">
-          <StaticImage
-            src="../../images/wallet.png"
-            alt="Vega Wallet"
-            placeholder="none"
-            layout="constrained"
-            width={894}
-            height={561}
-            className="md:scale-150 lg:scale-110"
-          />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
+          <video
+            className="hidden md:block w-full h-auto md:scale-150 lg:scale-100"
+            autoPlay
+            muted
+            loop
+          >
+            <source type="video/webm" src={WalletVideoWebM} />
+            <source type="video/mp4" src={WalletVideoMP4} />
+          </video>
         </div>
       </div>
 

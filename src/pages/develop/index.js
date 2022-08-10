@@ -46,10 +46,10 @@ const DevelopPage = ({ data }) => {
         title="Develop with Vega"
         description="Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi."
       />
-      <Container hideXOverflow={true} dataCy={"main"}>
+      <Container dataCy={"main"}>
         <div className="pt-6 mb-16 lg:pt-16">
           <div className="md:grid md:grid-cols-12">
-            <div className="relative z-10 col-span-8 col-start-1 row-span-full">
+            <div className="relative z-10 col-span-8 col-start-1 row-span-full lg:pb-[8vw]">
               <h1>
                 <BoxTitle text="Develop" />
               </h1>
