@@ -2,59 +2,79 @@ import React from "react";
 import NavigationItem from "../Item";
 import NavigationHeading from "../Heading";
 import NavigationList from "../List";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Community = () => {
+  const { t } = useTranslation("component.navigation");
   return (
     <div className="lg:grid lg:grid-cols-12 gap-6">
       <div className="lg:col-span-4">
-        <NavigationHeading>Meet</NavigationHeading>
+        <NavigationHeading>
+          <Trans t={t}>Meet</Trans>
+        </NavigationHeading>
         <NavigationList>
-          <NavigationItem text="The Vega Community" link="/community" />
-          <NavigationItem text="Events and meetups" link="/community/events" />
-          <NavigationItem text="Contributors" link="/community/contributors" />
+          <NavigationItem text={t("The Vega Community")} link="/community" />
+          <NavigationItem
+            text={t("Events and meetups")}
+            link="/community/events"
+          />
+          <NavigationItem
+            text={t("Contributors")}
+            link="/community/contributors"
+          />
         </NavigationList>
       </div>
       <div className="lg:col-span-4">
         <NavigationHeading>Join</NavigationHeading>
         <NavigationList>
-          <NavigationItem text="Discord" link="https://vega.xyz/discord" />
-          <NavigationItem text="Forum" link="https://community.vega.xyz/" />
-          <NavigationItem text="Telegram" link="https://t.me/vegacommunity" />
+          <NavigationItem text={t("Discord")} link="https://vega.xyz/discord" />
           <NavigationItem
-            text="Twitter"
+            text={t("Forum")}
+            link="https://community.vega.xyz/"
+          />
+          <NavigationItem
+            text={t("Telegram")}
+            link="https://t.me/vegacommunity"
+          />
+          <NavigationItem
+            text={t("Twitter")}
             link="https://twitter.com/vegaprotocol"
           />
           <NavigationItem
-            text="Substack"
+            text={t("Substack")}
             link="https://vegacommunity.substack.com/subscribe"
           />
           <NavigationItem
-            text="Twitch"
+            text={t("Twitch")}
             link="https://www.twitch.tv/vegaprotocol"
           />
         </NavigationList>
       </div>
       <div className="lg:col-span-4">
-        <NavigationHeading>Contribute</NavigationHeading>
+        <NavigationHeading>
+          <Trans t={t}>Contribute</Trans>
+        </NavigationHeading>
         <NavigationList>
           <NavigationItem
-            text="Ambassador program"
+            text={t("Ambassador program")}
             link="/community/ambassadors/"
           />
           <NavigationItem
-            text="Builders club"
+            text={t("Builders club")}
             link="https://vega.xyz/discord"
           />
         </NavigationList>
-        <NavigationHeading>Get rewarded</NavigationHeading>
+        <NavigationHeading>
+          <Trans>Get rewarded</Trans>
+        </NavigationHeading>
         <NavigationList>
           <NavigationItem
-            text="Incentives and bounties"
+            text={t("Incentives and bounties")}
             link="/community/incentives-bounties/"
           />
-          <NavigationItem text="Get Swag" link="/community/swag" />
+          <NavigationItem text={t("Get Swag")} link="/community/swag" />
           <NavigationItem
-            text="Experiment on Fairground Testnet"
+            text={t("Experiment on Fairground Testnet")}
             link="https://fairground.wtf"
           />
         </NavigationList>

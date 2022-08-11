@@ -5,9 +5,11 @@ import MobileMenuButton from "./MobileMenuButton";
 import Container from "../../components/Container";
 import MobileNavigation from "./MobileNavigation";
 import HeaderCta from "../../components/HeaderCta";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 // import SiteBanner from "../../components/SiteBanner";
 
 const MobileMenu = ({ toggleMenu, isOpen }) => {
+  const { t } = useTranslation("common");
   return (
     <div
       className={`top-0 fixed bottom-0 left-0 right-0 pb-12 dark:bg-black bg-white overflow-y-scroll ${
@@ -34,7 +36,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
 
         <HeaderCta
           link="https://console.fairground.wtf/"
-          text="Trade (Testnet)"
+          text={t("Trade (Testnet)")}
           className="inline-block"
         />
       </Container>

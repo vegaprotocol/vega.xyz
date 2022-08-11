@@ -8,8 +8,7 @@ import MobileMenuButton from "../components/Navigation/MobileMenuButton";
 import HeaderCta from "../components/HeaderCta";
 import LanguageToggle from "../components/LanguageToggle";
 // import SiteBanner from "../components/SiteBanner";
-
-import { Link } from "gatsby-plugin-react-i18next";
+import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const Header = () => {
@@ -31,6 +30,8 @@ const Header = () => {
     });
   }, []);
 
+  const { t } = useTranslation("common");
+
   return (
     <div>
       {/* <SiteBanner /> */}
@@ -49,7 +50,7 @@ const Header = () => {
               {!menuIsOpen && (
                 <HeaderCta
                   link="https://console.fairground.wtf/"
-                  text="Trade (Testnet)"
+                  text={t("Trade (Testnet)")}
                   className="hidden md:block lg:hidden mr-3"
                 />
               )}
@@ -63,7 +64,7 @@ const Header = () => {
                 {!menuIsOpen && (
                   <HeaderCta
                     link="https://console.fairground.wtf/"
-                    text="Trade (Testnet)"
+                    text={t("Trade (Testnet)")}
                     className="ml-3 hidden lg:block"
                   />
                 )}

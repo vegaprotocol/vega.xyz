@@ -2,39 +2,50 @@ import React from "react";
 import NavigationItem from "../Item";
 import NavigationList from "../List";
 import NavigationHeading from "../Heading";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Develop = () => {
+  const { t } = useTranslation("component.navigation");
   return (
     <div className="lg:grid lg:grid-cols-3 gap-6">
       <div>
-        <NavigationHeading>Build</NavigationHeading>
+        <NavigationHeading>
+          <Trans t={t}>Build</Trans>
+        </NavigationHeading>
         <NavigationList>
-          <NavigationItem text="Getting started" link="/develop" />
+          <NavigationItem text={t("Getting started")} link="/develop" />
           <NavigationItem
-            text="Github"
+            text={t("Github")}
             link="https://github.com/vegaprotocol"
           />
-          <NavigationItem text="Documentation" link="https://docs.vega.xyz" />
+          <NavigationItem
+            text={t("Documentation")}
+            link="https://docs.vega.xyz"
+          />
         </NavigationList>
       </div>
       <div>
-        <NavigationHeading>Contribute</NavigationHeading>
+        <NavigationHeading>
+          <Trans t={t}>Contribute</Trans>
+        </NavigationHeading>
         <NavigationList>
           <NavigationItem
-            text="Ambassador program"
+            text={t("Ambassador program")}
             link="/community/ambassadors/"
           />
           <NavigationItem
-            text="Builders club"
+            text={t("Builders club")}
             link="https://vega.xyz/discord"
           />
         </NavigationList>
       </div>
       <div>
-        <NavigationHeading>Get rewarded</NavigationHeading>
+        <NavigationHeading>
+          <Trans t={t}>Get rewarded</Trans>
+        </NavigationHeading>
         <NavigationList>
           <NavigationItem
-            text="Incentives and bounties"
+            text={t("Incentives and bounties")}
             link="/community/incentives-bounties"
           />
         </NavigationList>

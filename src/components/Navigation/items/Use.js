@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import NavigationItem from "../Item";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Use = () => {
+  const { t } = useTranslation("component.navigation");
   return (
     <ul>
-      <NavigationItem text="Use the network" link="/use" />
-      <NavigationItem text="Get the Vega Wallet" link="/wallet" />
+      <NavigationItem text={t("Use the network")} link="/use" />
+      <NavigationItem text={t("Get the Vega Wallet")} link="/wallet" />
       <NavigationItem
-        text="Experiment on Fairground Testnet"
+        text={t("Experiment on Fairground Testnet")}
         link="https://fairground.wtf"
       />
     </ul>
