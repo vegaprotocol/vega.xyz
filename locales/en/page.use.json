@@ -1,12 +1,12 @@
 {
-  "Vega-powered tools and services": "Vega-powered tools and services",
-  "Trade on a fully decentralised network and propose new markets, provide liquidity, start staking or configure the network through governance.": "Trade on a fully decentralised network and propose new markets, provide liquidity, start staking or configure the network through governance.",
+  "Use the network": "Use the network",
+  "Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy.": "Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy.",
   "Tools built on Vega": "Tools built on Vega",
+  "All": "All",
+  "Wallets": "Wallets",
+  "dApps": "dApps",
+  "Tools": "Tools",
   "Want to add something to this list?": "Want to add something to this list?",
-  "Chat to us on Discord": "Chat to us on Discord",
-  "and start building": "and start building",
-  "Use Fairground, the Vega testnet, to play without consquences.": "Use Fairground, the Vega testnet, to play without consquences.",
-  "Go to Fairground": "Go to Fairground",
-  "Use the powerful Vega Console app": "Use the powerful Vega Console app",
-  "Earn rewards for finding bugs": "Earn rewards for finding bugs"
+  "Chat to us on Discord and start building": "<0>Chat to us on Discord</0> and <3>start building</3>.",
+  "Made by x": "Made by {{author}}"
 }

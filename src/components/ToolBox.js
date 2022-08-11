@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import LinkArrow from "./Svg/LinkArrow";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const LinkWrapper = ({
   link,
@@ -14,6 +15,7 @@ const LinkWrapper = ({
     : internalLinkWrapper(children);
 
 const ToolBox = ({ icon, title, link, text, author, category }) => {
+  const { t } = useTranslation("page.use");
   const isExternal = link.startsWith("http");
 
   return (
@@ -64,7 +66,7 @@ const ToolBox = ({ icon, title, link, text, author, category }) => {
                 </svg>
               )}
               <div className="text-[0.875rem] uppercase inline-block align-center">
-                Made by {author}
+                {t("Made by x", { author: author })}
               </div>
             </div>
           )}
