@@ -11,8 +11,10 @@ import Callout from "../../components/Callout";
 import { getImage } from "gatsby-plugin-image";
 import CommunityResponsive from "../../components/Svg/Community/Hero/Responsive";
 import ToolBox from "../../components/ToolBox";
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const CommunityPage = ({ data }) => {
+  const { t } = useTranslation("page.community");
   const ambassadorImage = getImage(data.ambassadorImage);
   const builderImage = getImage(data.builderImage);
   const [contributors, setContributors] = useState(null);
@@ -31,25 +33,29 @@ const CommunityPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title="Community"
-        description="Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
+        title={t("Community")}
+        description={t(
+          "Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
+        )}
       />
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16">
           <h1>
-            <BoxTitle text="Community" />
+            <BoxTitle text={t("Community")} />
           </h1>
           <h2 className="title-m max-w-[48rem] font-glitched md:title-l mb-4 md:mb-6 mt-4">
-            Join the Vega community
+            <Trans t={t}>Join the Vega community</Trans>
           </h2>
 
           <div className="max-w-[48rem]">
             <LeadingLine className="!mb-14">
-              Earn rewards for contributing to the future of finance.
+              <Trans t={t}>
+                Earn rewards for contributing to the future of finance.
+              </Trans>
             </LeadingLine>
 
             <ButtonLink
-              text="Join us on Discord"
+              text={t("Join us on Discord")}
               link="https://vega.xyz/discord"
             ></ButtonLink>
           </div>
@@ -59,108 +65,126 @@ const CommunityPage = ({ data }) => {
         <CommunityResponsive />
       </div>
       <Container>
-        <h2 className="title-m font-glitched md:title-l mb-14">Where we are</h2>
+        <h2 className="title-m font-glitched md:title-l mb-14">
+          <Trans t={t}>Where we are</Trans>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 mb-16">
           <ToolBox
             title="Discord"
-            text="Hangout, chat, get support, suggest new content and art - we're all here!"
+            text={t(
+              "Hangout, chat, get support, suggest new content and art - we're all here!"
+            )}
             link="https://vega.xyz/discord"
             icon={getImage(data.iconDiscord)}
           />
           <ToolBox
-            title="Forum"
-            text="Discuss governance and governance proposals on Vega Networks."
+            title={t("Forum")}
+            text={t(
+              "Discuss governance and governance proposals on Vega Networks."
+            )}
             link="https://community.vega.xyz/c/governance/25"
             icon={getImage(data.iconForum)}
           />
           <ToolBox
-            title="Telegram"
-            text="Official Telegram Group for Vega Protocol."
+            title={t("Telegram")}
+            text={t("Official Telegram Group for Vega Protocol.")}
             link="https://t.me/vegacommunity/"
             icon={getImage(data.iconTelegram)}
           />
           <ToolBox
-            title="Twitter"
+            title={t("Twitter")}
             text="@vegaprotocol"
             link="https://twitter.com/vegaprotocol"
             icon={getImage(data.iconTwitter)}
           />
           <ToolBox
-            title="Substack"
-            text="Roll up! Roll up! Vega's bi-weekly highlights newsletter."
+            title={t("Substack")}
+            text={t(
+              "Roll up! Roll up! Vega's bi-weekly highlights newsletter."
+            )}
             link="https://vegacommunity.substack.com/subscribe"
             icon={getImage(data.iconSubstack)}
           />
           <ToolBox
-            title="YouTube"
-            text="Video tutorials, presentations, development updates, and milestones of the Vega project."
+            title={t("YouTube")}
+            text={t(
+              "Video tutorials, presentations, development updates, and milestones of the Vega project."
+            )}
             link="https://www.youtube.com/vegaprotocol"
             icon={getImage(data.iconYouTube)}
           />
           <ToolBox
-            title="Twitch"
-            text="Weekly live-streams, Thursdays 6pm BST/UTC+1!"
+            title={t("Twitch")}
+            text={t("Weekly live-streams, Thursdays 6pm BST/UTC+1!")}
             link="https://www.twitch.tv/vegaprotocol"
             icon={getImage(data.iconTwitch)}
           />
           <ToolBox
-            title="Medium"
-            text="Latest news on the Vega blog."
+            title={t("Medium")}
+            text={t("Latest news on the Vega blog.")}
             link="https://medium.com/@Vega_Protocol"
             icon={getImage(data.iconMedium)}
           />
         </div>
 
         <Callout
-          title="Upcoming events"
-          text="Livestreams, conferences, research office hours and community calls"
-          linkText="Events and meetups"
+          title={t("Upcoming events")}
+          text={t(
+            "Livestreams, conferences, research office hours and community calls"
+          )}
+          linkText={t("Events and meetups")}
           link="/community/events"
           image={getImage(data.eventsGraphic)}
         />
 
         <h2 className="title-m font-glitched md:title-l mb-14">
-          Contribute and get rewarded
+          <Trans t={t}>Contribute and get rewarded</Trans>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 mb-16">
           <ToolBox
-            title="Ambassador program"
-            text="Leading community members share what we're building with those that need to hear it — and get rewarded."
+            title={t("Ambassador program")}
+            text={t(
+              "Leading community members share what we're building with those that need to hear it — and get rewarded."
+            )}
             link="/community/ambassadors/"
             icon={getImage(data.iconAmbassador)}
           />
           <ToolBox
-            title="Builders Club"
-            text="For developers, coders, hackers, dreamers who want to create software on top of Vega."
+            title={t("Builders Club")}
+            text={t(
+              "For developers, coders, hackers, dreamers who want to create software on top of Vega."
+            )}
             link="https://vega.xyz/discord/"
             icon={getImage(data.iconBuildersClub)}
           />
           <ToolBox
-            title="Feedback"
-            text="Feedback and feature requests on Github"
+            title={t("Feedback")}
+            text={t("Feedback and feature requests on Github")}
             link="https://github.com/vegaprotocol/vega/issues"
             icon={getImage(data.iconFeedback)}
           />
           <ToolBox
-            title="Github"
-            text="Contribute to the source code, and get building with our APIs."
+            title={t("Github")}
+            text={t(
+              "Contribute to the source code, and get building with our APIs."
+            )}
             link="https://github.com/vegaprotocol/"
             icon={getImage(data.iconGithub)}
           />
           <ToolBox
-            title="Docs"
-            text="Share feedback, make suggestions and help translate."
+            title={t("Docs")}
+            text={t("Share feedback, make suggestions and help translate.")}
             link="https://docs.vega.xyz/"
             icon={getImage(data.iconDocs)}
           />
         </div>
 
         <Callout
-          title="Incentives"
-          text="Get rewarded for your efforts testing the network"
-          linkText="Earn rewards"
+          title={t("Incentives")}
+          text={t("Get rewarded for your efforts testing the network")}
+          linkText={t("Earn rewards")}
           link="/community/incentives-bounties"
           image={getImage(data.incentivesGraphic)}
         />
@@ -173,7 +197,28 @@ const CommunityPage = ({ data }) => {
 export default CommunityPage;
 
 export const query = graphql`
-  query {
+  query ($language: String!) {
+    locales: allLocale(
+      filter: {
+        ns: {
+          in: [
+            "common"
+            "component.navigation"
+            "component.fairground"
+            "page.community"
+          ]
+        }
+        language: { eq: $language }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     ambassadorImage: file(relativePath: { eq: "ghost-ambassador.png" }) {
       childImageSharp {
         gatsbyImageData(
