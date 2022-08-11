@@ -4,7 +4,7 @@ import FairgroundBugIllustration from "../images/fairground-bug-illustration.svg
 import Waltzer1 from "../images/waltzer1.png";
 import Waltzer2 from "../images/waltzer2.png";
 import Container from "./Container";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Fairground = () => {
   const { t } = useTranslation("component.fairground");
