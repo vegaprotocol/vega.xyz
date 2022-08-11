@@ -2,6 +2,25 @@ require(`dotenv`).config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const languages = [
+  {
+    code: "en",
+    localName: "English",
+  },
+  {
+    code: "es",
+    localName: "Español",
+  },
+  {
+    code: "cn",
+    localName: "中国人",
+  },
+  {
+    code: "ru",
+    localName: "Русский",
+  },
+];
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://vega.xyz`,
@@ -10,6 +29,7 @@ module.exports = {
     description: `Discover Web3's native derivatives trading platform that is helping DeFi mature.`,
     image: `/images/vega-og.jpg`,
     twitter: `@vegaprotocol`,
+    languages: languages,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -114,7 +134,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`,
-        languages: [`en`, `es`],
+        languages: languages.map((lng) => lng.code),
         defaultLanguage: `en`,
         siteUrl: `https://vega.xyz`,
         trailingSlash: "always",

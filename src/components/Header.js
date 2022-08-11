@@ -58,8 +58,8 @@ const Header = () => {
               <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
 
               <div className="flex items-center">
-                <LanguageToggle />
                 <ScreenMode />
+                <LanguageToggle />
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
                 {!menuIsOpen && (
                   <HeaderCta
