@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 const Callout = ({ title, text, linkText, link, image }) => {
   return (
-    <div className="border border-white/20 rounded-xl bg-vega-box-grey mb-16">
+    <div className="border dark:border-white/20 border-black rounded-xl dark:bg-vega-box-grey bg-white mb-16">
       <div
         className={`grid place-content-end ${
           image ? "grid-cols-2" : "grid-cols-1"
