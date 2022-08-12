@@ -65,7 +65,7 @@ const governanceProcess = [
   {
     phase: "Phase 4",
     title: "Vote to exercise your influence",
-    text: "Token holders consider and vote for or against active proposals using the governance tools. Tokens used for voting are not locked or transferred - they can also be used for staking. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.",
+    text: "Token holders consider and vote for or against active proposals. Tokens used for voting are not locked or transferred - they can be used for staking as well as voting on any/all active proposals, but cannot be used to trade. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.",
     links: [
       {
         title: "Vote for propoals",
@@ -125,7 +125,7 @@ const GovernancePage = ({ data }) => {
               icon={getImage(data.forumIcon)}
               title="Forum"
               link="https://community.vega.xyz/c/governance/25"
-              text="Discuss governance, sense check and formalise governance proposals for the Vega network."
+              text="Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more."
               type="Tool"
             />
             <ToolBox
