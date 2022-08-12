@@ -11,10 +11,7 @@ const Events = ({ data }) => {
   const { t } = useTranslation("page.community");
   return (
     <Layout>
-      <Seo
-        title="Incentives and bounties"
-        description="Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
-      />
+      <Seo title={t("Upcoming events and meetups")} description={t("")} />
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16 mb-14">
           <BoxTitle text={t("Community")} />
