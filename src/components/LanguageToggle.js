@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { useI18next } from "gatsby-plugin-react-i18next";
 
 const LanguageToggle = () => {
-  const { language, languages, changeLanguage } = useI18next();
+  const { languages, changeLanguage } = useI18next();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const switchLanguage = (lng) => {
@@ -77,7 +77,7 @@ const LanguageToggle = () => {
         <ul className="flex flex-col gap-0.5 p-2 languages mt-3 absolute top-[100%] right-0 bg-vega-lightest-grey dark:bg-white rounded-[5px] text-black">
           {languages.map((lng) => (
             <li key={lng}>
-              <a
+              <button
                 href="#"
                 className="min-w-[8.125rem] inline-block px-3 py-1.5 rounded-[2px] hover:dark:bg-vega-lightest-grey hover:bg-white"
                 onClick={(e) => {
@@ -89,7 +89,7 @@ const LanguageToggle = () => {
                   site.siteMetadata.languages.find((lang) => lang.code === lng)
                     .localName
                 }
-              </a>
+              </button>
             </li>
           ))}
         </ul>

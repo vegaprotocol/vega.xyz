@@ -5,7 +5,7 @@ import MobileMenuButton from "./MobileMenuButton";
 import Container from "../../components/Container";
 import MobileNavigation from "./MobileNavigation";
 import HeaderCta from "../../components/HeaderCta";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 // import SiteBanner from "../../components/SiteBanner";
 
 const MobileMenu = ({ toggleMenu, isOpen }) => {

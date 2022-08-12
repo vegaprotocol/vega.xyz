@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import LinkArrow from "./Svg/LinkArrow";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const LinkWrapper = ({
   link,
@@ -27,7 +27,12 @@ const ToolBox = ({ icon, title, link, text, author, category }) => {
         </Link>
       )}
       externalLinkWrapper={(children) => (
-        <a target="_blank" className="block group relative h-full" href={link}>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          className="block group relative h-full"
+          href={link}
+        >
           {children}
         </a>
       )}

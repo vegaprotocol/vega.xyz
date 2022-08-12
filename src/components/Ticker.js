@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TickerCell from "./TickerCell";
 import BigNumber from "bignumber.js";
 import Marquee from "react-fast-marquee";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Ticker = () => {
   const { t } = useTranslation();

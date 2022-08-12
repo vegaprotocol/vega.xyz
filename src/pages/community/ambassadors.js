@@ -9,8 +9,6 @@ import ButtonLink from "../../components/ButtonLink";
 import AmbassadorsHero from "../../components/Svg/AmbassadorsHero";
 import IconAmbassador1 from "../../images/icon-ambassador-1.png";
 import IconAmbassador2 from "../../images/icon-ambassador-2.png";
-//import IconAmbassador3 from "../../images/icon-ambassador-3.png";
-import IconAmbassador4 from "../../images/icon-ambassador-4.png";
 
 const Clan = ({ icon, title, text }) => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import SquareBullet from "./Svg/SquareBullet";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const BlogPost = ({ post }) => {
   const { t } = useTranslation("component.blog-posts");

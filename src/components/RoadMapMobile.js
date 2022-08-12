@@ -4,7 +4,7 @@ import RoadMapVegaDude from "./Svg/RoadMapVegaDude";
 import RoadMapBlockMobile from "./RoadMapBlockMobile";
 import ButtonLink from "./ButtonLink";
 import GlitchTitle from "./GlitchTitle";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const RoadMapMobile = (props) => {
   const { t } = useTranslation("component.roadmap");

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
@@ -11,24 +11,10 @@ import Callout from "../../components/Callout";
 import { getImage } from "gatsby-plugin-image";
 import CommunityResponsive from "../../components/Svg/Community/Hero/Responsive";
 import ToolBox from "../../components/ToolBox";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const CommunityPage = ({ data }) => {
   const { t } = useTranslation("page.community");
-  const ambassadorImage = getImage(data.ambassadorImage);
-  const builderImage = getImage(data.builderImage);
-  const [contributors, setContributors] = useState(null);
-
-  useEffect(() => {
-    async function fetchContributors() {
-      let response = await fetch(
-        "https://github-contributors-service.ops.vega.xyz/contributors?sort=random"
-      );
-      response = await response.json();
-      setContributors(response.github_contributors);
-    }
-    fetchContributors();
-  }, []);
 
   return (
     <Layout>

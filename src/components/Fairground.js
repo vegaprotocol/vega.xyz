@@ -18,6 +18,7 @@ const Fairground = () => {
             <div className="md:relative md:top-[10%]">
               <img
                 src={Waltzer1}
+                alt=""
                 className="max-w-[9rem] md:max-w-[13rem] w-full h-auto md:mx-auto inline-block"
               />
             </div>
@@ -34,6 +35,7 @@ const Fairground = () => {
                 className="bg-black text-white inline-block py-5 px-16 uppercase title-xxxs !font-not-glitched mx-auto"
                 href="https://fairground.wtf"
                 target="_blank"
+                rel="noreferrer"
               >
                 <Trans t={t}>Go to Fairground</Trans>
               </a>
@@ -42,6 +44,7 @@ const Fairground = () => {
           <div className="md:col-span-2 relative">
             <div className="w-full md:relative md:top-[50%] inline-block text-right">
               <img
+                alt=""
                 src={Waltzer2}
                 className="max-w-[9rem] md:max-w-[13rem] w-full h-auto md:mx-auto inline-block"
               />
@@ -56,6 +59,7 @@ const Fairground = () => {
             </div>
             <div className="w-full max-w-[30%] order-1 md:order-2">
               <img
+                alt=""
                 src={FairgroundConsoleIllustration}
                 className="w-full h-auto"
               />
@@ -66,7 +70,11 @@ const Fairground = () => {
               <Trans t={t}>Earn rewards for finding bugs</Trans>
             </div>
             <div className="w-full max-w-[20%] md:max-w-[30%]">
-              <img src={FairgroundBugIllustration} className="w-full h-auto" />
+              <img
+                src={FairgroundBugIllustration}
+                alt=""
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>

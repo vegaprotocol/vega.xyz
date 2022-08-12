@@ -136,7 +136,11 @@ const UsePage = ({ data }) => {
             </p>
             <p className="prose copy-s text-vega-mid-grey">
               <Trans t={t} i18nKey="Chat to us on Discord and start building">
-                <a href="https://vega.xyz/discord/" target="_blank">
+                <a
+                  href="https://vega.xyz/discord/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Chat to us on Discord
                 </a>{" "}
                 and <Link to="/develop">start building</Link>.

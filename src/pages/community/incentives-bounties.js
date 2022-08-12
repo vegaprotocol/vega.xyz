@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
@@ -9,21 +9,6 @@ import ToolBox from "../../components/ToolBox";
 import Incentives from "../../components/Incentives";
 
 const IncentivesBounties = ({ data }) => {
-  const ambassadorImage = getImage(data.ambassadorImage);
-  const builderImage = getImage(data.builderImage);
-  const [contributors, setContributors] = useState(null);
-
-  useEffect(() => {
-    async function fetchContributors() {
-      let response = await fetch(
-        "https://github-contributors-service.ops.vega.xyz/contributors?sort=random"
-      );
-      response = await response.json();
-      setContributors(response.github_contributors);
-    }
-    fetchContributors();
-  }, []);
-
   return (
     <Layout>
       <Seo

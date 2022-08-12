@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import NavigationItem from "../Item";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const Use = () => {
   const { t } = useTranslation("component.navigation");
