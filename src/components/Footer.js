@@ -125,7 +125,7 @@ const Footer = () => {
                     to="/community/incentives-bounties"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Incetives + bounties
+                    Incentives + bounties
                   </TextLink>
                 </li>
                 <li>
