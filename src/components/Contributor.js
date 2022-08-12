@@ -1,7 +1,9 @@
 import React from "react";
 import LinkArrow from "./Svg/LinkArrow";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Contributor = ({ contributor }) => {
+  const { t } = useTranslation("page.community");
   return (
     <div className="contributor-block relative group">
       <img
@@ -31,7 +33,7 @@ const Contributor = ({ contributor }) => {
             className="text-[0.8125rem] hover:underline"
             href={`https://github.com/${contributor.login}`}
           >
-            View on Github
+            <Trans>View on Github</Trans>
             <LinkArrow className="inline-block ml-2" />
           </a>
         </div>

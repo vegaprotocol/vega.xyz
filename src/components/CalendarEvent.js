@@ -5,7 +5,7 @@ import Moment from "react-moment";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const CalendarEvent = ({ event }) => {
-  const { t } = useTranslation("component.calendar-event");
+  const { t } = useTranslation();
   const dateFormat = "LLL";
   const dateFormatWithoutTime = "LL";
   const dateParseFormat = "YYYY-MM-DD HH:mm:ss";
