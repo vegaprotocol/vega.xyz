@@ -24,11 +24,29 @@ gatsby develop
 
 Netlify is configured for continuous deployment.
 
+---
+
 ## i18n
 
-The website uses [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next) plugin to handle translations. This is based on, and works seamlessly with [react-i18next](https://react.i18next.com/).
+The website uses [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next) plugin to handle translations. This is based on [react-i18next](https://react.i18next.com/).
 
-Locale files can be found in `~/locales`. The convention is to create a separate file for each page and component, where required. The prefix of the filename is either `page` or `component`.
+### Locale files
+
+Locale files can be found in `~/locales`. The convention is to create a separate file for each page, component, or JSON object with the prefix of either `page`, `component`, or `content`.
+
+Text intended to be translated should be treated as follows:
+
+```
+<Trans t={t}>Text to be translated</Trans>
+```
+
+or
+
+```
+{t("Text to be translated")}
+```
+
+### Markdown files
 
 Translations for markdown files in `~/src/content` are specified using file extensions. For example:
 
