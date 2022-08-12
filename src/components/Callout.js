@@ -4,9 +4,11 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 const Callout = ({ title, text, linkText, link, image = false, children }) => {
   return (
-    <div className="border border-white/20 rounded-xl bg-vega-box-grey mb-16">
-      <div className={`${image ? "grid place-content-end grid-cols-2" : ""}`}>
-        <div className={`p-6 ${image ? "max-w-[30rem]" : ""}`}>
+    <div className="border dark:border-white/20 border-black rounded-xl dark:bg-vega-box-grey bg-white mb-16">
+      <div
+        className={`${image ? "grid md:place-content-end md:grid-cols-2" : ""}`}
+      >
+        <div className={`p-6 ${image ? "md:max-w-[30rem]" : ""}`}>
           <h2 className="copy-s !mb-1.5">{title}</h2>
           {text && (
             <div className="text-vega-mid-grey copy-xs !mb-1.5">{text}</div>
