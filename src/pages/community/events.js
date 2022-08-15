@@ -9,8 +9,8 @@ const Events = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title="Incentives and bounties"
-        description="Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
+        title="Events"
+        description="Upcoming community events, meet-ups, research office hours and community calls"
       />
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16 mb-14">
