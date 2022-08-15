@@ -52,7 +52,6 @@ const Community = () => {
             text="Incentives and bounties"
             link="/community/incentives-bounties/"
           />
-        <NavigationList>
           <NavigationItem
             text="Report a security issue"
             link="https://vega.xyz/bug-bounties/"
