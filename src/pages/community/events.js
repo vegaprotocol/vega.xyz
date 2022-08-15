@@ -10,7 +10,7 @@ const Events = ({ data }) => {
     <Layout>
       <Seo
         title="Events"
-        description="Upcoming community events, meet-ups, research office hours and community calls"
+        description="Upcoming community events, meet-ups, research office hours and community calls."
       />
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16 mb-14">
