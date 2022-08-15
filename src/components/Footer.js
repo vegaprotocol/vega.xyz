@@ -317,6 +317,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex items-center gap-x-5 gap-y-1 flex-wrap">
+              <TextLink to="/bug-bounties">Report a security issue</TextLink>
               <TextLink to="https://github.com/vegaprotocol/brand">
                 Brand assets
               </TextLink>

@@ -127,3 +127,16 @@ exports.sourceNodes = async ({
     actions.createNode(node);
   });
 };
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.asc$/i,
+          use: "raw-loader",
+        },
+      ],
+    },
+  });
+};

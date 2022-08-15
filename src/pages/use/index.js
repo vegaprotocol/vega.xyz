@@ -111,43 +111,45 @@ const UsePage = ({ data }) => {
       </div>
 
       <Container>
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10 py-16 md:mb-12"
-          ref={tabs}
-        >
-          {data.allTools.nodes.map((tool, idx) => (
-            <div
-              className={`${tool.category.toLowerCase()} max-w-[26rem] w-full mx-auto md:max-w-none`}
-              key={idx}
-            >
-              <ToolBox
-                icon={tool.icon.childImageSharp.gatsbyImageData}
-                title={t(tool.title, { ns: "tools" })}
-                link={tool.link}
-                author={tool.author}
-                text={t(tool.description, { ns: "tools" })}
-                category={tool.category}
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
-          <div>
-            <p className="title-m mb-3">Want to add something to this list?</p>
-            <p className="prose copy-s text-vega-mid-grey">
-              <a href="https://vega.xyz/discord/" target="_blank">
-                Chat to us on Discord
-              </a>{" "}
-              and <Link to="/develop">start building</Link>.
-            </p>
+        <div className="mb-16">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10 py-16 md:mb-12"
+            ref={tabs}
+          >
+            {data.allTools.nodes.map((tool, idx) => (
+              <div
+                className={`${tool.category.toLowerCase()} max-w-[26rem] w-full mx-auto md:max-w-none`}
+                key={idx}
+              >
+                <ToolBox
+                  icon={tool.icon.childImageSharp.gatsbyImageData}
+                  title={t(tool.title, { ns: "tools" })}
+                  link={tool.link}
+                  author={tool.author}
+                  text={t(tool.description, { ns: "tools" })}
+                  category={tool.category}
+                />
+              </div>
+            ))}
           </div>
-          <AddGraphic className="max-w-[16rem] w-full self-end" />
+
+          <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
+            <div>
+              <p className="title-m mb-3">
+                Want to add something to this list?
+              </p>
+              <p className="prose copy-s text-vega-mid-grey">
+                <a href="https://vega.xyz/discord/" target="_blank">
+                  Chat to us on Discord
+                </a>{" "}
+                and <Link to="/develop">start building</Link>.
+              </p>
+            </div>
+            <AddGraphic className="max-w-[16rem] w-full self-end" />
+          </div>
         </div>
       </Container>
-      <PageSection>
-        <Fairground />
-      </PageSection>
+      <Fairground />
     </Layout>
   );
 };
