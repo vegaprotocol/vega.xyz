@@ -88,7 +88,7 @@
     "link": "https://github.com/vegaprotocol/vegacapsule",
     "description": "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.",
     "category": "TOOL"
-  }
+  },
     {
     "collection": "tools",
     "icon": "../../images/tool-icons/vega-validators.png",
