@@ -89,4 +89,13 @@
     "description": "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.",
     "category": "TOOL"
   }
+    {
+    "collection": "tools",
+    "icon": "../../images/tool-icons/vega-validators.png",
+    "title": "Vega Validators and Delegators",
+    "author": "XPRV",
+    "link": "https://xprv-0.github.io/",
+    "description": "Validators performance scores in a given Epoch.",
+    "category": "TOOL"
+  }
 ]
