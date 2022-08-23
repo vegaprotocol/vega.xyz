@@ -94,6 +94,13 @@ const BugBountiesPage = ({ data }) => {
                     web-form as described below to have this situation resolved
                     as soon as possible.
                   </p>
+                  <h2>Scope</h2>
+                  <p>
+                    Vega bug bounties are limited to the Core, Datanode, and all front end dApps including the desktop and hosted wallets. 
+                  </p>
+                  <p>
+                    The vega.xyx website or any bug related to the vega.xyz email domain are out of scope. The program is meant for serious bugs that have significant impact on security. Bugs on the vega.xyz website would only qualify if they demonstrate how to modify website content to replace links in order to for instance; host malicious software on the downloads section of the site, link to different github code repositories, link to impersonator Twitter / Discord accounts from the Community section etc. In particular if any automated scanner reports that there is an issue with vega.xyz then this on its own does not merit a report.
+                  </p>
                   <h2>How to</h2>
                   <p>
                     Prevent a potential vulnerability being abused by others:
