@@ -33,7 +33,7 @@ const Contributor = ({ contributor }) => {
             className="text-[0.8125rem] hover:underline"
             href={`https://github.com/${contributor.login}`}
           >
-            <Trans>View on Github</Trans>
+            <Trans t={t}>View on Github</Trans>
             <LinkArrow className="inline-block ml-2" />
           </a>
         </div>
