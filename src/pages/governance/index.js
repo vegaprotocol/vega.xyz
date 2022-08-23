@@ -20,6 +20,7 @@ import Phase3 from "../../components/Svg/Governance/Process/Phase3";
 import Phase4 from "../../components/Svg/Governance/Process/Phase4";
 import Phase5 from "../../components/Svg/Governance/Process/Phase5";
 import Proposals from "../../components/Proposals";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const governanceProcess = [
   {
@@ -68,7 +69,7 @@ const governanceProcess = [
     text: "Token holders consider and vote for or against active proposals using the governance tools. Tokens used for voting are not locked or transferred - they can also be used for staking. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.",
     links: [
       {
-        title: "Vote for propoals",
+        title: "Vote for proposals",
         url: "https://token.vega.xyz/governance",
       },
     ],
@@ -83,29 +84,36 @@ const governanceProcess = [
 ];
 
 const GovernancePage = ({ data }) => {
+  const { t } = useTranslation("page.governance");
   return (
     <Layout>
       <Seo
-        title="Governance"
-        description="Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject."
+        title={t("Governance")}
+        description={t(
+          "Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject."
+        )}
       />
 
       <Container dataCy={"main"}>
         <div className="max-w-[61rem] mx-auto text-center pt-6 lg:pt-24">
           <h1>
-            <BoxTitle text="Governance" />
+            <BoxTitle text={t("Governance")} />
           </h1>
           <GlitchTitle
             level="2"
             color="red"
             className="title-m md:title-l lg:title-xl mb-4 md:mb-6 mt-4 text-center"
           >
-            Govern the network
+            <Trans t={t}>Govern the network</Trans>
           </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">
-             Decisions on the Vega network are on-chain, with tokenholders creating proposals that other tokenholders vote to approve or reject.
+            <Trans t={t}>
+              Decisions on the Vega network are on-chain, with tokenholders
+              creating proposals that other tokenholders vote to approve or
+              reject.
+            </Trans>
           </LeadingLine>
         </div>
       </Container>
@@ -118,28 +126,32 @@ const GovernancePage = ({ data }) => {
             className="text-center title-m md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto"
             id="governanceTools"
           >
-            Governance Tools
+            <Trans t={t}>Governance Tools</Trans>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-10 mt-10 md:mt-20 max-w-[75rem] mx-auto">
             <ToolBox
               icon={getImage(data.forumIcon)}
-              title="Forum"
+              title={t("Forum")}
               link="https://community.vega.xyz/c/governance/25"
-              text="Discuss governance, sense check and formalise governance proposals for the Vega network."
+              text={t(
+                "Discuss governance, sense check and formalise governance proposals for the Vega network."
+              )}
               type="Tool"
             />
             <ToolBox
               icon={getImage(data.tokenInterfaceIcon)}
-              title="Governance"
+              title={t("Governance")}
               link="https://token.vega.xyz/governance"
-              text="Review and vote on governance proposals."
+              text={t("Review and vote on governance proposals.")}
               type="DAPP"
             />
             <ToolBox
               icon={getImage(data.makeProposalIcon)}
-              title="Make a proposal"
+              title={t("Make a proposal")}
               link="https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol"
-              text="Read the docs to create and submit a proposal using Vega APIs."
+              text={t(
+                "Read the docs to create and submit a proposal using Vega APIs."
+              )}
               type="DOCS"
             />
           </div>
@@ -147,15 +159,18 @@ const GovernancePage = ({ data }) => {
 
         <PageSection>
           <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-none mx-auto">
-            Governance lifecycle
+            <Trans t={t}>Governance lifecycle</Trans>
           </h2>
 
-          <Accordion data={governanceProcess} />
+          <Accordion
+            data={governanceProcess}
+            transNamespace="page.governance"
+          />
         </PageSection>
 
         <PageSection>
           <h2 className="title-m md:title-l lg:title-xl text-center mb-12 px-1">
-            Get started voting
+            <Trans t={t}>Get started voting</Trans>
           </h2>
 
           <div className="max-w-[31.25rem] mx-auto relative top-[3px]">
@@ -164,11 +179,15 @@ const GovernancePage = ({ data }) => {
 
           <div className="border-2 border-current grid grid-cols-1 md:grid-cols-3 text-center">
             <div className="relative border-b-2 border-current md:border-b-0  md:border-r-2 p-12 md:p-6 lg:p-12">
-              <div className="title-s mb-6">Get $VEGA tokens</div>
+              <div className="title-s mb-6">
+                <Trans t={t}>Get $VEGA tokens</Trans>
+              </div>
               <div className="lg:prose-lg">
                 <p className="copy-xxs lg:copy-xs">
-                  And store in an Ethereum wallet. You can purchase VEGA using
-                  Ethereum (ETH) on decentralized exchanges.
+                  <Trans t={t}>
+                    And store in an Ethereum wallet. You can purchase VEGA using
+                    Ethereum (ETH) on decentralized exchanges.
+                  </Trans>
                 </p>
               </div>
               <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg] bg-white dark:bg-black p-3">
@@ -176,27 +195,40 @@ const GovernancePage = ({ data }) => {
               </div>
             </div>
             <div className="relative border-b-2 border-current md:border-b-0 md:border-r-2 p-12 md:p-6 lg:p-12">
-              <div className="title-s mb-6">Get a Vega Wallet</div>
+              <div className="title-s mb-6">
+                <Trans t={t}>Get a Vega Wallet</Trans>
+              </div>
               <div className="lg:prose-lg mb-6">
                 <p className="copy-xxs lg:copy-xs">
-                  A Vega wallet is used to access and sign transactions and
-                  connect to any dApp running on Vega.
+                  <Trans t={t}>
+                    A Vega wallet is used to access and sign transactions and
+                    connect to any dApp running on Vega.
+                  </Trans>
                 </p>
               </div>
-              <ButtonLink link="/wallet" text="Get a Vega Wallet" />
+              <ButtonLink link="/wallet" text={t("Get a Vega Wallet")} />
               <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg] bg-white dark:bg-black p-3">
                 <Arrow />
               </div>
             </div>
             <div className="relative border-current p-12 md:p-6 lg:p-12">
-              <div className="title-s mb-6">Vote on proposals</div>
+              <div className="title-s mb-6">
+                <Trans t={t}>Vote on proposals</Trans>
+              </div>
               <div className="mb-6">
-                <p className="copy-xxs lg:copy-xs">Use our governance tools.</p>
                 <p className="copy-xxs lg:copy-xs">
-                  Note, you'll need some ETH to pay any transaction fees.
+                  <Trans t={t}>Use our governance tools.</Trans>
+                </p>
+                <p className="copy-xxs lg:copy-xs">
+                  <Trans t={t}>
+                    Note, you'll need some ETH to pay any transaction fees.
+                  </Trans>
                 </p>
               </div>
-              <ButtonLink link="#governanceTools" text="Governance tools" />
+              <ButtonLink
+                link="#governanceTools"
+                text={t("Governance tools")}
+              />
             </div>
           </div>
         </PageSection>
@@ -212,7 +244,16 @@ const GovernancePage = ({ data }) => {
 export default GovernancePage;
 
 export const query = graphql`
-  query {
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     forumIcon: file(relativePath: { eq: "governance-icon-forum.png" }) {
       childImageSharp {
         gatsbyImageData(

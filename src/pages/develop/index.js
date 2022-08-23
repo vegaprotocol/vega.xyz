@@ -18,7 +18,7 @@ import BlogPosts from "../../components/BlogPosts";
 import Moshed from "../../video/moshed.mp4";
 import LadderIllustration from "../../components/Svg/LadderIllustration";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const ButtonBlock = () => {
   const { t } = useTranslation("page.develop");

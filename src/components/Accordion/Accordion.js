@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Arrow from "../Svg/Arrow";
 import AccordionSection from "./AccordionSection";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
-const Accordion = ({ data }) => {
+const Accordion = ({ data, transNamespace }) => {
   const [accordionSection, setAccordionSection] = useState(0);
 
   const setAccordionSectionFn = (idx) => {
@@ -10,6 +11,8 @@ const Accordion = ({ data }) => {
       ? setAccordionSection(null)
       : setAccordionSection(idx);
   };
+
+  const { t } = useTranslation(transNamespace);
 
   return (
     <div className="border-t border-current">
@@ -20,11 +23,11 @@ const Accordion = ({ data }) => {
             onClick={() => setAccordionSectionFn(idx)}
           >
             <div className="col-span-1 md:col-span-3 text-vega-mid-grey">
-              <div className="hidden md:block">{item.phase}</div>
+              <div className="hidden md:block">{t(item.phase)}</div>
               <div className="md:hidden">{idx + 1}</div>
             </div>
             <div className="col-span-11 md:col-span-9 flex justify-between items-center">
-              <div>{item.title}</div>
+              <div>{t(item.title)}</div>
               <Arrow
                 className={`shrink-0 ${
                   idx === accordionSection ? "rotate-180" : ""
@@ -37,6 +40,7 @@ const Accordion = ({ data }) => {
             links={item.links}
             image={item.image}
             open={idx === accordionSection}
+            transNamespace={transNamespace}
           />
         </div>
       ))}

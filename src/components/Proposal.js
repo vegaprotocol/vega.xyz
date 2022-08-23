@@ -2,6 +2,7 @@ import React from "react";
 import SquareBullet from "./Svg/SquareBullet";
 import Moment from "react-moment";
 import ButtonLinkSimple from "../components/ButtonLinkSimple";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const getProposalType = (proposal) => {
   const { change } = proposal.terms;
@@ -50,6 +51,7 @@ const getProposalName = (proposal) => {
 const Proposal = ({ data }) => {
   const dateFormat = "LLL";
   const dateParseFormat = "YYYY-MM-DD HH:mm:ss";
+  const { t } = useTranslation("component.proposal");
 
   const stateColour =
     stateColours[data.state.toString().toLowerCase().replace(/\s/g, "")];
@@ -73,7 +75,7 @@ const Proposal = ({ data }) => {
         </div>
         <div className="col-span-6 md:col-span-2">
           <span className="text-[0.9375rem] tracking-[0.01rem] text-vega-mid-grey uppercase">
-            Closed On:
+            <Trans t={t}>Closed on:</Trans>
           </span>
           <br />
           <Moment format={dateFormat} parse={dateParseFormat}>
@@ -82,7 +84,7 @@ const Proposal = ({ data }) => {
         </div>
         <div className="col-span-6 md:col-span-2">
           <span className="text-[0.9375rem] tracking-[0.01rem] text-vega-mid-grey uppercase">
-            Enacted On:
+            <Trans t={t}>Enacted on:</Trans>
           </span>
           <br />
           <Moment format={dateFormat} parse={dateParseFormat}>
@@ -92,7 +94,7 @@ const Proposal = ({ data }) => {
         <div className="col-span-6 md:text-right md:col-span-3 lg:col-span-2 pt-6 md:pt-0">
           <ButtonLinkSimple
             link={`${process.env.GATSBY_TOKEN_FRONTEND}governance/${data.id}`}
-            text="View"
+            text={t("View")}
           />
         </div>
       </div>

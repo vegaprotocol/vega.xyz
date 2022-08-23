@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import Proposal from "./Proposal";
 import ButtonLinkSimple from "../components/ButtonLinkSimple";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const allProposalsQuery = gql`
   query Proposals {
@@ -142,6 +143,7 @@ const proposalsQuery = gql`
 const Proposals = () => {
   //const [proposalState, setProposalState] = useState("Enacted");
   const [proposalState] = useState("Enacted");
+  const { t } = useTranslation("component.proposals");
 
   const { data: anyProposals } = useQuery(allProposalsQuery);
   const { data, loading, error } = useQuery(proposalsQuery, {
@@ -152,15 +154,12 @@ const Proposals = () => {
   //   setProposalState(state);
   // };
 
-  console.log(anyProposals);
-
   if (anyProposals && anyProposals.proposals) {
     return (
       <div className="grey-box p-6 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
         <div className="md:flex md:justify-between md:items-center">
           <h3 className="text-[2.125rem] leading-[0.85] lg:text-[3.375rem] mb-4 md:mb-8 uppercase">
-            Latest
-            <br /> Proposals
+            <Trans t={t}>Latest Proposals</Trans>
           </h3>
           <div className="mb-5 md:mb-0">
             {/* <Selector
@@ -172,13 +171,21 @@ const Proposals = () => {
           </div>
         </div>
 
-        {loading && <p className="copy-xxs md:copy-s">Loading...</p>}
+        {loading && (
+          <p className="copy-xxs md:copy-s">
+            <Trans>Loading...</Trans>
+          </p>
+        )}
         {error && (
-          <p className="copy-xxs md:copy-s">Error fetching proposals...</p>
+          <p className="copy-xxs md:copy-s">
+            <Trans t={t}>Error fetching proposals...</Trans>
+          </p>
         )}
 
         {data && !data.proposals && (
-          <p className="copy-xxs md:copy-s">No proposals found...</p>
+          <p className="copy-xxs md:copy-s">
+            <Trans t={t}>No proposals found...</Trans>
+          </p>
         )}
 
         <div className="mb-8">
@@ -190,7 +197,7 @@ const Proposals = () => {
         </div>
 
         <ButtonLinkSimple
-          text="Explore all proposals"
+          text={t("Explore all proposals")}
           className="dark:bg-vega-box-grey"
           link={`${process.env.GATSBY_TOKEN_FRONTEND}governance`}
         />
