@@ -131,10 +131,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans
-                t={t}
-                i18nKey="Vega's front running protection in the papers"
-              >
+              <Trans t={t} i18nKey="i18nKey=[vegasFrontRunning]">
                 Vega's front running protection in the papers
                 <TextLink
                   to="https://vega.xyz/papers/fairness.pdf"
