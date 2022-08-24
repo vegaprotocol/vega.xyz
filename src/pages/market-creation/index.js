@@ -119,7 +119,8 @@ const MarketCreationPage = () => {
         </div>
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">
-             Create a market on any underlying, and attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers.
+            Create a market on any underlying, and attract liquidity with Vega's
+            built-in incentive mechanism that matches traders and market makers.
           </LeadingLine>
         </div>
       </Container>
@@ -156,7 +157,7 @@ const MarketCreationPage = () => {
           </div>
         </PageSection>
       </Container>
-      <MarketCreationFooter className="text-center translate-y-24" />
+      <MarketCreationFooter className="text-center" />
     </Layout>
   );
 };
