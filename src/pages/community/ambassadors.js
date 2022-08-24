@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
@@ -9,6 +10,7 @@ import ButtonLink from "../../components/ButtonLink";
 import AmbassadorsHero from "../../components/Svg/AmbassadorsHero";
 import IconAmbassador1 from "../../images/icon-ambassador-1.png";
 import IconAmbassador2 from "../../images/icon-ambassador-2.png";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Clan = ({ icon, title, text }) => {
   return (
@@ -34,11 +36,15 @@ const benefits = [
 ];
 
 const Ambassadors = () => {
+  const { t } = useTranslation("page.community.ambassadors");
+
   return (
     <Layout>
       <Seo
-        title="Be a Vega+ Ambassador"
-        description="Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community."
+        title={t("Be a Vega+ Ambassador")}
+        description={t(
+          "Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community."
+        )}
       />
       <Container>
         <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[80rem] mx-auto text-center md:mb-12 pt-6 lg:pt-16">
@@ -46,11 +52,13 @@ const Ambassadors = () => {
             level={1}
             className="mb-4 title-m md:title-xxl lg:title-xxxl md:mb-6"
           >
-            Be a Vega+ ambassador
+            <Trans t={t}>Be a Vega+ Ambassador</Trans>
           </GlitchTitle>
           <LeadingLine className="text-center text-current mx-auto max-w-[35rem]">
-            Seeking emissaries of the future to co-create the leading crypto
-            derivatives layer.
+            <Trans t={t}>
+              Seeking emissaries of the future to co-create the leading crypto
+              derivatives layer.
+            </Trans>
           </LeadingLine>
         </div>
       </Container>
@@ -65,43 +73,55 @@ const Ambassadors = () => {
         <div className="md:grid md:grid-cols-12 md:gap-x-12 lg:gap-x-6">
           <div className="md:col-span-8 lg:col-span-7">
             <div className="mb-12 md:mb-20">
-              <h2 className="title-s md:title-l mb-4">Overview</h2>
+              <h2 className="title-s md:title-l mb-4">
+                <Trans t={t}>Overview</Trans>
+              </h2>
               <LeadingLine className="text-current">
-                Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to
-                be a driving force of the Vega community.
+                <Trans t={t}>
+                  Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you
+                  to be a driving force of the Vega community.
+                </Trans>
               </LeadingLine>
               <p className="copy-xs">
-                You'll already be passionate about blockchain technologies, with
-                a willingness to learn the ins and outs of Vega. A penchant for
-                original thinking. And an appetite to share, as you drive
-                conversations and engagement in pursuit of vibrancy within the
-                community.
+                <Trans t={t}>
+                  You'll already be passionate about blockchain technologies,
+                  with a willingness to learn the ins and outs of Vega. A
+                  penchant for original thinking. And an appetite to share, as
+                  you drive conversations and engagement in pursuit of vibrancy
+                  within the community.
+                </Trans>
               </p>
               <p className="copy-xs">
-                Apply now to bring fresh proposals to the table and participate
-                in the community as a key contributor.
+                <Trans t={t}>
+                  Apply now to bring fresh proposals to the table and
+                  participate in the community as a key contributor.
+                </Trans>
               </p>
 
               <ButtonLink
                 link="https://form.typeform.com/to/lPl6aiNh"
-                text="Apply now"
+                text={t("Apply now")}
                 className="md:hidden mt-3"
               />
             </div>
 
             <div className="mb-12 md:mb-20">
               <h2 className="title-s md:title-l mb-4 max-w-[20rem] md:max-w-none">
-                Which Vega+ Team would you rally?
+                <Trans t={t}>Which Vega+ Team would you rally?</Trans>
               </h2>
               <div className="mt-6 md:mt-12">
                 <Clan
-                  title="Content Collective (Non-Technical)"
-                  text="(Tweets, Translations, Editorials, Infographics, Bounties)"
+                  title={t("Content Collective (Non-Technical)")}
+                  text={t(
+                    "(Tweets, Translations, Editorials, Infographics, Bounties)"
+                  )}
                   icon={IconAmbassador1}
                 />
                 <Clan
-                  title="Builders Club (Technical)"
-                  text="(Vega Capsule, Documentation, Hackathon Support, Coding)"
+                  title={t("Builders Club (Technical)")}
+                  text={t(
+                    "(Vega Capsule, Documentation, Hackathon Support, Coding)"
+                  )}
                   icon={IconAmbassador2}
                 />
                 {/* <Clan
@@ -114,12 +134,14 @@ const Ambassadors = () => {
 
             <div className="mb-12 md:mb-20">
               <h2 className="title-s md:title-l mb-4 max-w-[20rem] md:max-w-none">
-                Benefits of being an ambassador
+                <Trans t={t}>Benefits of being an ambassador</Trans>
               </h2>
               <p className="copy-xs md:copy-s text-current">
-                Vega+ Ambassadors are a valued extension of the team, and work
-                closely with core Vega members. Here's a taste of what you can
-                look forward to:
+                <Trans t={t}>
+                  Vega+ Ambassadors are a valued extension of the team, and work
+                  closely with core Vega members. Here's a taste of what you can
+                  look forward to:
+                </Trans>
               </p>
 
               <div className="border-t border-current mt-8 md:mt-12 mb-4 md:mb-0">
@@ -133,7 +155,7 @@ const Ambassadors = () => {
                         {idx + 1}
                       </div>
                       <div className="copy-xs md:copy-s text-current !mb-0">
-                        {benefit}
+                        {t(benefit)}
                       </div>
                     </div>
                   );
@@ -148,30 +170,46 @@ const Ambassadors = () => {
             </div>
 
             <div className="mb-12 md:mb-20">
-              <h2 className="title-s md:title-l mb-4">Expectations</h2>
+              <h2 className="title-s md:title-l mb-4">
+                <Trans t={t}>Expectations</Trans>
+              </h2>
               <p className="copy-xs md:copy-s text-current mb-8">
-                There are no exact requirements to being an ambassador; the
-                extent of what you'll work on will depend on your team and role.
-                Nevertheless, these are the non-negotiables:
+                <Trans t={t}>
+                  There are no exact requirements to being an ambassador; the
+                  extent of what you'll work on will depend on your team and
+                  role. Nevertheless, these are the non-negotiables:
+                </Trans>
               </p>
               <div className="prose-xl dark:text-white">
                 <ul className="list-disc copy-xs md:copy-s mt-8 md:mt-12">
-                  <li>Agree with the code of conduct; keep to the rules</li>
                   <li>
-                    Attend most meetings with other ambassadors, engage with
-                    your team
+                    <Trans t={t}>
+                      Agree with the code of conduct; keep to the rules
+                    </Trans>
                   </li>
                   <li>
-                    Learn with the core team: attend office hours, ask
-                    questions, grow
+                    <Trans t={t}>
+                      Attend most meetings with other ambassadors, engage with
+                      your team
+                    </Trans>
                   </li>
                   <li>
-                    Let us know when things aren't working for you, if you need
-                    a break, that's okay!
+                    <Trans t={t}>
+                      Learn with the core team: attend office hours, ask
+                      questions, grow
+                    </Trans>
                   </li>
                   <li>
-                    Be active on Discord - most communication will take place
-                    there
+                    <Trans t={t}>
+                      Let us know when things aren't working for you, if you
+                      need a break, that's okay!
+                    </Trans>
+                  </li>
+                  <li>
+                    <Trans t={t}>
+                      Be active on Discord - most communication will take place
+                      there
+                    </Trans>
                   </li>
                 </ul>
               </div>
@@ -182,14 +220,18 @@ const Ambassadors = () => {
 
           <div className="hidden md:block md:col-span-4 lg:col-span-4 mb-20">
             <div className="sticky top-6">
-              <div className="title-s mb-3">Interested in joining?</div>
+              <div className="title-s mb-3">
+                <Trans t={t}>Interested in joining?</Trans>
+              </div>
               <p className="copy-xs text-current">
-                Become one with Vega. Learn, create, and help grow Vega to be a
-                leading derivatives Layer 1 in the crypto space
+                <Trans t={t}>
+                  Become one with Vega. Learn, create, and help grow Vega to be
+                  a leading derivatives Layer 1 in the crypto space
+                </Trans>
               </p>
               <BoxLinkSimple
                 link="https://vegaprotocol.typeform.com/ambassadorappQ2"
-                text="Apply <br/>now"
+                text={t("Apply now")}
                 className="mt-4 min-w-[15rem] text-left hidden md:inline-block"
               />
             </div>
@@ -203,34 +245,46 @@ const Ambassadors = () => {
               level="2"
               className="mb-4 title-m md:title-l lg:title-xxl md:max-w-[35rem] mx-auto"
             >
-              Join the community
+              <Trans t={t}>Join the community</Trans>
             </GlitchTitle>
           </div>
 
           <div className="max-w-[50rem] grid gap-4 grid-cols-2 mt-12 mx-auto md:grid-cols-3">
-            <BoxLinkSimple text="Discord" link="https://vega.xyz/discord" />
-            <BoxLinkSimple text="Telegram" link="https://t.me/vegacommunity/" />
+            <BoxLinkSimple
+              text={t("Discord")}
+              link="https://vega.xyz/discord"
+            />
+            <BoxLinkSimple
+              text={t("Telegram")}
+              link="https://t.me/vegacommunity/"
+            />
 
             <BoxLinkSimple
-              text="Github"
+              text={t("Github")}
               link="https://github.com/vegaprotocol/"
             />
-            <BoxLinkSimple text="Mainnet Docs" link="https://docs.vega.xyz/" />
             <BoxLinkSimple
-              text="Fairground Docs"
+              text={t("Mainnet Docs")}
+              link="https://docs.vega.xyz/"
+            />
+            <BoxLinkSimple
+              text={t("Fairground Docs")}
               link="https://docs.fairground.vega.xyz/"
             />
             <BoxLinkSimple
-              text="Twitter"
+              text={t("Twitter")}
               link="https://twitter.com/vegaprotocol"
             />
-            <BoxLinkSimple text="Forum" link="https://community.vega.xyz/" />
             <BoxLinkSimple
-              text="YouTube"
+              text={t("Forum")}
+              link="https://community.vega.xyz/"
+            />
+            <BoxLinkSimple
+              text={t("YouTube")}
               link="https://www.youtube.com/vegaprotocol/"
             />
             <BoxLinkSimple
-              text="Twitch"
+              text={t("Twitch")}
               link="https://www.twitch.tv/vegaprotocol/"
             />
           </div>
@@ -241,3 +295,24 @@ const Ambassadors = () => {
 };
 
 export default Ambassadors;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: {
+        ns: {
+          in: ["common", "component.navigation", "page.community.ambassadors"]
+        }
+        language: { eq: $language }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
