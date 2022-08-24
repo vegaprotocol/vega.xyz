@@ -1,6 +1,7 @@
 [build]
   publish = "public"
-  command = "npm run build"
+  command = "yarn run build"
+  functions = "./functions"
 
 [build.environment]
   NODE_VERSION = "16.15.1"
@@ -13,5 +14,8 @@
   GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
   GATSBY_VEGA_API = "https://lb.testnet.vega.xyz/query"
 
+[functions."send-bug-report"]
+  included_files = ["vega-public-key.asc"]
+  
 [[plugins]]
   package = "@netlify/plugin-sitemap"

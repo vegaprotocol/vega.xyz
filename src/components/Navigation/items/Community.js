@@ -74,6 +74,10 @@ const Community = () => {
           />
           <NavigationItem text={t("Get Swag")} link="/community/swag" />
           <NavigationItem
+            text={t("Report a security issue")}
+            link="/bug-bounties"
+          />
+          <NavigationItem
             text={t("Experiment on Fairground Testnet")}
             link="https://fairground.wtf"
           />

@@ -127,7 +127,7 @@ const Footer = () => {
                     to="/community/incentives-bounties"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    <Trans t={t}>Incetives + bounties</Trans>
+                    <Trans t={t}>Incentives + bounties</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -319,6 +319,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex items-center gap-x-5 gap-y-1 flex-wrap">
+              <TextLink to="/bug-bounties">Report a security issue</TextLink>
               <TextLink to="https://github.com/vegaprotocol/brand">
                 <Trans t={t}>Brand assets</Trans>
               </TextLink>

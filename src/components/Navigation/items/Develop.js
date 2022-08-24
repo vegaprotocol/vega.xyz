@@ -48,6 +48,10 @@ const Develop = () => {
             text={t("Incentives and bounties")}
             link="/community/incentives-bounties"
           />
+          <NavigationItem
+            text="Report a security issue"
+            link="/bug-bounties"
+          />
         </NavigationList>
       </div>
     </div>

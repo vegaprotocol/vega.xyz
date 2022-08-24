@@ -11,7 +11,12 @@ const Events = ({ data }) => {
   const { t } = useTranslation("page.community");
   return (
     <Layout>
-      <Seo title={t("Upcoming events and meetups")} description={t("")} />
+      <Seo
+        title={t("Events")}
+        description={t(
+          "Upcoming community events, meet-ups, research office hours and community calls."
+        )}
+      />
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16 mb-14">
           <BoxTitle text={t("Community")} />

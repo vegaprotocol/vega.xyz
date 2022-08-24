@@ -11,7 +11,7 @@ const Events = ({ data }) => {
     <Layout>
       <Seo
         title="Swag"
-        description="Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
+        description="Find out how to get your hands on Vega swag"
       />
       <Container dataCy={"main"}>
         <div className="grid grid-cols-12 pt-16 mb-14">
