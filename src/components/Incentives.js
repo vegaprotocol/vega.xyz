@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Incentive from "./Incentive";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Incentives = () => {
+  const { t } = useTranslation();
   const pageSize = 10;
   const [incentives, setIncentives] = useState(null);
   const [list, setList] = useState(null);
@@ -107,7 +109,7 @@ const Incentives = () => {
               inline-block"
             >
               <div className="leading-1 text-[0.9375rem] tracking-[0.01rem] transition-[top] relative z-10 group-hover:-top-1.5 top-0 inline-block px-8 py-3 bg-vega-light-grey dark:bg-vega-box-grey border border-black dark:border-white uppercase">
-                Load more...
+                <Trans t={t}>Load more...</Trans>
               </div>
               <div className="absolute inset-0 border bg-white dark:bg-black border-black dark:border-white"></div>
             </button>

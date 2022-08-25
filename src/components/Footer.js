@@ -6,8 +6,10 @@ import IconDiscord from "../components/Svg/IconDiscord";
 import IconGithub from "../components/Svg/IconGithub";
 import IconTelegram from "../components/Svg/IconTelegram";
 import IconTwitter from "../components/Svg/IconTwitter";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation("component.navigation");
   return (
     <footer>
       <div className="border-y border-current pt-8 pb-12">
@@ -16,12 +18,12 @@ const Footer = () => {
             <div>
               <div className="uppercase text-[0.9375rem] mb-3">
                 <SquareBullet size="11" />
-                Use
+                <Trans t={t}>Use</Trans>
               </div>
               <ul>
                 <li>
                   <TextLink to="/use/" className="py-1.5 block leading-[1.3]">
-                    Use the network
+                    <Trans t={t}>Use the network</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -29,7 +31,7 @@ const Footer = () => {
                     to="/wallet/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Vega Wallet
+                    <Trans t={t}>Vega Wallet</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -37,7 +39,7 @@ const Footer = () => {
                     to="https://console.fairground.wtf/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Trade
+                    <Trans t={t}>Trade</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -45,7 +47,7 @@ const Footer = () => {
                     to="https://token.vega.xyz/governance"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Govern
+                    <Trans t={t}>Govern</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -53,7 +55,7 @@ const Footer = () => {
                     to="https://token.vega.xyz/staking"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Stake
+                    <Trans t={t}>Stake</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -61,7 +63,7 @@ const Footer = () => {
                     to="https://explorer.vega.xyz/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Block Explorer
+                    <Trans t={t}>Block Explorer</Trans>
                   </TextLink>
                 </li>
               </ul>
@@ -69,7 +71,7 @@ const Footer = () => {
             <div>
               <div className="uppercase text-[0.9375rem] mb-3">
                 <SquareBullet size="11" />
-                Community
+                <Trans t={t}>Community</Trans>
               </div>
               <ul>
                 <li>
@@ -77,7 +79,7 @@ const Footer = () => {
                     to="/community/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Vega Community
+                    <Trans t={t}>Vega Community</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -85,7 +87,7 @@ const Footer = () => {
                     to="/community/events"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Events + meetups
+                    <Trans t={t}>Events + meetups</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -93,7 +95,7 @@ const Footer = () => {
                     to="/community/contributors"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Contributors
+                    <Trans t={t}>Contributors</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -101,7 +103,7 @@ const Footer = () => {
                     to="https://vega.xyz/discord"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Discord
+                    <Trans t={t}>Discord</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -109,7 +111,7 @@ const Footer = () => {
                     to="/community/ambassadors"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Ambassadors
+                    <Trans t={t}>Ambassadors</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -117,7 +119,7 @@ const Footer = () => {
                     to="https://vega.xyz/discord"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Builders club
+                    <Trans t={t}>Builders club</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -125,7 +127,7 @@ const Footer = () => {
                     to="/community/incentives-bounties"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Incentives + bounties
+                    <Trans t={t}>Incentives + bounties</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -133,7 +135,7 @@ const Footer = () => {
                     to="/community/swag"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Swag
+                    <Trans t={t}>Swag</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -141,7 +143,7 @@ const Footer = () => {
                     to="https://fairground.wtf/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Fairground Testnet
+                    <Trans t={t}>Fairground Testnet</Trans>
                   </TextLink>
                 </li>
               </ul>
@@ -149,7 +151,7 @@ const Footer = () => {
             <div>
               <div className="uppercase text-[0.9375rem] mb-3">
                 <SquareBullet size="11" />
-                Governance
+                <Trans t={t}>Governance</Trans>
               </div>
               <ul>
                 <li>
@@ -157,7 +159,7 @@ const Footer = () => {
                     to="/governance/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Vega Governance
+                    <Trans t={t}>Vega Governance</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -165,7 +167,7 @@ const Footer = () => {
                     to="/market-creation"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Market creation
+                    <Trans t={t}>Market creation</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -173,7 +175,7 @@ const Footer = () => {
                     to="https://community.vega.xyz/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Forum
+                    <Trans t={t}>Forum</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -181,7 +183,7 @@ const Footer = () => {
                     to="https://token.vega.xyz/governance"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Governance dApp
+                    <Trans t={t}>Governance dApp</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -189,7 +191,7 @@ const Footer = () => {
                     to="https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Governance docs
+                    <Trans t={t}>Governance docs</Trans>
                   </TextLink>
                 </li>
               </ul>
@@ -197,7 +199,7 @@ const Footer = () => {
             <div>
               <div className="uppercase text-[0.9375rem] mb-3">
                 <SquareBullet size="11" />
-                Develop
+                <Trans t={t}>Develop</Trans>
               </div>
               <ul>
                 <li>
@@ -205,7 +207,7 @@ const Footer = () => {
                     to="/develop/"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Get started
+                    <Trans t={t}>Get started</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -213,7 +215,7 @@ const Footer = () => {
                     to="https://github.com/vegaprotocol"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Github
+                    <Trans t={t}>Github</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -221,7 +223,7 @@ const Footer = () => {
                     to="https://docs.vega.xyz"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Documentation
+                    <Trans t={t}>Documentation</Trans>
                   </TextLink>
                 </li>
               </ul>
@@ -229,7 +231,7 @@ const Footer = () => {
             <div>
               <div className="uppercase text-[0.9375rem] mb-3">
                 <SquareBullet size="11" />
-                Learn
+                <Trans t={t}>Learn</Trans>
               </div>
               <ul>
                 <li>
@@ -237,12 +239,12 @@ const Footer = () => {
                     to="/key-concepts"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Key concepts
+                    <Trans t={t}>Key concepts</Trans>
                   </TextLink>
                 </li>
                 <li>
                   <TextLink to="/papers" className="py-1.5 block leading-[1.3]">
-                    Vega papers
+                    <Trans t={t}>Vega papers</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -250,7 +252,7 @@ const Footer = () => {
                     to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Whitepaper
+                    <Trans t={t}>Whitepaper</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -258,12 +260,12 @@ const Footer = () => {
                     to="https://vega.xyz/papers/vega-technical-overview.pdf"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Technical overview
+                    <Trans t={t}>Technical overview</Trans>
                   </TextLink>
                 </li>
                 <li>
                   <TextLink to="/talks" className="py-1.5 block leading-[1.3]">
-                    Talks
+                    <Trans t={t}>Talks</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -271,7 +273,7 @@ const Footer = () => {
                     to="https://blog.vega.xyz"
                     className="py-1.5 block leading-[1.3]"
                   >
-                    Blog
+                    <Trans t={t}>Blog</Trans>
                   </TextLink>
                 </li>
               </ul>
@@ -285,7 +287,7 @@ const Footer = () => {
             <div className="flex items-center gap-x-4">
               <div className="uppercase text-[0.9375rem] mr-3">
                 <SquareBullet size="11" />
-                Connect
+                <Trans t={t}>Connect</Trans>
               </div>
               <a
                 href="https://twitter.com/vegaprotocol"
@@ -317,14 +319,18 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex items-center gap-x-5 gap-y-1 flex-wrap">
-              <TextLink to="/bug-bounties">Report a security issue</TextLink>
+              <TextLink to="/bug-bounties">
+                <Trans t={t}>Report a security issue</Trans>
+              </TextLink>
               <TextLink to="https://github.com/vegaprotocol/brand">
-                Brand assets
+                <Trans t={t}>Brand assets</Trans>
               </TextLink>
               <TextLink to="https://github.com/vegaprotocol/">
-                Contribute to Vega
+                <Trans t={t}>Contribute to Vega</Trans>
               </TextLink>
-              <TextLink to="/privacy/">Privacy & Cookie Policy</TextLink>
+              <TextLink to="/privacy/">
+                <Trans t={t}>Privacy & Cookie Policy</Trans>
+              </TextLink>
             </div>
           </div>
         </Container>

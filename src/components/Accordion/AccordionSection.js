@@ -1,8 +1,11 @@
 import React from "react";
 import TextLink from "../TextLink";
 import Markdown from "markdown-to-jsx";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
-const AccordionSection = ({ text, links, image, open }) => {
+const AccordionSection = ({ text, links, image, open, transNamespace }) => {
+  const { t } = useTranslation(transNamespace);
+
   return (
     <div className={`${open ? "" : "h-0"} overflow-hidden`}>
       <div className="grid grid-cols-12 pt-4">
@@ -10,7 +13,7 @@ const AccordionSection = ({ text, links, image, open }) => {
         <div className="col-span-12 md:col-span-9 flex flex-col md:flex-row md:gap-x-12">
           <div className="flex-shrink order-2 md:order-1">
             <div className="copy-xs mb-6 prose dark:prose-invert max-w-none prose-p:mt-0">
-              <Markdown>{text}</Markdown>
+              <Markdown>{t(text)}</Markdown>
             </div>
 
             {links &&
@@ -21,7 +24,7 @@ const AccordionSection = ({ text, links, image, open }) => {
                   className="text-vega-mid-grey block md:inline-block md:mr-8 copy-xs"
                   underline={true}
                 >
-                  {link.title}
+                  {t(link.title)}
                 </TextLink>
               ))}
           </div>

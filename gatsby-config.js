@@ -2,6 +2,25 @@ require(`dotenv`).config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const languages = [
+  {
+    code: "en",
+    localName: "English",
+  },
+  // {
+  //   code: "es",
+  //   localName: "Español",
+  // },
+  // {
+  //   code: "cn",
+  //   localName: "中国人",
+  // },
+  // {
+  //   code: "ru",
+  //   localName: "Русский",
+  // },
+];
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://vega.xyz`,
@@ -10,6 +29,7 @@ module.exports = {
     description: `Discover Web3's native derivatives trading platform that is helping DeFi mature.`,
     image: `/images/vega-og.jpg`,
     twitter: `@vegaprotocol`,
+    languages: languages,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -73,6 +93,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `roadmap`,
+        path: `${__dirname}/src/content/roadmap`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `talks`,
         path: `${__dirname}/src/content/talks`,
       },
@@ -106,17 +133,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`en`],
+        localeJsonSourceName: `locale`,
+        languages: languages.map((lng) => lng.code),
         defaultLanguage: `en`,
-        // if you are using Helmet, you must include siteUrl, and make sure you add http:https
         siteUrl: `https://vega.xyz`,
-        // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
         trailingSlash: "always",
-        // you can pass any i18next options
         i18nextOptions: {
           interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
+            escapeValue: false,
           },
           keySeparator: false,
           nsSeparator: false,

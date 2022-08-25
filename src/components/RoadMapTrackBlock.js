@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const RoadMapTrackBlock = ({ title1, title2, active }) => {
   return (
-    <div className="text-center relative z-20">
+    <div className="text-center relative z-20 h-full ">
       {active && (
         <div className="absolute -top-[29px] left-1/2 -translate-x-1/2 z-10">
           <motion.div
@@ -22,9 +22,9 @@ const RoadMapTrackBlock = ({ title1, title2, active }) => {
           active ? "invisible" : ""
         }`}
       />
-      <div className="p-1">
+      <div className="p-1 max-w-[12rem]">
         <div
-          className="title-xs !font-not-glitched text-black dark:text-vega-mid-grey"
+          className="title-xs !font-not-glitched text-black dark:text-vega-mid-grey mb-0.5"
           dangerouslySetInnerHTML={{
             __html: title1,
           }}

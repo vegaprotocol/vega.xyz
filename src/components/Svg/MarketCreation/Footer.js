@@ -1,5 +1,4 @@
 import React from "react";
-import VideoBackground from "../VideoBackground";
 
 const Footer = (props) => {
   return (

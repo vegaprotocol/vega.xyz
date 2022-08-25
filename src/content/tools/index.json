@@ -14,7 +14,7 @@
     "title": "Console",
     "author": "Vega",
     "link": "https://console.fairground.wtf/",
-    "description": "A dapp for trading on the Vega network (Testnet).",
+    "description": "A dApp for trading on the Vega network (Testnet).",
     "category": "DAPP"
   },
   {
@@ -89,7 +89,7 @@
     "description": "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.",
     "category": "TOOL"
   },
-    {
+  {
     "collection": "tools",
     "icon": "../../images/tool-icons/vega-validators.png",
     "title": "Vega Validators and Delegators",

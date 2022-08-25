@@ -1,7 +1,9 @@
 import React from "react";
 import SquareBullet from "./Svg/SquareBullet";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const BlogPost = ({ post }) => {
+  const { t } = useTranslation("component.blog-posts");
   return (
     <div className="flex flex-col justify-between pb-3 border-b border-current">
       <div>
@@ -32,7 +34,9 @@ const BlogPost = ({ post }) => {
         &nbsp;&nbsp;&nbsp;
         <SquareBullet size="5" />
         <span className="text-vega-mid-grey">
-          {Math.ceil(post.node.virtuals.readingTime)} minute read
+          {t("x minute read", {
+            minutes: Math.ceil(post.node.virtuals.readingTime),
+          })}
         </span>
       </div>
     </div>

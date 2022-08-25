@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
@@ -18,6 +18,7 @@ import IconPlatformWindows from "../../components/Svg/IconPlatformWindows";
 import IconPlatformLinux from "../../components/Svg/IconPlatformLinux";
 import WalletVideoWebM from "../../video/wallet-hero.webm";
 import WalletVideoMP4 from "../../video/wallet-hero.mp4";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const platformIcons = {
   mac: IconPlatformMac,
@@ -118,6 +119,7 @@ const binaries = [
 ];
 
 const WalletPage = () => {
+  const { t } = useTranslation("page.wallet");
   const [downloadDropdown, setDownloadDropdown] = useState(false);
   const [selectedBinary, setSelectedBinary] = useState(binaries[0]);
   const dropDownMenuButton = useRef(null);
@@ -142,19 +144,23 @@ const WalletPage = () => {
   return (
     <Layout>
       <Seo
-        title="Get the Vega Wallet"
-        description="Download the Vega Wallet desktop app, to help you manage multiple wallets, multiple keys — and get access to the Vega network."
+        title={t("Get the Vega Wallet")}
+        description={t(
+          "Download the Vega Wallet desktop app, to help you manage multiple wallets, multiple keys — and get access to the Vega network."
+        )}
       />
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16 max-w-[38rem] md:max-w-none mx-auto">
           <div className="mx-auto max-w-[28rem] md:max-w-[38rem] lg:max-w-[42rem] text-center">
             <GlitchTitle level="1" className="my-4 title-l md:title-xxl">
-              Get the Vega Wallet
+              <Trans t={t}>Get the Vega Wallet</Trans>
             </GlitchTitle>
           </div>
           <LeadingLine className="text-current text-center max-w-[56rem] mx-auto">
-            Download the Vega Wallet desktop app, to help you manage multiple
-            wallets, multiple keys — and get access to the Vega network.
+            <Trans t={t}>
+              Download the Vega Wallet desktop app, to help you manage multiple
+              wallets, multiple keys — and get access to the Vega network.
+            </Trans>
           </LeadingLine>
 
           <div
@@ -172,7 +178,7 @@ const WalletPage = () => {
                 </div>
                 <DropdownArrow />
                 {downloadDropdown && (
-                  <div className="absolute z-20 top-[2.9375rem] left-0 right-0 border border-t-0 border-current bg-white dark:bg-black">
+                  <div className="absolute z-20 top-[100%] left-0 right-0 border border-t-0 border-current bg-white dark:bg-black">
                     <ul className="py-3 px-2">
                       {binaries.map((binary, idx) => {
                         return (
@@ -210,7 +216,7 @@ const WalletPage = () => {
                   rel="noreferrer"
                   onClick={() => showDownloadMenu(false)}
                 >
-                  Get Desktop App
+                  <Trans t={t}>Get desktop app</Trans>
                 </a>
               </div>
             </div>
@@ -247,7 +253,9 @@ const WalletPage = () => {
       <Container>
         <PageSection>
           <div className="text-center">
-            <h2 className="title-m">With the wallet you can:</h2>
+            <h2 className="title-m">
+              <Trans t={t}>With the wallet you can:</Trans>
+            </h2>
           </div>
           <div className="grid grid-cols-3 lg:grid-cols-6 gap-8 text-center text-[1.125rem] leading-snug pt-12 pb-12 md:pb-6">
             <div>
@@ -279,7 +287,9 @@ const WalletPage = () => {
                   <path d="M2 18.08L2 2H0L0 18.08H2Z" />
                 </g>
               </svg>
-              <div className="mt-4">Import an existing Vega wallet</div>
+              <div className="mt-4">
+                <Trans t={t}>Import an existing Vega wallet</Trans>
+              </div>
             </div>
             <div>
               <svg
@@ -301,7 +311,9 @@ const WalletPage = () => {
                   <path d="M36 1.99989V47.1399H38V1.99989H36Z" />
                 </g>
               </svg>
-              <div className="mt-4">Create a new wallet</div>
+              <div className="mt-4">
+                <Trans t={t}>Create a new wallet</Trans>
+              </div>
             </div>
             <div>
               <svg
@@ -328,7 +340,9 @@ const WalletPage = () => {
                   <path d="M36 26.3399V47.1399H38V26.3399H36Z" />
                 </g>
               </svg>
-              <div className="mt-4">Manage multiple wallets and keys</div>
+              <div className="mt-4">
+                <Trans t={t}>Manage multiple wallets and keys</Trans>
+              </div>
             </div>
             <div>
               <svg
@@ -355,7 +369,9 @@ const WalletPage = () => {
                   <path d="M20 40.1001H22V38.1001H20V40.1001Z" />
                 </g>
               </svg>
-              <div className="mt-4">Connect to networks</div>
+              <div className="mt-4">
+                <Trans t={t}>Connect to networks</Trans>
+              </div>
             </div>
             <div>
               <svg
@@ -376,7 +392,9 @@ const WalletPage = () => {
                   <path d="M31.9704 21.9699C30.9604 22.0899 29.6504 22.4299 28.5704 22.3999C28.5704 22.2799 28.5304 22.1699 28.4904 22.0099C28.3404 21.5499 27.8304 21.1599 27.2904 21.3499C26.9804 21.4699 24.7404 22.3899 24.5404 22.0499C24.3104 21.6199 23.6504 21.3899 23.2204 21.6999C22.0604 22.5099 20.9404 22.9399 19.6204 23.0899C19.7404 22.8599 19.8504 22.5899 20.0104 22.3499C20.4404 21.6899 19.7004 20.6099 18.9304 20.9199C17.1104 21.6199 15.3704 22.4299 13.6704 23.3999C12.5904 24.0199 13.5504 25.6799 14.6404 25.0599C15.5704 24.5599 16.5004 24.0499 17.4604 23.6299C17.4604 23.7099 17.4204 23.7499 17.4204 23.8199C17.3404 24.4399 17.6504 25.0199 18.3504 25.0599C20.2504 25.1399 21.9904 24.7099 23.5704 23.7799C24.4604 24.3599 25.7004 23.9699 26.8204 23.5899C26.9404 23.8999 27.1704 24.1699 27.4804 24.2499C28.9104 24.4799 30.5404 24.0999 31.9704 23.9399C33.1704 23.7899 33.2104 21.8499 31.9704 21.9699Z" />
                 </g>
               </svg>
-              <div className="mt-4">Sign transactions</div>
+              <div className="mt-4">
+                <Trans t={t}>Sign transactions</Trans>
+              </div>
             </div>
             <div>
               <svg
@@ -406,13 +424,17 @@ const WalletPage = () => {
                 </g>
               </svg>
               <div className="mt-4">
-                Access Vega apps, such as the token site and Console
+                <Trans t={t}>
+                  Access Vega apps, such as the token site and Console
+                </Trans>
               </div>
             </div>
           </div>
           <p className="text-center copy-xs">
-            It's also the starting point for trading, staking tokens, and voting
-            on community proposals.
+            <Trans t={t}>
+              It's also the starting point for trading, staking tokens, and
+              voting on community proposals.
+            </Trans>
           </p>
         </PageSection>
 
@@ -421,23 +443,27 @@ const WalletPage = () => {
           <div className="grid grid-cols-12 md:gap-12 lg:gap-21 max-w-[62rem] mx-auto">
             <div className="col-span-12 md:col-span-4">
               <h2 className="title-l md:title-xl mb-3 max-w-[17rem] md:max-w-none">
-                How to use
+                <Trans t={t}>How to use</Trans>
               </h2>
               <p className="copy-xs">
-                You can have multiple wallets within the Vega Wallet desktop
-                app.
+                <Trans t={t}>
+                  You can have multiple wallets within the Vega Wallet desktop
+                  app.
+                </Trans>
               </p>
               <p className="copy-xxs">
-                To learn more about the Vega Wallet desktop app, including full,
-                step by step details on restoring wallets, updating the app, and
-                troubleshooting, visit the docs pages.
+                <Trans t={t}>
+                  To learn more about the Vega Wallet desktop app, including
+                  full, step by step details on restoring wallets, updating the
+                  app, and troubleshooting, visit the docs pages.
+                </Trans>
               </p>
             </div>
 
             <div className="col-span-12 md:col-span-8 lg:pl-12">
               <ol className="list-none p-0 mt-6 md:mt-0">
                 {howToText.map((text, idx) => {
-                  return <ListItem idx={idx} key={idx} text={text} />;
+                  return <ListItem idx={idx} key={idx} text={t(text)} />;
                 })}
               </ol>
             </div>
@@ -454,12 +480,14 @@ const WalletPage = () => {
           <div className="text-center max-w-[30rem] md:max-w-[42rem] mx-auto">
             <Container>
               <h2 className="title-s md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto">
-                Need the command line (CLI) wallet app?
+                <Trans t={t}>Need the command line (CLI) wallet app?</Trans>
               </h2>
               <p className="copy-xs md:copy-s">
-                If you're comfortable with a non-visual interface and want
-                additional or programmer functionality to that of the desktop
-                app, CLI also lets you:
+                <Trans t={t}>
+                  If you're comfortable with a non-visual interface and want
+                  additional or programmer functionality to that of the desktop
+                  app, CLI also lets you:
+                </Trans>
               </p>
               <div className="grid grid-cols-3 gap-8 text-center text-[1.125rem] leading-snug pt-8 pb-8">
                 <div>
@@ -484,7 +512,9 @@ const WalletPage = () => {
                       <path d="M19.9004 21.6282H17.9004V33.2849H19.9004V21.6282Z" />
                     </g>
                   </svg>
-                  <div className="mt-4">Customise key details</div>
+                  <div className="mt-4">
+                    <Trans t={t}>Customise key details</Trans>
+                  </div>
                 </div>
                 <div>
                   <svg
@@ -508,7 +538,9 @@ const WalletPage = () => {
                       <path d="M19.9004 21.6282H17.9004V33.2849H19.9004V21.6282Z" />
                     </g>
                   </svg>
-                  <div className="mt-4">Isolate keys</div>
+                  <div className="mt-4">
+                    <Trans t={t}>Isolate keys</Trans>
+                  </div>
                 </div>
                 <div>
                   <svg
@@ -532,12 +564,14 @@ const WalletPage = () => {
                       <path d="M19.9004 21.6282H17.9004V33.2849H19.9004V21.6282Z" />
                     </g>
                   </svg>
-                  <div className="mt-4">Build & send commands</div>
+                  <div className="mt-4">
+                    <Trans t={t}>Build & send commands</Trans>
+                  </div>
                 </div>
               </div>
 
               <ButtonLink
-                text="Get the CLI App"
+                text={t("Get the CLI app")}
                 link="https://docs.vega.xyz/docs/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet/"
               />
             </Container>
@@ -552,3 +586,22 @@ const WalletPage = () => {
 };
 
 export default WalletPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: {
+        ns: { in: ["common", "component.navigation", "page.wallet"] }
+        language: { eq: $language }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

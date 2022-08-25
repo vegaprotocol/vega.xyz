@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
@@ -17,6 +18,7 @@ import Phase3 from "../../components/Svg/MarketCreation/Process/Phase3";
 import Phase4 from "../../components/Svg/MarketCreation/Process/Phase4";
 import Phase5 from "../../components/Svg/MarketCreation/Process/Phase5";
 import Phase6 from "../../components/Svg/MarketCreation/Process/Phase6";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const marketCreationProcess = [
   {
@@ -96,31 +98,36 @@ const marketCreationProcess = [
 ];
 
 const MarketCreationPage = () => {
+  const { t } = useTranslation("page.market-creation");
+
   return (
     <Layout>
       <Seo
-        title=" Market Creation with Vega"
-        description="Bring the future of DeFi within reach - and create a market on any
-            underlying. Attract liquidity with Vega's built-in
-            incentive mechanism that matches traders and market makers."
+        title={t("Market Creation with Vega")}
+        description={t(
+          "Bring the future of DeFi within reach - and create a market on any underlying. Attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers."
+        )}
       />
       <Container dataCy={"main"}>
         <div className="max-w-[52rem] mx-auto text-center pt-6 lg:pt-24">
           <h1>
-            <BoxTitle text="Governance" />
+            <BoxTitle text={t("Governance")} />
           </h1>
           <GlitchTitle
             level="2"
             color="red"
             className="title-m md:title-l lg:title-xxl mb-4 md:mb-6 mt-4 text-center"
           >
-            Create markets
+            <Trans t={t}>Create markets</Trans>
           </GlitchTitle>
         </div>
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">
-            Create a market on any underlying, and attract liquidity with Vega's
-            built-in incentive mechanism that matches traders and market makers.
+            <Trans t={t}>
+              Create a market on any underlying, and attract liquidity with
+              Vega's built-in incentive mechanism that matches traders and
+              market makers.
+            </Trans>
           </LeadingLine>
         </div>
       </Container>
@@ -129,16 +136,18 @@ const MarketCreationPage = () => {
         <PageSection>
           <div className="max-w-[40rem] mx-auto text-center">
             <LeadingLine className="!mb-6 text-vega-mid-grey">
-              Creating a market is part of Vega governance. To get started, get
-              and hold $VEGA tokens in your wallet.
+              <Trans t={t}>
+                Creating a market is part of Vega governance. To get started,
+                get and hold $VEGA tokens in your wallet.
+              </Trans>
             </LeadingLine>
-            <ButtonLink link="/governance/" text="Find out more" />
+            <ButtonLink link="/governance/" text={t("Find out more")} />
           </div>
         </PageSection>
 
         <PageSection>
           <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-[40rem] mx-auto md:mx-0">
-            How to create a new market on Vega
+            <Trans t={t}>How to create a new market on Vega</Trans>
           </h2>
           <Accordion data={marketCreationProcess} />
         </PageSection>
@@ -146,13 +155,13 @@ const MarketCreationPage = () => {
         <PageSection>
           <div className="text-center">
             <h2 className="title-m md:title-l lg:title-xxl mb-10">
-              Get started
+              <Trans t={t}>Get started</Trans>
             </h2>
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
               link="https://console.fairground.wtf/markets"
-              text="See what markets already exist (Testnet)"
+              text={t("See what markets already exist (Testnet)")}
             />
           </div>
         </PageSection>
@@ -163,3 +172,17 @@ const MarketCreationPage = () => {
 };
 
 export default MarketCreationPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

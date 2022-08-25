@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import GlitchTitle from "../../components/GlitchTitle";
 import Contributor from "../../components/Contributor";
 import BoxTitle from "../../components/BoxTitle";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Contributors = () => {
+  const { t } = useTranslation("page.community");
   const [contributors, setContributors] = useState(null);
 
   useEffect(() => {
@@ -29,12 +32,12 @@ const Contributors = () => {
       <Container dataCy={"main"}>
         <div className="mb-14 pt-6 lg:pt-16">
           <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[44rem] mx-auto text-center mb-6 md:mb-12">
-            <BoxTitle text="Community" />
+            <BoxTitle text={t("Community")} />
             <GlitchTitle
               level={1}
               className="mt-4 title-m md:title-l lg:title-xxl"
             >
-              Meet our contributors
+              <Trans t={t}>Meet our contributors</Trans>
             </GlitchTitle>
           </div>
 
@@ -63,3 +66,29 @@ const Contributors = () => {
 };
 
 export default Contributors;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: {
+        ns: {
+          in: [
+            "common"
+            "component.navigation"
+            "component.contributor"
+            "page.community.contributors"
+          ]
+        }
+        language: { eq: $language }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

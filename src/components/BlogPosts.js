@@ -2,8 +2,10 @@ import React from "react";
 import ButtonLink from "./ButtonLink";
 import BlogPost from "./BlogPost";
 import { graphql, useStaticQuery } from "gatsby";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const LatestBlogPosts = () => {
+  const { t } = useTranslation("component.blog-posts");
   const latestPosts = useStaticQuery(graphql`
     query {
       allMediumPost(
@@ -35,10 +37,10 @@ const LatestBlogPosts = () => {
     <div className="mb-14">
       <div className="flex items-end justify-between mb-8">
         <h2 className="title-m max-w-[15rem] md:title-l md:max-w-[26rem]">
-          Blog posts
+          <Trans t={t}>Blog posts</Trans>
         </h2>
         <div className="hidden md:block">
-          <ButtonLink link="https://blog.vega.xyz" text="View all posts" />
+          <ButtonLink link="https://blog.vega.xyz" text={t("View all posts")} />
         </div>
       </div>
 
@@ -48,7 +50,7 @@ const LatestBlogPosts = () => {
         ))}
       </div>
       <div className="mt-8 md:hidden">
-        <ButtonLink link="https://blog.vega.xyz" text="View all posts" />
+        <ButtonLink link="https://blog.vega.xyz" text={t("View all posts")} />
       </div>
     </div>
   );

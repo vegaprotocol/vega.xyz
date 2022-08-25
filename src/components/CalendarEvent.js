@@ -2,8 +2,10 @@ import React from "react";
 import ButtonLink from "./ButtonLink";
 import ArrowRight from "./Svg/ArrowRight";
 import Moment from "react-moment";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const CalendarEvent = ({ event }) => {
+  const { t } = useTranslation();
   const dateFormat = "LLL";
   const dateFormatWithoutTime = "LL";
   const dateParseFormat = "YYYY-MM-DD HH:mm:ss";
@@ -22,7 +24,9 @@ const CalendarEvent = ({ event }) => {
         </div>
         <div className="col-span-12 md:col-span-6 grid grid-cols-12 gap-6">
           <div className="col-span-6">
-            <div className="title-xxs text-vega-mid-grey mb-1">When?</div>
+            <div className="title-xxs text-vega-mid-grey mb-1">
+              <Trans t={t}>When?</Trans>
+            </div>
             <div className="copy-xxs text-current">
               {event.date.length > 1 ? (
                 <div>
@@ -54,7 +58,7 @@ const CalendarEvent = ({ event }) => {
             {event.url ? (
               <ButtonLink
                 link={event.url}
-                text="More info"
+                text={t("More info")}
                 className="bg-vega-mid-grey"
               />
             ) : null}

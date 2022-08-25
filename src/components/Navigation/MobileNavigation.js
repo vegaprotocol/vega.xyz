@@ -5,8 +5,10 @@ import Governance from "./items/Governance";
 import Develop from "./items/Develop";
 import Learn from "./items/Learn";
 import MobileDropdown from "./MobileDropdown";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const MobileNavigation = () => {
+  const { t } = useTranslation("component.navigation");
   const [showId, setShowId] = useState();
   const handleShow = (id) => {
     if (id !== showId) {
@@ -20,7 +22,7 @@ const MobileNavigation = () => {
     <nav>
       <ul className="max-w-[20rem] text-lg tracking-wide w-full py-4">
         <MobileDropdown
-          title="Use Vega"
+          title={t("Use Vega")}
           id={1}
           show={showId === 1}
           onShow={handleShow}
@@ -28,7 +30,7 @@ const MobileNavigation = () => {
           <Use />
         </MobileDropdown>
         <MobileDropdown
-          title="Community"
+          title={t("Community")}
           id={2}
           show={showId === 2}
           onShow={handleShow}
@@ -36,7 +38,7 @@ const MobileNavigation = () => {
           <Community />
         </MobileDropdown>
         <MobileDropdown
-          title="Governance"
+          title={t("Governance")}
           id={3}
           show={showId === 3}
           onShow={handleShow}
@@ -44,7 +46,7 @@ const MobileNavigation = () => {
           <Governance />
         </MobileDropdown>
         <MobileDropdown
-          title="Develop"
+          title={t("Develop")}
           id={4}
           show={showId === 4}
           onShow={handleShow}
@@ -52,7 +54,7 @@ const MobileNavigation = () => {
           <Develop />
         </MobileDropdown>
         <MobileDropdown
-          title="Learn"
+          title={t("Learn")}
           id={5}
           show={showId === 5}
           onShow={handleShow}

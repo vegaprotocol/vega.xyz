@@ -1,4 +1,5 @@
 import * as React from "react";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 import Seo from "../components/Seo";
@@ -16,16 +17,17 @@ import RoadMap from "../components/RoadMap";
 import RoadMapMobile from "../components/RoadMapMobile";
 import Rip from "../components/Svg/Rip";
 import RipSmall from "../components/Svg/RipSmall";
-import { graphql } from "gatsby";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
-const IndexPage = () => {
-  const { t } = useTranslation();
+const IndexPage = ({ data }) => {
+  const { t } = useTranslation("page.index");
   return (
     <Layout>
       <Seo
         title={t("Blockchain derivatives")}
-        description="Discover Web3's native derivatives trading platform that is helping DeFi mature."
+        description={t(
+          "Discover Web3's native derivatives trading platform that is helping DeFi mature."
+        )}
       />
       <main>
         <PlanetStars className="max-w-[7.5rem] mx-auto hidden md:block" />
@@ -45,10 +47,10 @@ const IndexPage = () => {
                     className="title-l md:title-xl lg:text-[5.875rem] mb-2"
                     color="red"
                   >
-                    <Trans>Toward a new era of finance</Trans>
+                    <Trans t={t}>Toward a new era of finance</Trans>
                   </GlitchTitle>
                   <LeadingLine className="text-current !mb-0">
-                    <Trans>
+                    <Trans t={t}>
                       Decentralised infrastructure for the fair creation and
                       trading of derivatives.
                     </Trans>
@@ -65,10 +67,12 @@ const IndexPage = () => {
           <PageSection>
             <div className="max-w-[58.75rem] text-center mx-auto">
               <div className="title-m md:title-l mb-4">
-                <Trans>Throw open the doors to the new financial system</Trans>
+                <Trans t={t}>
+                  Throw open the doors to the new financial system
+                </Trans>
               </div>
               <div className="copy-xs md:copy-s !mb-8">
-                <Trans>
+                <Trans t={t}>
                   And a truly democratic society. Don't ask for permission. Ask
                   how you can play a part in this new world of DeFi.
                   Decentralised derivatives markets are here to stay.
@@ -105,15 +109,17 @@ const IndexPage = () => {
         <Container hideXOverflow={true}>
           <div className="pt-10 md:pt-20 md:pb-10">
             <div id="roadmap">
-              <RoadMapMobile className="md:hidden" />
-              <RoadMap className="hidden md:block" />
+              <RoadMapMobile data={data.roadmap} className="md:hidden" />
+              <RoadMap data={data.roadmap} className="hidden md:block" />
             </div>
           </div>
 
           <PageSection>
             <div className="lg:grid lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <div className="title-l mb-8 hyphens-auto">Events</div>
+                <div className="title-l mb-8 hyphens-auto">
+                  <Trans t={t}>Events</Trans>
+                </div>
               </div>
 
               <div className="lg:col-span-8">
@@ -141,6 +147,28 @@ export const query = graphql`
           ns
           data
           language
+        }
+      }
+    }
+    roadmap: allMarkdownRemark(
+      filter: {
+        collection: { eq: "roadmap" }
+        fields: { locale: { eq: $language } }
+      }
+      sort: { fields: [fields___order], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            step_title
+            title
+          }
+          fields {
+            locale
+            order
+            slug
+          }
+          html
         }
       }
     }
