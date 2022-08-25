@@ -20,6 +20,7 @@
   "Query the Vega network APIs to retrieve on chain data.": "Query the Vega network APIs to retrieve on chain data.",
   "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.": "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.",
   "Who the validators are and reward history, stake history.": "Who the validators are and reward history, stake history.",
+  "Validators performance scores in a given Epoch.": "Validators performance scores in a given Epoch.",
   "DAPP": "DAPP",
   "DOCS": "DOCS",
   "TOOL": "TOOL",

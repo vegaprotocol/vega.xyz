@@ -20,6 +20,7 @@
   "Query the Vega network APIs to retrieve on chain data.": "Consulta las API de la red Vega para recuperar datos en cadena.",
   "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.": "Use Vega Capsule para crear una instancia de la red Vega en su computadora para experimentar con el uso del protocolo.",
   "Who the validators are and reward history, stake history.": "Quiénes son los validadores e historial de recompensas, historial de apuestas.",
+  "Validators performance scores in a given Epoch.": "Puntuaciones de rendimiento de los validadores en una época determinada.",
   "DAPP": "DAPP",
   "DOCS": "DOCUMENTOS",
   "TOOL": "HERRAMIENTA",

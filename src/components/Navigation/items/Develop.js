@@ -49,7 +49,7 @@ const Develop = () => {
             link="/community/incentives-bounties"
           />
           <NavigationItem
-            text="Report a security issue"
+            text={t("Report a security issue")}
             link="/bug-bounties"
           />
         </NavigationList>
