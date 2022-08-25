@@ -471,13 +471,7 @@ const KeyConceptsPage = () => {
           >
             <p>
               <Trans t={t}>
-                Vega lets users choose which digital asset they want to use as
-                collateral, including Bitcoin, Ethereum, ERC-20 tokens, stable
-                coins, and more - though currently it only supports Ether. By
-                making the protocol blockchain-agnostic, trades will be able to
-                settle in any crypto-asset on a supported chain, paving the way
-                for physically settled and cash settled products, as commodity
-                and asset tokenisation become widespread.
+                Vega currently lets users propose any ERC-20 tokens to use as collateral. Once the protocol is fully blockchain-agnostic, trades will be able to settle in any crypto-asset on a supported chain, paving the way for physically settled and cash settled products, as commodity and asset tokenisation become widespread.
               </Trans>
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
