@@ -3,7 +3,7 @@ import SquareBullet from "./Svg/SquareBullet";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const BlogPost = ({ post }) => {
-  const { t } = useTranslation("component.blog-posts");
+  const { t } = useTranslation("component.blog-post");
   return (
     <div className="flex flex-col justify-between pb-3 border-b border-current">
       <div>

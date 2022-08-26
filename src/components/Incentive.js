@@ -4,7 +4,7 @@ import SquareBullet from "./Svg/SquareBullet";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Incentive = ({ title, type, status, reward, difficulty, link }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("component.incentive");
   const statusColours = {
     available: "text-vega-mint",
     ended: "text-vega-pink",

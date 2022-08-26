@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Ticker = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("component.ticker");
   const [stats, setStats] = useState(0);
 
   const updateStats = ({ name, value }) => {

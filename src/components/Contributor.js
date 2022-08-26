@@ -3,7 +3,7 @@ import LinkArrow from "./Svg/LinkArrow";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Contributor = ({ contributor }) => {
-  const { t } = useTranslation("page.community");
+  const { t } = useTranslation("component.contributor");
   return (
     <div className="contributor-block relative group">
       <img

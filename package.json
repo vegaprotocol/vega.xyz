@@ -71,6 +71,7 @@
     "@tailwindcss/line-clamp": "^0.4.0",
     "body-scroll-lock": "^4.0.0-beta.0",
     "gatsby-plugin-netlify": "^5.0.0",
+    "i18next-parser": "^6.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwind": "^2.2.12",
     "tailwindcss-hyphens": "^0.1.0"

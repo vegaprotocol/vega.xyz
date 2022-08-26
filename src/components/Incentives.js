@@ -3,7 +3,7 @@ import Incentive from "./Incentive";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Incentives = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("component.incentives");
   const pageSize = 10;
   const [incentives, setIncentives] = useState(null);
   const [list, setList] = useState(null);

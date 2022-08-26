@@ -15,7 +15,7 @@ const LinkWrapper = ({
     : internalLinkWrapper(children);
 
 const ToolBox = ({ icon, title, link, text, author, category }) => {
-  const { t } = useTranslation("page.use");
+  const { t } = useTranslation("component.tool-box");
   const isExternal = link.startsWith("http");
 
   return (

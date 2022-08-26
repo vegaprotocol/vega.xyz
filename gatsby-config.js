@@ -7,14 +7,14 @@ const languages = [
     code: "en",
     localName: "English",
   },
-  // {
-  //   code: "es",
-  //   localName: "Español",
-  // },
-  // {
-  //   code: "cn",
-  //   localName: "中国人",
-  // },
+  {
+    code: "es",
+    localName: "Español",
+  },
+  {
+    code: "cn",
+    localName: "中国人",
+  },
   // {
   //   code: "ru",
   //   localName: "Русский",
@@ -136,6 +136,7 @@ module.exports = {
         localeJsonSourceName: `locale`,
         languages: languages.map((lng) => lng.code),
         defaultLanguage: `en`,
+        fallbackLanguage: `en`,
         siteUrl: `https://vega.xyz`,
         trailingSlash: "always",
         i18nextOptions: {
