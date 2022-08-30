@@ -23,16 +23,38 @@ import UniverseBottom from "../components/Svg/Home/UniverseBottom/Responsive";
 import UniverseBottom2 from "../components/Svg/Home/UniverseBottom2";
 import UniverseTop from "../components/Svg/Home/UniverseTop";
 
+import PermissionlessMarketCreationIcon from "../images/feature-icons/permissionless-market-creation.svg";
+import AntiFrontRunningProtectionIcon from "../images/feature-icons/anti-front-running-protection.svg";
+import PurposeBuiltBlockChainIcon from "../images/feature-icons/purpose-built.svg";
+import PseudononymousTradingIcon from "../images/feature-icons/pseudononymous-trading.svg";
+import HighCapitalEfficiencyIcon from "../images/feature-icons/high-capital-efficiency.svg";
+import NoGasFeesIcon from "../images/feature-icons/no-gas-fees.svg";
+import NativeLiquidityProvision from "../images/feature-icons/native-liquidity-provision.svg";
+import CrossChainSupportIcon from "../images/feature-icons/cross-chain-support.svg";
+
 const ToolBox = ({ title, description, icon }) => {
-  console.log(icon);
   return (
     <div className="border border-vega-border-muted rounded-3xl p-4 lg:pb-8 flex lg:block gap-4">
       <div className="w-[4.75rem] lg:w-[5.9375rem] shrink-0">
         <GatsbyImage image={icon} alt={title} className="lg:mb-6 lg:w-auto " />
       </div>
       <div>
-        <div class="title-s mb-3">{title}</div>
+        <div className="title-s mb-3">{title}</div>
         <p className="text-vega-text-muted copy-xxs !mb-0">{description}</p>
+      </div>
+    </div>
+  );
+};
+
+const FeatureBox = ({ title, description, icon }) => {
+  return (
+    <div className="p-4 lg:pb-8 gap-4">
+      <img src={icon} alt="" className="w-[30px] h-[30px] mb-4" />
+      <div>
+        <div className="!mb-3 text-[1.3125rem] xl:text-[1.5rem] leading-[1.15]">
+          {title}
+        </div>
+        <p className="text-vega-grey text-base mb-0">{description}</p>
       </div>
     </div>
   );
@@ -119,6 +141,72 @@ const IndexPage = ({ data }) => {
         </div>
         <div className="max-w-[38rem] xl:max-w-[45rem] mx-auto mb-20">
           <UniverseBottom />
+        </div>
+        <div className=" py-8 lg:py-16">
+          <GlitchTitle
+            level="2"
+            color="orange"
+            className="title-l md:title-xl xl:text-[5.875rem] text-center"
+          >
+            Key features
+          </GlitchTitle>
+
+          <Container>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-8 lg:py-16">
+              <FeatureBox
+                title={t("Permissionless market creation")}
+                description={t("Propose a market on any underlying.")}
+                icon={PermissionlessMarketCreationIcon}
+              />
+              <FeatureBox
+                title={t("Anti front running protection")}
+                description={t("Fair access to the order book.")}
+                icon={AntiFrontRunningProtectionIcon}
+              />
+              <FeatureBox
+                title={t("Purpose-built blockchain")}
+                description={t(
+                  "High performing smart contracts for sophisticated trading."
+                )}
+                icon={PurposeBuiltBlockChainIcon}
+              />
+              <FeatureBox
+                title={t("Pseudonymous trading")}
+                description={t(
+                  "Keep control of your data, and protect your privacy."
+                )}
+                icon={PseudononymousTradingIcon}
+              />
+              <FeatureBox
+                title={t("High capital efficiency")}
+                description={t(
+                  "Lower capital costs and evaluate risk live with cross margining."
+                )}
+                icon={HighCapitalEfficiencyIcon}
+              />
+              <FeatureBox
+                title={t("No gas fees on trading")}
+                description={t(
+                  "Fees only on trades on a market in continuous trading."
+                )}
+                icon={NoGasFeesIcon}
+              />
+              <FeatureBox
+                title={t("Native liquidity provision")}
+                description={t(
+                  "Built-in liquidity incentives for bustling markets."
+                )}
+                icon={NativeLiquidityProvision}
+              />
+              <FeatureBox
+                title={t("Cross-chain support")}
+                description={t(
+                  "Choose the digital asset for collateral or settlements."
+                )}
+                icon={CrossChainSupportIcon}
+              />
+            </div>
+          </Container>
         </div>
         <Ticker />
         <Container hideXOverflow={true}>
