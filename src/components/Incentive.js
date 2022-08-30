@@ -14,6 +14,8 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
 
   const statusColour =
     statusColours[status.toString().toLowerCase().replace(/\s/g, "")];
+  // t('Available')
+  // t('Ended')
 
   return (
     <div
@@ -29,7 +31,6 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
           <div className="text-[1.375rem] leading-[1.3] mb-1 pr-6">{title}</div>
           <span className={`text-[0.9375rem] ${statusColour}`}>
             <SquareBullet size="10" /> {t(status)}
-            /* t('Available') t('Ended') */
           </span>
         </div>
         <div className="col-span-6 md:col-span-3">
