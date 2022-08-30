@@ -138,7 +138,7 @@ const IndexPage = ({ data }) => {
             <LinkCta to="/use">Browse the dapps and tools</LinkCta>
           </div>
         </div>
-        <div className="max-w-[38rem] xl:max-w-[45rem] mx-auto mb-20">
+        <div className="hidden md:block max-w-[38rem] xl:max-w-[45rem] mx-auto mb-20">
           <UniverseBottom />
         </div>
         <div className=" py-8 lg:py-16">
