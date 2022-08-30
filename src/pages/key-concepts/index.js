@@ -60,7 +60,7 @@ const KeyConceptsPage = () => {
           "Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
         )}
       />
-      <div data-cy="main" class="mb-16">
+      <div data-cy="main" className="mb-16">
         <div className="max-w-[45rem] px-4 md:px-0 xl:max-w-[50rem] mx-auto text-center pt-16">
           <h1 className="mb-6">
             <BoxTitle text={t("Key concepts")} />

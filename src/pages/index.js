@@ -22,7 +22,6 @@ import UniverseRight from "../components/Svg/Home/UniverseRight/Responsive";
 import UniverseBottom from "../components/Svg/Home/UniverseBottom/Responsive";
 import UniverseBottom2 from "../components/Svg/Home/UniverseBottom2";
 import UniverseTop from "../components/Svg/Home/UniverseTop";
-
 import PermissionlessMarketCreationIcon from "../images/feature-icons/permissionless-market-creation.svg";
 import AntiFrontRunningProtectionIcon from "../images/feature-icons/anti-front-running-protection.svg";
 import PurposeBuiltBlockChainIcon from "../images/feature-icons/purpose-built.svg";
@@ -75,7 +74,7 @@ const IndexPage = ({ data }) => {
           <div className="max-w-[18.75rem] mx-auto md:hidden">
             <UniverseTop />
           </div>
-          <div class="absolute top-0 left-0 right-0">
+          <div className="absolute top-0 left-0 right-0">
             <div className="grid grid-cols-12 max-w-[100rem] mx-auto">
               <div className="col-span-3">
                 <UniverseLeft />
@@ -117,7 +116,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <div className="relative max-w-[29rem] lg:max-w-[50rem] mx-auto mb-10 -mt-[15%] md:mt-0">
-          <div class="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
+          <div className="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
             <ToolBox
               title="Console"
               description="Try out trading on the fully decentralised Vega network (Testnet)."
@@ -152,108 +151,80 @@ const IndexPage = ({ data }) => {
           </GlitchTitle>
 
           <Container>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-8 lg:py-16">
-              <FeatureBox
-                title={t("Permissionless market creation")}
-                description={t("Propose a market on any underlying.")}
-                icon={PermissionlessMarketCreationIcon}
-              />
-              <FeatureBox
-                title={t("Anti front running protection")}
-                description={t("Fair access to the order book.")}
-                icon={AntiFrontRunningProtectionIcon}
-              />
-              <FeatureBox
-                title={t("Purpose-built blockchain")}
-                description={t(
-                  "High performing smart contracts for sophisticated trading."
-                )}
-                icon={PurposeBuiltBlockChainIcon}
-              />
-              <FeatureBox
-                title={t("Pseudonymous trading")}
-                description={t(
-                  "Keep control of your data, and protect your privacy."
-                )}
-                icon={PseudononymousTradingIcon}
-              />
-              <FeatureBox
-                title={t("High capital efficiency")}
-                description={t(
-                  "Lower capital costs and evaluate risk live with cross margining."
-                )}
-                icon={HighCapitalEfficiencyIcon}
-              />
-              <FeatureBox
-                title={t("No gas fees on trading")}
-                description={t(
-                  "Fees only on trades on a market in continuous trading."
-                )}
-                icon={NoGasFeesIcon}
-              />
-              <FeatureBox
-                title={t("Native liquidity provision")}
-                description={t(
-                  "Built-in liquidity incentives for bustling markets."
-                )}
-                icon={NativeLiquidityProvision}
-              />
-              <FeatureBox
-                title={t("Cross-chain support")}
-                description={t(
-                  "Choose the digital asset for collateral or settlements."
-                )}
-                icon={CrossChainSupportIcon}
-              />
+            <div className="py-8 lg:pt-16">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-12">
+                <FeatureBox
+                  title={t("Permissionless market creation")}
+                  description={t("Propose a market on any underlying.")}
+                  icon={PermissionlessMarketCreationIcon}
+                />
+                <FeatureBox
+                  title={t("Anti front running protection")}
+                  description={t("Fair access to the order book.")}
+                  icon={AntiFrontRunningProtectionIcon}
+                />
+                <FeatureBox
+                  title={t("Purpose-built blockchain")}
+                  description={t(
+                    "High performing smart contracts for sophisticated trading."
+                  )}
+                  icon={PurposeBuiltBlockChainIcon}
+                />
+                <FeatureBox
+                  title={t("Pseudonymous trading")}
+                  description={t(
+                    "Keep control of your data, and protect your privacy."
+                  )}
+                  icon={PseudononymousTradingIcon}
+                />
+                <FeatureBox
+                  title={t("High capital efficiency")}
+                  description={t(
+                    "Lower capital costs and evaluate risk live with cross margining."
+                  )}
+                  icon={HighCapitalEfficiencyIcon}
+                />
+                <FeatureBox
+                  title={t("No gas fees on trading")}
+                  description={t(
+                    "Fees only on trades on a market in continuous trading."
+                  )}
+                  icon={NoGasFeesIcon}
+                />
+                <FeatureBox
+                  title={t("Native liquidity provision")}
+                  description={t(
+                    "Built-in liquidity incentives for bustling markets."
+                  )}
+                  icon={NativeLiquidityProvision}
+                />
+                <FeatureBox
+                  title={t("Cross-chain support")}
+                  description={t(
+                    "Choose the digital asset for collateral or settlements."
+                  )}
+                  icon={CrossChainSupportIcon}
+                />
+              </div>
+              <div className="text-center">
+                <ButtonLink
+                  link="/key-concepts"
+                  text={t("View key concepts")}
+                  className="bg-vega-mid-grey"
+                />
+              </div>
             </div>
           </Container>
         </div>
-        <Ticker />
-        <Container hideXOverflow={true}>
-          <PageSection>
-            <div className="max-w-[58.75rem] text-center mx-auto">
-              <div className="title-m md:title-l mb-4">
-                <Trans t={t}>
-                  Throw open the doors to the new financial system
-                </Trans>
-              </div>
-              <div className="copy-xs md:copy-s !mb-8">
-                <Trans t={t}>
-                  And a truly democratic society. Don't ask for permission. Ask
-                  how you can play a part in this new world of DeFi.
-                  Decentralised derivatives markets are here to stay.
-                </Trans>
-              </div>
-              <div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[18rem] md:max-w-[30rem] mx-auto">
-                  <div>
-                    <ButtonLink
-                      text={t("Learn more")}
-                      link="/key-concepts"
-                      className="w-full text-center"
-                      color="light"
-                    />
-                  </div>
-                  <div>
-                    <ButtonLink
-                      text={t("Join the community")}
-                      link="/community"
-                      className="w-full text-center"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </PageSection>
-        </Container>
-        <div className="pt-6">
+        <div className="">
           <RipSmall className="md:hidden" />
           <div className="max-w-[85%]">
             <Rip className="hidden md:block" />
           </div>
         </div>
+        <Ticker />
         <Container hideXOverflow={true}>
-          <div className="pt-10 md:pt-20 md:pb-10">
+          <div className="pt-16 md:pt-32 lg:pt-40 md:pb-10">
             <div id="roadmap">
               <RoadMapMobile data={data.roadmap} className="md:hidden" />
               <RoadMap data={data.roadmap} className="hidden md:block" />

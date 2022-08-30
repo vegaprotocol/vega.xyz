@@ -30,14 +30,14 @@ const Callout = ({ title, text, linkText, link, image = false, children }) => {
                 <path
                   d="M4.52417 10.4185L16.0883 10.4185"
                   stroke="white"
-                  stroke-width="1.3"
+                  strokeWidth="1.3"
                   stroke-miterlimit="10"
                 />
                 <path
                   d="M10.8323 4.94604L16.4759 10.4459L10.8323 15.9458"
                   stroke="white"
-                  stroke-width="1.3"
-                  stroke-miterlimit="10"
+                  strokeWidth="1.3"
+                  strokeMiterlimit="10"
                 />
               </svg>
             </Link>
