@@ -2,7 +2,7 @@ module.exports = {
   keySeparator: false,
   namespaceSeparator: false,
   useKeysAsDefaultValue: false,
-  locales: ["en"],
+  locales: ["en", "es"],
   lexers: {
     js: ["JsxLexer"],
   },

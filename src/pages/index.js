@@ -97,18 +97,22 @@ const IndexPage = ({ data }) => {
         <div className="relative max-w-[29rem] lg:max-w-[50rem] mx-auto mb-10 -mt-[15%] md:mt-0">
           <div class="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
             <ToolBox
-              title="Console"
-              description="Try out trading on the fully decentralised Vega network (Testnet)."
+              title={t("Console")}
+              description={t(
+                "Try out trading on the fully decentralised Vega network (Testnet)."
+              )}
               icon={getImage(data.consoleIcon)}
             />
             <ToolBox
-              title="Governance"
-              description="Submit and vote on proposals to create and change markets, network parameters and assets."
+              title={t("Governance")}
+              description={t(
+                "Submit and vote on proposals to create and change markets, network parameters and assets."
+              )}
               icon={getImage(data.governanceIcon)}
             />
             <ToolBox
-              title="Block Explorer"
-              description="Explore real-time Vega blockchain information."
+              title={t("Block Explorer")}
+              description={t("Explore real-time Vega blockchain information.")}
               icon={getImage(data.blockExplorerIcon)}
             />
           </div>
