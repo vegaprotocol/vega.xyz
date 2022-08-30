@@ -35,6 +35,15 @@ const benefits = [
   "Grow with Vega - scaling rewards as you climb the ranks",
 ];
 
+// t("Gain real-world experience in community building by shaping the Vega movement from the ground up"),
+// t("Access to exclusive Discord lounges"),
+// t("Early access to bounties, beta testing of products"),
+// t("Priority consideration on protocol feedback"),
+// t("Exclusive meetups - Invitations to all of Vega's events, both offline and online"),
+// t("Limited edition Vega swag"),
+// t("Priority minting of NFT drops (+ enhanced rarities)"),
+// t("Grow with Vega - scaling rewards as you climb the ranks)"),
+
 const Ambassadors = () => {
   const { t } = useTranslation("page.community.ambassadors");
 

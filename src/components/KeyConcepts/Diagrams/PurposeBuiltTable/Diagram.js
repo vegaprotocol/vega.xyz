@@ -20,6 +20,18 @@ const PurposeBuiltTableDiagram = () => {
       "Small, purpose built smart products for trading",
     ],
   ];
+  /*
+  t('Runs slowly')
+  t('Fast trading')
+  t('Allows for unfair front running')
+  t('Built for fairness from the ground up')
+  t('A fee for every transaction')
+  t('No fees on orders')
+  t('Generalist tool - A workaround for trading')
+  t('Specifically built for trading')
+  t('Smart contracts for anything')
+  t('Small, purpose built smart products for trading')
+  */
 
   const { t } = useTranslation("page.key-concepts");
 

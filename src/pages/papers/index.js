@@ -10,6 +10,8 @@ import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const PapersPage = ({ data }) => {
   const { t } = useTranslation("page.talks");
+  // t("How it works");
+  // t("Implementations");
   return (
     <Layout>
       <Seo

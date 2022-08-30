@@ -22,12 +22,14 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
     >
       <div className="text-[0.8125rem] absolute left-0 top-0 px-2 dark:text-black text-white bg-black dark:bg-white uppercase">
         {t(type)}
+        /* t('Bounty') t('Incentive') */
       </div>
       <div className="grid grid-cols-12">
         <div className="col-span-12 md:mb-3 md:col-span-6">
           <div className="text-[1.375rem] leading-[1.3] mb-1 pr-6">{title}</div>
           <span className={`text-[0.9375rem] ${statusColour}`}>
             <SquareBullet size="10" /> {t(status)}
+            /* t('Available') t('Ended') */
           </span>
         </div>
         <div className="col-span-6 md:col-span-3">

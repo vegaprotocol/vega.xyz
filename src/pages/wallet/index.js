@@ -90,6 +90,13 @@ const howToText = [
   "To update the app, delete your existing version and download the new one",
 ];
 
+// t("Choose 'create a new wallet' in the app")
+// t("Name each individual wallet if you need more than one")
+// t("Create a passphrase for each wallet. You'll need it for depositing collateral, placing trades, etc.")
+// t("Record the recovery phrase that's provided on setup. This only appears once. Have an existing wallet you created in the CLI app? You will be given the option to connect this to the desktop app")
+// t("Need to restore a wallet? Use the recovery phrase exactly as it was presented to you")
+// t("To update the app, delete your existing version and download the new one")
+
 const binaries = [
   {
     icon: "windows",
