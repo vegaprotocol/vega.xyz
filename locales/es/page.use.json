@@ -1,12 +1,12 @@
 {
-  "Use the network": "",
-  "Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy.": "",
-  "Use Vega": "",
-  "Tools built on Vega": "Tools built on Vega",
-  "All": "All",
-  "Wallets": "Wallets",
-  "dApps": "dApps",
-  "Tools": "Tools",
-  "Want to add something to this list?": "Want to add something to this list?",
-  "Chat to us on Discord and start building": "<0>Chat to us on Discord</0> and <3>start building</3>."
+    "Use the network": "",
+    "Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy.": "",
+    "Use Vega": "",
+    "Tools built on Vega": "Herramientas basadas en Vega",
+    "All": "Todo",
+    "Wallets": "carteras",
+    "dApps": "dApps",
+    "Tools": "Instrumentos",
+    "Want to add something to this list?": "¿Quieres añadir algo a esta lista?",
+    "Chat to us on Discord and start building": "<0>Chatea con nosotros en Discord</0> y <3>comienza a construir</3>."
 }

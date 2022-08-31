@@ -1,14 +1,14 @@
 {
-  "Governance": "",
-  "Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject.": "",
+  "Governance": "Governance",
+  "Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject.": "Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject.",
   "Govern the network": "Govern the network",
   "Decisions on the Vega network are on-chain, with tokenholders creating proposals that other tokenholders vote to approve or reject.": "Decisions on the Vega network are on-chain, with tokenholders creating proposals that other tokenholders vote to approve or reject.",
   "Governance Tools": "Governance Tools",
-  "Forum": "",
-  "Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more.": "",
-  "Review and vote on governance proposals.": "",
-  "Make a proposal": "",
-  "Read the docs to create and submit a proposal using Vega APIs.": "",
+  "Forum": "Forum",
+  "Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more.": "Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more.",
+  "Review and vote on governance proposals.": "Review and vote on governance proposals.",
+  "Make a proposal": "Make a proposal",
+  "Read the docs to create and submit a proposal using Vega APIs.": "Read the docs to create and submit a proposal using Vega APIs.",
   "Governance lifecycle": "Governance lifecycle",
   "Get started voting": "Get started voting",
   "Get $VEGA tokens": "Get $VEGA tokens",
@@ -18,5 +18,5 @@
   "Vote on proposals": "Vote on proposals",
   "Use our governance tools.": "Use our governance tools.",
   "Note, you'll need some ETH to pay any transaction fees.": "Note, you'll need some ETH to pay any transaction fees.",
-  "Governance tools": ""
+  "Governance tools": "Governance tools"
 }

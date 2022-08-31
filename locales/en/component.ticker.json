@@ -1,8 +1,8 @@
 {
   "Status": "Status",
-  "Validators": "",
-  "Total Staked": "",
-  "Avg. Block Time": "",
-  "Current Epoch": "",
-  "Learn more about restricted mainnet": ""
+  "Validators": "Validators",
+  "Total Staked": "Total Staked",
+  "Avg. Block Time": "Avg. Block Time",
+  "Current Epoch": "Current Epoch",
+  "Learn more about restricted mainnet": "Learn more about restricted mainnet"
 }

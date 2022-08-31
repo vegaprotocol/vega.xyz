@@ -1,6 +1,6 @@
 {
-  "Your message was successfully encrypted and delivered.": "",
-  "Sorry, your submission failed, please try again later.": "",
+  "Your message was successfully encrypted and delivered.": "Your message was successfully encrypted and delivered.",
+  "Sorry, your submission failed, please try again later.": "Sorry, your submission failed, please try again later.",
   "Bug bounties": "Bug bounties",
   "Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.": "Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.",
   "If you believe that you have spotted a vulnerability in either the Vega protocol software (node, data node, wallet, etc.) or network or any supporting systems or code used by the project, please submit a bug report by email or the web-form as described below to have this situation resolved as soon as possible.": "If you believe that you have spotted a vulnerability in either the Vega protocol software (node, data node, wallet, etc.) or network or any supporting systems or code used by the project, please submit a bug report by email or the web-form as described below to have this situation resolved as soon as possible.",
@@ -24,6 +24,6 @@
   "Are you sure you want to submit the form?": "Are you sure you want to submit the form?",
   "Cancel": "Cancel",
   "Submit": "Submit",
-  "PGP Key": "",
-  "This is the PGP key that can be used to securely submit security issues to the project team. Please note that this is the only usage of the key; especially, this key will never be used to issue signatures that are in any way meaningful or binding. We also may change the key at any time, so please make sure to check here for the current version.": ""
+  "PGP Key": "PGP Key",
+  "This is the PGP key that can be used to securely submit security issues to the project team. Please note that this is the only usage of the key; especially, this key will never be used to issue signatures that are in any way meaningful or binding. We also may change the key at any time, so please make sure to check here for the current version.": "This is the PGP key that can be used to securely submit security issues to the project team. Please note that this is the only usage of the key; especially, this key will never be used to issue signatures that are in any way meaningful or binding. We also may change the key at any time, so please make sure to check here for the current version."
 }
