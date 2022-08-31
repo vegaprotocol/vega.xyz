@@ -31,17 +31,22 @@ import NoGasFeesIcon from "../images/feature-icons/no-gas-fees.svg";
 import NativeLiquidityProvision from "../images/feature-icons/native-liquidity-provision.svg";
 import CrossChainSupportIcon from "../images/feature-icons/cross-chain-support.svg";
 
-const ToolBox = ({ title, description, icon }) => {
+const ToolBox = ({ title, description, icon, link }) => {
   return (
-    <div className="border border-vega-border-muted rounded-3xl p-4 lg:pb-8 flex lg:block gap-4">
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="hover:-translate-y-2 border border-vega-border-muted rounded-3xl p-4 md:p-5 lg:pb-8 flex lg:block gap-4"
+    >
       <div className="w-[4.75rem] lg:w-[5.9375rem] shrink-0">
         <GatsbyImage image={icon} alt={title} className="lg:mb-6 lg:w-auto " />
       </div>
       <div>
-        <div className="title-s mb-3">{title}</div>
+        <div className="title-s mb-1 md:mb-3">{title}</div>
         <p className="text-vega-text-muted copy-xxs !mb-0">{description}</p>
       </div>
-    </div>
+    </a>
   );
 };
 
@@ -121,16 +126,19 @@ const IndexPage = ({ data }) => {
               title="Console"
               description="Try out trading on the fully decentralised Vega network (Testnet)."
               icon={getImage(data.consoleIcon)}
+              link="https://console.fairground.wtf/"
             />
             <ToolBox
               title="Governance"
               description="Submit and vote on proposals to create and change markets, network parameters and assets."
               icon={getImage(data.governanceIcon)}
+              link="https://token.vega.xyz/governance"
             />
             <ToolBox
               title="Block Explorer"
               description="Explore real-time Vega blockchain information."
               icon={getImage(data.blockExplorerIcon)}
+              link="https://explorer.vega.xyz/"
             />
           </div>
 
