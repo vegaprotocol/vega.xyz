@@ -150,16 +150,15 @@ const IndexPage = ({ data }) => {
         <div className="hidden md:block max-w-[38rem] xl:max-w-[45rem] mx-auto mb-20">
           <UniverseBottom />
         </div>
-        <div className=" py-8 lg:py-16">
-          <GlitchTitle
-            level="2"
-            color="orange"
-            className="title-l md:title-xl xl:text-[5.875rem] text-center"
-          >
-            Key features
-          </GlitchTitle>
-
+        <div className="py-8 lg:py-16">
           <Container>
+            <GlitchTitle
+              level="2"
+              color="orange"
+              className="title-l md:title-xl mb-4 lg:mb-0 xl:text-[5.875rem] md:text-center max-w-[20rem] md:max-w-none"
+            >
+              Key features
+            </GlitchTitle>
             <div className="py-8 lg:pt-16">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 lg:gap-x-8 lg:gap-y-12 lg:grid-cols-4 mb-12">
                 <FeatureBox
