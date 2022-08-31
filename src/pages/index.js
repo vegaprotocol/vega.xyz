@@ -217,7 +217,7 @@ const IndexPage = ({ data }) => {
               <div className="text-center">
                 <ButtonLink
                   link="/key-concepts"
-                  text={t("View key concepts")}
+                  text={t("View all")}
                   className="bg-vega-mid-grey"
                 />
               </div>
