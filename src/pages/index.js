@@ -13,8 +13,7 @@ import PageSection from "../components/PageSection";
 import Calendar from "../components/Calendar";
 import RoadMap from "../components/RoadMap";
 import RoadMapMobile from "../components/RoadMapMobile";
-import Rip from "../components/Svg/Rip";
-import RipSmall from "../components/Svg/RipSmall";
+import Rip from "../components/Svg/Home/Rip/Responsive";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import UniverseLeft from "../components/Svg/Home/UniverseLeft/Responsive";
@@ -52,7 +51,7 @@ const ToolBox = ({ title, description, icon, link }) => {
 
 const FeatureBox = ({ title, description, icon }) => {
   return (
-    <div className="p-4 lg:pb-8 gap-4">
+    <div className="lg:pb-8">
       <img src={icon} alt="" className="w-[30px] h-[30px] mb-4" />
       <div>
         <div className="!mb-3 text-[1.3125rem] xl:text-[1.5rem] leading-[1.15]">
@@ -160,7 +159,7 @@ const IndexPage = ({ data }) => {
 
           <Container>
             <div className="py-8 lg:pt-16">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8 lg:grid-cols-4 mb-12">
                 <FeatureBox
                   title={t("Permissionless market creation")}
                   description={t("Propose a market on any underlying.")}
@@ -224,13 +223,10 @@ const IndexPage = ({ data }) => {
             </div>
           </Container>
         </div>
-        <div className="">
-          <RipSmall className="md:hidden" />
-          <div className="max-w-[85%]">
-            <Rip className="hidden md:block" />
-          </div>
+        <Rip />
+        <div className="pt-16">
+          <Ticker />
         </div>
-        <Ticker />
         <Container hideXOverflow={true}>
           <div className="pt-16 md:pt-32 lg:pt-40 md:pb-10">
             <div id="roadmap">

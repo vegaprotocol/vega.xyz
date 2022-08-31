@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import BigNumber from "bignumber.js";
 import { useTranslation } from "gatsby-plugin-react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Autoplay } from "swiper";
+import { MQMediumDown, MQLargeUp } from "../utils/media-queries.js";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 const Ticker = () => {
   const { t } = useTranslation("component.ticker");
@@ -15,8 +20,8 @@ const Ticker = () => {
 
   const TickerCell = ({ label, value }) => {
     return (
-      <div className="text-center">
-        <div className="text-[3.375rem] md:[2.75rem] lg:[3.375rem]">
+      <div className="text-center dark:bg-black bg-white">
+        <div className="text-[3.375rem] md:text-[2.75rem] xl:text-[3.375rem]">
           {value}
         </div>
         <div className="text-[0.9375rem] uppercase text-vega-grey">{label}</div>
@@ -73,14 +78,56 @@ const Ticker = () => {
   return (
     <div className="overflow-hidden whitespace-nowrap">
       {stats ? (
-        <div className="relative flex justify-center gap-12">
-          <TickerCell label={t("Validators")} value={stats.validators} />
-          <TickerCell label={t("Total Staked")} value={stats.stakedTotal} />
-          <TickerCell
-            label={t("Avg. Block Time")}
-            value={stats.blockDuration}
-          />
-          <TickerCell label={t("Current Epoch")} value={stats.currentEpoch} />
+        <div>
+          <MQMediumDown>
+            <Swiper
+              modules={[EffectFade, Autoplay]}
+              effect="fade"
+              fadeEffect={{
+                crossFade: true,
+              }}
+              loop={true}
+              autoplay={{
+                delay: 1500,
+              }}
+            >
+              <SwiperSlide>
+                <TickerCell label={t("Validators")} value={stats.validators} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <TickerCell
+                  label={t("Total Staked")}
+                  value={stats.stakedTotal}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <TickerCell
+                  label={t("Avg. Block Time")}
+                  value={stats.blockDuration}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <TickerCell
+                  label={t("Current Epoch")}
+                  value={stats.currentEpoch}
+                />
+              </SwiperSlide>
+            </Swiper>
+          </MQMediumDown>
+          <MQLargeUp>
+            <div className="relative flex justify-center gap-12">
+              <TickerCell label={t("Validators")} value={stats.validators} />
+              <TickerCell label={t("Total Staked")} value={stats.stakedTotal} />
+              <TickerCell
+                label={t("Avg. Block Time")}
+                value={stats.blockDuration}
+              />
+              <TickerCell
+                label={t("Current Epoch")}
+                value={stats.currentEpoch}
+              />
+            </div>
+          </MQLargeUp>
         </div>
       ) : (
         <div className="flex h-[5.625rem] border-current items-center justify-center text-[1.875rem] leading-none uppercase text-center">
