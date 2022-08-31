@@ -83,12 +83,13 @@ const Ticker = () => {
             <Swiper
               modules={[EffectFade, Autoplay]}
               effect="fade"
+              speed={1200}
               fadeEffect={{
                 crossFade: true,
               }}
               loop={true}
               autoplay={{
-                delay: 1500,
+                delay: 1000,
               }}
             >
               <SwiperSlide>
