@@ -51,7 +51,7 @@ const ToolBox = ({ title, description, icon, link }) => {
 
 const FeatureBox = ({ title, description, icon }) => {
   return (
-    <div className="lg:pb-8">
+    <div>
       <img src={icon} alt="" className="w-[30px] h-[30px] mb-4" />
       <div>
         <div className="!mb-3 text-[1.3125rem] xl:text-[1.5rem] leading-[1.15]">
@@ -119,32 +119,34 @@ const IndexPage = ({ data }) => {
             <UniverseBottom2 />
           </div>
         </div>
-        <div className="relative max-w-[29rem] lg:max-w-[50rem] mx-auto mb-10 -mt-[15%] md:mt-0">
-          <div className="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
-            <ToolBox
-              title="Console"
-              description="Try out trading on the fully decentralised Vega network (Testnet)."
-              icon={getImage(data.consoleIcon)}
-              link="https://console.fairground.wtf/"
-            />
-            <ToolBox
-              title="Governance"
-              description="Submit and vote on proposals to create and change markets, network parameters and assets."
-              icon={getImage(data.governanceIcon)}
-              link="https://token.vega.xyz/governance"
-            />
-            <ToolBox
-              title="Block Explorer"
-              description="Explore real-time Vega blockchain information."
-              icon={getImage(data.blockExplorerIcon)}
-              link="https://explorer.vega.xyz/"
-            />
-          </div>
+        <Container>
+          <div className="relative max-w-[29rem] lg:max-w-[50rem] mx-auto mb-10 -mt-[15%] md:mt-0">
+            <div className="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
+              <ToolBox
+                title="Console"
+                description="Try out trading on the fully decentralised Vega network (Testnet)."
+                icon={getImage(data.consoleIcon)}
+                link="https://console.fairground.wtf/"
+              />
+              <ToolBox
+                title="Governance"
+                description="Submit and vote on proposals to create and change markets, network parameters and assets."
+                icon={getImage(data.governanceIcon)}
+                link="https://token.vega.xyz/governance"
+              />
+              <ToolBox
+                title="Block Explorer"
+                description="Explore real-time Vega blockchain information."
+                icon={getImage(data.blockExplorerIcon)}
+                link="https://explorer.vega.xyz/"
+              />
+            </div>
 
-          <div className="text-center">
-            <LinkCta to="/use">Browse the dapps and tools</LinkCta>
+            <div className="text-center">
+              <LinkCta to="/use">Browse the dapps and tools</LinkCta>
+            </div>
           </div>
-        </div>
+        </Container>
         <div className="hidden md:block max-w-[38rem] xl:max-w-[45rem] mx-auto mb-20">
           <UniverseBottom />
         </div>
@@ -159,7 +161,7 @@ const IndexPage = ({ data }) => {
 
           <Container>
             <div className="py-8 lg:pt-16">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8 lg:grid-cols-4 mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 lg:gap-x-8 lg:gap-y-12 lg:grid-cols-4 mb-12">
                 <FeatureBox
                   title={t("Permissionless market creation")}
                   description={t("Propose a market on any underlying.")}
