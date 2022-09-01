@@ -11,10 +11,10 @@ const languages = [
     code: "es",
     localName: "Español",
   },
-  {
-    code: "cn",
-    localName: "中国人",
-  },
+  // {
+  //   code: "cn",
+  //   localName: "中国人",
+  // },
   // {
   //   code: "ru",
   //   localName: "Русский",
@@ -140,10 +140,12 @@ module.exports = {
         siteUrl: `https://vega.xyz`,
         trailingSlash: "always",
         i18nextOptions: {
+          returnEmptyString: false,
           interpolation: {
             escapeValue: false,
           },
           keySeparator: false,
+          saveMissing: true,
           nsSeparator: false,
         },
       },
