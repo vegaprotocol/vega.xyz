@@ -167,8 +167,10 @@ const IndexPage = ({ data }) => {
                   icon={PermissionlessMarketCreationIcon}
                 />
                 <FeatureBox
-                  title={t("Anti front running protection")}
-                  description={t("Fair access to the order book.")}
+                  title={t("Anti front running")}
+                  description={t(
+                    "Fair access to the order book, preventing miner extractable value (MEV)."
+                  )}
                   icon={AntiFrontRunningProtectionIcon}
                 />
                 <FeatureBox
