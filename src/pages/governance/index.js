@@ -112,7 +112,8 @@ const GovernancePage = ({ data }) => {
             <Trans t={t}>
               Decisions on the Vega network are on-chain, with tokenholders
               creating proposals that other tokenholders vote to approve or
-              reject. This is how the protocol powers the creation of decentralised financial products.
+              reject. This is how the protocol powers the creation of
+              decentralised financial products.
             </Trans>
           </LeadingLine>
         </div>

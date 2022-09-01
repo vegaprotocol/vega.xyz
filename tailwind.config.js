@@ -23,6 +23,8 @@ module.exports = {
         "vega-yellow": "#DFFF0B",
         "vega-mint": "#00F780",
         "vega-pink": "#FF077F",
+        "vega-text-muted": "#BFCCD6",
+        "vega-border-muted": "#696969",
       },
       scale: {
         185: "1.85",

@@ -1,6 +1,7 @@
 const path = require(`path`);
 const fetch = require(`node-fetch`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const spawn = require("cross-spawn");
 
 module.exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
@@ -125,5 +126,11 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         },
       ],
     },
+  });
+};
+
+exports.onPreInit = () => {
+  const result = spawn.sync("yarn", ["i18next", "src/**/*.js"], {
+    stdio: "inherit",
   });
 };
