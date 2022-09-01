@@ -17,19 +17,29 @@ export const MQXXLarge = ({ children }) => {
   return isXXLarge ? children : null;
 };
 
-export const MQLargeUp = ({ children }) => {
-  const isLargeUp = useMediaQuery({ minWidth: 1024 });
-  return isLargeUp ? children : null;
-};
-
 export const MQXLarge = ({ children }) => {
   const isXLarge = useMediaQuery({ minWidth: 1024, maxWidth: 1279 });
   return isXLarge ? children : null;
 };
 
+export const MQLargeUp = ({ children }) => {
+  const isLargeUp = useMediaQuery({ minWidth: 768 });
+  return isLargeUp ? children : null;
+};
+
 export const MQLarge = ({ children }) => {
   const isLarge = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   return isLarge ? children : null;
+};
+
+export const MQMediumDown = ({ children }) => {
+  const isMediumDown = useMediaQuery({ maxWidth: 767 });
+  return isMediumDown ? children : null;
+};
+
+export const MQMediumUp = ({ children }) => {
+  const isMediumUp = useMediaQuery({ minWidth: 640 });
+  return isMediumUp ? children : null;
 };
 
 export const MQMedium = ({ children }) => {

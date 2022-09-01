@@ -5,7 +5,7 @@ const LinkCta = (props) => {
   return (
     <Link
       to={props.to}
-      class="copy-xs inline-block text-[1.3125rem] underline-offset-8 underline hover:no-underline"
+      className="copy-xs inline-block text-[1.3125rem] underline-offset-8 underline hover:no-underline"
     >
       {props.children}
       <svg

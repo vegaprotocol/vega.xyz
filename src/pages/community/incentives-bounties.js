@@ -10,7 +10,7 @@ import Incentives from "../../components/Incentives";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const IncentivesBounties = ({ data }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("page.community.incentives-bounties");
   return (
     <Layout>
       <Seo

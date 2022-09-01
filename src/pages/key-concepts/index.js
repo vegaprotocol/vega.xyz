@@ -46,6 +46,10 @@ const KeyConceptsPage = () => {
     },
   ];
 
+  // t('Be as good as CeFi')
+  // t('Be better than CeFi)
+  // t('Help DeFi mature')
+
   const { t } = useTranslation("page.key-concepts");
 
   return (
@@ -114,7 +118,7 @@ const KeyConceptsPage = () => {
           <PurposeBuiltBlock />
 
           <BlockD
-            title={t("Anti front-running protection")}
+            title={t("Anti front-running")}
             diagram={<FrontRunningProtectionDiagramResponsive />}
           >
             <p>

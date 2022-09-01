@@ -11,14 +11,6 @@ const languages = [
     code: "es",
     localName: "Español",
   },
-  // {
-  //   code: "cn",
-  //   localName: "中国人",
-  // },
-  // {
-  //   code: "ru",
-  //   localName: "Русский",
-  // },
 ];
 
 module.exports = {

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-import TickerCell from "./TickerCell";
 import BigNumber from "bignumber.js";
-import Marquee from "react-fast-marquee";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Autoplay } from "swiper";
+import { MQMediumDown, MQLargeUp } from "../utils/media-queries.js";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 const Ticker = () => {
   const { t } = useTranslation("component.ticker");
@@ -13,6 +16,17 @@ const Ticker = () => {
       ...prevState,
       [name]: value,
     }));
+  };
+
+  const TickerCell = ({ label, value }) => {
+    return (
+      <div className="text-center dark:bg-black bg-white">
+        <div className="text-[3.375rem] md:text-[2.75rem] xl:text-[3.375rem]">
+          {value}
+        </div>
+        <div className="text-[0.9375rem] uppercase text-vega-grey">{label}</div>
+      </div>
+    );
   };
 
   useEffect(() => {
@@ -62,37 +76,59 @@ const Ticker = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden whitespace-nowrap border-t border-b border-current">
+    <div className="overflow-hidden whitespace-nowrap">
       {stats ? (
-        <div className="relative">
-          <div className="absolute flex items-center z-10 h-[5rem] md:h-[5.625rem] left-0 top-0 bg-black dark:bg-white text-white dark:text-black text-[1.5rem] lg:text-[1.875rem] leading-none uppercase px-3 md:px-6 py-2 md:py-4 w-[9rem] md:w-[12.5rem]">
-            <Trans>Status</Trans>:
-            <br />
-            Mainnet
-          </div>
-          <Marquee
-            speed={60}
-            gradient={false}
-            pauseOnHover={true}
-            className="pl-[12.5rem]"
-          >
-            <div className="flex h-[5rem] md:h-[5.625rem] border-r border-current">
-              <TickerCell title={t("Validators")} value={stats.validators} />
-              <TickerCell title={t("Total Staked")} value={stats.stakedTotal} />
+        <div>
+          <MQMediumDown>
+            <Swiper
+              modules={[EffectFade, Autoplay]}
+              effect="fade"
+              speed={1200}
+              fadeEffect={{
+                crossFade: true,
+              }}
+              loop={true}
+              autoplay={{
+                delay: 1000,
+              }}
+            >
+              <SwiperSlide>
+                <TickerCell label={t("Validators")} value={stats.validators} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <TickerCell
+                  label={t("Total Staked")}
+                  value={stats.stakedTotal}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <TickerCell
+                  label={t("Avg. Block Time")}
+                  value={stats.blockDuration}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <TickerCell
+                  label={t("Current Epoch")}
+                  value={stats.currentEpoch}
+                />
+              </SwiperSlide>
+            </Swiper>
+          </MQMediumDown>
+          <MQLargeUp>
+            <div className="relative flex justify-center gap-12">
+              <TickerCell label={t("Validators")} value={stats.validators} />
+              <TickerCell label={t("Total Staked")} value={stats.stakedTotal} />
               <TickerCell
-                title={t("Avg. Block Time")}
+                label={t("Avg. Block Time")}
                 value={stats.blockDuration}
               />
               <TickerCell
-                title={t("Current Epoch")}
+                label={t("Current Epoch")}
                 value={stats.currentEpoch}
               />
-              <TickerCell
-                text={t("Learn more about restricted mainnet")}
-                link="https://blog.vega.xyz/what-to-expect-from-restricted-mainnet-616086d9fdaf"
-              />
             </div>
-          </Marquee>
+          </MQLargeUp>
         </div>
       ) : (
         <div className="flex h-[5.625rem] border-current items-center justify-center text-[1.875rem] leading-none uppercase text-center">
