@@ -9,7 +9,7 @@
   "What makes Vega different": "Lo que hace diferente a Vega",
   "Explore the features that enable you to trade and create derivatives on a fully decentralised network.": "Explore las funciones que le permiten operar y crear derivados en una red totalmente descentralizada.",
   "Vega is designed to:": "Vega está diseñado para:",
-  "Anti front-running protection": "",
+  "Anti front-running protection": "Anti front-running protection",
   "Vega's pre-protocol widget, 'Wendy', ensures all nodes see the same sequence of transactions and provides cryptographic proof that all traders have fair access to the order book. This creates a fair marketplace where no participant can gain an unfair advantage, an issue rampant in DeFi and something not even sophisticated traditional exchanges can offer.": "El widget de protocolo previo 'Wendy' de Vega garantiza que todos los nodos vean la misma secuencia de transacciones y proporciona una prueba criptográfica de que todos los comerciantes tienen acceso justo al libro de pedidos. Esto crea un mercado justo en el que ningún participante puede obtener una ventaja injusta, un problema endémico en DeFi y algo que incluso los intercambios tradicionales sofisticados no pueden ofrecer.",
   "Read more about:": "Aprender más acerca de:",
   "i18nKey=[vegasFrontRunning]": "Protección frontal de Vega en los registros <1>'Wendy, el pequeño y bueno widget de equidad'</1> y <5>'Wendy crece'</5>",
