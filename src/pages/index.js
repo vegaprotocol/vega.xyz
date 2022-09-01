@@ -31,7 +31,7 @@ const ToolBox = ({ title, description, icon }) => {
         <GatsbyImage image={icon} alt={title} className="lg:mb-6 lg:w-auto " />
       </div>
       <div>
-        <div class="title-s mb-3">{title}</div>
+        <div className="title-s mb-3">{title}</div>
         <p className="text-vega-text-muted copy-xxs !mb-0">{description}</p>
       </div>
     </div>
@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
           <div className="max-w-[18.75rem] mx-auto md:hidden">
             <UniverseTop />
           </div>
-          <div class="absolute top-0 left-0 right-0">
+          <div className="absolute top-0 left-0 right-0">
             <div className="grid grid-cols-12 max-w-[100rem] mx-auto">
               <div className="col-span-3">
                 <UniverseLeft />
@@ -95,7 +95,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <div className="relative max-w-[29rem] lg:max-w-[50rem] mx-auto mb-10 -mt-[15%] md:mt-0">
-          <div class="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
+          <div className="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
             <ToolBox
               title={t("Console")}
               description={t(

@@ -19,14 +19,14 @@ const LinkCta = (props) => {
         <path
           d="M0 6.47266L11.5641 6.47266"
           stroke="currentColor"
-          stroke-width="1.3"
-          stroke-miterlimit="10"
+          strokeWidth="1.3"
+          strokeMiterlimit="10"
         />
         <path
           d="M6.30859 1.00024L11.9522 6.50012L6.30859 12"
           stroke="currentColor"
-          stroke-width="1.3"
-          stroke-miterlimit="10"
+          strokeWidth="1.3"
+          strokeMiterlimit="10"
         />
       </svg>
     </Link>

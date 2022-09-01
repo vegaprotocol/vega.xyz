@@ -56,7 +56,7 @@ const KeyConceptsPage = () => {
           "Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
         )}
       />
-      <div data-cy="main" class="mb-16">
+      <div data-cy="main" className="mb-16">
         <div className="max-w-[45rem] px-4 md:px-0 xl:max-w-[50rem] mx-auto text-center pt-16">
           <h1 className="mb-6">
             <BoxTitle text={t("Key concepts")} />
@@ -471,7 +471,11 @@ const KeyConceptsPage = () => {
           >
             <p>
               <Trans t={t}>
-                Vega currently lets users propose any ERC-20 tokens to use as collateral. Once the protocol is fully blockchain-agnostic, trades will be able to settle in any crypto-asset on a supported chain, paving the way for physically settled and cash settled products, as commodity and asset tokenisation become widespread.
+                Vega currently lets users propose any ERC-20 tokens to use as
+                collateral. Once the protocol is fully blockchain-agnostic,
+                trades will be able to settle in any crypto-asset on a supported
+                chain, paving the way for physically settled and cash settled
+                products, as commodity and asset tokenisation become widespread.
               </Trans>
             </p>
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
