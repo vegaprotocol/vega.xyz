@@ -11,6 +11,14 @@ const languages = [
     code: "es",
     localName: "Español",
   },
+  {
+    code: "ru",
+    localName: "Pусский",
+  },
+  {
+    code: "cn",
+    localName: "简体中文",
+  },
 ];
 
 module.exports = {
@@ -139,6 +147,7 @@ module.exports = {
           keySeparator: false,
           saveMissing: true,
           nsSeparator: false,
+          debug: true,
         },
       },
     },

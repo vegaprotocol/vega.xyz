@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import ButtonLink from "../../components/ButtonLink";
 import BoxTitle from "../../components/BoxTitle";
@@ -14,7 +15,12 @@ import ToolBox from "../../components/ToolBox";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const CommunityPage = ({ data }) => {
-  const { t } = useTranslation("page.community");
+  const { i18n, t } = useTranslation("page.community");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
 
   return (
     <Layout>
@@ -24,6 +30,7 @@ const CommunityPage = ({ data }) => {
           "Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16">
           <h1>
@@ -184,19 +191,7 @@ export default CommunityPage;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(
-      filter: {
-        ns: {
-          in: [
-            "common"
-            "component.navigation"
-            "component.fairground"
-            "page.community"
-          ]
-        }
-        language: { eq: $language }
-      }
-    ) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns

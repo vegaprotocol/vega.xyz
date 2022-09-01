@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import Seo from "../../components/Seo";
 import BoxTitle from "../../components/BoxTitle";
@@ -31,6 +32,13 @@ import DynamicMarginsDiagramResponsive from "../../components/KeyConcepts/Diagra
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const KeyConceptsPage = () => {
+  const { i18n, t } = useTranslation("page.key-concepts");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
+
   const sections = [
     {
       title: "Be as good as CeFi",
@@ -47,10 +55,8 @@ const KeyConceptsPage = () => {
   ];
 
   // t('Be as good as CeFi')
-  // t('Be better than CeFi)
+  // t('Be better than CeFi')
   // t('Help DeFi mature')
-
-  const { t } = useTranslation("page.key-concepts");
 
   return (
     <Layout>
@@ -60,6 +66,7 @@ const KeyConceptsPage = () => {
           "Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <div data-cy="main" className="mb-16">
         <div className="max-w-[45rem] px-4 md:px-0 xl:max-w-[50rem] mx-auto text-center pt-16">
           <h1 className="mb-6">

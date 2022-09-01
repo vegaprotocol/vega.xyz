@@ -1,8 +1,10 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import Layout from "../components/Layout";
 import Container from "../components/Container";
 import Seo from "../components/Seo";
+import TranslationsBanner from "../components/TranslationsBanner";
 import Ticker from "../components/Ticker";
 import GlitchTitle from "../components/GlitchTitle";
 import BlogPosts from "../components/BlogPosts";
@@ -15,7 +17,6 @@ import RoadMap from "../components/RoadMap";
 import RoadMapMobile from "../components/RoadMapMobile";
 import Rip from "../components/Svg/Home/Rip/Responsive";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import UniverseLeft from "../components/Svg/Home/UniverseLeft/Responsive";
 import UniverseRight from "../components/Svg/Home/UniverseRight/Responsive";
 import UniverseBottom from "../components/Svg/Home/UniverseBottom/Responsive";
@@ -64,7 +65,12 @@ const FeatureBox = ({ title, description, icon }) => {
 };
 
 const IndexPage = ({ data }) => {
-  const { t } = useTranslation("page.index");
+  const { t, i18n } = useTranslation("page.index");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
+
   return (
     <Layout>
       <Seo
@@ -73,6 +79,7 @@ const IndexPage = ({ data }) => {
           "Discover Web3's native derivatives trading platform that is helping DeFi mature."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <main dataCy={"main"}>
         <div className="relative mt-6 md:mt-8">
           <div className="max-w-[18.75rem] mx-auto md:hidden">

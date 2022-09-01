@@ -1,0 +1,34 @@
+import React, { useState, useEffect } from "react";
+import Container from "../components/Container";
+import Globe from "../components/Svg/Globe";
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+
+const TranslationsBanner = ({ targeti18n }) => {
+  const { t, i18n } = useTranslation("component.translations-banner");
+
+  return (
+    <div className="bg-vega-purple p-5 mb-12">
+      <Container>
+        <div className="flex justify-between items-center gap-x-8">
+          <div className="grow text-base md:text-[1.125rem] leading-[1.4]">
+            <Trans t={t}>
+              Fluent in this language? Help us translate the page.
+            </Trans>
+            <br className="hidden xl:block" />{" "}
+            <Trans t={t}>
+              <Link to="/" className="underline hover:no-underline">
+                Click here to contribute
+              </Link>
+              .
+            </Trans>
+          </div>
+          <div className="shink-0">
+            <Globe />
+          </div>
+        </div>
+      </Container>
+    </div>
+  );
+};
+
+export default TranslationsBanner;
