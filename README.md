@@ -54,7 +54,7 @@ Markdown files should be duplicated across every language even if they are not y
 
 There is a Vega+ Ambassador responsible for coordinating community efforts to create each language version of the website.
 
-When content is added or updated on vega.xyz and translation is required, the page will show a banner for a selected language indicating that it translations are needed.
+When content is added or updated on vega.xyz and translation is required, the page will show a banner for a selected language indicating that translations are needed.
 
 The Ambassadors will also notify the community in Discord to let everyone know there is new content ready to be translated.
 
