@@ -138,42 +138,6 @@ const DevelopPage = ({ data }) => {
         </PageSection>
       </Container>
 
-      <Container>
-        <PageSection>
-          <div className="md:grid md:grid-cols-2 items-center">
-            <div className="md:px-8">
-              <div className="mb-12 md:mb-0 md:-translate-x-1/2 md:scale-[200%] lg:-translate-x-1/4 lg:scale-150">
-                <CustomMarkets />
-              </div>
-            </div>
-
-            <div className="text-center md:text-left">
-              <h2 className="title-l lg:title-xl mb-4">
-                <Trans t={t}>Create custom markets</Trans>
-              </h2>
-
-              <div className="text-[0.9375rem] text-vega-mid-grey uppercase">
-                <Trans t={t}>Status:</Trans>
-              </div>
-              <div className="copy-s">
-                <Trans t={t}>Coming soon to Mainnet</Trans>
-              </div>
-
-              <div className="inline-block mb-4 mr-4">
-                <ButtonLink
-                  text={t("Try it out on Fairground")}
-                  link="https://fairground.wtf/"
-                />
-              </div>
-              <ButtonLink
-                text={t("Explore the Docs")}
-                link="https://docs.fairground.vega.xyz/docs/trading-questions/#governance"
-              />
-            </div>
-          </div>
-        </PageSection>
-      </Container>
-
       <PageSection>
         <div className="relative pt-16 px-16 text-center md:pt-32">
           <video
