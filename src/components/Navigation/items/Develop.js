@@ -38,6 +38,11 @@ const Develop = () => {
             link="https://vega.xyz/discord"
           />
         </NavigationList>
+          <NavigationItem
+            text={t("Careers")}
+            link="/careers"
+          />
+        </NavigationList>
       </div>
       <div>
         <NavigationHeading>
