@@ -275,7 +275,7 @@ const UsePage = ({ data }) => {
               <Trans t={t}>Want to add something to this list?</Trans>
             </p>
             <p className="prose copy-s text-vega-mid-grey">
-              <Trans t={t} i18nKey="Chat to us on Discord and start building">
+              <Trans t={t}>
                 <a
                   href="https://vega.xyz/discord/"
                   target="_blank"

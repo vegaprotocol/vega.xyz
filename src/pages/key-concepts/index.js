@@ -142,7 +142,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey=[vegasFrontRunning]">
+              <Trans t={t}>
                 Vega's front running protection in the papers
                 <TextLink
                   to="https://vega.xyz/papers/fairness.pdf"
@@ -160,7 +160,7 @@ const KeyConceptsPage = () => {
               </Trans>
             </p>
             <p>
-              <Trans t={t} i18nKey="i18nKey[orTryOut]">
+              <Trans t={t}>
                 Or try out the{" "}
                 <TextLink
                   to="https://github.com/vegaprotocol/wendy/"
@@ -233,7 +233,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[highCapitalEfficiency]">
+              <Trans t={t}>
                 High capital efficiency in section 3 of the Vega blog{" "}
                 <TextLink
                   to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
@@ -244,7 +244,7 @@ const KeyConceptsPage = () => {
               </Trans>
             </p>
             <p>
-              <Trans t={t} i18nKey="i18nKey[howVegaOptimises]">
+              <Trans t={t}>
                 How Vega optimises for high capital efficiency in sections 3.5
                 and 6.6 of the Vega
                 <TextLink
@@ -281,7 +281,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[differentMethods]">
+              <Trans t={t}>
                 Different methods of price discovery in section 5 of the Vega
                 blog{" "}
                 <TextLink
@@ -309,7 +309,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[theRiskConsiderations]">
+              <Trans t={t}>
                 The risk considerations behind pseudonymous environments and
                 Vega's protective measures in the Vega{" "}
                 <TextLink
@@ -340,7 +340,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[marketCurationIn]">
+              <Trans t={t}>
                 Market curation in section 3.4 of the Vega{" "}
                 <TextLink
                   to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
@@ -370,7 +370,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[crossMargining]">
+              <Trans t={t}>
                 Cross margining in the Vega blog{" "}
                 <TextLink
                   to="https://blog.vega.xyz/credit-risk-and-margins-on-vega-e72bbac06723"
@@ -381,7 +381,7 @@ const KeyConceptsPage = () => {
               </Trans>
             </p>
             <p>
-              <Trans t={t} i18nKey="i18nKey[automatedCrossMargining]">
+              <Trans t={t}>
                 Automated cross margining in section 3 of the Vega blog{" "}
                 <TextLink
                   to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
@@ -411,7 +411,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[peggedOrders]">
+              <Trans t={t}>
                 Pegged orders for automated management in the Vega blog{" "}
                 <TextLink
                   to="https://blog.vega.xyz/pegged-orders-on-vega-d78e55c17bb5"
@@ -460,7 +460,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[gasFeesUnder]">
+              <Trans t={t}>
                 Gas fees under 'Miner extractable value (MEV) on blockchains' on
                 the blog{" "}
                 <TextLink
@@ -493,7 +493,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[crossChainSupport]">
+              <Trans t={t}>
                 Cross chain support and multi-chain collateral in the Vega paper
                 <TextLink
                   to="https://vega.xyz/papers/vega-technical-overview.pdf"

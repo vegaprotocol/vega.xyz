@@ -34,7 +34,7 @@ const PurposeBuiltBlock = () => {
               </div>
 
               <p>
-                <Trans t={t} i18nKey="i18nkey[theImportanceOf]">
+                <Trans t={t}>
                   The importance of a purpose built blockchain for trading on
                   the Vega blog{" "}
                   <TextLink
