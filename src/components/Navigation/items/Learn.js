@@ -24,6 +24,7 @@ const Learn = () => {
             link="https://vega.xyz/papers/vega-technical-overview.pdf"
           />
           <NavigationItem text={t("Talks")} link="/talks" />
+          <NavigationItem text={t("Partners and backers")} link="/partners-backers" />
         </NavigationList>
       </div>
       <div>
