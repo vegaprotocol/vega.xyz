@@ -63,6 +63,10 @@ const Community = () => {
             text={t("Builders club")}
             link="https://vega.xyz/discord"
           />
+          <NavigationItem
+            text={t("Careers")}
+            link="/careers"
+          />
         </NavigationList>
         <NavigationHeading>
           <Trans>Get rewarded</Trans>
