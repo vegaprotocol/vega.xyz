@@ -42,14 +42,6 @@ The vast majority of entries use natural language keys, so all you need to do is
 }
 ```
 
-Occasionally there are exceptions where text may contain link elements. In this case a simplified reference key is used and you will need to refer to the English locale file to find the corresponding text that requires translating.
-
-```
-{
-  "i18nKey[someTextToTranslate]": "This could be a more complex paragraph with a <0>link</0> inside. I will need to refer to the English locale file to find the original text to translate."
-}
-```
-
 **It is important to retain the correct positioning of any tags within the text. You might find tags such as <0>, <1> etc., and HTML elements such as &lt;p&gt; or &lt;b&gt;.**
 
 ### Markdown files
