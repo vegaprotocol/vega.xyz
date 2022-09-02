@@ -151,6 +151,11 @@ const Footer = () => {
                     <Trans t={t}>Careers</Trans>
                   </TextLink>
                 </li>
+                <li>
+                  <TextLink to="/partners-backers" className="py-1.5 block leading-[1.3]">
+                    <Trans t={t}>Partners and backers</Trans>
+                  </TextLink>
+                </li>
               </ul>
             </div>
             <div>
@@ -271,11 +276,6 @@ const Footer = () => {
                 <li>
                   <TextLink to="/talks" className="py-1.5 block leading-[1.3]">
                     <Trans t={t}>Talks</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink to="/partners-backers" className="py-1.5 block leading-[1.3]">
-                    <Trans t={t}>Partners and backers</Trans>
                   </TextLink>
                 </li>
                 <li>
