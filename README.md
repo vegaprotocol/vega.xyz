@@ -26,25 +26,31 @@ Netlify is configured for continuous deployment.
 
 ---
 
-## i18n
+# Internationalisation
 
 The website uses [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next) plugin to handle translations. This is based on [react-i18next](https://react.i18next.com/).
 
 ### Locale files
 
-Locale files can be found in `~/locales`. The convention is to create a separate file for each page, component, or JSON object with the prefix of either `page`, `component`, or `content`.
+Translations can be found in JSON files located in `~/locales`. There is a folder for each language and a file for each individual page and component. Files follow a logical naming convention to help you understand where it is referenced in the website.
 
-Text intended to be translated should be treated as follows:
-
-```
-<Trans t={t}>Text to be translated</Trans>
-```
-
-or
+The vast majority of entries use natural language keys, so all you need to do is read the key and provide the translation in the right hand part of the key/value pair. For example:
 
 ```
-{t("Text to be translated")}
+{
+  "This text needs translating": "Este texto necesita traducción"
+}
 ```
+
+Occasionally there are exceptions where text may contain link elements. In this case a simplified reference key is used and you will need to refer to the English locale file to find the corresponding text that requires translating.
+
+```
+{
+  "i18nKey[someTextToTranslate]": "This could be a more complex paragraph with a <0>link</0> inside. I will need to refer to the English locale file to find the original text to translate."
+}
+```
+
+**It is important to retain the correct positioning of any tags within the text. You might find tags such as <0>, <1> etc., and HTML elements such as &lt;p&gt; or &lt;b&gt;.**
 
 ### Markdown files
 
@@ -53,3 +59,18 @@ Translations for markdown files in `~/src/content` are specified using file exte
 - index.en.md
 - index.es.md
 - index.ru.md
+- index.cn.md
+
+Markdown files should be duplicated across every language even if they are not yet translated, otherwise they will not display on the website for the selected language.
+
+## Identifying content that requires translation
+
+There is a Vega+ Ambassador responsible for coordinating community efforts to create each language version of the website.
+
+When content is added or updated on vega.xyz and translation is required, the page will show a banner for a selected language indicating that it translations are needed.
+
+The Ambassadors will also notify the community in Discord to let everyone know there is new content ready to be translated.
+
+## Contributing translations
+
+Create a branch for the translations you wish to contribute. Make the necessary edits to the locale and/or markdown files. When you are done, submit a pull request with the relevant Ambassador for your language as the reviewer. The Ambassador will review the translation for accuracy before releasing it to the website.
