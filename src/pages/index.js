@@ -79,8 +79,9 @@ const IndexPage = ({ data }) => {
           "Discover Web3's native derivatives trading platform that is helping DeFi mature."
         )}
       />
+
       {missingTranslations && <TranslationsBanner />}
-      <main dataCy={"main"}>
+      <main>
         <div className="relative mt-6 md:mt-8">
           <div className="max-w-[18.75rem] mx-auto md:hidden">
             <UniverseTop />
@@ -126,7 +127,7 @@ const IndexPage = ({ data }) => {
             <UniverseBottom2 />
           </div>
         </div>
-        <Container>
+        <Container dataCy={"main"}>
           <div className="relative max-w-[29rem] lg:max-w-[50rem] mx-auto mb-10 -mt-[15%] md:mt-0">
             <div className="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
               <ToolBox
