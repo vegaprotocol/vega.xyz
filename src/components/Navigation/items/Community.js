@@ -22,6 +22,7 @@ const Community = () => {
             text={t("Contributors")}
             link="/community/contributors"
           />
+          <NavigationItem text={t("Partners and backers")} link="/partners-backers" />
         </NavigationList>
       </div>
       <div className="lg:col-span-4">
@@ -62,6 +63,10 @@ const Community = () => {
           <NavigationItem
             text={t("Builders club")}
             link="https://vega.xyz/discord"
+          />
+          <NavigationItem
+            text={t("Careers")}
+            link="/careers"
           />
         </NavigationList>
         <NavigationHeading>

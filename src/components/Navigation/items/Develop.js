@@ -37,6 +37,7 @@ const Develop = () => {
             text={t("Builders club")}
             link="https://vega.xyz/discord"
           />
+          <NavigationItem text={t("Careers")} link="/careers" />
         </NavigationList>
       </div>
       <div>
