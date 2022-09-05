@@ -52,7 +52,11 @@ Markdown files should be duplicated across every language even if they are not y
 
 ## Identifying content that requires translation
 
-There is a Vega+ Ambassador responsible for coordinating community efforts to create each language version of the website.
+There is a Vega+ Ambassador responsible for coordinating community efforts to create each language version of the website:
+
+- Español (es): To be confirmed
+- Pусский (ru): To be confirmed
+- 简体中文 (cn): To be confirmed
 
 When content is added or updated on vega.xyz and translation is required, the page will show a banner for a selected language indicating that translations are needed.
 
