@@ -54,7 +54,7 @@ Markdown files should be duplicated across every language even if they are not y
 
 There is a Vega+ Ambassador responsible for coordinating community efforts to create each language version of the website:
 
-- Español (es): To be confirmed
+- Español (es): Angel | aikapenelope on GitHub | angeldeln111#7758 on [Discord](https://vega.xyz/discord)
 - Pусский (ru): To be confirmed
 - 简体中文 (cn): To be confirmed
 
