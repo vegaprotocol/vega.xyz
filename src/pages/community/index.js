@@ -153,6 +153,14 @@ const CommunityPage = ({ data }) => {
             icon={getImage(data.iconBuildersClub)}
           />
           <ToolBox
+            title={t("Translate")}
+            text={t(
+              "For the talented multi-linguists who want to support the project with translations."
+            )}
+            link="https://github.com/vegaprotocol/vega.xyz/tree/i18n#internationalisation"
+            icon={getImage(data.iconTranslation)}
+          />
+          <ToolBox
             title={t("Feedback")}
             text={t("Feedback and feature requests on Github")}
             link="https://github.com/vegaprotocol/vega/issues"
@@ -303,6 +311,17 @@ export const query = graphql`
     }
     iconBuildersClub: file(
       relativePath: { eq: "contribute-icons/builders-club.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconTranslation: file(
+      relativePath: { eq: "contribute-icons/translation.png" }
     ) {
       childImageSharp {
         gatsbyImageData(
