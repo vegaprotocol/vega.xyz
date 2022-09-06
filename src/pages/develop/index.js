@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import Wormhole from "../../components/Svg/Wormhole";
 import Incentives from "../../components/Incentives";
-import CustomMarkets from "../../components/Svg/CustomMarkets";
 import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
@@ -20,30 +20,13 @@ import LadderIllustration from "../../components/Svg/LadderIllustration";
 import { StaticImage } from "gatsby-plugin-image";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
-const ButtonBlock = () => {
-  const { t } = useTranslation("page.develop");
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-[35rem] mx-auto md:mx-0">
-      <div>
-        <ButtonLink
-          text={t("Explore the docs")}
-          link="https://docs.vega.xyz/docs/concepts/new-to-vega/"
-          className="w-full text-center"
-        />
-      </div>
-      <div>
-        <ButtonLink
-          text={t("Get the code")}
-          link="https://github.com/vegaprotocol"
-          className="w-full text-center"
-        />
-      </div>
-    </div>
-  );
-};
-
 const DevelopPage = ({ data }) => {
-  const { t } = useTranslation("page.develop");
+  const { i18n, t } = useTranslation("page.develop");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
   return (
     <Layout>
       <Seo
@@ -52,6 +35,7 @@ const DevelopPage = ({ data }) => {
           "Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={"main"}>
         <div className="pt-6 mb-16 lg:pt-16">
           <div className="md:grid md:grid-cols-12">
@@ -65,11 +49,26 @@ const DevelopPage = ({ data }) => {
               <LeadingLine className="text-current max-w-[30rem]">
                 <Trans t={t}>
                   Contribute to our open source repositories on GitHub or create
-                  software using Vega &mdash; and earn rewards.
+                  software using Vega — and earn rewards.
                 </Trans>
               </LeadingLine>
               <div className="hidden md:block mt-12">
-                <ButtonBlock />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-[35rem] mx-auto md:mx-0">
+                  <div>
+                    <ButtonLink
+                      text={t("Explore the docs")}
+                      link="https://docs.vega.xyz/docs/concepts/new-to-vega/"
+                      className="w-full text-center"
+                    />
+                  </div>
+                  <div>
+                    <ButtonLink
+                      text={t("Get the code")}
+                      link="https://github.com/vegaprotocol"
+                      className="w-full text-center"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
             <div className="relative col-span-6 col-start-7 row-span-full md:mt-0">
@@ -79,7 +78,22 @@ const DevelopPage = ({ data }) => {
             </div>
           </div>
           <div className="mt-6 md:hidden">
-            <ButtonBlock />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[20rem] md:max-w-[35rem] mx-auto md:mx-0">
+              <div>
+                <ButtonLink
+                  text={t("Explore the docs")}
+                  link="https://docs.vega.xyz/docs/concepts/new-to-vega/"
+                  className="w-full text-center"
+                />
+              </div>
+              <div>
+                <ButtonLink
+                  text={t("Get the code")}
+                  link="https://github.com/vegaprotocol"
+                  className="w-full text-center"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </Container>

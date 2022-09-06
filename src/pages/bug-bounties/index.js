@@ -1,6 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
+import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Seo from "../../components/Seo";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import Callout from "../../components/Callout";
 import axios from "axios";
@@ -9,13 +11,18 @@ import Loader from "../../components/Loader";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const BugBountiesPage = ({ data }) => {
-  const { t } = useTranslation("page.bug-bounties");
+  const { t, i18n } = useTranslation("page.bug-bounties");
+  const [missingTranslations, setMissingTranslations] = useState(false);
   const [message, setMessage] = useState("");
   const [confirmDialog, setConfirmDialog] = useState(false);
   const [formError, setFormError] = useState({ error: true, message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [confirmationMessage, setConfirmationMessage] = useState("");
   const form = useRef();
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
 
   const checkForm = () => {
     if (confirmationMessage) {
@@ -76,6 +83,7 @@ const BugBountiesPage = ({ data }) => {
           "Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <Container>
         <div>
           <div className="border-t border-current">
@@ -201,6 +209,7 @@ const BugBountiesPage = ({ data }) => {
                       <a
                         href="https://docs.vega.xyz/docs/mainnet/tools#vega-capsule"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <Trans t={t}></Trans>Vega Capsule tool
                       </a>
@@ -271,21 +280,21 @@ const BugBountiesPage = ({ data }) => {
                       </div>
 
                       <div className="flex items-center justify-end mt-6 px-6 py-3">
-                        <a
+                        <button
                           className="ml-6 uppercase cursor-pointer"
                           onClick={(e) => setConfirmDialog(false)}
                         >
                           <Trans t={t}>Cancel</Trans>
-                        </a>
+                        </button>
                         {isSubmitting ? (
                           <Loader className="ml-3" />
                         ) : (
-                          <a
+                          <button
                             className="ml-6 uppercase cursor-pointer"
                             onClick={(e) => send(e)}
                           >
                             <Trans t={t}>Submit</Trans>
-                          </a>
+                          </button>
                         )}
                       </div>
                     </div>
@@ -315,3 +324,18 @@ const BugBountiesPage = ({ data }) => {
 };
 
 export default BugBountiesPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      translations: totalCount
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

@@ -16,6 +16,8 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
     statusColours[status.toString().toLowerCase().replace(/\s/g, "")];
   // t('Available')
   // t('Ended')
+  // t('Bounty')
+  // t('Incentive')
 
   return (
     <div
@@ -24,7 +26,6 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
     >
       <div className="text-[0.8125rem] absolute left-0 top-0 px-2 dark:text-black text-white bg-black dark:bg-white uppercase">
         {t(type)}
-        /* t('Bounty') t('Incentive') */
       </div>
       <div className="grid grid-cols-12">
         <div className="col-span-12 md:mb-3 md:col-span-6">

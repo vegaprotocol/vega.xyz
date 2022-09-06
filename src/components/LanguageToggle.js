@@ -79,7 +79,7 @@ const LanguageToggle = () => {
             <li key={lng}>
               <button
                 href="#"
-                tabindex={0}
+                tabIndex={0}
                 className="text-left min-w-[8.125rem] inline-block px-3 py-1.5 rounded-[2px] hover:dark:bg-vega-lightest-grey hover:bg-white"
                 onClick={(e) => {
                   e.preventDefault();

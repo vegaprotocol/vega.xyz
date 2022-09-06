@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import Seo from "../../components/Seo";
 import BoxTitle from "../../components/BoxTitle";
@@ -31,6 +32,13 @@ import DynamicMarginsDiagramResponsive from "../../components/KeyConcepts/Diagra
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const KeyConceptsPage = () => {
+  const { i18n, t } = useTranslation("page.key-concepts");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
+
   const sections = [
     {
       title: "Be as good as CeFi",
@@ -47,10 +55,8 @@ const KeyConceptsPage = () => {
   ];
 
   // t('Be as good as CeFi')
-  // t('Be better than CeFi)
+  // t('Be better than CeFi')
   // t('Help DeFi mature')
-
-  const { t } = useTranslation("page.key-concepts");
 
   return (
     <Layout>
@@ -60,6 +66,7 @@ const KeyConceptsPage = () => {
           "Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <div data-cy="main" className="mb-16">
         <div className="max-w-[45rem] px-4 md:px-0 xl:max-w-[50rem] mx-auto text-center pt-16">
           <h1 className="mb-6">
@@ -135,7 +142,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey=[vegasFrontRunning]">
+              <Trans t={t}>
                 Vega's front running protection in the papers
                 <TextLink
                   to="https://vega.xyz/papers/fairness.pdf"
@@ -153,7 +160,7 @@ const KeyConceptsPage = () => {
               </Trans>
             </p>
             <p>
-              <Trans t={t} i18nKey="i18nKey[orTryOut]">
+              <Trans t={t}>
                 Or try out the{" "}
                 <TextLink
                   to="https://github.com/vegaprotocol/wendy/"
@@ -226,7 +233,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[highCapitalEfficiency]">
+              <Trans t={t}>
                 High capital efficiency in section 3 of the Vega blog{" "}
                 <TextLink
                   to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
@@ -237,7 +244,7 @@ const KeyConceptsPage = () => {
               </Trans>
             </p>
             <p>
-              <Trans t={t} i18nKey="i18nKey[howVegaOptimises]">
+              <Trans t={t}>
                 How Vega optimises for high capital efficiency in sections 3.5
                 and 6.6 of the Vega
                 <TextLink
@@ -274,7 +281,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[differentMethods]">
+              <Trans t={t}>
                 Different methods of price discovery in section 5 of the Vega
                 blog{" "}
                 <TextLink
@@ -302,7 +309,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[theRiskConsiderations]">
+              <Trans t={t}>
                 The risk considerations behind pseudonymous environments and
                 Vega's protective measures in the Vega{" "}
                 <TextLink
@@ -333,7 +340,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[marketCurationIn]">
+              <Trans t={t}>
                 Market curation in section 3.4 of the Vega{" "}
                 <TextLink
                   to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
@@ -363,7 +370,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[crossMargining]">
+              <Trans t={t}>
                 Cross margining in the Vega blog{" "}
                 <TextLink
                   to="https://blog.vega.xyz/credit-risk-and-margins-on-vega-e72bbac06723"
@@ -374,7 +381,7 @@ const KeyConceptsPage = () => {
               </Trans>
             </p>
             <p>
-              <Trans t={t} i18nKey="i18nKey[automatedCrossMargining]">
+              <Trans t={t}>
                 Automated cross margining in section 3 of the Vega blog{" "}
                 <TextLink
                   to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
@@ -404,7 +411,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[peggedOrders]">
+              <Trans t={t}>
                 Pegged orders for automated management in the Vega blog{" "}
                 <TextLink
                   to="https://blog.vega.xyz/pegged-orders-on-vega-d78e55c17bb5"
@@ -453,7 +460,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[gasFeesUnder]">
+              <Trans t={t}>
                 Gas fees under 'Miner extractable value (MEV) on blockchains' on
                 the blog{" "}
                 <TextLink
@@ -486,7 +493,7 @@ const KeyConceptsPage = () => {
               <Trans t={t}>Read more about:</Trans>
             </div>
             <p>
-              <Trans t={t} i18nKey="i18nKey[crossChainSupport]">
+              <Trans t={t}>
                 Cross chain support and multi-chain collateral in the Vega paper
                 <TextLink
                   to="https://vega.xyz/papers/vega-technical-overview.pdf"

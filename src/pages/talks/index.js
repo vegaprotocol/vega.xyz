@@ -8,7 +8,7 @@ import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
 import Talk from "../../components/Talk";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const TalksPage = ({ data }) => {
   const { t } = useTranslation("page.talks");

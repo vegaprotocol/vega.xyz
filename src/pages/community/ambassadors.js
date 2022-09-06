@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
@@ -42,10 +43,15 @@ const benefits = [
 // t("Exclusive meetups - Invitations to all of Vega's events, both offline and online"),
 // t("Limited edition Vega swag"),
 // t("Priority minting of NFT drops (+ enhanced rarities)"),
-// t("Grow with Vega - scaling rewards as you climb the ranks)"),
+// t("Grow with Vega - scaling rewards as you climb the ranks"),
 
 const Ambassadors = () => {
-  const { t } = useTranslation("page.community.ambassadors");
+  const { i18n, t } = useTranslation("page.community.ambassadors");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
 
   return (
     <Layout>
@@ -55,6 +61,7 @@ const Ambassadors = () => {
           "Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <Container>
         <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[80rem] mx-auto text-center md:mb-12 pt-6 lg:pt-16">
           <GlitchTitle
@@ -307,14 +314,7 @@ export default Ambassadors;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(
-      filter: {
-        ns: {
-          in: ["common", "component.navigation", "page.community.ambassadors"]
-        }
-        language: { eq: $language }
-      }
-    ) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns
