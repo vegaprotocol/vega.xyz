@@ -3,7 +3,7 @@ import Small from "./Small";
 import Medium from "./Medium";
 import Large from "./Large";
 import {
-  MQXLarge,
+  MQLargeUp,
   MQLarge,
   MQMedium,
   MQSmall,
@@ -18,14 +18,11 @@ const UseVegaResponsive = () => {
       <MQMedium>
         <Medium />
       </MQMedium>
-      <MQLarge>
-        <Large />
-      </MQLarge>
-      <MQXLarge>
+      <MQLargeUp>
         <div className="max-w-[100rem] mx-auto">
           <Large />
         </div>
-      </MQXLarge>
+      </MQLargeUp>
     </div>
   );
 };

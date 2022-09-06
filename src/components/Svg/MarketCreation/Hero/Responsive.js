@@ -4,7 +4,7 @@ import Medium from "./Medium";
 import Large from "./Large";
 import XLarge from "./XLarge";
 import {
-  MQXLarge,
+  MQXLargeUp,
   MQLarge,
   MQMedium,
   MQSmall,
@@ -22,11 +22,11 @@ const MarketMakingResponsive = () => {
       <MQLarge>
         <Large />
       </MQLarge>
-      <MQXLarge>
+      <MQXLargeUp>
         <div className="max-w-[100rem] mx-auto">
           <XLarge />
         </div>
-      </MQXLarge>
+      </MQXLargeUp>
     </div>
   );
 };
