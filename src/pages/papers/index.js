@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import Container from "../../components/Container";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import BoxTitle from "../../components/BoxTitle";
 import GlitchTitle from "../../components/GlitchTitle";

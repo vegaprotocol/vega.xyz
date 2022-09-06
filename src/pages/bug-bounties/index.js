@@ -209,6 +209,7 @@ const BugBountiesPage = ({ data }) => {
                       <a
                         href="https://docs.vega.xyz/docs/mainnet/tools#vega-capsule"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <Trans t={t}></Trans>Vega Capsule tool
                       </a>
@@ -279,21 +280,21 @@ const BugBountiesPage = ({ data }) => {
                       </div>
 
                       <div className="flex items-center justify-end mt-6 px-6 py-3">
-                        <a
+                        <button
                           className="ml-6 uppercase cursor-pointer"
                           onClick={(e) => setConfirmDialog(false)}
                         >
                           <Trans t={t}>Cancel</Trans>
-                        </a>
+                        </button>
                         {isSubmitting ? (
                           <Loader className="ml-3" />
                         ) : (
-                          <a
+                          <button
                             className="ml-6 uppercase cursor-pointer"
                             onClick={(e) => send(e)}
                           >
                             <Trans t={t}>Submit</Trans>
-                          </a>
+                          </button>
                         )}
                       </div>
                     </div>

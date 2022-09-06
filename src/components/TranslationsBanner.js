@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Container from "../components/Container";
 import Globe from "../components/Svg/Globe";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const TranslationsBanner = ({ targeti18n }) => {
-  const { t, i18n } = useTranslation("component.translations-banner");
+  const { t } = useTranslation("component.translations-banner");
 
   return (
     <div className="bg-vega-purple p-5 mb-12">

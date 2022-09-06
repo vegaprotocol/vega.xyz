@@ -8,7 +8,6 @@ import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import Wormhole from "../../components/Svg/Wormhole";
 import Incentives from "../../components/Incentives";
-import CustomMarkets from "../../components/Svg/CustomMarkets";
 import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";

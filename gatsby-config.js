@@ -147,7 +147,7 @@ module.exports = {
           keySeparator: false,
           saveMissing: true,
           nsSeparator: false,
-          debug: false,
+          debug: true,
         },
       },
     },
