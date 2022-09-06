@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import GovernanceResponsive from "../../components/Svg/Governance/Hero/Responsive";
 import PageSection from "../../components/PageSection";
@@ -83,8 +84,39 @@ const governanceProcess = [
   },
 ];
 
+// t('Phase 1')
+// t('Sense check')
+// t('Start a topic and share an outline of your proposal on the forum with a \'sense-check\' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.')
+// t('Start a topic on the forum')
+
+// t('Phase 2')
+// t('Formalise Proposal')
+// t('Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.')
+// t('Read the docs to make a proposal')
+// t('Check out the forum')
+
+// t('Phase 3')
+// t('Submit a proposal')
+// t('As a token holder, you can submit the proposal using the command line to create a new market, change an existing market, change network parameters, add an external asset to Vega and make a freeform proposal (for changes that will not change network behaviour). For each, you will define specific inputs for a set list of parameters, which are validated by the nodes before entering into the voting period you set. Then it\'s time to rally the community on the forum to vote for your proposal.')
+// t('Read the docs to make a proposal')
+
+// t('Phase 4')
+// t('Vote to exercise your influence')
+// t('Token holders consider and vote for or against active proposals. Tokens used for voting are not locked or transferred - they can be used for staking as well as voting on any/all active proposals, but cannot be used to trade. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.')
+// t('Vote for proposals')
+
+// t('Phase 5')
+// t('Enacting changes')
+// t('If a proposal receives enough votes within the enactment period, the change is automatically enacted (except for a free form proposal).')
+
 const GovernancePage = ({ data }) => {
-  const { t } = useTranslation("page.governance");
+  const { i18n, t } = useTranslation("page.governance");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
+
   return (
     <Layout>
       <Seo
@@ -93,7 +125,7 @@ const GovernancePage = ({ data }) => {
           "Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject."
         )}
       />
-
+      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={"main"}>
         <div className="max-w-[61rem] mx-auto text-center pt-6 lg:pt-24">
           <h1>

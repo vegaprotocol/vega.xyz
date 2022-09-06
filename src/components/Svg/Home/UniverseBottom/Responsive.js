@@ -6,7 +6,6 @@ import {
   MQXXLarge,
   MQXLarge,
   MQLarge,
-  MQMedium,
 } from "../../../../utils/media-queries.js";
 
 const UniverseBottomResponsive = () => {

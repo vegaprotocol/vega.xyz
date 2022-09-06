@@ -1,0 +1,5 @@
+{
+  "<p>Start a topic and share an outline of the market you propose on the forum with a ": "",
+  "<p>Once you have formalised your proposal and made any final amends, it is time to submit the proposal to the public chain using the APIs. Use the templates provided in the docs to convert your market definition from the forum post into a formal on-chain proposal.</p><p>A proposal cannot be changed once submitted - it will be validated by the nodes and enter straight into the voting period - therefore it": "",
+  "<p>Any Vega participant with sufficient collateral* can provide liquidity for a market by submitting a transaction to the network. Attract liquidity with Vega": "<p>Any Vega participant with sufficient collateral* can provide liquidity for a market by submitting a transaction to the network. Attract liquidity with Vega"
+}

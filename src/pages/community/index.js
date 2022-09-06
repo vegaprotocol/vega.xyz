@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import ButtonLink from "../../components/ButtonLink";
 import BoxTitle from "../../components/BoxTitle";
@@ -14,7 +15,12 @@ import ToolBox from "../../components/ToolBox";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const CommunityPage = ({ data }) => {
-  const { t } = useTranslation("page.community");
+  const { i18n, t } = useTranslation("page.community");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
 
   return (
     <Layout>
@@ -24,6 +30,7 @@ const CommunityPage = ({ data }) => {
           "Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16">
           <h1>
@@ -146,6 +153,14 @@ const CommunityPage = ({ data }) => {
             icon={getImage(data.iconBuildersClub)}
           />
           <ToolBox
+            title={t("Translate")}
+            text={t(
+              "For the talented multi-linguists who want to support the project with translations."
+            )}
+            link="https://github.com/vegaprotocol/vega.xyz/tree/i18n#internationalisation"
+            icon={getImage(data.iconTranslation)}
+          />
+          <ToolBox
             title={t("Feedback")}
             text={t("Feedback and feature requests on Github")}
             link="https://github.com/vegaprotocol/vega/issues"
@@ -184,19 +199,7 @@ export default CommunityPage;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(
-      filter: {
-        ns: {
-          in: [
-            "common"
-            "component.navigation"
-            "component.fairground"
-            "page.community"
-          ]
-        }
-        language: { eq: $language }
-      }
-    ) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns
@@ -308,6 +311,17 @@ export const query = graphql`
     }
     iconBuildersClub: file(
       relativePath: { eq: "contribute-icons/builders-club.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconTranslation: file(
+      relativePath: { eq: "contribute-icons/translation.png" }
     ) {
       childImageSharp {
         gatsbyImageData(

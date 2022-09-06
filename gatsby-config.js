@@ -12,13 +12,13 @@ const languages = [
     localName: "Español",
   },
   {
-    code: "cn",
-    localName: "中国人",
+    code: "ru",
+    localName: "Pусский",
   },
-  // {
-  //   code: "ru",
-  //   localName: "Русский",
-  // },
+  {
+    code: "cn",
+    localName: "简体中文",
+  },
 ];
 
 module.exports = {
@@ -141,11 +141,14 @@ module.exports = {
         siteUrl: `https://vega.xyz`,
         trailingSlash: "always",
         i18nextOptions: {
+          returnEmptyString: false,
           interpolation: {
             escapeValue: false,
           },
           keySeparator: false,
+          saveMissing: true,
           nsSeparator: false,
+          debug: false,
         },
       },
     },

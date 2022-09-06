@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import BoxTitle from "../../components/BoxTitle";
 import { getImage } from "gatsby-plugin-image";
@@ -10,7 +11,13 @@ import Incentives from "../../components/Incentives";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const IncentivesBounties = ({ data }) => {
-  const { t } = useTranslation("page.community.incentives-bounties");
+  const { i18n, t } = useTranslation("page.community.incentives-bounties");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
+
   return (
     <Layout>
       <Seo
@@ -19,6 +26,7 @@ const IncentivesBounties = ({ data }) => {
           "Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16 mb-14">
           <BoxTitle text={t("Community")} />
@@ -55,19 +63,7 @@ export default IncentivesBounties;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(
-      filter: {
-        ns: {
-          in: [
-            "common"
-            "component.navigation"
-            "page.incentives-bounties"
-            "component.incentive"
-          ]
-        }
-        language: { eq: $language }
-      }
-    ) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns

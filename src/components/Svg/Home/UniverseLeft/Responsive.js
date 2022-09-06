@@ -1,5 +1,4 @@
 import React from "react";
-import Medium from "./Medium";
 import Large from "./Large";
 import XLarge from "./XLarge";
 import XXXLarge from "./XXXLarge";
@@ -8,7 +7,6 @@ import {
   MQXXLarge,
   MQXLarge,
   MQLarge,
-  MQMedium,
 } from "../../../../utils/media-queries.js";
 
 const UniverseLeftResponsive = () => {

@@ -1,9 +1,9 @@
 module.exports = {
   keySeparator: false,
   namespaceSeparator: false,
-  useKeysAsDefaultValue: false,
   saveMissing: true,
-  locales: ["en", "es"],
+  skipDefaultValues: true,
+  locales: ["en", "es", "ru", "cn"],
   lexers: {
     js: ["JsxLexer"],
   },

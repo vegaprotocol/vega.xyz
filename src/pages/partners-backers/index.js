@@ -28,9 +28,9 @@ const PartnersBackersPage = () => {
       name: "KR1",
       link: "https://medium.com/@KR1/kr1-october-update-986f8614c9fe",
     },
-    { 
-      name: "Eden Block", 
-      link: "https://www.edenblock.com/post/vega-protocol-investment-thesis", 
+    {
+      name: "Eden Block",
+      link: "https://www.edenblock.com/post/vega-protocol-investment-thesis",
     },
     {
       name: "Greenfield One",
@@ -110,7 +110,7 @@ const PartnersBackersPage = () => {
         title="Partners & Backers"
         description="Vega is a community and passion project for all our supporters. Explore the organisations fuelling and supporting this endeavour."
       />
-      <Container dataCy={'main'}>
+      <Container dataCy={"main"}>
         <div className="mb-12 pt-6 md:mb-24 lg:pt-16">
           <div className="grid grid-cols-12 gap-6 mb-16 lg:mb-24">
             <div className="col-span-12 md:col-span-4 lg:col-span-6">

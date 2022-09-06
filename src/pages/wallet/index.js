@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
@@ -126,10 +127,15 @@ const binaries = [
 ];
 
 const WalletPage = () => {
-  const { t } = useTranslation("page.wallet");
+  const { i18n, t } = useTranslation("page.wallet");
   const [downloadDropdown, setDownloadDropdown] = useState(false);
   const [selectedBinary, setSelectedBinary] = useState(binaries[0]);
   const dropDownMenuButton = useRef(null);
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
 
   const showDownloadMenu = (state) => {
     setDownloadDropdown(state);
@@ -156,6 +162,7 @@ const WalletPage = () => {
           "Download the Vega Wallet desktop app, to help you manage multiple wallets, multiple keys — and get access to the Vega network."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16 max-w-[38rem] md:max-w-none mx-auto">
           <div className="mx-auto max-w-[28rem] md:max-w-[38rem] lg:max-w-[42rem] text-center">
