@@ -17,9 +17,11 @@ const Accordion = ({ data, transNamespace }) => {
   return (
     <div className="border-t border-current">
       {data.map((item, idx) => (
-        <div className="py-5 border-b border-vega-mid-grey" key={idx}>
+        <div key={idx} className="border-b border-vega-mid-grey">
           <button
-            className="grid grid-cols-12 gap-x-3 title-s w-full text-left"
+            className={`grid grid-cols-12 gap-x-3 title-s w-full text-left transition-all delay-75 duration-300 py-5   ${
+              accordionSection !== idx ? "hover:py-6" : ""
+            }`}
             onClick={() => setAccordionSectionFn(idx)}
           >
             <div className="col-span-1 md:col-span-3 text-vega-mid-grey">
@@ -29,7 +31,7 @@ const Accordion = ({ data, transNamespace }) => {
             <div className="col-span-11 md:col-span-9 flex justify-between items-center">
               <div>{t(item.title)}</div>
               <Arrow
-                className={`shrink-0 ${
+                className={`shrink-0 transition-transform ${
                   idx === accordionSection ? "rotate-180" : ""
                 }`}
               />
