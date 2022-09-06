@@ -31,7 +31,7 @@ const Callout = ({ title, text, linkText, link, image = false, children }) => {
                   d="M4.52417 10.4185L16.0883 10.4185"
                   stroke="white"
                   strokeWidth="1.3"
-                  stroke-miterlimit="10"
+                  strokeMiterlimit="10"
                 />
                 <path
                   d="M10.8323 4.94604L16.4759 10.4459L10.8323 15.9458"

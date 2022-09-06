@@ -53,13 +53,6 @@ const ButtonLink = ({
         <div className={buttonBgClass}></div>
       </a>
     );
-  } else if (anchorLink) {
-    return (
-      <AnchorLink to={link} className={linkClass}>
-        <div className={buttonClass}>{text}</div>
-        <div className={buttonBgClass}></div>
-      </AnchorLink>
-    );
   } else {
     return (
       <Link to={link} className={linkClass}>
