@@ -17,6 +17,11 @@ export const MQXXLarge = ({ children }) => {
   return isXXLarge ? children : null;
 };
 
+export const MQXLargeUp = ({ children }) => {
+  const isXLargeUp = useMediaQuery({ minWidth: 1024 });
+  return isXLargeUp ? children : null;
+};
+
 export const MQXLarge = ({ children }) => {
   const isXLarge = useMediaQuery({ minWidth: 1024, maxWidth: 1279 });
   return isXLarge ? children : null;
