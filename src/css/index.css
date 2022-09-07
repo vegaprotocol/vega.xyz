@@ -16,6 +16,11 @@ body {
   font-variant-ligatures: none;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 .grey-box .button-link div {
   @apply bg-vega-light-grey;
 }

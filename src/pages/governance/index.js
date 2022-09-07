@@ -259,7 +259,7 @@ const GovernancePage = ({ data }) => {
                 </p>
               </div>
               <ButtonLink
-                link="#governanceTools"
+                link="/governance/#governanceTools"
                 text={t("Governance tools")}
               />
             </div>
