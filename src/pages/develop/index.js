@@ -236,8 +236,8 @@ const DevelopPage = ({ data }) => {
             </div>
             <div className="md:hidden">
               <ButtonLink
-                link="https://docs.vega.xyz/"
-                text={t("Explore the docs")}
+                link="https://www.youtube.com/watch?v=7ZqIER8KF9E&list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2"
+                text={t("Video tutorials")}
               />
             </div>
           </div>
