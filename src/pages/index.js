@@ -7,7 +7,7 @@ import Seo from "../components/Seo";
 import TranslationsBanner from "../components/TranslationsBanner";
 import Ticker from "../components/Ticker";
 import GlitchTitle from "../components/GlitchTitle";
-import BlogPosts from "../components/BlogPosts";
+import LatestNews from "../components/LatestNews";
 import LeadingLine from "../components/LeadingLine";
 import ButtonLink from "../components/ButtonLink";
 import LinkCta from "../components/LinkCta";
@@ -247,6 +247,10 @@ const IndexPage = ({ data }) => {
           </div>
 
           <PageSection>
+            <LatestNews />
+          </PageSection>
+
+          <PageSection>
             <div className="lg:grid lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <div className="title-l mb-8 hyphens-auto">
@@ -258,10 +262,6 @@ const IndexPage = ({ data }) => {
                 <Calendar />
               </div>
             </div>
-          </PageSection>
-
-          <PageSection>
-            <BlogPosts />
           </PageSection>
         </Container>
       </main>

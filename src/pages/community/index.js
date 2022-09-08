@@ -157,7 +157,7 @@ const CommunityPage = ({ data }) => {
             text={t(
               "For the talented multi-linguists who want to support the project with translations."
             )}
-            link="https://github.com/vegaprotocol/vega.xyz/tree/i18n#internationalisation"
+            link="https://github.com/vegaprotocol/vega.xyz#internationalisation"
             icon={getImage(data.iconTranslation)}
           />
           <ToolBox

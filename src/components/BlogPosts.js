@@ -4,7 +4,7 @@ import BlogPost from "./BlogPost";
 import { graphql, useStaticQuery } from "gatsby";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
-const LatestBlogPosts = () => {
+const BlogPosts = () => {
   const { t } = useTranslation("component.blog-posts");
   const latestPosts = useStaticQuery(graphql`
     query {
@@ -56,4 +56,4 @@ const LatestBlogPosts = () => {
   );
 };
 
-export default LatestBlogPosts;
+export default BlogPosts;
