@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
@@ -48,10 +48,37 @@ const benefits = [
 const Ambassadors = () => {
   const { i18n, t } = useTranslation("page.community.ambassadors");
   const [missingTranslations, setMissingTranslations] = useState(false);
+  const [leaderboard, setLeaderboard] = useState(false);
 
   i18n.on("missingKey", (lng) => {
     setMissingTranslations(true);
   });
+
+  useEffect(() => {
+    async function fetchLeaderboard() {
+      let response = await fetch(
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWl19OuiXSJaXPHp9z90tB6YEQstuxi8_ecqao7FxlZDU0073VkX3w6-qZAuzpwseOP7ncPhftXh_G/pub?gid=1930527218&single=true&output=csv"
+      );
+      let csv = await response.text();
+
+      const lines = csv.replace(/(\r)/gm, "").split("\n");
+      const keys = lines[0].replace(/(\r\n|\n|\r)/gm, "").split(",");
+
+      let leaderboard = [];
+
+      for (let i = 1; i < lines.length; ++i) {
+        const values = lines[i].split(",");
+        const dict = {};
+        for (let k = 0; k < keys.length; ++k) {
+          dict[keys[k]] = values[k];
+        }
+        leaderboard.push(dict);
+      }
+      leaderboard = leaderboard.slice(0, 5);
+      setLeaderboard(leaderboard);
+    }
+    fetchLeaderboard();
+  }, []);
 
   return (
     <Layout>
@@ -183,6 +210,75 @@ const Ambassadors = () => {
                 text="Apply now"
                 className="md:hidden mt-3"
               />
+            </div>
+
+            <div className="mb-12 md:mb-20">
+              <h2 className="title-s md:title-l mb-4">
+                <Trans t={t}>Leaderboard</Trans>
+              </h2>
+              <p className="copy-s">
+                <Trans t={t}>
+                  We celebrate our ambassadors and their work. Complete tasks to
+                  top the leaderboard, rise up the ranks, and see your name
+                  here!
+                </Trans>
+              </p>
+              <div>
+                {leaderboard ? (
+                  <div>
+                    <table className="w-full my-10">
+                      <thead className="bg-vega-box-grey uppercase text-[0.9375rem]">
+                        <tr className="border-b border-vega-mid-grey">
+                          <th scope="col" className="p-3 text-left">
+                            Rank
+                          </th>
+                          <th scope="col" className="p-3 text-left">
+                            Ambassador
+                          </th>
+                          <th scope="col" className="p-3 text-right">
+                            Tasks completed
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {leaderboard.map((entry, idx) => {
+                          return (
+                            <tr
+                              key={idx}
+                              className="border-b border-vega-mid-grey"
+                            >
+                              <td
+                                className={`px-3 py-5 title-m md:title-l font-glitch-all ${
+                                  idx < 3 ? "text-vega-pink" : ""
+                                }`}
+                              >
+                                {entry.Position}
+                              </td>
+                              <td className="px-3 py-5">
+                                <div className="copy-xs md:copy-s !mb-0">
+                                  {entry.Name}
+                                </div>
+                                <div className="copy-xxs md:copy-xs text-vega-mid-grey !mb-0">
+                                  {entry.Rank}
+                                </div>
+                              </td>
+                              <td className="px-3 py-5 text-right title-m md:text-[2.5rem] font-glitch-all">
+                                {entry["Tasks Completed"]}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                    <ButtonLink
+                      text={t("View more")}
+                      link="/community/ambassador-leaderboard"
+                    />
+                  </div>
+                ) : (
+                  <div>Loading...</div>
+                )}
+              </div>
             </div>
 
             <div className="mb-12 md:mb-20">
