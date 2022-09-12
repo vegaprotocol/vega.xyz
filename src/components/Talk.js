@@ -4,7 +4,10 @@ import SquareBullet from "./Svg/SquareBullet";
 
 const Talk = ({ talk }) => {
   return (
-    <li className="border-t border-current pt-4 pb-8 relative min-w-full clear-both">
+    <li
+      className="border-t border-current pt-4 pb-8 relative min-w-full clear-both"
+      id={`talk${talk.fields.slug}`}
+    >
       <div>
         <div className="copy-s mb-2 w-full">{talk.frontmatter.title}</div>
 

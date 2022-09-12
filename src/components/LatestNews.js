@@ -62,20 +62,23 @@ const LatestNews = ({ data }) => {
     async function fetchLatestTweet() {
       let response = await fetch("/.netlify/functions/latest-tweet");
       response = await response.json();
-      setTweet(response.tweets);
-      console.log(response.tweets);
+      setTweet({
+        id: response.id,
+        text: response.tweet_text,
+        image: response.image,
+      });
     }
     fetchLatestTweet();
   }, []);
 
   return (
     <div>
-      <div className="title-l mb-12 text-center">
+      <div className="title-l lg:title-xl mb-12 text-center">
         <h2>
           <Trans t={t}>Latest News</Trans>
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="mx-auto max-w-[26.25rem] md:max-w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <NewsCard
           title={latestPosts.allMediumPost.edges[0].node.title}
           text={latestPosts.allMediumPost.edges[0].node.virtuals.subtitle}
@@ -92,6 +95,7 @@ const LatestNews = ({ data }) => {
 
         {tweet ? (
           <NewsCard
+            image={tweet.image}
             text={tweet.text}
             category="Tweet"
             link={`https://twitter.com/twitter/status/${tweet.id}`}
@@ -109,6 +113,7 @@ const LatestNews = ({ data }) => {
             .join(" ")}...`}
           date={latestPosts.allMarkdownRemark.edges[0].node.frontmatter.date}
           category="talk"
+          link={`/talks#talk${latestPosts.allMarkdownRemark.edges[0].node.fields.slug}`}
         />
 
         <NewsCard

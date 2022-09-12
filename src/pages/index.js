@@ -13,6 +13,8 @@ import ButtonLink from "../components/ButtonLink";
 import LinkCta from "../components/LinkCta";
 import PageSection from "../components/PageSection";
 import Calendar from "../components/Calendar";
+import AsSeenOn from "../components/AsSeenOn";
+import BoxLinkSimple from "../components/BoxLinkSimple";
 import RoadMap from "../components/RoadMap";
 import RoadMapMobile from "../components/RoadMapMobile";
 import Rip from "../components/Svg/Home/Rip/Responsive";
@@ -251,6 +253,10 @@ const IndexPage = ({ data }) => {
           </PageSection>
 
           <PageSection>
+            <AsSeenOn />
+          </PageSection>
+
+          <PageSection>
             <div className="lg:grid lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <div className="title-l mb-8 hyphens-auto">
@@ -259,8 +265,30 @@ const IndexPage = ({ data }) => {
               </div>
 
               <div className="lg:col-span-8">
-                <Calendar />
+                <Calendar limit={3} />
               </div>
+            </div>
+          </PageSection>
+
+          <PageSection>
+            <div className="text-center">
+              <GlitchTitle
+                color="red"
+                level="2"
+                className="mb-4 title-m md:title-l lg:title-xxl"
+              >
+                <Trans t={t}>Where next?</Trans>
+              </GlitchTitle>
+            </div>
+
+            <div className="max-w-[12rem] md:max-w-[70rem] grid gap-6 mt-12 mx-auto md:grid-cols-2 lg:grid-cols-4">
+              <BoxLinkSimple text={t("Use the network")} link="/use" />
+              <BoxLinkSimple text={t("Join the community")} link="/community" />
+              <BoxLinkSimple
+                text={t("Govern the network")}
+                link="/governance"
+              />
+              <BoxLinkSimple text={t("Develop on Vega")} link="/develop" />
             </div>
           </PageSection>
         </Container>

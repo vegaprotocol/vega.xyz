@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../../components/Layout";
+import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
 import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
@@ -11,7 +12,13 @@ import Talk from "../../components/Talk";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const TalksPage = ({ data }) => {
-  const { t } = useTranslation("page.talks");
+  const { t, i18n } = useTranslation("page.talks");
+  const [missingTranslations, setMissingTranslations] = useState(false);
+
+  i18n.on("missingKey", (lng) => {
+    setMissingTranslations(true);
+  });
+
   return (
     <Layout>
       <Seo
@@ -20,6 +27,7 @@ const TalksPage = ({ data }) => {
           "Dive into talks and podcasts by the Vega team on crypto derivatives trading."
         )}
       />
+      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={"main"}>
         <div className="pt-6 lg:pt-16">
           <div className="mb-6 md:mb-16">
@@ -86,10 +94,7 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      filter: {
-        collection: { eq: "talks" }
-        fields: { locale: { eq: $language } }
-      }
+      filter: { collection: { eq: "talks" }, fields: { locale: { eq: "en" } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

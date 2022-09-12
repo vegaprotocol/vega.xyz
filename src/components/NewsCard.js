@@ -1,9 +1,25 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby-plugin-react-i18next";
+
+const LinkWrapper = ({
+  condition,
+  internalWrapper,
+  externalWrapper,
+  children,
+}) => (condition ? externalWrapper(children) : internalWrapper(children));
 
 const NewsCard = ({ title, text, link, image, date, category, extra }) => {
   return (
-    <a href={link} target="_blank" rel="noreferrer">
+    <LinkWrapper
+      condition={link.startsWith("https://")}
+      externalWrapper={(children) => (
+        <a href={link} target="_blank" rel="noreferrer">
+          {children}
+        </a>
+      )}
+      internalWrapper={(children) => <Link to={link}>{children}</Link>}
+    >
       {image ? (
         <div
           className="aspect-w-16 aspect-h-9 bg-cover bg-center mb-4"
@@ -14,7 +30,7 @@ const NewsCard = ({ title, text, link, image, date, category, extra }) => {
       ) : (
         <div>
           <StaticImage
-            class="mb-4"
+            className="mb-4"
             src="../images/block-placeholder.jpg"
             alt=""
             placeholder="none"
@@ -36,7 +52,7 @@ const NewsCard = ({ title, text, link, image, date, category, extra }) => {
       <div className="bg-white/10 text-vega-grey text-[0.75rem] uppercase inline-block py-0.5 px-2 mt-3">
         {category}
       </div>
-    </a>
+    </LinkWrapper>
   );
 };
 
