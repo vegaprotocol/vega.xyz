@@ -28,7 +28,9 @@ const AsSeenOn = () => {
             height={368}
           />
 
-          <h3>Ethereum Merge: Educational Curve and Potential Risks</h3>
+          <h3 className="text-[1.3125rem] font-glitched leading-[1.15]">
+            Ethereum Merge: Educational Curve and Potential Risks
+          </h3>
         </a>
         <a
           href="https://www.nasdaq.com/articles/how-to-build-through-the-bear"
@@ -44,7 +46,9 @@ const AsSeenOn = () => {
             width={720}
             height={368}
           />
-          <h3>How to build through the bear</h3>
+          <h3 className="text-[1.3125rem] font-glitched leading-[1.15]">
+            How to build through the bear
+          </h3>
         </a>
         <a
           href="https://techcrunch.com/2021/12/14/7-investors-discuss-web3s-present-and-peer-into-its-future/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8"
@@ -60,7 +64,9 @@ const AsSeenOn = () => {
             width={720}
             height={368}
           />
-          <h3>7 investors discuss web3's present and peer into its future</h3>
+          <h3 className="text-[1.3125rem] font-glitched leading-[1.15]">
+            7 investors discuss web3's present and peer into its future
+          </h3>
         </a>
       </div>
     </div>
