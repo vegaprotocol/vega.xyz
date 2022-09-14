@@ -34,7 +34,8 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
         const values = lines[i].split(",");
         const dict = {};
 
-        if (values[1] === "") continue;
+        // omit blank entries and those with fewer than 4 points
+        if (values[1] === "" || values[2] < 4) continue;
 
         for (let k = 0; k < keys.length; ++k) {
           dict[keys[k]] = values[k];
@@ -51,7 +52,7 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
     <div>
       {leaderboard ? (
         <div>
-          <table className="w-full mb-20">
+          <table className="w-full mb-10">
             <thead className="bg-vega-box-grey text-white uppercase text-[0.9375rem]">
               <tr className="border-b border-vega-mid-grey">
                 <th scope="col" className="p-2 md:p-3 text-left">
