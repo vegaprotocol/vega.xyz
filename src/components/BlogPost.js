@@ -34,7 +34,7 @@ const BlogPost = ({ post }) => {
         &nbsp;&nbsp;&nbsp;
         <SquareBullet size="5" />
         <span className="text-vega-mid-grey">
-          {t("x minute read", {
+          {t("{{minutes}} minute read", {
             minutes: Math.ceil(post.node.virtuals.readingTime),
           })}
         </span>

@@ -84,7 +84,7 @@ const LatestNews = ({ data }) => {
           text={latestPosts.allMediumPost.edges[0].node.virtuals.subtitle}
           link={`https://blog.vega.xyz/${latestPosts.allMediumPost.edges[0].node.uniqueSlug}`}
           date={latestPosts.allMediumPost.edges[0].node.firstPublishedAt}
-          extra={t("x minute read", {
+          extra={t("{{minutes}} minute read", {
             minutes: Math.ceil(
               latestPosts.allMediumPost.edges[0].node.virtuals.readingTime
             ),
