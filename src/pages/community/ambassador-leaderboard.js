@@ -39,7 +39,9 @@ const AmbassadorLeaderboardPage = () => {
             </Trans>
           </LeadingLine>
         </div>
-        <AmbassadorLeaderboard />
+        <div className="mb-20">
+          <AmbassadorLeaderboard />
+        </div>
       </Container>
     </Layout>
   );
