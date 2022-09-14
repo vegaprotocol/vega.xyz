@@ -41,13 +41,13 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
           <table className="w-full mb-10">
             <thead className="bg-vega-box-grey uppercase text-[0.9375rem]">
               <tr className="border-b border-vega-mid-grey">
-                <th scope="col" className="p-3 text-left">
+                <th scope="col" className="p-2 md:p-3 text-left">
                   <Trans t={t}>Rank</Trans>
                 </th>
-                <th scope="col" className="p-3 text-left">
+                <th scope="col" className="p-2 md:p-3 text-left">
                   <Trans t={t}>Ambassador</Trans>
                 </th>
-                <th scope="col" className="p-3 text-right">
+                <th scope="col" className="p-2 md:p-3 text-right">
                   <Trans t={t}>Tasks completed</Trans>
                 </th>
               </tr>
@@ -57,13 +57,13 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
                 return (
                   <tr key={idx} className="border-b border-vega-mid-grey">
                     <td
-                      className={`px-3 py-5 title-m md:title-l font-glitch-all ${
+                      className={`px-2 py-5 title-m md:title-l font-glitch-all ${
                         idx < 3 ? "text-vega-pink" : ""
                       }`}
                     >
                       {entry.Position}
                     </td>
-                    <td className="px-3 py-5">
+                    <td className="px-2 py-5 max-w-[11rem] md:max-w-none break-words">
                       <div className="copy-xs md:copy-s !mb-0">
                         {entry.Name}
                       </div>
@@ -71,7 +71,7 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
                         {entry.Rank}
                       </div>
                     </td>
-                    <td className="px-3 py-5 text-right title-m md:text-[2.5rem] font-glitch-all">
+                    <td className="px-2 py-5 text-right title-m md:text-[2.5rem] font-glitch-all">
                       {entry["Tasks Completed"]}
                     </td>
                   </tr>
