@@ -97,7 +97,7 @@ const XLarge = () => {
           />
         </g>
         <rect
-          classNamr="fill-vega-pink"
+          className="fill-vega-pink"
           x="255.3"
           y="167.1"
           transform="matrix(0.5105 -0.8599 0.8599 0.5105 -19.3405 303.323)"

@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import CalendarEvent from "./CalendarEvent";
+import ButtonLink from "./ButtonLink";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
-const Calendar = () => {
+const Calendar = ({ limit = false }) => {
   const [events, setEvents] = useState(null);
+  const { t } = useTranslation("component.calendar");
 
   useEffect(() => {
     async function fetchEvents() {
@@ -48,15 +51,22 @@ const Calendar = () => {
       // return only future events
       sortedEvents = sortedEvents.slice(startOfOldEvents, sortedEvents.length);
 
+      if (limit) {
+        sortedEvents = sortedEvents.slice(0, limit);
+      }
+
       setEvents(sortedEvents);
     }
     fetchEvents();
-  }, []);
+  }, [limit]);
 
   return (
     <div className="border-t border-current mb-16">
-      {events &&
-        events.map((event, idx) => <CalendarEvent key={idx} event={event} />)}
+      <div>
+        {events &&
+          events.map((event, idx) => <CalendarEvent key={idx} event={event} />)}
+      </div>
+      {limit && <ButtonLink link="/community/events" text={t("See more")} />}
     </div>
   );
 };
