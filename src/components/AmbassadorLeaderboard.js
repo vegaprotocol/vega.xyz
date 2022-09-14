@@ -6,6 +6,18 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
   const [leaderboard, setLeaderboard] = useState(false);
   const { t } = useTranslation("component.ambassador-leaderboard");
 
+  const formatName = (name) => {
+    const idx = name.lastIndexOf("#");
+    if (idx > -1) {
+      return (
+        name.substr(0, idx) +
+        " <span class='copy-xxs md:copy-xs text-vega-mid-grey'>" +
+        name.substr(idx) +
+        "</span>"
+      );
+    }
+  };
+
   useEffect(() => {
     async function fetchLeaderboard() {
       let response = await fetch(
@@ -18,17 +30,18 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
 
       let leaderboard = [];
 
-      for (let i = 1; i < lines.length; ++i) {
+      for (let i = 1; i < (limit ? limit + 1 : lines.length); ++i) {
         const values = lines[i].split(",");
         const dict = {};
+
+        if (values[1] === "") continue;
+
         for (let k = 0; k < keys.length; ++k) {
           dict[keys[k]] = values[k];
         }
         leaderboard.push(dict);
       }
-      if (limit) {
-        leaderboard = leaderboard.slice(0, 5);
-      }
+
       setLeaderboard(leaderboard);
     }
     fetchLeaderboard();
@@ -38,8 +51,8 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
     <div>
       {leaderboard ? (
         <div>
-          <table className="w-full mb-10">
-            <thead className="bg-vega-box-grey uppercase text-[0.9375rem]">
+          <table className="w-full mb-20">
+            <thead className="bg-vega-box-grey text-white uppercase text-[0.9375rem]">
               <tr className="border-b border-vega-mid-grey">
                 <th scope="col" className="p-2 md:p-3 text-left">
                   <Trans t={t}>Rank</Trans>
@@ -65,7 +78,12 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
                     </td>
                     <td className="px-2 py-5 max-w-[11rem] md:max-w-none break-words">
                       <div className="copy-xs md:copy-s !mb-0">
-                        {entry.Name}
+                        {}
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: formatName(entry.Name),
+                          }}
+                        />
                       </div>
                       <div className="copy-xxs md:copy-xs text-vega-mid-grey !mb-0">
                         {entry.Rank}
