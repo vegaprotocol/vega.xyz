@@ -12,6 +12,7 @@ import AmbassadorsHero from "../../components/Svg/AmbassadorsHero";
 import IconAmbassador1 from "../../images/icon-ambassador-1.png";
 import IconAmbassador2 from "../../images/icon-ambassador-2.png";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import AmbassadorLeaderboard from "../../components/AmbassadorLeaderboard";
 
 const Clan = ({ icon, title, text }) => {
   return (
@@ -183,6 +184,22 @@ const Ambassadors = () => {
                 text="Apply now"
                 className="md:hidden mt-3"
               />
+            </div>
+
+            <div className="mb-12 md:mb-20">
+              <h2 className="title-s md:title-l mb-4">
+                <Trans t={t}>Leaderboard</Trans>
+              </h2>
+              <p className="copy-s">
+                <Trans t={t}>
+                  We celebrate our ambassadors and their work. Complete tasks to
+                  top the leaderboard, rise up the ranks, and see your name
+                  here!
+                </Trans>
+              </p>
+              <div className="py-6">
+                <AmbassadorLeaderboard limit={5} />
+              </div>
             </div>
 
             <div className="mb-12 md:mb-20">

@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import LinkArrow from "./Svg/LinkArrow";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const ButtonLink = ({
   text,
@@ -8,6 +9,7 @@ const ButtonLink = ({
   color,
   minwidth,
   hideArrowForExternal,
+  anchorLink = false,
   className,
 }) => {
   const isExternal = link.startsWith("http");
