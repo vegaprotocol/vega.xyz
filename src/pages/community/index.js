@@ -186,7 +186,7 @@ const CommunityPage = ({ data }) => {
           title={t("Incentives")}
           text={t("Get rewarded for your efforts testing the network")}
           linkText={t("Earn rewards")}
-          link="/community/incentives-bounties"
+          link="https://fairground.wtf"
           image={getImage(data.incentivesGraphic)}
         />
       </Container>

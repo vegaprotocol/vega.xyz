@@ -46,8 +46,12 @@ const Develop = () => {
         </NavigationHeading>
         <NavigationList>
           <NavigationItem
-            text={t("Incentives and bounties")}
-            link="/community/incentives-bounties"
+            text={t("Fairground incentives")}
+            link="https://fairground.wtf/"
+          />
+          <NavigationItem
+            text={t("Bounties")}
+            link="https://github.com/vegaprotocol/bounties/"
           />
           <NavigationItem
             text={t("Report a security issue")}

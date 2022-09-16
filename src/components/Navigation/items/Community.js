@@ -22,7 +22,10 @@ const Community = () => {
             text={t("Contributors")}
             link="/community/contributors"
           />
-          <NavigationItem text={t("Partners and backers")} link="/partners-backers" />
+          <NavigationItem
+            text={t("Partners and backers")}
+            link="/partners-backers"
+          />
         </NavigationList>
       </div>
       <div className="lg:col-span-4">
@@ -64,18 +67,19 @@ const Community = () => {
             text={t("Builders club")}
             link="https://vega.xyz/discord"
           />
-          <NavigationItem
-            text={t("Careers")}
-            link="/careers"
-          />
+          <NavigationItem text={t("Careers")} link="/careers" />
         </NavigationList>
         <NavigationHeading>
           <Trans>Get rewarded</Trans>
         </NavigationHeading>
         <NavigationList>
           <NavigationItem
-            text={t("Incentives and bounties")}
-            link="/community/incentives-bounties/"
+            text={t("Fairground incentives")}
+            link="https://fairground.wtf/"
+          />
+          <NavigationItem
+            text={t("Bounties")}
+            link="https://github.com/vegaprotocol/bounties/"
           />
           <NavigationItem
             text={t("Report a security issue")}
