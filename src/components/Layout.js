@@ -15,8 +15,9 @@ const Layout = (props) => {
         <div className="flex flex-col min-h-screen">
           <div className="grow">
             <Header />
-            {props.needsTranslating && <div>NEEDS TRANSLATING</div>}
-            {props.children}
+            <div className="mt-[4.8125rem] md:mt-[5.75rem]">
+              {props.children}
+            </div>
           </div>
           <Footer />
         </div>
