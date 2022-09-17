@@ -30,7 +30,7 @@ const PurposeBuiltBlock = () => {
                 </Trans>
               </p>
               <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
-                <Trans t={t}>Read more:</Trans>
+                <Trans t={t}>Read more about:</Trans>
               </div>
 
               <p>
