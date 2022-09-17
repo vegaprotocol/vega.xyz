@@ -146,14 +146,14 @@ const KeyConceptsPage = () => {
                 Vega's front running protection in the papers
                 <TextLink
                   to="https://vega.xyz/papers/fairness.pdf"
-                  colour="grey"
+                  className="inline-block"
                 >
                   'Wendy, the Good Little Fairness Widget'
                 </TextLink>{" "}
                 and{" "}
                 <TextLink
                   to="https://vega.xyz/papers/Wendy_Grows_Up.pdf"
-                  colour="grey"
+                  className="inline-block"
                 >
                   'Wendy grows up'
                 </TextLink>
@@ -164,7 +164,7 @@ const KeyConceptsPage = () => {
                 Or try out the{" "}
                 <TextLink
                   to="https://github.com/vegaprotocol/wendy/"
-                  colour="grey"
+                  className="inline-block"
                 >
                   Wendy prototype
                 </TextLink>{" "}
