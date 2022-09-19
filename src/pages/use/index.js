@@ -5,6 +5,7 @@ import Layout from "../../components/Layout";
 import Container from "../../components/Container";
 import TranslationsBanner from "../../components/TranslationsBanner";
 import GlitchTitle from "../../components/GlitchTitle";
+import CalloutHero from "../../components/CalloutHero";
 import BoxTitle from "../../components/BoxTitle";
 import Fairground from "../../components/Fairground";
 import ToolBox from "../../components/ToolBox";
@@ -183,6 +184,18 @@ const UsePage = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
+      <Container>
+        <div class="my-10">
+          <CalloutHero
+            title={t("The Vega network is live, trading launch Q3 2022")}
+            text={t(
+              "Token holders can participate in governance, stake and delegate."
+            )}
+            buttonText={t("View the Roadmap")}
+            buttonLink="/#roadmap"
+          />
+        </div>
+      </Container>
       <Container dataCy={"main"}>
         <div className="text-center mb-8 md:mb-12 pt-6 md:pt-16">
           <div className="max-w-[61rem] mx-auto text-center">
@@ -198,7 +211,6 @@ const UsePage = ({ data }) => {
             </GlitchTitle>
           </div>
         </div>
-
         <div className="max-w-[90rem] md:px-6 lg:px-8 mx-auto">
           <div className="text-center mx-auto border-b overflow-x-scroll whitespace-nowrap md:whitespace-normal overflow-y-hidden border-vega-mid-grey md:flex md:justify-center md:gap-x-8 px-6">
             <button
@@ -247,7 +259,6 @@ const UsePage = ({ data }) => {
             </button>
           </div>
         </div>
-
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10 py-16 md:mb-12"
           ref={tabs}
@@ -268,7 +279,6 @@ const UsePage = ({ data }) => {
             </div>
           ))}
         </div>
-
         <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
           <div>
             <p className="title-m mb-3">
