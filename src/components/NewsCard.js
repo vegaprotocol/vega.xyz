@@ -45,7 +45,12 @@ const NewsCard = ({ title, text, link, image, date, category, extra }) => {
           {title}
         </div>
       )}
-      {text && <div className="text-base text-vega-grey mb-2">{text}</div>}
+      {text && (
+        <div
+          className="text-base text-vega-grey mb-2"
+          dangerouslySetInnerHTML={{ __html: text }}
+        />
+      )}
       <div className="text-[0.875rem] text-vega-mid-grey">
         {date} {extra && <>&bull; {extra}</>}
       </div>
