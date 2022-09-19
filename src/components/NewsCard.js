@@ -54,7 +54,7 @@ const NewsCard = ({ title, text, link, image, date, category, extra }) => {
       <div className="text-[0.875rem] text-vega-mid-grey">
         {date} {extra && <>&bull; {extra}</>}
       </div>
-      <div className="bg-white/10 text-vega-grey text-[0.75rem] uppercase inline-block py-0.5 px-2 mt-3">
+      <div className="dark:bg-white/10 dark:text-vega-grey bg-vega-border-grey text-white text-[0.75rem] uppercase inline-block py-0.5 px-2 mt-3">
         {category}
       </div>
     </LinkWrapper>
