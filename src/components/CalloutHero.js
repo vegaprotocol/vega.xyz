@@ -9,9 +9,7 @@ const CalloutHero = ({ title, text, buttonLink, buttonText }) => {
           <div>
             <h2 className="copy-s !mb-1.5">{title}</h2>
             {text && (
-              <div className="text-vega-mid-grey copy-xs !mb-1.5">
-                {text}wefwe
-              </div>
+              <div className="text-vega-mid-grey copy-xs !mb-1.5">{text}</div>
             )}
           </div>
           <div class="mt-6 md:flex md:justify-end md:mt-0">
