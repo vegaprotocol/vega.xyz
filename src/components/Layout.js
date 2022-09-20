@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 
-const Layout = (props) => {
+const Layout = ({ children, stickyHeader = true }) => {
   return (
     <div>
       <Helmet
@@ -14,10 +14,8 @@ const Layout = (props) => {
       <div className="dark:text-white dark:bg-black bg-white max-w-full dark:selection:bg-vega-pink selection:bg-vega-yellow">
         <div className="flex flex-col min-h-screen">
           <div className="grow">
-            <Header />
-            <div className="mt-[4.8125rem] md:mt-[5.75rem]">
-              {props.children}
-            </div>
+            <Header sticky={stickyHeader} />
+            <div className="mt-[4.8125rem] md:mt-[5.75rem]">{children}</div>
           </div>
           <Footer />
         </div>

@@ -59,7 +59,7 @@ const KeyConceptsPage = () => {
   // t('Help DeFi mature')
 
   return (
-    <Layout>
+    <Layout stickyHeader={false}>
       <Seo
         title={t("Key Vega Concepts")}
         description={t(
