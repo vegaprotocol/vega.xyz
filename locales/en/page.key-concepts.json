@@ -1,7 +1,7 @@
 {
   "Purpose built bespoke blockchain": "Purpose built bespoke blockchain",
   "Ethereum and other blockchains suffer slow performance since they're generalist tools, with smart contracts for everything - applying the same rules regardless of what you use them for. They charge high gas fees and require workarounds to be applied to trading. Vega is built from the ground up using high performing, purpose-built smart contracts specifically for trading - meaning no fees on orders, and fairness at its core.": "Ethereum and other blockchains suffer slow performance since they're generalist tools, with smart contracts for everything - applying the same rules regardless of what you use them for. They charge high gas fees and require workarounds to be applied to trading. Vega is built from the ground up using high performing, purpose-built smart contracts specifically for trading - meaning no fees on orders, and fairness at its core.",
-  "Read more:": "Read more:",
+  "Read more about:": "Read more about:",
   "The importance of a purpose built blockchain for trading on the Vega blog <2>'Innovating in decentralised financial markets'</2>": "The importance of a purpose built blockchain for trading on the Vega blog <2>'Innovating in decentralised financial markets'</2>",
   "Runs slowly": "Runs slowly",
   "Fast trading": "Fast trading",
@@ -24,7 +24,6 @@
   "Vega is designed to:": "Vega is designed to:",
   "Anti front-running": "Anti front-running",
   "Vega's pre-protocol widget, 'Wendy', ensures all nodes see the same sequence of transactions and provides cryptographic proof that all traders have fair access to the order book. This creates a fair marketplace where no participant can gain an unfair advantage, an issue rampant in DeFi and something not even sophisticated traditional exchanges can offer.": "Vega's pre-protocol widget, 'Wendy', ensures all nodes see the same sequence of transactions and provides cryptographic proof that all traders have fair access to the order book. This creates a fair marketplace where no participant can gain an unfair advantage, an issue rampant in DeFi and something not even sophisticated traditional exchanges can offer.",
-  "Read more about:": "Read more about:",
   "Vega's front running protection in the papers<1>'Wendy, the Good Little Fairness Widget'</1> and <5>'Wendy grows up'</5>": "Vega's front running protection in the papers<1>'Wendy, the Good Little Fairness Widget'</1> and <5>'Wendy grows up'</5>",
   "Or try out the <2>Wendy prototype</2> on a simulated network": "Or try out the <2>Wendy prototype</2> on a simulated network",
   "Permissionless market creation": "Permissionless market creation",
