@@ -148,7 +148,7 @@ module.exports = {
           keySeparator: false,
           saveMissing: true,
           nsSeparator: false,
-          debug: false,
+          debug: process.env.NODE_ENV === "development" ? true : false,
         },
       },
     },

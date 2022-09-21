@@ -1,0 +1,37 @@
+---
+
+name: Add Issues To Project Board
+
+"on":
+  issues:
+    types: [opened]
+
+jobs:
+  add_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add issue project board
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_NEW_CARD_TO_PROJECT }}
+          PROJECT_ID: ${{ secrets.FRONT_END_PROJECT_ID }}
+          ISSUE_ID: ${{ github.event.issue.node_id }}
+        run: |
+          gh api graphql -f query='
+            mutation($project:ID!, $issue:ID!) {
+              addProjectNextItem(input: {projectId: $project, contentId: $issue}) {
+                projectNextItem {
+                  id
+                }
+              }
+            }' -f project=$PROJECT_ID -f issue=$ISSUE_ID --jq '.data.addProjectNextItem.projectNextItem.id'
+
+  label_issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Add "website" label
+        uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
+        with:
+          add-labels: "website"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

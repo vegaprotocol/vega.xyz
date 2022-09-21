@@ -4,7 +4,6 @@ import Medium from "./Medium";
 import Large from "./Large";
 import {
   MQLargeUp,
-  MQLarge,
   MQMedium,
   MQSmall,
 } from "../../../../utils/media-queries.js";
