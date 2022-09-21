@@ -7,6 +7,7 @@ import Seo from "../../components/Seo";
 import BoxTitle from "../../components/BoxTitle";
 import Sticky from "react-stickynode";
 import GlitchTitle from "../../components/GlitchTitle";
+import CalloutHero from "../../components/CalloutHero";
 import LeadingLine from "../../components/LeadingLine";
 import ScrollSpy from "react-scrollspy";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
@@ -68,7 +69,19 @@ const KeyConceptsPage = () => {
       />
       {missingTranslations && <TranslationsBanner />}
       <div data-cy="main" className="mb-16">
-        <div className="max-w-[45rem] px-4 md:px-0 xl:max-w-[50rem] mx-auto text-center pt-16">
+        <Container>
+          <div class="my-10">
+            <CalloutHero
+              title={t("The Vega mainnet is live, trading launch H2 2022")}
+              text={t(
+                "Token holders can participate in governance, stake and delegate."
+              )}
+              buttonText={t("View the Roadmap")}
+              buttonLink="/#roadmap"
+            />
+          </div>
+        </Container>
+        <div className="max-w-[45rem] px-4 md:px-0 xl:max-w-[50rem] mx-auto text-center">
           <h1 className="mb-6">
             <BoxTitle text={t("Key concepts")} />
           </h1>
@@ -86,7 +99,6 @@ const KeyConceptsPage = () => {
             </Trans>
           </LeadingLine>
         </div>
-
         <Container>
           <div className="relative max-w-[26.25rem] mt-4 pt-[10.5rem] mx-auto text-center after:content-[''] after:absolute after:w-px dark:after:bg-white after:bg-black after:top-0 after:h-[8rem] after:left-1/2">
             <h2 className="title-m mb-6">
@@ -94,7 +106,6 @@ const KeyConceptsPage = () => {
             </h2>
           </div>
         </Container>
-
         <div className="relative z-30">
           <Sticky enabled={true}>
             <div className="bg-white dark:bg-black">
@@ -120,7 +131,6 @@ const KeyConceptsPage = () => {
             </div>
           </Sticky>
         </div>
-
         <div id="good">
           <PurposeBuiltBlock />
 
@@ -141,7 +151,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 Vega's front running protection in the papers
                 <TextLink
@@ -159,7 +169,7 @@ const KeyConceptsPage = () => {
                 </TextLink>
               </Trans>
             </p>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 Or try out the{" "}
                 <TextLink
@@ -173,7 +183,6 @@ const KeyConceptsPage = () => {
             </p>
           </BlockD>
         </div>
-
         <div id="better">
           <BlockD
             title={t("Permissionless market creation")}
@@ -232,7 +241,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 High capital efficiency in section 3 of the Vega blog{" "}
                 <TextLink
@@ -243,7 +252,7 @@ const KeyConceptsPage = () => {
                 </TextLink>
               </Trans>
             </p>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 How Vega optimises for high capital efficiency in sections 3.5
                 and 6.6 of the Vega
@@ -280,7 +289,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 Different methods of price discovery in section 5 of the Vega
                 blog{" "}
@@ -308,7 +317,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 The risk considerations behind pseudonymous environments and
                 Vega's protective measures in the Vega{" "}
@@ -339,7 +348,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 Market curation in section 3.4 of the Vega{" "}
                 <TextLink
@@ -369,7 +378,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 Cross margining in the Vega blog{" "}
                 <TextLink
@@ -380,7 +389,7 @@ const KeyConceptsPage = () => {
                 </TextLink>
               </Trans>
             </p>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 Automated cross margining in section 3 of the Vega blog{" "}
                 <TextLink
@@ -410,7 +419,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 Pegged orders for automated management in the Vega blog{" "}
                 <TextLink
@@ -459,7 +468,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 Gas fees under 'Miner extractable value (MEV) on blockchains' on
                 the blog{" "}
@@ -473,7 +482,6 @@ const KeyConceptsPage = () => {
             </p>
           </BlockD>
         </div>
-
         <div id="mature">
           <BlockD
             title={t("Cross chain support")}
@@ -492,7 +500,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p>
+            <p class="text-base">
               <Trans t={t}>
                 Cross chain support and multi-chain collateral in the Vega paper
                 <TextLink
