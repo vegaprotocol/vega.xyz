@@ -11,7 +11,7 @@ import LanguageToggle from "../components/LanguageToggle";
 import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-const Header = () => {
+const Header = ({ sticky }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -35,7 +35,12 @@ const Header = () => {
   return (
     <div>
       {/* <SiteBanner /> */}
-      <header className="relative z-30" id="header">
+      <header
+        className={`z-50 dark:bg-black bg-white ${
+          sticky ? "fixed top-0 left-0 right-0" : ""
+        }`}
+        id="header"
+      >
         <div className="px-4 w-full md:px-6 lg:px-8 relative">
           <div className="header flex items-center justify-between py-4 lg:pt-6">
             <Link to="/">

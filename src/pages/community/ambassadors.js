@@ -252,7 +252,7 @@ const Ambassadors = () => {
           <div className="hidden lg:block lg:col-span-1"></div>
 
           <div className="hidden md:block md:col-span-4 lg:col-span-4 mb-20">
-            <div className="sticky top-6">
+            <div className="sticky top-[6.75rem]">
               <div className="title-s mb-3">
                 <Trans t={t}>Interested in joining?</Trans>
               </div>
