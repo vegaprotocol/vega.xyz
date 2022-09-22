@@ -7,7 +7,6 @@ import Container from "../../components/Container";
 import BoxTitle from "../../components/BoxTitle";
 import ButtonLink from "../../components/ButtonLink";
 import Wormhole from "../../components/Svg/Wormhole";
-import Incentives from "../../components/Incentives";
 import PageSection from "../../components/PageSection";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
@@ -96,10 +95,6 @@ const DevelopPage = ({ data }) => {
             </div>
           </div>
         </div>
-      </Container>
-
-      <Container>
-        <Incentives />
       </Container>
 
       <Container>

@@ -8,6 +8,10 @@ module.exports = {
         "four-oh-four": "url('/404.png')",
         fairground: "url('/fairground-bg.png')",
         "experiment-on-fairground": "url('/experiment-on-fairground.svg')",
+        countdownBar: "url('/countdown-marker.png')",
+        moshed: "url('/moshed.jpg')",
+        moshed2: "url('/moshed2.jpg')",
+        moshed3: "url('/moshed3.jpg')",
       },
       opacity: {
         15: ".15",
