@@ -228,6 +228,14 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
+                    to="/rewards/"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    <Trans t={t}>Rewards</Trans>
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
                     to="https://github.com/vegaprotocol"
                     className="py-1.5 block leading-[1.3]"
                   >

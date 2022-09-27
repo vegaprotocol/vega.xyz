@@ -45,6 +45,7 @@ const Develop = () => {
           <Trans t={t}>Get rewarded</Trans>
         </NavigationHeading>
         <NavigationList>
+          <NavigationItem text={t("Rewards")} link="/rewards" />
           <NavigationItem
             text={t("Fairground incentives")}
             link="https://fairground.wtf/"

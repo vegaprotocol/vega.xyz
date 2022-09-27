@@ -35,6 +35,9 @@ const EpochCountdown = () => {
       const minutes = Math.floor(seconds / 60);
       seconds -= minutes * 60;
       setTimeRemainingString(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+
+      console.log(epochLength / 1000 / 60 / 60);
+
       setPercentageComplete(
         (((epochLength - timeRemaining) / epochLength) * 100).toFixed(2)
       );
