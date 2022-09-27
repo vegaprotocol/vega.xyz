@@ -10,7 +10,7 @@ const EpochCountdown = () => {
   useEffect(() => {
     const formatResponse = (response) => {
       const startTime = (
-        response.epoch.timestamps.startTime / 10000000000
+        response.epoch.timestamps.startTime / 1000000000
       ).toFixed();
       const endTime = (
         response.epoch.timestamps.expiryTime / 1000000000
@@ -35,9 +35,6 @@ const EpochCountdown = () => {
       const minutes = Math.floor(seconds / 60);
       seconds -= minutes * 60;
       setTimeRemainingString(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-
-      console.log(epochLength / 1000 / 60 / 60);
-
       setPercentageComplete(
         (((epochLength - timeRemaining) / epochLength) * 100).toFixed(2)
       );
