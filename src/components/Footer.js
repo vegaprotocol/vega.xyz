@@ -36,6 +36,14 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
+                    to="/validators/"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    <Trans t={t}>Validate and secure the network</Trans>
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
                     to="https://console.fairground.wtf/"
                     className="py-1.5 block leading-[1.3]"
                   >
@@ -147,12 +155,18 @@ const Footer = () => {
                   </TextLink>
                 </li>
                 <li>
-                  <TextLink to="/careers" className="py-1.5 block leading-[1.3]">
+                  <TextLink
+                    to="/careers"
+                    className="py-1.5 block leading-[1.3]"
+                  >
                     <Trans t={t}>Careers</Trans>
                   </TextLink>
                 </li>
                 <li>
-                  <TextLink to="/partners-backers" className="py-1.5 block leading-[1.3]">
+                  <TextLink
+                    to="/partners-backers"
+                    className="py-1.5 block leading-[1.3]"
+                  >
                     <Trans t={t}>Partners and backers</Trans>
                   </TextLink>
                 </li>
