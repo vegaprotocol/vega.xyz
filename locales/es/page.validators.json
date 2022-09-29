@@ -1,5 +1,6 @@
 {
   "Validate and secure the network": "",
   "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator.": "",
-  "Use Vega": ""
+  "Use Vega": "",
+  "Validator rewards": ""
 }

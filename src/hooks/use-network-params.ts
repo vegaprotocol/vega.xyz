@@ -85,6 +85,12 @@ export const NetworkParams = {
   validators_delegation_minAmount: "validators_delegation_minAmount",
   spam_protection_proposal_min_tokens: "spam_protection_proposal_min_tokens",
   market_liquidity_stakeToCcySiskas: "market_liquidity_stakeToCcySiskas",
+  network_validators_ersatz_rewardFactor:
+    "network_validators_ersatz_rewardFactor",
+  network_validators_ersatz_multipleOfTendermintValidators:
+    "network_validators_ersatz_multipleOfTendermintValidators",
+  network_validators_multisig_numberOfSigners:
+    "network_validators_multisig_numberOfSigners",
 } as const;
 
 type Params = typeof NetworkParams;
