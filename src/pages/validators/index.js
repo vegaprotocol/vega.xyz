@@ -5,6 +5,7 @@ import Container from "../../components/Container";
 import Seo from "../../components/Seo";
 import { graphql } from "gatsby";
 import BoxTitle from "../../components/BoxTitle";
+import NetworkParemeter from "../../components/NetworkParameter";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const ValidatorsPage = ({ data }) => {
@@ -45,6 +46,8 @@ const ValidatorsPage = ({ data }) => {
         <div className="py-10">
           <h2 className="heading-s">Validator rewards</h2>
         </div>
+
+        <NetworkParemeter />
       </Container>
     </Layout>
   );
