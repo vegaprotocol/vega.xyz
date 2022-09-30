@@ -15,28 +15,30 @@ const Row = ({ children }) => {
 // TODO - This table needs generalising, it's specific to validator rewards
 const Table = ({ headings, rows }) => {
   return (
-    <table className="text-left w-full border-b border-[#525252]">
-      <tbody>
-        {headings.map((heading, idx) => (
-          <Row key={idx}>
-            <th scope="row">
-              <Header>{heading}</Header>
-            </th>
-            {rows[idx].map((cell, idx) =>
-              idx === 0 ? (
-                <th scope="col" key={idx}>
-                  <Cell>{cell}</Cell>
-                </th>
-              ) : (
-                <td key={idx}>
-                  <Cell>{cell}</Cell>
-                </td>
-              )
-            )}
-          </Row>
-        ))}
-      </tbody>
-    </table>
+    <div className="overflow-x-scroll">
+      <table className="text-left max-w-[100vw] border-b border-[#525252]">
+        <tbody>
+          {headings.map((heading, idx) => (
+            <Row key={idx}>
+              <th scope="row">
+                <Header>{heading}</Header>
+              </th>
+              {rows[idx].map((cell, idx) =>
+                idx === 0 ? (
+                  <th scope="col" key={idx}>
+                    <Cell>{cell}</Cell>
+                  </th>
+                ) : (
+                  <td key={idx}>
+                    <Cell>{cell}</Cell>
+                  </td>
+                )
+              )}
+            </Row>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

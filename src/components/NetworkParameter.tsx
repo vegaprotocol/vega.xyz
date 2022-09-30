@@ -17,14 +17,14 @@ const NetworkParameter = ({ param, prefix, suffix }: NetworkParameterProps) => {
   return (
     <>
       {loading && (
-        <div>
+        <span>
           <Trans t={t}>Loading...</Trans>
-        </div>
+        </span>
       )}
       {error && (
-        <div>
+        <span>
           <Trans t={t}>Error loading value</Trans>
-        </div>
+        </span>
       )}
       {params && (
         <ParameterBox

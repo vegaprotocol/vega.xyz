@@ -2,5 +2,8 @@
   "Validate and secure the network": "",
   "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator.": "",
   "Use Vega": "",
-  "Validator rewards": ""
+  "Validator rewards": "",
+  "Become a Mainnet Validator": "",
+  "Any participant in the Vega network can become a validator. You'll need to set up a node and its infrastructure, submit a transaction on chain, self-stake <2></2> and attract token holders to stake (delegate) their tokens to you.": "",
+  "Those with the highest <1>validator scores</1> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <3>validators list</3> is refreshed every epoch <7></7>.": ""
 }

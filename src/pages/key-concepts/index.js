@@ -70,7 +70,7 @@ const KeyConceptsPage = () => {
       {missingTranslations && <TranslationsBanner />}
       <div data-cy="main" className="mb-16">
         <Container>
-          <div class="my-10">
+          <div className="my-10">
             <CalloutHero
               title={t("The Vega mainnet is live, trading launch H2 2022")}
               text={t(
@@ -151,7 +151,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 Vega's front running protection in the papers
                 <TextLink
@@ -169,7 +169,7 @@ const KeyConceptsPage = () => {
                 </TextLink>
               </Trans>
             </p>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 Or try out the{" "}
                 <TextLink
@@ -241,7 +241,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 High capital efficiency in section 3 of the Vega blog{" "}
                 <TextLink
@@ -252,7 +252,7 @@ const KeyConceptsPage = () => {
                 </TextLink>
               </Trans>
             </p>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 How Vega optimises for high capital efficiency in sections 3.5
                 and 6.6 of the Vega
@@ -289,7 +289,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 Different methods of price discovery in section 5 of the Vega
                 blog{" "}
@@ -317,7 +317,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 The risk considerations behind pseudonymous environments and
                 Vega's protective measures in the Vega{" "}
@@ -348,7 +348,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 Market curation in section 3.4 of the Vega{" "}
                 <TextLink
@@ -378,7 +378,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 Cross margining in the Vega blog{" "}
                 <TextLink
@@ -389,7 +389,7 @@ const KeyConceptsPage = () => {
                 </TextLink>
               </Trans>
             </p>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 Automated cross margining in section 3 of the Vega blog{" "}
                 <TextLink
@@ -419,7 +419,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 Pegged orders for automated management in the Vega blog{" "}
                 <TextLink
@@ -468,7 +468,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 Gas fees under 'Miner extractable value (MEV) on blockchains' on
                 the blog{" "}
@@ -500,7 +500,7 @@ const KeyConceptsPage = () => {
             <div className="title-xxs !font-not-glitched mt-8 mb-4 text-black dark:text-white">
               <Trans t={t}>Read more about:</Trans>
             </div>
-            <p class="text-base">
+            <p className="text-base">
               <Trans t={t}>
                 Cross chain support and multi-chain collateral in the Vega paper
                 <TextLink

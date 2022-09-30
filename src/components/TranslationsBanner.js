@@ -7,7 +7,7 @@ const TranslationsBanner = ({ targeti18n }) => {
   const { t } = useTranslation("component.translations-banner");
 
   return (
-    <div className="bg-vega-purple p-5 mb-12">
+    <div className="bg-vega-purple p-5">
       <Container>
         <div className="flex justify-between items-center gap-x-8">
           <div className="grow text-base md:text-[1.125rem] leading-[1.4]">
