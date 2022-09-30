@@ -139,7 +139,11 @@ const ValidatorsPage = ({ data }) => {
                 Any participant in the Vega network can become a validator.
                 You'll need to set up a node and its infrastructure, submit a
                 transaction on chain, self-stake{" "}
-                <NetworkParameter param="reward_staking_delegation_minimumValidatorStake" />{" "}
+                <NetworkParameter
+                  param="reward_staking_delegation_minimumValidatorStake"
+                  formatForVega={true}
+                  suffix="$VEGA"
+                />{" "}
                 and attract token holders to stake (delegate) their tokens to
                 you.
               </Trans>
