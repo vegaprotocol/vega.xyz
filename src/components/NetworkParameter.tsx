@@ -9,6 +9,7 @@ export interface NetworkParameterProps {
   prefix?: string;
   suffix?: string;
   formatForVega?: boolean;
+  expressPercentage?: boolean;
 }
 
 const NetworkParameter = ({
@@ -16,12 +17,23 @@ const NetworkParameter = ({
   prefix,
   suffix,
   formatForVega = false,
+  expressPercentage = false,
 }: NetworkParameterProps) => {
   const { params, loading, error } = useNetworkParams();
-  const { t, i18n } = useTranslation("component.network-parameter");
+  const { t } = useTranslation("component.network-parameter");
 
   const formatVegaValue = (value) => {
     return (value / 1000000000000000000).toFixed(2);
+  };
+
+  const formatValue = (value) => {
+    if (formatForVega) {
+      return formatVegaValue(value);
+    } else if (expressPercentage) {
+      return value * 100;
+    } else {
+      return value;
+    }
   };
 
   return (
@@ -38,7 +50,7 @@ const NetworkParameter = ({
       )}
       {params && (
         <ParameterBox
-          value={formatForVega ? formatVegaValue(params[param]) : params[param]}
+          value={formatValue(params[param])}
           prefix={prefix}
           suffix={suffix}
           description={`This value is determined by the network parameter ${SnakeToCamel(

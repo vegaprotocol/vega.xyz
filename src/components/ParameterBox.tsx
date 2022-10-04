@@ -25,9 +25,9 @@ const ParameterBox = ({
         }
       >
         <span className="cursor-pointer bg-[#333333] hover:bg-[#666666] px-1.5 inline-block text-white relative">
-          {prefix && `${prefix} `}
+          {prefix && `${prefix}`}
           {value}
-          {suffix && ` ${suffix}`}
+          {suffix && `${suffix}`}
 
           {description && (
             <svg

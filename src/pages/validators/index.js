@@ -71,11 +71,13 @@ const ValidatorsPage = ({ data }) => {
         "None",
         <NetworkParameter
           param="network_validators_ersatz_rewardFactor"
-          prefix="x "
+          expressPercentage={true}
+          suffix="%"
         />,
         <NetworkParameter
           param="network_validators_incumbentBonus"
-          prefix="x "
+          expressPercentage={true}
+          suffix="%"
         />,
       ],
       ["Lowest", <Arrow />, "Highest"],
@@ -144,7 +146,7 @@ const ValidatorsPage = ({ data }) => {
                 <NetworkParameter
                   param="reward_staking_delegation_minimumValidatorStake"
                   formatForVega={true}
-                  suffix="$VEGA"
+                  suffix=" $VEGA"
                 />{" "}
                 and attract token holders to stake (delegate) their tokens to
                 you.
