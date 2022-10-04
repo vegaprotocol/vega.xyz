@@ -3,11 +3,15 @@ import Container from "../components/Container";
 import Globe from "../components/Svg/Globe";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
-const TranslationsBanner = ({ targeti18n }) => {
+const TranslationsBanner = ({ targeti18n, className }) => {
   const { t } = useTranslation("component.translations-banner");
 
   return (
-    <div className="bg-vega-purple p-5 mb-12">
+    <div
+      className={`bg-vega-purple p-5 mb-12 text-white ${
+        className ? className : ""
+      }`}
+    >
       <Container>
         <div className="flex justify-between items-center gap-x-8">
           <div className="grow text-base md:text-[1.125rem] leading-[1.4]">

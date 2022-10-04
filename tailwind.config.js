@@ -8,6 +8,7 @@ module.exports = {
         "four-oh-four": "url('/404.png')",
         fairground: "url('/fairground-bg.png')",
         "experiment-on-fairground": "url('/experiment-on-fairground.svg')",
+        buildersClubHero: "url('/builders-club-hero-background.jpg')",
       },
       opacity: {
         15: ".15",
