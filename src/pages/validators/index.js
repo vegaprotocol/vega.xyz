@@ -20,6 +20,8 @@ const Arrow = () => {
       <StaticImage
         src="../../images/page-validators-rewards-arrow.png"
         alt=""
+        width="64"
+        height="18"
       />
     </div>
   );

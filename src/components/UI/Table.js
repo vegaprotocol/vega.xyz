@@ -16,7 +16,7 @@ const Row = ({ children }) => {
 const Table = ({ headings, rows }) => {
   return (
     <div className="overflow-x-scroll">
-      <table className="text-left max-w-[100vw] border-b border-[#525252]">
+      <table className="text-left max-w-[100vw] border-b border-[#525252] w-full">
         <tbody>
           {headings.map((heading, idx) => (
             <Row key={idx}>
