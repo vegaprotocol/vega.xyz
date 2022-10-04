@@ -1,7 +1,11 @@
 import React from "react";
 
 const Cell = ({ children }) => {
-  return <div className="px-8 py-3 body-l text-vega-grey">{children}</div>;
+  return (
+    <div className="px-8 py-3 body-l dark:text-vega-grey text-vega-mid-grey">
+      {children}
+    </div>
+  );
 };
 
 const Header = ({ children }) => {

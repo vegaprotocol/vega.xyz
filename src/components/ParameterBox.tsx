@@ -24,7 +24,7 @@ const ParameterBox = ({
           </div>
         }
       >
-        <span className="cursor-pointer bg-[#333333] hover:bg-[#666666] px-1.5 inline-block text-white relative">
+        <span className="group cursor-pointer px-1.5 inline-block relative dark:text-white text-black dark:bg-[#404040] dark:hover:bg-[#8B8B8B] bg-[#D2D2D2] hover:bg-[#A7A7A7]">
           {prefix && `${prefix}`}
           {value}
           {suffix && `${suffix}`}
@@ -39,14 +39,13 @@ const ParameterBox = ({
               className="inline-block ml-1.5 align-middle relative -top-px"
             >
               <rect
-                opacity="0.24"
                 x="1"
                 y="15"
                 width="14"
                 height="14"
                 rx="7"
                 transform="rotate(-90 1 15)"
-                fill="white"
+                className="dark:fill-[#8B8B8B] dark:group-hover:fill-[#C0C0C0] fill-[#A7A7A7] group-hover:fill-[#626262]"
               />
               <rect x="7.5" y="4.5" width="1" height="1" fill="white" />
               <rect x="7.5" y="6.5" width="1" height="5" fill="white" />

@@ -26,6 +26,7 @@ module.exports = {
         "vega-purple": "#633DFF",
         "vega-text-muted": "#BFCCD6",
         "vega-border-muted": "#696969",
+        "vega-blue": "#0075FF",
       },
       scale: {
         185: "1.85",
@@ -36,7 +37,7 @@ module.exports = {
             "--tw-prose-body": theme("colors.vega-mid-grey"),
             "--tw-prose-headings": theme("colors.vega-mid-grey"),
             "--tw-prose-lead": theme("colors.vega-mid-grey"),
-            "--tw-prose-links": theme("colors.vega-mid-grey"),
+            "--tw-prose-links": theme("colors.white"),
             "--tw-prose-bold": theme("colors.vega-mid-grey"),
             "--tw-prose-counters": theme("colors.vega-mid-grey"),
             "--tw-prose-bullets": theme("colors.vega-mid-grey"),
@@ -72,7 +73,7 @@ module.exports = {
             },
             a: {
               "&:hover": {
-                color: "#FF077F !important",
+                textDecoration: "none",
               },
             },
             li: {

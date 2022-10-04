@@ -7,10 +7,13 @@ import { graphql } from "gatsby";
 import BoxTitle from "../../components/BoxTitle";
 import Callout from "../../components/Callout";
 import Button from "../../components/UI/Button";
+import Link from "../../components/UI/Link";
 import NetworkParameter from "../../components/NetworkParameter";
 import ParameterBox from "../../components/ParameterBox";
+import ValidatorsFooterResponsive from "../../components/Svg/Validators/Footer/Responsive";
+
 import Table from "../../components/UI/Table";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import { StaticImage } from "gatsby-plugin-image";
 import { useNetworkParams } from "../../hooks/use-network-params";
 
@@ -20,8 +23,8 @@ const Arrow = () => {
       <StaticImage
         src="../../images/page-validators-rewards-arrow.png"
         alt=""
-        width="64"
-        height="18"
+        width={64}
+        height={18}
       />
     </div>
   );
@@ -121,7 +124,7 @@ const ValidatorsPage = ({ data }) => {
           {params && (
             <>
               <Table headings={tableData.headings} rows={tableData.rows} />
-              <p className="mt-4 body-m text-vega-grey">
+              <p className="mt-4 body-m dark:text-vega-grey text-vega-mid-grey">
                 * The no. of Consensus Validators is expected to increase
                 through governance, further decentralising the protocol over
                 time, with the no. of Standby Validators increasing as a
@@ -137,7 +140,7 @@ const ValidatorsPage = ({ data }) => {
           <h2 className="body-xl mb-4">
             <Trans t={t}>Become a Mainnet Validator</Trans>
           </h2>
-          <div className="prose body-l max-w-none mb-6">
+          <div className="prose prose-a:text-black dark:prose-a:text-white body-l max-w-none mb-6">
             <p>
               <Trans t={t}>
                 Any participant in the Vega network can become a validator.
@@ -154,19 +157,26 @@ const ValidatorsPage = ({ data }) => {
             </p>
             <p>
               <Trans t={t}>
-                Those with the highest <Link to="/">validator scores</Link> (a
-                measure of performance and stake) become consensus validators
+                Those with the highest{" "}
+                <Link to="https://docs.vega.xyz/docs/mainnet/concepts/vega-chain#validating-node-performance">
+                  validator scores
+                </Link>{" "}
+                (a measure of performance and stake) become consensus validators
                 and earn the greatest rewards from infrastructure fees paid on
                 every trade and transfer, with a portion distributed to stakers
-                and standby validators. The <Link to="/">validators list</Link>{" "}
+                and standby validators. The{" "}
+                <Link to="https://token.vega.xyz/staking">validators list</Link>{" "}
                 is refreshed every epoch{" "}
                 <NetworkParameter param="validators_epoch_length" />.
               </Trans>
             </p>
           </div>
-          <Button to="/kejhr">Become a Mainnet validator</Button>
+          <Button to="https://docs.vega.xyz/docs/mainnet/concepts/vega-chain">
+            Become a Mainnet validator
+          </Button>
         </Callout>
       </Container>
+      <ValidatorsFooterResponsive />
     </Layout>
   );
 };
