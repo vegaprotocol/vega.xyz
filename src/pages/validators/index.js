@@ -58,7 +58,7 @@ const ValidatorsPage = ({ data }) => {
   });
 
   const tableData = {
-    headings: ["Role", "Limit*", "Rewards", "Validator Score"],
+    headings: ["Role", "Limit*", "Reward multiplier**", "Validator Score"],
     rows: [
       [
         "Candidate/Pending Validators",
@@ -74,13 +74,11 @@ const ValidatorsPage = ({ data }) => {
         "None",
         <NetworkParameter
           param="network_validators_ersatz_rewardFactor"
-          expressPercentage={true}
-          suffix="%"
+          prefix="× "
         />,
         <NetworkParameter
           param="network_validators_incumbentBonus"
-          expressPercentage={true}
-          suffix="%"
+          prefix="× "
         />,
       ],
       ["Lowest", <Arrow />, "Highest"],
@@ -125,12 +123,31 @@ const ValidatorsPage = ({ data }) => {
             <>
               <Table headings={tableData.headings} rows={tableData.rows} />
               <p className="mt-4 body-m dark:text-vega-grey text-vega-mid-grey">
-                * The no. of Consensus Validators is expected to increase
-                through governance, further decentralising the protocol over
-                time, with the no. of Standby Validators increasing as a
-                multiple of the number of Consensus Validators, currently
-                configured to{" "}
-                <NetworkParameter param="network_validators_ersatz_multipleOfTendermintValidators" />
+                <Trans t={t}>
+                  * The no. of Consensus Validators is expected to increase
+                  through governance, further decentralising the protocol over
+                  time, with the no. of Standby Validators increasing as a
+                  multiple of the number of Consensus Validators, currently
+                  configured to{" "}
+                  <NetworkParameter param="network_validators_ersatz_multipleOfTendermintValidators" />
+                  .
+                </Trans>
+              </p>
+              <p className="mt-4 body-m dark:text-vega-grey text-vega-mid-grey">
+                <Trans t={t}>
+                  ** Consensus validators secure the network, earning a{" "}
+                  <NetworkParameter
+                    param="network_validators_incumbentBonus"
+                    prefix="× "
+                  />
+                  rate on rewards. Standby validators are ready to step up and
+                  fill open consensus validator slots, earning a{" "}
+                  <NetworkParameter
+                    param="network_validators_ersatz_rewardFactor"
+                    prefix="× "
+                  />{" "}
+                  rate on rewards.
+                </Trans>
               </p>
             </>
           )}
