@@ -9,6 +9,9 @@ module.exports = {
         fairground: "url('/fairground-bg.png')",
         "experiment-on-fairground": "url('/experiment-on-fairground.svg')",
         buildersClubHero: "url('/builders-club-hero-background.jpg')",
+        buildersClubFooter: "url('/builders-club-footer-background.jpg')",
+        buildersClubFooterLight:
+          "url('/builders-club-footer-background-light.jpg')",
       },
       opacity: {
         15: ".15",

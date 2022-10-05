@@ -20,7 +20,7 @@ const ButtonLink = ({
     "dark:bg-white dark:text-black bg-black text-white border-black dark:border-white";
 
   const buttonStyles =
-    "text-[0.9375rem] leading-1 tracking-[0.01rem] transition-[top] relative z-20 hover:-top-1.5 top-0 inline-block px-10 py-2 border uppercase";
+    "text-[0.9375rem] leading-1 tracking-[0.01rem] transition-[top] relative z-20 hover:-top-1.5 top-0 inline-block px-10 py-3 border border-current uppercase";
 
   if (colorMode === "white") {
     buttonWrapperColorStyles = "text-white";
