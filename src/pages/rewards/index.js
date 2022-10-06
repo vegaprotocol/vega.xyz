@@ -95,7 +95,7 @@ const RewardsPage = ({ data }) => {
           </LinkCta>
         </div>
 
-        {/* <UICallout className="my-16 md:my-20">
+        <UICallout className="my-16 md:my-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-[1.5rem]">
@@ -122,7 +122,7 @@ const RewardsPage = ({ data }) => {
             </div>
             <Apy className="hidden lg:block" />
           </div>
-        </UICallout> */}
+        </UICallout>
 
         <div className="my-16 md:my-20">
           <h2 className="title-m max-w-[48rem] font-glitched md:title-l mb-4 md:mb-12 mt-4">

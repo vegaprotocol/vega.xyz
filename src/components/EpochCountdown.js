@@ -26,6 +26,15 @@ const EpochCountdown = () => {
       };
     };
 
+    const formatTimeString = (days, hours, minutes, seconds) => {
+      let timeString = "";
+      timeString = days ? days + "d " : " ";
+      timeString += !days && !hours ? " " : hours + "h ";
+      timeString += !minutes && !hours && !days ? "" : minutes + "m ";
+      timeString += seconds + "s";
+      return timeString;
+    };
+
     const updateCounter = (timeRemaining, epochLength) => {
       let seconds = timeRemaining;
       const days = Math.floor(seconds / (3600 * 24));
@@ -34,7 +43,8 @@ const EpochCountdown = () => {
       seconds -= hours * 3600;
       const minutes = Math.floor(seconds / 60);
       seconds -= minutes * 60;
-      setTimeRemainingString(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+      setTimeRemainingString(formatTimeString(days, hours, minutes, seconds));
+
       setPercentageComplete(
         (((epochLength - timeRemaining) / epochLength) * 100).toFixed(2)
       );
