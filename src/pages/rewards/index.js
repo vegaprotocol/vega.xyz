@@ -75,9 +75,14 @@ const RewardsPage = ({ data }) => {
               </Trans>
             </LeadingLine>
           </div>
-          <LinkCta to="https://token.vega.xyz/rewards" className="mt-2 md:mt-0">
-            <Trans t={t}>Rewards I've earned</Trans>
-          </LinkCta>
+          <div>
+            <LinkCta
+              to="https://token.vega.xyz/rewards"
+              className="mt-2 md:mt-0"
+            >
+              <Trans t={t}>Rewards I've earned</Trans>
+            </LinkCta>
+          </div>
         </div>
         <EpochCountdown />
         <RewardFees />
