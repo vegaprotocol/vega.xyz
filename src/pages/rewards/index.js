@@ -112,7 +112,7 @@ const RewardsPage = ({ data }) => {
                   epoch staked, as well as a share of trading fees.
                 </Trans>
               </p>
-              <Apy className="lg:hidden max-w-[17.75rem] mb-6" />
+              {/* <Apy className="lg:hidden max-w-[17.75rem] mb-6" /> */}
               <div className="grid grid-cols-1 gap-6 md:flex md:gap-6 md:items-center">
                 <UIButton to="https://token.vega.xyz/">
                   <Trans t={t}>Staking</Trans>
@@ -125,7 +125,7 @@ const RewardsPage = ({ data }) => {
                 </UIButton>
               </div>
             </div>
-            <Apy className="hidden lg:block" />
+            {/* <Apy className="hidden lg:block" /> */}
           </div>
         </UICallout>
 
