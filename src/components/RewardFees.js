@@ -135,8 +135,8 @@ const RewardFees = () => {
               </Trans>
             </div>
           }
-          buttonText={t("Provide liquidity")}
-          buttonLink="https://docs.vega.xyz/docs/testnet/tutorials/providing-liquidity"
+          buttonText={t("Create a market")}
+          buttonLink="/market-creation"
         />
       </div>
     </div>
