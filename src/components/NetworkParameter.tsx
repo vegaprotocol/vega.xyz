@@ -12,6 +12,8 @@ export interface NetworkParameterProps {
   expressPercentage?: boolean;
 }
 
+const explorerUrl = "https://explorer.vega.xyz/network-parameters";
+
 const NetworkParameter = ({
   param,
   prefix,
@@ -49,14 +51,16 @@ const NetworkParameter = ({
         </span>
       )}
       {params && (
-        <ParameterBox
-          value={formatValue(params[param])}
-          prefix={prefix}
-          suffix={suffix}
-          description={`This value is determined by the network parameter ${SnakeToCamel(
-            param
-          )}`}
-        />
+        <a href={`${explorerUrl}#${SnakeToCamel(param)}`} target="_blank">
+          <ParameterBox
+            value={formatValue(params[param])}
+            prefix={prefix}
+            suffix={suffix}
+            description={`This value is determined by the network parameter ‘${SnakeToCamel(
+              param
+            )}’`}
+          />
+        </a>
       )}
     </>
   );

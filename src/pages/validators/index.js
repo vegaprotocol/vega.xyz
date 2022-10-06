@@ -41,7 +41,7 @@ const StandByValidatorsLimit = () => {
             params.network_validators_ersatz_multipleOfTendermintValidators *
             params.network_validators_multisig_numberOfSigners
           }
-          description={`This value is determined by the network parameter network.validators.ersatz.multipleOfTendermintValidators multiplied by network.validators.multisig.numberOfSigners`}
+          description={`This value is determined by the network parameter ‘network.validators.ersatz.multipleOfTendermintValidators’ multiplied by ‘network.validators.multisig.numberOfSigners’`}
         />
       )}
     </>
@@ -60,11 +60,7 @@ const ValidatorsPage = ({ data }) => {
   const tableData = {
     headings: ["Role", "Limit*", "Reward multiplier**", "Validator Score"],
     rows: [
-      [
-        "Candidate/Pending Validators",
-        "Standby Validators",
-        "Consensus Validators",
-      ],
+      ["Candidate Validators", "Standby Validators", "Consensus Validators"],
       [
         "Unlimited",
         <StandByValidatorsLimit />,
@@ -139,7 +135,7 @@ const ValidatorsPage = ({ data }) => {
                   <NetworkParameter
                     param="network_validators_incumbentBonus"
                     prefix="× "
-                  />
+                  />{" "}
                   rate on rewards. Standby validators are ready to step up and
                   fill open consensus validator slots, earning a{" "}
                   <NetworkParameter
