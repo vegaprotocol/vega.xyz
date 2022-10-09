@@ -17,7 +17,7 @@ const TranslationsBanner = ({ targeti18n }) => {
             <br className="hidden xl:block" />{" "}
             <Trans t={t}>
               <a
-                href="https://github.com/vegaprotocol/vega.xyz/tree/i18n#internationalisation"
+                href="https://github.com/vegaprotocol/vega.xyz/#internationalisation"
                 target="_blank"
                 rel="noreferrer"
                 className="underline hover:no-underline"
