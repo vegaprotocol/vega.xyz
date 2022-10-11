@@ -184,7 +184,7 @@ const ValidatorsPage = ({ data }) => {
               </Trans>
             </p>
           </div>
-          <Button to="https://docs.vega.xyz/docs/mainnet/concepts/vega-chain#becoming-a-validator ">
+          <Button to="https://docs.vega.xyz/docs/mainnet/concepts/vega-chain#becoming-a-validator">
             Become a Mainnet validator
           </Button>
         </Callout>
