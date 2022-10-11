@@ -123,7 +123,7 @@ const BugBountiesPage = ({ data }) => {
                   </p>
                   <p>
                     <Trans t={t}>
-                      The vega.xyx website or any bug related to the vega.xyz
+                      The vega.xyz website or any bug related to the vega.xyz
                       email domain are out of scope. The program is meant for
                       serious bugs that have significant impact on security.
                       Bugs on the vega.xyz website would only qualify if they
