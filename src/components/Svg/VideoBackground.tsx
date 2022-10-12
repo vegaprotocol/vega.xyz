@@ -1,8 +1,12 @@
 import React, { createRef, useEffect, useState } from "react";
 import Moshed from "../../video/moshed.mp4";
 
-const VideoBackground = ({ className }) => {
-  const video = createRef();
+type Props = {
+  className?: string;
+};
+
+const VideoBackground = ({ className }: Props) => {
+  const video = createRef<HTMLVideoElement>();
   const [replaceVideoWithPoster, setReplaceVideoWithPoster] = useState(false);
 
   useEffect(() => {

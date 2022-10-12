@@ -247,3 +247,16 @@ a {
     transition: left 0.5s;
   }
 }
+
+.VegaTypewriter__cursor::after {
+  position: relative;
+  margin-bottom: -0.1em;
+  display: inline-block;
+  content: "";
+  height: 0.85em;
+  width: 0.55ch;
+  background-image: url("/title-glitch-orange.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  animation: blink 1.5s steps(2, start) infinite;
+}

@@ -94,9 +94,13 @@ module.exports = {
           from: { backgroundPositionX: 0 },
           to: { backgroundPositionX: "-1326px" },
         },
+        blink: {
+          to: { visibility: "hidden" },
+        },
       },
       animation: {
-        "fairground-marquee": "fairground-marquee 10s linear infinite;",
+        "fairground-marquee": "fairground-marquee 10s linear infinite",
+        blink: "blink 1.5s steps(2, start) infinite",
       },
     },
   },
