@@ -142,7 +142,7 @@ const proposalsQuery = gql`
 
 const Proposals = () => {
   //const [proposalState, setProposalState] = useState("Enacted");
-  const [proposalState] = useState("Enacted");
+  const [proposalState] = useState("STATE_ENACTED");
   const { t } = useTranslation("component.proposals");
 
   const { data: anyProposals } = useQuery(allProposalsQuery);
@@ -153,6 +153,8 @@ const Proposals = () => {
   // const updateProposalState = (state) => {
   //   setProposalState(state);
   // };
+
+  console.log(error);
 
   if (anyProposals && anyProposals.proposals) {
     return (

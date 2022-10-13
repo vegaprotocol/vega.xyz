@@ -22,27 +22,32 @@ const getProposalType = (proposal) => {
 };
 
 const stateColours = {
-  enacted: "text-vega-mint",
-  open: "text-vega-mint",
-  declined: "text-vega-pink",
-  failed: "text-vega-pink",
-  passed: "text-vega-mint",
-  waitingfornodevote: "text-vega-yellow",
+  state_enacted: "text-vega-mint",
+  state_open: "text-vega-mint",
+  state_declined: "text-vega-pink",
+  state_failed: "text-vega-pink",
+  state_passed: "text-vega-mint",
+  state_waitingfornodevote: "text-vega-yellow",
 };
 
 const getProposalName = (proposal) => {
   const { change } = proposal.terms;
 
-  if (change.__typename === "NewAsset") {
-    return `${change.symbol}`;
-  } else if (change.__typename === "NewMarket") {
-    return `${change.instrument.name}`;
-  } else if (change.__typename === "UpdateMarket") {
-    return `${change.marketId}`;
-  } else if (change.__typename === "UpdateNetworkParameter") {
-    return `${change.networkParameter.key}`;
-  } else if (change.__typename === "NewFreeform") {
-    return `${proposal.rationale.hash}`;
+  try {
+    if (change.__typename === "NewAsset") {
+      return `${change.symbol}`;
+    } else if (change.__typename === "NewMarket") {
+      return `${change.instrument.name}`;
+    } else if (change.__typename === "UpdateMarket") {
+      return `${change.marketId}`;
+    } else if (change.__typename === "UpdateNetworkParameter") {
+      return `${change.networkParameter.key}`;
+    } else if (change.__typename === "NewFreeform") {
+      return `${proposal.rationale.hash}`;
+    }
+  } catch (e) {
+    console.log(e);
+    return "Unknown Proposal";
   }
 
   return "Unknown Proposal";
@@ -70,7 +75,7 @@ const Proposal = ({ data }) => {
             {getProposalName(data)}
           </div>
           <span className={`text-[0.9375rem] ${stateColour}`}>
-            <SquareBullet size="10" /> {data.state}
+            <SquareBullet size="10" /> {data.state.replace("STATE_", "")}
           </span>
         </div>
         <div className="col-span-6 md:col-span-2">
@@ -83,13 +88,18 @@ const Proposal = ({ data }) => {
           </Moment>
         </div>
         <div className="col-span-6 md:col-span-2">
-          <span className="text-[0.9375rem] tracking-[0.01rem] text-vega-mid-grey uppercase">
-            <Trans t={t}>Enacted on:</Trans>
-          </span>
-          <br />
-          <Moment format={dateFormat} parse={dateParseFormat}>
-            {data.terms.enactmentDatetime}
-          </Moment>
+          {data.terms.enactmentDatetime && (
+            <>
+              <span className="text-[0.9375rem] tracking-[0.01rem] text-vega-mid-grey uppercase">
+                <Trans t={t}>Enacted on:</Trans>
+              </span>
+              <br />
+
+              <Moment format={dateFormat} parse={dateParseFormat}>
+                {data.terms.enactmentDatetime}
+              </Moment>
+            </>
+          )}
         </div>
         <div className="col-span-6 md:text-right md:col-span-3 lg:col-span-2 pt-6 md:pt-0">
           <ButtonLinkSimple
