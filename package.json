@@ -79,5 +79,5 @@
     "tailwindcss-hyphens": "^0.1.0",
     "yarn": "^1.22.19"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@1.17.0"
 }
