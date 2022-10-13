@@ -3382,13 +3382,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.9.0":
-  version: 2.11.6
-  resolution: "@popperjs/core@npm:2.11.6"
-  checksum: 47fb328cec1924559d759b48235c78574f2d71a8a6c4c03edb6de5d7074078371633b91e39bbf3f901b32aa8af9b9d8f82834856d2f5737a23475036b16817f0
-  languageName: node
-  linkType: hard
-
 "@sideway/address@npm:^4.1.3":
   version: 4.1.4
   resolution: "@sideway/address@npm:4.1.4"
@@ -3501,18 +3494,6 @@ __metadata:
   peerDependencies:
     tailwindcss: "*"
   checksum: 4e19e332f78c04cdbda12b33b7d4edfcd69a190bfa4aa8c5c4fc7eed8a615a0a560e03f4c841ed7e86e539c2fdbf8fab9b1bd6a7bebffb230c1d04df7831a4cd
-  languageName: node
-  linkType: hard
-
-"@tippyjs/react@npm:^4.2.6":
-  version: 4.2.6
-  resolution: "@tippyjs/react@npm:4.2.6"
-  dependencies:
-    tippy.js: ^6.3.1
-  peerDependencies:
-    react: ">=16.8"
-    react-dom: ">=16.8"
-  checksum: 8f0fba591c9dae2e1af1ae632bbc775ba5c9dd4498e50e242be70302b4c27115c6740eec44e885e294b27cb28515777b52af5b34aac9d4bab627d948add938ae
   languageName: node
   linkType: hard
 
@@ -17935,15 +17916,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tippy.js@npm:^6.3.1":
-  version: 6.3.7
-  resolution: "tippy.js@npm:6.3.7"
-  dependencies:
-    "@popperjs/core": ^2.9.0
-  checksum: cac955318a65288e8d2dca05059878b003c6e66f92c94f7810f5bc5448eb6646abdf7dacc9bd00020e2611592598d0aae3a28ec9a45349a159603c3fdddce5fb
-  languageName: node
-  linkType: hard
-
 "title-case@npm:^2.1.0":
   version: 2.1.1
   resolution: "title-case@npm:2.1.1"
@@ -18967,7 +18939,6 @@ __metadata:
     "@tailwindcss/aspect-ratio": ^0.4.0
     "@tailwindcss/line-clamp": ^0.4.0
     "@tailwindcss/typography": ^0.5.2
-    "@tippyjs/react": ^4.2.6
     add: ^2.0.6
     autoprefixer: ^10.4.7
     aws-sdk: ^2.1188.0
