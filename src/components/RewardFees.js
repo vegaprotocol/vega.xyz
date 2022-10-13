@@ -42,6 +42,10 @@ const RewardFees = () => {
     marketProposerReward: "Loading...",
   });
 
+  const formatVegaValue = (value) => {
+    return `${(parseInt(value) / 1000000000000000000).toFixed(2)} $VEGA`;
+  };
+
   useEffect(() => {
     async function fetchRewardFees() {
       let response = await fetch(
@@ -93,7 +97,7 @@ const RewardFees = () => {
         <RewardBox
           idx={0}
           title={t("Trading")}
-          rewardValue={`${rewardValues.makerPaidFeeReward}`}
+          rewardValue={`${formatVegaValue(rewardValues.makerPaidFeeReward)}`}
           rewardValueQualifier="Average total paid out per epoch"
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
@@ -109,7 +113,7 @@ const RewardFees = () => {
         <RewardBox
           idx={1}
           title={t("Liquidity Provision")}
-          rewardValue={rewardValues.lpFeeReward}
+          rewardValue={formatVegaValue(rewardValues.lpFeeReward)}
           rewardValueQualifier="Average total paid out per epoch"
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
@@ -125,7 +129,7 @@ const RewardFees = () => {
         <RewardBox
           idx={2}
           title={t("Market Creation")}
-          rewardValue={rewardValues.marketProposerReward}
+          rewardValue={formatVegaValue(rewardValues.marketProposerReward)}
           rewardValueQualifier="Average total paid out per epoch"
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
