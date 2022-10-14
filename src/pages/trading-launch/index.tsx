@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import HUD from "../../components/TradingLaunch/HUD/HUD";
 import Story from "../../components/TradingLaunch/Story/Story";
 import PlanetBottom from "../../components/TradingLaunch/PlanetBottom";
-import StarfieldAnimation from "../../components/TradingLaunch/Starfield";
+import StarfieldAnimation from "../../components/TradingLaunch/Starfield/Starfield";
 import Interruption from "../../components/TradingLaunch/Interruption";
 
 const TradingLaunch = () => {
