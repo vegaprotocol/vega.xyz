@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import sizeMe from "react-sizeme";
 import raf from "raf";
 
-import Particle from "./particle";
+import Particle from "./Particle";
 
 class StarfieldAnimation extends PureComponent {
   static propTypes = {
