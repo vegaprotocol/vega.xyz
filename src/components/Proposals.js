@@ -154,8 +154,6 @@ const Proposals = () => {
   //   setProposalState(state);
   // };
 
-  console.log(error);
-
   if (anyProposals && anyProposals.proposals) {
     return (
       <div className="grey-box p-6 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">

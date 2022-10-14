@@ -130,7 +130,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 };
 
 exports.onPreInit = () => {
-  const result = spawn.sync("yarn", ["i18next", "src/**/*.js"], {
+  const result = spawn.sync("yarn", ["i18next", "src/**/*.{js, tsx}"], {
     stdio: "inherit",
   });
 };
