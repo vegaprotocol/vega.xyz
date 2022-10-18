@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
 import Layout from "../../components/Layout";
@@ -47,41 +47,6 @@ const ListItem = ({ idx, text }) => {
   );
 };
 
-const getArch = () => {
-  var platform =
-      window.navigator?.userAgentData?.platform ?? window.navigator.platform,
-    macosPlatforms = ["macOS", "Macintosh", "MacIntel", "Mac68K"],
-    windowsPlatforms = ["Win32", "Win64", "Windows"],
-    linuxPlatforms = "Linux";
-
-  if (macosPlatforms.includes(platform)) {
-    const w = document.createElement("canvas").getContext("webgl");
-    const d = w.getExtension("WEBGL_debug_renderer_info");
-    const g = (d && w.getParameter(d.UNMASKED_RENDERER_WEBGL)) || "";
-    if (
-      (g.match(/Apple/) && !g.match(/Apple GPU/)) ||
-      (g.match(/Apple GPU/) &&
-        w
-          .getSupportedExtensions()
-          .indexOf("WEBGL_compressed_texture_s3tc_srgb") === -1)
-    ) {
-      return "MacOS (ARM64)";
-    } else {
-      return "MacOS";
-    }
-  } else if (windowsPlatforms.includes(platform)) {
-    if (platform.match(/\barm/i)) {
-      return "Windows (ARM64)";
-    } else {
-      return "Windows";
-    }
-  } else if (linuxPlatforms.includes(platform)) {
-    return "Linux";
-  } else {
-    return "Linux";
-  }
-};
-
 const howToText = [
   "Choose 'create a new wallet' in the app",
   "Name each individual wallet if you need more than one",
@@ -111,12 +76,12 @@ const binaries = [
   },
   {
     icon: "mac",
-    platform: "MacOS",
+    platform: "MacOS (Intel)",
     file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-darwin-amd64.zip",
   },
   {
     icon: "mac",
-    platform: "MacOS (ARM64)",
+    platform: "MacOS (M1 / M2)",
     file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-darwin-arm64.zip",
   },
   {
@@ -129,8 +94,6 @@ const binaries = [
 const WalletPage = () => {
   const { i18n, t } = useTranslation("page.wallet");
   const [downloadDropdown, setDownloadDropdown] = useState(false);
-  const [selectedBinary, setSelectedBinary] = useState(binaries[0]);
-  const dropDownMenuButton = useRef(null);
   const [missingTranslations, setMissingTranslations] = useState(false);
 
   i18n.on("missingKey", (lng) => {
@@ -140,19 +103,6 @@ const WalletPage = () => {
   const showDownloadMenu = (state) => {
     setDownloadDropdown(state);
   };
-
-  const chooseBinary = (idx) => {
-    setSelectedBinary(binaries[idx]);
-    dropDownMenuButton.current.blur();
-  };
-
-  useEffect(() => {
-    setSelectedBinary(
-      binaries.find((element) => element.platform === getArch())
-    );
-
-    return () => {};
-  }, []);
 
   return (
     <Layout>
@@ -177,62 +127,53 @@ const WalletPage = () => {
             </Trans>
           </LeadingLine>
 
-          <div
-            ref={dropDownMenuButton}
-            className="w-[16rem] mx-auto relative mt-10 cursor-pointer"
-            tabIndex={0}
-            role="button"
-            onFocus={() => showDownloadMenu(true)}
-            onBlur={() => showDownloadMenu(false)}
-          >
-            <div className="border border-current flex items-center">
-              <div className="py-3 px-3.5 flex items-center">
-                <div className="pr-2.5">
-                  {PlatformIcon(selectedBinary.icon)}
-                </div>
-                <DropdownArrow />
-                {downloadDropdown && (
-                  <div className="absolute z-20 top-[100%] left-0 right-0 border border-t-0 border-current bg-white dark:bg-black">
-                    <ul className="py-3 px-2">
-                      {binaries.map((binary, idx) => {
-                        return (
-                          <li className="cursor-pointer my-1" key={idx}>
-                            <div
-                              onClick={() => chooseBinary(idx)}
-                              onKeyDown={() => chooseBinary(idx)}
-                              role="button"
-                              // tabIndex={0}
-                              className={`flex items-center w-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10 ${
-                                selectedBinary === binary
-                                  ? "bg-black dark:bg-white bg-opacity-10 dark:bg-opacity-10"
-                                  : ""
-                              }`}
-                            >
-                              <div className="px-3.5 py-2">
-                                {PlatformIcon(binary.icon)}
-                              </div>
-                              <div className="py-2 copy-xxs !mb-0 text-vega-mid-grey dark:text-vega-grey">
-                                {binary.platform}
-                              </div>
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
+          <div className="flex justify-center">
+            <div className="inline-block mx-auto relative mt-6 cursor-pointer">
+              <button
+                className="border border-current flex items-center"
+                onFocus={() => showDownloadMenu(true)}
+                onBlur={(e) => {
+                  if (!e.relatedTarget?.dataset?.fileDownload) {
+                    showDownloadMenu(false);
+                  }
+                }}
+              >
+                <div className="text-center relative border-px uppercase copy-xxs !mb-0 py-3 pl-4 pr-6 flex items-center">
+                  <div className="mr-4">
+                    <DropdownArrow />
                   </div>
-                )}
-              </div>
-              <div className="text-center relative border-px border-l border-current uppercase copy-xxs !mb-0 flex-grow">
-                <a
-                  href={selectedBinary.file}
-                  className="block py-3 px-3"
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => showDownloadMenu(false)}
-                >
-                  <Trans t={t}>Get desktop app</Trans>
-                </a>
-              </div>
+                  <Trans t={t}>Download desktop app</Trans>
+                </div>
+                <div>
+                  {downloadDropdown && (
+                    <div className="absolute z-20 top-[100%] left-0 right-0 border border-t-0 border-current bg-white dark:bg-black">
+                      <ul className="py-3 px-2">
+                        {binaries.map((binary, idx) => {
+                          return (
+                            <li className="cursor-pointer my-1" key={idx}>
+                              <a
+                                href={binary.file}
+                                role="button"
+                                target="_blank"
+                                rel="noreferrer"
+                                data-file-download
+                                className={`flex items-center w-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10`}
+                              >
+                                <div className="px-3.5 py-2">
+                                  {PlatformIcon(binary.icon)}
+                                </div>
+                                <div className="py-2 copy-xxs !mb-0 text-vega-mid-grey dark:text-vega-grey">
+                                  {binary.platform}
+                                </div>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </button>
             </div>
           </div>
         </div>
