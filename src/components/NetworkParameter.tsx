@@ -42,12 +42,12 @@ const NetworkParameter = ({
     <>
       {loading && (
         <span>
-          <Trans t={t}>Loading...</Trans>
+          <ParameterBox value={t("Loading...")} />
         </span>
       )}
       {error && (
         <span>
-          <Trans t={t}>Error loading value</Trans>
+          <ParameterBox value={t("Error loading value")} />
         </span>
       )}
       {params && (
