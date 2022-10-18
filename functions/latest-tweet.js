@@ -60,9 +60,11 @@ exports.handler = async (event, context, callback) => {
     body: JSON.stringify({
       id: data[0].id,
       tweet_text: data[0].text,
-      image: includes?.media[0].url
+      image: data[0]?.attachments
         ? includes?.media[0].url
-        : includes?.media[0].preview_image_url,
+          ? includes?.media[0].url
+          : includes?.media[0].preview_image_url
+        : null,
       all_tweets: data,
     }),
   });
