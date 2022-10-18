@@ -129,7 +129,9 @@ const WalletPage = () => {
 
           <div className="flex justify-center">
             <div className="inline-block mx-auto relative mt-6 cursor-pointer">
-              <button
+              <div
+                role="button"
+                tabIndex={0}
                 className="border border-current flex items-center"
                 onFocus={() => showDownloadMenu(true)}
                 onBlur={(e) => {
@@ -173,7 +175,7 @@ const WalletPage = () => {
                     </div>
                   )}
                 </div>
-              </button>
+              </div>
             </div>
           </div>
         </div>
