@@ -19,9 +19,11 @@ const ParameterBox = ({
     <>
       <Tippy
         content={
-          <div className="dark:text-white text-black mt-2 body-s text-left font-not-glitched">
-            <Tooltip>{description}</Tooltip>
-          </div>
+          description && (
+            <div className="dark:text-white text-black mt-2 body-s text-left font-not-glitched">
+              <Tooltip>{description}</Tooltip>
+            </div>
+          )
         }
       >
         <span className="group cursor-pointer px-1.5 inline-block relative dark:text-white text-black dark:bg-[#404040] dark:hover:bg-[#8B8B8B] bg-[#D2D2D2] hover:bg-[#A7A7A7]">
