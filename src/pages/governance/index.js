@@ -236,7 +236,7 @@ const GovernancePage = ({ data }) => {
               icon={getImage(data.tokenInterfaceIcon)}
               title={t("Governance")}
               link="https://token.vega.xyz/governance"
-              text={t("Review and vote on governance proposals.")}
+              text={t("Review, vote on, and submit governance proposals.")}
               type="DAPP"
             />
             <ToolBox
