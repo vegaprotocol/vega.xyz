@@ -11,7 +11,7 @@ const CalendarEvent = ({ event }) => {
   const dateParseFormat = "YYYY-MM-DD HH:mm:ss";
 
   return (
-    <div className="pb-8 pt-6 border-b border-current relative last:border-b-0">
+    <div className="pb-12 pt-6 border-b border-current relative last:border-b-0">
       <div className="grid grid-cols-12 gap-x-6">
         <div className="col-span-12 md:col-span-6">
           {event.tags.length ? (
@@ -22,8 +22,8 @@ const CalendarEvent = ({ event }) => {
 
           <div className="copy-s text-current">{event.name}</div>
         </div>
-        <div className="col-span-12 md:col-span-6 grid grid-cols-12 gap-6">
-          <div className="col-span-6">
+        <div className="col-span-12 md:col-span-6 grid grid-cols-12 gap-3 md:gap-6">
+          <div className="col-span-12 md:col-span-6">
             <div className="title-xxs text-vega-mid-grey mb-1">
               <Trans t={t}>When?</Trans>
             </div>
@@ -54,12 +54,12 @@ const CalendarEvent = ({ event }) => {
               )}
             </div>
           </div>
-          <div className="col-span-6 text-right">
+          <div className="col-span-12 md:col-span-6 md:text-right">
             {event.url ? (
               <ButtonLink
                 link={event.url}
                 text={t("More info")}
-                className="bg-vega-mid-grey"
+                className="bg-vega-mid-grey text-left"
               />
             ) : null}
           </div>

@@ -38,15 +38,23 @@ const ButtonLink = ({
   const buttonBgClass = `absolute z-10 inset-0 border ${backgroundClass} ${borderClass}`;
 
   if (isExternal) {
+    const splitString = text.split(" ");
+    const lastWord = splitString[splitString.length - 1];
+    const lastIndexOfSpace = text.lastIndexOf(" ");
+    const firstPartOfString = text.substring(0, lastIndexOfSpace);
+
     return (
       <a href={link} target="_blank" rel="noreferrer" className={linkClass}>
         <div className={buttonClass}>
-          {text}
-          {link.startsWith("http") && !hideArrowForExternal && (
-            <span className="inline-block ml-2">
-              <LinkArrow />
-            </span>
-          )}
+          {firstPartOfString}{" "}
+          <span class="whitespace-nowrap">
+            {lastWord}
+            {!hideArrowForExternal && (
+              <span className="inline-block ml-2">
+                <LinkArrow />
+              </span>
+            )}
+          </span>
         </div>
         <div className={buttonBgClass}></div>
       </a>

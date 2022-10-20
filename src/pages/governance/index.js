@@ -12,6 +12,7 @@ import ToolBox from "../../components/ToolBox";
 import ButtonLink from "../../components/ButtonLink";
 import GlitchTitle from "../../components/GlitchTitle";
 import LeadingLine from "../../components/LeadingLine";
+import NetworkParameter from "../../components/NetworkParameter";
 import Accordion from "../../components/Accordion/Accordion";
 import Arrow from "../../components/Svg/Arrow";
 import VotingIllustration from "../../components/Svg/Governance/Voting";
@@ -23,92 +24,6 @@ import Phase5 from "../../components/Svg/Governance/Process/Phase5";
 import Proposals from "../../components/Proposals";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
-const governanceProcess = [
-  {
-    phase: "Phase 1",
-    title: "Sense check",
-    text: "Start a topic and share an outline of your proposal on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.",
-    links: [
-      {
-        title: "Start a topic on the forum",
-        url: "https://community.vega.xyz/c/governance/25",
-      },
-    ],
-    image: <Phase1 />,
-  },
-  {
-    phase: "Phase 2",
-    title: "Formalise Proposal",
-    text: "Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.",
-    links: [
-      {
-        title: "Read the docs to make a proposal",
-        url: "https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol/#governance",
-      },
-      {
-        title: "Check out the forum",
-        url: "https://community.vega.xyz/c/governance/25",
-      },
-    ],
-    image: <Phase2 />,
-  },
-  {
-    phase: "Phase 3",
-    title: "Submit a proposal",
-    text: "As a token holder, you can submit the proposal using the command line to create a new market, change an existing market, change network parameters, add an external asset to Vega and make a freeform proposal (for changes that will not change network behaviour). For each, you will define specific inputs for a set list of parameters, which are validated by the nodes before entering into the voting period you set. Then it's time to rally the community on the forum to vote for your proposal.",
-    links: [
-      {
-        title: "Read the docs to make a proposal",
-        url: "https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol/#governance",
-      },
-    ],
-    image: <Phase3 />,
-  },
-  {
-    phase: "Phase 4",
-    title: "Vote to exercise your influence",
-    text: "Token holders consider and vote for or against active proposals. Tokens used for voting are not locked or transferred - they can be used for staking as well as voting on any/all active proposals, but cannot be used to trade. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.",
-    links: [
-      {
-        title: "Vote for proposals",
-        url: "https://token.vega.xyz/governance",
-      },
-    ],
-    image: <Phase4 />,
-  },
-  {
-    phase: "Phase 5",
-    title: "Enacting changes",
-    text: "If a proposal receives enough votes within the enactment period, the change is automatically enacted (except for a free form proposal).",
-    image: <Phase5 />,
-  },
-];
-
-// t('Phase 1')
-// t('Sense check')
-// t('Start a topic and share an outline of your proposal on the forum with a \'sense-check\' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.')
-// t('Start a topic on the forum')
-
-// t('Phase 2')
-// t('Formalise Proposal')
-// t('Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.')
-// t('Read the docs to make a proposal')
-// t('Check out the forum')
-
-// t('Phase 3')
-// t('Submit a proposal')
-// t('As a token holder, you can submit the proposal using the command line to create a new market, change an existing market, change network parameters, add an external asset to Vega and make a freeform proposal (for changes that will not change network behaviour). For each, you will define specific inputs for a set list of parameters, which are validated by the nodes before entering into the voting period you set. Then it\'s time to rally the community on the forum to vote for your proposal.')
-// t('Read the docs to make a proposal')
-
-// t('Phase 4')
-// t('Vote to exercise your influence')
-// t('Token holders consider and vote for or against active proposals. Tokens used for voting are not locked or transferred - they can be used for staking as well as voting on any/all active proposals, but cannot be used to trade. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.')
-// t('Vote for proposals')
-
-// t('Phase 5')
-// t('Enacting changes')
-// t('If a proposal receives enough votes within the enactment period, the change is automatically enacted (except for a free form proposal).')
-
 const GovernancePage = ({ data }) => {
   const { i18n, t } = useTranslation("page.governance");
   const [missingTranslations, setMissingTranslations] = useState(false);
@@ -116,6 +31,152 @@ const GovernancePage = ({ data }) => {
   i18n.on("missingKey", (lng) => {
     setMissingTranslations(true);
   });
+
+  const Phase3Text = () => {
+    return (
+      <>
+        <p>
+          <Trans t={t}>
+            As a token holder, you can submit the proposal to create a new market,
+            change an existing market, change network parameters, add an external
+            asset to Vega and make a freeform proposal (for changes that will not
+            change network behaviour). For each, you will define specific inputs
+            for a set list of parameters, which are validated by the nodes before
+            entering into the voting period you set. Then it's time to rally the
+            community on the forum to vote for your proposal.
+          </Trans>
+        </p>
+
+        <p>
+          <Trans t={t}>
+            The number of tokens needed to make a proposal differs by proposal
+            type, for example{" "}
+            <NetworkParameter
+              param="governance_proposal_market_minProposerBalance"
+              suffix=" $VEGA"
+            />{" "}
+            for a new market proposal.
+          </Trans>
+        </p>
+      </>
+    );
+  };
+
+  const Phase4Text = () => {
+    return (
+      <>
+        <p>
+          <Trans t={t}>
+            Token holders consider and vote for or against active proposals.
+            Tokens used for voting are not locked or transferred - they can be
+            used for staking as well as voting on any/all active proposals, but
+            cannot be used to trade. Note, each public key with a minimum of 1
+            $VEGA gets just one vote per proposal.
+          </Trans>
+        </p>
+        <p>
+          <Trans t={t}>
+            The number of tokens needed to vote differs by proposal type, for
+            example{" "}
+            <NetworkParameter
+              param="governance_proposal_market_minVoterBalance"
+              suffix=" $VEGA"
+            ></NetworkParameter>{" "}
+            for a new market proposal. Each public key is eligible for one vote.
+          </Trans>
+        </p>
+      </>
+    );
+  };
+
+  const Phase5Text = () => {
+    return (
+      <>
+        <p>
+          <Trans t={t}>
+            If a proposal receives enough participation and reaches the majority
+            threshold within the voting period, the change is automatically
+            enacted (with the exception of free form proposals). The thresholds
+            differ by proposal type, for example a new market proposal requires
+            participation of{" "}
+            <NetworkParameter param="governance_proposal_market_requiredParticipation" />{" "}
+            and a majority of{" "}
+            <NetworkParameter param="governance_proposal_market_requiredMajority" />
+            .
+          </Trans>
+        </p>
+      </>
+    );
+  };
+
+  const governanceProcess = [
+    {
+      phase: t("Phase 1"),
+      title: t("Sense check"),
+      text: t(
+        "Start a topic and share an outline of your proposal on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans."
+      ),
+      links: [
+        {
+          title: t("Start a topic on the forum"),
+          url: "https://community.vega.xyz/c/governance/25",
+        },
+      ],
+      image: <Phase1 />,
+    },
+    {
+      phase: t("Phase 2"),
+      title: t("Formalise Proposal"),
+      text: t(
+        "Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit."
+      ),
+      links: [
+        {
+          title: t("Read the docs to make a proposal"),
+          url: "https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol/#governance",
+        },
+        {
+          title: t("Check out the forum"),
+          url: "https://community.vega.xyz/c/governance/25",
+        },
+      ],
+      image: <Phase2 />,
+    },
+    {
+      phase: t("Phase 3"),
+      title: t("Submit a proposal"),
+      component: <Phase3Text />,
+      links: [
+        {
+          title: t("Read the docs to make a proposal"),
+          url: "https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol/#governance",
+        },
+        {
+          title: t("Submit your proposal"),
+          url: "https://token.vega.xyz/governance/propose/",
+        },
+      ],
+      image: <Phase3 />,
+    },
+    {
+      phase: t("Phase 4"),
+      title: t("Vote to exercise your influence"),
+      component: <Phase4Text />,
+      links: [
+        {
+          title: t("Vote for proposals"),
+          url: "https://token.vega.xyz/governance",
+        },
+      ],
+      image: <Phase4 />,
+    },
+    {
+      phase: t("Phase 5"),
+      title: t("Enacting changes"),
+      component: <Phase5Text />,
+      image: <Phase5 />,
+    },
+  ];
 
   return (
     <Layout>
@@ -175,7 +236,7 @@ const GovernancePage = ({ data }) => {
               icon={getImage(data.tokenInterfaceIcon)}
               title={t("Governance")}
               link="https://token.vega.xyz/governance"
-              text={t("Review and vote on governance proposals.")}
+              text={t("Review, vote on, and submit governance proposals.")}
               type="DAPP"
             />
             <ToolBox
