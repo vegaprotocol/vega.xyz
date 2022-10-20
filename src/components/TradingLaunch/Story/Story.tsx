@@ -1,6 +1,7 @@
 import { Function } from "aws-sdk/clients/transfer";
 import React, { useEffect, useState } from "react";
 import TypeoutText from "./TypeoutText";
+import VegaBond from "../VegaBond";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -53,59 +54,34 @@ const Story = ({ stateCallback }: Props) => {
 
   return (
     <div className={`absolute inset-5 text-white`}>
-      <div className="grid grid-rows-6 grid-cols-1 h-full">
-        <div>{textIndex}</div>
-        <div className="text-white w-[58.125rem] max-w-full px-16 mx-auto text-left text-[1.75rem] font-glitched">
-          {text && <TypeoutText text={text} key={text} ready={setReadyState} />}
-          {textIndex > -1 && ready && (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: [0, 1] }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="mt-8 text-center">
-                <div className="border px-6 py-5 inline-block uppercase mx-auto">
-                  <div className="flex justify-center items-center">
-                    <svg
-                      width="57"
-                      height="7"
-                      viewBox="0 0 57 7"
-                      fill="none"
-                      className="inline-block mx-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <line
-                        x1="0.5"
-                        y1="-2.18557e-08"
-                        x2="0.5"
-                        y2="7"
-                        stroke="white"
-                      />
-                      <line
-                        x1="56.5"
-                        y1="-2.18557e-08"
-                        x2="56.5"
-                        y2="7"
-                        stroke="white"
-                      />
-                      <line
-                        x1="4.37114e-08"
-                        y1="6.5"
-                        x2="57"
-                        y2="6.5"
-                        stroke="white"
-                      />
-                    </svg>
-                  </div>
-                </div>
+      <div className="h-full grid grid-rows-2 grid-cols-1">
+        <div className="flex flex-col justify-center items-center px-16">
+          <div className="relative text-white w-[58.125rem] max-w-full mx-auto text-left text-[1.75rem] font-glitched">
+            <div className="invisible">
+              {text}
+              <div>
+                Press spacebar to continue...
+                <span className="VegaTypewriter__cursor"></span>
               </div>
-            </motion.div>
+            </div>
+            {text && (
+              <div className="absolute inset-0">
+                <TypeoutText
+                  text={text + "<br/><br/>Press spacebar to continue..."}
+                  key={text}
+                  ready={setReadyState}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-end">
+          {textIndex > -1 && (
+            <div className="translate-y-5">
+              <VegaBond />
+            </div>
           )}
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
     </div>
   );

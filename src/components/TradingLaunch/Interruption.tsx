@@ -22,7 +22,7 @@ const Interruption = () => {
 
   const HeroLine = () => {
     return (
-      <div className="relative text-[7.1875rem] uppercase font-glitch-all leading-[0.8] max-w-[62.5rem] mx-auto text-center">
+      <div className="relative text-[9vw] lg:text-[7.1875rem] uppercase font-glitch-all leading-[0.8] max-w-[62.5rem] mx-auto text-center px-3">
         A new era of finance begins
         <span className="VegaTypewriter__cursor"></span>
       </div>
@@ -32,7 +32,7 @@ const Interruption = () => {
   const HeroBody = () => {
     return (
       <>
-        <div className="text-[1.75rem] max-w-[62.5rem] mx-auto text-center mt-6">
+        <div className="text-[4vw] lg:text-[1.75rem] max-w-[62.5rem] mx-auto text-center mt-6 leading-none">
           A transmission from the future
         </div>
         <div className="text-center mt-6">
@@ -65,12 +65,12 @@ const Interruption = () => {
 
   return (
     <div>
-      <div className="absolute inset-0 text-white z-10 flex flex-col items-center justify-center">
+      <div className="absolute inset-0 text-white z-10 top-[15%] md:top-0 md:flex md:flex-col md:items-center md:justify-center">
         <HeroLine />
         <HeroBody />
       </div>
       <div
-        className="absolute inset-0 text-white z-20 transition-opacity duration-1000 flex flex-col items-center justify-center"
+        className="absolute inset-0 text-white z-20 pt-[15%] md:pt-0 md:flex md:flex-col md:items-center md:justify-center transition-opacity duration-1000"
         ref={splashScreen}
       >
         <VideoBackground />
@@ -78,7 +78,7 @@ const Interruption = () => {
         <div>
           <div className="relative">
             <div className="absolute inset-0">
-              <div className="text-[7.1875rem] uppercase font-glitch-all leading-[0.8] max-w-[62.5rem] mx-auto text-center">
+              <div className="text-[9vw] lg:text-[7.1875rem] uppercase font-glitch-all leading-[0.8] max-w-[62.5rem] mx-auto text-center px-3">
                 <TypeoutText
                   text="A new era of finance begins"
                   delay={120}
