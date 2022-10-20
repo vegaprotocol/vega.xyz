@@ -33,7 +33,6 @@ const benefits = [
   "Priority consideration on protocol feedback",
   "Exclusive meetups - Invitations to all of Vega's events, both offline and online",
   "Limited edition Vega swag",
-  "Priority minting of NFT drops (+ enhanced rarities)",
   "Grow with Vega - scaling rewards as you climb the ranks",
 ];
 
