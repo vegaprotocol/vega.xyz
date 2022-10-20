@@ -1,0 +1,24 @@
+import React from "react";
+
+const HUDFrameLogo = () => {
+  return (
+    <svg
+      width="111"
+      height="24"
+      viewBox="0 0 111 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.3982 20.794L17.228 0.02H20.657L12.1989 23.985H8.49319L0 0.02H3.48912L10.3982 20.794ZM35.0857 13.019V21.268H48.5027V23.984H31.8653V0.019H48.208V2.734H35.0857V10.311H46.7742V13.019H35.0857ZM61.4104 2.92H64.298V21.115H61.4104V2.92ZM75.8512 0V2.92H64.297V0H75.8522H75.8512ZM64.297 24V21.115H75.8522V24H64.297ZM78.7397 21.115H75.8522V15.345H70.0751V12.455H78.7397V21.115ZM78.7397 2.92V5.804H75.8522V2.92H78.7397ZM111 23.984H107.637L105.87 19.158H93.8081L92.0405 23.984H88.7529L98.0632 0.019H101.699L111 23.984ZM99.7887 2.904L94.8268 16.448H104.855L99.8579 2.903H99.7877L99.7887 2.904Z"
+        fill="white"
+        filter="url(#hudLogoBlur)"
+      />
+      <filter id="hudLogoBlur">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" />
+      </filter>
+    </svg>
+  );
+};
+
+export default HUDFrameLogo;
