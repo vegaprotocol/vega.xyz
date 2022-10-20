@@ -37,14 +37,13 @@ const GovernancePage = ({ data }) => {
       <>
         <p>
           <Trans t={t}>
-            As a token holder, you can submit the proposal using the command
-            line to create a new market, change an existing market, change
-            network parameters, add an external asset to Vega and make a
-            freeform proposal (for changes that will not change network
-            behaviour). For each, you will define specific inputs for a set list
-            of parameters, which are validated by the nodes before entering into
-            the voting period you set. Then it's time to rally the community on
-            the forum to vote for your proposal.
+            As a token holder, you can submit the proposal to create a new market,
+            change an existing market, change network parameters, add an external
+            asset to Vega and make a freeform proposal (for changes that will not
+            change network behaviour). For each, you will define specific inputs
+            for a set list of parameters, which are validated by the nodes before
+            entering into the voting period you set. Then it's time to rally the
+            community on the forum to vote for your proposal.
           </Trans>
         </p>
 
@@ -152,6 +151,10 @@ const GovernancePage = ({ data }) => {
           title: t("Read the docs to make a proposal"),
           url: "https://docs.vega.xyz/docs/mainnet/concepts/vega-protocol/#governance",
         },
+        {
+          title: t("Submit your proposal"),
+          url: "https://token.vega.xyz/governance/propose/",
+        },
       ],
       image: <Phase3 />,
     },
@@ -233,7 +236,7 @@ const GovernancePage = ({ data }) => {
               icon={getImage(data.tokenInterfaceIcon)}
               title={t("Governance")}
               link="https://token.vega.xyz/governance"
-              text={t("Review and vote on governance proposals.")}
+              text={t("Review, vote on, and submit governance proposals.")}
               type="DAPP"
             />
             <ToolBox
