@@ -162,8 +162,8 @@ const CommunityPage = ({ data }) => {
           />
           <ToolBox
             title={t("Feedback")}
-            text={t("Feedback and feature requests on Github")}
-            link="https://github.com/vegaprotocol/vega/issues"
+            text={t("Feedback and feature requests")}
+            link="https://github.com/vegaprotocol/feedback/discussions"
             icon={getImage(data.iconFeedback)}
           />
           <ToolBox
