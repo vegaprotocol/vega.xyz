@@ -116,7 +116,7 @@ const Ambassadors = () => {
               </p>
 
               <ButtonLink
-                link="https://form.typeform.com/to/lPl6aiNh"
+                link="https://vegaprotocol.typeform.com/ambassadorappq4"
                 text={t("Apply now")}
                 className="md:hidden mt-3"
               />
@@ -180,7 +180,7 @@ const Ambassadors = () => {
               </div>
 
               <ButtonLink
-                link="https://form.typeform.com/to/lPl6aiNh"
+                link="https://vegaprotocol.typeform.com/ambassadorappq4"
                 text="Apply now"
                 className="md:hidden mt-3"
               />
@@ -263,7 +263,7 @@ const Ambassadors = () => {
                 </Trans>
               </p>
               <BoxLinkSimple
-                link="https://vegaprotocol.typeform.com/ambassadorappQ2"
+                link="https://vegaprotocol.typeform.com/ambassadorappq4"
                 text={t("Apply now")}
                 className="mt-4 min-w-[15rem] text-left hidden md:inline-block"
               />

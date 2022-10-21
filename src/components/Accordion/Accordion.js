@@ -39,6 +39,7 @@ const Accordion = ({ data, transNamespace }) => {
           </button>
           <AccordionSection
             text={item.text}
+            component={item.component}
             links={item.links}
             image={item.image}
             open={idx === accordionSection}

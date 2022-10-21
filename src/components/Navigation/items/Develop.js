@@ -33,10 +33,7 @@ const Develop = () => {
             text={t("Ambassador program")}
             link="/community/ambassadors/"
           />
-          <NavigationItem
-            text={t("Builders club")}
-            link="https://vega.xyz/discord"
-          />
+          <NavigationItem text={t("Builders club")} link="/builders-club" />
           <NavigationItem text={t("Careers")} link="/careers" />
         </NavigationList>
       </div>

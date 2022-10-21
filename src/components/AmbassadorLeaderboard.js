@@ -62,7 +62,7 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
                   <Trans t={t}>Ambassador</Trans>
                 </th>
                 <th scope="col" className="p-2 md:p-3 text-right">
-                  <Trans t={t}>Tasks completed</Trans>
+                  <Trans t={t}>Points</Trans>
                 </th>
               </tr>
             </thead>
@@ -91,7 +91,7 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
                       </div>
                     </td>
                     <td className="px-2 py-5 text-right title-m md:text-[2.5rem] font-glitch-all">
-                      {entry["Tasks Completed"]}
+                      {entry.Points}
                     </td>
                   </tr>
                 );

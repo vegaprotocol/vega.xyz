@@ -5,6 +5,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const AccordionSection = ({
   text,
+  component,
   links,
   image,
   open = false,
@@ -45,9 +46,17 @@ const AccordionSection = ({
         <div className="md:col-span-3"></div>
         <div className="col-span-12 md:col-span-9 flex flex-col md:flex-row md:gap-x-12 pb-5">
           <div className="flex-shrink order-2 md:order-1">
-            <div className="copy-xs mb-6 prose dark:prose-invert max-w-none prose-p:mt-0">
-              <Markdown>{t(text)}</Markdown>
-            </div>
+            {text && (
+              <div className="copy-xs mb-6 prose dark:prose-invert max-w-none prose-p:mt-0">
+                <Markdown>{t(text)}</Markdown>
+              </div>
+            )}
+
+            {component && (
+              <div className="copy-xs mb-6 prose dark:prose-invert max-w-none prose-p:mt-0">
+                {component}
+              </div>
+            )}
 
             {links &&
               links.map((link, idx2) => (

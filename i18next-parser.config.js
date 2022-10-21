@@ -6,5 +6,6 @@ module.exports = {
   locales: ["en", "es", "ru", "cn"],
   lexers: {
     js: ["JsxLexer"],
+    tsx: ["JsxLexer"],
   },
 };
