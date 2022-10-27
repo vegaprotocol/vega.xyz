@@ -6,7 +6,7 @@ import Container from "../components/Container";
 import Seo from "../components/Seo";
 import TranslationsBanner from "../components/TranslationsBanner";
 import Ticker from "../components/Ticker";
-import GlitchTitle from "../components/GlitchTitle";
+import GlitchTitle from "../components/UI/GlitchTitle";
 import LatestNews from "../components/LatestNews";
 import LeadingLine from "../components/LeadingLine";
 import ButtonLink from "../components/ButtonLink";
@@ -16,7 +16,6 @@ import Calendar from "../components/Calendar";
 import AsSeenOn from "../components/AsSeenOn";
 import BoxLinkSimple from "../components/BoxLinkSimple";
 import RoadMap from "../components/RoadMap";
-import RoadMapMobile from "../components/RoadMapMobile";
 import Rip from "../components/Svg/Home/Rip/Responsive";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import UniverseLeft from "../components/Svg/Home/UniverseLeft/Responsive";
@@ -105,13 +104,11 @@ const IndexPage = ({ data }) => {
             <div className="md:col-span-6">
               <div className="mx-auto max-w-[25rem] md:max-w-[35rem] text-center pt-8 md:pt-20">
                 <div>
-                  <GlitchTitle
-                    level="1"
-                    className="title-l md:title-xxl xl:text-[7.1875rem] mb-2"
-                    color="red"
-                  >
-                    <Trans t={t}>Toward a new era of finance</Trans>
-                  </GlitchTitle>
+                  <h1 className="title-l md:title-xxl xl:text-[7.1875rem] mb-2">
+                    <GlitchTitle color="red">
+                      <Trans t={t}>Toward a new era of finance</Trans>
+                    </GlitchTitle>
+                  </h1>
                   <LeadingLine className="text-current lg:text-[1.75rem] !mb-0">
                     <Trans t={t}>
                       Decentralised infrastructure for the fair creation and
@@ -240,14 +237,19 @@ const IndexPage = ({ data }) => {
         <div className="pt-16">
           <Ticker />
         </div>
-        <Container hideXOverflow={true}>
-          <div className="pt-16 md:pt-32 lg:pt-40 md:pb-10">
-            <div id="roadmap">
-              <RoadMapMobile data={data.roadmap} className="md:hidden" />
-              <RoadMap data={data.roadmap} className="hidden md:block" />
-            </div>
-          </div>
 
+        <div className="pt-16 md:pt-32 lg:pt-40">
+          <div id="roadmap">
+            <div className="text-center">
+              <h2 className="heading-xl">
+                <GlitchTitle color="purple">Roadmap</GlitchTitle>
+              </h2>
+            </div>
+            <RoadMap data={data.roadmap} />
+          </div>
+        </div>
+
+        <Container hideXOverflow={true}>
           <PageSection>
             <LatestNews />
           </PageSection>

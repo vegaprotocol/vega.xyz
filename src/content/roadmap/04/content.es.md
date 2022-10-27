@@ -1,6 +1,11 @@
 ---
-step_title: H2 2023
-title: Version 2 Mainnet
+step_title: ????
+title: Version 1 Mainnet
 ---
 
-This release will allow the validators to launch an experimental mainnet using the second major release of the Vega protocol. The V2 protocol will use WASM to allow the community to create their own products & risk models, and control other aspects of the protocol. This version will also contain a number of performance and security improvements as well as core protocol upgrades and simplifications.
+## Advanced Trading
+
+- Final launch phase
+- Temporary limits will be lifted following community governance voting
+- New development enabling market innovations, improvements based on feedback and new features. Examples could include spot markets, passive liquidity, and Ethereum oracles
+- New bridges to other blockchains and/or L2s may also be introduced
