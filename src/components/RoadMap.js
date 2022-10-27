@@ -3,13 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Container from "./Container";
 import Button from "./UI/Button";
 //import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
-import V2Mainnet from "./Svg/RoadMap/V2Mainnet";
-import V1Mainnet from "./Svg/RoadMap/V1Mainnet";
-import AlphaMainnet from "./Svg/RoadMap/AlphaMainnet";
-import RestrictedMainnet from "./Svg/RoadMap/RestrictedMainnet";
-import Testnet from "./Svg/RoadMap/Testnet";
-import VegaBond from "./Svg/RoadMap/VegaBond";
-import Rectangle from "./Svg/RoadMap/Rectangle";
+import V2Mainnet from "./Svg/Roadmap/V2Mainnet";
+import V1Mainnet from "./Svg/Roadmap/V1Mainnet";
+import AlphaMainnet from "./Svg/Roadmap/AlphaMainnet";
+import RestrictedMainnet from "./Svg/Roadmap/RestrictedMainnet";
+import Testnet from "./Svg/Roadmap/Testnet";
+import VegaBond from "./Svg/Roadmap/VegaBond";
+import Rectangle from "./Svg/Roadmap/Rectangle";
 import "swiper/css";
 
 const RoadMap = (props) => {
