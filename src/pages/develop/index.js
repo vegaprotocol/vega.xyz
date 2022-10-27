@@ -119,7 +119,7 @@ const DevelopPage = ({ data }) => {
                 "The ubiquitous protocol for the web, Vega has a set of REST APIs that map directly onto equivalent gRPC API service methods."
               )}
               linkTitle={t("Get Started")}
-              link="https://docs.vega.xyz/docs/mainnet/api/rest/overview/"
+              link="https://docs.vega.xyz/mainnet/api/rest/overview"
             />
 
             <BoxLink
@@ -128,7 +128,7 @@ const DevelopPage = ({ data }) => {
                 "For fast and efficient communication with Vega's APIs, gRPC supports near real time streaming of updates from Vega and is the transport of choice for many web3 apps."
               )}
               linkTitle={t("Get Started")}
-              link="https://docs.vega.xyz/docs/mainnet/grpc/vega/vega.proto"
+              link="https://docs.vega.xyz/mainnet/api/grpc/vega/vega.proto"
             />
 
             <BoxLink
@@ -137,7 +137,7 @@ const DevelopPage = ({ data }) => {
                 "Like gRPC, GraphQL supports near real time streaming of updates from Vega. It uses websockets under the hood but follows the specification for streaming as set by GraphQL."
               )}
               linkTitle={t("Get Started")}
-              link="https://docs.vega.xyz/docs/mainnet/graphql"
+              link="https://docs.vega.xyz/mainnet/graphql"
             />
 
             <BoxLink
@@ -146,7 +146,7 @@ const DevelopPage = ({ data }) => {
                 "Allows programmatic access to signing and key management and is used to sign transactions with a private and public key pair when submitting orders or other commands to a Vega Node."
               )}
               linkTitle={t("Get Started")}
-              link="https://docs.vega.xyz/docs/tools/vega-wallet/"
+              link="https://docs.vega.xyz/mainnet/tools/vega-wallet"
             />
           </div>
         </PageSection>

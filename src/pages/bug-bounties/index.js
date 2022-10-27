@@ -207,7 +207,7 @@ const BugBountiesPage = ({ data }) => {
                       separate protocol instance that you can run for yourselves
                       is advised. The best way to do this is via the{" "}
                       <a
-                        href="https://docs.vega.xyz/docs/mainnet/tools#vega-capsule"
+                        href="https://docs.vega.xyz/mainnet/tools#vega-capsule"
                         target="_blank"
                         rel="noreferrer"
                       >

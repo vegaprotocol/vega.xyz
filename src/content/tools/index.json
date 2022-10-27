@@ -49,7 +49,7 @@
     "icon": "../../images/tool-icons/cli-wallet.png",
     "title": "CLI Wallet",
     "author": "Vega",
-    "link": "https://docs.vega.xyz/docs/mainnet/tools/vega-wallet/cli-wallet",
+    "link": "https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet",
     "description": "Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.",
     "category": "WALLET"
   },
