@@ -109,7 +109,7 @@ const MarketCreationPage = () => {
       links: [
         {
           title: t("Read the docs to make a proposal (Testnet)"),
-          url: "https://docs.vega.xyz/docs/testnet/tutorials/proposals/new-market-proposal",
+          url: "https://docs.vega.xyz/testnet/tutorials/proposals/new-market-proposal",
         },
         {
           title: t("Check out the forum (Testnet)"),
@@ -125,7 +125,7 @@ const MarketCreationPage = () => {
       links: [
         {
           title: t("Read the docs to make a proposal (Testnet)"),
-          url: "https://docs.vega.xyz/docs/testnet/tutorials/proposals/new-market-proposal",
+          url: "https://docs.vega.xyz/testnet/tutorials/proposals/new-market-proposal",
         },
         {
           title: t("Submit your proposal (Testnet)"),
@@ -155,7 +155,7 @@ const MarketCreationPage = () => {
       links: [
         {
           title: t("Read the docs about liquidity provision (Testnet)"),
-          url: "https://docs.vega.xyz/docs/testnet/tutorials/providing-liquidity",
+          url: "https://docs.vega.xyz/testnet/tutorials/providing-liquidity",
         },
       ],
       image: <Phase5 />,
