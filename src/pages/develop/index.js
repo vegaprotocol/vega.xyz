@@ -57,7 +57,7 @@ const DevelopPage = ({ data }) => {
                   <div>
                     <ButtonLink
                       text={t("Explore the docs")}
-                      link="https://docs.vega.xyz/docs/concepts/new-to-vega/"
+                      link="https://docs.vega.xyz/mainnet/concepts/new-to-vega"
                       className="w-full text-center"
                     />
                   </div>
@@ -82,7 +82,7 @@ const DevelopPage = ({ data }) => {
               <div>
                 <ButtonLink
                   text={t("Explore the docs")}
-                  link="https://docs.vega.xyz/docs/concepts/new-to-vega/"
+                  link="https://docs.vega.xyz/mainnet/concepts/new-to-vega"
                   className="w-full text-center"
                 />
               </div>
