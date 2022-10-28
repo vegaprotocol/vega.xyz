@@ -10,11 +10,14 @@ import RestrictedMainnet from "./Svg/Roadmap/RestrictedMainnet";
 import Testnet from "./Svg/Roadmap/Testnet";
 import VegaBond from "./Svg/Roadmap/VegaBond";
 import Rectangle from "./Svg/Roadmap/Rectangle";
+import ArrowLeft from "./Svg/ArrowLeft";
+import ArrowRight from "./Svg/ArrowRight";
 import "swiper/css";
 
 const RoadMap = (props) => {
   //const { t } = useTranslation("component.roadmap");
   const planets = useRef([]);
+  const swiperRef = useRef();
   const [timelineHeight, setTimelineHeight] = useState(0);
   const [selectedPlanet, setSelectedPlanet] = useState(0);
   planets.current = props.data.edges.map(
@@ -67,8 +70,22 @@ const RoadMap = (props) => {
                     )}
                   </div>
                   <div className="aspect-[251/210] flex justify-center items-end">
-                    <div>
+                    <div className="w-full flex sm:justify-center justify-between pointer-events-auto">
+                      <button
+                        className="flex items-center sm:hidden"
+                        onClick={() => swiperRef.current?.slidePrev()}
+                      >
+                        <ArrowLeft className="mr-2" />
+                        <div>Previous</div>
+                      </button>
                       <VegaBond className="relative top-px" />
+                      <button
+                        className="flex items-center sm:hidden"
+                        onClick={() => swiperRef.current?.slideNext()}
+                      >
+                        <div>Previous</div>
+                        <ArrowRight className="ml-2" />
+                      </button>
                     </div>
                   </div>
                   <div className="aspect-[251/210] justify-center items-end hidden sm:flex">
@@ -82,6 +99,9 @@ const RoadMap = (props) => {
                 speed={800}
                 onResize={() => {
                   setTimelineHeightHandler();
+                }}
+                onBeforeInit={(swiper) => {
+                  swiperRef.current = swiper;
                 }}
                 onActiveIndexChange={(swiper) => {
                   setSelectedPlanet(swiper.activeIndex);
@@ -105,11 +125,18 @@ const RoadMap = (props) => {
                     className="cursor-pointer pointer-events-auto"
                   >
                     <div
-                      className={`h-full flex flex-col justify-between ${
+                      className={`transition duration-300 h-full flex flex-col justify-between ${
                         idx === selectedPlanet
                           ? "dark:text-white text-black"
                           : "dark:text-vega-dark-300 text-vega-light-300"
-                      }`}
+                      }
+                      
+                      ${
+                        idx === selectedPlanet - 2 || idx === selectedPlanet + 2
+                          ? "opacity-0"
+                          : ""
+                      }
+                      `}
                     >
                       <div
                         className={`transition duration-700 aspect-[251/210] flex items-center justify-center ${
