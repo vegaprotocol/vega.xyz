@@ -55,7 +55,7 @@ const Header = ({ sticky }) => {
               {!menuIsOpen && (
                 <HeaderCta
                   link="https://console.fairground.wtf/"
-                  text={t("Trade (Testnet)")}
+                  text={t("Trade futures (Testnet)")}
                   className="hidden md:block lg:hidden mr-3"
                 />
               )}
@@ -69,7 +69,7 @@ const Header = ({ sticky }) => {
                 {!menuIsOpen && (
                   <HeaderCta
                     link="https://console.fairground.wtf/"
-                    text={t("Trade (Testnet)")}
+                    text={t("Trade futures (Testnet)")}
                     className="ml-3 hidden lg:block"
                   />
                 )}
