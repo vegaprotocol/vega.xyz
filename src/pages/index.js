@@ -134,7 +134,7 @@ const IndexPage = ({ data }) => {
             <div className="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
               <ToolBox
                 title="Console"
-                description="Try out trading on the fully decentralised Vega network (Testnet)."
+                description="Trade cash settled futures on the fully decentralised Vega network (Testnet)."
                 icon={getImage(data.consoleIcon)}
                 link="https://console.fairground.wtf/"
               />
