@@ -1,5 +1,6 @@
 import React, { useState, useRef, createRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { type Swiper as SwiperRef } from "swiper";
 import Container from "./Container";
 import Button from "./UI/Button";
 //import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
@@ -16,8 +17,8 @@ import "swiper/css";
 
 const RoadMap = (props) => {
   //const { t } = useTranslation("component.roadmap");
-  const planets = useRef([]);
-  const swiperRef = useRef();
+  const planets = useRef<any[]>([]);
+  const swiperRef = useRef<SwiperRef>();
   const [timelineHeight, setTimelineHeight] = useState(0);
   const [selectedPlanet, setSelectedPlanet] = useState(0);
   planets.current = props.data.edges.map(
