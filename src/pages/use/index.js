@@ -185,7 +185,7 @@ const UsePage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container>
-        <div class="my-10">
+        <div className="my-10">
           <CalloutHero
             title={t("The Vega mainnet is live, trading launch H2 2022")}
             text={t(
