@@ -1,6 +1,10 @@
 import React from "react";
 
-const CrossSmall = ({ className }) => {
+type Props = {
+  className?: string;
+};
+
+const CrossSmall = ({ className }: Props) => {
   return (
     <svg
       width="10"
