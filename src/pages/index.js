@@ -32,6 +32,7 @@ import HighCapitalEfficiencyIcon from "../images/feature-icons/high-capital-effi
 import NoGasFeesIcon from "../images/feature-icons/no-gas-fees.svg";
 import NativeLiquidityProvision from "../images/feature-icons/native-liquidity-provision.svg";
 import CrossChainSupportIcon from "../images/feature-icons/cross-chain-support.svg";
+import IncomingTransmissionAlert from "../components/TradingLaunch/IncomingTransmissionAlert";
 
 const ToolBox = ({ title, description, icon, link }) => {
   return (
@@ -292,6 +293,7 @@ const IndexPage = ({ data }) => {
             </div>
           </PageSection>
         </Container>
+        <IncomingTransmissionAlert/>
       </main>
     </Layout>
   );

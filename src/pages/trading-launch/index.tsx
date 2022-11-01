@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { graphql } from "gatsby";
 import HUD from "../../components/TradingLaunch/HUD/HUD";
 import Story from "../../components/TradingLaunch/Story/Story";
 import PlanetBottom from "../../components/TradingLaunch/PlanetBottom";
@@ -36,3 +37,16 @@ const TradingLaunch = () => {
 };
 
 export default TradingLaunch;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    } 
+  }`

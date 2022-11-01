@@ -1,12 +1,31 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react"
 import TypeoutText from "./Story/TypeoutText";
 import VideoBackground from "../Svg/VideoBackground";
+import GlitchSound from "../../audio/glitch.wav";
+import DroneSound from "../../audio/drone.wav";
 
 const Interruption = () => {
   const splashScreen = useRef<HTMLDivElement>(null);
+  const glitchPlayer = useRef<HTMLAudioElement>(null);
+  const dronePlayer = useRef<HTMLAudioElement>(null);
+
+
+  useEffect(() => {
+    if (glitchPlayer && glitchPlayer.current) {
+      const playGlitch = glitchPlayer.current.play();
+
+      if (playGlitch !== undefined) {
+        playGlitch.catch(err => { });
+      }
+    }
+  }, []);
 
   const finished = (finished) => {
     if (finished) {
+      if (glitchPlayer && glitchPlayer.current) {
+        glitchPlayer.current.pause();
+      }
+
       setTimeout(function () {
         if (splashScreen && splashScreen.current) {
           splashScreen.current.style.opacity = "0";
@@ -15,6 +34,13 @@ const Interruption = () => {
               splashScreen.current.remove();
             }
           }, 1000);
+          if (dronePlayer && dronePlayer.current) {
+            const playDrone = dronePlayer.current.play();
+
+            if (playDrone !== undefined) {
+              playDrone.catch(err => { });
+            }
+          }
         }
       }, 2000);
     }
@@ -65,6 +91,13 @@ const Interruption = () => {
 
   return (
     <div>
+      <audio ref={glitchPlayer}>
+        <source src={GlitchSound} type="audio/wav" />
+      </audio>
+      <audio ref={dronePlayer}>
+        <source src={DroneSound} type="audio/wav" />
+      </audio>
+
       <div className="absolute inset-0 text-white z-10 top-[15%] md:top-0 md:flex md:flex-col md:items-center md:justify-center">
         <HeroLine />
         <HeroBody />

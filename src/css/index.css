@@ -348,6 +348,37 @@ a {
     @apply xl:text-[1.75rem];
     @apply 2xl:text-[2rem];
   }
+
+  .notched-corner-top-right{
+    position: relative;
+  }
+
+  .notched-corner-top-right::before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+  }
+
+  .notched-corner-top-right::after{
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    background: 
+      linear-gradient(to top right,
+          rgba(0,0,0,0) 0%,
+          rgba(0,0,0,0) calc(50% - 0.8px),
+          rgba(0,0,0,1) 50%,
+          rgba(0,0,0,0) calc(50% + 0.8px),
+          rgba(0,0,0,0) 100%)
+  } 
 }
 
 .VegaTypewriter__cursor::after {
