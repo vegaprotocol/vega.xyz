@@ -1,7 +1,13 @@
 import * as React from "react";
 import { Link } from "gatsby-plugin-react-i18next";
 
-const LinkWrapper = ({ to, children, className }) => {
+type Props = {
+  to: string;
+  children: React.ReactNode;
+  className?: string;
+};
+
+const LinkWrapper = ({ to, children, className }: Props) => {
   const isExternal = to.startsWith("http");
 
   if (isExternal) {

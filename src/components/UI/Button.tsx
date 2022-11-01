@@ -2,6 +2,15 @@ import React from "react";
 import LinkWrapper from "./LinkWrapper";
 import LinkArrow from "../Svg/LinkArrow";
 
+type Props = {
+  variant?: "primary" | "secondary" | "hero";
+  width?: "full" | "auto";
+  to: string;
+  colorMode?: "white" | "black" | "auto";
+  className?: string;
+  children: React.ReactNode;
+};
+
 const ButtonLink = ({
   variant = "primary",
   width,
@@ -9,7 +18,7 @@ const ButtonLink = ({
   children,
   className,
   colorMode = "auto",
-}) => {
+}: Props) => {
   const isExternal = to.startsWith("http");
   let buttonWrapperStyles;
   let buttonBaseStyles;
