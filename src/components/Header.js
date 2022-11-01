@@ -7,7 +7,7 @@ import MobileMenu from "../components/Navigation/MobileMenu";
 import MobileMenuButton from "../components/Navigation/MobileMenuButton";
 import HeaderCta from "../components/HeaderCta";
 import LanguageToggle from "../components/LanguageToggle";
-// import SiteBanner from "../components/SiteBanner";
+import SiteBanner from "../components/SiteBanner";
 import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
@@ -34,15 +34,15 @@ const Header = ({ sticky }) => {
 
   return (
     <div>
-      {/* <SiteBanner /> */}
+      <SiteBanner sticky={sticky} />
       <header
         className={`z-50 dark:bg-black bg-white ${
-          sticky ? "fixed top-0 left-0 right-0" : ""
+          sticky ? "fixed top-[48px] left-0 right-0" : ""
         }`}
         id="header"
       >
         <div className="px-4 w-full md:px-6 lg:px-8 relative">
-          <div className="header flex items-center justify-between py-4 lg:pt-6">
+          <div className="header flex items-center justify-between py-4">
             <Link to="/">
               <VegaLogo />
             </Link>

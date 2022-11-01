@@ -12,6 +12,7 @@ module.exports = {
         buildersClubFooter: "url('/builders-club-footer-background.jpg')",
         buildersClubFooterLight:
           "url('/builders-club-footer-background-light.jpg')",
+        siteBanner: "url('/site-banner-bg.jpg')",
       },
       opacity: {
         15: ".15",
