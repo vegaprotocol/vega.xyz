@@ -175,7 +175,7 @@ const VegaBond = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#E2E2E2" />
-          <stop offset="1" stop-color="#FBFBFB" />
+          <stop offset="1" stopColor="#FBFBFB" />
         </linearGradient>
       </defs>
     </svg>

@@ -4,28 +4,23 @@ import VideoBackground from "../Svg/VideoBackground";
 import GlitchSound from "../../audio/glitch.wav";
 import DroneSound from "../../audio/drone.wav";
 
-const Interruption = () => {
+type Props = {
+  playSound: (sound: string) => Function;
+  stopSound: (sound: string) => Function;
+};
+
+const Interruption = ({ playSound, stopSound }: Props) => {
   const splashScreen = useRef<HTMLDivElement>(null);
   const glitchPlayer = useRef<HTMLAudioElement>(null);
   const dronePlayer = useRef<HTMLAudioElement>(null);
 
-
   useEffect(() => {
-    if (glitchPlayer && glitchPlayer.current) {
-      const playGlitch = glitchPlayer.current.play();
-
-      if (playGlitch !== undefined) {
-        playGlitch.catch(err => { });
-      }
-    }
+    playSound("glitch");
   }, []);
 
   const finished = (finished) => {
     if (finished) {
-      if (glitchPlayer && glitchPlayer.current) {
-        glitchPlayer.current.pause();
-      }
-
+      stopSound("glitch");
       setTimeout(function () {
         if (splashScreen && splashScreen.current) {
           splashScreen.current.style.opacity = "0";
@@ -34,13 +29,7 @@ const Interruption = () => {
               splashScreen.current.remove();
             }
           }, 1000);
-          if (dronePlayer && dronePlayer.current) {
-            const playDrone = dronePlayer.current.play();
-
-            if (playDrone !== undefined) {
-              playDrone.catch(err => { });
-            }
-          }
+          playSound('drone');
         }
       }, 2000);
     }

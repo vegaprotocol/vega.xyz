@@ -5,6 +5,8 @@ import VegaBond from "../VegaBond";
 import { motion } from "framer-motion";
 
 type Props = {
+  playSound?: (sound: string) => Function;
+  stopSound?: (sound: string) => Function;
   stateCallback?: (state: string) => Function;
 };
 
@@ -20,7 +22,7 @@ const script = [
   "Explore the timeline that gets you to the future. Or start trading to take a small step into decentralised finance – and a giant leap for mankind",
 ];
 
-const Story = ({ stateCallback }: Props) => {
+const Story = ({ playSound, stopSound, stateCallback }: Props) => {
   const [textIndex, setTextIndex] = useState(-1);
   const [text, setText] = useState("");
   const [ready, setReady] = useState(true);
