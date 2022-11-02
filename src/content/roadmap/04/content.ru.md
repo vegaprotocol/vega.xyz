@@ -1,11 +1,10 @@
 ---
-step_title: ????
+step_title: H1 2023
 title: Version 1 Mainnet
 ---
 
-## Advanced Trading
+## Final launch phase
 
-- Final launch phase
-- Temporary limits will be lifted following community governance voting
-- New development enabling market innovations, improvements based on feedback and new features. Examples could include spot markets, passive liquidity, and Ethereum oracles
-- New bridges to other blockchains and/or L2s may also be introduced
+- Temporary limits lifted through governance
+- New innovations and improvements from feedback e.g. spot markets, perpetuals, passive liquidity, Ethereum oracles or advanced products like options
+- New bridges to other blockchains and/or L2s

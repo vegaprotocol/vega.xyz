@@ -165,7 +165,7 @@ const RoadMap = (props) => {
             <div className="max-w-[27.5rem] mx-auto mt-12">
               <div className="border dark:border-vega-dark-300 border-vega-light-300 rounded-xl py-7 px-7 mb-12">
                 <div
-                  className="prose-li:text-[1.125rem] prose-li:list-square prose-li:leading-[1.4] prose-h2:uppercase prose-h2:mb-[0.75rem] prose-h2:text-[1.5rem] prose-ul:p-0 prose-ul:pl-3.5 prose-invert:text-vega-dark-400 prose dark:prose-invert"
+                  className="prose-li:text-[1.125rem] prose-li:list-square prose-h2:leading-[1] prose-li:leading-[1.4] prose-h2:uppercase prose-h2:mb-[0.75rem] prose-h2:text-[1.5rem] prose-ul:p-0 prose-ul:pl-3.5 prose-invert:text-vega-dark-400 prose dark:prose-invert"
                   dangerouslySetInnerHTML={{
                     __html: props.data.edges[selectedPlanet].node.html,
                   }}

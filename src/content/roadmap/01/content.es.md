@@ -1,10 +1,12 @@
 ---
-step_title: "2021"
+step_title: H1 2021
 title: Testnet (Fairground)
 ---
 
-- Try out trading
-- Experiment with permissionless market creation
+## Play without consequences
+
+- Experiment with trading
+- Create markets permissionlessly
 - Create and vote on governance proposals
 - Start staking
 - Explore the blockchain

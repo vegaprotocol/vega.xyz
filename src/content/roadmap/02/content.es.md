@@ -1,8 +1,10 @@
 ---
-step_title: "H1 2022"
+step_title: H1 2022
 title: Restricted Mainnet
 ---
 
-- Validators are running a decentralised Vega network connected to the Ethereum mainnnet
-- Token holders can participate in governance, and stake and delegate their tokens
-- Trading available on the <a href="https://fairground.wtf" target="_blank">Fairground Testnet</a>
+## Secure and govern the network
+
+- Validators run a decentralised network connected to the Ethereum mainnet
+- Create and vote on governance proposals
+- Stake and delegate tokens
