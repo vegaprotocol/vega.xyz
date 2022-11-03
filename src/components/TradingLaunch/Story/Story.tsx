@@ -2,12 +2,11 @@ import { Function } from "aws-sdk/clients/transfer";
 import React, { useEffect, useState } from "react";
 import TypeoutText from "./TypeoutText";
 import VegaBond from "../VegaBond";
-import { motion } from "framer-motion";
 
 type Props = {
-  playSound?: (sound: string) => Function;
-  stopSound?: (sound: string) => Function;
-  stateCallback?: (state: string) => Function;
+  playSound: (sound: string) => boolean;
+  stopSound: (sound: string) => boolean;
+  stateCallback?: (state: string) => boolean;
 };
 
 const script = [
@@ -28,6 +27,12 @@ const Story = ({ playSound, stopSound, stateCallback }: Props) => {
   const [ready, setReady] = useState(true);
 
   const setReadyState = (ready) => {
+    if(ready){
+      stopSound('message')
+    }
+    else{
+      playSound('message')
+    }
     setReady(ready);
   };
 
@@ -79,9 +84,7 @@ const Story = ({ playSound, stopSound, stateCallback }: Props) => {
         </div>
         <div className="flex flex-col items-center justify-end">
           {textIndex > -1 && (
-            <div className="translate-y-5">
-              <VegaBond />
-            </div>
+            <VegaBond className="object-contain translate-y-5 max-w-[33%] hidden sm:block" />
           )}
         </div>
       </div>

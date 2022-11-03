@@ -1,6 +1,6 @@
 import React from "react";
 
-const VegaBond = () => {
+const VegaBond = ({className}) => {
   return (
     <svg
       width="423"
@@ -8,6 +8,7 @@ const VegaBond = () => {
       viewBox="0 0 423 422"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M124.679 309.274L138.425 248.273H284.291L298.038 309.274H124.679Z"

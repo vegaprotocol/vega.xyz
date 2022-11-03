@@ -7,11 +7,20 @@ import StarfieldAnimation from "../../components/TradingLaunch/Starfield/Starfie
 import Interruption from "../../components/TradingLaunch/Interruption";
 import GlitchSound from "../../audio/glitch.wav";
 import DroneSound from "../../audio/drone.wav";
+import MessageSound from "../../audio/message.wav";
+import SoundToggle from "../../components/TradingLaunch/SoundToggle";
 
 const TradingLaunch = () => {
   const [startStory, setStartStory] = useState(false);
+  const [muted, setMuted] = useState(false);
+
+  const [glitchPlay, setGlitchPlay] = useState(false);
+  const [dronePlay, setDronePlay] = useState(false);
+  const [messagePlay, setMessagePlay] = useState(false);
+
   const glitchPlayer = useRef<HTMLAudioElement>(null);
   const dronePlayer = useRef<HTMLAudioElement>(null);
+  const messagePlayer = useRef<HTMLAudioElement>(null);
 
   const triggerStory = (state) => {
     if (state === "started") {
@@ -20,29 +29,54 @@ const TradingLaunch = () => {
     return state;
   };
 
-  const playSound = (sound) => {
-    if (glitchPlayer && glitchPlayer.current) {
-      glitchPlayer.current.pause();
-    }
-    if (dronePlayer && dronePlayer.current) {
-      dronePlayer.current.pause();
-    }
+  const soundToggle = (state) => {
+    setMuted(!state);
 
+    if(state){
+      if(glitchPlay && glitchPlayer && glitchPlayer.current){
+        playSound('glitch')
+      }
+      if(dronePlay && dronePlayer && dronePlayer.current){
+        playSound('drone')
+      }
+      if(messagePlay && messagePlayer && messagePlayer.current){
+        playSound('message')
+      }
+    }
+  }
+
+  const playSound = (sound) => {
     switch (sound) {
       case "glitch":
         if (glitchPlayer && glitchPlayer.current) {
-          glitchPlayer.current.play();
+          glitchPlayer.current.currentTime = 0;
+          const glitchPlay = glitchPlayer.current.play();
+          setGlitchPlay(true);
+          if (glitchPlay !== undefined) {
+            glitchPlay.then(function() {
+            }).catch(function(error) {
+              console.log(error)
+            });
+          };
         }
         break;
       case "drone":
         if (dronePlayer && dronePlayer.current) {
+          setDronePlay(true);
+          dronePlayer.current.currentTime = 0;
           dronePlayer.current.play();
+        }
+        break;
+      case "message":
+        if (messagePlayer && messagePlayer.current) {
+          setMessagePlay(true);
+          messagePlayer.current.currentTime = 0;
+          messagePlayer.current.play();
         }
         break;
       default:
         break;
     }
-
     return true;
   }
 
@@ -50,28 +84,39 @@ const TradingLaunch = () => {
     switch (sound) {
       case "glitch":
         if (glitchPlayer && glitchPlayer.current) {
+          setGlitchPlay(false);
           glitchPlayer.current.pause();
         }
         break;
       case "drone":
         if (dronePlayer && dronePlayer.current) {
+          setDronePlay(false);
           dronePlayer.current.pause();
+        }
+        break;
+      case "message":
+        console.log('stop message');
+        if (messagePlayer && messagePlayer.current) {
+          setMessagePlay(false);
+          messagePlayer.current.pause();
         }
         break;
       default:
         break;
     }
-
     return true;
   }
 
   return (
     <div className="h-screen">
-      <audio ref={glitchPlayer}>
+      <audio ref={glitchPlayer} loop muted={muted}>
         <source src={GlitchSound} type="audio/wav" />
       </audio>
-      <audio ref={dronePlayer}>
+      <audio ref={dronePlayer} loop muted={muted}>
         <source src={DroneSound} type="audio/wav" />
+      </audio>
+      <audio ref={messagePlayer} loop muted={muted}>
+        <source src={MessageSound} type="audio/wav" />
       </audio>
       <StarfieldAnimation
         numParticles={1000}
@@ -87,6 +132,7 @@ const TradingLaunch = () => {
       {!startStory && <Interruption playSound={playSound} stopSound={stopSound} />}
       <HUD mode={startStory ? "story" : ""} />
       <Story stateCallback={triggerStory} playSound={playSound} stopSound={stopSound} />
+      <SoundToggle className="relative z-50 p-4 top-2 focus:outline-0" soundToggle={soundToggle} />
     </div>
   );
 };
