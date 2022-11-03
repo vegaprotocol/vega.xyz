@@ -134,19 +134,19 @@ const IndexPage = ({ data }) => {
             <div className="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
               <ToolBox
                 title="Console"
-                description="Try out trading cash settled futures on the fully decentralised Vega network (Testnet)."
+                description={t("Try out trading cash settled futures on the fully decentralised Vega network (Testnet).")}
                 icon={getImage(data.consoleIcon)}
                 link="https://console.fairground.wtf/"
               />
               <ToolBox
                 title="Governance"
-                description="Submit and vote on proposals to create and change markets, network parameters and assets."
+                description={t("Submit and vote on proposals to create and change markets, network parameters and assets.")}
                 icon={getImage(data.governanceIcon)}
                 link="https://token.vega.xyz/governance"
               />
               <ToolBox
                 title="Block Explorer"
-                description="Explore real-time Vega blockchain information."
+                description={t("Explore real-time Vega blockchain information.")}
                 icon={getImage(data.blockExplorerIcon)}
                 link="https://explorer.vega.xyz/"
               />
@@ -167,7 +167,7 @@ const IndexPage = ({ data }) => {
               color="orange"
               className="title-l md:title-xl mb-4 lg:mb-0 xl:text-[5.875rem] md:text-center max-w-[20rem] md:max-w-none"
             >
-              Key features
+              <Trans t={t}>Key features</Trans>
             </GlitchTitle>
             <div className="py-8 lg:pt-16">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 lg:gap-x-8 lg:gap-y-12 lg:grid-cols-4 mb-12">
