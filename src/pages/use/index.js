@@ -60,7 +60,7 @@ const UsePage = ({ data }) => {
       title: "Console",
       author: "Vega",
       link: "https://console.fairground.wtf/",
-      description: "A dApp for trading on the Vega network (Testnet).",
+      description: "A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).",
       category: "DAPP",
     },
     {

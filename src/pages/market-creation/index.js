@@ -175,7 +175,7 @@ const MarketCreationPage = () => {
       <Seo
         title={t("Market Creation with Vega")}
         description={t(
-          "Bring the future of DeFi within reach - and create a market on any underlying. Attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers."
+          "Bring the future of DeFi within reach - and create a futures market on any underlying. Attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers."
         )}
       />
       {missingTranslations && <TranslationsBanner />}
@@ -195,7 +195,7 @@ const MarketCreationPage = () => {
         <div className="max-w-[44rem] mx-auto">
           <LeadingLine className="text-center">
             <Trans t={t}>
-              Create a market on any underlying, and attract liquidity with
+              Create a cash-settled futures market on any underlying. Attract liquidity with
               Vega's built-in incentive mechanism that matches traders and
               market makers.
             </Trans>
