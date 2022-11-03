@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { type Swiper as SwiperRef } from "swiper";
 import Container from "./Container";
 import Button from "./UI/Button";
-//import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import V2Mainnet from "./Svg/Roadmap/V2Mainnet";
 import V1Mainnet from "./Svg/Roadmap/V1Mainnet";
 import AlphaMainnet from "./Svg/Roadmap/AlphaMainnet";
@@ -16,7 +16,7 @@ import ArrowRight from "./Svg/ArrowRight";
 import "swiper/css";
 
 const RoadMap = (props) => {
-  //const { t } = useTranslation("component.roadmap");
+  const { t } = useTranslation("component.roadmap");
   const planets = useRef<any[]>([]);
   const swiperRef = useRef<SwiperRef>();
   const [timelineHeight, setTimelineHeight] = useState(0);
@@ -77,14 +77,14 @@ const RoadMap = (props) => {
                         onClick={() => swiperRef.current?.slidePrev()}
                       >
                         <ArrowLeft className="mr-2" />
-                        <div>Previous</div>
+                        <div><Trans t={t}>Previous</Trans></div>
                       </button>
                       <VegaBond className="relative top-px" />
                       <button
                         className="flex items-center sm:hidden"
                         onClick={() => swiperRef.current?.slideNext()}
                       >
-                        <div>Previous</div>
+                        <div><Trans t={t}>Next</Trans></div>
                         <ArrowRight className="ml-2" />
                       </button>
                     </div>
@@ -173,7 +173,7 @@ const RoadMap = (props) => {
               </div>
               <div className="text-center">
                 <Button to="https://github.com/orgs/vegaprotocol/projects/114/views/4">
-                  View detailed roadmap
+                  <Trans t={t}>View detailed roadmap</Trans>
                 </Button>
               </div>
             </div>

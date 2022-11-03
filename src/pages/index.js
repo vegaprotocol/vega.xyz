@@ -159,13 +159,9 @@ const IndexPage = ({ data }) => {
         </div>
         <div className="py-8 lg:py-16">
           <Container>
-            <GlitchTitle
-              level="2"
+            <h2 className="title-l md:title-xl mb-4 lg:mb-0 xl:text-[5.875rem] md:text-center max-w-[20rem] md:max-w-none"><GlitchTitle
               color="orange"
-              className="title-l md:title-xl mb-4 lg:mb-0 xl:text-[5.875rem] md:text-center max-w-[20rem] md:max-w-none"
-            >
-              Key features
-            </GlitchTitle>
+            ><Trans t={t}>Key features</Trans></GlitchTitle></h2>
             <div className="py-8 lg:pt-16">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 lg:gap-x-8 lg:gap-y-12 lg:grid-cols-4 mb-12">
                 <FeatureBox
@@ -274,13 +270,9 @@ const IndexPage = ({ data }) => {
 
           <PageSection>
             <div className="text-center">
-              <GlitchTitle
+              <h2 className="mb-4 title-m md:title-l lg:title-xxl"><GlitchTitle
                 color="red"
-                level="2"
-                className="mb-4 title-m md:title-l lg:title-xxl"
-              >
-                <Trans t={t}>Where next?</Trans>
-              </GlitchTitle>
+              ><Trans t={t}>Where next?</Trans></GlitchTitle></h2>
             </div>
 
             <div className="max-w-[12rem] md:max-w-[70rem] grid gap-6 mt-12 mx-auto md:grid-cols-2 lg:grid-cols-4">
