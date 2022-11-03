@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import canAutoPlay from 'can-autoplay';
 
 type Props = {
   className?: string;
@@ -15,11 +14,13 @@ const SoundToggle = ({ className, soundToggle }: Props) => {
   }
 
   useEffect(() => {
-    canAutoPlay.audio().then((result) => {
-      if (result.result) {
+    import('can-autoplay')
+    .then(module => module.default.audio())
+    .then(({ result }) => {
+      if (result === true) {
         setSound(true);
       }
-    });
+    })
   }, []);
 
   return (
