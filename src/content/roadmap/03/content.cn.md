@@ -6,5 +6,5 @@ title: Alpha Mainnet
 ## Trade cash settled futures
 
 - Create markets permissionlessly
-- Buy and sell futures contracts on the Vega blockchain to community controlled limits
-- Test intergrations with live projects and protocols
+- Buy and sell futures contracts on the Vega blockchain with community controlled limits
+- Test integrations with live projects and protocols
