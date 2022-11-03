@@ -123,7 +123,7 @@ const RoadMap = (props) => {
                 {props.data.edges.map((block, idx) => (
                   <SwiperSlide
                     key={idx}
-                    className="cursor-pointer pointer-events-auto"
+                    className="cursor-pointer pointer-events-auto group"
                   >
                     <div
                       className={`transition duration-300 h-full flex flex-col justify-between ${
@@ -140,7 +140,7 @@ const RoadMap = (props) => {
                       `}
                     >
                       <div
-                        className={`transition duration-700 aspect-[251/210] flex items-center justify-center ${
+                        className={`transition duration-700 aspect-[251/210] group-hover:scale-125 flex items-center justify-center ${
                           idx === selectedPlanet ? "opacity-100" : "opacity-50"
                         }`}
                         ref={planets.current[idx]}
