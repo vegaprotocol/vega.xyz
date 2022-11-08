@@ -6,7 +6,7 @@ title: Testnet (Fairground)
 ## Play without consequences
 
 - Experiment with trading
-- Create markets permissionlessly
+- Create permissionless markets
 - Create and vote on governance proposals
 - Start staking
 - Explore the blockchain
