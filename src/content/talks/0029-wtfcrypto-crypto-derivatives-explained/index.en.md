@@ -1,5 +1,5 @@
 ---
-title: "WTF, Crypto: Crypto Derivatives Explained with Barney Mannerings"
+title: "WTF Crypto: Crypto Derivatives Explained with Barney Mannerings"
 location: Virtual
 date: 2022-09-21
 links:
