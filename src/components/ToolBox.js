@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "gatsby";
-import LinkArrow from "./Svg/LinkArrow";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import React from 'react'
+import { Link } from 'gatsby'
+import LinkArrow from './Svg/LinkArrow'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const LinkWrapper = ({
   link,
@@ -10,19 +10,19 @@ const LinkWrapper = ({
   internalLinkWrapper,
   children,
 }) =>
-  link.startsWith("http")
+  link.startsWith('http')
     ? externalLinkWrapper(children)
-    : internalLinkWrapper(children);
+    : internalLinkWrapper(children)
 
 const ToolBox = ({ icon, title, link, text, author, category }) => {
-  const { t } = useTranslation("component.tool-box");
-  const isExternal = link.startsWith("http");
+  const { t } = useTranslation('component.tool-box')
+  const isExternal = link.startsWith('http')
 
   return (
     <LinkWrapper
       link={link}
       internalLinkWrapper={(children) => (
-        <Link to={link} className="block group relative h-full">
+        <Link to={link} className="group relative block h-full">
           {children}
         </Link>
       )}
@@ -30,35 +30,35 @@ const ToolBox = ({ icon, title, link, text, author, category }) => {
         <a
           target="_blank"
           rel="noreferrer"
-          className="block group relative h-full"
+          className="group relative block h-full"
           href={link}
         >
           {children}
         </a>
       )}
     >
-      <div className="group-hover:-translate-y-2 border border-current p-6 relative h-full dark:bg-black bg-white flex flex-col justify-between">
+      <div className="relative flex h-full flex-col justify-between border border-current bg-white p-6 group-hover:-translate-y-2 dark:bg-black">
         <div>
           <GatsbyImage image={icon} alt={title} className="mb-5" />
           <div className="title-s block">
             {title}
             {isExternal && (
-              <span className="relative top-[2px] inline-block ml-2 align-top">
+              <span className="relative top-[2px] ml-2 inline-block align-top">
                 <LinkArrow />
               </span>
             )}
           </div>
 
           {author && (
-            <div className="bg-vega-border-grey rounded-md inline-block items-center mt-2 px-1.5 text-white dark:text-current">
-              {author === "Vega" && (
+            <div className="mt-2 inline-block items-center rounded-md bg-vega-border-grey px-1.5 text-white dark:text-current">
+              {author === 'Vega' && (
                 <svg
                   width="12"
                   height="14"
                   viewBox="0 0 12 14"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="inline-block align-center mr-1.5"
+                  className="align-center mr-1.5 inline-block"
                 >
                   <g fill="currentColor">
                     <path d="M5.9999 12H4V14H5.9999V12Z" />
@@ -70,25 +70,25 @@ const ToolBox = ({ icon, title, link, text, author, category }) => {
                   </g>
                 </svg>
               )}
-              <div className="text-[0.875rem] uppercase inline-block align-center">
-                {t("Made by x", { author: author })}
+              <div className="align-center inline-block text-[0.875rem] uppercase">
+                {t('Made by {{author}}', { author: author })}
               </div>
             </div>
           )}
 
-          <div className="copy-xs text-vega-mid-grey mt-4">{text}</div>
+          <div className="copy-xs mt-4 text-vega-mid-grey">{text}</div>
         </div>
         {category && (
           <div className="pt-3">
-            <div className="border border-current uppercase copy-xxs inline-block px-3 font-light !mb-0">
+            <div className="copy-xxs !mb-0 inline-block border border-current px-3 font-light uppercase">
               {category}
             </div>
           </div>
         )}
       </div>
-      <div className="group-hover:block hidden border-b border-l border-r border-current absolute bottom-0 left-0 right-0 h-3" />
+      <div className="absolute bottom-0 left-0 right-0 hidden h-3 border-b border-l border-r border-current group-hover:block" />
     </LinkWrapper>
-  );
-};
+  )
+}
 
-export default ToolBox;
+export default ToolBox

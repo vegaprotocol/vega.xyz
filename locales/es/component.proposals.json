@@ -1,7 +1,7 @@
 {
-  "Latest Proposals": "",
-  "Loading...": "",
-  "Error fetching proposals...": "",
-  "No proposals found...": "",
-  "Explore all proposals": ""
+  "Latest Proposals": "Últimas propuestas",
+  "Loading...": "Cargando...",
+  "Error fetching proposals...": "Error al obtener propuestas...",
+  "No proposals found...": "No se han encontrado propuestas...",
+  "Explore all proposals": "Explora todas las propuestas"
 }

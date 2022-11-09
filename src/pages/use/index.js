@@ -60,7 +60,7 @@ const UsePage = ({ data }) => {
       title: "Console",
       author: "Vega",
       link: "https://console.fairground.wtf/",
-      description: "A dApp for trading on the Vega network (Testnet).",
+      description: "A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).",
       category: "DAPP",
     },
     {
@@ -96,7 +96,7 @@ const UsePage = ({ data }) => {
       icon: data.cliWalletIcon,
       title: "CLI Wallet",
       author: "Vega",
-      link: "https://docs.vega.xyz/docs/mainnet/tools/vega-wallet/cli-wallet",
+      link: "https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet",
       description:
         "Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.",
       category: "WALLET",

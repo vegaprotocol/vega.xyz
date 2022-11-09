@@ -1,6 +1,6 @@
 {
-  "Validators": "",
-  "Total Staked": "",
-  "Avg. Block Time": "",
-  "Current Epoch": ""
+  "Validators": "Validadores",
+  "Total Staked": "Total apostado",
+  "Avg. Block Time": "Promedio tiempo de bloque",
+  "Current Epoch": "Época actual"
 }

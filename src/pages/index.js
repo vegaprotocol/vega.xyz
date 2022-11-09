@@ -1,36 +1,36 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
-import Layout from "../components/Layout";
-import Container from "../components/Container";
-import Seo from "../components/Seo";
-import TranslationsBanner from "../components/TranslationsBanner";
-import Ticker from "../components/Ticker";
-import GlitchTitle from "../components/UI/GlitchTitle";
-import LatestNews from "../components/LatestNews";
-import LeadingLine from "../components/LeadingLine";
-import ButtonLink from "../components/ButtonLink";
-import LinkCta from "../components/LinkCta";
-import PageSection from "../components/PageSection";
-import Calendar from "../components/Calendar";
-import AsSeenOn from "../components/AsSeenOn";
-import BoxLinkSimple from "../components/BoxLinkSimple";
-import RoadMap from "../components/RoadMap";
-import Rip from "../components/Svg/Home/Rip/Responsive";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import UniverseLeft from "../components/Svg/Home/UniverseLeft/Responsive";
-import UniverseRight from "../components/Svg/Home/UniverseRight/Responsive";
-import UniverseBottom from "../components/Svg/Home/UniverseBottom/Responsive";
-import UniverseBottom2 from "../components/Svg/Home/UniverseBottom2";
-import UniverseTop from "../components/Svg/Home/UniverseTop";
-import PermissionlessMarketCreationIcon from "../images/feature-icons/permissionless-market-creation.svg";
-import AntiFrontRunningProtectionIcon from "../images/feature-icons/anti-front-running-protection.svg";
-import PurposeBuiltBlockChainIcon from "../images/feature-icons/purpose-built.svg";
-import PseudononymousTradingIcon from "../images/feature-icons/pseudononymous-trading.svg";
-import HighCapitalEfficiencyIcon from "../images/feature-icons/high-capital-efficiency.svg";
-import NoGasFeesIcon from "../images/feature-icons/no-gas-fees.svg";
-import NativeLiquidityProvision from "../images/feature-icons/native-liquidity-provision.svg";
-import CrossChainSupportIcon from "../images/feature-icons/cross-chain-support.svg";
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import Layout from '../components/Layout'
+import Container from '../components/Container'
+import Seo from '../components/Seo'
+import TranslationsBanner from '../components/TranslationsBanner'
+import Ticker from '../components/Ticker'
+import GlitchTitle from '../components/UI/GlitchTitle'
+import LatestNews from '../components/LatestNews'
+import LeadingLine from '../components/LeadingLine'
+import ButtonLink from '../components/ButtonLink'
+import LinkCta from '../components/LinkCta'
+import PageSection from '../components/PageSection'
+import Calendar from '../components/Calendar'
+import AsSeenOn from '../components/AsSeenOn'
+import BoxLinkSimple from '../components/BoxLinkSimple'
+import RoadMap from '../components/RoadMap'
+import Rip from '../components/Svg/Home/Rip/Responsive'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import UniverseLeft from '../components/Svg/Home/UniverseLeft/Responsive'
+import UniverseRight from '../components/Svg/Home/UniverseRight/Responsive'
+import UniverseBottom from '../components/Svg/Home/UniverseBottom/Responsive'
+import UniverseBottom2 from '../components/Svg/Home/UniverseBottom2'
+import UniverseTop from '../components/Svg/Home/UniverseTop'
+import PermissionlessMarketCreationIcon from '../images/feature-icons/permissionless-market-creation.svg'
+import AntiFrontRunningProtectionIcon from '../images/feature-icons/anti-front-running-protection.svg'
+import PurposeBuiltBlockChainIcon from '../images/feature-icons/purpose-built.svg'
+import PseudononymousTradingIcon from '../images/feature-icons/pseudononymous-trading.svg'
+import HighCapitalEfficiencyIcon from '../images/feature-icons/high-capital-efficiency.svg'
+import NoGasFeesIcon from '../images/feature-icons/no-gas-fees.svg'
+import NativeLiquidityProvision from '../images/feature-icons/native-liquidity-provision.svg'
+import CrossChainSupportIcon from '../images/feature-icons/cross-chain-support.svg'
 
 const ToolBox = ({ title, description, icon, link }) => {
   return (
@@ -38,44 +38,44 @@ const ToolBox = ({ title, description, icon, link }) => {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="hover:-translate-y-2 border border-vega-border-muted rounded-3xl p-4 md:p-5 lg:pb-8 flex lg:block gap-4"
+      className="flex gap-4 rounded-3xl border border-vega-border-muted p-4 hover:-translate-y-2 md:p-5 lg:block lg:pb-8"
     >
-      <div className="w-[4.75rem] lg:w-[5.9375rem] shrink-0">
+      <div className="w-[4.75rem] shrink-0 lg:w-[5.9375rem]">
         <GatsbyImage image={icon} alt={title} className="lg:mb-6 lg:w-auto " />
       </div>
       <div>
         <div className="title-s mb-1 md:mb-3">{title}</div>
-        <p className="text-vega-text-muted copy-xxs !mb-0">{description}</p>
+        <p className="copy-xxs !mb-0 text-vega-text-muted">{description}</p>
       </div>
     </a>
-  );
-};
+  )
+}
 
 const FeatureBox = ({ title, description, icon }) => {
   return (
     <div>
-      <img src={icon} alt="" className="w-[30px] h-[30px] mb-4" />
+      <img src={icon} alt="" className="mb-4 h-[30px] w-[30px]" />
       <div>
-        <div className="!mb-3 text-[1.3125rem] xl:text-[1.5rem] leading-[1.15]">
+        <div className="!mb-3 text-[1.3125rem] leading-[1.15] xl:text-[1.5rem]">
           {title}
         </div>
-        <p className="text-vega-grey text-base mb-0">{description}</p>
+        <p className="mb-0 text-base text-vega-grey">{description}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const IndexPage = ({ data }) => {
-  const { t, i18n } = useTranslation("page.index");
-  const [missingTranslations, setMissingTranslations] = useState(false);
-  i18n.on("missingKey", (lng) => {
-    setMissingTranslations(true);
-  });
+  const { t, i18n } = useTranslation('page.index')
+  const [missingTranslations, setMissingTranslations] = useState(false)
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   return (
     <Layout>
       <Seo
-        title={t("Blockchain derivatives")}
+        title={t('Blockchain derivatives')}
         description={t(
           "Discover Web3's native derivatives trading platform that is helping DeFi mature."
         )}
@@ -84,11 +84,11 @@ const IndexPage = ({ data }) => {
       {missingTranslations && <TranslationsBanner />}
       <main>
         <div className="relative mt-6 md:mt-8">
-          <div className="max-w-[18.75rem] mx-auto md:hidden">
+          <div className="mx-auto max-w-[18.75rem] md:hidden">
             <UniverseTop />
           </div>
           <div className="absolute top-0 left-0 right-0">
-            <div className="grid grid-cols-12 max-w-[100rem] mx-auto">
+            <div className="mx-auto grid max-w-[100rem] grid-cols-12">
               <div className="col-span-3">
                 <UniverseLeft />
               </div>
@@ -99,17 +99,17 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
 
-          <div className="md:grid md:grid-cols-12 max-w-[100rem] mx-auto">
-            <div className="hidden md:block md:col-span-3"></div>
+          <div className="mx-auto max-w-[100rem] md:grid md:grid-cols-12">
+            <div className="hidden md:col-span-3 md:block"></div>
             <div className="md:col-span-6">
-              <div className="mx-auto max-w-[25rem] md:max-w-[35rem] text-center pt-8 md:pt-20">
+              <div className="mx-auto max-w-[25rem] pt-8 text-center md:max-w-[35rem] md:pt-20">
                 <div>
-                  <h1 className="title-l md:title-xxl xl:text-[7.1875rem] mb-2">
+                  <h1 className="title-l md:title-xxl mb-2 xl:text-[7.1875rem]">
                     <GlitchTitle color="red">
                       <Trans t={t}>Toward a new era of finance</Trans>
                     </GlitchTitle>
                   </h1>
-                  <LeadingLine className="text-current lg:text-[1.75rem] !mb-0">
+                  <LeadingLine className="!mb-0 text-current lg:text-[1.75rem]">
                     <Trans t={t}>
                       Decentralised infrastructure for the fair creation and
                       trading of derivatives.
@@ -118,32 +118,38 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block md:col-span-3"></div>
+            <div className="hidden md:col-span-3 md:block"></div>
           </div>
         </div>
-        <div className="md:hidden flex justify-end mt-10">
+        <div className="mt-10 flex justify-end md:hidden">
           <div className="w-full max-w-[27rem]">
             <UniverseBottom2 />
           </div>
         </div>
-        <Container dataCy={"main"}>
-          <div className="relative max-w-[29rem] lg:max-w-[50rem] mx-auto mb-10 -mt-[15%] md:mt-0">
-            <div className="grid lg:grid-cols-3 gap-4 md:gap-8 py-12">
+        <Container dataCy={'main'}>
+          <div className="relative mx-auto mb-10 -mt-[15%] max-w-[29rem] md:mt-0 lg:max-w-[50rem]">
+            <div className="grid gap-4 py-12 md:gap-8 lg:grid-cols-3">
               <ToolBox
                 title="Console"
-                description="Try out trading on the fully decentralised Vega network (Testnet)."
+                description={t(
+                  'Try out trading cash settled futures on the fully decentralised Vega network (Testnet).'
+                )}
                 icon={getImage(data.consoleIcon)}
                 link="https://console.fairground.wtf/"
               />
               <ToolBox
                 title="Governance"
-                description="Submit and vote on proposals to create and change markets, network parameters and assets."
+                description={t(
+                  'Submit and vote on proposals to create and change markets, network parameters and assets.'
+                )}
                 icon={getImage(data.governanceIcon)}
                 link="https://token.vega.xyz/governance"
               />
               <ToolBox
                 title="Block Explorer"
-                description="Explore real-time Vega blockchain information."
+                description={t(
+                  'Explore real-time Vega blockchain information.'
+                )}
                 icon={getImage(data.blockExplorerIcon)}
                 link="https://explorer.vega.xyz/"
               />
@@ -154,67 +160,69 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
         </Container>
-        <div className="hidden md:block max-w-[38rem] xl:max-w-[45rem] mx-auto mb-20">
+        <div className="mx-auto mb-20 hidden max-w-[38rem] md:block xl:max-w-[45rem]">
           <UniverseBottom />
         </div>
         <div className="py-8 lg:py-16">
           <Container>
-            <h2 className="title-l md:title-xl mb-4 lg:mb-0 xl:text-[5.875rem] md:text-center max-w-[20rem] md:max-w-none"><GlitchTitle
-              color="orange"
-            ><Trans t={t}>Key features</Trans></GlitchTitle></h2>
+            <h2 className="title-l md:title-xl mb-4 max-w-[20rem] md:max-w-none md:text-center lg:mb-0 xl:text-[5.875rem]">
+              <GlitchTitle color="orange">
+                <Trans t={t}>Key features</Trans>
+              </GlitchTitle>
+            </h2>
             <div className="py-8 lg:pt-16">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 lg:gap-x-8 lg:gap-y-12 lg:grid-cols-4 mb-12">
+              <div className="mb-12 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-12">
                 <FeatureBox
-                  title={t("Permissionless market creation")}
-                  description={t("Propose a market on any underlying.")}
+                  title={t('Permissionless market creation')}
+                  description={t('Propose a market on any underlying.')}
                   icon={PermissionlessMarketCreationIcon}
                 />
                 <FeatureBox
-                  title={t("Anti front running")}
+                  title={t('Anti front running')}
                   description={t(
-                    "Fair access to the order book, preventing miner extractable value (MEV)."
+                    'Fair access to the order book, preventing miner extractable value (MEV).'
                   )}
                   icon={AntiFrontRunningProtectionIcon}
                 />
                 <FeatureBox
-                  title={t("Purpose-built blockchain")}
+                  title={t('Purpose-built blockchain')}
                   description={t(
-                    "High performing smart contracts for sophisticated trading."
+                    'High performing smart contracts for sophisticated trading.'
                   )}
                   icon={PurposeBuiltBlockChainIcon}
                 />
                 <FeatureBox
-                  title={t("Pseudonymous trading")}
+                  title={t('Pseudonymous trading')}
                   description={t(
-                    "Keep control of your data, and protect your privacy."
+                    'Keep control of your data, and protect your privacy.'
                   )}
                   icon={PseudononymousTradingIcon}
                 />
                 <FeatureBox
-                  title={t("High capital efficiency")}
+                  title={t('High capital efficiency')}
                   description={t(
-                    "Lower capital costs and evaluate risk live with cross margining."
+                    'Lower capital costs and evaluate risk live with cross margining.'
                   )}
                   icon={HighCapitalEfficiencyIcon}
                 />
                 <FeatureBox
-                  title={t("No gas fees on trading")}
+                  title={t('No gas fees on trading')}
                   description={t(
-                    "Fees only on trades on a market in continuous trading."
+                    'Fees only on trades on a market in continuous trading.'
                   )}
                   icon={NoGasFeesIcon}
                 />
                 <FeatureBox
-                  title={t("Native liquidity provision")}
+                  title={t('Native liquidity provision')}
                   description={t(
-                    "Built-in liquidity incentives for bustling markets."
+                    'Built-in liquidity incentives for bustling markets.'
                   )}
                   icon={NativeLiquidityProvision}
                 />
                 <FeatureBox
-                  title={t("Cross-chain support")}
+                  title={t('Cross-chain support')}
                   description={t(
-                    "Choose the digital asset for collateral or settlements."
+                    'Choose the digital asset for collateral or settlements.'
                   )}
                   icon={CrossChainSupportIcon}
                 />
@@ -222,7 +230,7 @@ const IndexPage = ({ data }) => {
               <div className="text-center">
                 <ButtonLink
                   link="/key-concepts"
-                  text={t("View all")}
+                  text={t('View all')}
                   className="bg-vega-mid-grey"
                 />
               </div>
@@ -238,7 +246,9 @@ const IndexPage = ({ data }) => {
           <div id="roadmap">
             <div className="text-center">
               <h2 className="heading-xl">
-                <GlitchTitle color="purple">Roadmap</GlitchTitle>
+                <GlitchTitle color="purple">
+                  <Trans t={t}>Roadmap</Trans>
+                </GlitchTitle>
               </h2>
             </div>
             <RoadMap data={data.roadmap} />
@@ -270,28 +280,30 @@ const IndexPage = ({ data }) => {
 
           <PageSection>
             <div className="text-center">
-              <h2 className="mb-4 title-m md:title-l lg:title-xxl"><GlitchTitle
-                color="red"
-              ><Trans t={t}>Where next?</Trans></GlitchTitle></h2>
+              <h2 className="title-m md:title-l lg:title-xxl mb-4">
+                <GlitchTitle color="red">
+                  <Trans t={t}>Where next?</Trans>
+                </GlitchTitle>
+              </h2>
             </div>
 
-            <div className="max-w-[12rem] md:max-w-[70rem] grid gap-6 mt-12 mx-auto md:grid-cols-2 lg:grid-cols-4">
-              <BoxLinkSimple text={t("Use the network")} link="/use" />
-              <BoxLinkSimple text={t("Join the community")} link="/community" />
+            <div className="mx-auto mt-12 grid max-w-[12rem] gap-6 md:max-w-[70rem] md:grid-cols-2 lg:grid-cols-4">
+              <BoxLinkSimple text={t('Use the network')} link="/use" />
+              <BoxLinkSimple text={t('Join the community')} link="/community" />
               <BoxLinkSimple
-                text={t("Govern the network")}
+                text={t('Govern the network')}
                 link="/governance"
               />
-              <BoxLinkSimple text={t("Develop on Vega")} link="/develop" />
+              <BoxLinkSimple text={t('Develop on Vega')} link="/develop" />
             </div>
           </PageSection>
         </Container>
       </main>
     </Layout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const query = graphql`
   query ($language: String!) {
@@ -360,4 +372,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
