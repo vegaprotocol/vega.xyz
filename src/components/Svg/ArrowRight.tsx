@@ -1,6 +1,10 @@
-import React from "react";
+import React from 'react'
 
-const ArrowRight = ({ className }) => {
+export interface ArrowRightProps {
+  className?: string
+}
+
+const ArrowRight = ({ className }: ArrowRightProps) => {
   return (
     <svg
       width="13"
@@ -23,7 +27,7 @@ const ArrowRight = ({ className }) => {
         strokeMiterlimit="10"
       />
     </svg>
-  );
-};
+  )
+}
 
-export default ArrowRight;
+export default ArrowRight
