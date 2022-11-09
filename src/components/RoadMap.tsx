@@ -13,6 +13,7 @@ import VegaBond from "./Svg/Roadmap/VegaBond";
 import Rectangle from "./Svg/Roadmap/Rectangle";
 import ArrowLeft from "./Svg/ArrowLeft";
 import ArrowRight from "./Svg/ArrowRight";
+import { motion } from "framer-motion";
 import "swiper/css";
 
 const RoadMap = (props) => {
@@ -28,19 +29,19 @@ const RoadMap = (props) => {
   const roadmapImage = (idx) => {
     switch (idx) {
       case 4:
-        return <V2Mainnet className="w-full h-auto max-w-[13rem] mx-auto" />;
+        return <V2Mainnet className="mx-auto h-auto w-full max-w-[13rem]" />;
       case 3:
-        return <V1Mainnet className="w-full h-auto max-w-[7.5rem] mx-auto" />;
+        return <V1Mainnet className="mx-auto h-auto w-full max-w-[7.5rem]" />;
       case 2:
         return (
-          <AlphaMainnet className="w-full h-auto max-w-[15.625rem] mx-auto" />
+          <AlphaMainnet className="mx-auto h-auto w-full max-w-[15.625rem]" />
         );
       case 1:
         return (
-          <RestrictedMainnet className="w-full h-auto max-w-[6.8125rem] mx-auto" />
+          <RestrictedMainnet className="mx-auto h-auto w-full max-w-[6.8125rem]" />
         );
       case 0:
-        return <Testnet className="w-full h-auto max-w-[12.0625rem] mx-auto" />;
+        return <Testnet className="mx-auto h-auto w-full max-w-[12.0625rem]" />;
       default:
         return <div>Not found</div>;
     }
@@ -62,34 +63,38 @@ const RoadMap = (props) => {
         </div>
         <div className="relative z-10">
           <Container>
-            <div className="flex relative">
-              <div className="absolute inset-0 z-10 pointer-events-none">
-                <div className="grid sm:grid-cols-3 text-center">
-                  <div className="aspect-[251/210] justify-center items-end hidden sm:flex">
+            <div className="relative flex">
+              <div className="pointer-events-none absolute inset-0 z-10">
+                <div className="grid text-center sm:grid-cols-3">
+                  <div className="hidden aspect-[251/210] items-end justify-center sm:flex">
                     {selectedPlanet !== 0 && (
                       <Rectangle className="relative top-[4px]" />
                     )}
                   </div>
-                  <div className="aspect-[251/210] flex justify-center items-end">
-                    <div className="w-full flex sm:justify-center justify-between pointer-events-auto">
+                  <div className="flex aspect-[251/210] items-end justify-center">
+                    <div className="pointer-events-auto flex w-full justify-between sm:justify-center">
                       <button
                         className="flex items-center sm:hidden"
                         onClick={() => swiperRef.current?.slidePrev()}
                       >
                         <ArrowLeft className="mr-2" />
-                        <div><Trans t={t}>Previous</Trans></div>
+                        <div>
+                          <Trans t={t}>Previous</Trans>
+                        </div>
                       </button>
                       <VegaBond className="relative top-px" />
                       <button
                         className="flex items-center sm:hidden"
                         onClick={() => swiperRef.current?.slideNext()}
                       >
-                        <div><Trans t={t}>Next</Trans></div>
+                        <div>
+                          <Trans t={t}>Next</Trans>
+                        </div>
                         <ArrowRight className="ml-2" />
                       </button>
                     </div>
                   </div>
-                  <div className="aspect-[251/210] justify-center items-end hidden sm:flex">
+                  <div className="hidden aspect-[251/210] items-end justify-center sm:flex">
                     {selectedPlanet !== props.data.edges.length - 1 && (
                       <Rectangle className="relative top-[4px]" />
                     )}
@@ -123,13 +128,13 @@ const RoadMap = (props) => {
                 {props.data.edges.map((block, idx) => (
                   <SwiperSlide
                     key={idx}
-                    className="cursor-pointer pointer-events-auto group"
+                    className="group pointer-events-auto cursor-pointer"
                   >
                     <div
-                      className={`transition duration-300 h-full flex flex-col justify-between ${
+                      className={`flex h-full flex-col justify-between transition duration-300 ${
                         idx === selectedPlanet
-                          ? "dark:text-white text-black"
-                          : "dark:text-vega-dark-300 text-vega-light-300"
+                          ? "text-black dark:text-white"
+                          : "text-vega-light-300 dark:text-vega-dark-300"
                       }
                       
                       ${
@@ -140,7 +145,7 @@ const RoadMap = (props) => {
                       `}
                     >
                       <div
-                        className={`transition duration-700 aspect-[251/210] group-hover:scale-125 flex items-center justify-center ${
+                        className={`flex aspect-[251/210] items-center justify-center transition duration-700 group-hover:scale-125 ${
                           idx === selectedPlanet ? "opacity-100" : "opacity-50"
                         }`}
                         ref={planets.current[idx]}
@@ -148,13 +153,13 @@ const RoadMap = (props) => {
                         {roadmapImage(idx)}
                       </div>
                       <div
-                        className={`transition-all duration-700 heading-m !mb-5 sm:mb-[1rem] text-center max-w-[18rem] mx-auto ${
+                        className={`heading-m mx-auto !mb-5 max-w-[18rem] text-center transition-all duration-700 sm:mb-[1rem] ${
                           idx === selectedPlanet ? "" : "scale-75"
                         }`}
                       >
                         {block.node.frontmatter.title}
                       </div>
-                      <div className="transition-all duration-700 text-center justify-self-end text-[0.9375rem] uppercase">
+                      <div className="justify-self-end text-center text-[0.9375rem] uppercase transition-all duration-700">
                         {block.node.frontmatter.step_title}
                       </div>
                     </div>
@@ -162,21 +167,29 @@ const RoadMap = (props) => {
                 ))}
               </Swiper>
             </div>
-            <div className="max-w-[27.5rem] mx-auto mt-12">
-              <div className="border dark:border-vega-dark-300 border-vega-light-300 rounded-xl py-7 px-7 mb-12">
-                <div
-                  className="prose-li:text-[1.125rem] prose-li:list-square prose-h2:leading-[1] prose-li:leading-[1.4] prose-h2:uppercase prose-h2:mb-[0.75rem] prose-h2:text-[1.5rem] prose-ul:p-0 prose-ul:pl-3.5 prose-invert:text-vega-dark-400 prose dark:prose-invert"
-                  dangerouslySetInnerHTML={{
-                    __html: props.data.edges[selectedPlanet].node.html,
-                  }}
-                />
+            <motion.div
+              exit={{ opacity: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              key={selectedPlanet}
+            >
+              <div className="mx-auto mt-12 max-w-[27.5rem]">
+                <div className="mb-12 rounded-xl border border-vega-light-300 py-7 px-7 dark:border-vega-dark-300">
+                  <div
+                    className="prose-invert:text-vega-dark-400 prose prose-h2:mb-[0.75rem] prose-h2:border-none prose-h2:text-[1.5rem] prose-h2:uppercase prose-h2:leading-[1] prose-ul:p-0 prose-ul:pl-3.5 prose-li:list-square prose-li:text-[1.125rem] prose-li:leading-[1.4] dark:prose-invert"
+                    dangerouslySetInnerHTML={{
+                      __html: props.data.edges[selectedPlanet].node.html,
+                    }}
+                  />
+                </div>
+                <div className="text-center">
+                  <Button to="https://github.com/orgs/vegaprotocol/projects/114/views/4">
+                    <Trans t={t}>View detailed roadmap</Trans>
+                  </Button>
+                </div>
               </div>
-              <div className="text-center">
-                <Button to="https://github.com/orgs/vegaprotocol/projects/114/views/4">
-                  <Trans t={t}>View detailed roadmap</Trans>
-                </Button>
-              </div>
-            </div>
+            </motion.div>
           </Container>
         </div>
       </div>
