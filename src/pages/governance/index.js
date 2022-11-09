@@ -1,36 +1,37 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
-import Seo from "../../components/Seo";
-import Layout from "../../components/Layout";
-import TranslationsBanner from "../../components/TranslationsBanner";
-import Container from "../../components/Container";
-import GovernanceResponsive from "../../components/Svg/Governance/Hero/Responsive";
-import PageSection from "../../components/PageSection";
-import BoxTitle from "../../components/BoxTitle";
-import ToolBox from "../../components/ToolBox";
-import ButtonLink from "../../components/ButtonLink";
-import GlitchTitle from "../../components/GlitchTitle";
-import LeadingLine from "../../components/LeadingLine";
-import NetworkParameter from "../../components/NetworkParameter";
-import Accordion from "../../components/Accordion/Accordion";
-import Arrow from "../../components/Svg/Arrow";
-import VotingIllustration from "../../components/Svg/Governance/Voting";
-import Phase1 from "../../components/Svg/Governance/Process/Phase1";
-import Phase2 from "../../components/Svg/Governance/Process/Phase2";
-import Phase3 from "../../components/Svg/Governance/Process/Phase3";
-import Phase4 from "../../components/Svg/Governance/Process/Phase4";
-import Phase5 from "../../components/Svg/Governance/Process/Phase5";
-import Proposals from "../../components/Proposals";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image'
+import Seo from '../../components/Seo'
+import Layout from '../../components/Layout'
+import TranslationsBanner from '../../components/TranslationsBanner'
+import Container from '../../components/Container'
+import GovernanceResponsive from '../../components/Svg/Governance/Hero/Responsive'
+import PageSection from '../../components/PageSection'
+import BoxTitle from '../../components/BoxTitle'
+import ToolBox from '../../components/ToolBox'
+import ButtonLink from '../../components/ButtonLink'
+import GlitchTitle from '../../components/GlitchTitle'
+import LeadingLine from '../../components/LeadingLine'
+import NetworkParameter from '../../components/NetworkParameter'
+import Accordion from '../../components/Accordion/Accordion'
+import Arrow from '../../components/Svg/Arrow'
+import VotingIllustration from '../../components/Svg/Governance/Voting'
+import Phase1 from '../../components/Svg/Governance/Process/Phase1'
+import Phase2 from '../../components/Svg/Governance/Process/Phase2'
+import Phase3 from '../../components/Svg/Governance/Process/Phase3'
+import Phase4 from '../../components/Svg/Governance/Process/Phase4'
+import Phase5 from '../../components/Svg/Governance/Process/Phase5'
+import Proposals from '../../components/Proposals'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import Callout from '../../components/UI/Callout'
 
 const GovernancePage = ({ data }) => {
-  const { i18n, t } = useTranslation("page.governance");
-  const [missingTranslations, setMissingTranslations] = useState(false);
+  const { i18n, t } = useTranslation('page.governance')
+  const [missingTranslations, setMissingTranslations] = useState(false)
 
-  i18n.on("missingKey", (lng) => {
-    setMissingTranslations(true);
-  });
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   const Phase3Text = () => {
     return (
@@ -50,17 +51,17 @@ const GovernancePage = ({ data }) => {
         <p>
           <Trans t={t}>
             The number of tokens needed to make a proposal differs by proposal
-            type, for example{" "}
+            type, for example{' '}
             <NetworkParameter
               param="governance_proposal_market_minProposerBalance"
               suffix=" $VEGA"
-            />{" "}
+            />{' '}
             for a new market proposal.
           </Trans>
         </p>
       </>
-    );
-  };
+    )
+  }
 
   const Phase4Text = () => {
     return (
@@ -77,17 +78,17 @@ const GovernancePage = ({ data }) => {
         <p>
           <Trans t={t}>
             The number of tokens needed to vote differs by proposal type, for
-            example{" "}
+            example{' '}
             <NetworkParameter
               param="governance_proposal_market_minVoterBalance"
               suffix=" $VEGA"
-            ></NetworkParameter>{" "}
+            ></NetworkParameter>{' '}
             for a new market proposal. Each public key is eligible for one vote.
           </Trans>
         </p>
       </>
-    );
-  };
+    )
+  }
 
   const Phase5Text = () => {
     return (
@@ -98,109 +99,109 @@ const GovernancePage = ({ data }) => {
             threshold within the voting period, the change is automatically
             enacted (with the exception of free form proposals). The thresholds
             differ by proposal type, for example a new market proposal requires
-            participation of{" "}
-            <NetworkParameter param="governance_proposal_market_requiredParticipation" />{" "}
-            and a majority of{" "}
+            participation of{' '}
+            <NetworkParameter param="governance_proposal_market_requiredParticipation" />{' '}
+            and a majority of{' '}
             <NetworkParameter param="governance_proposal_market_requiredMajority" />
             .
           </Trans>
         </p>
       </>
-    );
-  };
+    )
+  }
 
   const governanceProcess = [
     {
-      phase: t("Phase 1"),
-      title: t("Sense check"),
+      phase: t('Phase 1'),
+      title: t('Sense check'),
       text: t(
         "Start a topic and share an outline of your proposal on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans."
       ),
       links: [
         {
-          title: t("Start a topic on the forum"),
-          url: "https://community.vega.xyz/c/governance/25",
+          title: t('Start a topic on the forum'),
+          url: 'https://community.vega.xyz/c/governance/25',
         },
       ],
       image: <Phase1 />,
     },
     {
-      phase: t("Phase 2"),
-      title: t("Formalise Proposal"),
+      phase: t('Phase 2'),
+      title: t('Formalise Proposal'),
       text: t(
-        "Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit."
+        'Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the proposed addition/change, including the data (JSON or similar) that would be submitted on chain. Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.'
       ),
       links: [
         {
-          title: t("Read the docs to make a proposal"),
-          url: "https://docs.vega.xyz/mainnet/concepts/vega-protocol#governance",
+          title: t('Read the docs to make a proposal'),
+          url: 'https://docs.vega.xyz/mainnet/concepts/vega-protocol#governance',
         },
         {
-          title: t("Check out the forum"),
-          url: "https://community.vega.xyz/c/governance/25",
+          title: t('Check out the forum'),
+          url: 'https://community.vega.xyz/c/governance/25',
         },
       ],
       image: <Phase2 />,
     },
     {
-      phase: t("Phase 3"),
-      title: t("Submit a proposal"),
+      phase: t('Phase 3'),
+      title: t('Submit a proposal'),
       component: <Phase3Text />,
       links: [
         {
-          title: t("Read the docs to make a proposal"),
-          url: "https://docs.vega.xyz/mainnet/concepts/vega-protocol#governance",
+          title: t('Read the docs to make a proposal'),
+          url: 'https://docs.vega.xyz/mainnet/concepts/vega-protocol#governance',
         },
         {
-          title: t("Submit your proposal"),
-          url: "https://token.vega.xyz/governance/propose/",
+          title: t('Submit your proposal'),
+          url: 'https://token.vega.xyz/governance/propose/',
         },
       ],
       image: <Phase3 />,
     },
     {
-      phase: t("Phase 4"),
-      title: t("Vote to exercise your influence"),
+      phase: t('Phase 4'),
+      title: t('Vote to exercise your influence'),
       component: <Phase4Text />,
       links: [
         {
-          title: t("Vote for proposals"),
-          url: "https://token.vega.xyz/governance",
+          title: t('Vote for proposals'),
+          url: 'https://token.vega.xyz/governance',
         },
       ],
       image: <Phase4 />,
     },
     {
-      phase: t("Phase 5"),
-      title: t("Enacting changes"),
+      phase: t('Phase 5'),
+      title: t('Enacting changes'),
       component: <Phase5Text />,
       image: <Phase5 />,
     },
-  ];
+  ]
 
   return (
     <Layout>
       <Seo
-        title={t("Governance")}
+        title={t('Governance')}
         description={t(
-          "Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject."
+          'Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <Container dataCy={"main"}>
-        <div className="max-w-[61rem] mx-auto text-center pt-6 lg:pt-24">
+      <Container dataCy={'main'}>
+        <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
           <h1>
-            <BoxTitle text={t("Governance")} />
+            <BoxTitle text={t('Governance')} />
           </h1>
           <GlitchTitle
             level="2"
             color="red"
-            className="title-m md:title-l lg:title-xl mb-4 md:mb-6 mt-4 text-center"
+            className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
           >
             <Trans t={t}>Govern the network</Trans>
           </GlitchTitle>
         </div>
-        <div className="max-w-[44rem] mx-auto">
+        <div className="mx-auto max-w-[44rem]">
           <LeadingLine className="text-center">
             <Trans t={t}>
               Decisions on the Vega network are on-chain, with tokenholders
@@ -212,67 +213,70 @@ const GovernancePage = ({ data }) => {
         </div>
       </Container>
 
-      <GovernanceResponsive />
+      <div className="mb-space-8 md:mb-space-10">
+        <GovernanceResponsive />
+      </div>
 
       <Container>
-        <PageSection>
-          <h2
-            className="text-center title-m md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto"
-            id="governanceTools"
-          >
-            <Trans t={t}>Governance Tools</Trans>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-10 mt-10 md:mt-20 max-w-[75rem] mx-auto">
-            <ToolBox
-              icon={getImage(data.forumIcon)}
-              title={t("Forum")}
-              link="https://community.vega.xyz/c/governance/25"
-              text={t(
-                "Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more."
-              )}
-              type="Tool"
-            />
-            <ToolBox
-              icon={getImage(data.tokenInterfaceIcon)}
-              title={t("Governance")}
-              link="https://token.vega.xyz/governance"
-              text={t("Review, vote on, and submit governance proposals.")}
-              type="DAPP"
-            />
-            <ToolBox
-              icon={getImage(data.makeProposalIcon)}
-              title={t("Make a proposal")}
-              link="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
-              text={t(
-                "Read the docs to create and submit a proposal using Vega APIs."
-              )}
-              type="DOCS"
-            />
-          </div>
-        </PageSection>
-
-        <PageSection>
-          <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-none mx-auto">
-            <Trans t={t}>Governance lifecycle</Trans>
-          </h2>
-
-          <Accordion
-            data={governanceProcess}
-            transNamespace="page.governance"
+        <h2
+          className="title-m md:title-l mx-auto mb-6 max-w-[30rem] text-center lg:max-w-none"
+          id="governanceTools"
+        >
+          <Trans t={t}>Governance Tools</Trans>
+        </h2>
+        <div className="mx-auto mt-10 mb-space-10 grid max-w-[75rem] grid-cols-1 gap-5 md:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10">
+          <ToolBox
+            icon={getImage(data.forumIcon)}
+            title={t('Forum')}
+            link="https://community.vega.xyz/c/governance/25"
+            text={t(
+              'Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more.'
+            )}
+            type="Tool"
           />
-        </PageSection>
+          <ToolBox
+            icon={getImage(data.tokenInterfaceIcon)}
+            title={t('Governance')}
+            link="https://token.vega.xyz/governance"
+            text={t('Review, vote on, and submit governance proposals.')}
+            type="DAPP"
+          />
+          <ToolBox
+            icon={getImage(data.makeProposalIcon)}
+            title={t('Make a proposal')}
+            link="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
+            text={t(
+              'Read the docs to create and submit a proposal using Vega APIs.'
+            )}
+            type="DOCS"
+          />
+        </div>
+
+        <Callout
+          title={t('Propose a futures market on any underlying.')}
+          image={getImage(data.marketMakingImage)}
+          linkText={t('Create a new market')}
+          link="/market-creation"
+          className="mb-space-8 md:mb-space-10"
+        />
+
+        <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
+          <Trans t={t}>Governance lifecycle</Trans>
+        </h2>
+
+        <Accordion data={governanceProcess} transNamespace="page.governance" />
 
         <PageSection>
-          <h2 className="title-m md:title-l lg:title-xl text-center mb-12 px-1">
+          <h2 className="title-m md:title-l lg:title-xl mb-12 px-1 text-center">
             <Trans t={t}>Get started voting</Trans>
           </h2>
 
-          <div className="max-w-[31.25rem] mx-auto relative top-[3px]">
+          <div className="relative top-[3px] mx-auto max-w-[31.25rem]">
             <VotingIllustration />
           </div>
 
-          <div className="border-2 border-current grid grid-cols-1 md:grid-cols-3 text-center">
-            <div className="relative border-b-2 border-current md:border-b-0  md:border-r-2 p-12 md:p-6 lg:p-12">
+          <div className="grid grid-cols-1 border-2 border-current text-center md:grid-cols-3">
+            <div className="relative border-b-2 border-current p-12  md:border-b-0 md:border-r-2 md:p-6 lg:p-12">
               <div className="title-s mb-6">
                 <Trans t={t}>Get $VEGA tokens</Trans>
               </div>
@@ -284,15 +288,15 @@ const GovernancePage = ({ data }) => {
                   </Trans>
                 </p>
               </div>
-              <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg] bg-white dark:bg-black p-3">
+              <div className="absolute left-1/2 -bottom-5 -translate-x-1/2 bg-white p-3 dark:bg-black md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg]">
                 <Arrow />
               </div>
             </div>
-            <div className="relative border-b-2 border-current md:border-b-0 md:border-r-2 p-12 md:p-6 lg:p-12">
+            <div className="relative border-b-2 border-current p-12 md:border-b-0 md:border-r-2 md:p-6 lg:p-12">
               <div className="title-s mb-6">
                 <Trans t={t}>Get a Vega Wallet</Trans>
               </div>
-              <div className="lg:prose-lg mb-6">
+              <div className="mb-6 lg:prose-lg">
                 <p className="copy-xxs lg:copy-xs">
                   <Trans t={t}>
                     A Vega wallet is used to access and sign transactions and
@@ -300,8 +304,8 @@ const GovernancePage = ({ data }) => {
                   </Trans>
                 </p>
               </div>
-              <ButtonLink link="/wallet" text={t("Get a Vega Wallet")} />
-              <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg] bg-white dark:bg-black p-3">
+              <ButtonLink link="/wallet" text={t('Get a Vega Wallet')} />
+              <div className="absolute left-1/2 -bottom-5 -translate-x-1/2 bg-white p-3 dark:bg-black md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg]">
                 <Arrow />
               </div>
             </div>
@@ -321,7 +325,7 @@ const GovernancePage = ({ data }) => {
               </div>
               <ButtonLink
                 link="/governance/#governanceTools"
-                text={t("Governance tools")}
+                text={t('Governance tools')}
               />
             </div>
           </div>
@@ -332,10 +336,10 @@ const GovernancePage = ({ data }) => {
         </PageSection>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default GovernancePage;
+export default GovernancePage
 
 export const query = graphql`
   query ($language: String!) {
@@ -346,6 +350,15 @@ export const query = graphql`
           data
           language
         }
+      }
+    }
+    marketMakingImage: file(relativePath: { eq: "market-making-image.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 580
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
     forumIcon: file(relativePath: { eq: "governance-icon-forum.png" }) {
@@ -380,4 +393,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
