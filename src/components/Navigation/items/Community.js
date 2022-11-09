@@ -29,7 +29,7 @@ const Community = () => {
         </NavigationList>
       </div>
       <div className="lg:col-span-4">
-        <NavigationHeading>Join</NavigationHeading>
+        <NavigationHeading><Trans t={t}>Join</Trans></NavigationHeading>
         <NavigationList>
           <NavigationItem text={t("Discord")} link="https://vega.xyz/discord" />
           <NavigationItem
@@ -40,17 +40,25 @@ const Community = () => {
             text={t("Telegram")}
             link="https://t.me/vegacommunity"
           />
+        </NavigationList>
+
+        <NavigationList>
+          <NavigationHeading><Trans t={t}>Follow</Trans></NavigationHeading>
           <NavigationItem
             text={t("Twitter")}
             link="https://twitter.com/vegaprotocol"
           />
           <NavigationItem
-            text={t("Substack")}
+            text={t("Newsletter")}
             link="https://vegacommunity.substack.com/subscribe"
           />
           <NavigationItem
             text={t("Twitch")}
             link="https://www.twitch.tv/vegaprotocol"
+          />
+          <NavigationItem
+            text={t("Blog")}
+            link="https://blog.vega.xyz"
           />
         </NavigationList>
       </div>
