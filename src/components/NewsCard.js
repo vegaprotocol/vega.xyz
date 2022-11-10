@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import LinkArrow from "./Svg/LinkArrow";
 import { Link } from "gatsby-plugin-react-i18next";
 
 const LinkWrapper = ({
@@ -43,6 +44,8 @@ const NewsCard = ({ title, text, link, image, date, category, extra }) => {
       {title && (
         <div className="text-[1.3125rem] font-glitched mb-2 leading-[1.2]">
           {title}
+
+          <LinkArrow className="inline-block ml-2" />
         </div>
       )}
       {text && (

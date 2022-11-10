@@ -47,7 +47,7 @@ const ButtonLink = ({
       <a href={link} target="_blank" rel="noreferrer" className={linkClass}>
         <div className={buttonClass}>
           {firstPartOfString}{" "}
-          <span class="whitespace-nowrap">
+          <span className="whitespace-nowrap">
             {lastWord}
             {!hideArrowForExternal && (
               <span className="inline-block ml-2">
