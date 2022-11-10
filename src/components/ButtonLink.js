@@ -11,7 +11,7 @@ const ButtonLink = ({
   className,
 }) => {
   const isExternal = link.startsWith("http");
-  const linkClass = `md:max-w-none group button-link relative inline-block z-10 ${className}`;
+  const linkClass = `cursor-pointer md:max-w-none group button-link relative inline-block z-10 ${className}`;
   let backgroundClass;
   let borderClass;
   let textClass;
@@ -47,7 +47,7 @@ const ButtonLink = ({
       <a href={link} target="_blank" rel="noreferrer" className={linkClass}>
         <div className={buttonClass}>
           {firstPartOfString}{" "}
-          <span class="whitespace-nowrap">
+          <span className="whitespace-nowrap">
             {lastWord}
             {!hideArrowForExternal && (
               <span className="inline-block ml-2">

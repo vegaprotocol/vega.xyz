@@ -95,6 +95,7 @@ const LatestNews = ({ data }) => {
 
         {tweet ? (
           <NewsCard
+            title="@vegaprotocol"
             image={tweet.image}
             text={tweet.text}
             category="Tweet"
