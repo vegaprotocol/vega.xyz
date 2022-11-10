@@ -1,42 +1,42 @@
-import React, { useState } from "react";
-import Seo from "../../components/Seo";
-import { graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import TranslationsBanner from "../../components/TranslationsBanner";
-import Container from "../../components/Container";
-import ButtonLink from "../../components/ButtonLink";
-import BoxTitle from "../../components/BoxTitle";
-import Fairground from "../../components/Fairground";
-import LeadingLine from "../../components/LeadingLine";
-import Callout from "../../components/Callout";
-import { getImage } from "gatsby-plugin-image";
-import CommunityResponsive from "../../components/Svg/Community/Hero/Responsive";
-import ToolBox from "../../components/ToolBox";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React, { useState } from 'react'
+import Seo from '../../components/Seo'
+import { graphql } from 'gatsby'
+import Layout from '../../components/Layout'
+import TranslationsBanner from '../../components/TranslationsBanner'
+import Container from '../../components/Container'
+import ButtonLink from '../../components/ButtonLink'
+import BoxTitle from '../../components/BoxTitle'
+import Fairground from '../../components/Fairground'
+import LeadingLine from '../../components/LeadingLine'
+import Callout from '../../components/Callout'
+import { getImage } from 'gatsby-plugin-image'
+import CommunityResponsive from '../../components/Svg/Community/Hero/Responsive'
+import ToolBox from '../../components/ToolBox'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const CommunityPage = ({ data }) => {
-  const { i18n, t } = useTranslation("page.community");
-  const [missingTranslations, setMissingTranslations] = useState(false);
+  const { i18n, t } = useTranslation('page.community')
+  const [missingTranslations, setMissingTranslations] = useState(false)
 
-  i18n.on("missingKey", (lng) => {
-    setMissingTranslations(true);
-  });
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   return (
     <Layout>
       <Seo
-        title={t("Community")}
+        title={t('Community')}
         description={t(
-          "Join the Vega community, where a fair finance future is being co-created - starting with derivatives."
+          'Join the Vega community, where a fair finance future is being co-created - starting with derivatives.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <Container dataCy={"main"}>
+      <Container dataCy={'main'}>
         <div className="pt-6 lg:pt-16">
           <h1>
-            <BoxTitle text={t("Community")} />
+            <BoxTitle text={t('Community')} />
           </h1>
-          <h2 className="title-m max-w-[48rem] font-glitched md:title-l mb-4 md:mb-6 mt-4">
+          <h2 className="title-m font-glitched md:title-l mb-4 mt-4 max-w-[48rem] md:mb-6">
             <Trans t={t}>Join the Vega community</Trans>
           </h2>
 
@@ -48,13 +48,13 @@ const CommunityPage = ({ data }) => {
             </LeadingLine>
 
             <ButtonLink
-              text={t("Join us on Discord")}
+              text={t('Join us on Discord')}
               link="https://vega.xyz/discord"
             ></ButtonLink>
           </div>
         </div>
       </Container>
-      <div className="relative md:-top-6 mb-10">
+      <div className="relative mb-10 md:-top-6">
         <CommunityResponsive />
       </div>
       <Container>
@@ -62,7 +62,7 @@ const CommunityPage = ({ data }) => {
           <Trans t={t}>Where we are</Trans>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 mb-16">
+        <div className="mb-16 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-8">
           <ToolBox
             title="Discord"
             text={t(
@@ -72,27 +72,27 @@ const CommunityPage = ({ data }) => {
             icon={getImage(data.iconDiscord)}
           />
           <ToolBox
-            title={t("Forum")}
+            title={t('Forum')}
             text={t(
-              "Discuss governance and governance proposals on Vega Networks."
+              'Discuss governance and governance proposals on Vega Networks.'
             )}
             link="https://community.vega.xyz/c/governance/25"
             icon={getImage(data.iconForum)}
           />
           <ToolBox
-            title={t("Telegram")}
-            text={t("Official Telegram Group for Vega Protocol.")}
+            title={t('Telegram')}
+            text={t('Official Telegram Group for Vega Protocol.')}
             link="https://t.me/vegacommunity/"
             icon={getImage(data.iconTelegram)}
           />
           <ToolBox
-            title={t("Twitter")}
+            title={t('Twitter')}
             text="@vegaprotocol"
             link="https://twitter.com/vegaprotocol"
             icon={getImage(data.iconTwitter)}
           />
           <ToolBox
-            title={t("Substack")}
+            title={t('Substack')}
             text={t(
               "Roll up! Roll up! Vega's bi-weekly highlights newsletter."
             )}
@@ -100,33 +100,33 @@ const CommunityPage = ({ data }) => {
             icon={getImage(data.iconSubstack)}
           />
           <ToolBox
-            title={t("YouTube")}
+            title={t('YouTube')}
             text={t(
-              "Video tutorials, presentations, development updates, and milestones of the Vega project."
+              'Video tutorials, presentations, development updates, and milestones of the Vega project.'
             )}
             link="https://www.youtube.com/vegaprotocol"
             icon={getImage(data.iconYouTube)}
           />
           <ToolBox
-            title={t("Twitch")}
-            text={t("Weekly live-streams, Thursdays 6pm BST/UTC+1!")}
+            title={t('Twitch')}
+            text={t('Weekly live-streams, Thursdays 6pm BST/UTC+1!')}
             link="https://www.twitch.tv/vegaprotocol"
             icon={getImage(data.iconTwitch)}
           />
           <ToolBox
-            title={t("Medium")}
-            text={t("Latest news on the Vega blog.")}
+            title={t('Medium')}
+            text={t('Latest news on the Vega blog.')}
             link="https://medium.com/@Vega_Protocol"
             icon={getImage(data.iconMedium)}
           />
         </div>
 
         <Callout
-          title={t("Upcoming events")}
+          title={t('Upcoming events')}
           text={t(
-            "Livestreams, conferences, research office hours and community calls"
+            'Livestreams, conferences, research office hours and community calls'
           )}
-          linkText={t("Events and meetups")}
+          linkText={t('Events and meetups')}
           link="/community/events"
           image={getImage(data.eventsGraphic)}
         />
@@ -135,9 +135,9 @@ const CommunityPage = ({ data }) => {
           <Trans t={t}>Contribute and get rewarded</Trans>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8 mb-16">
+        <div className="mb-16 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-8">
           <ToolBox
-            title={t("Ambassador program")}
+            title={t('Ambassador program')}
             text={t(
               "Leading community members share what we're building with those that need to hear it — and get rewarded."
             )}
@@ -145,57 +145,57 @@ const CommunityPage = ({ data }) => {
             icon={getImage(data.iconAmbassador)}
           />
           <ToolBox
-            title={t("Builders Club")}
+            title={t('Builders Club')}
             text={t(
-              "For developers, coders, hackers, dreamers who want to create software on top of Vega."
+              'For developers, coders, hackers, dreamers who want to create software on top of Vega.'
             )}
             link="https://vega.xyz/discord/"
             icon={getImage(data.iconBuildersClub)}
           />
           <ToolBox
-            title={t("Translate")}
+            title={t('Translate')}
             text={t(
-              "For the talented multi-linguists who want to support the project with translations."
+              'For the talented multi-linguists who want to support the project with translations.'
             )}
             link="https://github.com/vegaprotocol/vega.xyz#internationalisation"
             icon={getImage(data.iconTranslation)}
           />
           <ToolBox
-            title={t("Feedback")}
-            text={t("Feedback and feature requests")}
+            title={t('Feedback')}
+            text={t('Feedback and feature requests')}
             link="https://github.com/vegaprotocol/feedback/discussions"
             icon={getImage(data.iconFeedback)}
           />
           <ToolBox
-            title={t("Github")}
+            title={t('Github')}
             text={t(
-              "Contribute to the source code, and get building with our APIs."
+              'Contribute to the source code, and get building with our APIs.'
             )}
             link="https://github.com/vegaprotocol/"
             icon={getImage(data.iconGithub)}
           />
           <ToolBox
-            title={t("Docs")}
-            text={t("Share feedback, make suggestions and help translate.")}
+            title={t('Docs')}
+            text={t('Share feedback, make suggestions and help translate.')}
             link="https://docs.vega.xyz/"
             icon={getImage(data.iconDocs)}
           />
         </div>
 
         <Callout
-          title={t("Incentives")}
-          text={t("Get rewarded for your efforts testing the network")}
-          linkText={t("Earn rewards")}
+          title={t('Incentives')}
+          text={t('Get rewarded for your efforts testing the network')}
+          linkText={t('Earn rewards')}
           link="/community/incentives-bounties"
           image={getImage(data.incentivesGraphic)}
         />
       </Container>
       <Fairground />
     </Layout>
-  );
-};
+  )
+}
 
-export default CommunityPage;
+export default CommunityPage
 
 export const query = graphql`
   query ($language: String!) {
@@ -379,4 +379,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

@@ -23,6 +23,7 @@ import Phase4 from "../../components/Svg/Governance/Process/Phase4";
 import Phase5 from "../../components/Svg/Governance/Process/Phase5";
 import Proposals from "../../components/Proposals";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import Callout from "../../components/UI/Callout";
 
 const GovernancePage = ({ data }) => {
   const { i18n, t } = useTranslation("page.governance");
@@ -188,19 +189,19 @@ const GovernancePage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={"main"}>
-        <div className="max-w-[61rem] mx-auto text-center pt-6 lg:pt-24">
+        <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
           <h1>
             <BoxTitle text={t("Governance")} />
           </h1>
           <GlitchTitle
             level="2"
             color="red"
-            className="title-m md:title-l lg:title-xl mb-4 md:mb-6 mt-4 text-center"
+            className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
           >
             <Trans t={t}>Govern the network</Trans>
           </GlitchTitle>
         </div>
-        <div className="max-w-[44rem] mx-auto">
+        <div className="mx-auto max-w-[44rem]">
           <LeadingLine className="text-center">
             <Trans t={t}>
               Decisions on the Vega network are on-chain, with tokenholders
@@ -212,67 +213,75 @@ const GovernancePage = ({ data }) => {
         </div>
       </Container>
 
-      <GovernanceResponsive />
+      <div className="mb-space-8 md:mb-space-10">
+        <GovernanceResponsive />
+      </div>
 
       <Container>
-        <PageSection>
-          <h2
-            className="text-center title-m md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto"
-            id="governanceTools"
-          >
-            <Trans t={t}>Governance Tools</Trans>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-10 mt-10 md:mt-20 max-w-[75rem] mx-auto">
-            <ToolBox
-              icon={getImage(data.forumIcon)}
-              title={t("Forum")}
-              link="https://community.vega.xyz/c/governance/25"
-              text={t(
-                "Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more."
-              )}
-              type="Tool"
-            />
-            <ToolBox
-              icon={getImage(data.tokenInterfaceIcon)}
-              title={t("Governance")}
-              link="https://token.vega.xyz/governance"
-              text={t("Review, vote on, and submit governance proposals.")}
-              type="DAPP"
-            />
-            <ToolBox
-              icon={getImage(data.makeProposalIcon)}
-              title={t("Make a proposal")}
-              link="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
-              text={t(
-                "Read the docs to create and submit a proposal using Vega APIs."
-              )}
-              type="DOCS"
-            />
-          </div>
-        </PageSection>
+        <h2
+          className="title-m md:title-l mx-auto mb-6 max-w-[30rem] text-center lg:max-w-none"
+          id="governanceTools"
+        >
+          <Trans t={t}>Governance Tools</Trans>
+        </h2>
+        <div className="mx-auto mt-10 mb-space-10 grid max-w-[75rem] grid-cols-1 gap-5 md:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10">
+          <ToolBox
+            icon={getImage(data.forumIcon)}
+            title={t("Forum")}
+            link="https://community.vega.xyz/c/governance/25"
+            text={t(
+              "Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more."
+            )}
+            type="Tool"
+          />
+          <ToolBox
+            icon={getImage(data.tokenInterfaceIcon)}
+            title={t("Governance")}
+            link="https://token.vega.xyz/governance"
+            text={t("Review, vote on, and submit governance proposals.")}
+            type="DAPP"
+          />
+          <ToolBox
+            icon={getImage(data.makeProposalIcon)}
+            title={t("Make a proposal")}
+            link="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
+            text={t(
+              "Read the docs to create and submit a proposal using Vega APIs."
+            )}
+            type="DOCS"
+          />
+        </div>
 
-        <PageSection>
-          <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-none mx-auto">
-            <Trans t={t}>Governance lifecycle</Trans>
-          </h2>
+        <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
+          <Trans t={t}>Governance lifecycle</Trans>
+        </h2>
 
+        <div className="mb-space-8 md:mb-space-10">
           <Accordion
             data={governanceProcess}
             transNamespace="page.governance"
           />
-        </PageSection>
+        </div>
 
-        <PageSection>
-          <h2 className="title-m md:title-l lg:title-xl text-center mb-12 px-1">
+        <Callout
+          title={t("Propose a futures market on any underlying.")}
+          image={getImage(data.marketMakingImage)}
+          linkText={t("Create a new market")}
+          link="/market-creation"
+          className="mb-space-8 md:mb-space-11"
+        />
+
+        <div className="mb-space-8 md:mb-space-10">
+          <h2 className="title-m md:title-l lg:title-xl mb-12 px-1 text-center">
             <Trans t={t}>Get started voting</Trans>
           </h2>
 
-          <div className="max-w-[31.25rem] mx-auto relative top-[3px]">
+          <div className="relative top-[3px] mx-auto max-w-[31.25rem]">
             <VotingIllustration />
           </div>
 
-          <div className="border-2 border-current grid grid-cols-1 md:grid-cols-3 text-center">
-            <div className="relative border-b-2 border-current md:border-b-0  md:border-r-2 p-12 md:p-6 lg:p-12">
+          <div className="grid grid-cols-1 border-2 border-current text-center md:grid-cols-3">
+            <div className="relative border-b-2 border-current p-12  md:border-b-0 md:border-r-2 md:p-6 lg:p-12">
               <div className="title-s mb-6">
                 <Trans t={t}>Get $VEGA tokens</Trans>
               </div>
@@ -284,15 +293,15 @@ const GovernancePage = ({ data }) => {
                   </Trans>
                 </p>
               </div>
-              <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg] bg-white dark:bg-black p-3">
+              <div className="absolute left-1/2 -bottom-5 -translate-x-1/2 bg-white p-3 dark:bg-black md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg]">
                 <Arrow />
               </div>
             </div>
-            <div className="relative border-b-2 border-current md:border-b-0 md:border-r-2 p-12 md:p-6 lg:p-12">
+            <div className="relative border-b-2 border-current p-12 md:border-b-0 md:border-r-2 md:p-6 lg:p-12">
               <div className="title-s mb-6">
                 <Trans t={t}>Get a Vega Wallet</Trans>
               </div>
-              <div className="lg:prose-lg mb-6">
+              <div className="mb-6 lg:prose-lg">
                 <p className="copy-xxs lg:copy-xs">
                   <Trans t={t}>
                     A Vega wallet is used to access and sign transactions and
@@ -301,7 +310,7 @@ const GovernancePage = ({ data }) => {
                 </p>
               </div>
               <ButtonLink link="/wallet" text={t("Get a Vega Wallet")} />
-              <div className="absolute left-1/2 -translate-x-1/2 -bottom-5 md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg] bg-white dark:bg-black p-3">
+              <div className="absolute left-1/2 -bottom-5 -translate-x-1/2 bg-white p-3 dark:bg-black md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg]">
                 <Arrow />
               </div>
             </div>
@@ -325,11 +334,9 @@ const GovernancePage = ({ data }) => {
               />
             </div>
           </div>
-        </PageSection>
+        </div>
 
-        <PageSection>
-          <Proposals />
-        </PageSection>
+        <Proposals />
       </Container>
     </Layout>
   );
@@ -346,6 +353,15 @@ export const query = graphql`
           data
           language
         }
+      }
+    }
+    marketMakingImage: file(relativePath: { eq: "market-making-image.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 580
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
     forumIcon: file(relativePath: { eq: "governance-icon-forum.png" }) {

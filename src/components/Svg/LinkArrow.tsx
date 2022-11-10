@@ -1,6 +1,10 @@
-import React from "react";
+import React from 'react'
 
-const LinkArrow = ({ className }) => {
+export interface LinkArrowProps {
+  className?: string
+}
+
+const LinkArrow = ({ className }: LinkArrowProps) => {
   return (
     <svg
       width="10"
@@ -17,7 +21,7 @@ const LinkArrow = ({ className }) => {
         fill="currentColor"
       />
     </svg>
-  );
-};
+  )
+}
 
-export default LinkArrow;
+export default LinkArrow

@@ -1,7 +1,7 @@
 module.exports = {
-  mode: "jit",
-  darkMode: "class",
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  mode: 'jit',
+  darkMode: 'class',
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     listStyleType: {
       none: "none",
@@ -10,17 +10,33 @@ module.exports = {
       square: "square",
     },
     extend: {
+      spacing: {
+        'space-1': '0.25rem',
+        'space-2': '0.5rem',
+        'space-3': '0.75rem',
+        'space-4': '1rem',
+        'space-5': '1.5rem',
+        'space-6': '2rem',
+        'space-7': '2.5rem',
+        'space-8': '3rem',
+        'space-9': '3.5rem',
+        'space-10': '4rem',
+        'space-11': '5rem',
+        'space-12': '6rem',
+        'space-13': '7rem',
+        'space-14': '8rem',
+      },
       backgroundImage: {
-        "four-oh-four": "url('/404.png')",
+        'four-oh-four': "url('/404.png')",
         fairground: "url('/fairground-bg.png')",
-        "experiment-on-fairground": "url('/experiment-on-fairground.svg')",
+        'experiment-on-fairground': "url('/experiment-on-fairground.svg')",
         buildersClubHero: "url('/builders-club-hero-background.jpg')",
         buildersClubFooter: "url('/builders-club-footer-background.jpg')",
         buildersClubFooterLight:
           "url('/builders-club-footer-background-light.jpg')",
       },
       opacity: {
-        15: ".15",
+        15: '.15',
       },
       colors: {
         "vega-white": "#FFFFFF",
@@ -48,31 +64,84 @@ module.exports = {
         "vega-light-400": "#626262",
       },
       scale: {
-        185: "1.85",
+        185: '1.85',
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            '--tw-prose-body': theme('colors.vega-mid-grey'),
+            '--tw-prose-headings': theme('colors.vega-mid-grey'),
+            '--tw-prose-lead': theme('colors.vega-mid-grey'),
+            '--tw-prose-links': theme('colors.vega-mid-grey'),
+            '--tw-prose-bold': theme('colors.vega-mid-grey'),
+            '--tw-prose-counters': theme('colors.vega-mid-grey'),
+            '--tw-prose-bullets': theme('colors.vega-mid-grey'),
+            '--tw-prose-hr': theme('colors.vega-mid-grey'),
+            '--tw-prose-quotes': theme('colors.vega-mid-grey'),
+            '--tw-prose-quote-borders': theme('colors.vega-mid-grey'),
+            '--tw-prose-captions': theme('colors.vega-mid-grey'),
+            '--tw-prose-code': theme('colors.vega-mid-grey'),
+            '--tw-prose-pre-code': theme('colors.vega-mid-grey'),
+            '--tw-prose-pre-bg': theme('colors.vega-mid-grey'),
+            '--tw-prose-th-borders': theme('colors.vega-mid-grey'),
+            '--tw-prose-td-borders': theme('colors.vega-mid-grey'),
+            '--tw-prose-invert-body': theme('colors.vega-grey'),
+            '--tw-prose-invert-headings': theme('colors.vega-grey'),
+            '--tw-prose-invert-lead': theme('colors.vega-grey'),
+            '--tw-prose-invert-links': theme('colors.vega-grey'),
+            '--tw-prose-invert-bold': theme('colors.vega-grey'),
+            '--tw-prose-invert-counters': theme('colors.vega-grey'),
+            '--tw-prose-invert-bullets': theme('colors.vega-grey'),
+            '--tw-prose-invert-hr': theme('colors.vega-grey'),
+            '--tw-prose-invert-quotes': theme('colors.vega-grey'),
+            '--tw-prose-invert-quote-borders': theme('colors.vega-grey'),
+            '--tw-prose-invert-captions': theme('colors.vega-grey'),
+            '--tw-prose-invert-code': theme('colors.vega-grey'),
+            '--tw-prose-invert-pre-code': theme('colors.vega-grey'),
+            '--tw-prose-invert-pre-bg': theme('colors.vega-grey'),
+            '--tw-prose-invert-th-borders': theme('colors.vega-grey'),
+            '--tw-prose-invert-td-borders': theme('colors.vega-grey'),
+            lineHeight: '1.4',
+
+            p: {
+              lineHeight: '1.4',
+            },
+            a: {
+              '&:hover': {
+                color: '#FF077F !important',
+              },
+            },
+            li: {
+              lineHeight: '1.4',
+            },
+            h2: {
+              textTransform: 'uppercase',
+              borderTop: 'solid 1px currentColor',
+              paddingTop: '0.4rem',
+              marginTop: '2rem',
+              marginBottom: '0.75rem',
+              lineHeight: '1',
+            },
             "--tw-prose-bullets": theme("colors.vega-black"),
             "--tw-prose-invert-bullets": theme("colors.vega-white"),
           },
         },
       }),
       keyframes: {
-        "fairground-marquee": {
+        'fairground-marquee': {
           from: { backgroundPositionX: 0 },
-          to: { backgroundPositionX: "-1326px" },
+          to: { backgroundPositionX: '-1326px' },
         },
       },
       animation: {
-        "fairground-marquee": "fairground-marquee 10s linear infinite;",
+        'fairground-marquee': 'fairground-marquee 10s linear infinite;',
       },
     },
   },
   plugins: [
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/typography"),
-    require("tailwindcss-hyphens"),
-    require("@tailwindcss/line-clamp"),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
+    require('tailwindcss-hyphens'),
+    require('@tailwindcss/line-clamp'),
   ],
-};
+}
