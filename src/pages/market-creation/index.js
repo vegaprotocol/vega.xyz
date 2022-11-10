@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Seo from "../../components/Seo";
+import { getImage } from "gatsby-plugin-image";
 import Layout from "../../components/Layout";
 import TranslationsBanner from "../../components/TranslationsBanner";
 import Container from "../../components/Container";
@@ -21,8 +22,9 @@ import Phase4 from "../../components/Svg/MarketCreation/Process/Phase4";
 import Phase5 from "../../components/Svg/MarketCreation/Process/Phase5";
 import Phase6 from "../../components/Svg/MarketCreation/Process/Phase6";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import Callout from "../../components/UI/Callout";
 
-const MarketCreationPage = () => {
+const MarketCreationPage = ({ data }) => {
   const { i18n, t } = useTranslation("page.market-creation");
   const [missingTranslations, setMissingTranslations] = useState(false);
 
@@ -180,50 +182,51 @@ const MarketCreationPage = () => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={"main"}>
-        <div className="max-w-[52rem] mx-auto text-center pt-6 lg:pt-24">
+        <div className="mx-auto max-w-[52rem] pt-6 text-center lg:pt-24">
           <h1>
             <BoxTitle text={t("Governance")} />
           </h1>
           <GlitchTitle
             level="2"
             color="red"
-            className="title-m md:title-l lg:title-xxl mb-4 md:mb-6 mt-4 text-center"
+            className="title-m md:title-l lg:title-xxl mb-4 mt-4 text-center md:mb-6"
           >
             <Trans t={t}>Create markets</Trans>
           </GlitchTitle>
         </div>
-        <div className="max-w-[44rem] mx-auto">
+        <div className="mx-auto max-w-[44rem]">
           <LeadingLine className="text-center">
             <Trans t={t}>
-              Create a cash-settled futures market on any underlying. Attract liquidity with
-              Vega's built-in incentive mechanism that matches traders and
-              market makers.
+              Create a cash-settled futures market on any underlying. Attract
+              liquidity with Vega's built-in incentive mechanism that matches
+              traders and market makers.
             </Trans>
           </LeadingLine>
         </div>
       </Container>
-      <MarketCreationResponsive />
+      <div className="mb-space-8 md:mb-space-10">
+        <MarketCreationResponsive />
+      </div>
       <Container>
-        <PageSection>
-          <div className="max-w-[40rem] mx-auto text-center">
-            <LeadingLine className="!mb-6 text-vega-mid-grey">
-              <Trans t={t}>
-                Creating a market is part of Vega governance. To get started,
-                get and hold $VEGA tokens in your wallet.
-              </Trans>
-            </LeadingLine>
-            <ButtonLink link="/governance/" text={t("Find out more")} />
-          </div>
-        </PageSection>
+        <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:mx-0 md:max-w-[40rem]">
+          <Trans t={t}>How to create a new market on Vega</Trans>
+        </h2>
 
-        <PageSection>
-          <h2 className="title-m md:title-l mb-6 max-w-[30rem] md:max-w-[40rem] mx-auto md:mx-0">
-            <Trans t={t}>How to create a new market on Vega</Trans>
-          </h2>
+        <div className="mb-space-8 md:mb-space-10">
           <Accordion data={marketCreationProcess} />
-        </PageSection>
+        </div>
 
-        <PageSection>
+        <Callout
+          title={t(
+            "Creating a market is part of Vega governance. To get started, get and hold $VEGA tokens in your wallet."
+          )}
+          image={getImage(data.governanceImage)}
+          linkText={t("Find out more")}
+          link="/governance"
+          className="mb-space-8 md:mb-space-10"
+        />
+
+        <div className="mb-space-8 md:mb-space-10">
           <div className="text-center">
             <h2 className="title-m md:title-l lg:title-xxl mb-10">
               <Trans t={t}>Get started</Trans>
@@ -235,7 +238,7 @@ const MarketCreationPage = () => {
               text={t("See what markets already exist (Testnet)")}
             />
           </div>
-        </PageSection>
+        </div>
       </Container>
       <MarketCreationFooter className="text-center" />
     </Layout>
@@ -253,6 +256,15 @@ export const query = graphql`
           data
           language
         }
+      }
+    }
+    governanceImage: file(relativePath: { eq: "governance-image.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 580
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }
