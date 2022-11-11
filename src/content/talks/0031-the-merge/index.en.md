@@ -1,7 +1,7 @@
 ---
 title: The impact of the long-awaited Ethereum Merge
 location: Virtual
-date: 2022-06-11
+date: 2022-08-18
 links:
   - title: Watch on CoinDesk TV
     link: https://www.coindesk.com/tv/community-crypto/the-impact-of-ethereums-long-awaited-merge-20220818/
