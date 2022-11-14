@@ -57,7 +57,7 @@ const Ambassadors = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <div dataCy={'main'}>
+      <div dataCy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
         <Container>
           <div className="mx-auto mb-space-10 max-w-[21.25rem] text-center md:max-w-[40rem] lg:max-w-[80rem]">
             <Tag className="mb-space-4">
@@ -125,7 +125,7 @@ const Ambassadors = ({ data }) => {
             </TeamTile>
           </div>
 
-          <div className="max-w-[47.5rem] md:mx-auto">
+          <div className="mb-space-10 max-w-[47.5rem] md:mx-auto md:mb-space-11 lg:mb-space-13">
             <h2 className="heading-l mb-space-6">
               <Trans t={t}>Benefits of being an ambassador</Trans>
             </h2>
