@@ -1,6 +1,6 @@
 import React from 'react'
-import GradientContentClub from '../../../images/content-club-hero-bg.jpg'
-import GradientBuildersClub from '../../../images/builders-club-hero-bg.jpg'
+import GradientContentClub from '../../../../images/content-club-hero-bg.jpg'
+import GradientBuildersClub from '../../../../images/builders-club-hero-bg.jpg'
 
 const Medium = () => {
   return (

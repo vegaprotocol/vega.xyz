@@ -9,10 +9,18 @@ import Tag from '../../components/UI/Tag'
 import TeamTile from '../../components/UI/TeamTile'
 import Button from '../../components/UI/Button'
 import NumberedListItem from '../../components/UI/NumberedListItem'
+import CalloutTile from '../../components/UI/CalloutTile'
+import ActionButton from '../../components/UI/ActionButton'
 import { getImage } from 'gatsby-plugin-image'
-import AmbassadorsHero from '../../components/Svg/Ambassadors/Responsive'
+import AmbassadorsHero from '../../components/Svg/Ambassadors/Hero/Responsive'
+import AmbassadorsFooter from '../../components/Svg/Ambassadors/Footer/Responsive'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import AmbassadorLeaderboard from '../../components/AmbassadorLeaderboard'
+import IconTick from '../../images/icons/tick.svg'
+import IconPeople from '../../images/icons/people.svg'
+import IconStairs from '../../images/icons/stairs.svg'
+import IconAlert from '../../images/icons/alert.svg'
+import IconDiscord from '../../images/icons/discord.svg'
 
 const Clan = ({ icon, title, text }) => {
   return (
@@ -77,7 +85,7 @@ const Ambassadors = ({ data }) => {
           </div>
         </Container>
 
-        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
+        <div className="mx-auto mb-space-10 max-w-[72.5rem] md:mb-space-11 lg:mb-space-13">
           <AmbassadorsHero />
         </div>
 
@@ -205,6 +213,75 @@ const Ambassadors = ({ data }) => {
                 Nevertheless, these are the non-negotiables:
               </Trans>
             </div>
+          </div>
+          <div className="mb-space-10 grid grid-cols-2 gap-space-3 gap-y-space-6 md:mb-space-11 md:grid-cols-3 md:gap-x-space-7 md:gap-y-space-7 lg:mb-space-13 lg:gap-x-space-7 lg:gap-y-space-9">
+            <CalloutTile
+              icon={IconTick}
+              title={t('Agree with the code of conduct; keep to the rules')}
+            />
+            <CalloutTile
+              icon={IconPeople}
+              title={t(
+                'Attend most meetings with other ambassadors, engage with your team'
+              )}
+            />
+            <CalloutTile
+              icon={IconStairs}
+              title={t(
+                'Learn with the core team: attend office hours, ask questions, grow'
+              )}
+            />
+            <CalloutTile
+              icon={IconAlert}
+              title={t(
+                "Let us know when things aren't working for you, if you need a break, that's okay!"
+              )}
+            />
+            <CalloutTile
+              icon={IconDiscord}
+              title={t(
+                'Be active on Discord - most communication will take place there'
+              )}
+            />
+          </div>
+
+          <div className="mx-auto mb-space-7 max-w-[47.5rem] md:mb-space-10 lg:mb-space-11">
+            <AmbassadorsFooter />
+          </div>
+
+          <h2 className="heading-xl mx-auto max-w-[45rem] text-center">
+            <GlitchTitle color="blue">
+              <Trans t={t}>Join the community</Trans>
+            </GlitchTitle>
+          </h2>
+          <div className="mx-auto mt-12 mb-space-8 grid max-w-[50rem] grid-cols-2 gap-space-4 md:mb-space-10 md:grid-cols-3 md:gap-x-5 md:gap-y-4 lg:mb-space-11">
+            <ActionButton to="https://vega.xyz/discord">
+              <Trans t={t}>Discord</Trans>
+            </ActionButton>
+            <ActionButton to="https://t.me/vegacommunity/">
+              <Trans t={t}>Telegram</Trans>
+            </ActionButton>
+            <ActionButton to="https://github.com/vegaprotocol/">
+              <Trans t={t}>Github</Trans>
+            </ActionButton>
+            <ActionButton to="https://docs.vega.xyz/">
+              <Trans t={t}>Mainnet Docs</Trans>
+            </ActionButton>
+            <ActionButton to="https://docs.fairground.vega.xyz/">
+              <Trans t={t}>Fairground Docs</Trans>
+            </ActionButton>
+            <ActionButton to="https://twitter.com/vegaprotocol">
+              <Trans t={t}>Twitter</Trans>
+            </ActionButton>
+            <ActionButton to="https://community.vega.xyz/">
+              <Trans t={t}>Forum</Trans>
+            </ActionButton>
+            <ActionButton to="https://www.youtube.com/vegaprotocol/">
+              <Trans t={t}>YouTube</Trans>
+            </ActionButton>
+            <ActionButton to="https://www.twitch.tv/vegaprotocol/">
+              <Trans t={t}>Twitch</Trans>
+            </ActionButton>
           </div>
         </Container>
       </div>
