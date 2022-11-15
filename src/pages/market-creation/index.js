@@ -157,7 +157,7 @@ const MarketCreationPage = ({ data }) => {
       links: [
         {
           title: t('Read the docs about liquidity provision (Testnet)'),
-          url: 'https://docs.vega.xyz/testnet/tutorials/providing-liquidity',
+          url: 'https://docs.vega.xyz/testnet/tutorials/committing-liquidity',
         },
       ],
       image: <Phase5 />,
