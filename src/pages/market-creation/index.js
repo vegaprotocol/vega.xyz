@@ -97,7 +97,7 @@ const MarketCreationPage = ({ data }) => {
         },
         {
           title: t('See what markets exist already (Testnet)'),
-          url: 'https://console.fairground.wtf/markets',
+          url: 'https://console.fairground.wtf/#/markets',
         },
       ],
       image: <Phase1 />,
