@@ -4,20 +4,17 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
-import BoxTitle from '../../components/BoxTitle'
+import Tag from '../../components/UI/Tag'
 import Button from '../../components/UI/Button'
-import ButtonLink from '../../components/ButtonLink'
 import Wormhole from '../../components/Svg/Wormhole'
 import Incentives from '../../components/Incentives'
-import GlitchTitle from '../../components/GlitchTitle'
+import GlitchTitle from '../../components/UI/GlitchTitle'
 import ImmersiveBannerCover from '../../components/UI/ImmersiveBannerCover'
 import LeadingLine from '../../components/LeadingLine'
 import BoxLink from '../../components/BoxLink'
-import BoxLinkSimple from '../../components/BoxLinkSimple'
+import ActionButton from '../../components/UI/ActionButton'
 import StarCrossed from '../../components/Svg/StarCrossed'
 import BlogPosts from '../../components/BlogPosts'
-import Moshed from '../../video/moshed.mp4'
-import LadderIllustration from '../../components/Svg/LadderIllustration'
 import { getImage } from 'gatsby-plugin-image'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
@@ -44,7 +41,7 @@ const DevelopPage = ({ data }) => {
             <div className="md:grid md:grid-cols-12">
               <div className="relative z-10 col-span-8 col-start-1 row-span-full lg:pb-[8vw]">
                 <h1>
-                  <BoxTitle text={t('Develop')} />
+                  <Tag>Develop</Tag>
                 </h1>
                 <div className="title-m md:title-l lg:title-xxl mb-4 mt-4 max-w-[38.75rem]">
                   <Trans t={t}>Develop on Vega</Trans>
@@ -56,28 +53,16 @@ const DevelopPage = ({ data }) => {
                   </Trans>
                 </LeadingLine>
                 <div className="mt-12 hidden md:block">
-                  <div className="mx-auto grid max-w-[20rem] grid-cols-1 gap-4 md:mx-0 md:max-w-[35rem] md:grid-cols-2">
-                    <div>
-                      <Button to="https://docs.vega.xyz/mainnet/concepts/new-to-vega">
-                        <Trans t={t}>Explore the docs</Trans>
-                      </Button>
-                      {/* <ButtonLink
-                        text={t('Explore the docs')}
-                        link="https://docs.vega.xyz/mainnet/concepts/new-to-vega"
-                        className="w-full text-center"
-                      /> */}
-                    </div>
-                    <div>
-                      <Button to="https://github.com/vegaprotocol">
-                        <Trans t={t}>Get the code</Trans>
-                      </Button>
-                      {/* <ButtonLink
-                        text={t('Get the code')}
-                        link="https://github.com/vegaprotocol"
-                        className="w-full text-center"
-                      /> */}
-                    </div>
-                  </div>
+                  <Button to="https://docs.vega.xyz/mainnet/concepts/new-to-vega">
+                    <Trans t={t}>Explore the docs</Trans>
+                  </Button>
+
+                  <Button
+                    to="https://github.com/vegaprotocol"
+                    className="ml-space-4"
+                  >
+                    <Trans t={t}>Get the code</Trans>
+                  </Button>
                 </div>
               </div>
               <div className="relative col-span-6 col-start-7 row-span-full md:mt-0">
@@ -87,27 +72,13 @@ const DevelopPage = ({ data }) => {
               </div>
             </div>
             <div className="mt-6 md:hidden">
-              <div className="mx-auto grid max-w-[20rem] grid-cols-1 gap-4 md:mx-0 md:max-w-[35rem] md:grid-cols-2">
-                <div>
-                  <Button to="https://docs.vega.xyz/mainnet/concepts/new-to-vega">
-                    <Trans t={t}>Explore the docs</Trans>
-                  </Button>
-                  {/* <ButtonLink
-                    text={t('Explore the docs')}
-                    link="https://docs.vega.xyz/mainnet/concepts/new-to-vega"
-                    className="w-full text-center"
-                  /> */}
-                </div>
-                <div>
-                  {/* <ButtonLink
-                    text={t('Get the code')}
-                    link="https://github.com/vegaprotocol"
-                    className="w-full text-center"
-                  /> */}
-                  <Button to="https://github.com/vegaprotocol">
-                    <Trans t={t}>Get the code</Trans>
-                  </Button>
-                </div>
+              <Button to="https://docs.vega.xyz/mainnet/concepts/new-to-vega">
+                <Trans t={t}>Explore the docs</Trans>
+              </Button>
+              <div className="mt-space-4">
+                <Button to="https://github.com/vegaprotocol">
+                  <Trans t={t}>Get the code</Trans>
+                </Button>
               </div>
             </div>
           </div>
@@ -188,10 +159,6 @@ const DevelopPage = ({ data }) => {
                   <Trans t={t}>Featured tutorials</Trans>
                 </h2>
                 <div className="hidden md:block">
-                  {/* <ButtonLink
-                  link="https://www.youtube.com/watch?v=7ZqIER8KF9E&list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2"
-                  text={t('Video tutorials')}
-                /> */}
                   <Button to="https://www.youtube.com/watch?v=7ZqIER8KF9E&list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2">
                     <Trans t={t}>Video tutorials</Trans>
                   </Button>
@@ -232,40 +199,31 @@ const DevelopPage = ({ data }) => {
                 </div>
               </div>
               <div className="md:hidden">
-                {/* <ButtonLink
-                link="https://www.youtube.com/watch?v=7ZqIER8KF9E&list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2"
-                text={t('Video tutorials')}
-              /> */}
                 <Button to="https://www.youtube.com/watch?v=7ZqIER8KF9E&list=PLtgXvHMJ2nYKco68-NzWWI0PnjZGAc9I2">
                   <Trans t={t}>Video tutorials</Trans>
                 </Button>
               </div>
             </div>
-
             <BlogPosts />
           </div>
 
           <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-            <div className="text-center">
-              <GlitchTitle
-                color="red"
-                level="2"
-                className="title-m md:title-l lg:title-xxl mb-4"
-              >
+            <h2 className="heading-l text-center">
+              <GlitchTitle color="red">
                 <Trans t={t}>Where next?</Trans>
               </GlitchTitle>
-            </div>
+            </h2>
 
             <div className="mx-auto mt-12 grid max-w-[12rem] gap-6 md:max-w-[52.5rem] md:grid-cols-3">
-              <BoxLinkSimple
-                text={t('Say hello on Discord')}
-                link="https://vega.xyz/discord/"
-              />
-              <BoxLinkSimple
-                text={t('Explore the forum')}
-                link="https://community.vega.xyz/"
-              />
-              <BoxLinkSimple text={t('See the Roadmap')} link="/#roadmap" />
+              <ActionButton to="https://vega.xyz/discord/">
+                <Trans t={t}>Say hello on Discord</Trans>
+              </ActionButton>
+              <ActionButton to="https://community.vega.xyz/">
+                <Trans t={t}>Explore the forum</Trans>
+              </ActionButton>
+              <ActionButton to="/#roadmap">
+                <Trans t={t}>See the roadmap</Trans>
+              </ActionButton>
             </div>
           </div>
         </Container>
