@@ -13,6 +13,7 @@ import WalletRight from '../../components/Svg/WalletRight'
 import WalletHowToSmall from '../../components/Svg/WalletHowToSmall'
 import LeadingLine from '../../components/LeadingLine'
 import ButtonLink from '../../components/ButtonLink'
+import Button from '../../components/UI/Button'
 import DropdownArrow from '../../components/Svg/DropdownArrow'
 import IconPlatformMac from '../../components/Svg/IconPlatformMac'
 import IconPlatformWindows from '../../components/Svg/IconPlatformWindows'
@@ -46,22 +47,6 @@ const ListItem = ({ idx, text }) => {
     </li>
   )
 }
-
-const howToText = [
-  "Choose 'create a new wallet' in the app",
-  'Name each individual wallet if you need more than one',
-  "Create a passphrase for each wallet. You'll need it for depositing collateral, placing trades, etc.",
-  "Record the recovery phrase that's provided on setup. This only appears once. Have an existing wallet you created in the CLI app? You will be given the option to connect this to the desktop app",
-  'Need to restore a wallet? Use the recovery phrase exactly as it was presented to you',
-  'To update the app, delete your existing version and download the new one',
-]
-
-// t("Choose 'create a new wallet' in the app")
-// t("Name each individual wallet if you need more than one")
-// t("Create a passphrase for each wallet. You'll need it for depositing collateral, placing trades, etc.")
-// t("Record the recovery phrase that's provided on setup. This only appears once. Have an existing wallet you created in the CLI app? You will be given the option to connect this to the desktop app")
-// t("Need to restore a wallet? Use the recovery phrase exactly as it was presented to you")
-// t("To update the app, delete your existing version and download the new one")
 
 const binaries = [
   {
@@ -104,6 +89,23 @@ const WalletPage = () => {
     setDownloadDropdown(state)
   }
 
+  const howToText = [
+    t("Choose 'create a new wallet' in the app"),
+    t('Name each individual wallet if you need more than one'),
+    t(
+      "Create a passphrase for each wallet. You'll need it for depositing collateral, placing trades, etc."
+    ),
+    t(
+      "Record the recovery phrase that's provided on setup. This only appears once. Have an existing wallet you created in the CLI app? You will be given the option to connect this to the desktop app"
+    ),
+    t(
+      'Need to restore a wallet? Use the recovery phrase exactly as it was presented to you'
+    ),
+    t(
+      'To update the app, delete your existing version and download the new one'
+    ),
+  ]
+
   return (
     <Layout>
       <Seo
@@ -126,7 +128,6 @@ const WalletPage = () => {
               wallets, multiple keys — and get access to the Vega network.
             </Trans>
           </LeadingLine>
-
           <div className="flex justify-center">
             <div className="relative mx-auto mt-6 inline-block cursor-pointer">
               <div
@@ -144,7 +145,7 @@ const WalletPage = () => {
                   <div className="mr-4">
                     <DropdownArrow />
                   </div>
-                  <Trans t={t}>Download desktop app</Trans>
+                  <Trans t={t}>Download desktop app (Mainnet)</Trans>
                 </div>
                 <div>
                   {downloadDropdown && (
@@ -177,6 +178,14 @@ const WalletPage = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="mt-space-5 text-center">
+            <Button
+              variant="secondary"
+              to="https://github.com/vegaprotocol/vegawallet-desktop/releases/"
+            >
+              Get a specific release (including Testnet)
+            </Button>
           </div>
         </div>
       </Container>
