@@ -157,7 +157,7 @@ const MarketCreationPage = ({ data }) => {
       links: [
         {
           title: t('Read the docs about liquidity provision (Testnet)'),
-          url: 'https://docs.vega.xyz/testnet/tutorials/providing-liquidity',
+          url: 'https://docs.vega.xyz/testnet/tutorials/committing-liquidity',
         },
       ],
       image: <Phase5 />,
@@ -234,7 +234,7 @@ const MarketCreationPage = ({ data }) => {
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
-              link="https://console.fairground.wtf/markets"
+              link="https://console.fairground.wtf/#/markets"
               text={t('See what markets already exist (Testnet)')}
             />
           </div>
