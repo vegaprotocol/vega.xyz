@@ -22,8 +22,7 @@ const PartnersBackersPage = () => {
     },
     {
       name: "RockawayX Blockchain",
-      link: "https://medium.com/rockaway-blockchain/rockaway-blockchain-announces-acquisition-of-a-stake-in-vega-a-protocol-for-decentralized-de4f4b7e3e09",
-      link: "https://rockawayx.com/",
+      link: "https://medium.com/rockaway-blockchain/rockaway-blockchain-announces-acquisition-of-a-stake-in-vega-a-protocol-for-decentralized-de4f4b7e3e09", "https://rockawayx.com/",
     },
     {
       name: "KR1",
