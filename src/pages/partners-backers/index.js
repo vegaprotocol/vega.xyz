@@ -21,7 +21,7 @@ const PartnersBackersPage = () => {
       link: "https://blog.gumi-cryptos.com/vc/why-gcc-invested-in-vega-protocol",
     },
     {
-      name: "RockawayX",
+      name: "<a href"https://rockawayx.com/">RockawayX</a>",
       link: "https://medium.com/rockaway-blockchain/rockaway-blockchain-announces-acquisition-of-a-stake-in-vega-a-protocol-for-decentralized-de4f4b7e3e09",
     },
     {
