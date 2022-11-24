@@ -11,9 +11,7 @@ import Incentives from '../../components/Incentives'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import ImmersiveBannerCover from '../../components/UI/ImmersiveBannerCover'
 import LeadingLine from '../../components/LeadingLine'
-import BoxLink from '../../components/BoxLink'
 import ActionButton from '../../components/UI/ActionButton'
-import StarCrossed from '../../components/Svg/StarCrossed'
 import BlogPosts from '../../components/BlogPosts'
 import { getImage } from 'gatsby-plugin-image'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -102,55 +100,7 @@ const DevelopPage = ({ data }) => {
             />
           </div>
 
-          <Incentives />
-
-          <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-            <StarCrossed />
-
-            <h2 className="title-m md:title-l mx-auto mt-6 max-w-[43.75rem] text-center">
-              <Trans t={t}>
-                Build decentralised apps, bots and trading clients with our APIs
-              </Trans>
-            </h2>
-
-            <div className="mb-12 mt-12 grid grid-cols-1 gap-x-5 gap-y-14 md:grid-cols-2 xl:grid-cols-2">
-              <BoxLink
-                title={t('REST')}
-                text={t(
-                  'The ubiquitous protocol for the web, Vega has a set of REST APIs that map directly onto equivalent gRPC API service methods.'
-                )}
-                linkTitle={t('Get Started')}
-                link="https://docs.vega.xyz/mainnet/api/rest/overview"
-              />
-
-              <BoxLink
-                title={t('gRPC')}
-                text={t(
-                  "For fast and efficient communication with Vega's APIs, gRPC supports near real time streaming of updates from Vega and is the transport of choice for many web3 apps."
-                )}
-                linkTitle={t('Get Started')}
-                link="https://docs.vega.xyz/mainnet/api/grpc/vega/vega.proto"
-              />
-
-              <BoxLink
-                title={t('GraphQL')}
-                text={t(
-                  'Like gRPC, GraphQL supports near real time streaming of updates from Vega. It uses websockets under the hood but follows the specification for streaming as set by GraphQL.'
-                )}
-                linkTitle={t('Get Started')}
-                link="https://docs.vega.xyz/mainnet/graphql"
-              />
-
-              <BoxLink
-                title={t('Wallet')}
-                text={t(
-                  'Allows programmatic access to signing and key management and is used to sign transactions with a private and public key pair when submitting orders or other commands to a Vega Node.'
-                )}
-                linkTitle={t('Get Started')}
-                link="https://docs.vega.xyz/mainnet/tools/vega-wallet"
-              />
-            </div>
-          </div>
+          <Incentives limit={3} />
 
           <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
             <div className="mb-24">
