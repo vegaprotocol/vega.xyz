@@ -13,14 +13,14 @@ const Header = ({ children }) => {
 };
 
 const Row = ({ children }) => {
-  return <tr className="border-b border-[#525252]">{children}</tr>;
+  return <tr className="border-t border-[#525252]">{children}</tr>;
 };
 
 // TODO - This table needs generalising, it's specific to validator rewards
 const Table = ({ headings, rows }) => {
   return (
     <div className="overflow-x-scroll">
-      <table className="text-left max-w-[100vw] w-full">
+      <table className="text-left max-w-[100vw] border-b border-[#525252] w-full">
         <tbody>
           {headings.map((heading, idx) => (
             <Row key={idx}>

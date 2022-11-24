@@ -1,18 +1,18 @@
-import React from "react";
-import { useNetworkParams } from "../hooks/use-network-params";
-import { SnakeToCamel } from "../utils/tools";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
-import ParameterBox from "./ParameterBox";
+import React from 'react'
+import { useNetworkParams } from '../hooks/use-network-params'
+import { SnakeToCamel } from '../utils/tools'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import ParameterBox from './ParameterBox'
 
 export interface NetworkParameterProps {
-  param: string;
-  prefix?: string;
-  suffix?: string;
-  formatForVega?: boolean;
-  expressPercentage?: boolean;
+  param: string
+  prefix?: string
+  suffix?: string
+  formatForVega?: boolean
+  expressPercentage?: boolean
 }
 
-const explorerUrl = "https://explorer.vega.xyz/network-parameters";
+const explorerUrl = 'https://explorer.vega.xyz/network-parameters'
 
 const NetworkParameter = ({
   param,
@@ -21,33 +21,33 @@ const NetworkParameter = ({
   formatForVega = false,
   expressPercentage = false,
 }: NetworkParameterProps) => {
-  const { params, loading, error } = useNetworkParams();
-  const { t } = useTranslation("component.network-parameter");
+  const { params, loading, error } = useNetworkParams()
+  const { t } = useTranslation('component.network-parameter')
 
   const formatVegaValue = (value) => {
-    return (value / 1000000000000000000).toFixed(2);
-  };
+    return (value / 1000000000000000000).toFixed(2)
+  }
 
   const formatValue = (value) => {
     if (formatForVega) {
-      return formatVegaValue(value);
+      return formatVegaValue(value)
     } else if (expressPercentage) {
-      return value * 100;
+      return value * 100
     } else {
-      return value;
+      return value
     }
-  };
+  }
 
   return (
     <>
       {loading && (
         <span>
-          <Trans t={t}>Loading...</Trans>
+          <ParameterBox value={t('Loading...')} />
         </span>
       )}
       {error && (
         <span>
-          <Trans t={t}>Error loading value</Trans>
+          <ParameterBox value={t('Error loading value')} />
         </span>
       )}
       {params && (
@@ -63,7 +63,7 @@ const NetworkParameter = ({
         </a>
       )}
     </>
-  );
-};
+  )
+}
 
-export default NetworkParameter;
+export default NetworkParameter

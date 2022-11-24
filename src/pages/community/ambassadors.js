@@ -33,7 +33,6 @@ const benefits = [
   "Priority consideration on protocol feedback",
   "Exclusive meetups - Invitations to all of Vega's events, both offline and online",
   "Limited edition Vega swag",
-  "Priority minting of NFT drops (+ enhanced rarities)",
   "Grow with Vega - scaling rewards as you climb the ranks",
 ];
 
@@ -43,7 +42,6 @@ const benefits = [
 // t("Priority consideration on protocol feedback"),
 // t("Exclusive meetups - Invitations to all of Vega's events, both offline and online"),
 // t("Limited edition Vega swag"),
-// t("Priority minting of NFT drops (+ enhanced rarities)"),
 // t("Grow with Vega - scaling rewards as you climb the ranks"),
 
 const Ambassadors = () => {
@@ -116,7 +114,7 @@ const Ambassadors = () => {
               </p>
 
               <ButtonLink
-                link="https://form.typeform.com/to/lPl6aiNh"
+                link="https://vegaprotocol.typeform.com/ambassadorappq4"
                 text={t("Apply now")}
                 className="md:hidden mt-3"
               />
@@ -180,7 +178,7 @@ const Ambassadors = () => {
               </div>
 
               <ButtonLink
-                link="https://form.typeform.com/to/lPl6aiNh"
+                link="https://vegaprotocol.typeform.com/ambassadorappq4"
                 text="Apply now"
                 className="md:hidden mt-3"
               />
@@ -263,7 +261,7 @@ const Ambassadors = () => {
                 </Trans>
               </p>
               <BoxLinkSimple
-                link="https://vegaprotocol.typeform.com/ambassadorappQ2"
+                link="https://vegaprotocol.typeform.com/ambassadorappq4"
                 text={t("Apply now")}
                 className="mt-4 min-w-[15rem] text-left hidden md:inline-block"
               />

@@ -21,7 +21,7 @@ const PartnersBackersPage = () => {
       link: "https://blog.gumi-cryptos.com/vc/why-gcc-invested-in-vega-protocol",
     },
     {
-      name: "Rockaway Blockchain",
+      name: "RockawayX",
       link: "https://medium.com/rockaway-blockchain/rockaway-blockchain-announces-acquisition-of-a-stake-in-vega-a-protocol-for-decentralized-de4f4b7e3e09",
     },
     {
@@ -125,23 +125,7 @@ const PartnersBackersPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-12 md:col-span-4 lg:col-span-6">
-              <div className="md:sticky md:top-6 mb-3">
-                <h1 className="title-m lg:title-xl">
-                  Markets and liquidity programme
-                </h1>
-                <div className="title-s text-vega-mid-grey">
-                  Founding Members
-                </div>
-              </div>
-            </div>
-            <div className="col-span-12 md:col-span-8 lg:col-span-6 border-t border-current">
-              {foundingMembers.map((member, idx) => {
-                return <Row key={idx} member={member} />;
-              })}
-            </div>
-          </div>
+
         </div>
       </Container>
     </Layout>
