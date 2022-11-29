@@ -5,8 +5,8 @@ import Button from './Button'
 import { GatsbyImage, IGatsbyImageData, getImage } from 'gatsby-plugin-image'
 
 export interface Link {
-  to: string
-  text: string
+  url: string
+  title: string
 }
 
 export interface NewsListItemProps {
@@ -27,7 +27,7 @@ const NewsList = ({
   links,
 }: NewsListItemProps) => {
   return (
-    <div className="0 mb-space-14 border-b border-vega-light-200 pb-space-6 dark:border-vega-dark-200">
+    <div className="0 mb-space-6 border-b border-vega-light-200 pb-space-6 dark:border-vega-dark-200 md:mb-space-7 md:pb-space-7 lg:mb-space-8 lg:pb-space-8">
       {image && <GatsbyImage image={image} alt="" className="mb-space-7" />}
       <div className="heading-xs !m-0 !mb-space-2">{title}</div>
       <div className="mb-space-4 flex gap-x-space-4">
@@ -48,10 +48,10 @@ const NewsList = ({
       </div>
 
       {links &&
-        links.map((link) => (
-          <div className="last-child:mb-0 mb-space-3">
-            <Button to={link.to} variant="secondary">
-              {link.text}
+        links.map((link, idx) => (
+          <div key={idx} className="mb-space-3 last:mb-0">
+            <Button to={link.url} variant="secondary">
+              {link.title}
             </Button>
           </div>
         ))}
