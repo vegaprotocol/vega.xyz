@@ -84,7 +84,7 @@ const EpochCountdown = () => {
       </div>
       <div className="dark:bg-vega-box-grey bg-vega-grey w-full h-[4px] relative rounded-full">
         <div
-          className="transition-all duration-1000 bg-countdownBar absolute top-0 bottom-0 left-0 rounded-full w-0"
+          className="transition-all duration-1000 bg-countdownBar absolute top-0 bottom-0 left-0 rounded-full w-0 max-w-full"
           style={{ width: `${percentageComplete}%` }}
         ></div>
       </div>
