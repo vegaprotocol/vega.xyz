@@ -1,13 +1,13 @@
 {
-  "An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.": "Una aplicación de billetera de escritorio fácil de usar. Administre múltiples billeteras, múltiples claves y obtenga acceso a la red Vega.",
-  "wallets": "carteras",
+  "wallet": "",
   "governance": "gobernancia",
   "staking": "staking",
   "trading": "comercio",
+  "network": "red",
+  "An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.": "Una aplicación de billetera de escritorio fácil de usar. Administre múltiples billeteras, múltiples claves y obtenga acceso a la red Vega.",
   "A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).": "",
   "Review and vote on governance proposals.": "Revisar y votar las propuestas de gobernanza.",
   "Dashboard with real-time information about the Vega blockchain.": "Dashboard con información en tiempo real sobre la blockchain de Vega.",
-  "network": "red",
   "Stake $VEGA tokens and get rewarded.": "Apueste tokens de $VEGA y obtenga recompensas.",
   "Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.": "Aplicación de billetera de línea de comandos no visual con la capacidad de personalizar detalles clave, aislar claves y crear y enviar comandos.",
   "Redeem locked vega tokens.": "Canjee tokens vega bloqueados.",
@@ -27,6 +27,9 @@
   "Staking": "Staking",
   "Trading": "Comercio",
   "Network": "Red",
+  "Vega is governed by its tokenholders": "",
+  "Token holders propose changes, vote on proposals, create markets, and support validators by staking": "",
+  "Learn more": "",
   "Want to add something to this list?": "¿Quieres añadir algo a esta lista?",
   "<0>Chat to us on Discord</0> and <3>start building</3>.": "<0>Chatea con nosotros en Discord</0> y <3>comienza a construir</3>."
 }

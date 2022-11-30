@@ -6,6 +6,7 @@ import Container from '../../components/Container'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import GlitchTitle from '../../components/GlitchTitle'
 import CalloutHero from '../../components/CalloutHero'
+import Callout from '../../components/UI/Callout'
 import BoxTitle from '../../components/BoxTitle'
 import Fairground from '../../components/Fairground'
 import ToolBox from '../../components/ToolBox'
@@ -268,6 +269,17 @@ const UsePage = ({ data }) => {
             </button>
           </div>
         </div>
+        {filter === 'governance' && (
+          <Callout
+            className="mt-space-8"
+            title={t('Vega is governed by its tokenholders')}
+            subtitle={t(
+              'Token holders propose changes, vote on proposals, create markets, and support validators by staking'
+            )}
+            link="/governance"
+            linkText={t('Learn more')}
+          />
+        )}
         <div
           className="grid grid-cols-1 gap-4 py-16 md:mb-12 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10"
           ref={tabs}
@@ -281,10 +293,10 @@ const UsePage = ({ data }) => {
             >
               <ToolBox
                 icon={getImage(tool.icon)}
-                title={t(tool.title)}
+                title={tool.title}
                 link={tool.link}
                 author={tool.author}
-                text={t(tool.description)}
+                text={tool.description}
                 categories={tool.categories.map((category) => t(category))}
               />
             </div>

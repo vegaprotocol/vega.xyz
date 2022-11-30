@@ -1,13 +1,13 @@
 {
-  "An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.": "",
-  "wallets": "",
+  "wallet": "",
   "governance": "",
   "staking": "",
   "trading": "",
+  "network": "",
+  "An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.": "",
   "A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).": "",
   "Review and vote on governance proposals.": "",
   "Dashboard with real-time information about the Vega blockchain.": "",
-  "network": "",
   "Stake $VEGA tokens and get rewarded.": "",
   "Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.": "",
   "Redeem locked vega tokens.": "",
@@ -27,6 +27,9 @@
   "Staking": "",
   "Trading": "",
   "Network": "",
+  "Vega is governed by its tokenholders": "",
+  "Token holders propose changes, vote on proposals, create markets, and support validators by staking": "",
+  "Learn more": "",
   "Want to add something to this list?": "",
   "<0>Chat to us on Discord</0> and <3>start building</3>.": ""
 }
