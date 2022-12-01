@@ -100,6 +100,8 @@ const LatestNews = ({ data }) => {
     fetchLatestTweet()
   }, [])
 
+  console.log(latestPosts)
+
   return (
     <div>
       <div className="title-l lg:title-xl mb-12 text-center">
