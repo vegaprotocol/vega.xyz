@@ -227,7 +227,7 @@ const UsePage = ({ data }) => {
               tabIndex={0}
               onClick={() => changeFilter('governance')}
               className={`title-s inline-block border-b-2 px-3 py-5 ${
-                filter === 'dgovernanceapp'
+                filter === 'governance'
                   ? 'border-current'
                   : 'border-transparent hover:border-current'
               }`}
