@@ -126,23 +126,29 @@ const Ambassadors = () => {
               </h2>
               <div className="mt-6 md:mt-12">
                 <Clan
-                  title={t("Content Collective (Non-Technical)")}
-                  text={t(
-                    "(Tweets, Translations, Editorials, Infographics, Bounties)"
-                  )}
-                  icon={IconAmbassador1}
-                />
-                <Clan
                   title={t("Builders Club (Technical)")}
                   text={t(
                     "(Vega Capsule, Documentation, Hackathon Support, Coding)"
                   )}
                   icon={IconAmbassador2}
                 />
+                  <Clan
+                  title={t("Content Collective (Non-Technical)")}
+                  text={t(
+                    "(Tweets, Editorials, Infographics, Bounties)"
+                  )}
+                  icon={IconAmbassador1}
+                />
+                <Clan
+                  title={t("Multilingual League (Translations)")}
+                  text={t(
+                         "(Internationalisation, Local Language Groups, AMAs)"
+                  icon={IconAmbassador3}
+                )}                    
                 {/* <Clan
                   title="Research & Finance Circle"
                   text="(Deeper Research, Protocol Comparisons, Protocol Integrations)"
-                  icon={IconAmbassador3}
+                  icon={IconAmbassador4}
                 /> */}
               </div>
             </div>
