@@ -143,8 +143,9 @@ const Ambassadors = () => {
                   title={t("Multilingual League (Translations)")}
                   text={t(
                          "(Internationalisation, Local Language Groups, AMAs)"
+                  )}
                   icon={IconAmbassador3}
-                )}                    
+                />
                 {/* <Clan
                   title="Research & Finance Circle"
                   text="(Deeper Research, Protocol Comparisons, Protocol Integrations)"
