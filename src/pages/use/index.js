@@ -272,7 +272,7 @@ const UsePage = ({ data }) => {
         {filter === 'governance' && (
           <Callout
             className="mt-space-8"
-            title={t('Vega is governed by its tokenholders')}
+            title={t('Vega is governed by its token holders')}
             subtitle={t(
               'Token holders propose changes, vote on proposals, create markets, and support validators by staking'
             )}
