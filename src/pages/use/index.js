@@ -218,7 +218,7 @@ const UsePage = ({ data }) => {
               className={`title-s inline-block border-b-2 px-3 py-5 ${
                 filter === 'wallets'
                   ? 'border-current'
-                  : 'over:border-current border-transparent'
+                  : 'border-transparent hover:border-current'
               }`}
             >
               <Trans t={t}>Wallets</Trans>
