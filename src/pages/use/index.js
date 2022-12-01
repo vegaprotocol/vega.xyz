@@ -44,7 +44,7 @@ const UsePage = ({ data }) => {
     }
   }, [filter, tabs])
 
-  // t('wallet')
+  // t('wallets')
   // t('governance')
   // t('staking')
   // t('trading')
