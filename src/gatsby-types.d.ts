@@ -1080,7 +1080,7 @@ type FileFieldsEnum =
   | 'childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'childJson.Vega_is_designed_to_'
-  | 'childJson.Vega_is_governed_by_its_tokenholders'
+  | 'childJson.Vega_is_governed_by_its_token_holders'
   | 'childJson.Vega_papers'
   | 'childJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'childJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -1178,7 +1178,7 @@ type FileFieldsEnum =
   | 'childJson.parent.parent.id'
   | 'childJson.staking'
   | 'childJson.trading'
-  | 'childJson.wallet'
+  | 'childJson.wallets'
   | 'childLocale.children'
   | 'childLocale.children.children'
   | 'childLocale.children.children.children'
@@ -1788,7 +1788,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childTools.icon.childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'childTools.icon.childJson.Vega_is_designed_to_'
-  | 'childTools.icon.childJson.Vega_is_governed_by_its_tokenholders'
+  | 'childTools.icon.childJson.Vega_is_governed_by_its_token_holders'
   | 'childTools.icon.childJson.Vega_papers'
   | 'childTools.icon.childJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'childTools.icon.childJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -1847,7 +1847,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.network'
   | 'childTools.icon.childJson.staking'
   | 'childTools.icon.childJson.trading'
-  | 'childTools.icon.childJson.wallet'
+  | 'childTools.icon.childJson.wallets'
   | 'childTools.icon.childLocale.children'
   | 'childTools.icon.childLocale.data'
   | 'childTools.icon.childLocale.fileAbsolutePath'
@@ -2295,7 +2295,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childTools.icon.childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'childTools.icon.childrenJson.Vega_is_designed_to_'
-  | 'childTools.icon.childrenJson.Vega_is_governed_by_its_tokenholders'
+  | 'childTools.icon.childrenJson.Vega_is_governed_by_its_token_holders'
   | 'childTools.icon.childrenJson.Vega_papers'
   | 'childTools.icon.childrenJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'childTools.icon.childrenJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -2354,7 +2354,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.network'
   | 'childTools.icon.childrenJson.staking'
   | 'childTools.icon.childrenJson.trading'
-  | 'childTools.icon.childrenJson.wallet'
+  | 'childTools.icon.childrenJson.wallets'
   | 'childTools.icon.childrenLocale'
   | 'childTools.icon.childrenLocale.children'
   | 'childTools.icon.childrenLocale.data'
@@ -2939,7 +2939,7 @@ type FileFieldsEnum =
   | 'childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'childrenJson.Vega_is_designed_to_'
-  | 'childrenJson.Vega_is_governed_by_its_tokenholders'
+  | 'childrenJson.Vega_is_governed_by_its_token_holders'
   | 'childrenJson.Vega_papers'
   | 'childrenJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'childrenJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -3037,7 +3037,7 @@ type FileFieldsEnum =
   | 'childrenJson.parent.parent.id'
   | 'childrenJson.staking'
   | 'childrenJson.trading'
-  | 'childrenJson.wallet'
+  | 'childrenJson.wallets'
   | 'childrenLocale'
   | 'childrenLocale.children'
   | 'childrenLocale.children.children'
@@ -3650,7 +3650,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childrenTools.icon.childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'childrenTools.icon.childJson.Vega_is_designed_to_'
-  | 'childrenTools.icon.childJson.Vega_is_governed_by_its_tokenholders'
+  | 'childrenTools.icon.childJson.Vega_is_governed_by_its_token_holders'
   | 'childrenTools.icon.childJson.Vega_papers'
   | 'childrenTools.icon.childJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'childrenTools.icon.childJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -3709,7 +3709,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.network'
   | 'childrenTools.icon.childJson.staking'
   | 'childrenTools.icon.childJson.trading'
-  | 'childrenTools.icon.childJson.wallet'
+  | 'childrenTools.icon.childJson.wallets'
   | 'childrenTools.icon.childLocale.children'
   | 'childrenTools.icon.childLocale.data'
   | 'childrenTools.icon.childLocale.fileAbsolutePath'
@@ -4157,7 +4157,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childrenTools.icon.childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'childrenTools.icon.childrenJson.Vega_is_designed_to_'
-  | 'childrenTools.icon.childrenJson.Vega_is_governed_by_its_tokenholders'
+  | 'childrenTools.icon.childrenJson.Vega_is_governed_by_its_token_holders'
   | 'childrenTools.icon.childrenJson.Vega_papers'
   | 'childrenTools.icon.childrenJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'childrenTools.icon.childrenJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -4216,7 +4216,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.network'
   | 'childrenTools.icon.childrenJson.staking'
   | 'childrenTools.icon.childrenJson.trading'
-  | 'childrenTools.icon.childrenJson.wallet'
+  | 'childrenTools.icon.childrenJson.wallets'
   | 'childrenTools.icon.childrenLocale'
   | 'childrenTools.icon.childrenLocale.children'
   | 'childrenTools.icon.childrenLocale.data'
@@ -5737,7 +5737,7 @@ type Json = Node & {
   readonly Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_: Maybe<Scalars['String']>;
   readonly Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_: Maybe<Scalars['String']>;
   readonly Vega_is_designed_to_: Maybe<Scalars['String']>;
-  readonly Vega_is_governed_by_its_tokenholders: Maybe<Scalars['String']>;
+  readonly Vega_is_governed_by_its_token_holders: Maybe<Scalars['String']>;
   readonly Vega_papers: Maybe<Scalars['String']>;
   readonly Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_: Maybe<Scalars['String']>;
   readonly Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_: Maybe<Scalars['String']>;
@@ -5798,7 +5798,7 @@ type Json = Node & {
   readonly parent: Maybe<Node>;
   readonly staking: Maybe<Scalars['String']>;
   readonly trading: Maybe<Scalars['String']>;
-  readonly wallet: Maybe<Scalars['String']>;
+  readonly wallets: Maybe<Scalars['String']>;
 };
 
 type JsonConnection = {
@@ -6261,7 +6261,7 @@ type JsonFieldsEnum =
   | 'Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'Vega_is_designed_to_'
-  | 'Vega_is_governed_by_its_tokenholders'
+  | 'Vega_is_governed_by_its_token_holders'
   | 'Vega_papers'
   | 'Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -6411,7 +6411,7 @@ type JsonFieldsEnum =
   | 'parent.parent.parent.id'
   | 'staking'
   | 'trading'
-  | 'wallet';
+  | 'wallets';
 
 type JsonFilterInput = {
   readonly A_Vega_wallet_is_used_to_access_and_sign_transactions_and_connect_to_any_dApp_running_on_Vega_: InputMaybe<StringQueryOperatorInput>;
@@ -6828,7 +6828,7 @@ type JsonFilterInput = {
   readonly Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_is_designed_to_: InputMaybe<StringQueryOperatorInput>;
-  readonly Vega_is_governed_by_its_tokenholders: InputMaybe<StringQueryOperatorInput>;
+  readonly Vega_is_governed_by_its_token_holders: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_papers: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_: InputMaybe<StringQueryOperatorInput>;
@@ -6889,7 +6889,7 @@ type JsonFilterInput = {
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly staking: InputMaybe<StringQueryOperatorInput>;
   readonly trading: InputMaybe<StringQueryOperatorInput>;
-  readonly wallet: InputMaybe<StringQueryOperatorInput>;
+  readonly wallets: InputMaybe<StringQueryOperatorInput>;
 };
 
 type JsonFilterListInput = {
@@ -7774,7 +7774,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'frontmatter.featuredImage.childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'frontmatter.featuredImage.childJson.Vega_is_designed_to_'
-  | 'frontmatter.featuredImage.childJson.Vega_is_governed_by_its_tokenholders'
+  | 'frontmatter.featuredImage.childJson.Vega_is_governed_by_its_token_holders'
   | 'frontmatter.featuredImage.childJson.Vega_papers'
   | 'frontmatter.featuredImage.childJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'frontmatter.featuredImage.childJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -7833,7 +7833,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.network'
   | 'frontmatter.featuredImage.childJson.staking'
   | 'frontmatter.featuredImage.childJson.trading'
-  | 'frontmatter.featuredImage.childJson.wallet'
+  | 'frontmatter.featuredImage.childJson.wallets'
   | 'frontmatter.featuredImage.childLocale.children'
   | 'frontmatter.featuredImage.childLocale.data'
   | 'frontmatter.featuredImage.childLocale.fileAbsolutePath'
@@ -8281,7 +8281,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'frontmatter.featuredImage.childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'frontmatter.featuredImage.childrenJson.Vega_is_designed_to_'
-  | 'frontmatter.featuredImage.childrenJson.Vega_is_governed_by_its_tokenholders'
+  | 'frontmatter.featuredImage.childrenJson.Vega_is_governed_by_its_token_holders'
   | 'frontmatter.featuredImage.childrenJson.Vega_papers'
   | 'frontmatter.featuredImage.childrenJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'frontmatter.featuredImage.childrenJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -8340,7 +8340,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.network'
   | 'frontmatter.featuredImage.childrenJson.staking'
   | 'frontmatter.featuredImage.childrenJson.trading'
-  | 'frontmatter.featuredImage.childrenJson.wallet'
+  | 'frontmatter.featuredImage.childrenJson.wallets'
   | 'frontmatter.featuredImage.childrenLocale'
   | 'frontmatter.featuredImage.childrenLocale.children'
   | 'frontmatter.featuredImage.childrenLocale.data'
@@ -12370,7 +12370,7 @@ type Query_jsonArgs = {
   Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_: InputMaybe<StringQueryOperatorInput>;
   Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_: InputMaybe<StringQueryOperatorInput>;
   Vega_is_designed_to_: InputMaybe<StringQueryOperatorInput>;
-  Vega_is_governed_by_its_tokenholders: InputMaybe<StringQueryOperatorInput>;
+  Vega_is_governed_by_its_token_holders: InputMaybe<StringQueryOperatorInput>;
   Vega_papers: InputMaybe<StringQueryOperatorInput>;
   Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_: InputMaybe<StringQueryOperatorInput>;
   Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_: InputMaybe<StringQueryOperatorInput>;
@@ -12431,7 +12431,7 @@ type Query_jsonArgs = {
   parent: InputMaybe<NodeFilterInput>;
   staking: InputMaybe<StringQueryOperatorInput>;
   trading: InputMaybe<StringQueryOperatorInput>;
-  wallet: InputMaybe<StringQueryOperatorInput>;
+  wallets: InputMaybe<StringQueryOperatorInput>;
 };
 
 
@@ -14950,7 +14950,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'icon.childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'icon.childJson.Vega_is_designed_to_'
-  | 'icon.childJson.Vega_is_governed_by_its_tokenholders'
+  | 'icon.childJson.Vega_is_governed_by_its_token_holders'
   | 'icon.childJson.Vega_papers'
   | 'icon.childJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'icon.childJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -15022,7 +15022,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.parent.id'
   | 'icon.childJson.staking'
   | 'icon.childJson.trading'
-  | 'icon.childJson.wallet'
+  | 'icon.childJson.wallets'
   | 'icon.childLocale.children'
   | 'icon.childLocale.children.children'
   | 'icon.childLocale.children.id'
@@ -15615,7 +15615,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'icon.childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
   | 'icon.childrenJson.Vega_is_designed_to_'
-  | 'icon.childrenJson.Vega_is_governed_by_its_tokenholders'
+  | 'icon.childrenJson.Vega_is_governed_by_its_token_holders'
   | 'icon.childrenJson.Vega_papers'
   | 'icon.childrenJson.Vega_protocol_s_rigorous_framework_continuously_monitors_and_manages_credit_risk_more_efficiently_than_centralised_exchanges__A_plugin_like_architecture_for_risk_models_and_best_in_class_stochastic_models_that_run_fast_enough_to_support_frequent_margin_evaluations_allows_traders_with_positions_to_adjust_quickly_'
   | 'icon.childrenJson.Vega_s_cross_margining_and_portfolio_risk_evaluation_innovations_significantly_lower_capital_costs_opening_up_hedging_instruments_to_a_far_greater_range_of_people_and_businesses_and_allowing_markets_to_exist_that_previously_wouldn_t_due_to_cost_'
@@ -15687,7 +15687,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.parent.id'
   | 'icon.childrenJson.staking'
   | 'icon.childrenJson.trading'
-  | 'icon.childrenJson.wallet'
+  | 'icon.childrenJson.wallets'
   | 'icon.childrenLocale'
   | 'icon.childrenLocale.children'
   | 'icon.childrenLocale.children.children'
