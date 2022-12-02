@@ -91,6 +91,8 @@ const Community = () => {
             text={t('Report a security issue')}
             link="/bug-bounties"
           />
+        </NavigationList>
+        <NavigationList>
           <NavigationItem text={t('Get Swag')} link="/community/swag" />
           <NavigationItem
             text={t('Experiment on Fairground Testnet')}
