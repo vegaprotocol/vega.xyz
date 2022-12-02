@@ -1,5 +1,5 @@
 ---
-title: 'Vega Protocol: The Space Race For Open Markets: Vega'
+title: 'The Space Race For Open Markets: Vega'
 date: 2021-06-01
 links:
   - title: Read more
