@@ -73,6 +73,10 @@ const Community = () => {
             link="/community/ambassadors/"
           />
           <NavigationItem text={t('Builders club')} link="/builders-club" />
+          <NavigationItem
+            text={t('Provide feedback')}
+            link="https://github.com/vegaprotocol/feedback/discussions"
+          />
           <NavigationItem text={t('Careers')} link="/careers" />
         </NavigationList>
         <NavigationHeading>
