@@ -13,7 +13,7 @@ const Small = () => {
       viewBox="0 0 375 191"
       className="h-auto w-full"
     >
-      <g clip-path="url(#clip0_1957_10466)">
+      <g clipPath="url(#clip0_1957_10466)">
         <path
           d="M300.7 190.4C217.6 165.9 183.3 32.2 68.3 36.1C41.9 37 19.7 44.8 0 56.6V190.1L176.5 190.4H300.7Z"
           fill="url(#pattern0)"
@@ -37,14 +37,14 @@ const Small = () => {
           fill="#400ED0"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M17.7 161.8L0 167.4V170.6L18.6 164.6L17.7 161.8Z"
           fill="#D9DBDD"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M11.6 142.7L0 146.4V149.5L12.5 145.5L11.6 142.7Z"
           fill="#D9DBDD"
         />

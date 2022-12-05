@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { addLineBreakIfTwoWords } from '../../utils/tools'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 export interface TeamTileProps {
@@ -23,7 +24,11 @@ const TeamTile = ({ title, image, body, children }: TeamTileProps) => {
         )}
         <div>
           <div className="heading-m mb-space-4 max-w-[25rem] md:order-1">
-            {title}
+            <div
+              dangerouslySetInnerHTML={{
+                __html: addLineBreakIfTwoWords(title),
+              }}
+            />
           </div>
           <div className="body-l mb-space-5 text-vega-light-400 dark:text-vega-dark-400">
             {body}

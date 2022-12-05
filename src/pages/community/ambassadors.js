@@ -22,18 +22,6 @@ import IconStairs from '../../images/icons/stairs.svg'
 import IconAlert from '../../images/icons/alert.svg'
 import IconDiscord from '../../images/icons/discord.svg'
 
-const Clan = ({ icon, title, text }) => {
-  return (
-    <div className="mb-6 flex items-center gap-6">
-      <img src={icon} width="93" height="93" alt="" className="shrink-0" />
-      <div>
-        <h3 className="title-s md:title-m mb-2">{title}</h3>
-        <p className="copy-xxs md:copy-xs !mb-0">{text}</p>
-      </div>
-    </div>
-  )
-}
-
 const Ambassadors = ({ data }) => {
   const { i18n, t } = useTranslation('page.community.ambassadors')
   const [missingTranslations, setMissingTranslations] = useState(false)
@@ -41,20 +29,6 @@ const Ambassadors = ({ data }) => {
   i18n.on('missingKey', (lng) => {
     setMissingTranslations(true)
   })
-
-  const benefits = [
-    t(
-      'Gain real-world experience in community building by shaping the Vega movement from the ground up'
-    ),
-    t('Access to exclusive Discord lounges'),
-    t('Early access to bounties, beta testing of products'),
-    t('Priority consideration on protocol feedback'),
-    t(
-      "Exclusive meetups - Invitations to all of Vega's events, both offline and online"
-    ),
-    t('Limited edition Vega swag'),
-    t('Grow with Vega - scaling rewards as you climb the ranks'),
-  ]
 
   return (
     <Layout>
@@ -65,7 +39,7 @@ const Ambassadors = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <div dataCy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
+      <div data-cy="main" className="pt-space-5 md:pt-space-6 lg:pt-space-7">
         <Container>
           <div className="mx-auto mb-space-10 max-w-[21.25rem] text-center md:max-w-[40rem] lg:max-w-[80rem]">
             <Tag className="mb-space-4">
@@ -107,13 +81,13 @@ const Ambassadors = ({ data }) => {
                   Tweets / Translations / Editorials / Infographics
                 </Trans>
               </div>
-              <Button to="/">
+              <Button to="https://vegaprotocol.typeform.com/ambassadorappq4">
                 <Trans t={t}>Apply now</Trans>
               </Button>
             </TeamTile>
 
             <TeamTile
-              title={t('Content collective')}
+              title={t('Builders Club')}
               body={t(
                 'Get support building on top of the Vega protocol and access exclusive builder club bounties.'
               )}
@@ -124,13 +98,39 @@ const Ambassadors = ({ data }) => {
                   Vega capsule / Docs / Hackathons / Coding support
                 </Trans>
               </div>
-              <Button to="/" className="mr-space-6">
+              <Button
+                to="https://vegaprotocol.typeform.com/ambassadorappq4"
+                className="mr-space-6"
+              >
                 <Trans t={t}>Apply now</Trans>
               </Button>
-              <Button to="/" variant="secondary" className="mt-space-3">
+              <Button
+                to="/builders-club"
+                variant="secondary"
+                className="mt-space-3"
+              >
                 <Trans t={t}>See what's going on</Trans>
               </Button>
             </TeamTile>
+
+            <div className="col-span-1 flex justify-center md:col-span-2">
+              <div className="md:w-1/2">
+                <TeamTile
+                  title={t('Multilingual League')}
+                  body={t('XXXXXXXX')}
+                  image={getImage(data.iconMultilingualLeague)}
+                >
+                  <div className="heading-xxs font-not-glitched mb-space-5 uppercase">
+                    <Trans t={t}>
+                      Internationalisation / Local Language Groups / AMAs
+                    </Trans>
+                  </div>
+                  <Button to="https://vegaprotocol.typeform.com/ambassadorappq4">
+                    <Trans t={t}>Apply now</Trans>
+                  </Button>
+                </TeamTile>
+              </div>
+            </div>
           </div>
 
           <div className="mb-space-10 max-w-[47.5rem] md:mx-auto md:mb-space-11 lg:mb-space-13">
@@ -314,6 +314,17 @@ export const query = graphql`
       }
     }
     iconBuildersClub: file(relativePath: { eq: "builders-club-icon.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconMultilingualLeague: file(
+      relativePath: { eq: "icon-ambassador-4.png" }
+    ) {
       childImageSharp {
         gatsbyImageData(
           width: 96

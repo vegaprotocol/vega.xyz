@@ -12,7 +12,7 @@ const Medium = () => {
       viewBox="0 0 586 154"
       className="h-auto w-full"
     >
-      <g clip-path="url(#clip0_1990_10652)">
+      <g clipPath="url(#clip0_1990_10652)">
         <path
           d="M532.8 154C525.02 132.53 494.11 94.2398 460.22 88.1898C420 81.0098 386.59 106.75 342.54 108.36C261.25 111.34 247.23 26.5498 188.37 13.1998C107.35 -5.18023 76.1101 140.42 33.6001 154"
           fill="url(#patternAmbassadorsFooterMedium)"

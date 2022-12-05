@@ -12,7 +12,7 @@ const Small = () => {
       viewBox="0 0 335 154"
       className="h-auto w-full"
     >
-      <g clip-path="url(#clip0_1990_9997)">
+      <g clipPath="url(#clip0_1990_9997)">
         <path
           d="M326 151.76C269.56 120.31 242.73 22.37 170.03 19.3C90.36 15.93 66.59 131.16 9 152.23H95.05L326 151.76Z"
           fill="url(#patternAmbassadorsFooterSmall)"

@@ -7,18 +7,6 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
   const [leaderboard, setLeaderboard] = useState(false)
   const { t } = useTranslation('component.ambassador-leaderboard')
 
-  const formatName = (name) => {
-    const idx = name.lastIndexOf('#')
-    if (idx > -1) {
-      return (
-        name.substr(0, idx) +
-        " <span class='copy-xxs md:copy-xs text-vega-mid-grey'>" +
-        name.substr(idx) +
-        '</span>'
-      )
-    }
-  }
-
   const extractHandle = (name) => {
     const idx = name.lastIndexOf('#')
     return {
@@ -79,6 +67,7 @@ const AmbssadorLeaderboard = ({ limit = false }) => {
               {leaderboard.map((entry, idx) => {
                 return (
                   <LeaderboardListItem
+                    key={idx}
                     position={entry.Position}
                     rank={entry.Rank}
                     handle={extractHandle(entry.Name).handle}
