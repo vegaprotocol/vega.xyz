@@ -41,8 +41,8 @@ const ExternalLinkPage = () => {
       <Seo title={t("You're leaving Vega...")} />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="pt-space-4 pb-space-8 text-center md:pt-space-10 md:pb-space-14">
-          <h1 className="heading-xl mx-auto max-w-[45rem]">
+        <div className="pt-space-4 pb-space-8 text-center md:pt-space-14 md:pb-space-14">
+          <h1 className="heading-xl mx-auto mb-space-6 max-w-[45rem]">
             <GlitchTitle>
               <Trans t={t}>You're leaving Vega</Trans>
             </GlitchTitle>

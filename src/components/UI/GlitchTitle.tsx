@@ -42,8 +42,7 @@ const Title = styled.div`
     animation: ${blink} 1.5s steps(2, start) infinite;
   }
 `
-
-const GlitchTitle = ({ children, color = 'orange' }) => {
+const GlitchTitle = ({ children, color = 'orange' }: GlitchTitleProps) => {
   return <Title color={color}>{children}</Title>
 }
 
