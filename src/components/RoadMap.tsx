@@ -159,7 +159,7 @@ const RoadMap = (props) => {
                         {roadmapImage(idx)}
                       </div>
                       <div
-                        className={`heading-m mx-auto !mb-5 max-w-[18rem] text-center transition-all duration-700 sm:mb-[1rem] ${
+                        className={`heading-m mx-auto mb-5 mt-space-5 max-w-[18rem] text-center transition-all duration-700 sm:mb-[1rem] ${
                           idx === selectedPlanet ? '' : 'scale-75'
                         }`}
                       >

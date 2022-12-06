@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import LinkArrow from './Svg/LinkArrow'
+import Tag from './UI/Tag'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
@@ -14,7 +15,7 @@ const LinkWrapper = ({
     ? externalLinkWrapper(children)
     : internalLinkWrapper(children)
 
-const ToolBox = ({ icon, title, link, text, author, category }) => {
+const ToolBox = ({ icon, title, link, text, author, categories }) => {
   const { t } = useTranslation('component.tool-box')
   const isExternal = link.startsWith('http')
 
@@ -78,11 +79,11 @@ const ToolBox = ({ icon, title, link, text, author, category }) => {
 
           <div className="copy-xs mt-4 text-vega-mid-grey">{text}</div>
         </div>
-        {category && (
-          <div className="pt-3">
-            <div className="copy-xxs !mb-0 inline-block border border-current px-3 font-light uppercase">
-              {category}
-            </div>
+        {categories && (
+          <div className="flex flex-row flex-wrap gap-space-2 pt-3">
+            {categories.map((category, idx) => (
+              <Tag key={idx}>{category}</Tag>
+            ))}
           </div>
         )}
       </div>
