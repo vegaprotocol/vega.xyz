@@ -47,7 +47,7 @@ const BuildersClubPage = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner className="mb-0" />}
-      <div dataCy={'main'}>
+      <div data-cy="main">
         <div className="bg-buildersClubHero bg-cover bg-top">
           <Container>
             <div className="md:pt-16">
