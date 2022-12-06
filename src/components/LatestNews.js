@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import NewsCard from "./NewsCard";
-import { graphql, useStaticQuery } from "gatsby";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React, { useEffect, useState } from 'react'
+import NewsCard from './NewsCard'
+import Button from './UI/Button'
+import { graphql, useStaticQuery } from 'gatsby'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const LatestNews = ({ data }) => {
-  const { t } = useTranslation("component.latest-news");
+  const { t } = useTranslation('component.latest-news')
   const latestPosts = useStaticQuery(graphql`
     query {
-      allMediumPost(
+      blogPosts: allMediumPost(
         limit: 1
         sort: { fields: [firstPublishedAt], order: DESC }
       ) {
@@ -30,7 +31,7 @@ const LatestNews = ({ data }) => {
           }
         }
       }
-      allMarkdownRemark(
+      talks: allMarkdownRemark(
         limit: 1
         filter: { collection: { eq: "talks" } }
         sort: { fields: [frontmatter___date], order: DESC }
@@ -54,22 +55,50 @@ const LatestNews = ({ data }) => {
           }
         }
       }
+      insights: allMarkdownRemark(
+        limit: 1
+        filter: { collection: { eq: "insights" } }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        edges {
+          node {
+            html
+            frontmatter {
+              title
+              date(formatString: "ll")
+              location
+              links {
+                title
+                url
+              }
+              featuredImage {
+                childImageSharp {
+                  gatsbyImageData(layout: CONSTRAINED, width: 640)
+                }
+              }
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
     }
-  `);
-  const [tweet, setTweet] = useState(null);
+  `)
+  const [tweet, setTweet] = useState(null)
 
   useEffect(() => {
     async function fetchLatestTweet() {
-      let response = await fetch("/.netlify/functions/latest-tweet");
-      response = await response.json();
+      let response = await fetch('/.netlify/functions/latest-tweet')
+      response = await response.json()
       setTweet({
         id: response.id,
         text: response.tweet_text,
         image: response.image,
-      });
+      })
     }
-    fetchLatestTweet();
-  }, []);
+    fetchLatestTweet()
+  }, [])
 
   return (
     <div>
@@ -78,55 +107,87 @@ const LatestNews = ({ data }) => {
           <Trans t={t}>Latest News</Trans>
         </h2>
       </div>
-      <div className="mx-auto max-w-[26.25rem] md:max-w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <NewsCard
-          title={latestPosts.allMediumPost.edges[0].node.title}
-          text={latestPosts.allMediumPost.edges[0].node.virtuals.subtitle}
-          link={`https://blog.vega.xyz/${latestPosts.allMediumPost.edges[0].node.uniqueSlug}`}
-          date={latestPosts.allMediumPost.edges[0].node.firstPublishedAt}
-          extra={t("{{minutes}} minute read", {
-            minutes: Math.ceil(
-              latestPosts.allMediumPost.edges[0].node.virtuals.readingTime
-            ),
-          })}
-          image={`https://cdn-images-1.medium.com/${latestPosts.allMediumPost.edges[0].node.virtuals.previewImage.imageId}`}
-          category="blog"
-        />
+      <div className="mx-auto grid max-w-[26.25rem] grid-cols-1 gap-12 md:max-w-none md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex h-full flex-col justify-between">
+          <NewsCard
+            title={latestPosts.blogPosts.edges[0].node.title}
+            text={latestPosts.blogPosts.edges[0].node.virtuals.subtitle}
+            link={`https://blog.vega.xyz/${latestPosts.blogPosts.edges[0].node.uniqueSlug}`}
+            date={latestPosts.blogPosts.edges[0].node.firstPublishedAt}
+            extra={t('{{minutes}} minute read', {
+              minutes: Math.ceil(
+                latestPosts.blogPosts.edges[0].node.virtuals.readingTime
+              ),
+            })}
+            image={`https://cdn-images-1.medium.com/${latestPosts.blogPosts.edges[0].node.virtuals.previewImage.imageId}`}
+            className="mb-space-5"
+          />
+          <div>
+            <Button to="https://blog.vega.xyz">
+              <Trans t={t}>Read our blog</Trans>
+            </Button>
+          </div>
+        </div>
 
         {tweet ? (
-          <NewsCard
-            title="@vegaprotocol"
-            image={tweet.image}
-            text={tweet.text}
-            category="Tweet"
-            link={`https://twitter.com/twitter/status/${tweet.id}`}
-          />
+          <div className="flex h-full flex-col justify-between">
+            <NewsCard
+              title="@vegaprotocol"
+              image={tweet.image}
+              text={tweet.text}
+              link={`https://twitter.com/twitter/status/${tweet.id}`}
+              className="mb-space-5"
+            />
+            <div>
+              <Button to="https://twitter.com/vegaprotocol">
+                <Trans t={t}>See all Tweets</Trans>
+              </Button>
+            </div>
+          </div>
         ) : (
           <div>Loading</div>
         )}
 
-        <NewsCard
-          title={latestPosts.allMarkdownRemark.edges[0].node.frontmatter.title}
-          text={`${latestPosts.allMarkdownRemark.edges[0].node.html
-            .replace(/(<([^>]+)>)/gi, "")
-            .split(" ")
-            .splice(0, 25)
-            .join(" ")}...`}
-          date={latestPosts.allMarkdownRemark.edges[0].node.frontmatter.date}
-          category="talk"
-          link={`/talks#talk${latestPosts.allMarkdownRemark.edges[0].node.fields.slug}`}
-        />
+        <div className="flex h-full flex-col justify-between">
+          <NewsCard
+            title={latestPosts.talks.edges[0].node.frontmatter.title}
+            text={`${latestPosts.talks.edges[0].node.html
+              .replace(/(<([^>]+)>)/gi, '')
+              .split(' ')
+              .splice(0, 25)
+              .join(' ')}...`}
+            date={latestPosts.talks.edges[0].node.frontmatter.date}
+            link={`/talks#talk${latestPosts.talks.edges[0].node.fields.slug}`}
+            className="mb-space-5"
+          />
+          <div>
+            <Button to="/talks">
+              <Trans t={t}>Watch all Talks</Trans>
+            </Button>
+          </div>
+        </div>
 
-        <NewsCard
-          title="Vega Protocol Investment Thesis"
-          text="Capital markets infrastructure for DeFi that will enable the creation of new markets by those closest to the market, the traders themselves."
-          link="https://www.edenblock.com/post/vega-protocol-investment-thesis"
-          date="February 23, 2022"
-          category="insight"
-        />
+        <div className="flex h-full flex-col justify-between">
+          <NewsCard
+            title={latestPosts.insights.edges[0].node.frontmatter.title}
+            text={`${latestPosts.insights.edges[0].node.html
+              .replace(/(<([^>]+)>)/gi, '')
+              .split(' ')
+              .splice(0, 25)
+              .join(' ')}...`}
+            link={latestPosts.insights.edges[0].node.frontmatter.links[0].url}
+            date={latestPosts.insights.edges[0].node.frontmatter.date}
+            className="mb-space-5"
+          />
+          <div>
+            <Button to="/insights">
+              <Trans t={t}>Read all Insights</Trans>
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LatestNews;
+export default LatestNews

@@ -110,7 +110,7 @@ const BuildersClubPage = ({ data }) => {
                       alt=""
                     />
                     <Rectangle />
-                    <div className="heading-xs mx-auto max-w-[12rem]">
+                    <div className="heading-xs mx-auto mt-space-4 max-w-[12rem]">
                       <Trans t={t}>Blockchains for web2 devs</Trans>
                     </div>
                   </div>
@@ -120,7 +120,7 @@ const BuildersClubPage = ({ data }) => {
                       alt=""
                     />
                     <Rectangle />
-                    <div className="heading-xs mx-auto max-w-[12rem]">
+                    <div className="heading-xs mx-auto mt-space-4 max-w-[12rem]">
                       <Trans t={t}>Finance 101</Trans>
                     </div>
                   </div>
@@ -130,7 +130,7 @@ const BuildersClubPage = ({ data }) => {
                       alt=""
                     />
                     <Rectangle />
-                    <div className="heading-xs mx-auto max-w-[12rem]">
+                    <div className="heading-xs mx-auto mt-space-4 max-w-[12rem]">
                       <Trans t={t}>An introduction to Vega</Trans>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ const BuildersClubPage = ({ data }) => {
                       alt=""
                     />
                     <Rectangle />
-                    <div className="heading-xs mx-auto max-w-[12rem]">
+                    <div className="heading-xs mx-auto mt-space-4 max-w-[12rem]">
                       <Trans t={t}>Building on Vega Parts I and II</Trans>
                     </div>
                   </div>
