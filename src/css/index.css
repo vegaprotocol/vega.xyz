@@ -276,7 +276,7 @@ a {
   }
 
   .heading-l {
-    @apply text-[2.75rem];
+    @apply text-[2.5rem];
     @apply leading-[88%];
     @apply uppercase;
     @apply md:text-[3rem];

@@ -47,7 +47,7 @@ const BuildersClubPage = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner className="mb-0" />}
-      <div dataCy={'main'}>
+      <div data-cy="main">
         <div className="bg-buildersClubHero bg-cover bg-top">
           <Container>
             <div className="md:pt-space-10">
@@ -75,7 +75,7 @@ const BuildersClubPage = ({ data }) => {
                         variant="secondary"
                         to="https://discord.com/channels/720571334798737489/732948871948533791"
                         colorMode="white"
-                        className="mt-space-5 md:ml-space-5 md:mt-0"
+                        className="md:ml-space-6"
                       >
                         <Trans t={t}>Meet us on Discord</Trans>
                       </Button>
@@ -110,7 +110,7 @@ const BuildersClubPage = ({ data }) => {
                       alt=""
                     />
                     <Rectangle />
-                    <div className="heading-xs mx-auto my-space-5 max-w-[12rem]">
+                    <div className="heading-xs mx-auto mt-space-4 max-w-[12rem]">
                       <Trans t={t}>Blockchains for web2 devs</Trans>
                     </div>
                   </div>
@@ -120,7 +120,7 @@ const BuildersClubPage = ({ data }) => {
                       alt=""
                     />
                     <Rectangle />
-                    <div className="heading-xs mx-auto my-space-5 max-w-[12rem]">
+                    <div className="heading-xs mx-auto mt-space-4 max-w-[12rem]">
                       <Trans t={t}>Finance 101</Trans>
                     </div>
                   </div>
@@ -130,7 +130,7 @@ const BuildersClubPage = ({ data }) => {
                       alt=""
                     />
                     <Rectangle />
-                    <div className="heading-xs mx-auto my-space-5 max-w-[12rem]">
+                    <div className="heading-xs mx-auto mt-space-4 max-w-[12rem]">
                       <Trans t={t}>An introduction to Vega</Trans>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ const BuildersClubPage = ({ data }) => {
                       alt=""
                     />
                     <Rectangle />
-                    <div className="heading-xs mx-auto my-space-5 max-w-[12rem]">
+                    <div className="heading-xs mx-auto mt-space-4 max-w-[12rem]">
                       <Trans t={t}>Building on Vega Parts I and II</Trans>
                     </div>
                   </div>

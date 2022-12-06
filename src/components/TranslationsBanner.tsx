@@ -1,9 +1,13 @@
 import React from 'react'
-import Container from '../components/Container'
-import Globe from '../components/Svg/Globe'
+import Container from './Container'
+import Globe from './Svg/Globe'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
-const TranslationsBanner = ({ targeti18n, className }) => {
+export interface TranslationsBannerProps {
+  className?: string
+}
+
+const TranslationsBanner = ({ className }: TranslationsBannerProps) => {
   const { t } = useTranslation('component.translations-banner')
 
   return (
