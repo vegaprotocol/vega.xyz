@@ -4,6 +4,8 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Seo from '../components/Seo'
+import Link from '../components/UI/Link'
+import { routeThroughInterstitialPage } from '../utils/tools'
 import TranslationsBanner from '../components/TranslationsBanner'
 import Ticker from '../components/Ticker'
 import GlitchTitle from '../components/UI/GlitchTitle'
@@ -34,10 +36,9 @@ import CrossChainSupportIcon from '../images/feature-icons/cross-chain-support.s
 
 const ToolBox = ({ title, description, icon, link }) => {
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noreferrer"
+    <Link
+      to={routeThroughInterstitialPage(link)}
+      hideArrow
       className="flex gap-4 rounded-3xl border border-vega-border-muted p-4 hover:-translate-y-2 md:p-5 lg:block lg:pb-8"
     >
       <div className="w-[4.75rem] shrink-0 lg:w-[5.9375rem]">
@@ -47,7 +48,7 @@ const ToolBox = ({ title, description, icon, link }) => {
         <div className="title-s mb-1 md:mb-3">{title}</div>
         <p className="copy-xxs !mb-0 text-vega-text-muted">{description}</p>
       </div>
-    </a>
+    </Link>
   )
 }
 
