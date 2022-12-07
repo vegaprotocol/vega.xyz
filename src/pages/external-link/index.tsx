@@ -37,9 +37,8 @@ const ExternalLinkPage = () => {
   }, [seconds])
 
   return (
-    <Layout>
+    <div className="flex min-h-screen items-center justify-center text-black dark:text-white">
       <Seo title={t("You're leaving Vega...")} />
-      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="pt-space-4 pb-space-8 text-center md:pt-space-14 md:pb-space-14">
           <h1 className="heading-xl mx-auto mb-space-6 max-w-[45rem]">
@@ -67,7 +66,7 @@ const ExternalLinkPage = () => {
           )}
         </div>
       </Container>
-    </Layout>
+    </div>
   )
 }
 
