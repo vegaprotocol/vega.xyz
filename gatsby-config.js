@@ -1,25 +1,25 @@
 require(`dotenv`).config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 const languages = [
   {
-    code: "en",
-    localName: "English",
+    code: 'en',
+    localName: 'English',
   },
   {
-    code: "es",
-    localName: "Español",
+    code: 'es',
+    localName: 'Español',
   },
   {
-    code: "ru",
-    localName: "Pусский",
+    code: 'ru',
+    localName: 'Pусский',
   },
   {
-    code: "cn",
-    localName: "简体中文",
+    code: 'cn',
+    localName: '简体中文',
   },
-];
+]
 
 module.exports = {
   siteMetadata: {
@@ -139,7 +139,7 @@ module.exports = {
         defaultLanguage: `en`,
         fallbackLanguage: `en`,
         siteUrl: `https://vega.xyz`,
-        trailingSlash: "always",
+        trailingSlash: 'always',
         i18nextOptions: {
           returnEmptyString: false,
           interpolation: {
@@ -148,7 +148,7 @@ module.exports = {
           keySeparator: false,
           saveMissing: true,
           nsSeparator: false,
-          debug: process.env.NODE_ENV === "development" ? true : false,
+          debug: process.env.NODE_ENV === 'development' ? true : false,
         },
       },
     },
@@ -163,4 +163,4 @@ module.exports = {
       },
     },
   ],
-};
+}
