@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { type Swiper as SwiperRef } from 'swiper'
 import Container from './Container'
 import Button from './UI/Button'
+import Tag from './UI/Tag'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import V2Mainnet from './Svg/Roadmap/V2Mainnet'
 import V1Mainnet from './Svg/Roadmap/V1Mainnet'
@@ -20,6 +21,7 @@ const RoadMap = (props) => {
   const { t } = useTranslation('component.roadmap')
   const planets = useRef<any[]>([])
   const swiperRef = useRef<SwiperRef>()
+  const currentStatus = 2;
   const [timelineHeight, setTimelineHeight] = useState(0)
   const [selectedPlanet, setSelectedPlanet] = useState(0)
   planets.current = props.data.edges.map(
@@ -118,7 +120,7 @@ const RoadMap = (props) => {
                 autoplay={{
                   delay: 1000,
                 }}
-                initialSlide={2}
+                initialSlide={currentStatus}
                 breakpoints={{
                   640: {
                     slidesPerView: 3,
@@ -145,12 +147,15 @@ const RoadMap = (props) => {
                       `}
                     >
                       <div
-                        className={`flex aspect-[251/210] items-center justify-center transition duration-700 group-hover:scale-125 ${
+                        className={`flex aspect-[251/210] items-center justify-center transition-opacity duration-700 group-hover:scale-125 ${
                           idx === selectedPlanet ? 'opacity-100' : 'opacity-50'
                         }`}
                         ref={planets.current[idx]}
                       >
                         {roadmapImage(idx)}
+                      </div>
+                      <div className="text-center mt-space-5">
+                        {idx === currentStatus && <Tag className="mx-auto dark:bg-black bg-white">Current Status</Tag>}
                       </div>
                       <div
                         className={`heading-m mx-auto mb-5 mt-space-5 max-w-[18rem] text-center transition-all duration-700 sm:mb-[1rem] ${
