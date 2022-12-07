@@ -56,9 +56,13 @@ const ExternalLinkPage = () => {
           </p>
           {url && (
             <p className="body-xl">
-              <Link hideArrow to={url} className="underline hover:no-underline">
+              <a
+                href={url}
+                className="underline hover:no-underline"
+                rel="noreferrer"
+              >
                 {url}
-              </Link>
+              </a>
             </p>
           )}
         </div>
