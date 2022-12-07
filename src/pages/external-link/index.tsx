@@ -44,7 +44,7 @@ const ExternalLinkPage = () => {
         <div className="pt-space-4 pb-space-8 text-center md:pt-space-14 md:pb-space-14">
           <h1 className="heading-xl mx-auto mb-space-6 max-w-[45rem]">
             <GlitchTitle>
-              <Trans t={t}>You're leaving Vega</Trans>
+              <Trans t={t}>You're leaving Vega.xyz</Trans>
             </GlitchTitle>
           </h1>
           <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
