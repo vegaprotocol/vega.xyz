@@ -84,7 +84,9 @@ const RewardFees = () => {
           epoch = Number(node.node.epoch);
 
           if (epoch <= max_epoch && epoch > max_epoch - period) {
-            if (node.node.rewardType === "ACCOUNT_TYPE_FEES_INFRASTRUCTURE") {
+            if (
+              node.node.rewardType === "ACCOUNT_TYPE_REWARD_MAKER_PAID_FEES"
+            ) {
               makerPaidFeeReward += Number(node.node.amount);
             } else if (node.node.rewardType === "ACCOUNT_TYPE_FEES_LIQUIDITY") {
               lpFeeReward += Number(node.node.amount);
