@@ -43,7 +43,7 @@ const Ambassadors = ({ data }) => {
         <Container>
           <div className="mx-auto mb-space-10 max-w-[21.25rem] text-center md:max-w-[40rem] lg:max-w-[80rem]">
             <Tag className="mb-space-4">
-              <Trans t={t}>Develop</Trans>
+              <Trans t={t}>Contribute</Trans>
             </Tag>
             <h1 className="heading-xxl mb-space-5">
               <GlitchTitle color="purple">
@@ -94,9 +94,7 @@ const Ambassadors = ({ data }) => {
               image={getImage(data.iconBuildersClub)}
             >
               <div className="heading-xxs font-not-glitched mb-space-5 uppercase">
-                <Trans t={t}>
-                  Vega capsule / Docs / Hackathons / Coding support
-                </Trans>
+                <Trans t={t}>Docs / Hackathons / Coding support</Trans>
               </div>
               <Button
                 to="https://vegaprotocol.typeform.com/ambassadorappq4"
@@ -117,7 +115,9 @@ const Ambassadors = ({ data }) => {
               <div className="md:w-1/2">
                 <TeamTile
                   title={t('Multilingual League')}
-                  body={t('XXXXXXXX')}
+                  body={t(
+                    'Be a part of the language specialists helping to make Vega accessible to more people across the globe.'
+                  )}
                   image={getImage(data.iconMultilingualLeague)}
                 >
                   <div className="heading-xxs font-not-glitched mb-space-5 uppercase">
