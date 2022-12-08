@@ -1131,8 +1131,7 @@ type FileFieldsEnum =
   | 'childJson.YouTube'
   | 'childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'childJson.You_re_leaving_Vega'
-  | 'childJson.You_re_leaving_Vega___'
+  | 'childJson.You_re_leaving_Vega_xyz'
   | 'childJson.Your_career_in_Defi_starts_here'
   | 'childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -1853,8 +1852,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.YouTube'
   | 'childTools.icon.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'childTools.icon.childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'childTools.icon.childJson.You_re_leaving_Vega'
-  | 'childTools.icon.childJson.You_re_leaving_Vega___'
+  | 'childTools.icon.childJson.You_re_leaving_Vega_xyz'
   | 'childTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -2373,8 +2371,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.YouTube'
   | 'childTools.icon.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'childTools.icon.childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'childTools.icon.childrenJson.You_re_leaving_Vega'
-  | 'childTools.icon.childrenJson.You_re_leaving_Vega___'
+  | 'childTools.icon.childrenJson.You_re_leaving_Vega_xyz'
   | 'childTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -3030,8 +3027,7 @@ type FileFieldsEnum =
   | 'childrenJson.YouTube'
   | 'childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'childrenJson.You_re_leaving_Vega'
-  | 'childrenJson.You_re_leaving_Vega___'
+  | 'childrenJson.You_re_leaving_Vega_xyz'
   | 'childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -3755,8 +3751,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.YouTube'
   | 'childrenTools.icon.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'childrenTools.icon.childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'childrenTools.icon.childJson.You_re_leaving_Vega'
-  | 'childrenTools.icon.childJson.You_re_leaving_Vega___'
+  | 'childrenTools.icon.childJson.You_re_leaving_Vega_xyz'
   | 'childrenTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childrenTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -4275,8 +4270,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.YouTube'
   | 'childrenTools.icon.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'childrenTools.icon.childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'childrenTools.icon.childrenJson.You_re_leaving_Vega'
-  | 'childrenTools.icon.childrenJson.You_re_leaving_Vega___'
+  | 'childrenTools.icon.childrenJson.You_re_leaving_Vega_xyz'
   | 'childrenTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childrenTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -5868,8 +5862,7 @@ type Json = Node & {
   readonly YouTube: Maybe<Scalars['String']>;
   readonly You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_: Maybe<Scalars['String']>;
   readonly You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_: Maybe<Scalars['String']>;
-  readonly You_re_leaving_Vega: Maybe<Scalars['String']>;
-  readonly You_re_leaving_Vega___: Maybe<Scalars['String']>;
+  readonly You_re_leaving_Vega_xyz: Maybe<Scalars['String']>;
   readonly Your_career_in_Defi_starts_here: Maybe<Scalars['String']>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: Maybe<Scalars['String']>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: Maybe<Scalars['String']>;
@@ -6405,8 +6398,7 @@ type JsonFieldsEnum =
   | 'YouTube'
   | 'You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'You_re_leaving_Vega'
-  | 'You_re_leaving_Vega___'
+  | 'You_re_leaving_Vega_xyz'
   | 'Your_career_in_Defi_starts_here'
   | 'Your_message_was_successfully_encrypted_and_delivered_'
   | '_0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -6985,8 +6977,7 @@ type JsonFilterInput = {
   readonly YouTube: InputMaybe<StringQueryOperatorInput>;
   readonly You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_: InputMaybe<StringQueryOperatorInput>;
   readonly You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_: InputMaybe<StringQueryOperatorInput>;
-  readonly You_re_leaving_Vega: InputMaybe<StringQueryOperatorInput>;
-  readonly You_re_leaving_Vega___: InputMaybe<StringQueryOperatorInput>;
+  readonly You_re_leaving_Vega_xyz: InputMaybe<StringQueryOperatorInput>;
   readonly Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
@@ -7944,8 +7935,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.YouTube'
   | 'frontmatter.featuredImage.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'frontmatter.featuredImage.childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'frontmatter.featuredImage.childJson.You_re_leaving_Vega'
-  | 'frontmatter.featuredImage.childJson.You_re_leaving_Vega___'
+  | 'frontmatter.featuredImage.childJson.You_re_leaving_Vega_xyz'
   | 'frontmatter.featuredImage.childJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'frontmatter.featuredImage.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -8464,8 +8454,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.YouTube'
   | 'frontmatter.featuredImage.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'frontmatter.featuredImage.childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'frontmatter.featuredImage.childrenJson.You_re_leaving_Vega'
-  | 'frontmatter.featuredImage.childrenJson.You_re_leaving_Vega___'
+  | 'frontmatter.featuredImage.childrenJson.You_re_leaving_Vega_xyz'
   | 'frontmatter.featuredImage.childrenJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'frontmatter.featuredImage.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -12569,8 +12558,7 @@ type Query_jsonArgs = {
   YouTube: InputMaybe<StringQueryOperatorInput>;
   You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_: InputMaybe<StringQueryOperatorInput>;
   You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_: InputMaybe<StringQueryOperatorInput>;
-  You_re_leaving_Vega: InputMaybe<StringQueryOperatorInput>;
-  You_re_leaving_Vega___: InputMaybe<StringQueryOperatorInput>;
+  You_re_leaving_Vega_xyz: InputMaybe<StringQueryOperatorInput>;
   Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
   _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
@@ -15162,8 +15150,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.YouTube'
   | 'icon.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'icon.childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'icon.childJson.You_re_leaving_Vega'
-  | 'icon.childJson.You_re_leaving_Vega___'
+  | 'icon.childJson.You_re_leaving_Vega_xyz'
   | 'icon.childJson.Your_career_in_Defi_starts_here'
   | 'icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -15840,8 +15827,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.YouTube'
   | 'icon.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
   | 'icon.childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
-  | 'icon.childrenJson.You_re_leaving_Vega'
-  | 'icon.childrenJson.You_re_leaving_Vega___'
+  | 'icon.childrenJson.You_re_leaving_Vega_xyz'
   | 'icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'

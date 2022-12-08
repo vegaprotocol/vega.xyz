@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { navigate } from '@reach/router'
 import { graphql } from 'gatsby'
-import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
-import Link from '../../components/UI/Link'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import Seo from '../../components/Seo'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import interstitialAllowList from '../../../interstitial-allow.json'
 
 const ExternalLinkPage = () => {
   const { t, i18n } = useTranslation('page.external-link')
   const [missingTranslations, setMissingTranslations] = useState(false)
-  const [seconds, setSeconds] = useState(10)
-  const [url, setUrl] = useState(null)
+  const [seconds, setSeconds] = useState(5)
+  const [url, setUrl] = useState('')
 
   i18n.on('missingKey', (lng) => {
     setMissingTranslations(true)
@@ -20,7 +19,21 @@ const ExternalLinkPage = () => {
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
-    setUrl(urlParams.get('url'))
+    const urlValue = urlParams.get('url')
+
+    if (urlValue !== null) {
+      setUrl(urlValue)
+    }
+
+    // if no URL supplied, or not in whitelist then redirect to 404
+    if (
+      urlValue === null ||
+      !interstitialAllowList.allowed
+        .map((url) => url.replace(/\/$/, ''))
+        .includes(urlValue.replace(/\/$/, '')) // strip trailing slashes for comparison
+    ) {
+      navigate('/404')
+    }
 
     const timer = setInterval(() => {
       if (seconds === 0) {
@@ -38,7 +51,7 @@ const ExternalLinkPage = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center text-black dark:text-white">
-      <Seo title={t("You're leaving Vega...")} />
+      <Seo title={t("You're leaving Vega.xyz")} />
       <Container dataCy={'main'}>
         <div className="pt-space-4 pb-space-8 text-center md:pt-space-14 md:pb-space-14">
           <h1 className="heading-xl mx-auto mb-space-6 max-w-[45rem]">
