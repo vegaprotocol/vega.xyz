@@ -74,7 +74,7 @@
     "gatsby-plugin-netlify": "^5.0.0",
     "i18next-parser": "^6.0.0",
     "prettier": "^2.7.1",
-    "prettier-plugin-tailwind": "^2.2.12",
+    "prettier-plugin-tailwindcss": "^0.2.0",
     "tailwindcss-hyphens": "^0.1.0"
   },
   "packageManager": "yarn@3.2.1"

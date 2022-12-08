@@ -15056,15 +15056,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwind@npm:^2.2.12":
-  version: 2.2.12
-  resolution: "prettier-plugin-tailwind@npm:2.2.12"
-  dependencies:
-    tailwind-classes-sorter: ^0.2.5
+"prettier-plugin-tailwindcss@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "prettier-plugin-tailwindcss@npm:0.2.0"
   peerDependencies:
-    prettier: ^2.0.0
-    tailwindcss: "*"
-  checksum: 67608db2c315afdf267159cc99034459ef630be26b65dfc3191a49be4145594d9d802c6f1cd144b3e6c53bc3a6c3b24d9016703de093e2cb7d2ee7a4faa762d4
+    prettier: ">=2.2.0"
+  checksum: 427cd16e5c664e45965d0742e524ccf9b345bcb91a28d77bf03fa8e249eb0ecf6412ef6e91fb628b7773c8b60b1ed2c47d00211034918ddd4456f27305b9d5e7
   languageName: node
   linkType: hard
 
@@ -17695,15 +17692,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-classes-sorter@npm:^0.2.5":
-  version: 0.2.5
-  resolution: "tailwind-classes-sorter@npm:0.2.5"
-  dependencies:
-    find-up: ^5.0.0
-  checksum: 340fa14f7c1ebfb6dc82e2541a2a8102b9541666b011bb154d53761f3291f553279876cb6ffb87d30014c31e19c80888239ca4075754e650276120532524b854
-  languageName: node
-  linkType: hard
-
 "tailwindcss-hyphens@npm:^0.1.0":
   version: 0.1.0
   resolution: "tailwindcss-hyphens@npm:0.1.0"
@@ -18966,7 +18954,7 @@ __metadata:
     openpgp: ^5.3.1
     postcss: ^8.4.14
     prettier: ^2.7.1
-    prettier-plugin-tailwind: ^2.2.12
+    prettier-plugin-tailwindcss: ^0.2.0
     raw-loader: ^4.0.2
     react: ^17.0.2
     react-dom: ^17.0.2
