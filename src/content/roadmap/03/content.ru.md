@@ -1,5 +1,5 @@
 ---
-step_title: H2 2022
+step_title: 2022 H2
 title: Alpha Mainnet
 ---
 

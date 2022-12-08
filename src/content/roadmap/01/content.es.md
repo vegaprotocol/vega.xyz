@@ -1,5 +1,5 @@
 ---
-step_title: H1 2021
+step_title: 2021 H1
 title: Testnet (Fairground)
 ---
 
