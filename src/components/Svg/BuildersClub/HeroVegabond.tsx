@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const HeroVegabond = ({ className }) => {
   return (
@@ -8,7 +8,7 @@ const HeroVegabond = ({ className }) => {
       viewBox="0 0 560 615"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className ? className : ""}
+      className={className ? className : ''}
     >
       <rect
         x="160"
@@ -534,7 +534,7 @@ const HeroVegabond = ({ className }) => {
         transform="rotate(-90 400 375)"
         fill="#D9DBDD"
       />
-      <g clip-path="url(#clip0_1183_45751)">
+      <g clipPath="url(#clip0_1183_45751)">
         <path d="M267.436 239.286H259.473V335H267.436V239.286Z" fill="black" />
         <path d="M355.032 0L203.73 0V239.286H355.032V0Z" fill="white" />
         <path
@@ -665,7 +665,7 @@ const HeroVegabond = ({ className }) => {
         </clipPath>
       </defs>
     </svg>
-  );
-};
+  )
+}
 
-export default HeroVegabond;
+export default HeroVegabond

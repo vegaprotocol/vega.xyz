@@ -675,7 +675,6 @@ type FileFieldsEnum =
   | 'childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childJson.All'
   | 'childJson.Allows_for_unfair_front_running'
-  | 'childJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'childJson.Ambassador'
   | 'childJson.Ambassador_Leaderboard'
   | 'childJson.Ambassador_program'
@@ -685,7 +684,6 @@ type FileFieldsEnum =
   | 'childJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'childJson.Anti_front_running'
   | 'childJson.Apply_now'
-  | 'childJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'childJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'childJson.Articles_about_vega_from_around_the_web'
   | 'childJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -697,10 +695,10 @@ type FileFieldsEnum =
   | 'childJson.Available'
   | 'childJson.Avg__Block_Time'
   | 'childJson.Be_a_Vega__Ambassador'
+  | 'childJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'childJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'childJson.Be_as_good_as_CeFi'
   | 'childJson.Be_better_than_CeFi'
-  | 'childJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'childJson.Benefits_of_being_an_ambassador'
   | 'childJson.Block_Explorer'
   | 'childJson.Blockchain_derivatives'
@@ -713,9 +711,7 @@ type FileFieldsEnum =
   | 'childJson.Bug_bounties'
   | 'childJson.Build'
   | 'childJson.Build___send_commands'
-  | 'childJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'childJson.Builders_Club'
-  | 'childJson.Builders_Club__Technical_'
   | 'childJson.Builders_club'
   | 'childJson.Building_on_Vega_Parts_I_and_II'
   | 'childJson.Built_for_fairness_from_the_ground_up'
@@ -737,7 +733,7 @@ type FileFieldsEnum =
   | 'childJson.Completely_decentralised_network'
   | 'childJson.Connect'
   | 'childJson.Connect_to_networks'
-  | 'childJson.Content_Collective__Non_Technical_'
+  | 'childJson.Content_collective'
   | 'childJson.Contribute'
   | 'childJson.Contribute_and_get_rewarded'
   | 'childJson.Contribute_to_Vega'
@@ -762,12 +758,14 @@ type FileFieldsEnum =
   | 'childJson.Develop'
   | 'childJson.Develop_on_Vega'
   | 'childJson.Develop_with_Vega'
+  | 'childJson.Developer_Bounties'
   | 'childJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'childJson.Discord'
   | 'childJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'childJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'childJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'childJson.Docs'
+  | 'childJson.Docs___Hackathons___Coding_support'
   | 'childJson.Documentation'
   | 'childJson.Download_desktop_app__Mainnet_'
   | 'childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -816,7 +814,6 @@ type FileFieldsEnum =
   | 'childJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'childJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'childJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'childJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'childJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'childJson.Formalise_Proposal'
   | 'childJson.Formalise_your_proposal'
@@ -826,7 +823,6 @@ type FileFieldsEnum =
   | 'childJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'childJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'childJson.Generalist_tool___A_workaround_for_trading'
-  | 'childJson.Get_Started'
   | 'childJson.Get_Swag'
   | 'childJson.Get__VEGA_tokens'
   | 'childJson.Get_a_Vega_Wallet'
@@ -835,6 +831,7 @@ type FileFieldsEnum =
   | 'childJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'childJson.Get_started'
   | 'childJson.Get_started_voting'
+  | 'childJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'childJson.Get_the_CLI_app'
   | 'childJson.Get_the_Vega_Wallet'
   | 'childJson.Get_the_code'
@@ -854,7 +851,6 @@ type FileFieldsEnum =
   | 'childJson.Governance_lifecycle'
   | 'childJson.Governance_on_Vega'
   | 'childJson.Governance_tools'
-  | 'childJson.GraphQL'
   | 'childJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'childJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'childJson.Have_an_idea_for_an_event_or_talk_'
@@ -879,16 +875,18 @@ type FileFieldsEnum =
   | 'childJson.Incentives___bounties'
   | 'childJson.Incentives_and_bounties'
   | 'childJson.Insights'
-  | 'childJson.Interested_in_joining_'
+  | 'childJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'childJson.Isolate_keys'
   | 'childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childJson.Join'
-  | 'childJson.Join_the_Builders_Club'
+  | 'childJson.Join_a_team'
   | 'childJson.Join_the_Vega_community'
   | 'childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'childJson.Join_the_builders_club'
   | 'childJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'childJson.Join_the_community'
   | 'childJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'childJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'childJson.Join_us_on_Discord'
   | 'childJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'childJson.Key_Vega_Concepts'
@@ -909,8 +907,7 @@ type FileFieldsEnum =
   | 'childJson.Learn_more'
   | 'childJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'childJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'childJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'childJson.Limited_edition_Vega_swag'
+  | 'childJson.Limited_Edition_Vega_swag'
   | 'childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childJson.Load_more___'
   | 'childJson.Loading___'
@@ -925,12 +922,11 @@ type FileFieldsEnum =
   | 'childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'childJson.Medium'
   | 'childJson.Meet'
-  | 'childJson.Meet_on_Discord'
   | 'childJson.Meet_our_contributors'
   | 'childJson.Meet_us_on_Discord'
   | 'childJson.More_info'
   | 'childJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'childJson.Multilingual_League__Translations_'
+  | 'childJson.Multilingual_League'
   | 'childJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'childJson.Native_liquidity_provision'
   | 'childJson.Need_the_command_line__CLI__wallet_app_'
@@ -949,7 +945,6 @@ type FileFieldsEnum =
   | 'childJson.Optimised_for_high_capital_efficiency'
   | 'childJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'childJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'childJson.Overview'
   | 'childJson.PGP_Key'
   | 'childJson.Papers'
   | 'childJson.Papers___Research'
@@ -969,6 +964,7 @@ type FileFieldsEnum =
   | 'childJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'childJson.Previous'
   | 'childJson.Priority_consideration_on_protocol_feedback'
+  | 'childJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'childJson.Privacy___Cookie_Policy'
   | 'childJson.Propose_a_futures_market_on_any_underlying_'
   | 'childJson.Propose_a_market_on_any_underlying_'
@@ -978,7 +974,6 @@ type FileFieldsEnum =
   | 'childJson.Purpose_built_bespoke_blockchain'
   | 'childJson.Purpose_built_blockchain'
   | 'childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'childJson.REST'
   | 'childJson.Rank'
   | 'childJson.Read_all_Insights'
   | 'childJson.Read_more_about_'
@@ -1003,10 +998,11 @@ type FileFieldsEnum =
   | 'childJson.Scope'
   | 'childJson.See_all_Tweets'
   | 'childJson.See_more'
-  | 'childJson.See_the_Roadmap'
+  | 'childJson.See_the_roadmap'
   | 'childJson.See_what_markets_already_exist__Testnet_'
   | 'childJson.See_what_markets_exist_already__Testnet_'
-  | 'childJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'childJson.See_what_s_going_on'
+  | 'childJson.See_whats_s_going_on'
   | 'childJson.Send_Message'
   | 'childJson.Sense_check'
   | 'childJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -1043,7 +1039,6 @@ type FileFieldsEnum =
   | 'childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'childJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'childJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'childJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'childJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -1061,6 +1056,7 @@ type FileFieldsEnum =
   | 'childJson.Trading'
   | 'childJson.Translate'
   | 'childJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'childJson.Tweets___Translations___Editorials___Infographics'
   | 'childJson.Twitch'
   | 'childJson.Twitter'
   | 'childJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -1083,7 +1079,7 @@ type FileFieldsEnum =
   | 'childJson.Vega_Community'
   | 'childJson.Vega_Governance'
   | 'childJson.Vega_Wallet'
-  | 'childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'childJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -1110,7 +1106,6 @@ type FileFieldsEnum =
   | 'childJson.Vote_for_proposals__Testnet_'
   | 'childJson.Vote_on_proposals'
   | 'childJson.Vote_to_exercise_your_influence'
-  | 'childJson.Wallet'
   | 'childJson.Wallets'
   | 'childJson.Want_Swag_'
   | 'childJson.Want_to_add_something_to_this_list_'
@@ -1124,19 +1119,14 @@ type FileFieldsEnum =
   | 'childJson.When_'
   | 'childJson.Where_next_'
   | 'childJson.Where_we_are'
-  | 'childJson.Which_Vega__Team_would_you_rally_'
   | 'childJson.Whitepaper'
   | 'childJson.With_the_wallet_you_can_'
   | 'childJson.YouTube'
   | 'childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'childJson.Your_career_in_Defi_starts_here'
   | 'childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childJson._0_Click_here_to_contribute__0__'
-  | 'childJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'childJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'childJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'childJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'childJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'childJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
@@ -1158,7 +1148,6 @@ type FileFieldsEnum =
   | 'childJson.children.internal.type'
   | 'childJson.children.parent.children'
   | 'childJson.children.parent.id'
-  | 'childJson.gRPC'
   | 'childJson.governance'
   | 'childJson.id'
   | 'childJson.internal.content'
@@ -1394,7 +1383,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childTools.icon.childJson.All'
   | 'childTools.icon.childJson.Allows_for_unfair_front_running'
-  | 'childTools.icon.childJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'childTools.icon.childJson.Ambassador'
   | 'childTools.icon.childJson.Ambassador_Leaderboard'
   | 'childTools.icon.childJson.Ambassador_program'
@@ -1404,7 +1392,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'childTools.icon.childJson.Anti_front_running'
   | 'childTools.icon.childJson.Apply_now'
-  | 'childTools.icon.childJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'childTools.icon.childJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'childTools.icon.childJson.Articles_about_vega_from_around_the_web'
   | 'childTools.icon.childJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -1416,10 +1403,10 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Available'
   | 'childTools.icon.childJson.Avg__Block_Time'
   | 'childTools.icon.childJson.Be_a_Vega__Ambassador'
+  | 'childTools.icon.childJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'childTools.icon.childJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'childTools.icon.childJson.Be_as_good_as_CeFi'
   | 'childTools.icon.childJson.Be_better_than_CeFi'
-  | 'childTools.icon.childJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'childTools.icon.childJson.Benefits_of_being_an_ambassador'
   | 'childTools.icon.childJson.Block_Explorer'
   | 'childTools.icon.childJson.Blockchain_derivatives'
@@ -1432,9 +1419,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Bug_bounties'
   | 'childTools.icon.childJson.Build'
   | 'childTools.icon.childJson.Build___send_commands'
-  | 'childTools.icon.childJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'childTools.icon.childJson.Builders_Club'
-  | 'childTools.icon.childJson.Builders_Club__Technical_'
   | 'childTools.icon.childJson.Builders_club'
   | 'childTools.icon.childJson.Building_on_Vega_Parts_I_and_II'
   | 'childTools.icon.childJson.Built_for_fairness_from_the_ground_up'
@@ -1456,7 +1441,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Completely_decentralised_network'
   | 'childTools.icon.childJson.Connect'
   | 'childTools.icon.childJson.Connect_to_networks'
-  | 'childTools.icon.childJson.Content_Collective__Non_Technical_'
+  | 'childTools.icon.childJson.Content_collective'
   | 'childTools.icon.childJson.Contribute'
   | 'childTools.icon.childJson.Contribute_and_get_rewarded'
   | 'childTools.icon.childJson.Contribute_to_Vega'
@@ -1481,12 +1466,14 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Develop'
   | 'childTools.icon.childJson.Develop_on_Vega'
   | 'childTools.icon.childJson.Develop_with_Vega'
+  | 'childTools.icon.childJson.Developer_Bounties'
   | 'childTools.icon.childJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'childTools.icon.childJson.Discord'
   | 'childTools.icon.childJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'childTools.icon.childJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'childTools.icon.childJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'childTools.icon.childJson.Docs'
+  | 'childTools.icon.childJson.Docs___Hackathons___Coding_support'
   | 'childTools.icon.childJson.Documentation'
   | 'childTools.icon.childJson.Download_desktop_app__Mainnet_'
   | 'childTools.icon.childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -1535,7 +1522,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'childTools.icon.childJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'childTools.icon.childJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'childTools.icon.childJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'childTools.icon.childJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'childTools.icon.childJson.Formalise_Proposal'
   | 'childTools.icon.childJson.Formalise_your_proposal'
@@ -1545,7 +1531,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'childTools.icon.childJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'childTools.icon.childJson.Generalist_tool___A_workaround_for_trading'
-  | 'childTools.icon.childJson.Get_Started'
   | 'childTools.icon.childJson.Get_Swag'
   | 'childTools.icon.childJson.Get__VEGA_tokens'
   | 'childTools.icon.childJson.Get_a_Vega_Wallet'
@@ -1554,6 +1539,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'childTools.icon.childJson.Get_started'
   | 'childTools.icon.childJson.Get_started_voting'
+  | 'childTools.icon.childJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'childTools.icon.childJson.Get_the_CLI_app'
   | 'childTools.icon.childJson.Get_the_Vega_Wallet'
   | 'childTools.icon.childJson.Get_the_code'
@@ -1573,7 +1559,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Governance_lifecycle'
   | 'childTools.icon.childJson.Governance_on_Vega'
   | 'childTools.icon.childJson.Governance_tools'
-  | 'childTools.icon.childJson.GraphQL'
   | 'childTools.icon.childJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'childTools.icon.childJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'childTools.icon.childJson.Have_an_idea_for_an_event_or_talk_'
@@ -1598,16 +1583,18 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Incentives___bounties'
   | 'childTools.icon.childJson.Incentives_and_bounties'
   | 'childTools.icon.childJson.Insights'
-  | 'childTools.icon.childJson.Interested_in_joining_'
+  | 'childTools.icon.childJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'childTools.icon.childJson.Isolate_keys'
   | 'childTools.icon.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childTools.icon.childJson.Join'
-  | 'childTools.icon.childJson.Join_the_Builders_Club'
+  | 'childTools.icon.childJson.Join_a_team'
   | 'childTools.icon.childJson.Join_the_Vega_community'
   | 'childTools.icon.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'childTools.icon.childJson.Join_the_builders_club'
   | 'childTools.icon.childJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'childTools.icon.childJson.Join_the_community'
   | 'childTools.icon.childJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'childTools.icon.childJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'childTools.icon.childJson.Join_us_on_Discord'
   | 'childTools.icon.childJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'childTools.icon.childJson.Key_Vega_Concepts'
@@ -1628,8 +1615,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Learn_more'
   | 'childTools.icon.childJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'childTools.icon.childJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'childTools.icon.childJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'childTools.icon.childJson.Limited_edition_Vega_swag'
+  | 'childTools.icon.childJson.Limited_Edition_Vega_swag'
   | 'childTools.icon.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childTools.icon.childJson.Load_more___'
   | 'childTools.icon.childJson.Loading___'
@@ -1644,12 +1630,11 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'childTools.icon.childJson.Medium'
   | 'childTools.icon.childJson.Meet'
-  | 'childTools.icon.childJson.Meet_on_Discord'
   | 'childTools.icon.childJson.Meet_our_contributors'
   | 'childTools.icon.childJson.Meet_us_on_Discord'
   | 'childTools.icon.childJson.More_info'
   | 'childTools.icon.childJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'childTools.icon.childJson.Multilingual_League__Translations_'
+  | 'childTools.icon.childJson.Multilingual_League'
   | 'childTools.icon.childJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'childTools.icon.childJson.Native_liquidity_provision'
   | 'childTools.icon.childJson.Need_the_command_line__CLI__wallet_app_'
@@ -1668,7 +1653,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Optimised_for_high_capital_efficiency'
   | 'childTools.icon.childJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'childTools.icon.childJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'childTools.icon.childJson.Overview'
   | 'childTools.icon.childJson.PGP_Key'
   | 'childTools.icon.childJson.Papers'
   | 'childTools.icon.childJson.Papers___Research'
@@ -1688,6 +1672,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'childTools.icon.childJson.Previous'
   | 'childTools.icon.childJson.Priority_consideration_on_protocol_feedback'
+  | 'childTools.icon.childJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'childTools.icon.childJson.Privacy___Cookie_Policy'
   | 'childTools.icon.childJson.Propose_a_futures_market_on_any_underlying_'
   | 'childTools.icon.childJson.Propose_a_market_on_any_underlying_'
@@ -1697,7 +1682,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Purpose_built_bespoke_blockchain'
   | 'childTools.icon.childJson.Purpose_built_blockchain'
   | 'childTools.icon.childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'childTools.icon.childJson.REST'
   | 'childTools.icon.childJson.Rank'
   | 'childTools.icon.childJson.Read_all_Insights'
   | 'childTools.icon.childJson.Read_more_about_'
@@ -1722,10 +1706,11 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Scope'
   | 'childTools.icon.childJson.See_all_Tweets'
   | 'childTools.icon.childJson.See_more'
-  | 'childTools.icon.childJson.See_the_Roadmap'
+  | 'childTools.icon.childJson.See_the_roadmap'
   | 'childTools.icon.childJson.See_what_markets_already_exist__Testnet_'
   | 'childTools.icon.childJson.See_what_markets_exist_already__Testnet_'
-  | 'childTools.icon.childJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'childTools.icon.childJson.See_what_s_going_on'
+  | 'childTools.icon.childJson.See_whats_s_going_on'
   | 'childTools.icon.childJson.Send_Message'
   | 'childTools.icon.childJson.Sense_check'
   | 'childTools.icon.childJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -1762,7 +1747,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childTools.icon.childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childTools.icon.childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'childTools.icon.childJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'childTools.icon.childJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'childTools.icon.childJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'childTools.icon.childJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -1780,6 +1764,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Trading'
   | 'childTools.icon.childJson.Translate'
   | 'childTools.icon.childJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'childTools.icon.childJson.Tweets___Translations___Editorials___Infographics'
   | 'childTools.icon.childJson.Twitch'
   | 'childTools.icon.childJson.Twitter'
   | 'childTools.icon.childJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -1802,7 +1787,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Vega_Community'
   | 'childTools.icon.childJson.Vega_Governance'
   | 'childTools.icon.childJson.Vega_Wallet'
-  | 'childTools.icon.childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'childTools.icon.childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'childTools.icon.childJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'childTools.icon.childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childTools.icon.childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -1829,7 +1814,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Vote_for_proposals__Testnet_'
   | 'childTools.icon.childJson.Vote_on_proposals'
   | 'childTools.icon.childJson.Vote_to_exercise_your_influence'
-  | 'childTools.icon.childJson.Wallet'
   | 'childTools.icon.childJson.Wallets'
   | 'childTools.icon.childJson.Want_Swag_'
   | 'childTools.icon.childJson.Want_to_add_something_to_this_list_'
@@ -1843,26 +1827,20 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.When_'
   | 'childTools.icon.childJson.Where_next_'
   | 'childTools.icon.childJson.Where_we_are'
-  | 'childTools.icon.childJson.Which_Vega__Team_would_you_rally_'
   | 'childTools.icon.childJson.Whitepaper'
   | 'childTools.icon.childJson.With_the_wallet_you_can_'
   | 'childTools.icon.childJson.YouTube'
   | 'childTools.icon.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'childTools.icon.childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'childTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childTools.icon.childJson._0_Click_here_to_contribute__0__'
-  | 'childTools.icon.childJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'childTools.icon.childJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'childTools.icon.childJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'childTools.icon.childJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'childTools.icon.childJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'childTools.icon.childJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
   | 'childTools.icon.childJson._p_Update_your_proposal_topic_based_on_the_feedback_received__and_ensure_you_have_included_the_rationale_and_specifics_of_the_the_market__including_the_data__JSON_or_similar__that_would_be_submitted_on_chain_i_e__market_name_and_code__Oracle___data_source_the_market_will_use_for_settlement__and_risk_model__to_calculate_margin_requirements_and_ensure_safe_trading____p__p_Update_the_tag_and_invite_debate_and_discussion_to_amend_the_proposal_until_it_reaches_a_final_state__ready_to_submit___p_'
   | 'childTools.icon.childJson._xminutesxxxminutexread'
   | 'childTools.icon.childJson.children'
-  | 'childTools.icon.childJson.gRPC'
   | 'childTools.icon.childJson.governance'
   | 'childTools.icon.childJson.id'
   | 'childTools.icon.childJson.network'
@@ -1911,7 +1889,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childTools.icon.childrenJson.All'
   | 'childTools.icon.childrenJson.Allows_for_unfair_front_running'
-  | 'childTools.icon.childrenJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'childTools.icon.childrenJson.Ambassador'
   | 'childTools.icon.childrenJson.Ambassador_Leaderboard'
   | 'childTools.icon.childrenJson.Ambassador_program'
@@ -1921,7 +1898,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'childTools.icon.childrenJson.Anti_front_running'
   | 'childTools.icon.childrenJson.Apply_now'
-  | 'childTools.icon.childrenJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'childTools.icon.childrenJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'childTools.icon.childrenJson.Articles_about_vega_from_around_the_web'
   | 'childTools.icon.childrenJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -1933,10 +1909,10 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Available'
   | 'childTools.icon.childrenJson.Avg__Block_Time'
   | 'childTools.icon.childrenJson.Be_a_Vega__Ambassador'
+  | 'childTools.icon.childrenJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'childTools.icon.childrenJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'childTools.icon.childrenJson.Be_as_good_as_CeFi'
   | 'childTools.icon.childrenJson.Be_better_than_CeFi'
-  | 'childTools.icon.childrenJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'childTools.icon.childrenJson.Benefits_of_being_an_ambassador'
   | 'childTools.icon.childrenJson.Block_Explorer'
   | 'childTools.icon.childrenJson.Blockchain_derivatives'
@@ -1949,9 +1925,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Bug_bounties'
   | 'childTools.icon.childrenJson.Build'
   | 'childTools.icon.childrenJson.Build___send_commands'
-  | 'childTools.icon.childrenJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'childTools.icon.childrenJson.Builders_Club'
-  | 'childTools.icon.childrenJson.Builders_Club__Technical_'
   | 'childTools.icon.childrenJson.Builders_club'
   | 'childTools.icon.childrenJson.Building_on_Vega_Parts_I_and_II'
   | 'childTools.icon.childrenJson.Built_for_fairness_from_the_ground_up'
@@ -1973,7 +1947,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Completely_decentralised_network'
   | 'childTools.icon.childrenJson.Connect'
   | 'childTools.icon.childrenJson.Connect_to_networks'
-  | 'childTools.icon.childrenJson.Content_Collective__Non_Technical_'
+  | 'childTools.icon.childrenJson.Content_collective'
   | 'childTools.icon.childrenJson.Contribute'
   | 'childTools.icon.childrenJson.Contribute_and_get_rewarded'
   | 'childTools.icon.childrenJson.Contribute_to_Vega'
@@ -1998,12 +1972,14 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Develop'
   | 'childTools.icon.childrenJson.Develop_on_Vega'
   | 'childTools.icon.childrenJson.Develop_with_Vega'
+  | 'childTools.icon.childrenJson.Developer_Bounties'
   | 'childTools.icon.childrenJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'childTools.icon.childrenJson.Discord'
   | 'childTools.icon.childrenJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'childTools.icon.childrenJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'childTools.icon.childrenJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'childTools.icon.childrenJson.Docs'
+  | 'childTools.icon.childrenJson.Docs___Hackathons___Coding_support'
   | 'childTools.icon.childrenJson.Documentation'
   | 'childTools.icon.childrenJson.Download_desktop_app__Mainnet_'
   | 'childTools.icon.childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -2052,7 +2028,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'childTools.icon.childrenJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'childTools.icon.childrenJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'childTools.icon.childrenJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'childTools.icon.childrenJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'childTools.icon.childrenJson.Formalise_Proposal'
   | 'childTools.icon.childrenJson.Formalise_your_proposal'
@@ -2062,7 +2037,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'childTools.icon.childrenJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'childTools.icon.childrenJson.Generalist_tool___A_workaround_for_trading'
-  | 'childTools.icon.childrenJson.Get_Started'
   | 'childTools.icon.childrenJson.Get_Swag'
   | 'childTools.icon.childrenJson.Get__VEGA_tokens'
   | 'childTools.icon.childrenJson.Get_a_Vega_Wallet'
@@ -2071,6 +2045,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'childTools.icon.childrenJson.Get_started'
   | 'childTools.icon.childrenJson.Get_started_voting'
+  | 'childTools.icon.childrenJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'childTools.icon.childrenJson.Get_the_CLI_app'
   | 'childTools.icon.childrenJson.Get_the_Vega_Wallet'
   | 'childTools.icon.childrenJson.Get_the_code'
@@ -2090,7 +2065,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Governance_lifecycle'
   | 'childTools.icon.childrenJson.Governance_on_Vega'
   | 'childTools.icon.childrenJson.Governance_tools'
-  | 'childTools.icon.childrenJson.GraphQL'
   | 'childTools.icon.childrenJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'childTools.icon.childrenJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'childTools.icon.childrenJson.Have_an_idea_for_an_event_or_talk_'
@@ -2115,16 +2089,18 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Incentives___bounties'
   | 'childTools.icon.childrenJson.Incentives_and_bounties'
   | 'childTools.icon.childrenJson.Insights'
-  | 'childTools.icon.childrenJson.Interested_in_joining_'
+  | 'childTools.icon.childrenJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'childTools.icon.childrenJson.Isolate_keys'
   | 'childTools.icon.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childTools.icon.childrenJson.Join'
-  | 'childTools.icon.childrenJson.Join_the_Builders_Club'
+  | 'childTools.icon.childrenJson.Join_a_team'
   | 'childTools.icon.childrenJson.Join_the_Vega_community'
   | 'childTools.icon.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'childTools.icon.childrenJson.Join_the_builders_club'
   | 'childTools.icon.childrenJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'childTools.icon.childrenJson.Join_the_community'
   | 'childTools.icon.childrenJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'childTools.icon.childrenJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'childTools.icon.childrenJson.Join_us_on_Discord'
   | 'childTools.icon.childrenJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'childTools.icon.childrenJson.Key_Vega_Concepts'
@@ -2145,8 +2121,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Learn_more'
   | 'childTools.icon.childrenJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'childTools.icon.childrenJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'childTools.icon.childrenJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'childTools.icon.childrenJson.Limited_edition_Vega_swag'
+  | 'childTools.icon.childrenJson.Limited_Edition_Vega_swag'
   | 'childTools.icon.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childTools.icon.childrenJson.Load_more___'
   | 'childTools.icon.childrenJson.Loading___'
@@ -2161,12 +2136,11 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'childTools.icon.childrenJson.Medium'
   | 'childTools.icon.childrenJson.Meet'
-  | 'childTools.icon.childrenJson.Meet_on_Discord'
   | 'childTools.icon.childrenJson.Meet_our_contributors'
   | 'childTools.icon.childrenJson.Meet_us_on_Discord'
   | 'childTools.icon.childrenJson.More_info'
   | 'childTools.icon.childrenJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'childTools.icon.childrenJson.Multilingual_League__Translations_'
+  | 'childTools.icon.childrenJson.Multilingual_League'
   | 'childTools.icon.childrenJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'childTools.icon.childrenJson.Native_liquidity_provision'
   | 'childTools.icon.childrenJson.Need_the_command_line__CLI__wallet_app_'
@@ -2185,7 +2159,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Optimised_for_high_capital_efficiency'
   | 'childTools.icon.childrenJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'childTools.icon.childrenJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'childTools.icon.childrenJson.Overview'
   | 'childTools.icon.childrenJson.PGP_Key'
   | 'childTools.icon.childrenJson.Papers'
   | 'childTools.icon.childrenJson.Papers___Research'
@@ -2205,6 +2178,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'childTools.icon.childrenJson.Previous'
   | 'childTools.icon.childrenJson.Priority_consideration_on_protocol_feedback'
+  | 'childTools.icon.childrenJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'childTools.icon.childrenJson.Privacy___Cookie_Policy'
   | 'childTools.icon.childrenJson.Propose_a_futures_market_on_any_underlying_'
   | 'childTools.icon.childrenJson.Propose_a_market_on_any_underlying_'
@@ -2214,7 +2188,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Purpose_built_bespoke_blockchain'
   | 'childTools.icon.childrenJson.Purpose_built_blockchain'
   | 'childTools.icon.childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'childTools.icon.childrenJson.REST'
   | 'childTools.icon.childrenJson.Rank'
   | 'childTools.icon.childrenJson.Read_all_Insights'
   | 'childTools.icon.childrenJson.Read_more_about_'
@@ -2239,10 +2212,11 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Scope'
   | 'childTools.icon.childrenJson.See_all_Tweets'
   | 'childTools.icon.childrenJson.See_more'
-  | 'childTools.icon.childrenJson.See_the_Roadmap'
+  | 'childTools.icon.childrenJson.See_the_roadmap'
   | 'childTools.icon.childrenJson.See_what_markets_already_exist__Testnet_'
   | 'childTools.icon.childrenJson.See_what_markets_exist_already__Testnet_'
-  | 'childTools.icon.childrenJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'childTools.icon.childrenJson.See_what_s_going_on'
+  | 'childTools.icon.childrenJson.See_whats_s_going_on'
   | 'childTools.icon.childrenJson.Send_Message'
   | 'childTools.icon.childrenJson.Sense_check'
   | 'childTools.icon.childrenJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -2279,7 +2253,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childTools.icon.childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childTools.icon.childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'childTools.icon.childrenJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'childTools.icon.childrenJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'childTools.icon.childrenJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'childTools.icon.childrenJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -2297,6 +2270,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Trading'
   | 'childTools.icon.childrenJson.Translate'
   | 'childTools.icon.childrenJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'childTools.icon.childrenJson.Tweets___Translations___Editorials___Infographics'
   | 'childTools.icon.childrenJson.Twitch'
   | 'childTools.icon.childrenJson.Twitter'
   | 'childTools.icon.childrenJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -2319,7 +2293,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Vega_Community'
   | 'childTools.icon.childrenJson.Vega_Governance'
   | 'childTools.icon.childrenJson.Vega_Wallet'
-  | 'childTools.icon.childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'childTools.icon.childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'childTools.icon.childrenJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'childTools.icon.childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childTools.icon.childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -2346,7 +2320,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Vote_for_proposals__Testnet_'
   | 'childTools.icon.childrenJson.Vote_on_proposals'
   | 'childTools.icon.childrenJson.Vote_to_exercise_your_influence'
-  | 'childTools.icon.childrenJson.Wallet'
   | 'childTools.icon.childrenJson.Wallets'
   | 'childTools.icon.childrenJson.Want_Swag_'
   | 'childTools.icon.childrenJson.Want_to_add_something_to_this_list_'
@@ -2360,26 +2333,20 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.When_'
   | 'childTools.icon.childrenJson.Where_next_'
   | 'childTools.icon.childrenJson.Where_we_are'
-  | 'childTools.icon.childrenJson.Which_Vega__Team_would_you_rally_'
   | 'childTools.icon.childrenJson.Whitepaper'
   | 'childTools.icon.childrenJson.With_the_wallet_you_can_'
   | 'childTools.icon.childrenJson.YouTube'
   | 'childTools.icon.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'childTools.icon.childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'childTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childTools.icon.childrenJson._0_Click_here_to_contribute__0__'
-  | 'childTools.icon.childrenJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'childTools.icon.childrenJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'childTools.icon.childrenJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'childTools.icon.childrenJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'childTools.icon.childrenJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'childTools.icon.childrenJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
   | 'childTools.icon.childrenJson._p_Update_your_proposal_topic_based_on_the_feedback_received__and_ensure_you_have_included_the_rationale_and_specifics_of_the_the_market__including_the_data__JSON_or_similar__that_would_be_submitted_on_chain_i_e__market_name_and_code__Oracle___data_source_the_market_will_use_for_settlement__and_risk_model__to_calculate_margin_requirements_and_ensure_safe_trading____p__p_Update_the_tag_and_invite_debate_and_discussion_to_amend_the_proposal_until_it_reaches_a_final_state__ready_to_submit___p_'
   | 'childTools.icon.childrenJson._xminutesxxxminutexread'
   | 'childTools.icon.childrenJson.children'
-  | 'childTools.icon.childrenJson.gRPC'
   | 'childTools.icon.childrenJson.governance'
   | 'childTools.icon.childrenJson.id'
   | 'childTools.icon.childrenJson.network'
@@ -2565,7 +2532,6 @@ type FileFieldsEnum =
   | 'childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childrenJson.All'
   | 'childrenJson.Allows_for_unfair_front_running'
-  | 'childrenJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'childrenJson.Ambassador'
   | 'childrenJson.Ambassador_Leaderboard'
   | 'childrenJson.Ambassador_program'
@@ -2575,7 +2541,6 @@ type FileFieldsEnum =
   | 'childrenJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'childrenJson.Anti_front_running'
   | 'childrenJson.Apply_now'
-  | 'childrenJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'childrenJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'childrenJson.Articles_about_vega_from_around_the_web'
   | 'childrenJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -2587,10 +2552,10 @@ type FileFieldsEnum =
   | 'childrenJson.Available'
   | 'childrenJson.Avg__Block_Time'
   | 'childrenJson.Be_a_Vega__Ambassador'
+  | 'childrenJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'childrenJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'childrenJson.Be_as_good_as_CeFi'
   | 'childrenJson.Be_better_than_CeFi'
-  | 'childrenJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'childrenJson.Benefits_of_being_an_ambassador'
   | 'childrenJson.Block_Explorer'
   | 'childrenJson.Blockchain_derivatives'
@@ -2603,9 +2568,7 @@ type FileFieldsEnum =
   | 'childrenJson.Bug_bounties'
   | 'childrenJson.Build'
   | 'childrenJson.Build___send_commands'
-  | 'childrenJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'childrenJson.Builders_Club'
-  | 'childrenJson.Builders_Club__Technical_'
   | 'childrenJson.Builders_club'
   | 'childrenJson.Building_on_Vega_Parts_I_and_II'
   | 'childrenJson.Built_for_fairness_from_the_ground_up'
@@ -2627,7 +2590,7 @@ type FileFieldsEnum =
   | 'childrenJson.Completely_decentralised_network'
   | 'childrenJson.Connect'
   | 'childrenJson.Connect_to_networks'
-  | 'childrenJson.Content_Collective__Non_Technical_'
+  | 'childrenJson.Content_collective'
   | 'childrenJson.Contribute'
   | 'childrenJson.Contribute_and_get_rewarded'
   | 'childrenJson.Contribute_to_Vega'
@@ -2652,12 +2615,14 @@ type FileFieldsEnum =
   | 'childrenJson.Develop'
   | 'childrenJson.Develop_on_Vega'
   | 'childrenJson.Develop_with_Vega'
+  | 'childrenJson.Developer_Bounties'
   | 'childrenJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'childrenJson.Discord'
   | 'childrenJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'childrenJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'childrenJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'childrenJson.Docs'
+  | 'childrenJson.Docs___Hackathons___Coding_support'
   | 'childrenJson.Documentation'
   | 'childrenJson.Download_desktop_app__Mainnet_'
   | 'childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -2706,7 +2671,6 @@ type FileFieldsEnum =
   | 'childrenJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'childrenJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'childrenJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'childrenJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'childrenJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'childrenJson.Formalise_Proposal'
   | 'childrenJson.Formalise_your_proposal'
@@ -2716,7 +2680,6 @@ type FileFieldsEnum =
   | 'childrenJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'childrenJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'childrenJson.Generalist_tool___A_workaround_for_trading'
-  | 'childrenJson.Get_Started'
   | 'childrenJson.Get_Swag'
   | 'childrenJson.Get__VEGA_tokens'
   | 'childrenJson.Get_a_Vega_Wallet'
@@ -2725,6 +2688,7 @@ type FileFieldsEnum =
   | 'childrenJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'childrenJson.Get_started'
   | 'childrenJson.Get_started_voting'
+  | 'childrenJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'childrenJson.Get_the_CLI_app'
   | 'childrenJson.Get_the_Vega_Wallet'
   | 'childrenJson.Get_the_code'
@@ -2744,7 +2708,6 @@ type FileFieldsEnum =
   | 'childrenJson.Governance_lifecycle'
   | 'childrenJson.Governance_on_Vega'
   | 'childrenJson.Governance_tools'
-  | 'childrenJson.GraphQL'
   | 'childrenJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'childrenJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'childrenJson.Have_an_idea_for_an_event_or_talk_'
@@ -2769,16 +2732,18 @@ type FileFieldsEnum =
   | 'childrenJson.Incentives___bounties'
   | 'childrenJson.Incentives_and_bounties'
   | 'childrenJson.Insights'
-  | 'childrenJson.Interested_in_joining_'
+  | 'childrenJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'childrenJson.Isolate_keys'
   | 'childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenJson.Join'
-  | 'childrenJson.Join_the_Builders_Club'
+  | 'childrenJson.Join_a_team'
   | 'childrenJson.Join_the_Vega_community'
   | 'childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'childrenJson.Join_the_builders_club'
   | 'childrenJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'childrenJson.Join_the_community'
   | 'childrenJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'childrenJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'childrenJson.Join_us_on_Discord'
   | 'childrenJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'childrenJson.Key_Vega_Concepts'
@@ -2799,8 +2764,7 @@ type FileFieldsEnum =
   | 'childrenJson.Learn_more'
   | 'childrenJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'childrenJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'childrenJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'childrenJson.Limited_edition_Vega_swag'
+  | 'childrenJson.Limited_Edition_Vega_swag'
   | 'childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenJson.Load_more___'
   | 'childrenJson.Loading___'
@@ -2815,12 +2779,11 @@ type FileFieldsEnum =
   | 'childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'childrenJson.Medium'
   | 'childrenJson.Meet'
-  | 'childrenJson.Meet_on_Discord'
   | 'childrenJson.Meet_our_contributors'
   | 'childrenJson.Meet_us_on_Discord'
   | 'childrenJson.More_info'
   | 'childrenJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'childrenJson.Multilingual_League__Translations_'
+  | 'childrenJson.Multilingual_League'
   | 'childrenJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'childrenJson.Native_liquidity_provision'
   | 'childrenJson.Need_the_command_line__CLI__wallet_app_'
@@ -2839,7 +2802,6 @@ type FileFieldsEnum =
   | 'childrenJson.Optimised_for_high_capital_efficiency'
   | 'childrenJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'childrenJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'childrenJson.Overview'
   | 'childrenJson.PGP_Key'
   | 'childrenJson.Papers'
   | 'childrenJson.Papers___Research'
@@ -2859,6 +2821,7 @@ type FileFieldsEnum =
   | 'childrenJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'childrenJson.Previous'
   | 'childrenJson.Priority_consideration_on_protocol_feedback'
+  | 'childrenJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'childrenJson.Privacy___Cookie_Policy'
   | 'childrenJson.Propose_a_futures_market_on_any_underlying_'
   | 'childrenJson.Propose_a_market_on_any_underlying_'
@@ -2868,7 +2831,6 @@ type FileFieldsEnum =
   | 'childrenJson.Purpose_built_bespoke_blockchain'
   | 'childrenJson.Purpose_built_blockchain'
   | 'childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'childrenJson.REST'
   | 'childrenJson.Rank'
   | 'childrenJson.Read_all_Insights'
   | 'childrenJson.Read_more_about_'
@@ -2893,10 +2855,11 @@ type FileFieldsEnum =
   | 'childrenJson.Scope'
   | 'childrenJson.See_all_Tweets'
   | 'childrenJson.See_more'
-  | 'childrenJson.See_the_Roadmap'
+  | 'childrenJson.See_the_roadmap'
   | 'childrenJson.See_what_markets_already_exist__Testnet_'
   | 'childrenJson.See_what_markets_exist_already__Testnet_'
-  | 'childrenJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'childrenJson.See_what_s_going_on'
+  | 'childrenJson.See_whats_s_going_on'
   | 'childrenJson.Send_Message'
   | 'childrenJson.Sense_check'
   | 'childrenJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -2933,7 +2896,6 @@ type FileFieldsEnum =
   | 'childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'childrenJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'childrenJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'childrenJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'childrenJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -2951,6 +2913,7 @@ type FileFieldsEnum =
   | 'childrenJson.Trading'
   | 'childrenJson.Translate'
   | 'childrenJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'childrenJson.Tweets___Translations___Editorials___Infographics'
   | 'childrenJson.Twitch'
   | 'childrenJson.Twitter'
   | 'childrenJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -2973,7 +2936,7 @@ type FileFieldsEnum =
   | 'childrenJson.Vega_Community'
   | 'childrenJson.Vega_Governance'
   | 'childrenJson.Vega_Wallet'
-  | 'childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'childrenJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -3000,7 +2963,6 @@ type FileFieldsEnum =
   | 'childrenJson.Vote_for_proposals__Testnet_'
   | 'childrenJson.Vote_on_proposals'
   | 'childrenJson.Vote_to_exercise_your_influence'
-  | 'childrenJson.Wallet'
   | 'childrenJson.Wallets'
   | 'childrenJson.Want_Swag_'
   | 'childrenJson.Want_to_add_something_to_this_list_'
@@ -3014,19 +2976,14 @@ type FileFieldsEnum =
   | 'childrenJson.When_'
   | 'childrenJson.Where_next_'
   | 'childrenJson.Where_we_are'
-  | 'childrenJson.Which_Vega__Team_would_you_rally_'
   | 'childrenJson.Whitepaper'
   | 'childrenJson.With_the_wallet_you_can_'
   | 'childrenJson.YouTube'
   | 'childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenJson._0_Click_here_to_contribute__0__'
-  | 'childrenJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'childrenJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'childrenJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'childrenJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'childrenJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'childrenJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
@@ -3048,7 +3005,6 @@ type FileFieldsEnum =
   | 'childrenJson.children.internal.type'
   | 'childrenJson.children.parent.children'
   | 'childrenJson.children.parent.id'
-  | 'childrenJson.gRPC'
   | 'childrenJson.governance'
   | 'childrenJson.id'
   | 'childrenJson.internal.content'
@@ -3287,7 +3243,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childrenTools.icon.childJson.All'
   | 'childrenTools.icon.childJson.Allows_for_unfair_front_running'
-  | 'childrenTools.icon.childJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'childrenTools.icon.childJson.Ambassador'
   | 'childrenTools.icon.childJson.Ambassador_Leaderboard'
   | 'childrenTools.icon.childJson.Ambassador_program'
@@ -3297,7 +3252,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'childrenTools.icon.childJson.Anti_front_running'
   | 'childrenTools.icon.childJson.Apply_now'
-  | 'childrenTools.icon.childJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'childrenTools.icon.childJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'childrenTools.icon.childJson.Articles_about_vega_from_around_the_web'
   | 'childrenTools.icon.childJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -3309,10 +3263,10 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Available'
   | 'childrenTools.icon.childJson.Avg__Block_Time'
   | 'childrenTools.icon.childJson.Be_a_Vega__Ambassador'
+  | 'childrenTools.icon.childJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'childrenTools.icon.childJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'childrenTools.icon.childJson.Be_as_good_as_CeFi'
   | 'childrenTools.icon.childJson.Be_better_than_CeFi'
-  | 'childrenTools.icon.childJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'childrenTools.icon.childJson.Benefits_of_being_an_ambassador'
   | 'childrenTools.icon.childJson.Block_Explorer'
   | 'childrenTools.icon.childJson.Blockchain_derivatives'
@@ -3325,9 +3279,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Bug_bounties'
   | 'childrenTools.icon.childJson.Build'
   | 'childrenTools.icon.childJson.Build___send_commands'
-  | 'childrenTools.icon.childJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'childrenTools.icon.childJson.Builders_Club'
-  | 'childrenTools.icon.childJson.Builders_Club__Technical_'
   | 'childrenTools.icon.childJson.Builders_club'
   | 'childrenTools.icon.childJson.Building_on_Vega_Parts_I_and_II'
   | 'childrenTools.icon.childJson.Built_for_fairness_from_the_ground_up'
@@ -3349,7 +3301,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Completely_decentralised_network'
   | 'childrenTools.icon.childJson.Connect'
   | 'childrenTools.icon.childJson.Connect_to_networks'
-  | 'childrenTools.icon.childJson.Content_Collective__Non_Technical_'
+  | 'childrenTools.icon.childJson.Content_collective'
   | 'childrenTools.icon.childJson.Contribute'
   | 'childrenTools.icon.childJson.Contribute_and_get_rewarded'
   | 'childrenTools.icon.childJson.Contribute_to_Vega'
@@ -3374,12 +3326,14 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Develop'
   | 'childrenTools.icon.childJson.Develop_on_Vega'
   | 'childrenTools.icon.childJson.Develop_with_Vega'
+  | 'childrenTools.icon.childJson.Developer_Bounties'
   | 'childrenTools.icon.childJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'childrenTools.icon.childJson.Discord'
   | 'childrenTools.icon.childJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'childrenTools.icon.childJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'childrenTools.icon.childJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'childrenTools.icon.childJson.Docs'
+  | 'childrenTools.icon.childJson.Docs___Hackathons___Coding_support'
   | 'childrenTools.icon.childJson.Documentation'
   | 'childrenTools.icon.childJson.Download_desktop_app__Mainnet_'
   | 'childrenTools.icon.childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -3428,7 +3382,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'childrenTools.icon.childJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'childrenTools.icon.childJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'childrenTools.icon.childJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'childrenTools.icon.childJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'childrenTools.icon.childJson.Formalise_Proposal'
   | 'childrenTools.icon.childJson.Formalise_your_proposal'
@@ -3438,7 +3391,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'childrenTools.icon.childJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'childrenTools.icon.childJson.Generalist_tool___A_workaround_for_trading'
-  | 'childrenTools.icon.childJson.Get_Started'
   | 'childrenTools.icon.childJson.Get_Swag'
   | 'childrenTools.icon.childJson.Get__VEGA_tokens'
   | 'childrenTools.icon.childJson.Get_a_Vega_Wallet'
@@ -3447,6 +3399,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'childrenTools.icon.childJson.Get_started'
   | 'childrenTools.icon.childJson.Get_started_voting'
+  | 'childrenTools.icon.childJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'childrenTools.icon.childJson.Get_the_CLI_app'
   | 'childrenTools.icon.childJson.Get_the_Vega_Wallet'
   | 'childrenTools.icon.childJson.Get_the_code'
@@ -3466,7 +3419,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Governance_lifecycle'
   | 'childrenTools.icon.childJson.Governance_on_Vega'
   | 'childrenTools.icon.childJson.Governance_tools'
-  | 'childrenTools.icon.childJson.GraphQL'
   | 'childrenTools.icon.childJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'childrenTools.icon.childJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'childrenTools.icon.childJson.Have_an_idea_for_an_event_or_talk_'
@@ -3491,16 +3443,18 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Incentives___bounties'
   | 'childrenTools.icon.childJson.Incentives_and_bounties'
   | 'childrenTools.icon.childJson.Insights'
-  | 'childrenTools.icon.childJson.Interested_in_joining_'
+  | 'childrenTools.icon.childJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'childrenTools.icon.childJson.Isolate_keys'
   | 'childrenTools.icon.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenTools.icon.childJson.Join'
-  | 'childrenTools.icon.childJson.Join_the_Builders_Club'
+  | 'childrenTools.icon.childJson.Join_a_team'
   | 'childrenTools.icon.childJson.Join_the_Vega_community'
   | 'childrenTools.icon.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'childrenTools.icon.childJson.Join_the_builders_club'
   | 'childrenTools.icon.childJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'childrenTools.icon.childJson.Join_the_community'
   | 'childrenTools.icon.childJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'childrenTools.icon.childJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'childrenTools.icon.childJson.Join_us_on_Discord'
   | 'childrenTools.icon.childJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'childrenTools.icon.childJson.Key_Vega_Concepts'
@@ -3521,8 +3475,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Learn_more'
   | 'childrenTools.icon.childJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'childrenTools.icon.childJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'childrenTools.icon.childJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'childrenTools.icon.childJson.Limited_edition_Vega_swag'
+  | 'childrenTools.icon.childJson.Limited_Edition_Vega_swag'
   | 'childrenTools.icon.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenTools.icon.childJson.Load_more___'
   | 'childrenTools.icon.childJson.Loading___'
@@ -3537,12 +3490,11 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'childrenTools.icon.childJson.Medium'
   | 'childrenTools.icon.childJson.Meet'
-  | 'childrenTools.icon.childJson.Meet_on_Discord'
   | 'childrenTools.icon.childJson.Meet_our_contributors'
   | 'childrenTools.icon.childJson.Meet_us_on_Discord'
   | 'childrenTools.icon.childJson.More_info'
   | 'childrenTools.icon.childJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'childrenTools.icon.childJson.Multilingual_League__Translations_'
+  | 'childrenTools.icon.childJson.Multilingual_League'
   | 'childrenTools.icon.childJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'childrenTools.icon.childJson.Native_liquidity_provision'
   | 'childrenTools.icon.childJson.Need_the_command_line__CLI__wallet_app_'
@@ -3561,7 +3513,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Optimised_for_high_capital_efficiency'
   | 'childrenTools.icon.childJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'childrenTools.icon.childJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'childrenTools.icon.childJson.Overview'
   | 'childrenTools.icon.childJson.PGP_Key'
   | 'childrenTools.icon.childJson.Papers'
   | 'childrenTools.icon.childJson.Papers___Research'
@@ -3581,6 +3532,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'childrenTools.icon.childJson.Previous'
   | 'childrenTools.icon.childJson.Priority_consideration_on_protocol_feedback'
+  | 'childrenTools.icon.childJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'childrenTools.icon.childJson.Privacy___Cookie_Policy'
   | 'childrenTools.icon.childJson.Propose_a_futures_market_on_any_underlying_'
   | 'childrenTools.icon.childJson.Propose_a_market_on_any_underlying_'
@@ -3590,7 +3542,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Purpose_built_bespoke_blockchain'
   | 'childrenTools.icon.childJson.Purpose_built_blockchain'
   | 'childrenTools.icon.childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'childrenTools.icon.childJson.REST'
   | 'childrenTools.icon.childJson.Rank'
   | 'childrenTools.icon.childJson.Read_all_Insights'
   | 'childrenTools.icon.childJson.Read_more_about_'
@@ -3615,10 +3566,11 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Scope'
   | 'childrenTools.icon.childJson.See_all_Tweets'
   | 'childrenTools.icon.childJson.See_more'
-  | 'childrenTools.icon.childJson.See_the_Roadmap'
+  | 'childrenTools.icon.childJson.See_the_roadmap'
   | 'childrenTools.icon.childJson.See_what_markets_already_exist__Testnet_'
   | 'childrenTools.icon.childJson.See_what_markets_exist_already__Testnet_'
-  | 'childrenTools.icon.childJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'childrenTools.icon.childJson.See_what_s_going_on'
+  | 'childrenTools.icon.childJson.See_whats_s_going_on'
   | 'childrenTools.icon.childJson.Send_Message'
   | 'childrenTools.icon.childJson.Sense_check'
   | 'childrenTools.icon.childJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -3655,7 +3607,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childrenTools.icon.childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childrenTools.icon.childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'childrenTools.icon.childJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'childrenTools.icon.childJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'childrenTools.icon.childJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'childrenTools.icon.childJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -3673,6 +3624,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Trading'
   | 'childrenTools.icon.childJson.Translate'
   | 'childrenTools.icon.childJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'childrenTools.icon.childJson.Tweets___Translations___Editorials___Infographics'
   | 'childrenTools.icon.childJson.Twitch'
   | 'childrenTools.icon.childJson.Twitter'
   | 'childrenTools.icon.childJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -3695,7 +3647,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Vega_Community'
   | 'childrenTools.icon.childJson.Vega_Governance'
   | 'childrenTools.icon.childJson.Vega_Wallet'
-  | 'childrenTools.icon.childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'childrenTools.icon.childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'childrenTools.icon.childJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'childrenTools.icon.childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childrenTools.icon.childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -3722,7 +3674,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Vote_for_proposals__Testnet_'
   | 'childrenTools.icon.childJson.Vote_on_proposals'
   | 'childrenTools.icon.childJson.Vote_to_exercise_your_influence'
-  | 'childrenTools.icon.childJson.Wallet'
   | 'childrenTools.icon.childJson.Wallets'
   | 'childrenTools.icon.childJson.Want_Swag_'
   | 'childrenTools.icon.childJson.Want_to_add_something_to_this_list_'
@@ -3736,26 +3687,20 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.When_'
   | 'childrenTools.icon.childJson.Where_next_'
   | 'childrenTools.icon.childJson.Where_we_are'
-  | 'childrenTools.icon.childJson.Which_Vega__Team_would_you_rally_'
   | 'childrenTools.icon.childJson.Whitepaper'
   | 'childrenTools.icon.childJson.With_the_wallet_you_can_'
   | 'childrenTools.icon.childJson.YouTube'
   | 'childrenTools.icon.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'childrenTools.icon.childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'childrenTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childrenTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenTools.icon.childJson._0_Click_here_to_contribute__0__'
-  | 'childrenTools.icon.childJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'childrenTools.icon.childJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'childrenTools.icon.childJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'childrenTools.icon.childJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'childrenTools.icon.childJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'childrenTools.icon.childJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
   | 'childrenTools.icon.childJson._p_Update_your_proposal_topic_based_on_the_feedback_received__and_ensure_you_have_included_the_rationale_and_specifics_of_the_the_market__including_the_data__JSON_or_similar__that_would_be_submitted_on_chain_i_e__market_name_and_code__Oracle___data_source_the_market_will_use_for_settlement__and_risk_model__to_calculate_margin_requirements_and_ensure_safe_trading____p__p_Update_the_tag_and_invite_debate_and_discussion_to_amend_the_proposal_until_it_reaches_a_final_state__ready_to_submit___p_'
   | 'childrenTools.icon.childJson._xminutesxxxminutexread'
   | 'childrenTools.icon.childJson.children'
-  | 'childrenTools.icon.childJson.gRPC'
   | 'childrenTools.icon.childJson.governance'
   | 'childrenTools.icon.childJson.id'
   | 'childrenTools.icon.childJson.network'
@@ -3804,7 +3749,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childrenTools.icon.childrenJson.All'
   | 'childrenTools.icon.childrenJson.Allows_for_unfair_front_running'
-  | 'childrenTools.icon.childrenJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'childrenTools.icon.childrenJson.Ambassador'
   | 'childrenTools.icon.childrenJson.Ambassador_Leaderboard'
   | 'childrenTools.icon.childrenJson.Ambassador_program'
@@ -3814,7 +3758,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'childrenTools.icon.childrenJson.Anti_front_running'
   | 'childrenTools.icon.childrenJson.Apply_now'
-  | 'childrenTools.icon.childrenJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'childrenTools.icon.childrenJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'childrenTools.icon.childrenJson.Articles_about_vega_from_around_the_web'
   | 'childrenTools.icon.childrenJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -3826,10 +3769,10 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Available'
   | 'childrenTools.icon.childrenJson.Avg__Block_Time'
   | 'childrenTools.icon.childrenJson.Be_a_Vega__Ambassador'
+  | 'childrenTools.icon.childrenJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'childrenTools.icon.childrenJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'childrenTools.icon.childrenJson.Be_as_good_as_CeFi'
   | 'childrenTools.icon.childrenJson.Be_better_than_CeFi'
-  | 'childrenTools.icon.childrenJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'childrenTools.icon.childrenJson.Benefits_of_being_an_ambassador'
   | 'childrenTools.icon.childrenJson.Block_Explorer'
   | 'childrenTools.icon.childrenJson.Blockchain_derivatives'
@@ -3842,9 +3785,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Bug_bounties'
   | 'childrenTools.icon.childrenJson.Build'
   | 'childrenTools.icon.childrenJson.Build___send_commands'
-  | 'childrenTools.icon.childrenJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'childrenTools.icon.childrenJson.Builders_Club'
-  | 'childrenTools.icon.childrenJson.Builders_Club__Technical_'
   | 'childrenTools.icon.childrenJson.Builders_club'
   | 'childrenTools.icon.childrenJson.Building_on_Vega_Parts_I_and_II'
   | 'childrenTools.icon.childrenJson.Built_for_fairness_from_the_ground_up'
@@ -3866,7 +3807,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Completely_decentralised_network'
   | 'childrenTools.icon.childrenJson.Connect'
   | 'childrenTools.icon.childrenJson.Connect_to_networks'
-  | 'childrenTools.icon.childrenJson.Content_Collective__Non_Technical_'
+  | 'childrenTools.icon.childrenJson.Content_collective'
   | 'childrenTools.icon.childrenJson.Contribute'
   | 'childrenTools.icon.childrenJson.Contribute_and_get_rewarded'
   | 'childrenTools.icon.childrenJson.Contribute_to_Vega'
@@ -3891,12 +3832,14 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Develop'
   | 'childrenTools.icon.childrenJson.Develop_on_Vega'
   | 'childrenTools.icon.childrenJson.Develop_with_Vega'
+  | 'childrenTools.icon.childrenJson.Developer_Bounties'
   | 'childrenTools.icon.childrenJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'childrenTools.icon.childrenJson.Discord'
   | 'childrenTools.icon.childrenJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'childrenTools.icon.childrenJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'childrenTools.icon.childrenJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'childrenTools.icon.childrenJson.Docs'
+  | 'childrenTools.icon.childrenJson.Docs___Hackathons___Coding_support'
   | 'childrenTools.icon.childrenJson.Documentation'
   | 'childrenTools.icon.childrenJson.Download_desktop_app__Mainnet_'
   | 'childrenTools.icon.childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -3945,7 +3888,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'childrenTools.icon.childrenJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'childrenTools.icon.childrenJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'childrenTools.icon.childrenJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'childrenTools.icon.childrenJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'childrenTools.icon.childrenJson.Formalise_Proposal'
   | 'childrenTools.icon.childrenJson.Formalise_your_proposal'
@@ -3955,7 +3897,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'childrenTools.icon.childrenJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'childrenTools.icon.childrenJson.Generalist_tool___A_workaround_for_trading'
-  | 'childrenTools.icon.childrenJson.Get_Started'
   | 'childrenTools.icon.childrenJson.Get_Swag'
   | 'childrenTools.icon.childrenJson.Get__VEGA_tokens'
   | 'childrenTools.icon.childrenJson.Get_a_Vega_Wallet'
@@ -3964,6 +3905,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'childrenTools.icon.childrenJson.Get_started'
   | 'childrenTools.icon.childrenJson.Get_started_voting'
+  | 'childrenTools.icon.childrenJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'childrenTools.icon.childrenJson.Get_the_CLI_app'
   | 'childrenTools.icon.childrenJson.Get_the_Vega_Wallet'
   | 'childrenTools.icon.childrenJson.Get_the_code'
@@ -3983,7 +3925,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Governance_lifecycle'
   | 'childrenTools.icon.childrenJson.Governance_on_Vega'
   | 'childrenTools.icon.childrenJson.Governance_tools'
-  | 'childrenTools.icon.childrenJson.GraphQL'
   | 'childrenTools.icon.childrenJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'childrenTools.icon.childrenJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'childrenTools.icon.childrenJson.Have_an_idea_for_an_event_or_talk_'
@@ -4008,16 +3949,18 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Incentives___bounties'
   | 'childrenTools.icon.childrenJson.Incentives_and_bounties'
   | 'childrenTools.icon.childrenJson.Insights'
-  | 'childrenTools.icon.childrenJson.Interested_in_joining_'
+  | 'childrenTools.icon.childrenJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'childrenTools.icon.childrenJson.Isolate_keys'
   | 'childrenTools.icon.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenTools.icon.childrenJson.Join'
-  | 'childrenTools.icon.childrenJson.Join_the_Builders_Club'
+  | 'childrenTools.icon.childrenJson.Join_a_team'
   | 'childrenTools.icon.childrenJson.Join_the_Vega_community'
   | 'childrenTools.icon.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'childrenTools.icon.childrenJson.Join_the_builders_club'
   | 'childrenTools.icon.childrenJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'childrenTools.icon.childrenJson.Join_the_community'
   | 'childrenTools.icon.childrenJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'childrenTools.icon.childrenJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'childrenTools.icon.childrenJson.Join_us_on_Discord'
   | 'childrenTools.icon.childrenJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'childrenTools.icon.childrenJson.Key_Vega_Concepts'
@@ -4038,8 +3981,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Learn_more'
   | 'childrenTools.icon.childrenJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'childrenTools.icon.childrenJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'childrenTools.icon.childrenJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'childrenTools.icon.childrenJson.Limited_edition_Vega_swag'
+  | 'childrenTools.icon.childrenJson.Limited_Edition_Vega_swag'
   | 'childrenTools.icon.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenTools.icon.childrenJson.Load_more___'
   | 'childrenTools.icon.childrenJson.Loading___'
@@ -4054,12 +3996,11 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'childrenTools.icon.childrenJson.Medium'
   | 'childrenTools.icon.childrenJson.Meet'
-  | 'childrenTools.icon.childrenJson.Meet_on_Discord'
   | 'childrenTools.icon.childrenJson.Meet_our_contributors'
   | 'childrenTools.icon.childrenJson.Meet_us_on_Discord'
   | 'childrenTools.icon.childrenJson.More_info'
   | 'childrenTools.icon.childrenJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'childrenTools.icon.childrenJson.Multilingual_League__Translations_'
+  | 'childrenTools.icon.childrenJson.Multilingual_League'
   | 'childrenTools.icon.childrenJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'childrenTools.icon.childrenJson.Native_liquidity_provision'
   | 'childrenTools.icon.childrenJson.Need_the_command_line__CLI__wallet_app_'
@@ -4078,7 +4019,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Optimised_for_high_capital_efficiency'
   | 'childrenTools.icon.childrenJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'childrenTools.icon.childrenJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'childrenTools.icon.childrenJson.Overview'
   | 'childrenTools.icon.childrenJson.PGP_Key'
   | 'childrenTools.icon.childrenJson.Papers'
   | 'childrenTools.icon.childrenJson.Papers___Research'
@@ -4098,6 +4038,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'childrenTools.icon.childrenJson.Previous'
   | 'childrenTools.icon.childrenJson.Priority_consideration_on_protocol_feedback'
+  | 'childrenTools.icon.childrenJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'childrenTools.icon.childrenJson.Privacy___Cookie_Policy'
   | 'childrenTools.icon.childrenJson.Propose_a_futures_market_on_any_underlying_'
   | 'childrenTools.icon.childrenJson.Propose_a_market_on_any_underlying_'
@@ -4107,7 +4048,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Purpose_built_bespoke_blockchain'
   | 'childrenTools.icon.childrenJson.Purpose_built_blockchain'
   | 'childrenTools.icon.childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'childrenTools.icon.childrenJson.REST'
   | 'childrenTools.icon.childrenJson.Rank'
   | 'childrenTools.icon.childrenJson.Read_all_Insights'
   | 'childrenTools.icon.childrenJson.Read_more_about_'
@@ -4132,10 +4072,11 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Scope'
   | 'childrenTools.icon.childrenJson.See_all_Tweets'
   | 'childrenTools.icon.childrenJson.See_more'
-  | 'childrenTools.icon.childrenJson.See_the_Roadmap'
+  | 'childrenTools.icon.childrenJson.See_the_roadmap'
   | 'childrenTools.icon.childrenJson.See_what_markets_already_exist__Testnet_'
   | 'childrenTools.icon.childrenJson.See_what_markets_exist_already__Testnet_'
-  | 'childrenTools.icon.childrenJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'childrenTools.icon.childrenJson.See_what_s_going_on'
+  | 'childrenTools.icon.childrenJson.See_whats_s_going_on'
   | 'childrenTools.icon.childrenJson.Send_Message'
   | 'childrenTools.icon.childrenJson.Sense_check'
   | 'childrenTools.icon.childrenJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -4172,7 +4113,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childrenTools.icon.childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childrenTools.icon.childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'childrenTools.icon.childrenJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'childrenTools.icon.childrenJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'childrenTools.icon.childrenJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'childrenTools.icon.childrenJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -4190,6 +4130,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Trading'
   | 'childrenTools.icon.childrenJson.Translate'
   | 'childrenTools.icon.childrenJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'childrenTools.icon.childrenJson.Tweets___Translations___Editorials___Infographics'
   | 'childrenTools.icon.childrenJson.Twitch'
   | 'childrenTools.icon.childrenJson.Twitter'
   | 'childrenTools.icon.childrenJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -4212,7 +4153,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Vega_Community'
   | 'childrenTools.icon.childrenJson.Vega_Governance'
   | 'childrenTools.icon.childrenJson.Vega_Wallet'
-  | 'childrenTools.icon.childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'childrenTools.icon.childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'childrenTools.icon.childrenJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'childrenTools.icon.childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'childrenTools.icon.childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -4239,7 +4180,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Vote_for_proposals__Testnet_'
   | 'childrenTools.icon.childrenJson.Vote_on_proposals'
   | 'childrenTools.icon.childrenJson.Vote_to_exercise_your_influence'
-  | 'childrenTools.icon.childrenJson.Wallet'
   | 'childrenTools.icon.childrenJson.Wallets'
   | 'childrenTools.icon.childrenJson.Want_Swag_'
   | 'childrenTools.icon.childrenJson.Want_to_add_something_to_this_list_'
@@ -4253,26 +4193,20 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.When_'
   | 'childrenTools.icon.childrenJson.Where_next_'
   | 'childrenTools.icon.childrenJson.Where_we_are'
-  | 'childrenTools.icon.childrenJson.Which_Vega__Team_would_you_rally_'
   | 'childrenTools.icon.childrenJson.Whitepaper'
   | 'childrenTools.icon.childrenJson.With_the_wallet_you_can_'
   | 'childrenTools.icon.childrenJson.YouTube'
   | 'childrenTools.icon.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'childrenTools.icon.childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'childrenTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childrenTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenTools.icon.childrenJson._0_Click_here_to_contribute__0__'
-  | 'childrenTools.icon.childrenJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'childrenTools.icon.childrenJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'childrenTools.icon.childrenJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'childrenTools.icon.childrenJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'childrenTools.icon.childrenJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'childrenTools.icon.childrenJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
   | 'childrenTools.icon.childrenJson._p_Update_your_proposal_topic_based_on_the_feedback_received__and_ensure_you_have_included_the_rationale_and_specifics_of_the_the_market__including_the_data__JSON_or_similar__that_would_be_submitted_on_chain_i_e__market_name_and_code__Oracle___data_source_the_market_will_use_for_settlement__and_risk_model__to_calculate_margin_requirements_and_ensure_safe_trading____p__p_Update_the_tag_and_invite_debate_and_discussion_to_amend_the_proposal_until_it_reaches_a_final_state__ready_to_submit___p_'
   | 'childrenTools.icon.childrenJson._xminutesxxxminutexread'
   | 'childrenTools.icon.childrenJson.children'
-  | 'childrenTools.icon.childrenJson.gRPC'
   | 'childrenTools.icon.childrenJson.governance'
   | 'childrenTools.icon.childrenJson.id'
   | 'childrenTools.icon.childrenJson.network'
@@ -5394,7 +5328,6 @@ type Json = Node & {
   readonly Agree_with_the_code_of_conduct__keep_to_the_rules: Maybe<Scalars['String']>;
   readonly All: Maybe<Scalars['String']>;
   readonly Allows_for_unfair_front_running: Maybe<Scalars['String']>;
-  readonly Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_: Maybe<Scalars['String']>;
   readonly Ambassador: Maybe<Scalars['String']>;
   readonly Ambassador_Leaderboard: Maybe<Scalars['String']>;
   readonly Ambassador_program: Maybe<Scalars['String']>;
@@ -5404,7 +5337,6 @@ type Json = Node & {
   readonly And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_: Maybe<Scalars['String']>;
   readonly Anti_front_running: Maybe<Scalars['String']>;
   readonly Apply_now: Maybe<Scalars['String']>;
-  readonly Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_: Maybe<Scalars['String']>;
   readonly Are_you_sure_you_want_to_submit_the_form_: Maybe<Scalars['String']>;
   readonly Articles_about_vega_from_around_the_web: Maybe<Scalars['String']>;
   readonly As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__: Maybe<Scalars['String']>;
@@ -5416,10 +5348,10 @@ type Json = Node & {
   readonly Available: Maybe<Scalars['String']>;
   readonly Avg__Block_Time: Maybe<Scalars['String']>;
   readonly Be_a_Vega__Ambassador: Maybe<Scalars['String']>;
+  readonly Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_: Maybe<Scalars['String']>;
   readonly Be_active_on_Discord___most_communication_will_take_place_there: Maybe<Scalars['String']>;
   readonly Be_as_good_as_CeFi: Maybe<Scalars['String']>;
   readonly Be_better_than_CeFi: Maybe<Scalars['String']>;
-  readonly Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space: Maybe<Scalars['String']>;
   readonly Benefits_of_being_an_ambassador: Maybe<Scalars['String']>;
   readonly Block_Explorer: Maybe<Scalars['String']>;
   readonly Blockchain_derivatives: Maybe<Scalars['String']>;
@@ -5432,9 +5364,7 @@ type Json = Node & {
   readonly Bug_bounties: Maybe<Scalars['String']>;
   readonly Build: Maybe<Scalars['String']>;
   readonly Build___send_commands: Maybe<Scalars['String']>;
-  readonly Build_decentralised_apps__bots_and_trading_clients_with_our_APIs: Maybe<Scalars['String']>;
   readonly Builders_Club: Maybe<Scalars['String']>;
-  readonly Builders_Club__Technical_: Maybe<Scalars['String']>;
   readonly Builders_club: Maybe<Scalars['String']>;
   readonly Building_on_Vega_Parts_I_and_II: Maybe<Scalars['String']>;
   readonly Built_for_fairness_from_the_ground_up: Maybe<Scalars['String']>;
@@ -5456,7 +5386,7 @@ type Json = Node & {
   readonly Completely_decentralised_network: Maybe<Scalars['String']>;
   readonly Connect: Maybe<Scalars['String']>;
   readonly Connect_to_networks: Maybe<Scalars['String']>;
-  readonly Content_Collective__Non_Technical_: Maybe<Scalars['String']>;
+  readonly Content_collective: Maybe<Scalars['String']>;
   readonly Contribute: Maybe<Scalars['String']>;
   readonly Contribute_and_get_rewarded: Maybe<Scalars['String']>;
   readonly Contribute_to_Vega: Maybe<Scalars['String']>;
@@ -5481,12 +5411,14 @@ type Json = Node & {
   readonly Develop: Maybe<Scalars['String']>;
   readonly Develop_on_Vega: Maybe<Scalars['String']>;
   readonly Develop_with_Vega: Maybe<Scalars['String']>;
+  readonly Developer_Bounties: Maybe<Scalars['String']>;
   readonly Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_: Maybe<Scalars['String']>;
   readonly Discord: Maybe<Scalars['String']>;
   readonly Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_: Maybe<Scalars['String']>;
   readonly Discuss_governance_and_governance_proposals_on_Vega_Networks_: Maybe<Scalars['String']>;
   readonly Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_: Maybe<Scalars['String']>;
   readonly Docs: Maybe<Scalars['String']>;
+  readonly Docs___Hackathons___Coding_support: Maybe<Scalars['String']>;
   readonly Documentation: Maybe<Scalars['String']>;
   readonly Download_desktop_app__Mainnet_: Maybe<Scalars['String']>;
   readonly Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_: Maybe<Scalars['String']>;
@@ -5535,7 +5467,6 @@ type Json = Node & {
   readonly For_anonymous_submissions__you_can_use_the_following_form_: Maybe<Scalars['String']>;
   readonly For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_: Maybe<Scalars['String']>;
   readonly For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_: Maybe<Scalars['String']>;
-  readonly For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_: Maybe<Scalars['String']>;
   readonly For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_: Maybe<Scalars['String']>;
   readonly Formalise_Proposal: Maybe<Scalars['String']>;
   readonly Formalise_your_proposal: Maybe<Scalars['String']>;
@@ -5545,7 +5476,6 @@ type Json = Node & {
   readonly Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up: Maybe<Scalars['String']>;
   readonly Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_: Maybe<Scalars['String']>;
   readonly Generalist_tool___A_workaround_for_trading: Maybe<Scalars['String']>;
-  readonly Get_Started: Maybe<Scalars['String']>;
   readonly Get_Swag: Maybe<Scalars['String']>;
   readonly Get__VEGA_tokens: Maybe<Scalars['String']>;
   readonly Get_a_Vega_Wallet: Maybe<Scalars['String']>;
@@ -5554,6 +5484,7 @@ type Json = Node & {
   readonly Get_rewarded_for_your_efforts_testing_the_network: Maybe<Scalars['String']>;
   readonly Get_started: Maybe<Scalars['String']>;
   readonly Get_started_voting: Maybe<Scalars['String']>;
+  readonly Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_: Maybe<Scalars['String']>;
   readonly Get_the_CLI_app: Maybe<Scalars['String']>;
   readonly Get_the_Vega_Wallet: Maybe<Scalars['String']>;
   readonly Get_the_code: Maybe<Scalars['String']>;
@@ -5573,7 +5504,6 @@ type Json = Node & {
   readonly Governance_lifecycle: Maybe<Scalars['String']>;
   readonly Governance_on_Vega: Maybe<Scalars['String']>;
   readonly Governance_tools: Maybe<Scalars['String']>;
-  readonly GraphQL: Maybe<Scalars['String']>;
   readonly Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks: Maybe<Scalars['String']>;
   readonly Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_: Maybe<Scalars['String']>;
   readonly Have_an_idea_for_an_event_or_talk_: Maybe<Scalars['String']>;
@@ -5598,16 +5528,18 @@ type Json = Node & {
   readonly Incentives___bounties: Maybe<Scalars['String']>;
   readonly Incentives_and_bounties: Maybe<Scalars['String']>;
   readonly Insights: Maybe<Scalars['String']>;
-  readonly Interested_in_joining_: Maybe<Scalars['String']>;
+  readonly Internationalisation___Local_Language_Groups___AMAs: Maybe<Scalars['String']>;
   readonly Isolate_keys: Maybe<Scalars['String']>;
   readonly It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: Maybe<Scalars['String']>;
   readonly Join: Maybe<Scalars['String']>;
-  readonly Join_the_Builders_Club: Maybe<Scalars['String']>;
+  readonly Join_a_team: Maybe<Scalars['String']>;
   readonly Join_the_Vega_community: Maybe<Scalars['String']>;
   readonly Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: Maybe<Scalars['String']>;
+  readonly Join_the_builders_club: Maybe<Scalars['String']>;
   readonly Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_: Maybe<Scalars['String']>;
   readonly Join_the_community: Maybe<Scalars['String']>;
   readonly Join_the_core_team_and_work_on_the_Vega_project_: Maybe<Scalars['String']>;
+  readonly Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_: Maybe<Scalars['String']>;
   readonly Join_us_on_Discord: Maybe<Scalars['String']>;
   readonly Keep_control_of_your_data__and_protect_your_privacy_: Maybe<Scalars['String']>;
   readonly Key_Vega_Concepts: Maybe<Scalars['String']>;
@@ -5628,8 +5560,7 @@ type Json = Node & {
   readonly Learn_more: Maybe<Scalars['String']>;
   readonly Learn_with_the_core_team__attend_office_hours__ask_questions__grow: Maybe<Scalars['String']>;
   readonly Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_: Maybe<Scalars['String']>;
-  readonly Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_: Maybe<Scalars['String']>;
-  readonly Limited_edition_Vega_swag: Maybe<Scalars['String']>;
+  readonly Limited_Edition_Vega_swag: Maybe<Scalars['String']>;
   readonly Livestreams__conferences__research_office_hours_and_community_calls: Maybe<Scalars['String']>;
   readonly Load_more___: Maybe<Scalars['String']>;
   readonly Loading___: Maybe<Scalars['String']>;
@@ -5644,12 +5575,11 @@ type Json = Node & {
   readonly Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: Maybe<Scalars['String']>;
   readonly Medium: Maybe<Scalars['String']>;
   readonly Meet: Maybe<Scalars['String']>;
-  readonly Meet_on_Discord: Maybe<Scalars['String']>;
   readonly Meet_our_contributors: Maybe<Scalars['String']>;
   readonly Meet_us_on_Discord: Maybe<Scalars['String']>;
   readonly More_info: Maybe<Scalars['String']>;
   readonly Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_: Maybe<Scalars['String']>;
-  readonly Multilingual_League__Translations_: Maybe<Scalars['String']>;
+  readonly Multilingual_League: Maybe<Scalars['String']>;
   readonly Name_each_individual_wallet_if_you_need_more_than_one: Maybe<Scalars['String']>;
   readonly Native_liquidity_provision: Maybe<Scalars['String']>;
   readonly Need_the_command_line__CLI__wallet_app_: Maybe<Scalars['String']>;
@@ -5668,7 +5598,6 @@ type Json = Node & {
   readonly Optimised_for_high_capital_efficiency: Maybe<Scalars['String']>;
   readonly Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network: Maybe<Scalars['String']>;
   readonly Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_: Maybe<Scalars['String']>;
-  readonly Overview: Maybe<Scalars['String']>;
   readonly PGP_Key: Maybe<Scalars['String']>;
   readonly Papers: Maybe<Scalars['String']>;
   readonly Papers___Research: Maybe<Scalars['String']>;
@@ -5688,6 +5617,7 @@ type Json = Node & {
   readonly Prevent_a_potential_vulnerability_being_abused_by_others_: Maybe<Scalars['String']>;
   readonly Previous: Maybe<Scalars['String']>;
   readonly Priority_consideration_on_protocol_feedback: Maybe<Scalars['String']>;
+  readonly Priority_minting_of_NFT_drops____enhanced_rarities_: Maybe<Scalars['String']>;
   readonly Privacy___Cookie_Policy: Maybe<Scalars['String']>;
   readonly Propose_a_futures_market_on_any_underlying_: Maybe<Scalars['String']>;
   readonly Propose_a_market_on_any_underlying_: Maybe<Scalars['String']>;
@@ -5697,7 +5627,6 @@ type Json = Node & {
   readonly Purpose_built_bespoke_blockchain: Maybe<Scalars['String']>;
   readonly Purpose_built_blockchain: Maybe<Scalars['String']>;
   readonly Query_the_Vega_network_APIs_to_retrieve_on_chain_data_: Maybe<Scalars['String']>;
-  readonly REST: Maybe<Scalars['String']>;
   readonly Rank: Maybe<Scalars['String']>;
   readonly Read_all_Insights: Maybe<Scalars['String']>;
   readonly Read_more_about_: Maybe<Scalars['String']>;
@@ -5722,10 +5651,11 @@ type Json = Node & {
   readonly Scope: Maybe<Scalars['String']>;
   readonly See_all_Tweets: Maybe<Scalars['String']>;
   readonly See_more: Maybe<Scalars['String']>;
-  readonly See_the_Roadmap: Maybe<Scalars['String']>;
+  readonly See_the_roadmap: Maybe<Scalars['String']>;
   readonly See_what_markets_already_exist__Testnet_: Maybe<Scalars['String']>;
   readonly See_what_markets_exist_already__Testnet_: Maybe<Scalars['String']>;
-  readonly Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_: Maybe<Scalars['String']>;
+  readonly See_what_s_going_on: Maybe<Scalars['String']>;
+  readonly See_whats_s_going_on: Maybe<Scalars['String']>;
   readonly Send_Message: Maybe<Scalars['String']>;
   readonly Sense_check: Maybe<Scalars['String']>;
   readonly Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_: Maybe<Scalars['String']>;
@@ -5762,7 +5692,6 @@ type Json = Node & {
   readonly The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_: Maybe<Scalars['String']>;
   readonly The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_: Maybe<Scalars['String']>;
   readonly The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_: Maybe<Scalars['String']>;
-  readonly The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_: Maybe<Scalars['String']>;
   readonly The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_: Maybe<Scalars['String']>;
   readonly There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_: Maybe<Scalars['String']>;
   readonly This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_: Maybe<Scalars['String']>;
@@ -5780,6 +5709,7 @@ type Json = Node & {
   readonly Trading: Maybe<Scalars['String']>;
   readonly Translate: Maybe<Scalars['String']>;
   readonly Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__: Maybe<Scalars['String']>;
+  readonly Tweets___Translations___Editorials___Infographics: Maybe<Scalars['String']>;
   readonly Twitch: Maybe<Scalars['String']>;
   readonly Twitter: Maybe<Scalars['String']>;
   readonly Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_: Maybe<Scalars['String']>;
@@ -5802,7 +5732,7 @@ type Json = Node & {
   readonly Vega_Community: Maybe<Scalars['String']>;
   readonly Vega_Governance: Maybe<Scalars['String']>;
   readonly Vega_Wallet: Maybe<Scalars['String']>;
-  readonly Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_: Maybe<Scalars['String']>;
+  readonly Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_: Maybe<Scalars['String']>;
   readonly Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_: Maybe<Scalars['String']>;
   readonly Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_: Maybe<Scalars['String']>;
   readonly Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_: Maybe<Scalars['String']>;
@@ -5829,7 +5759,6 @@ type Json = Node & {
   readonly Vote_for_proposals__Testnet_: Maybe<Scalars['String']>;
   readonly Vote_on_proposals: Maybe<Scalars['String']>;
   readonly Vote_to_exercise_your_influence: Maybe<Scalars['String']>;
-  readonly Wallet: Maybe<Scalars['String']>;
   readonly Wallets: Maybe<Scalars['String']>;
   readonly Want_Swag_: Maybe<Scalars['String']>;
   readonly Want_to_add_something_to_this_list_: Maybe<Scalars['String']>;
@@ -5843,26 +5772,20 @@ type Json = Node & {
   readonly When_: Maybe<Scalars['String']>;
   readonly Where_next_: Maybe<Scalars['String']>;
   readonly Where_we_are: Maybe<Scalars['String']>;
-  readonly Which_Vega__Team_would_you_rally_: Maybe<Scalars['String']>;
   readonly Whitepaper: Maybe<Scalars['String']>;
   readonly With_the_wallet_you_can_: Maybe<Scalars['String']>;
   readonly YouTube: Maybe<Scalars['String']>;
   readonly You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_: Maybe<Scalars['String']>;
-  readonly You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_: Maybe<Scalars['String']>;
   readonly Your_career_in_Defi_starts_here: Maybe<Scalars['String']>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: Maybe<Scalars['String']>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: Maybe<Scalars['String']>;
   readonly _0_Click_here_to_contribute__0__: Maybe<Scalars['String']>;
-  readonly _Internationalisation__Local_Language_Groups__AMAs_: Maybe<Scalars['String']>;
-  readonly _Tweets__Editorials__Infographics__Bounties_: Maybe<Scalars['String']>;
-  readonly _Vega_Capsule__Documentation__Hackathon_Support__Coding_: Maybe<Scalars['String']>;
   readonly _p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_: Maybe<Scalars['String']>;
   readonly _p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_: Maybe<Scalars['String']>;
   readonly _p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_: Maybe<Scalars['String']>;
   readonly _p_Update_your_proposal_topic_based_on_the_feedback_received__and_ensure_you_have_included_the_rationale_and_specifics_of_the_the_market__including_the_data__JSON_or_similar__that_would_be_submitted_on_chain_i_e__market_name_and_code__Oracle___data_source_the_market_will_use_for_settlement__and_risk_model__to_calculate_margin_requirements_and_ensure_safe_trading____p__p_Update_the_tag_and_invite_debate_and_discussion_to_amend_the_proposal_until_it_reaches_a_final_state__ready_to_submit___p_: Maybe<Scalars['String']>;
   readonly _xminutesxxxminutexread: Maybe<Scalars['String']>;
   readonly children: ReadonlyArray<Node>;
-  readonly gRPC: Maybe<Scalars['String']>;
   readonly governance: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
@@ -5928,7 +5851,6 @@ type JsonFieldsEnum =
   | 'Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'All'
   | 'Allows_for_unfair_front_running'
-  | 'Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'Ambassador'
   | 'Ambassador_Leaderboard'
   | 'Ambassador_program'
@@ -5938,7 +5860,6 @@ type JsonFieldsEnum =
   | 'And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'Anti_front_running'
   | 'Apply_now'
-  | 'Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'Are_you_sure_you_want_to_submit_the_form_'
   | 'Articles_about_vega_from_around_the_web'
   | 'As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -5950,10 +5871,10 @@ type JsonFieldsEnum =
   | 'Available'
   | 'Avg__Block_Time'
   | 'Be_a_Vega__Ambassador'
+  | 'Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'Be_active_on_Discord___most_communication_will_take_place_there'
   | 'Be_as_good_as_CeFi'
   | 'Be_better_than_CeFi'
-  | 'Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'Benefits_of_being_an_ambassador'
   | 'Block_Explorer'
   | 'Blockchain_derivatives'
@@ -5966,9 +5887,7 @@ type JsonFieldsEnum =
   | 'Bug_bounties'
   | 'Build'
   | 'Build___send_commands'
-  | 'Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'Builders_Club'
-  | 'Builders_Club__Technical_'
   | 'Builders_club'
   | 'Building_on_Vega_Parts_I_and_II'
   | 'Built_for_fairness_from_the_ground_up'
@@ -5990,7 +5909,7 @@ type JsonFieldsEnum =
   | 'Completely_decentralised_network'
   | 'Connect'
   | 'Connect_to_networks'
-  | 'Content_Collective__Non_Technical_'
+  | 'Content_collective'
   | 'Contribute'
   | 'Contribute_and_get_rewarded'
   | 'Contribute_to_Vega'
@@ -6015,12 +5934,14 @@ type JsonFieldsEnum =
   | 'Develop'
   | 'Develop_on_Vega'
   | 'Develop_with_Vega'
+  | 'Developer_Bounties'
   | 'Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'Discord'
   | 'Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'Docs'
+  | 'Docs___Hackathons___Coding_support'
   | 'Documentation'
   | 'Download_desktop_app__Mainnet_'
   | 'Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -6069,7 +5990,6 @@ type JsonFieldsEnum =
   | 'For_anonymous_submissions__you_can_use_the_following_form_'
   | 'For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'Formalise_Proposal'
   | 'Formalise_your_proposal'
@@ -6079,7 +5999,6 @@ type JsonFieldsEnum =
   | 'Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'Generalist_tool___A_workaround_for_trading'
-  | 'Get_Started'
   | 'Get_Swag'
   | 'Get__VEGA_tokens'
   | 'Get_a_Vega_Wallet'
@@ -6088,6 +6007,7 @@ type JsonFieldsEnum =
   | 'Get_rewarded_for_your_efforts_testing_the_network'
   | 'Get_started'
   | 'Get_started_voting'
+  | 'Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'Get_the_CLI_app'
   | 'Get_the_Vega_Wallet'
   | 'Get_the_code'
@@ -6107,7 +6027,6 @@ type JsonFieldsEnum =
   | 'Governance_lifecycle'
   | 'Governance_on_Vega'
   | 'Governance_tools'
-  | 'GraphQL'
   | 'Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'Have_an_idea_for_an_event_or_talk_'
@@ -6132,16 +6051,18 @@ type JsonFieldsEnum =
   | 'Incentives___bounties'
   | 'Incentives_and_bounties'
   | 'Insights'
-  | 'Interested_in_joining_'
+  | 'Internationalisation___Local_Language_Groups___AMAs'
   | 'Isolate_keys'
   | 'It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'Join'
-  | 'Join_the_Builders_Club'
+  | 'Join_a_team'
   | 'Join_the_Vega_community'
   | 'Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'Join_the_builders_club'
   | 'Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'Join_the_community'
   | 'Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'Join_us_on_Discord'
   | 'Keep_control_of_your_data__and_protect_your_privacy_'
   | 'Key_Vega_Concepts'
@@ -6162,8 +6083,7 @@ type JsonFieldsEnum =
   | 'Learn_more'
   | 'Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'Limited_edition_Vega_swag'
+  | 'Limited_Edition_Vega_swag'
   | 'Livestreams__conferences__research_office_hours_and_community_calls'
   | 'Load_more___'
   | 'Loading___'
@@ -6178,12 +6098,11 @@ type JsonFieldsEnum =
   | 'Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'Medium'
   | 'Meet'
-  | 'Meet_on_Discord'
   | 'Meet_our_contributors'
   | 'Meet_us_on_Discord'
   | 'More_info'
   | 'Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'Multilingual_League__Translations_'
+  | 'Multilingual_League'
   | 'Name_each_individual_wallet_if_you_need_more_than_one'
   | 'Native_liquidity_provision'
   | 'Need_the_command_line__CLI__wallet_app_'
@@ -6202,7 +6121,6 @@ type JsonFieldsEnum =
   | 'Optimised_for_high_capital_efficiency'
   | 'Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'Overview'
   | 'PGP_Key'
   | 'Papers'
   | 'Papers___Research'
@@ -6222,6 +6140,7 @@ type JsonFieldsEnum =
   | 'Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'Previous'
   | 'Priority_consideration_on_protocol_feedback'
+  | 'Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'Privacy___Cookie_Policy'
   | 'Propose_a_futures_market_on_any_underlying_'
   | 'Propose_a_market_on_any_underlying_'
@@ -6231,7 +6150,6 @@ type JsonFieldsEnum =
   | 'Purpose_built_bespoke_blockchain'
   | 'Purpose_built_blockchain'
   | 'Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'REST'
   | 'Rank'
   | 'Read_all_Insights'
   | 'Read_more_about_'
@@ -6256,10 +6174,11 @@ type JsonFieldsEnum =
   | 'Scope'
   | 'See_all_Tweets'
   | 'See_more'
-  | 'See_the_Roadmap'
+  | 'See_the_roadmap'
   | 'See_what_markets_already_exist__Testnet_'
   | 'See_what_markets_exist_already__Testnet_'
-  | 'Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'See_what_s_going_on'
+  | 'See_whats_s_going_on'
   | 'Send_Message'
   | 'Sense_check'
   | 'Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -6296,7 +6215,6 @@ type JsonFieldsEnum =
   | 'The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -6314,6 +6232,7 @@ type JsonFieldsEnum =
   | 'Trading'
   | 'Translate'
   | 'Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'Tweets___Translations___Editorials___Infographics'
   | 'Twitch'
   | 'Twitter'
   | 'Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -6336,7 +6255,7 @@ type JsonFieldsEnum =
   | 'Vega_Community'
   | 'Vega_Governance'
   | 'Vega_Wallet'
-  | 'Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -6363,7 +6282,6 @@ type JsonFieldsEnum =
   | 'Vote_for_proposals__Testnet_'
   | 'Vote_on_proposals'
   | 'Vote_to_exercise_your_influence'
-  | 'Wallet'
   | 'Wallets'
   | 'Want_Swag_'
   | 'Want_to_add_something_to_this_list_'
@@ -6377,19 +6295,14 @@ type JsonFieldsEnum =
   | 'When_'
   | 'Where_next_'
   | 'Where_we_are'
-  | 'Which_Vega__Team_would_you_rally_'
   | 'Whitepaper'
   | 'With_the_wallet_you_can_'
   | 'YouTube'
   | 'You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'Your_career_in_Defi_starts_here'
   | 'Your_message_was_successfully_encrypted_and_delivered_'
   | '_0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | '_0_Click_here_to_contribute__0__'
-  | '_Internationalisation__Local_Language_Groups__AMAs_'
-  | '_Tweets__Editorials__Infographics__Bounties_'
-  | '_Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | '_p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | '_p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | '_p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
@@ -6437,7 +6350,6 @@ type JsonFieldsEnum =
   | 'children.parent.internal.type'
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
-  | 'gRPC'
   | 'governance'
   | 'id'
   | 'internal.content'
@@ -6505,7 +6417,6 @@ type JsonFilterInput = {
   readonly Agree_with_the_code_of_conduct__keep_to_the_rules: InputMaybe<StringQueryOperatorInput>;
   readonly All: InputMaybe<StringQueryOperatorInput>;
   readonly Allows_for_unfair_front_running: InputMaybe<StringQueryOperatorInput>;
-  readonly Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador_Leaderboard: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador_program: InputMaybe<StringQueryOperatorInput>;
@@ -6515,7 +6426,6 @@ type JsonFilterInput = {
   readonly And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_: InputMaybe<StringQueryOperatorInput>;
   readonly Anti_front_running: InputMaybe<StringQueryOperatorInput>;
   readonly Apply_now: InputMaybe<StringQueryOperatorInput>;
-  readonly Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_: InputMaybe<StringQueryOperatorInput>;
   readonly Are_you_sure_you_want_to_submit_the_form_: InputMaybe<StringQueryOperatorInput>;
   readonly Articles_about_vega_from_around_the_web: InputMaybe<StringQueryOperatorInput>;
   readonly As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__: InputMaybe<StringQueryOperatorInput>;
@@ -6527,10 +6437,10 @@ type JsonFilterInput = {
   readonly Available: InputMaybe<StringQueryOperatorInput>;
   readonly Avg__Block_Time: InputMaybe<StringQueryOperatorInput>;
   readonly Be_a_Vega__Ambassador: InputMaybe<StringQueryOperatorInput>;
+  readonly Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_: InputMaybe<StringQueryOperatorInput>;
   readonly Be_active_on_Discord___most_communication_will_take_place_there: InputMaybe<StringQueryOperatorInput>;
   readonly Be_as_good_as_CeFi: InputMaybe<StringQueryOperatorInput>;
   readonly Be_better_than_CeFi: InputMaybe<StringQueryOperatorInput>;
-  readonly Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space: InputMaybe<StringQueryOperatorInput>;
   readonly Benefits_of_being_an_ambassador: InputMaybe<StringQueryOperatorInput>;
   readonly Block_Explorer: InputMaybe<StringQueryOperatorInput>;
   readonly Blockchain_derivatives: InputMaybe<StringQueryOperatorInput>;
@@ -6543,9 +6453,7 @@ type JsonFilterInput = {
   readonly Bug_bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Build: InputMaybe<StringQueryOperatorInput>;
   readonly Build___send_commands: InputMaybe<StringQueryOperatorInput>;
-  readonly Build_decentralised_apps__bots_and_trading_clients_with_our_APIs: InputMaybe<StringQueryOperatorInput>;
   readonly Builders_Club: InputMaybe<StringQueryOperatorInput>;
-  readonly Builders_Club__Technical_: InputMaybe<StringQueryOperatorInput>;
   readonly Builders_club: InputMaybe<StringQueryOperatorInput>;
   readonly Building_on_Vega_Parts_I_and_II: InputMaybe<StringQueryOperatorInput>;
   readonly Built_for_fairness_from_the_ground_up: InputMaybe<StringQueryOperatorInput>;
@@ -6567,7 +6475,7 @@ type JsonFilterInput = {
   readonly Completely_decentralised_network: InputMaybe<StringQueryOperatorInput>;
   readonly Connect: InputMaybe<StringQueryOperatorInput>;
   readonly Connect_to_networks: InputMaybe<StringQueryOperatorInput>;
-  readonly Content_Collective__Non_Technical_: InputMaybe<StringQueryOperatorInput>;
+  readonly Content_collective: InputMaybe<StringQueryOperatorInput>;
   readonly Contribute: InputMaybe<StringQueryOperatorInput>;
   readonly Contribute_and_get_rewarded: InputMaybe<StringQueryOperatorInput>;
   readonly Contribute_to_Vega: InputMaybe<StringQueryOperatorInput>;
@@ -6592,12 +6500,14 @@ type JsonFilterInput = {
   readonly Develop: InputMaybe<StringQueryOperatorInput>;
   readonly Develop_on_Vega: InputMaybe<StringQueryOperatorInput>;
   readonly Develop_with_Vega: InputMaybe<StringQueryOperatorInput>;
+  readonly Developer_Bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_: InputMaybe<StringQueryOperatorInput>;
   readonly Discord: InputMaybe<StringQueryOperatorInput>;
   readonly Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_: InputMaybe<StringQueryOperatorInput>;
   readonly Discuss_governance_and_governance_proposals_on_Vega_Networks_: InputMaybe<StringQueryOperatorInput>;
   readonly Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_: InputMaybe<StringQueryOperatorInput>;
   readonly Docs: InputMaybe<StringQueryOperatorInput>;
+  readonly Docs___Hackathons___Coding_support: InputMaybe<StringQueryOperatorInput>;
   readonly Documentation: InputMaybe<StringQueryOperatorInput>;
   readonly Download_desktop_app__Mainnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_: InputMaybe<StringQueryOperatorInput>;
@@ -6646,7 +6556,6 @@ type JsonFilterInput = {
   readonly For_anonymous_submissions__you_can_use_the_following_form_: InputMaybe<StringQueryOperatorInput>;
   readonly For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_: InputMaybe<StringQueryOperatorInput>;
   readonly For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_: InputMaybe<StringQueryOperatorInput>;
-  readonly For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_: InputMaybe<StringQueryOperatorInput>;
   readonly For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_: InputMaybe<StringQueryOperatorInput>;
   readonly Formalise_Proposal: InputMaybe<StringQueryOperatorInput>;
   readonly Formalise_your_proposal: InputMaybe<StringQueryOperatorInput>;
@@ -6656,7 +6565,6 @@ type JsonFilterInput = {
   readonly Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up: InputMaybe<StringQueryOperatorInput>;
   readonly Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_: InputMaybe<StringQueryOperatorInput>;
   readonly Generalist_tool___A_workaround_for_trading: InputMaybe<StringQueryOperatorInput>;
-  readonly Get_Started: InputMaybe<StringQueryOperatorInput>;
   readonly Get_Swag: InputMaybe<StringQueryOperatorInput>;
   readonly Get__VEGA_tokens: InputMaybe<StringQueryOperatorInput>;
   readonly Get_a_Vega_Wallet: InputMaybe<StringQueryOperatorInput>;
@@ -6665,6 +6573,7 @@ type JsonFilterInput = {
   readonly Get_rewarded_for_your_efforts_testing_the_network: InputMaybe<StringQueryOperatorInput>;
   readonly Get_started: InputMaybe<StringQueryOperatorInput>;
   readonly Get_started_voting: InputMaybe<StringQueryOperatorInput>;
+  readonly Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_: InputMaybe<StringQueryOperatorInput>;
   readonly Get_the_CLI_app: InputMaybe<StringQueryOperatorInput>;
   readonly Get_the_Vega_Wallet: InputMaybe<StringQueryOperatorInput>;
   readonly Get_the_code: InputMaybe<StringQueryOperatorInput>;
@@ -6684,7 +6593,6 @@ type JsonFilterInput = {
   readonly Governance_lifecycle: InputMaybe<StringQueryOperatorInput>;
   readonly Governance_on_Vega: InputMaybe<StringQueryOperatorInput>;
   readonly Governance_tools: InputMaybe<StringQueryOperatorInput>;
-  readonly GraphQL: InputMaybe<StringQueryOperatorInput>;
   readonly Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks: InputMaybe<StringQueryOperatorInput>;
   readonly Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_: InputMaybe<StringQueryOperatorInput>;
   readonly Have_an_idea_for_an_event_or_talk_: InputMaybe<StringQueryOperatorInput>;
@@ -6709,16 +6617,18 @@ type JsonFilterInput = {
   readonly Incentives___bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Incentives_and_bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Insights: InputMaybe<StringQueryOperatorInput>;
-  readonly Interested_in_joining_: InputMaybe<StringQueryOperatorInput>;
+  readonly Internationalisation___Local_Language_Groups___AMAs: InputMaybe<StringQueryOperatorInput>;
   readonly Isolate_keys: InputMaybe<StringQueryOperatorInput>;
   readonly It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: InputMaybe<StringQueryOperatorInput>;
   readonly Join: InputMaybe<StringQueryOperatorInput>;
-  readonly Join_the_Builders_Club: InputMaybe<StringQueryOperatorInput>;
+  readonly Join_a_team: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_Vega_community: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: InputMaybe<StringQueryOperatorInput>;
+  readonly Join_the_builders_club: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_community: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_core_team_and_work_on_the_Vega_project_: InputMaybe<StringQueryOperatorInput>;
+  readonly Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_: InputMaybe<StringQueryOperatorInput>;
   readonly Join_us_on_Discord: InputMaybe<StringQueryOperatorInput>;
   readonly Keep_control_of_your_data__and_protect_your_privacy_: InputMaybe<StringQueryOperatorInput>;
   readonly Key_Vega_Concepts: InputMaybe<StringQueryOperatorInput>;
@@ -6739,8 +6649,7 @@ type JsonFilterInput = {
   readonly Learn_more: InputMaybe<StringQueryOperatorInput>;
   readonly Learn_with_the_core_team__attend_office_hours__ask_questions__grow: InputMaybe<StringQueryOperatorInput>;
   readonly Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_: InputMaybe<StringQueryOperatorInput>;
-  readonly Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_: InputMaybe<StringQueryOperatorInput>;
-  readonly Limited_edition_Vega_swag: InputMaybe<StringQueryOperatorInput>;
+  readonly Limited_Edition_Vega_swag: InputMaybe<StringQueryOperatorInput>;
   readonly Livestreams__conferences__research_office_hours_and_community_calls: InputMaybe<StringQueryOperatorInput>;
   readonly Load_more___: InputMaybe<StringQueryOperatorInput>;
   readonly Loading___: InputMaybe<StringQueryOperatorInput>;
@@ -6755,12 +6664,11 @@ type JsonFilterInput = {
   readonly Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
   readonly Medium: InputMaybe<StringQueryOperatorInput>;
   readonly Meet: InputMaybe<StringQueryOperatorInput>;
-  readonly Meet_on_Discord: InputMaybe<StringQueryOperatorInput>;
   readonly Meet_our_contributors: InputMaybe<StringQueryOperatorInput>;
   readonly Meet_us_on_Discord: InputMaybe<StringQueryOperatorInput>;
   readonly More_info: InputMaybe<StringQueryOperatorInput>;
   readonly Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_: InputMaybe<StringQueryOperatorInput>;
-  readonly Multilingual_League__Translations_: InputMaybe<StringQueryOperatorInput>;
+  readonly Multilingual_League: InputMaybe<StringQueryOperatorInput>;
   readonly Name_each_individual_wallet_if_you_need_more_than_one: InputMaybe<StringQueryOperatorInput>;
   readonly Native_liquidity_provision: InputMaybe<StringQueryOperatorInput>;
   readonly Need_the_command_line__CLI__wallet_app_: InputMaybe<StringQueryOperatorInput>;
@@ -6779,7 +6687,6 @@ type JsonFilterInput = {
   readonly Optimised_for_high_capital_efficiency: InputMaybe<StringQueryOperatorInput>;
   readonly Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network: InputMaybe<StringQueryOperatorInput>;
   readonly Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_: InputMaybe<StringQueryOperatorInput>;
-  readonly Overview: InputMaybe<StringQueryOperatorInput>;
   readonly PGP_Key: InputMaybe<StringQueryOperatorInput>;
   readonly Papers: InputMaybe<StringQueryOperatorInput>;
   readonly Papers___Research: InputMaybe<StringQueryOperatorInput>;
@@ -6799,6 +6706,7 @@ type JsonFilterInput = {
   readonly Prevent_a_potential_vulnerability_being_abused_by_others_: InputMaybe<StringQueryOperatorInput>;
   readonly Previous: InputMaybe<StringQueryOperatorInput>;
   readonly Priority_consideration_on_protocol_feedback: InputMaybe<StringQueryOperatorInput>;
+  readonly Priority_minting_of_NFT_drops____enhanced_rarities_: InputMaybe<StringQueryOperatorInput>;
   readonly Privacy___Cookie_Policy: InputMaybe<StringQueryOperatorInput>;
   readonly Propose_a_futures_market_on_any_underlying_: InputMaybe<StringQueryOperatorInput>;
   readonly Propose_a_market_on_any_underlying_: InputMaybe<StringQueryOperatorInput>;
@@ -6808,7 +6716,6 @@ type JsonFilterInput = {
   readonly Purpose_built_bespoke_blockchain: InputMaybe<StringQueryOperatorInput>;
   readonly Purpose_built_blockchain: InputMaybe<StringQueryOperatorInput>;
   readonly Query_the_Vega_network_APIs_to_retrieve_on_chain_data_: InputMaybe<StringQueryOperatorInput>;
-  readonly REST: InputMaybe<StringQueryOperatorInput>;
   readonly Rank: InputMaybe<StringQueryOperatorInput>;
   readonly Read_all_Insights: InputMaybe<StringQueryOperatorInput>;
   readonly Read_more_about_: InputMaybe<StringQueryOperatorInput>;
@@ -6833,10 +6740,11 @@ type JsonFilterInput = {
   readonly Scope: InputMaybe<StringQueryOperatorInput>;
   readonly See_all_Tweets: InputMaybe<StringQueryOperatorInput>;
   readonly See_more: InputMaybe<StringQueryOperatorInput>;
-  readonly See_the_Roadmap: InputMaybe<StringQueryOperatorInput>;
+  readonly See_the_roadmap: InputMaybe<StringQueryOperatorInput>;
   readonly See_what_markets_already_exist__Testnet_: InputMaybe<StringQueryOperatorInput>;
   readonly See_what_markets_exist_already__Testnet_: InputMaybe<StringQueryOperatorInput>;
-  readonly Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_: InputMaybe<StringQueryOperatorInput>;
+  readonly See_what_s_going_on: InputMaybe<StringQueryOperatorInput>;
+  readonly See_whats_s_going_on: InputMaybe<StringQueryOperatorInput>;
   readonly Send_Message: InputMaybe<StringQueryOperatorInput>;
   readonly Sense_check: InputMaybe<StringQueryOperatorInput>;
   readonly Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_: InputMaybe<StringQueryOperatorInput>;
@@ -6873,7 +6781,6 @@ type JsonFilterInput = {
   readonly The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_: InputMaybe<StringQueryOperatorInput>;
   readonly The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_: InputMaybe<StringQueryOperatorInput>;
   readonly The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
-  readonly The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_: InputMaybe<StringQueryOperatorInput>;
   readonly The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_: InputMaybe<StringQueryOperatorInput>;
   readonly There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_: InputMaybe<StringQueryOperatorInput>;
   readonly This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_: InputMaybe<StringQueryOperatorInput>;
@@ -6891,6 +6798,7 @@ type JsonFilterInput = {
   readonly Trading: InputMaybe<StringQueryOperatorInput>;
   readonly Translate: InputMaybe<StringQueryOperatorInput>;
   readonly Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__: InputMaybe<StringQueryOperatorInput>;
+  readonly Tweets___Translations___Editorials___Infographics: InputMaybe<StringQueryOperatorInput>;
   readonly Twitch: InputMaybe<StringQueryOperatorInput>;
   readonly Twitter: InputMaybe<StringQueryOperatorInput>;
   readonly Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_: InputMaybe<StringQueryOperatorInput>;
@@ -6913,7 +6821,7 @@ type JsonFilterInput = {
   readonly Vega_Community: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_Governance: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_Wallet: InputMaybe<StringQueryOperatorInput>;
-  readonly Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_: InputMaybe<StringQueryOperatorInput>;
+  readonly Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_: InputMaybe<StringQueryOperatorInput>;
   readonly Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_: InputMaybe<StringQueryOperatorInput>;
@@ -6940,7 +6848,6 @@ type JsonFilterInput = {
   readonly Vote_for_proposals__Testnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_on_proposals: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_to_exercise_your_influence: InputMaybe<StringQueryOperatorInput>;
-  readonly Wallet: InputMaybe<StringQueryOperatorInput>;
   readonly Wallets: InputMaybe<StringQueryOperatorInput>;
   readonly Want_Swag_: InputMaybe<StringQueryOperatorInput>;
   readonly Want_to_add_something_to_this_list_: InputMaybe<StringQueryOperatorInput>;
@@ -6954,26 +6861,20 @@ type JsonFilterInput = {
   readonly When_: InputMaybe<StringQueryOperatorInput>;
   readonly Where_next_: InputMaybe<StringQueryOperatorInput>;
   readonly Where_we_are: InputMaybe<StringQueryOperatorInput>;
-  readonly Which_Vega__Team_would_you_rally_: InputMaybe<StringQueryOperatorInput>;
   readonly Whitepaper: InputMaybe<StringQueryOperatorInput>;
   readonly With_the_wallet_you_can_: InputMaybe<StringQueryOperatorInput>;
   readonly YouTube: InputMaybe<StringQueryOperatorInput>;
   readonly You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_: InputMaybe<StringQueryOperatorInput>;
-  readonly You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_: InputMaybe<StringQueryOperatorInput>;
   readonly Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Click_here_to_contribute__0__: InputMaybe<StringQueryOperatorInput>;
-  readonly _Internationalisation__Local_Language_Groups__AMAs_: InputMaybe<StringQueryOperatorInput>;
-  readonly _Tweets__Editorials__Infographics__Bounties_: InputMaybe<StringQueryOperatorInput>;
-  readonly _Vega_Capsule__Documentation__Hackathon_Support__Coding_: InputMaybe<StringQueryOperatorInput>;
   readonly _p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_: InputMaybe<StringQueryOperatorInput>;
   readonly _p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_: InputMaybe<StringQueryOperatorInput>;
   readonly _p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_: InputMaybe<StringQueryOperatorInput>;
   readonly _p_Update_your_proposal_topic_based_on_the_feedback_received__and_ensure_you_have_included_the_rationale_and_specifics_of_the_the_market__including_the_data__JSON_or_similar__that_would_be_submitted_on_chain_i_e__market_name_and_code__Oracle___data_source_the_market_will_use_for_settlement__and_risk_model__to_calculate_margin_requirements_and_ensure_safe_trading____p__p_Update_the_tag_and_invite_debate_and_discussion_to_amend_the_proposal_until_it_reaches_a_final_state__ready_to_submit___p_: InputMaybe<StringQueryOperatorInput>;
   readonly _xminutesxxxminutexread: InputMaybe<StringQueryOperatorInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
-  readonly gRPC: InputMaybe<StringQueryOperatorInput>;
   readonly governance: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
@@ -7461,7 +7362,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'frontmatter.featuredImage.childJson.All'
   | 'frontmatter.featuredImage.childJson.Allows_for_unfair_front_running'
-  | 'frontmatter.featuredImage.childJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'frontmatter.featuredImage.childJson.Ambassador'
   | 'frontmatter.featuredImage.childJson.Ambassador_Leaderboard'
   | 'frontmatter.featuredImage.childJson.Ambassador_program'
@@ -7471,7 +7371,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'frontmatter.featuredImage.childJson.Anti_front_running'
   | 'frontmatter.featuredImage.childJson.Apply_now'
-  | 'frontmatter.featuredImage.childJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'frontmatter.featuredImage.childJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'frontmatter.featuredImage.childJson.Articles_about_vega_from_around_the_web'
   | 'frontmatter.featuredImage.childJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -7483,10 +7382,10 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Available'
   | 'frontmatter.featuredImage.childJson.Avg__Block_Time'
   | 'frontmatter.featuredImage.childJson.Be_a_Vega__Ambassador'
+  | 'frontmatter.featuredImage.childJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'frontmatter.featuredImage.childJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'frontmatter.featuredImage.childJson.Be_as_good_as_CeFi'
   | 'frontmatter.featuredImage.childJson.Be_better_than_CeFi'
-  | 'frontmatter.featuredImage.childJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'frontmatter.featuredImage.childJson.Benefits_of_being_an_ambassador'
   | 'frontmatter.featuredImage.childJson.Block_Explorer'
   | 'frontmatter.featuredImage.childJson.Blockchain_derivatives'
@@ -7499,9 +7398,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Bug_bounties'
   | 'frontmatter.featuredImage.childJson.Build'
   | 'frontmatter.featuredImage.childJson.Build___send_commands'
-  | 'frontmatter.featuredImage.childJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'frontmatter.featuredImage.childJson.Builders_Club'
-  | 'frontmatter.featuredImage.childJson.Builders_Club__Technical_'
   | 'frontmatter.featuredImage.childJson.Builders_club'
   | 'frontmatter.featuredImage.childJson.Building_on_Vega_Parts_I_and_II'
   | 'frontmatter.featuredImage.childJson.Built_for_fairness_from_the_ground_up'
@@ -7523,7 +7420,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Completely_decentralised_network'
   | 'frontmatter.featuredImage.childJson.Connect'
   | 'frontmatter.featuredImage.childJson.Connect_to_networks'
-  | 'frontmatter.featuredImage.childJson.Content_Collective__Non_Technical_'
+  | 'frontmatter.featuredImage.childJson.Content_collective'
   | 'frontmatter.featuredImage.childJson.Contribute'
   | 'frontmatter.featuredImage.childJson.Contribute_and_get_rewarded'
   | 'frontmatter.featuredImage.childJson.Contribute_to_Vega'
@@ -7548,12 +7445,14 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Develop'
   | 'frontmatter.featuredImage.childJson.Develop_on_Vega'
   | 'frontmatter.featuredImage.childJson.Develop_with_Vega'
+  | 'frontmatter.featuredImage.childJson.Developer_Bounties'
   | 'frontmatter.featuredImage.childJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'frontmatter.featuredImage.childJson.Discord'
   | 'frontmatter.featuredImage.childJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'frontmatter.featuredImage.childJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'frontmatter.featuredImage.childJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'frontmatter.featuredImage.childJson.Docs'
+  | 'frontmatter.featuredImage.childJson.Docs___Hackathons___Coding_support'
   | 'frontmatter.featuredImage.childJson.Documentation'
   | 'frontmatter.featuredImage.childJson.Download_desktop_app__Mainnet_'
   | 'frontmatter.featuredImage.childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -7602,7 +7501,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'frontmatter.featuredImage.childJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'frontmatter.featuredImage.childJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'frontmatter.featuredImage.childJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'frontmatter.featuredImage.childJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'frontmatter.featuredImage.childJson.Formalise_Proposal'
   | 'frontmatter.featuredImage.childJson.Formalise_your_proposal'
@@ -7612,7 +7510,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'frontmatter.featuredImage.childJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'frontmatter.featuredImage.childJson.Generalist_tool___A_workaround_for_trading'
-  | 'frontmatter.featuredImage.childJson.Get_Started'
   | 'frontmatter.featuredImage.childJson.Get_Swag'
   | 'frontmatter.featuredImage.childJson.Get__VEGA_tokens'
   | 'frontmatter.featuredImage.childJson.Get_a_Vega_Wallet'
@@ -7621,6 +7518,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'frontmatter.featuredImage.childJson.Get_started'
   | 'frontmatter.featuredImage.childJson.Get_started_voting'
+  | 'frontmatter.featuredImage.childJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'frontmatter.featuredImage.childJson.Get_the_CLI_app'
   | 'frontmatter.featuredImage.childJson.Get_the_Vega_Wallet'
   | 'frontmatter.featuredImage.childJson.Get_the_code'
@@ -7640,7 +7538,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Governance_lifecycle'
   | 'frontmatter.featuredImage.childJson.Governance_on_Vega'
   | 'frontmatter.featuredImage.childJson.Governance_tools'
-  | 'frontmatter.featuredImage.childJson.GraphQL'
   | 'frontmatter.featuredImage.childJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'frontmatter.featuredImage.childJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'frontmatter.featuredImage.childJson.Have_an_idea_for_an_event_or_talk_'
@@ -7665,16 +7562,18 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Incentives___bounties'
   | 'frontmatter.featuredImage.childJson.Incentives_and_bounties'
   | 'frontmatter.featuredImage.childJson.Insights'
-  | 'frontmatter.featuredImage.childJson.Interested_in_joining_'
+  | 'frontmatter.featuredImage.childJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'frontmatter.featuredImage.childJson.Isolate_keys'
   | 'frontmatter.featuredImage.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'frontmatter.featuredImage.childJson.Join'
-  | 'frontmatter.featuredImage.childJson.Join_the_Builders_Club'
+  | 'frontmatter.featuredImage.childJson.Join_a_team'
   | 'frontmatter.featuredImage.childJson.Join_the_Vega_community'
   | 'frontmatter.featuredImage.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'frontmatter.featuredImage.childJson.Join_the_builders_club'
   | 'frontmatter.featuredImage.childJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'frontmatter.featuredImage.childJson.Join_the_community'
   | 'frontmatter.featuredImage.childJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'frontmatter.featuredImage.childJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'frontmatter.featuredImage.childJson.Join_us_on_Discord'
   | 'frontmatter.featuredImage.childJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'frontmatter.featuredImage.childJson.Key_Vega_Concepts'
@@ -7695,8 +7594,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Learn_more'
   | 'frontmatter.featuredImage.childJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'frontmatter.featuredImage.childJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'frontmatter.featuredImage.childJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'frontmatter.featuredImage.childJson.Limited_edition_Vega_swag'
+  | 'frontmatter.featuredImage.childJson.Limited_Edition_Vega_swag'
   | 'frontmatter.featuredImage.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'frontmatter.featuredImage.childJson.Load_more___'
   | 'frontmatter.featuredImage.childJson.Loading___'
@@ -7711,12 +7609,11 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'frontmatter.featuredImage.childJson.Medium'
   | 'frontmatter.featuredImage.childJson.Meet'
-  | 'frontmatter.featuredImage.childJson.Meet_on_Discord'
   | 'frontmatter.featuredImage.childJson.Meet_our_contributors'
   | 'frontmatter.featuredImage.childJson.Meet_us_on_Discord'
   | 'frontmatter.featuredImage.childJson.More_info'
   | 'frontmatter.featuredImage.childJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'frontmatter.featuredImage.childJson.Multilingual_League__Translations_'
+  | 'frontmatter.featuredImage.childJson.Multilingual_League'
   | 'frontmatter.featuredImage.childJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'frontmatter.featuredImage.childJson.Native_liquidity_provision'
   | 'frontmatter.featuredImage.childJson.Need_the_command_line__CLI__wallet_app_'
@@ -7735,7 +7632,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Optimised_for_high_capital_efficiency'
   | 'frontmatter.featuredImage.childJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'frontmatter.featuredImage.childJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'frontmatter.featuredImage.childJson.Overview'
   | 'frontmatter.featuredImage.childJson.PGP_Key'
   | 'frontmatter.featuredImage.childJson.Papers'
   | 'frontmatter.featuredImage.childJson.Papers___Research'
@@ -7755,6 +7651,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'frontmatter.featuredImage.childJson.Previous'
   | 'frontmatter.featuredImage.childJson.Priority_consideration_on_protocol_feedback'
+  | 'frontmatter.featuredImage.childJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'frontmatter.featuredImage.childJson.Privacy___Cookie_Policy'
   | 'frontmatter.featuredImage.childJson.Propose_a_futures_market_on_any_underlying_'
   | 'frontmatter.featuredImage.childJson.Propose_a_market_on_any_underlying_'
@@ -7764,7 +7661,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Purpose_built_bespoke_blockchain'
   | 'frontmatter.featuredImage.childJson.Purpose_built_blockchain'
   | 'frontmatter.featuredImage.childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'frontmatter.featuredImage.childJson.REST'
   | 'frontmatter.featuredImage.childJson.Rank'
   | 'frontmatter.featuredImage.childJson.Read_all_Insights'
   | 'frontmatter.featuredImage.childJson.Read_more_about_'
@@ -7789,10 +7685,11 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Scope'
   | 'frontmatter.featuredImage.childJson.See_all_Tweets'
   | 'frontmatter.featuredImage.childJson.See_more'
-  | 'frontmatter.featuredImage.childJson.See_the_Roadmap'
+  | 'frontmatter.featuredImage.childJson.See_the_roadmap'
   | 'frontmatter.featuredImage.childJson.See_what_markets_already_exist__Testnet_'
   | 'frontmatter.featuredImage.childJson.See_what_markets_exist_already__Testnet_'
-  | 'frontmatter.featuredImage.childJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'frontmatter.featuredImage.childJson.See_what_s_going_on'
+  | 'frontmatter.featuredImage.childJson.See_whats_s_going_on'
   | 'frontmatter.featuredImage.childJson.Send_Message'
   | 'frontmatter.featuredImage.childJson.Sense_check'
   | 'frontmatter.featuredImage.childJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -7829,7 +7726,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'frontmatter.featuredImage.childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'frontmatter.featuredImage.childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'frontmatter.featuredImage.childJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'frontmatter.featuredImage.childJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'frontmatter.featuredImage.childJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'frontmatter.featuredImage.childJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -7847,6 +7743,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Trading'
   | 'frontmatter.featuredImage.childJson.Translate'
   | 'frontmatter.featuredImage.childJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'frontmatter.featuredImage.childJson.Tweets___Translations___Editorials___Infographics'
   | 'frontmatter.featuredImage.childJson.Twitch'
   | 'frontmatter.featuredImage.childJson.Twitter'
   | 'frontmatter.featuredImage.childJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -7869,7 +7766,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Vega_Community'
   | 'frontmatter.featuredImage.childJson.Vega_Governance'
   | 'frontmatter.featuredImage.childJson.Vega_Wallet'
-  | 'frontmatter.featuredImage.childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'frontmatter.featuredImage.childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'frontmatter.featuredImage.childJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'frontmatter.featuredImage.childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'frontmatter.featuredImage.childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -7896,7 +7793,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Vote_for_proposals__Testnet_'
   | 'frontmatter.featuredImage.childJson.Vote_on_proposals'
   | 'frontmatter.featuredImage.childJson.Vote_to_exercise_your_influence'
-  | 'frontmatter.featuredImage.childJson.Wallet'
   | 'frontmatter.featuredImage.childJson.Wallets'
   | 'frontmatter.featuredImage.childJson.Want_Swag_'
   | 'frontmatter.featuredImage.childJson.Want_to_add_something_to_this_list_'
@@ -7910,26 +7806,20 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.When_'
   | 'frontmatter.featuredImage.childJson.Where_next_'
   | 'frontmatter.featuredImage.childJson.Where_we_are'
-  | 'frontmatter.featuredImage.childJson.Which_Vega__Team_would_you_rally_'
   | 'frontmatter.featuredImage.childJson.Whitepaper'
   | 'frontmatter.featuredImage.childJson.With_the_wallet_you_can_'
   | 'frontmatter.featuredImage.childJson.YouTube'
   | 'frontmatter.featuredImage.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'frontmatter.featuredImage.childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'frontmatter.featuredImage.childJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'frontmatter.featuredImage.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'frontmatter.featuredImage.childJson._0_Click_here_to_contribute__0__'
-  | 'frontmatter.featuredImage.childJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'frontmatter.featuredImage.childJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'frontmatter.featuredImage.childJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'frontmatter.featuredImage.childJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'frontmatter.featuredImage.childJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'frontmatter.featuredImage.childJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
   | 'frontmatter.featuredImage.childJson._p_Update_your_proposal_topic_based_on_the_feedback_received__and_ensure_you_have_included_the_rationale_and_specifics_of_the_the_market__including_the_data__JSON_or_similar__that_would_be_submitted_on_chain_i_e__market_name_and_code__Oracle___data_source_the_market_will_use_for_settlement__and_risk_model__to_calculate_margin_requirements_and_ensure_safe_trading____p__p_Update_the_tag_and_invite_debate_and_discussion_to_amend_the_proposal_until_it_reaches_a_final_state__ready_to_submit___p_'
   | 'frontmatter.featuredImage.childJson._xminutesxxxminutexread'
   | 'frontmatter.featuredImage.childJson.children'
-  | 'frontmatter.featuredImage.childJson.gRPC'
   | 'frontmatter.featuredImage.childJson.governance'
   | 'frontmatter.featuredImage.childJson.id'
   | 'frontmatter.featuredImage.childJson.network'
@@ -7978,7 +7868,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'frontmatter.featuredImage.childrenJson.All'
   | 'frontmatter.featuredImage.childrenJson.Allows_for_unfair_front_running'
-  | 'frontmatter.featuredImage.childrenJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'frontmatter.featuredImage.childrenJson.Ambassador'
   | 'frontmatter.featuredImage.childrenJson.Ambassador_Leaderboard'
   | 'frontmatter.featuredImage.childrenJson.Ambassador_program'
@@ -7988,7 +7877,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'frontmatter.featuredImage.childrenJson.Anti_front_running'
   | 'frontmatter.featuredImage.childrenJson.Apply_now'
-  | 'frontmatter.featuredImage.childrenJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'frontmatter.featuredImage.childrenJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'frontmatter.featuredImage.childrenJson.Articles_about_vega_from_around_the_web'
   | 'frontmatter.featuredImage.childrenJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -8000,10 +7888,10 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Available'
   | 'frontmatter.featuredImage.childrenJson.Avg__Block_Time'
   | 'frontmatter.featuredImage.childrenJson.Be_a_Vega__Ambassador'
+  | 'frontmatter.featuredImage.childrenJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'frontmatter.featuredImage.childrenJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'frontmatter.featuredImage.childrenJson.Be_as_good_as_CeFi'
   | 'frontmatter.featuredImage.childrenJson.Be_better_than_CeFi'
-  | 'frontmatter.featuredImage.childrenJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'frontmatter.featuredImage.childrenJson.Benefits_of_being_an_ambassador'
   | 'frontmatter.featuredImage.childrenJson.Block_Explorer'
   | 'frontmatter.featuredImage.childrenJson.Blockchain_derivatives'
@@ -8016,9 +7904,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Bug_bounties'
   | 'frontmatter.featuredImage.childrenJson.Build'
   | 'frontmatter.featuredImage.childrenJson.Build___send_commands'
-  | 'frontmatter.featuredImage.childrenJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'frontmatter.featuredImage.childrenJson.Builders_Club'
-  | 'frontmatter.featuredImage.childrenJson.Builders_Club__Technical_'
   | 'frontmatter.featuredImage.childrenJson.Builders_club'
   | 'frontmatter.featuredImage.childrenJson.Building_on_Vega_Parts_I_and_II'
   | 'frontmatter.featuredImage.childrenJson.Built_for_fairness_from_the_ground_up'
@@ -8040,7 +7926,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Completely_decentralised_network'
   | 'frontmatter.featuredImage.childrenJson.Connect'
   | 'frontmatter.featuredImage.childrenJson.Connect_to_networks'
-  | 'frontmatter.featuredImage.childrenJson.Content_Collective__Non_Technical_'
+  | 'frontmatter.featuredImage.childrenJson.Content_collective'
   | 'frontmatter.featuredImage.childrenJson.Contribute'
   | 'frontmatter.featuredImage.childrenJson.Contribute_and_get_rewarded'
   | 'frontmatter.featuredImage.childrenJson.Contribute_to_Vega'
@@ -8065,12 +7951,14 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Develop'
   | 'frontmatter.featuredImage.childrenJson.Develop_on_Vega'
   | 'frontmatter.featuredImage.childrenJson.Develop_with_Vega'
+  | 'frontmatter.featuredImage.childrenJson.Developer_Bounties'
   | 'frontmatter.featuredImage.childrenJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'frontmatter.featuredImage.childrenJson.Discord'
   | 'frontmatter.featuredImage.childrenJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'frontmatter.featuredImage.childrenJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'frontmatter.featuredImage.childrenJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'frontmatter.featuredImage.childrenJson.Docs'
+  | 'frontmatter.featuredImage.childrenJson.Docs___Hackathons___Coding_support'
   | 'frontmatter.featuredImage.childrenJson.Documentation'
   | 'frontmatter.featuredImage.childrenJson.Download_desktop_app__Mainnet_'
   | 'frontmatter.featuredImage.childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -8119,7 +8007,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'frontmatter.featuredImage.childrenJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'frontmatter.featuredImage.childrenJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'frontmatter.featuredImage.childrenJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'frontmatter.featuredImage.childrenJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'frontmatter.featuredImage.childrenJson.Formalise_Proposal'
   | 'frontmatter.featuredImage.childrenJson.Formalise_your_proposal'
@@ -8129,7 +8016,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'frontmatter.featuredImage.childrenJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'frontmatter.featuredImage.childrenJson.Generalist_tool___A_workaround_for_trading'
-  | 'frontmatter.featuredImage.childrenJson.Get_Started'
   | 'frontmatter.featuredImage.childrenJson.Get_Swag'
   | 'frontmatter.featuredImage.childrenJson.Get__VEGA_tokens'
   | 'frontmatter.featuredImage.childrenJson.Get_a_Vega_Wallet'
@@ -8138,6 +8024,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'frontmatter.featuredImage.childrenJson.Get_started'
   | 'frontmatter.featuredImage.childrenJson.Get_started_voting'
+  | 'frontmatter.featuredImage.childrenJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'frontmatter.featuredImage.childrenJson.Get_the_CLI_app'
   | 'frontmatter.featuredImage.childrenJson.Get_the_Vega_Wallet'
   | 'frontmatter.featuredImage.childrenJson.Get_the_code'
@@ -8157,7 +8044,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Governance_lifecycle'
   | 'frontmatter.featuredImage.childrenJson.Governance_on_Vega'
   | 'frontmatter.featuredImage.childrenJson.Governance_tools'
-  | 'frontmatter.featuredImage.childrenJson.GraphQL'
   | 'frontmatter.featuredImage.childrenJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'frontmatter.featuredImage.childrenJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'frontmatter.featuredImage.childrenJson.Have_an_idea_for_an_event_or_talk_'
@@ -8182,16 +8068,18 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Incentives___bounties'
   | 'frontmatter.featuredImage.childrenJson.Incentives_and_bounties'
   | 'frontmatter.featuredImage.childrenJson.Insights'
-  | 'frontmatter.featuredImage.childrenJson.Interested_in_joining_'
+  | 'frontmatter.featuredImage.childrenJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'frontmatter.featuredImage.childrenJson.Isolate_keys'
   | 'frontmatter.featuredImage.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'frontmatter.featuredImage.childrenJson.Join'
-  | 'frontmatter.featuredImage.childrenJson.Join_the_Builders_Club'
+  | 'frontmatter.featuredImage.childrenJson.Join_a_team'
   | 'frontmatter.featuredImage.childrenJson.Join_the_Vega_community'
   | 'frontmatter.featuredImage.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'frontmatter.featuredImage.childrenJson.Join_the_builders_club'
   | 'frontmatter.featuredImage.childrenJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'frontmatter.featuredImage.childrenJson.Join_the_community'
   | 'frontmatter.featuredImage.childrenJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'frontmatter.featuredImage.childrenJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'frontmatter.featuredImage.childrenJson.Join_us_on_Discord'
   | 'frontmatter.featuredImage.childrenJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'frontmatter.featuredImage.childrenJson.Key_Vega_Concepts'
@@ -8212,8 +8100,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Learn_more'
   | 'frontmatter.featuredImage.childrenJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'frontmatter.featuredImage.childrenJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'frontmatter.featuredImage.childrenJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'frontmatter.featuredImage.childrenJson.Limited_edition_Vega_swag'
+  | 'frontmatter.featuredImage.childrenJson.Limited_Edition_Vega_swag'
   | 'frontmatter.featuredImage.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'frontmatter.featuredImage.childrenJson.Load_more___'
   | 'frontmatter.featuredImage.childrenJson.Loading___'
@@ -8228,12 +8115,11 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'frontmatter.featuredImage.childrenJson.Medium'
   | 'frontmatter.featuredImage.childrenJson.Meet'
-  | 'frontmatter.featuredImage.childrenJson.Meet_on_Discord'
   | 'frontmatter.featuredImage.childrenJson.Meet_our_contributors'
   | 'frontmatter.featuredImage.childrenJson.Meet_us_on_Discord'
   | 'frontmatter.featuredImage.childrenJson.More_info'
   | 'frontmatter.featuredImage.childrenJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'frontmatter.featuredImage.childrenJson.Multilingual_League__Translations_'
+  | 'frontmatter.featuredImage.childrenJson.Multilingual_League'
   | 'frontmatter.featuredImage.childrenJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'frontmatter.featuredImage.childrenJson.Native_liquidity_provision'
   | 'frontmatter.featuredImage.childrenJson.Need_the_command_line__CLI__wallet_app_'
@@ -8252,7 +8138,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Optimised_for_high_capital_efficiency'
   | 'frontmatter.featuredImage.childrenJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'frontmatter.featuredImage.childrenJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'frontmatter.featuredImage.childrenJson.Overview'
   | 'frontmatter.featuredImage.childrenJson.PGP_Key'
   | 'frontmatter.featuredImage.childrenJson.Papers'
   | 'frontmatter.featuredImage.childrenJson.Papers___Research'
@@ -8272,6 +8157,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'frontmatter.featuredImage.childrenJson.Previous'
   | 'frontmatter.featuredImage.childrenJson.Priority_consideration_on_protocol_feedback'
+  | 'frontmatter.featuredImage.childrenJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'frontmatter.featuredImage.childrenJson.Privacy___Cookie_Policy'
   | 'frontmatter.featuredImage.childrenJson.Propose_a_futures_market_on_any_underlying_'
   | 'frontmatter.featuredImage.childrenJson.Propose_a_market_on_any_underlying_'
@@ -8281,7 +8167,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Purpose_built_bespoke_blockchain'
   | 'frontmatter.featuredImage.childrenJson.Purpose_built_blockchain'
   | 'frontmatter.featuredImage.childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'frontmatter.featuredImage.childrenJson.REST'
   | 'frontmatter.featuredImage.childrenJson.Rank'
   | 'frontmatter.featuredImage.childrenJson.Read_all_Insights'
   | 'frontmatter.featuredImage.childrenJson.Read_more_about_'
@@ -8306,10 +8191,11 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Scope'
   | 'frontmatter.featuredImage.childrenJson.See_all_Tweets'
   | 'frontmatter.featuredImage.childrenJson.See_more'
-  | 'frontmatter.featuredImage.childrenJson.See_the_Roadmap'
+  | 'frontmatter.featuredImage.childrenJson.See_the_roadmap'
   | 'frontmatter.featuredImage.childrenJson.See_what_markets_already_exist__Testnet_'
   | 'frontmatter.featuredImage.childrenJson.See_what_markets_exist_already__Testnet_'
-  | 'frontmatter.featuredImage.childrenJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'frontmatter.featuredImage.childrenJson.See_what_s_going_on'
+  | 'frontmatter.featuredImage.childrenJson.See_whats_s_going_on'
   | 'frontmatter.featuredImage.childrenJson.Send_Message'
   | 'frontmatter.featuredImage.childrenJson.Sense_check'
   | 'frontmatter.featuredImage.childrenJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -8346,7 +8232,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'frontmatter.featuredImage.childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'frontmatter.featuredImage.childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'frontmatter.featuredImage.childrenJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'frontmatter.featuredImage.childrenJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'frontmatter.featuredImage.childrenJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'frontmatter.featuredImage.childrenJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -8364,6 +8249,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Trading'
   | 'frontmatter.featuredImage.childrenJson.Translate'
   | 'frontmatter.featuredImage.childrenJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'frontmatter.featuredImage.childrenJson.Tweets___Translations___Editorials___Infographics'
   | 'frontmatter.featuredImage.childrenJson.Twitch'
   | 'frontmatter.featuredImage.childrenJson.Twitter'
   | 'frontmatter.featuredImage.childrenJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -8386,7 +8272,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Vega_Community'
   | 'frontmatter.featuredImage.childrenJson.Vega_Governance'
   | 'frontmatter.featuredImage.childrenJson.Vega_Wallet'
-  | 'frontmatter.featuredImage.childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'frontmatter.featuredImage.childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'frontmatter.featuredImage.childrenJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'frontmatter.featuredImage.childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'frontmatter.featuredImage.childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -8413,7 +8299,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Vote_for_proposals__Testnet_'
   | 'frontmatter.featuredImage.childrenJson.Vote_on_proposals'
   | 'frontmatter.featuredImage.childrenJson.Vote_to_exercise_your_influence'
-  | 'frontmatter.featuredImage.childrenJson.Wallet'
   | 'frontmatter.featuredImage.childrenJson.Wallets'
   | 'frontmatter.featuredImage.childrenJson.Want_Swag_'
   | 'frontmatter.featuredImage.childrenJson.Want_to_add_something_to_this_list_'
@@ -8427,26 +8312,20 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.When_'
   | 'frontmatter.featuredImage.childrenJson.Where_next_'
   | 'frontmatter.featuredImage.childrenJson.Where_we_are'
-  | 'frontmatter.featuredImage.childrenJson.Which_Vega__Team_would_you_rally_'
   | 'frontmatter.featuredImage.childrenJson.Whitepaper'
   | 'frontmatter.featuredImage.childrenJson.With_the_wallet_you_can_'
   | 'frontmatter.featuredImage.childrenJson.YouTube'
   | 'frontmatter.featuredImage.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'frontmatter.featuredImage.childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'frontmatter.featuredImage.childrenJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'frontmatter.featuredImage.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'frontmatter.featuredImage.childrenJson._0_Click_here_to_contribute__0__'
-  | 'frontmatter.featuredImage.childrenJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'frontmatter.featuredImage.childrenJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'frontmatter.featuredImage.childrenJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'frontmatter.featuredImage.childrenJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'frontmatter.featuredImage.childrenJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'frontmatter.featuredImage.childrenJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
   | 'frontmatter.featuredImage.childrenJson._p_Update_your_proposal_topic_based_on_the_feedback_received__and_ensure_you_have_included_the_rationale_and_specifics_of_the_the_market__including_the_data__JSON_or_similar__that_would_be_submitted_on_chain_i_e__market_name_and_code__Oracle___data_source_the_market_will_use_for_settlement__and_risk_model__to_calculate_margin_requirements_and_ensure_safe_trading____p__p_Update_the_tag_and_invite_debate_and_discussion_to_amend_the_proposal_until_it_reaches_a_final_state__ready_to_submit___p_'
   | 'frontmatter.featuredImage.childrenJson._xminutesxxxminutexread'
   | 'frontmatter.featuredImage.childrenJson.children'
-  | 'frontmatter.featuredImage.childrenJson.gRPC'
   | 'frontmatter.featuredImage.childrenJson.governance'
   | 'frontmatter.featuredImage.childrenJson.id'
   | 'frontmatter.featuredImage.childrenJson.network'
@@ -12080,7 +11959,6 @@ type Query_jsonArgs = {
   Agree_with_the_code_of_conduct__keep_to_the_rules: InputMaybe<StringQueryOperatorInput>;
   All: InputMaybe<StringQueryOperatorInput>;
   Allows_for_unfair_front_running: InputMaybe<StringQueryOperatorInput>;
-  Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_: InputMaybe<StringQueryOperatorInput>;
   Ambassador: InputMaybe<StringQueryOperatorInput>;
   Ambassador_Leaderboard: InputMaybe<StringQueryOperatorInput>;
   Ambassador_program: InputMaybe<StringQueryOperatorInput>;
@@ -12090,7 +11968,6 @@ type Query_jsonArgs = {
   And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_: InputMaybe<StringQueryOperatorInput>;
   Anti_front_running: InputMaybe<StringQueryOperatorInput>;
   Apply_now: InputMaybe<StringQueryOperatorInput>;
-  Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_: InputMaybe<StringQueryOperatorInput>;
   Are_you_sure_you_want_to_submit_the_form_: InputMaybe<StringQueryOperatorInput>;
   Articles_about_vega_from_around_the_web: InputMaybe<StringQueryOperatorInput>;
   As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__: InputMaybe<StringQueryOperatorInput>;
@@ -12102,10 +11979,10 @@ type Query_jsonArgs = {
   Available: InputMaybe<StringQueryOperatorInput>;
   Avg__Block_Time: InputMaybe<StringQueryOperatorInput>;
   Be_a_Vega__Ambassador: InputMaybe<StringQueryOperatorInput>;
+  Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_: InputMaybe<StringQueryOperatorInput>;
   Be_active_on_Discord___most_communication_will_take_place_there: InputMaybe<StringQueryOperatorInput>;
   Be_as_good_as_CeFi: InputMaybe<StringQueryOperatorInput>;
   Be_better_than_CeFi: InputMaybe<StringQueryOperatorInput>;
-  Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space: InputMaybe<StringQueryOperatorInput>;
   Benefits_of_being_an_ambassador: InputMaybe<StringQueryOperatorInput>;
   Block_Explorer: InputMaybe<StringQueryOperatorInput>;
   Blockchain_derivatives: InputMaybe<StringQueryOperatorInput>;
@@ -12118,9 +11995,7 @@ type Query_jsonArgs = {
   Bug_bounties: InputMaybe<StringQueryOperatorInput>;
   Build: InputMaybe<StringQueryOperatorInput>;
   Build___send_commands: InputMaybe<StringQueryOperatorInput>;
-  Build_decentralised_apps__bots_and_trading_clients_with_our_APIs: InputMaybe<StringQueryOperatorInput>;
   Builders_Club: InputMaybe<StringQueryOperatorInput>;
-  Builders_Club__Technical_: InputMaybe<StringQueryOperatorInput>;
   Builders_club: InputMaybe<StringQueryOperatorInput>;
   Building_on_Vega_Parts_I_and_II: InputMaybe<StringQueryOperatorInput>;
   Built_for_fairness_from_the_ground_up: InputMaybe<StringQueryOperatorInput>;
@@ -12142,7 +12017,7 @@ type Query_jsonArgs = {
   Completely_decentralised_network: InputMaybe<StringQueryOperatorInput>;
   Connect: InputMaybe<StringQueryOperatorInput>;
   Connect_to_networks: InputMaybe<StringQueryOperatorInput>;
-  Content_Collective__Non_Technical_: InputMaybe<StringQueryOperatorInput>;
+  Content_collective: InputMaybe<StringQueryOperatorInput>;
   Contribute: InputMaybe<StringQueryOperatorInput>;
   Contribute_and_get_rewarded: InputMaybe<StringQueryOperatorInput>;
   Contribute_to_Vega: InputMaybe<StringQueryOperatorInput>;
@@ -12167,12 +12042,14 @@ type Query_jsonArgs = {
   Develop: InputMaybe<StringQueryOperatorInput>;
   Develop_on_Vega: InputMaybe<StringQueryOperatorInput>;
   Develop_with_Vega: InputMaybe<StringQueryOperatorInput>;
+  Developer_Bounties: InputMaybe<StringQueryOperatorInput>;
   Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_: InputMaybe<StringQueryOperatorInput>;
   Discord: InputMaybe<StringQueryOperatorInput>;
   Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_: InputMaybe<StringQueryOperatorInput>;
   Discuss_governance_and_governance_proposals_on_Vega_Networks_: InputMaybe<StringQueryOperatorInput>;
   Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_: InputMaybe<StringQueryOperatorInput>;
   Docs: InputMaybe<StringQueryOperatorInput>;
+  Docs___Hackathons___Coding_support: InputMaybe<StringQueryOperatorInput>;
   Documentation: InputMaybe<StringQueryOperatorInput>;
   Download_desktop_app__Mainnet_: InputMaybe<StringQueryOperatorInput>;
   Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_: InputMaybe<StringQueryOperatorInput>;
@@ -12221,7 +12098,6 @@ type Query_jsonArgs = {
   For_anonymous_submissions__you_can_use_the_following_form_: InputMaybe<StringQueryOperatorInput>;
   For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_: InputMaybe<StringQueryOperatorInput>;
   For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_: InputMaybe<StringQueryOperatorInput>;
-  For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_: InputMaybe<StringQueryOperatorInput>;
   For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_: InputMaybe<StringQueryOperatorInput>;
   Formalise_Proposal: InputMaybe<StringQueryOperatorInput>;
   Formalise_your_proposal: InputMaybe<StringQueryOperatorInput>;
@@ -12231,7 +12107,6 @@ type Query_jsonArgs = {
   Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up: InputMaybe<StringQueryOperatorInput>;
   Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_: InputMaybe<StringQueryOperatorInput>;
   Generalist_tool___A_workaround_for_trading: InputMaybe<StringQueryOperatorInput>;
-  Get_Started: InputMaybe<StringQueryOperatorInput>;
   Get_Swag: InputMaybe<StringQueryOperatorInput>;
   Get__VEGA_tokens: InputMaybe<StringQueryOperatorInput>;
   Get_a_Vega_Wallet: InputMaybe<StringQueryOperatorInput>;
@@ -12240,6 +12115,7 @@ type Query_jsonArgs = {
   Get_rewarded_for_your_efforts_testing_the_network: InputMaybe<StringQueryOperatorInput>;
   Get_started: InputMaybe<StringQueryOperatorInput>;
   Get_started_voting: InputMaybe<StringQueryOperatorInput>;
+  Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_: InputMaybe<StringQueryOperatorInput>;
   Get_the_CLI_app: InputMaybe<StringQueryOperatorInput>;
   Get_the_Vega_Wallet: InputMaybe<StringQueryOperatorInput>;
   Get_the_code: InputMaybe<StringQueryOperatorInput>;
@@ -12259,7 +12135,6 @@ type Query_jsonArgs = {
   Governance_lifecycle: InputMaybe<StringQueryOperatorInput>;
   Governance_on_Vega: InputMaybe<StringQueryOperatorInput>;
   Governance_tools: InputMaybe<StringQueryOperatorInput>;
-  GraphQL: InputMaybe<StringQueryOperatorInput>;
   Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks: InputMaybe<StringQueryOperatorInput>;
   Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_: InputMaybe<StringQueryOperatorInput>;
   Have_an_idea_for_an_event_or_talk_: InputMaybe<StringQueryOperatorInput>;
@@ -12284,16 +12159,18 @@ type Query_jsonArgs = {
   Incentives___bounties: InputMaybe<StringQueryOperatorInput>;
   Incentives_and_bounties: InputMaybe<StringQueryOperatorInput>;
   Insights: InputMaybe<StringQueryOperatorInput>;
-  Interested_in_joining_: InputMaybe<StringQueryOperatorInput>;
+  Internationalisation___Local_Language_Groups___AMAs: InputMaybe<StringQueryOperatorInput>;
   Isolate_keys: InputMaybe<StringQueryOperatorInput>;
   It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: InputMaybe<StringQueryOperatorInput>;
   Join: InputMaybe<StringQueryOperatorInput>;
-  Join_the_Builders_Club: InputMaybe<StringQueryOperatorInput>;
+  Join_a_team: InputMaybe<StringQueryOperatorInput>;
   Join_the_Vega_community: InputMaybe<StringQueryOperatorInput>;
   Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: InputMaybe<StringQueryOperatorInput>;
+  Join_the_builders_club: InputMaybe<StringQueryOperatorInput>;
   Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_: InputMaybe<StringQueryOperatorInput>;
   Join_the_community: InputMaybe<StringQueryOperatorInput>;
   Join_the_core_team_and_work_on_the_Vega_project_: InputMaybe<StringQueryOperatorInput>;
+  Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_: InputMaybe<StringQueryOperatorInput>;
   Join_us_on_Discord: InputMaybe<StringQueryOperatorInput>;
   Keep_control_of_your_data__and_protect_your_privacy_: InputMaybe<StringQueryOperatorInput>;
   Key_Vega_Concepts: InputMaybe<StringQueryOperatorInput>;
@@ -12314,8 +12191,7 @@ type Query_jsonArgs = {
   Learn_more: InputMaybe<StringQueryOperatorInput>;
   Learn_with_the_core_team__attend_office_hours__ask_questions__grow: InputMaybe<StringQueryOperatorInput>;
   Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_: InputMaybe<StringQueryOperatorInput>;
-  Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_: InputMaybe<StringQueryOperatorInput>;
-  Limited_edition_Vega_swag: InputMaybe<StringQueryOperatorInput>;
+  Limited_Edition_Vega_swag: InputMaybe<StringQueryOperatorInput>;
   Livestreams__conferences__research_office_hours_and_community_calls: InputMaybe<StringQueryOperatorInput>;
   Load_more___: InputMaybe<StringQueryOperatorInput>;
   Loading___: InputMaybe<StringQueryOperatorInput>;
@@ -12330,12 +12206,11 @@ type Query_jsonArgs = {
   Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
   Medium: InputMaybe<StringQueryOperatorInput>;
   Meet: InputMaybe<StringQueryOperatorInput>;
-  Meet_on_Discord: InputMaybe<StringQueryOperatorInput>;
   Meet_our_contributors: InputMaybe<StringQueryOperatorInput>;
   Meet_us_on_Discord: InputMaybe<StringQueryOperatorInput>;
   More_info: InputMaybe<StringQueryOperatorInput>;
   Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_: InputMaybe<StringQueryOperatorInput>;
-  Multilingual_League__Translations_: InputMaybe<StringQueryOperatorInput>;
+  Multilingual_League: InputMaybe<StringQueryOperatorInput>;
   Name_each_individual_wallet_if_you_need_more_than_one: InputMaybe<StringQueryOperatorInput>;
   Native_liquidity_provision: InputMaybe<StringQueryOperatorInput>;
   Need_the_command_line__CLI__wallet_app_: InputMaybe<StringQueryOperatorInput>;
@@ -12354,7 +12229,6 @@ type Query_jsonArgs = {
   Optimised_for_high_capital_efficiency: InputMaybe<StringQueryOperatorInput>;
   Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network: InputMaybe<StringQueryOperatorInput>;
   Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_: InputMaybe<StringQueryOperatorInput>;
-  Overview: InputMaybe<StringQueryOperatorInput>;
   PGP_Key: InputMaybe<StringQueryOperatorInput>;
   Papers: InputMaybe<StringQueryOperatorInput>;
   Papers___Research: InputMaybe<StringQueryOperatorInput>;
@@ -12374,6 +12248,7 @@ type Query_jsonArgs = {
   Prevent_a_potential_vulnerability_being_abused_by_others_: InputMaybe<StringQueryOperatorInput>;
   Previous: InputMaybe<StringQueryOperatorInput>;
   Priority_consideration_on_protocol_feedback: InputMaybe<StringQueryOperatorInput>;
+  Priority_minting_of_NFT_drops____enhanced_rarities_: InputMaybe<StringQueryOperatorInput>;
   Privacy___Cookie_Policy: InputMaybe<StringQueryOperatorInput>;
   Propose_a_futures_market_on_any_underlying_: InputMaybe<StringQueryOperatorInput>;
   Propose_a_market_on_any_underlying_: InputMaybe<StringQueryOperatorInput>;
@@ -12383,7 +12258,6 @@ type Query_jsonArgs = {
   Purpose_built_bespoke_blockchain: InputMaybe<StringQueryOperatorInput>;
   Purpose_built_blockchain: InputMaybe<StringQueryOperatorInput>;
   Query_the_Vega_network_APIs_to_retrieve_on_chain_data_: InputMaybe<StringQueryOperatorInput>;
-  REST: InputMaybe<StringQueryOperatorInput>;
   Rank: InputMaybe<StringQueryOperatorInput>;
   Read_all_Insights: InputMaybe<StringQueryOperatorInput>;
   Read_more_about_: InputMaybe<StringQueryOperatorInput>;
@@ -12408,10 +12282,11 @@ type Query_jsonArgs = {
   Scope: InputMaybe<StringQueryOperatorInput>;
   See_all_Tweets: InputMaybe<StringQueryOperatorInput>;
   See_more: InputMaybe<StringQueryOperatorInput>;
-  See_the_Roadmap: InputMaybe<StringQueryOperatorInput>;
+  See_the_roadmap: InputMaybe<StringQueryOperatorInput>;
   See_what_markets_already_exist__Testnet_: InputMaybe<StringQueryOperatorInput>;
   See_what_markets_exist_already__Testnet_: InputMaybe<StringQueryOperatorInput>;
-  Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_: InputMaybe<StringQueryOperatorInput>;
+  See_what_s_going_on: InputMaybe<StringQueryOperatorInput>;
+  See_whats_s_going_on: InputMaybe<StringQueryOperatorInput>;
   Send_Message: InputMaybe<StringQueryOperatorInput>;
   Sense_check: InputMaybe<StringQueryOperatorInput>;
   Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_: InputMaybe<StringQueryOperatorInput>;
@@ -12448,7 +12323,6 @@ type Query_jsonArgs = {
   The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_: InputMaybe<StringQueryOperatorInput>;
   The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_: InputMaybe<StringQueryOperatorInput>;
   The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
-  The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_: InputMaybe<StringQueryOperatorInput>;
   The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_: InputMaybe<StringQueryOperatorInput>;
   There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_: InputMaybe<StringQueryOperatorInput>;
   This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_: InputMaybe<StringQueryOperatorInput>;
@@ -12466,6 +12340,7 @@ type Query_jsonArgs = {
   Trading: InputMaybe<StringQueryOperatorInput>;
   Translate: InputMaybe<StringQueryOperatorInput>;
   Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__: InputMaybe<StringQueryOperatorInput>;
+  Tweets___Translations___Editorials___Infographics: InputMaybe<StringQueryOperatorInput>;
   Twitch: InputMaybe<StringQueryOperatorInput>;
   Twitter: InputMaybe<StringQueryOperatorInput>;
   Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_: InputMaybe<StringQueryOperatorInput>;
@@ -12488,7 +12363,7 @@ type Query_jsonArgs = {
   Vega_Community: InputMaybe<StringQueryOperatorInput>;
   Vega_Governance: InputMaybe<StringQueryOperatorInput>;
   Vega_Wallet: InputMaybe<StringQueryOperatorInput>;
-  Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_: InputMaybe<StringQueryOperatorInput>;
+  Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_: InputMaybe<StringQueryOperatorInput>;
   Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_: InputMaybe<StringQueryOperatorInput>;
   Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_: InputMaybe<StringQueryOperatorInput>;
   Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_: InputMaybe<StringQueryOperatorInput>;
@@ -12515,7 +12390,6 @@ type Query_jsonArgs = {
   Vote_for_proposals__Testnet_: InputMaybe<StringQueryOperatorInput>;
   Vote_on_proposals: InputMaybe<StringQueryOperatorInput>;
   Vote_to_exercise_your_influence: InputMaybe<StringQueryOperatorInput>;
-  Wallet: InputMaybe<StringQueryOperatorInput>;
   Wallets: InputMaybe<StringQueryOperatorInput>;
   Want_Swag_: InputMaybe<StringQueryOperatorInput>;
   Want_to_add_something_to_this_list_: InputMaybe<StringQueryOperatorInput>;
@@ -12529,26 +12403,20 @@ type Query_jsonArgs = {
   When_: InputMaybe<StringQueryOperatorInput>;
   Where_next_: InputMaybe<StringQueryOperatorInput>;
   Where_we_are: InputMaybe<StringQueryOperatorInput>;
-  Which_Vega__Team_would_you_rally_: InputMaybe<StringQueryOperatorInput>;
   Whitepaper: InputMaybe<StringQueryOperatorInput>;
   With_the_wallet_you_can_: InputMaybe<StringQueryOperatorInput>;
   YouTube: InputMaybe<StringQueryOperatorInput>;
   You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_: InputMaybe<StringQueryOperatorInput>;
-  You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_: InputMaybe<StringQueryOperatorInput>;
   Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
   _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
   _0_Click_here_to_contribute__0__: InputMaybe<StringQueryOperatorInput>;
-  _Internationalisation__Local_Language_Groups__AMAs_: InputMaybe<StringQueryOperatorInput>;
-  _Tweets__Editorials__Infographics__Bounties_: InputMaybe<StringQueryOperatorInput>;
-  _Vega_Capsule__Documentation__Hackathon_Support__Coding_: InputMaybe<StringQueryOperatorInput>;
   _p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_: InputMaybe<StringQueryOperatorInput>;
   _p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_: InputMaybe<StringQueryOperatorInput>;
   _p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_: InputMaybe<StringQueryOperatorInput>;
   _p_Update_your_proposal_topic_based_on_the_feedback_received__and_ensure_you_have_included_the_rationale_and_specifics_of_the_the_market__including_the_data__JSON_or_similar__that_would_be_submitted_on_chain_i_e__market_name_and_code__Oracle___data_source_the_market_will_use_for_settlement__and_risk_model__to_calculate_margin_requirements_and_ensure_safe_trading____p__p_Update_the_tag_and_invite_debate_and_discussion_to_amend_the_proposal_until_it_reaches_a_final_state__ready_to_submit___p_: InputMaybe<StringQueryOperatorInput>;
   _xminutesxxxminutexread: InputMaybe<StringQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
-  gRPC: InputMaybe<StringQueryOperatorInput>;
   governance: InputMaybe<StringQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
@@ -14670,7 +14538,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'icon.childJson.All'
   | 'icon.childJson.Allows_for_unfair_front_running'
-  | 'icon.childJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'icon.childJson.Ambassador'
   | 'icon.childJson.Ambassador_Leaderboard'
   | 'icon.childJson.Ambassador_program'
@@ -14680,7 +14547,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'icon.childJson.Anti_front_running'
   | 'icon.childJson.Apply_now'
-  | 'icon.childJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'icon.childJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'icon.childJson.Articles_about_vega_from_around_the_web'
   | 'icon.childJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -14692,10 +14558,10 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Available'
   | 'icon.childJson.Avg__Block_Time'
   | 'icon.childJson.Be_a_Vega__Ambassador'
+  | 'icon.childJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'icon.childJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'icon.childJson.Be_as_good_as_CeFi'
   | 'icon.childJson.Be_better_than_CeFi'
-  | 'icon.childJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'icon.childJson.Benefits_of_being_an_ambassador'
   | 'icon.childJson.Block_Explorer'
   | 'icon.childJson.Blockchain_derivatives'
@@ -14708,9 +14574,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Bug_bounties'
   | 'icon.childJson.Build'
   | 'icon.childJson.Build___send_commands'
-  | 'icon.childJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'icon.childJson.Builders_Club'
-  | 'icon.childJson.Builders_Club__Technical_'
   | 'icon.childJson.Builders_club'
   | 'icon.childJson.Building_on_Vega_Parts_I_and_II'
   | 'icon.childJson.Built_for_fairness_from_the_ground_up'
@@ -14732,7 +14596,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Completely_decentralised_network'
   | 'icon.childJson.Connect'
   | 'icon.childJson.Connect_to_networks'
-  | 'icon.childJson.Content_Collective__Non_Technical_'
+  | 'icon.childJson.Content_collective'
   | 'icon.childJson.Contribute'
   | 'icon.childJson.Contribute_and_get_rewarded'
   | 'icon.childJson.Contribute_to_Vega'
@@ -14757,12 +14621,14 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Develop'
   | 'icon.childJson.Develop_on_Vega'
   | 'icon.childJson.Develop_with_Vega'
+  | 'icon.childJson.Developer_Bounties'
   | 'icon.childJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'icon.childJson.Discord'
   | 'icon.childJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'icon.childJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'icon.childJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'icon.childJson.Docs'
+  | 'icon.childJson.Docs___Hackathons___Coding_support'
   | 'icon.childJson.Documentation'
   | 'icon.childJson.Download_desktop_app__Mainnet_'
   | 'icon.childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -14811,7 +14677,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'icon.childJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'icon.childJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'icon.childJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'icon.childJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'icon.childJson.Formalise_Proposal'
   | 'icon.childJson.Formalise_your_proposal'
@@ -14821,7 +14686,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'icon.childJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'icon.childJson.Generalist_tool___A_workaround_for_trading'
-  | 'icon.childJson.Get_Started'
   | 'icon.childJson.Get_Swag'
   | 'icon.childJson.Get__VEGA_tokens'
   | 'icon.childJson.Get_a_Vega_Wallet'
@@ -14830,6 +14694,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'icon.childJson.Get_started'
   | 'icon.childJson.Get_started_voting'
+  | 'icon.childJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'icon.childJson.Get_the_CLI_app'
   | 'icon.childJson.Get_the_Vega_Wallet'
   | 'icon.childJson.Get_the_code'
@@ -14849,7 +14714,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Governance_lifecycle'
   | 'icon.childJson.Governance_on_Vega'
   | 'icon.childJson.Governance_tools'
-  | 'icon.childJson.GraphQL'
   | 'icon.childJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'icon.childJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'icon.childJson.Have_an_idea_for_an_event_or_talk_'
@@ -14874,16 +14738,18 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Incentives___bounties'
   | 'icon.childJson.Incentives_and_bounties'
   | 'icon.childJson.Insights'
-  | 'icon.childJson.Interested_in_joining_'
+  | 'icon.childJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'icon.childJson.Isolate_keys'
   | 'icon.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'icon.childJson.Join'
-  | 'icon.childJson.Join_the_Builders_Club'
+  | 'icon.childJson.Join_a_team'
   | 'icon.childJson.Join_the_Vega_community'
   | 'icon.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'icon.childJson.Join_the_builders_club'
   | 'icon.childJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'icon.childJson.Join_the_community'
   | 'icon.childJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'icon.childJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'icon.childJson.Join_us_on_Discord'
   | 'icon.childJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'icon.childJson.Key_Vega_Concepts'
@@ -14904,8 +14770,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Learn_more'
   | 'icon.childJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'icon.childJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'icon.childJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'icon.childJson.Limited_edition_Vega_swag'
+  | 'icon.childJson.Limited_Edition_Vega_swag'
   | 'icon.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'icon.childJson.Load_more___'
   | 'icon.childJson.Loading___'
@@ -14920,12 +14785,11 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'icon.childJson.Medium'
   | 'icon.childJson.Meet'
-  | 'icon.childJson.Meet_on_Discord'
   | 'icon.childJson.Meet_our_contributors'
   | 'icon.childJson.Meet_us_on_Discord'
   | 'icon.childJson.More_info'
   | 'icon.childJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'icon.childJson.Multilingual_League__Translations_'
+  | 'icon.childJson.Multilingual_League'
   | 'icon.childJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'icon.childJson.Native_liquidity_provision'
   | 'icon.childJson.Need_the_command_line__CLI__wallet_app_'
@@ -14944,7 +14808,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Optimised_for_high_capital_efficiency'
   | 'icon.childJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'icon.childJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'icon.childJson.Overview'
   | 'icon.childJson.PGP_Key'
   | 'icon.childJson.Papers'
   | 'icon.childJson.Papers___Research'
@@ -14964,6 +14827,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'icon.childJson.Previous'
   | 'icon.childJson.Priority_consideration_on_protocol_feedback'
+  | 'icon.childJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'icon.childJson.Privacy___Cookie_Policy'
   | 'icon.childJson.Propose_a_futures_market_on_any_underlying_'
   | 'icon.childJson.Propose_a_market_on_any_underlying_'
@@ -14973,7 +14837,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Purpose_built_bespoke_blockchain'
   | 'icon.childJson.Purpose_built_blockchain'
   | 'icon.childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'icon.childJson.REST'
   | 'icon.childJson.Rank'
   | 'icon.childJson.Read_all_Insights'
   | 'icon.childJson.Read_more_about_'
@@ -14998,10 +14861,11 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Scope'
   | 'icon.childJson.See_all_Tweets'
   | 'icon.childJson.See_more'
-  | 'icon.childJson.See_the_Roadmap'
+  | 'icon.childJson.See_the_roadmap'
   | 'icon.childJson.See_what_markets_already_exist__Testnet_'
   | 'icon.childJson.See_what_markets_exist_already__Testnet_'
-  | 'icon.childJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'icon.childJson.See_what_s_going_on'
+  | 'icon.childJson.See_whats_s_going_on'
   | 'icon.childJson.Send_Message'
   | 'icon.childJson.Sense_check'
   | 'icon.childJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -15038,7 +14902,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'icon.childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'icon.childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'icon.childJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'icon.childJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'icon.childJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'icon.childJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -15056,6 +14919,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Trading'
   | 'icon.childJson.Translate'
   | 'icon.childJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'icon.childJson.Tweets___Translations___Editorials___Infographics'
   | 'icon.childJson.Twitch'
   | 'icon.childJson.Twitter'
   | 'icon.childJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -15078,7 +14942,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Vega_Community'
   | 'icon.childJson.Vega_Governance'
   | 'icon.childJson.Vega_Wallet'
-  | 'icon.childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'icon.childJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'icon.childJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'icon.childJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'icon.childJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -15105,7 +14969,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Vote_for_proposals__Testnet_'
   | 'icon.childJson.Vote_on_proposals'
   | 'icon.childJson.Vote_to_exercise_your_influence'
-  | 'icon.childJson.Wallet'
   | 'icon.childJson.Wallets'
   | 'icon.childJson.Want_Swag_'
   | 'icon.childJson.Want_to_add_something_to_this_list_'
@@ -15119,19 +14982,14 @@ type ToolsFieldsEnum =
   | 'icon.childJson.When_'
   | 'icon.childJson.Where_next_'
   | 'icon.childJson.Where_we_are'
-  | 'icon.childJson.Which_Vega__Team_would_you_rally_'
   | 'icon.childJson.Whitepaper'
   | 'icon.childJson.With_the_wallet_you_can_'
   | 'icon.childJson.YouTube'
   | 'icon.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'icon.childJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'icon.childJson.Your_career_in_Defi_starts_here'
   | 'icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'icon.childJson._0_Click_here_to_contribute__0__'
-  | 'icon.childJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'icon.childJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'icon.childJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'icon.childJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'icon.childJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'icon.childJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
@@ -15140,7 +14998,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.children'
   | 'icon.childJson.children.children'
   | 'icon.childJson.children.id'
-  | 'icon.childJson.gRPC'
   | 'icon.childJson.governance'
   | 'icon.childJson.id'
   | 'icon.childJson.internal.content'
@@ -15345,7 +15202,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'icon.childrenJson.All'
   | 'icon.childrenJson.Allows_for_unfair_front_running'
-  | 'icon.childrenJson.Allows_programmatic_access_to_signing_and_key_management_and_is_used_to_sign_transactions_with_a_private_and_public_key_pair_when_submitting_orders_or_other_commands_to_a_Vega_Node_'
   | 'icon.childrenJson.Ambassador'
   | 'icon.childrenJson.Ambassador_Leaderboard'
   | 'icon.childrenJson.Ambassador_program'
@@ -15355,7 +15211,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.And_store_in_an_Ethereum_wallet__You_can_purchase_VEGA_using_Ethereum__ETH__on_decentralized_exchanges_'
   | 'icon.childrenJson.Anti_front_running'
   | 'icon.childrenJson.Apply_now'
-  | 'icon.childrenJson.Apply_now_to_bring_fresh_proposals_to_the_table_and_participate_in_the_community_as_a_key_contributor_'
   | 'icon.childrenJson.Are_you_sure_you_want_to_submit_the_form_'
   | 'icon.childrenJson.Articles_about_vega_from_around_the_web'
   | 'icon.childrenJson.As_a_decentralized_system__we_are_entirely_separate_from_any_validators_running_the_Vega_protocol_and_vulnerabilities_relevant_to_specific_validators_should_be_reported_to_them_directly__though_feel_free_to_let_us_know_if_you_think_a_validator_is_not_responding_appropriately___In_addition__we_have_no_influence_on_how_the_validators__or_their_cloud_providers__might_react_if_you_poke_their_systems__so_we_cannot_help_you_if_you_do_so_in_any_way_that_upsets_them__For_testing_your_discoveries__using_a_separate_protocol_instance_that_you_can_run_for_yourselves_is_advised__The_best_way_to_do_this_is_via_the__2__0___0_Vega_Capsule_tool__2__'
@@ -15367,10 +15222,10 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Available'
   | 'icon.childrenJson.Avg__Block_Time'
   | 'icon.childrenJson.Be_a_Vega__Ambassador'
+  | 'icon.childrenJson.Be_a_part_of_the_language_specialists_helping_to_make_Vega_accessible_to_more_people_across_the_globe_'
   | 'icon.childrenJson.Be_active_on_Discord___most_communication_will_take_place_there'
   | 'icon.childrenJson.Be_as_good_as_CeFi'
   | 'icon.childrenJson.Be_better_than_CeFi'
-  | 'icon.childrenJson.Become_one_with_Vega__Learn__create__and_help_grow_Vega_to_be_a_leading_derivatives_Layer_1_in_the_crypto_space'
   | 'icon.childrenJson.Benefits_of_being_an_ambassador'
   | 'icon.childrenJson.Block_Explorer'
   | 'icon.childrenJson.Blockchain_derivatives'
@@ -15383,9 +15238,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Bug_bounties'
   | 'icon.childrenJson.Build'
   | 'icon.childrenJson.Build___send_commands'
-  | 'icon.childrenJson.Build_decentralised_apps__bots_and_trading_clients_with_our_APIs'
   | 'icon.childrenJson.Builders_Club'
-  | 'icon.childrenJson.Builders_Club__Technical_'
   | 'icon.childrenJson.Builders_club'
   | 'icon.childrenJson.Building_on_Vega_Parts_I_and_II'
   | 'icon.childrenJson.Built_for_fairness_from_the_ground_up'
@@ -15407,7 +15260,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Completely_decentralised_network'
   | 'icon.childrenJson.Connect'
   | 'icon.childrenJson.Connect_to_networks'
-  | 'icon.childrenJson.Content_Collective__Non_Technical_'
+  | 'icon.childrenJson.Content_collective'
   | 'icon.childrenJson.Contribute'
   | 'icon.childrenJson.Contribute_and_get_rewarded'
   | 'icon.childrenJson.Contribute_to_Vega'
@@ -15432,12 +15285,14 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Develop'
   | 'icon.childrenJson.Develop_on_Vega'
   | 'icon.childrenJson.Develop_with_Vega'
+  | 'icon.childrenJson.Developer_Bounties'
   | 'icon.childrenJson.Different_methods_of_price_discovery_in_section_5_of_the_Vega_blog__2_Pro_traders___Vega__2_'
   | 'icon.childrenJson.Discord'
   | 'icon.childrenJson.Discover_Web3_s_native_derivatives_trading_platform_that_is_helping_DeFi_mature_'
   | 'icon.childrenJson.Discuss_governance_and_governance_proposals_on_Vega_Networks_'
   | 'icon.childrenJson.Dive_into_talks_and_podcasts_by_the_Vega_team_on_crypto_derivatives_trading_'
   | 'icon.childrenJson.Docs'
+  | 'icon.childrenJson.Docs___Hackathons___Coding_support'
   | 'icon.childrenJson.Documentation'
   | 'icon.childrenJson.Download_desktop_app__Mainnet_'
   | 'icon.childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
@@ -15486,7 +15341,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.For_anonymous_submissions__you_can_use_the_following_form_'
   | 'icon.childrenJson.For_developers__coders__hackers__dreamers_who_want_to_create_software_on_top_of_Vega_'
   | 'icon.childrenJson.For_example__by_using_WebSocket_for_communication_between_your_app_and_the_server__GraphQL_or_gRPC_APIs_for_streaming_market_data_and_Vega_Pennant_for_simple_graphs_you_could_easily_create_responsive_markets_to_monitor_real_world_spot_dynamics_and_automatically_propose_a_hedging_market_when_volatility_exceeds_a_threshold_'
-  | 'icon.childrenJson.For_fast_and_efficient_communication_with_Vega_s_APIs__gRPC_supports_near_real_time_streaming_of_updates_from_Vega_and_is_the_transport_of_choice_for_many_web3_apps_'
   | 'icon.childrenJson.For_the_talented_multi_linguists_who_want_to_support_the_project_with_translations_'
   | 'icon.childrenJson.Formalise_Proposal'
   | 'icon.childrenJson.Formalise_your_proposal'
@@ -15496,7 +15350,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Gain_real_world_experience_in_community_building_by_shaping_the_Vega_movement_from_the_ground_up'
   | 'icon.childrenJson.Gas_fees_under__Miner_extractable_value__MEV__on_blockchains__on_the_blog__2__Fair_access_to_efficient_derivatives_markets___2_'
   | 'icon.childrenJson.Generalist_tool___A_workaround_for_trading'
-  | 'icon.childrenJson.Get_Started'
   | 'icon.childrenJson.Get_Swag'
   | 'icon.childrenJson.Get__VEGA_tokens'
   | 'icon.childrenJson.Get_a_Vega_Wallet'
@@ -15505,6 +15358,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Get_rewarded_for_your_efforts_testing_the_network'
   | 'icon.childrenJson.Get_started'
   | 'icon.childrenJson.Get_started_voting'
+  | 'icon.childrenJson.Get_support_building_on_top_of_the_Vega_protocol_and_access_exclusive_builder_club_bounties_'
   | 'icon.childrenJson.Get_the_CLI_app'
   | 'icon.childrenJson.Get_the_Vega_Wallet'
   | 'icon.childrenJson.Get_the_code'
@@ -15524,7 +15378,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Governance_lifecycle'
   | 'icon.childrenJson.Governance_on_Vega'
   | 'icon.childrenJson.Governance_tools'
-  | 'icon.childrenJson.GraphQL'
   | 'icon.childrenJson.Grow_with_Vega___scaling_rewards_as_you_climb_the_ranks'
   | 'icon.childrenJson.Hangout__chat__get_support__suggest_new_content_and_art___we_re_all_here_'
   | 'icon.childrenJson.Have_an_idea_for_an_event_or_talk_'
@@ -15549,16 +15402,18 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Incentives___bounties'
   | 'icon.childrenJson.Incentives_and_bounties'
   | 'icon.childrenJson.Insights'
-  | 'icon.childrenJson.Interested_in_joining_'
+  | 'icon.childrenJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'icon.childrenJson.Isolate_keys'
   | 'icon.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'icon.childrenJson.Join'
-  | 'icon.childrenJson.Join_the_Builders_Club'
+  | 'icon.childrenJson.Join_a_team'
   | 'icon.childrenJson.Join_the_Vega_community'
   | 'icon.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
+  | 'icon.childrenJson.Join_the_builders_club'
   | 'icon.childrenJson.Join_the_builders_club_VEGA__Team_to_get_support_building_on_top_of_the_Vega_protocol_and_access_to_exclusive_builder_bounties_'
   | 'icon.childrenJson.Join_the_community'
   | 'icon.childrenJson.Join_the_core_team_and_work_on_the_Vega_project_'
+  | 'icon.childrenJson.Join_the_team_creating_non_technical_content_and_designs_for_exclusive_bounties_'
   | 'icon.childrenJson.Join_us_on_Discord'
   | 'icon.childrenJson.Keep_control_of_your_data__and_protect_your_privacy_'
   | 'icon.childrenJson.Key_Vega_Concepts'
@@ -15579,8 +15434,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Learn_more'
   | 'icon.childrenJson.Learn_with_the_core_team__attend_office_hours__ask_questions__grow'
   | 'icon.childrenJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
-  | 'icon.childrenJson.Like_gRPC__GraphQL_supports_near_real_time_streaming_of_updates_from_Vega__It_uses_websockets_under_the_hood_but_follows_the_specification_for_streaming_as_set_by_GraphQL_'
-  | 'icon.childrenJson.Limited_edition_Vega_swag'
+  | 'icon.childrenJson.Limited_Edition_Vega_swag'
   | 'icon.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'icon.childrenJson.Load_more___'
   | 'icon.childrenJson.Loading___'
@@ -15595,12 +15449,11 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
   | 'icon.childrenJson.Medium'
   | 'icon.childrenJson.Meet'
-  | 'icon.childrenJson.Meet_on_Discord'
   | 'icon.childrenJson.Meet_our_contributors'
   | 'icon.childrenJson.Meet_us_on_Discord'
   | 'icon.childrenJson.More_info'
   | 'icon.childrenJson.Most_decentralised_exchanges_use_a_centralised_order_book__and_centrally_control_what_can_be_traded__With_Vega__everything_from_the_order_book_to_market_creation_and_maintenance__liquidity_provision_and_rewards__prices__management_of_margin_and_how_that_position_eventually_settles_happen_on_chain_as_part_of_the_network___all_of_it_is_managed_and_governed_by_the_community__This_is_trading_with_full_transparency___and_no_black_boxes___doing_away_with_the_risks_that_come_with_centralised_servers_and_single_points_of_failure_and_control_'
-  | 'icon.childrenJson.Multilingual_League__Translations_'
+  | 'icon.childrenJson.Multilingual_League'
   | 'icon.childrenJson.Name_each_individual_wallet_if_you_need_more_than_one'
   | 'icon.childrenJson.Native_liquidity_provision'
   | 'icon.childrenJson.Need_the_command_line__CLI__wallet_app_'
@@ -15619,7 +15472,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Optimised_for_high_capital_efficiency'
   | 'icon.childrenJson.Or_try_out_the__2_Wendy_prototype__2__on_a_simulated_network'
   | 'icon.childrenJson.Overall_portfolio_risk_is_evaluated_by_calculating_the_worst_possible_loss_that_a_portfolio_of_derivative_and_physical_instruments_might_reasonably_incur___live__and_on_chain__instead_of_over_the_course_of_one_trading_day_'
-  | 'icon.childrenJson.Overview'
   | 'icon.childrenJson.PGP_Key'
   | 'icon.childrenJson.Papers'
   | 'icon.childrenJson.Papers___Research'
@@ -15639,6 +15491,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Prevent_a_potential_vulnerability_being_abused_by_others_'
   | 'icon.childrenJson.Previous'
   | 'icon.childrenJson.Priority_consideration_on_protocol_feedback'
+  | 'icon.childrenJson.Priority_minting_of_NFT_drops____enhanced_rarities_'
   | 'icon.childrenJson.Privacy___Cookie_Policy'
   | 'icon.childrenJson.Propose_a_futures_market_on_any_underlying_'
   | 'icon.childrenJson.Propose_a_market_on_any_underlying_'
@@ -15648,7 +15501,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Purpose_built_bespoke_blockchain'
   | 'icon.childrenJson.Purpose_built_blockchain'
   | 'icon.childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
-  | 'icon.childrenJson.REST'
   | 'icon.childrenJson.Rank'
   | 'icon.childrenJson.Read_all_Insights'
   | 'icon.childrenJson.Read_more_about_'
@@ -15673,10 +15525,11 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Scope'
   | 'icon.childrenJson.See_all_Tweets'
   | 'icon.childrenJson.See_more'
-  | 'icon.childrenJson.See_the_Roadmap'
+  | 'icon.childrenJson.See_the_roadmap'
   | 'icon.childrenJson.See_what_markets_already_exist__Testnet_'
   | 'icon.childrenJson.See_what_markets_exist_already__Testnet_'
-  | 'icon.childrenJson.Seeking_emissaries_of_the_future_to_co_create_the_leading_crypto_derivatives_layer_'
+  | 'icon.childrenJson.See_what_s_going_on'
+  | 'icon.childrenJson.See_whats_s_going_on'
   | 'icon.childrenJson.Send_Message'
   | 'icon.childrenJson.Sense_check'
   | 'icon.childrenJson.Sense_check_and_formalise_proposals_for_the_Vega_network___add_or_change_markets__network_parameters__external_assets_and_more_'
@@ -15713,7 +15566,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'icon.childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'icon.childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
-  | 'icon.childrenJson.The_ubiquitous_protocol_for_the_web__Vega_has_a_set_of_REST_APIs_that_map_directly_onto_equivalent_gRPC_API_service_methods_'
   | 'icon.childrenJson.The_vega_xyz_website_or_any_bug_related_to_the_vega_xyz_email_domain_are_out_of_scope__The_program_is_meant_for_serious_bugs_that_have_significant_impact_on_security__Bugs_on_the_vega_xyz_website_would_only_qualify_if_they_demonstrate_how_to_modify_website_content_to_replace_links_in_order_to_for_instance__host_malicious_software_on_the_downloads_section_of_the_site__link_to_different_github_code_repositories__link_to_impersonator_Twitter___Discord_accounts_from_the_Community_section_etc__In_particular_if_any_automated_scanner_reports_that_there_is_an_issue_with_vega_xyz_then_this_on_its_own_does_not_merit_a_report_'
   | 'icon.childrenJson.There_are_no_exact_requirements_to_being_an_ambassador__the_extent_of_what_you_ll_work_on_will_depend_on_your_team_and_role__Nevertheless__these_are_the_non_negotiables_'
   | 'icon.childrenJson.This_is_the_PGP_key_that_can_be_used_to_securely_submit_security_issues_to_the_project_team__Please_note_that_this_is_the_only_usage_of_the_key__especially__this_key_will_never_be_used_to_issue_signatures_that_are_in_any_way_meaningful_or_binding__We_also_may_change_the_key_at_any_time__so_please_make_sure_to_check_here_for_the_current_version_'
@@ -15731,6 +15583,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Trading'
   | 'icon.childrenJson.Translate'
   | 'icon.childrenJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'icon.childrenJson.Tweets___Translations___Editorials___Infographics'
   | 'icon.childrenJson.Twitch'
   | 'icon.childrenJson.Twitter'
   | 'icon.childrenJson.Unlike_other_decentralised_exchanges__Vega_doesn_t_charge_gas_fees__allowing_better_price_discovery__What_s_more__Vega_offers_subsecond_latency_together_with_price_protection_mechanisms_circuit_breakers_and_auctions_in_low_liquidity_regimes_to_discover_true_market_prices_'
@@ -15753,7 +15606,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Vega_Community'
   | 'icon.childrenJson.Vega_Governance'
   | 'icon.childrenJson.Vega_Wallet'
-  | 'icon.childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members__Here_s_a_taste_of_what_you_can_look_forward_to_'
+  | 'icon.childrenJson.Vega__Ambassadors_are_a_valued_extension_of_the_team__and_work_closely_with_core_Vega_members_'
   | 'icon.childrenJson.Vega_bug_bounties_are_limited_to_the_Core__Datanode__and_all_front_end_dApps_including_the_desktop_and_hosted_wallets_'
   | 'icon.childrenJson.Vega_currently_lets_users_propose_any_ERC_20_tokens_to_use_as_collateral__Once_the_protocol_is_fully_blockchain_agnostic__trades_will_be_able_to_settle_in_any_crypto_asset_on_a_supported_chain__paving_the_way_for_physically_settled_and_cash_settled_products__as_commodity_and_asset_tokenisation_become_widespread_'
   | 'icon.childrenJson.Vega_does_not_charge_gas_fees__It_uses_a_different_fee_structure_that_rewards_participants_and_stimulates_trading_activity__Fees_are_incurred_on_every_trade_on_a_market_in_continuous_trading__but_it_is_the_price_taker_who_pays_the_fee__During_a_market_s_opening_auction__no_fees_are_collected_'
@@ -15780,7 +15633,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Vote_for_proposals__Testnet_'
   | 'icon.childrenJson.Vote_on_proposals'
   | 'icon.childrenJson.Vote_to_exercise_your_influence'
-  | 'icon.childrenJson.Wallet'
   | 'icon.childrenJson.Wallets'
   | 'icon.childrenJson.Want_Swag_'
   | 'icon.childrenJson.Want_to_add_something_to_this_list_'
@@ -15794,19 +15646,14 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.When_'
   | 'icon.childrenJson.Where_next_'
   | 'icon.childrenJson.Where_we_are'
-  | 'icon.childrenJson.Which_Vega__Team_would_you_rally_'
   | 'icon.childrenJson.Whitepaper'
   | 'icon.childrenJson.With_the_wallet_you_can_'
   | 'icon.childrenJson.YouTube'
   | 'icon.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
-  | 'icon.childrenJson.You_ll_already_be_passionate_about_blockchain_technologies__with_a_willingness_to_learn_the_ins_and_outs_of_Vega__A_penchant_for_original_thinking__And_an_appetite_to_share__as_you_drive_conversations_and_engagement_in_pursuit_of_vibrancy_within_the_community_'
   | 'icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'icon.childrenJson._0_Click_here_to_contribute__0__'
-  | 'icon.childrenJson._Internationalisation__Local_Language_Groups__AMAs_'
-  | 'icon.childrenJson._Tweets__Editorials__Infographics__Bounties_'
-  | 'icon.childrenJson._Vega_Capsule__Documentation__Hackathon_Support__Coding_'
   | 'icon.childrenJson._p_Any_Vega_participant_with_sufficient_collateral__can_provide_liquidity_for_a_market_by_submitting_a_transaction_to_the_network__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers___p__p__i__the_size_of_the_nominated_liquidity_commitment_amount_and_the_margins_required_to_support_the_orders_generated_from_that_commitment___i___p_'
   | 'icon.childrenJson._p_If_a_proposal_passes_the_vote__the_market_is_enacted_automatically__as_soon_as_it_has_received_enough_committed_liquidity___p_'
   | 'icon.childrenJson._p_Start_a_topic_and_share_an_outline_of_the_market_you_propose_on_the_forum_with_a__sense_check__tag__Get_an_idea_of_whether_there_is_support_for_your_proposal_from_the_likes_and_replies_you_receive__and_refine_your_plans___p_'
@@ -15815,7 +15662,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.children'
   | 'icon.childrenJson.children.children'
   | 'icon.childrenJson.children.id'
-  | 'icon.childrenJson.gRPC'
   | 'icon.childrenJson.governance'
   | 'icon.childrenJson.id'
   | 'icon.childrenJson.internal.content'

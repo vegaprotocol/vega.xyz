@@ -12,7 +12,7 @@ const TranslationsBanner = ({ className }: TranslationsBannerProps) => {
 
   return (
     <div
-      className={`mb-12 bg-vega-purple p-5 text-white ${
+      className={`mb-space-5 bg-vega-purple p-5 text-white ${
         className ? className : ''
       }`}
     >
