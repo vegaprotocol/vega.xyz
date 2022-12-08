@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { navigate } from '@reach/router'
+//import { navigate } from '@reach/router'
 import { graphql } from 'gatsby'
 import Container from '../../components/Container'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import Seo from '../../components/Seo'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import interstitialAllowList from '../../../interstitial-allow.json'
+import { createBrowserHistory } from 'history'
 
 const ExternalLinkPage = () => {
   const { t, i18n } = useTranslation('page.external-link')
   const [missingTranslations, setMissingTranslations] = useState(false)
   const [seconds, setSeconds] = useState(5)
   const [url, setUrl] = useState('')
+  const history = createBrowserHistory()
 
   i18n.on('missingKey', (lng) => {
     setMissingTranslations(true)
@@ -32,7 +34,7 @@ const ExternalLinkPage = () => {
         .map((url) => url.replace(/\/$/, ''))
         .includes(urlValue.replace(/\/$/, '')) // strip trailing slashes for comparison
     ) {
-      navigate('/404')
+      history.replace('/404')
     }
 
     const timer = setInterval(() => {
