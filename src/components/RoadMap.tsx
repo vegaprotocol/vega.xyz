@@ -155,7 +155,11 @@ const RoadMap = (props) => {
                         {roadmapImage(idx)}
                       </div>
                       <div className="text-center mt-space-5">
-                        {idx === currentStatus && <Tag className="mx-auto dark:bg-black bg-white">Current Status</Tag>}
+                        {idx === currentStatus && <Tag className={`mx-auto dark:bg-black bg-white ${
+                        idx === selectedPlanet
+                          ? ''
+                          : 'border-vega-light-300 dark:border-vega-dark-300'
+                      }`}>Current Status</Tag>}
                       </div>
                       <div
                         className={`heading-m mx-auto mb-5 mt-space-5 max-w-[18rem] text-center transition-all duration-700 sm:mb-[1rem] ${
