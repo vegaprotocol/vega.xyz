@@ -1,6 +1,12 @@
 ---
-step_title: "Estado actual:"
-title: Restricted Mainnet
+step_title: 2021 H1
+title: Testnet (Fairground)
 ---
 
-Esta versión permitirá a los validadores lanzar una red principal experimental utilizando la segunda versión importante del protocolo Vega. El protocolo V2 utilizará WASM para permitir que la comunidad cree sus propios productos y modelos de riesgo, y controle otros aspectos del protocolo. Esta versión también contendrá una serie de mejoras de rendimiento y seguridad, así como actualizaciones y simplificaciones del protocolo central.
+## Play without consequences
+
+- Experiment with trading
+- Create permissionless markets
+- Create and vote on governance proposals
+- Start staking
+- Explore the blockchain

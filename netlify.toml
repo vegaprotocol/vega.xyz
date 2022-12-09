@@ -8,14 +8,62 @@
 
 [context.production.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.vega.xyz/"
-  GATSBY_VEGA_API = "http://mainnet-observer.ops.vega.xyz:3008/query"
+  GATSBY_VEGA_API = "https://api.vega.xyz/query"
 
 [context.deploy-preview.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
-  GATSBY_VEGA_API = "https://lb.testnet.vega.xyz/query"
+  GATSBY_VEGA_API = "https://api.testnet.vega.xyz/graphql"
 
 [functions."send-bug-report"]
   included_files = ["vega-public-key.asc"]
   
 [[plugins]]
   package = "@netlify/plugin-sitemap"
+  
+[[redirects]]
+  from = "https://www.vegaprotocol.io/*"
+  to = "https://vega.xyz/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://vegaprotocol.io/*"
+  to = "https://vega.xyz/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.vegaprotocol.com/*"
+  to = "https://vega.xyz/:splat"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "https://vegaprotocol.com/*"
+  to = "https://vega.xyz/:splat"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "https://vegaprotocol.net/*"
+  to = "https://vega.xyz/:splat"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "https://www.vegaprotocol.net/*"
+  to = "https://vega.xyz/:splat"
+  status = 301
+  force = true
+    
+[[redirects]]
+  from = "https://vegaprotocol.org/*"
+  to = "https://vega.xyz/:splat"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "https://www.vegaprotocol.org/*"
+  to = "https://vega.xyz/:splat"
+  status = 301
+  force = true

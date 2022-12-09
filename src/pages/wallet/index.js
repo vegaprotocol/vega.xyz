@@ -1,246 +1,198 @@
-import React, { useState, useRef, useEffect } from "react";
-import { graphql } from "gatsby";
-import Seo from "../../components/Seo";
-import Layout from "../../components/Layout";
-import TranslationsBanner from "../../components/TranslationsBanner";
-import Container from "../../components/Container";
-import PageSection from "../../components/PageSection";
-import GlitchTitle from "../../components/GlitchTitle";
-import WalletRip from "../../components/Svg/WalletRip";
-import WalletHowTo from "../../components/Svg/WalletHowTo";
-import WalletLeft from "../../components/Svg/WalletLeft";
-import WalletRight from "../../components/Svg/WalletRight";
-import WalletHowToSmall from "../../components/Svg/WalletHowToSmall";
-import LeadingLine from "../../components/LeadingLine";
-import ButtonLink from "../../components/ButtonLink";
-import DropdownArrow from "../../components/Svg/DropdownArrow";
-import IconPlatformMac from "../../components/Svg/IconPlatformMac";
-import IconPlatformWindows from "../../components/Svg/IconPlatformWindows";
-import IconPlatformLinux from "../../components/Svg/IconPlatformLinux";
-import WalletVideoWebM from "../../video/wallet-hero.webm";
-import WalletVideoMP4 from "../../video/wallet-hero.mp4";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
+import Seo from '../../components/Seo'
+import Layout from '../../components/Layout'
+import TranslationsBanner from '../../components/TranslationsBanner'
+import Container from '../../components/Container'
+import PageSection from '../../components/PageSection'
+import GlitchTitle from '../../components/GlitchTitle'
+import WalletRip from '../../components/Svg/WalletRip'
+import WalletHowTo from '../../components/Svg/WalletHowTo'
+import WalletLeft from '../../components/Svg/WalletLeft'
+import WalletRight from '../../components/Svg/WalletRight'
+import WalletHowToSmall from '../../components/Svg/WalletHowToSmall'
+import LeadingLine from '../../components/LeadingLine'
+import ButtonLink from '../../components/ButtonLink'
+import Button from '../../components/UI/Button'
+import DropdownArrow from '../../components/Svg/DropdownArrow'
+import IconPlatformMac from '../../components/Svg/IconPlatformMac'
+import IconPlatformWindows from '../../components/Svg/IconPlatformWindows'
+import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
+import WalletVideoWebM from '../../video/wallet-hero.webm'
+import WalletVideoMP4 from '../../video/wallet-hero.mp4'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const platformIcons = {
   mac: IconPlatformMac,
   windows: IconPlatformWindows,
   linux: IconPlatformLinux,
-};
+}
 
 const PlatformIcon = (platform) => {
-  const PlatformIcon = platformIcons[platform];
+  const PlatformIcon = platformIcons[platform]
   return (
     <div className="flex items-center">
       <PlatformIcon />
     </div>
-  );
-};
+  )
+}
 
 const ListItem = ({ idx, text }) => {
   return (
-    <li className="flex mb-4 text-vega-mid-grey dark:text-vega-grey">
-      <div className="relative top-1 w-12 title-s font-glitch-all dark:text-white text-black shrink-0">
+    <li className="mb-4 flex text-vega-mid-grey dark:text-vega-grey">
+      <div className="title-s font-glitch-all relative top-1 w-12 shrink-0 text-black dark:text-white">
         {idx + 1}.
       </div>
       <div className="copy-xs !mb-0">{text}</div>
     </li>
-  );
-};
-
-const getArch = () => {
-  var platform =
-      window.navigator?.userAgentData?.platform ?? window.navigator.platform,
-    macosPlatforms = ["macOS", "Macintosh", "MacIntel", "Mac68K"],
-    windowsPlatforms = ["Win32", "Win64", "Windows"],
-    linuxPlatforms = "Linux";
-
-  if (macosPlatforms.includes(platform)) {
-    const w = document.createElement("canvas").getContext("webgl");
-    const d = w.getExtension("WEBGL_debug_renderer_info");
-    const g = (d && w.getParameter(d.UNMASKED_RENDERER_WEBGL)) || "";
-    if (
-      (g.match(/Apple/) && !g.match(/Apple GPU/)) ||
-      (g.match(/Apple GPU/) &&
-        w
-          .getSupportedExtensions()
-          .indexOf("WEBGL_compressed_texture_s3tc_srgb") === -1)
-    ) {
-      return "MacOS (ARM64)";
-    } else {
-      return "MacOS";
-    }
-  } else if (windowsPlatforms.includes(platform)) {
-    if (platform.match(/\barm/i)) {
-      return "Windows (ARM64)";
-    } else {
-      return "Windows";
-    }
-  } else if (linuxPlatforms.includes(platform)) {
-    return "Linux";
-  } else {
-    return "Linux";
-  }
-};
-
-const howToText = [
-  "Choose 'create a new wallet' in the app",
-  "Name each individual wallet if you need more than one",
-  "Create a passphrase for each wallet. You'll need it for depositing collateral, placing trades, etc.",
-  "Record the recovery phrase that's provided on setup. This only appears once. Have an existing wallet you created in the CLI app? You will be given the option to connect this to the desktop app",
-  "Need to restore a wallet? Use the recovery phrase exactly as it was presented to you",
-  "To update the app, delete your existing version and download the new one",
-];
-
-// t("Choose 'create a new wallet' in the app")
-// t("Name each individual wallet if you need more than one")
-// t("Create a passphrase for each wallet. You'll need it for depositing collateral, placing trades, etc.")
-// t("Record the recovery phrase that's provided on setup. This only appears once. Have an existing wallet you created in the CLI app? You will be given the option to connect this to the desktop app")
-// t("Need to restore a wallet? Use the recovery phrase exactly as it was presented to you")
-// t("To update the app, delete your existing version and download the new one")
+  )
+}
 
 const binaries = [
   {
-    icon: "windows",
-    platform: "Windows",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-windows-amd64.zip",
+    icon: 'windows',
+    platform: 'Windows',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-windows-amd64.zip',
   },
   {
-    icon: "windows",
-    platform: "Windows (ARM64)",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-windows-arm64.zip",
+    icon: 'windows',
+    platform: 'Windows (ARM64)',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-windows-arm64.zip',
   },
   {
-    icon: "mac",
-    platform: "MacOS",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-darwin-amd64.zip",
+    icon: 'mac',
+    platform: 'MacOS (Intel)',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-darwin-amd64.zip',
   },
   {
-    icon: "mac",
-    platform: "MacOS (ARM64)",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-darwin-arm64.zip",
+    icon: 'mac',
+    platform: 'MacOS (M1 / M2)',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-darwin-arm64.zip',
   },
   {
-    icon: "linux",
-    platform: "Linux",
-    file: "https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-linux-amd64.zip",
+    icon: 'linux',
+    platform: 'Linux',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-linux-amd64.zip',
   },
-];
+]
 
 const WalletPage = () => {
-  const { i18n, t } = useTranslation("page.wallet");
-  const [downloadDropdown, setDownloadDropdown] = useState(false);
-  const [selectedBinary, setSelectedBinary] = useState(binaries[0]);
-  const dropDownMenuButton = useRef(null);
-  const [missingTranslations, setMissingTranslations] = useState(false);
+  const { i18n, t } = useTranslation('page.wallet')
+  const [downloadDropdown, setDownloadDropdown] = useState(false)
+  const [missingTranslations, setMissingTranslations] = useState(false)
 
-  i18n.on("missingKey", (lng) => {
-    setMissingTranslations(true);
-  });
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   const showDownloadMenu = (state) => {
-    setDownloadDropdown(state);
-  };
+    setDownloadDropdown(state)
+  }
 
-  const chooseBinary = (idx) => {
-    setSelectedBinary(binaries[idx]);
-    dropDownMenuButton.current.blur();
-  };
-
-  useEffect(() => {
-    setSelectedBinary(
-      binaries.find((element) => element.platform === getArch())
-    );
-
-    return () => {};
-  }, []);
+  const howToText = [
+    t("Choose 'create a new wallet' in the app"),
+    t('Name each individual wallet if you need more than one'),
+    t(
+      "Create a passphrase for each wallet. You'll need it for depositing collateral, placing trades, etc."
+    ),
+    t(
+      "Record the recovery phrase that's provided on setup. This only appears once. Have an existing wallet you created in the CLI app? You will be given the option to connect this to the desktop app"
+    ),
+    t(
+      'Need to restore a wallet? Use the recovery phrase exactly as it was presented to you'
+    ),
+    t(
+      'To update the app, delete your existing version and download the new one'
+    ),
+  ]
 
   return (
     <Layout>
       <Seo
-        title={t("Get the Vega Wallet")}
+        title={t('Get the Vega Wallet')}
         description={t(
-          "Download the Vega Wallet desktop app, to help you manage multiple wallets, multiple keys — and get access to the Vega network."
+          'Download the Vega Wallet desktop app, to help you manage multiple wallets, multiple keys — and get access to the Vega network.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <Container dataCy={"main"}>
-        <div className="pt-6 lg:pt-16 max-w-[38rem] md:max-w-none mx-auto">
-          <div className="mx-auto max-w-[28rem] md:max-w-[38rem] lg:max-w-[42rem] text-center">
-            <GlitchTitle level="1" className="my-4 title-l md:title-xxl">
+      <Container dataCy={'main'}>
+        <div className="mx-auto max-w-[38rem] pt-6 md:max-w-none lg:pt-16">
+          <div className="mx-auto max-w-[28rem] text-center md:max-w-[38rem] lg:max-w-[42rem]">
+            <GlitchTitle level="1" className="title-l md:title-xxl my-4">
               <Trans t={t}>Get the Vega Wallet</Trans>
             </GlitchTitle>
           </div>
-          <LeadingLine className="text-current text-center max-w-[56rem] mx-auto">
+          <LeadingLine className="mx-auto max-w-[56rem] text-center text-current">
             <Trans t={t}>
               Download the Vega Wallet desktop app, to help you manage multiple
               wallets, multiple keys — and get access to the Vega network.
             </Trans>
           </LeadingLine>
-
-          <div
-            ref={dropDownMenuButton}
-            className="w-[16rem] mx-auto relative mt-10 cursor-pointer"
-            tabIndex={0}
-            role="button"
-            onFocus={() => showDownloadMenu(true)}
-            onBlur={() => showDownloadMenu(false)}
-          >
-            <div className="border border-current flex items-center">
-              <div className="py-3 px-3.5 flex items-center">
-                <div className="pr-2.5">
-                  {PlatformIcon(selectedBinary.icon)}
-                </div>
-                <DropdownArrow />
-                {downloadDropdown && (
-                  <div className="absolute z-20 top-[100%] left-0 right-0 border border-t-0 border-current bg-white dark:bg-black">
-                    <ul className="py-3 px-2">
-                      {binaries.map((binary, idx) => {
-                        return (
-                          <li className="cursor-pointer my-1" key={idx}>
-                            <div
-                              onClick={() => chooseBinary(idx)}
-                              onKeyDown={() => chooseBinary(idx)}
-                              role="button"
-                              // tabIndex={0}
-                              className={`flex items-center w-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10 ${
-                                selectedBinary === binary
-                                  ? "bg-black dark:bg-white bg-opacity-10 dark:bg-opacity-10"
-                                  : ""
-                              }`}
-                            >
-                              <div className="px-3.5 py-2">
-                                {PlatformIcon(binary.icon)}
-                              </div>
-                              <div className="py-2 copy-xxs !mb-0 text-vega-mid-grey dark:text-vega-grey">
-                                {binary.platform}
-                              </div>
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
+          <div className="flex justify-center">
+            <div className="relative mx-auto mt-6 inline-block cursor-pointer">
+              <div
+                role="button"
+                tabIndex={0}
+                className="flex items-center border border-current"
+                onFocus={() => showDownloadMenu(true)}
+                onBlur={(e) => {
+                  if (!e.relatedTarget?.dataset?.fileDownload) {
+                    showDownloadMenu(false)
+                  }
+                }}
+              >
+                <div className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase">
+                  <div className="mr-4">
+                    <DropdownArrow />
                   </div>
-                )}
-              </div>
-              <div className="text-center relative border-px border-l border-current uppercase copy-xxs !mb-0 flex-grow">
-                <a
-                  href={selectedBinary.file}
-                  className="block py-3 px-3"
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => showDownloadMenu(false)}
-                >
-                  <Trans t={t}>Get desktop app</Trans>
-                </a>
+                  <Trans t={t}>Download desktop app (Mainnet)</Trans>
+                </div>
+                <div>
+                  {downloadDropdown && (
+                    <div className="absolute top-[100%] left-0 right-0 z-20 border border-t-0 border-current bg-white dark:bg-black">
+                      <ul className="py-3 px-2">
+                        {binaries.map((binary, idx) => {
+                          return (
+                            <li className="my-1 cursor-pointer" key={idx}>
+                              <a
+                                href={binary.file}
+                                role="button"
+                                target="_blank"
+                                rel="noreferrer"
+                                data-file-download
+                                className={`flex w-full items-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10`}
+                              >
+                                <div className="px-3.5 py-2">
+                                  {PlatformIcon(binary.icon)}
+                                </div>
+                                <div className="copy-xxs !mb-0 py-2 text-vega-mid-grey dark:text-vega-grey">
+                                  {binary.platform}
+                                </div>
+                              </a>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
+          </div>
+          <div className="mt-space-5 text-center">
+            <Button
+              variant="secondary"
+              to="https://github.com/vegaprotocol/vegawallet-desktop/releases/"
+            >
+              Get a specific release (including Testnet)
+            </Button>
           </div>
         </div>
       </Container>
 
-      <div className="relative pt-16 md:pt-36 md:mt-12">
+      <div className="relative pt-16 md:mt-12 md:pt-36">
         <video
-          className="md:hidden w-full h-auto max-w-[90%] mx-auto"
+          className="mx-auto h-auto w-full max-w-[90%] md:hidden"
           autoPlay
           muted
           loop
@@ -251,9 +203,9 @@ const WalletPage = () => {
 
         <WalletRip className="relative md:mt-16 lg:mt-0" />
 
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 transform">
           <video
-            className="hidden md:block w-full h-auto md:scale-150 lg:scale-100"
+            className="hidden h-auto w-full md:block md:scale-150 lg:scale-100"
             autoPlay
             muted
             loop
@@ -271,7 +223,7 @@ const WalletPage = () => {
               <Trans t={t}>With the wallet you can:</Trans>
             </h2>
           </div>
-          <div className="grid grid-cols-3 lg:grid-cols-6 gap-8 text-center text-[1.125rem] leading-snug pt-12 pb-12 md:pb-6">
+          <div className="grid grid-cols-3 gap-8 pt-12 pb-12 text-center text-[1.125rem] leading-snug md:pb-6 lg:grid-cols-6">
             <div>
               <svg
                 width="38"
@@ -444,7 +396,7 @@ const WalletPage = () => {
               </div>
             </div>
           </div>
-          <p className="text-center copy-xs">
+          <p className="copy-xs text-center">
             <Trans t={t}>
               It's also the starting point for trading, staking tokens, and
               voting on community proposals.
@@ -453,8 +405,8 @@ const WalletPage = () => {
         </PageSection>
 
         <PageSection>
-          <WalletHowToSmall className="md:hidden mb-8" />
-          <div className="grid grid-cols-12 md:gap-12 lg:gap-21 max-w-[62rem] mx-auto">
+          <WalletHowToSmall className="mb-8 md:hidden" />
+          <div className="lg:gap-21 mx-auto grid max-w-[62rem] grid-cols-12 md:gap-12">
             <div className="col-span-12 md:col-span-4">
               <h2 className="title-l md:title-xl mb-3 max-w-[17rem] md:max-w-none">
                 <Trans t={t}>How to use</Trans>
@@ -475,25 +427,25 @@ const WalletPage = () => {
             </div>
 
             <div className="col-span-12 md:col-span-8 lg:pl-12">
-              <ol className="list-none p-0 mt-6 md:mt-0">
+              <ol className="mt-6 list-none p-0 md:mt-0">
                 {howToText.map((text, idx) => {
-                  return <ListItem idx={idx} key={idx} text={t(text)} />;
+                  return <ListItem idx={idx} key={idx} text={t(text)} />
                 })}
               </ol>
             </div>
           </div>
-          <WalletHowTo className="hidden md:block mt-5" />
+          <WalletHowTo className="mt-5 hidden md:block" />
         </PageSection>
       </Container>
 
       <PageSection>
-        <div className="flex justify-between items-center">
-          <div className="w-[200px] hidden md:block">
+        <div className="flex items-center justify-between">
+          <div className="hidden w-[200px] md:block">
             <WalletLeft />
           </div>
-          <div className="text-center max-w-[30rem] md:max-w-[42rem] mx-auto">
+          <div className="mx-auto max-w-[30rem] text-center md:max-w-[42rem]">
             <Container>
-              <h2 className="title-s md:title-l mb-6 max-w-[30rem] lg:max-w-none mx-auto">
+              <h2 className="title-s md:title-l mx-auto mb-6 max-w-[30rem] lg:max-w-none">
                 <Trans t={t}>Need the command line (CLI) wallet app?</Trans>
               </h2>
               <p className="copy-xs md:copy-s">
@@ -503,7 +455,7 @@ const WalletPage = () => {
                   app, CLI also lets you:
                 </Trans>
               </p>
-              <div className="grid grid-cols-3 gap-8 text-center text-[1.125rem] leading-snug pt-8 pb-8">
+              <div className="grid grid-cols-3 gap-8 pt-8 pb-8 text-center text-[1.125rem] leading-snug">
                 <div>
                   <svg
                     width="38"
@@ -585,21 +537,21 @@ const WalletPage = () => {
               </div>
 
               <ButtonLink
-                text={t("Get the CLI app")}
-                link="https://docs.vega.xyz/docs/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet/"
+                text={t('Get the CLI app')}
+                link="https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet"
               />
             </Container>
           </div>
-          <div className="w-[200px] hidden md:block">
+          <div className="hidden w-[200px] md:block">
             <WalletRight />
           </div>
         </div>
       </PageSection>
     </Layout>
-  );
-};
+  )
+}
 
-export default WalletPage;
+export default WalletPage
 
 export const query = graphql`
   query ($language: String!) {
@@ -618,4 +570,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

@@ -1,48 +1,48 @@
-import React, { useState, useEffect } from "react";
-import { globalHistory } from "@reach/router";
-import Navigation from "./Navigation/Navigation";
-import ScreenMode from "../components/ScreenMode";
-import VegaLogo from "../components/Svg/VegaLogo";
-import MobileMenu from "../components/Navigation/MobileMenu";
-import MobileMenuButton from "../components/Navigation/MobileMenuButton";
-import HeaderCta from "../components/HeaderCta";
-import LanguageToggle from "../components/LanguageToggle";
+import React, { useState, useEffect } from 'react'
+import { globalHistory } from '@reach/router'
+import Navigation from './Navigation/Navigation'
+import ScreenMode from '../components/ScreenMode'
+import VegaLogo from '../components/Svg/VegaLogo'
+import MobileMenu from '../components/Navigation/MobileMenu'
+import MobileMenuButton from '../components/Navigation/MobileMenuButton'
+import HeaderCta from '../components/HeaderCta'
+import LanguageToggle from '../components/LanguageToggle'
 // import SiteBanner from "../components/SiteBanner";
-import { Link, useTranslation } from "gatsby-plugin-react-i18next";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 const Header = ({ sticky }) => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   const toggleMenu = () => {
-    setMenuIsOpen(!menuIsOpen);
+    setMenuIsOpen(!menuIsOpen)
 
     if (menuIsOpen) {
-      enableBodyScroll(document.querySelector("#mobileMenu"));
+      enableBodyScroll(document.querySelector('#mobileMenu'))
     } else {
-      disableBodyScroll(document.querySelector("#mobileMenu"));
+      disableBodyScroll(document.querySelector('#mobileMenu'))
     }
-  };
+  }
 
   useEffect(() => {
     return globalHistory.listen(({ action }) => {
-      enableBodyScroll(document.querySelector("#mobileMenu"));
-    });
-  }, []);
+      enableBodyScroll(document.querySelector('#mobileMenu'))
+    })
+  }, [])
 
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common')
 
   return (
     <div>
       {/* <SiteBanner /> */}
       <header
-        className={`z-50 dark:bg-black bg-white ${
-          sticky ? "fixed top-0 left-0 right-0" : ""
+        className={`z-50 bg-white dark:bg-black ${
+          sticky ? 'fixed top-0 left-0 right-0' : ''
         }`}
         id="header"
       >
-        <div className="px-4 w-full md:px-6 lg:px-8 relative">
-          <div className="header flex items-center justify-between py-4 lg:pt-6">
+        <div className="relative w-full px-4 md:px-6 lg:px-8">
+          <div className="header flex items-center justify-between py-4 lg:py-6">
             <Link to="/">
               <VegaLogo />
             </Link>
@@ -55,8 +55,8 @@ const Header = ({ sticky }) => {
               {!menuIsOpen && (
                 <HeaderCta
                   link="https://console.fairground.wtf/"
-                  text={t("Trade (Testnet)")}
-                  className="hidden md:block lg:hidden mr-3"
+                  text={t('Trade futures (Testnet)')}
+                  className="mr-3 hidden md:block lg:hidden"
                 />
               )}
 
@@ -69,7 +69,7 @@ const Header = ({ sticky }) => {
                 {!menuIsOpen && (
                   <HeaderCta
                     link="https://console.fairground.wtf/"
-                    text={t("Trade (Testnet)")}
+                    text={t('Trade futures (Testnet)')}
                     className="ml-3 hidden lg:block"
                   />
                 )}
@@ -79,7 +79,7 @@ const Header = ({ sticky }) => {
         </div>
       </header>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

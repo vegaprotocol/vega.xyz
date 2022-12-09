@@ -3,7 +3,7 @@ import CalendarEvent from "./CalendarEvent";
 import ButtonLink from "./ButtonLink";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
-const Calendar = ({ limit = false }) => {
+const Calendar = ({ limit = false, filter = false }) => {
   const [events, setEvents] = useState(null);
   const { t } = useTranslation("component.calendar");
 
@@ -16,8 +16,7 @@ const Calendar = ({ limit = false }) => {
 
       // the following logic will probably be made redundant when the calendar API feed is updated
 
-      // extract relevant data
-      const result = response.notion_data.map((elem) => {
+      const extractData = (elem) => {
         return {
           attendees: elem.properties.find(
             (element) => element.name === "Attendees"
@@ -33,7 +32,25 @@ const Calendar = ({ limit = false }) => {
             // create date objects
             .values.map((date) => new Date(date)),
         };
-      });
+      };
+
+      // extract relevant data
+      const result = response.notion_data
+        .map((elem) => {
+          if (filter) {
+            if (
+              elem.properties.find((element) => element.name === "Tags")
+                .values[0] === filter
+            ) {
+              return extractData(elem);
+            } else {
+              return null;
+            }
+          } else {
+            return extractData(elem);
+          }
+        })
+        .filter((el) => el !== null);
 
       // sort events by date
       let sortedEvents = result.sort(
@@ -61,7 +78,7 @@ const Calendar = ({ limit = false }) => {
   }, [limit]);
 
   return (
-    <div className="border-t border-current mb-16">
+    <div className="border-t border-current">
       <div>
         {events &&
           events.map((event, idx) => <CalendarEvent key={idx} event={event} />)}

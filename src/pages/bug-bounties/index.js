@@ -123,7 +123,7 @@ const BugBountiesPage = ({ data }) => {
                   </p>
                   <p>
                     <Trans t={t}>
-                      The vega.xyx website or any bug related to the vega.xyz
+                      The vega.xyz website or any bug related to the vega.xyz
                       email domain are out of scope. The program is meant for
                       serious bugs that have significant impact on security.
                       Bugs on the vega.xyz website would only qualify if they
@@ -207,7 +207,7 @@ const BugBountiesPage = ({ data }) => {
                       separate protocol instance that you can run for yourselves
                       is advised. The best way to do this is via the{" "}
                       <a
-                        href="https://docs.vega.xyz/docs/mainnet/tools#vega-capsule"
+                        href="https://docs.vega.xyz/mainnet/tools#vega-capsule"
                         target="_blank"
                         rel="noreferrer"
                       >

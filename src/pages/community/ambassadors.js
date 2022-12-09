@@ -1,333 +1,295 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-import Seo from "../../components/Seo";
-import Layout from "../../components/Layout";
-import TranslationsBanner from "../../components/TranslationsBanner";
-import Container from "../../components/Container";
-import GlitchTitle from "../../components/GlitchTitle";
-import LeadingLine from "../../components/LeadingLine";
-import BoxLinkSimple from "../../components/BoxLinkSimple";
-import ButtonLink from "../../components/ButtonLink";
-import AmbassadorsHero from "../../components/Svg/AmbassadorsHero";
-import IconAmbassador1 from "../../images/icon-ambassador-1.png";
-import IconAmbassador2 from "../../images/icon-ambassador-2.png";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
-import AmbassadorLeaderboard from "../../components/AmbassadorLeaderboard";
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
+import Seo from '../../components/Seo'
+import Layout from '../../components/Layout'
+import TranslationsBanner from '../../components/TranslationsBanner'
+import Container from '../../components/Container'
+import GlitchTitle from '../../components/UI/GlitchTitle'
+import Tag from '../../components/UI/Tag'
+import TeamTile from '../../components/UI/TeamTile'
+import Button from '../../components/UI/Button'
+import NumberedListItem from '../../components/UI/NumberedListItem'
+import CalloutTile from '../../components/UI/CalloutTile'
+import ActionButton from '../../components/UI/ActionButton'
+import { getImage } from 'gatsby-plugin-image'
+import AmbassadorsHero from '../../components/Svg/Ambassadors/Hero/Responsive'
+import AmbassadorsFooter from '../../components/Svg/Ambassadors/Footer/Responsive'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import AmbassadorLeaderboard from '../../components/AmbassadorLeaderboard'
+import IconTick from '../../images/icons/tick.svg'
+import IconPeople from '../../images/icons/people.svg'
+import IconStairs from '../../images/icons/stairs.svg'
+import IconAlert from '../../images/icons/alert.svg'
+import IconDiscord from '../../images/icons/discord.svg'
 
-const Clan = ({ icon, title, text }) => {
-  return (
-    <div className="flex items-center gap-6 mb-6">
-      <img src={icon} width="93" height="93" alt="" className="shrink-0" />
-      <div>
-        <h3 className="title-s md:title-m mb-2">{title}</h3>
-        <p className="copy-xxs md:copy-xs !mb-0">{text}</p>
-      </div>
-    </div>
-  );
-};
+const Ambassadors = ({ data }) => {
+  const { i18n, t } = useTranslation('page.community.ambassadors')
+  const [missingTranslations, setMissingTranslations] = useState(false)
 
-const benefits = [
-  "Gain real-world experience in community building by shaping the Vega movement from the ground up",
-  "Access to exclusive Discord lounges",
-  "Early access to bounties, beta testing of products",
-  "Priority consideration on protocol feedback",
-  "Exclusive meetups - Invitations to all of Vega's events, both offline and online",
-  "Limited edition Vega swag",
-  "Priority minting of NFT drops (+ enhanced rarities)",
-  "Grow with Vega - scaling rewards as you climb the ranks",
-];
-
-// t("Gain real-world experience in community building by shaping the Vega movement from the ground up"),
-// t("Access to exclusive Discord lounges"),
-// t("Early access to bounties, beta testing of products"),
-// t("Priority consideration on protocol feedback"),
-// t("Exclusive meetups - Invitations to all of Vega's events, both offline and online"),
-// t("Limited edition Vega swag"),
-// t("Priority minting of NFT drops (+ enhanced rarities)"),
-// t("Grow with Vega - scaling rewards as you climb the ranks"),
-
-const Ambassadors = () => {
-  const { i18n, t } = useTranslation("page.community.ambassadors");
-  const [missingTranslations, setMissingTranslations] = useState(false);
-
-  i18n.on("missingKey", (lng) => {
-    setMissingTranslations(true);
-  });
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   return (
     <Layout>
       <Seo
-        title={t("Be a Vega+ Ambassador")}
+        title={t('Be a Vega+ Ambassador')}
         description={t(
-          "Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community."
+          'Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <Container>
-        <div className="max-w-[21.25rem] md:max-w-[40rem] lg:max-w-[80rem] mx-auto text-center md:mb-12 pt-6 lg:pt-16">
-          <GlitchTitle
-            level={1}
-            className="mb-4 title-m md:title-xxl lg:title-xxxl md:mb-6"
-          >
-            <Trans t={t}>Be a Vega+ Ambassador</Trans>
-          </GlitchTitle>
-          <LeadingLine className="text-center text-current mx-auto max-w-[35rem]">
-            <Trans t={t}>
-              Seeking emissaries of the future to co-create the leading crypto
-              derivatives layer.
-            </Trans>
-          </LeadingLine>
-        </div>
-      </Container>
-
-      <Container hideXOverflow={true}>
-        <div className="max-w-[55.5rem] mx-auto mb-6 md:mb-16">
-          <AmbassadorsHero className="scale-125 my-12 md:my-0 md:scale-100" />
-        </div>
-      </Container>
-
-      <Container dataCy={"main"}>
-        <div className="md:grid md:grid-cols-12 md:gap-x-12 lg:gap-x-6">
-          <div className="md:col-span-8 lg:col-span-7">
-            <div className="mb-12 md:mb-20">
-              <h2 className="title-s md:title-l mb-4">
-                <Trans t={t}>Overview</Trans>
-              </h2>
-              <LeadingLine className="text-current">
-                <Trans t={t}>
-                  Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you
-                  to be a driving force of the Vega community.
-                </Trans>
-              </LeadingLine>
-              <p className="copy-xs">
-                <Trans t={t}>
-                  You'll already be passionate about blockchain technologies,
-                  with a willingness to learn the ins and outs of Vega. A
-                  penchant for original thinking. And an appetite to share, as
-                  you drive conversations and engagement in pursuit of vibrancy
-                  within the community.
-                </Trans>
-              </p>
-              <p className="copy-xs">
-                <Trans t={t}>
-                  Apply now to bring fresh proposals to the table and
-                  participate in the community as a key contributor.
-                </Trans>
-              </p>
-
-              <ButtonLink
-                link="https://form.typeform.com/to/lPl6aiNh"
-                text={t("Apply now")}
-                className="md:hidden mt-3"
-              />
-            </div>
-
-            <div className="mb-12 md:mb-20">
-              <h2 className="title-s md:title-l mb-4 max-w-[20rem] md:max-w-none">
-                <Trans t={t}>Which Vega+ Team would you rally?</Trans>
-              </h2>
-              <div className="mt-6 md:mt-12">
-                <Clan
-                  title={t("Content Collective (Non-Technical)")}
-                  text={t(
-                    "(Tweets, Translations, Editorials, Infographics, Bounties)"
-                  )}
-                  icon={IconAmbassador1}
-                />
-                <Clan
-                  title={t("Builders Club (Technical)")}
-                  text={t(
-                    "(Vega Capsule, Documentation, Hackathon Support, Coding)"
-                  )}
-                  icon={IconAmbassador2}
-                />
-                {/* <Clan
-                  title="Research & Finance Circle"
-                  text="(Deeper Research, Protocol Comparisons, Protocol Integrations)"
-                  icon={IconAmbassador3}
-                /> */}
-              </div>
-            </div>
-
-            <div className="mb-12 md:mb-20">
-              <h2 className="title-s md:title-l mb-4 max-w-[20rem] md:max-w-none">
-                <Trans t={t}>Benefits of being an ambassador</Trans>
-              </h2>
-              <p className="copy-xs md:copy-s text-current">
-                <Trans t={t}>
-                  Vega+ Ambassadors are a valued extension of the team, and work
-                  closely with core Vega members. Here's a taste of what you can
-                  look forward to:
-                </Trans>
-              </p>
-
-              <div className="border-t border-current mt-8 md:mt-12 mb-4 md:mb-0">
-                {benefits.map((benefit, idx) => {
-                  return (
-                    <div
-                      key={idx}
-                      className="flex text-current items-center border-b border-current py-3 md:py-6"
-                    >
-                      <div className="copy-m !mb-0 md:copy-l shrink-0 min-w-[3rem] md:min-w-[5rem]">
-                        {idx + 1}
-                      </div>
-                      <div className="copy-xs md:copy-s text-current !mb-0">
-                        {t(benefit)}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <ButtonLink
-                link="https://form.typeform.com/to/lPl6aiNh"
-                text="Apply now"
-                className="md:hidden mt-3"
-              />
-            </div>
-
-            <div className="mb-12 md:mb-20">
-              <h2 className="title-s md:title-l mb-4">
-                <Trans t={t}>Leaderboard</Trans>
-              </h2>
-              <p className="copy-s">
-                <Trans t={t}>
-                  We celebrate our ambassadors and their work. Complete tasks to
-                  top the leaderboard, rise up the ranks, and see your name
-                  here!
-                </Trans>
-              </p>
-              <div className="py-6">
-                <AmbassadorLeaderboard limit={5} />
-              </div>
-            </div>
-
-            <div className="mb-12 md:mb-20">
-              <h2 className="title-s md:title-l mb-4">
-                <Trans t={t}>Expectations</Trans>
-              </h2>
-              <p className="copy-xs md:copy-s text-current mb-8">
-                <Trans t={t}>
-                  There are no exact requirements to being an ambassador; the
-                  extent of what you'll work on will depend on your team and
-                  role. Nevertheless, these are the non-negotiables:
-                </Trans>
-              </p>
-              <div className="prose-xl dark:text-white">
-                <ul className="list-disc copy-xs md:copy-s mt-8 md:mt-12">
-                  <li>
-                    <Trans t={t}>
-                      Agree with the code of conduct; keep to the rules
-                    </Trans>
-                  </li>
-                  <li>
-                    <Trans t={t}>
-                      Attend most meetings with other ambassadors, engage with
-                      your team
-                    </Trans>
-                  </li>
-                  <li>
-                    <Trans t={t}>
-                      Learn with the core team: attend office hours, ask
-                      questions, grow
-                    </Trans>
-                  </li>
-                  <li>
-                    <Trans t={t}>
-                      Let us know when things aren't working for you, if you
-                      need a break, that's okay!
-                    </Trans>
-                  </li>
-                  <li>
-                    <Trans t={t}>
-                      Be active on Discord - most communication will take place
-                      there
-                    </Trans>
-                  </li>
-                </ul>
-              </div>
+      <div data-cy="main" className="pt-space-5 md:pt-space-6 lg:pt-space-7">
+        <Container>
+          <div className="mx-auto mb-space-10 max-w-[21.25rem] text-center md:max-w-[40rem] lg:max-w-[80rem]">
+            <Tag className="mb-space-4">
+              <Trans t={t}>Contribute</Trans>
+            </Tag>
+            <h1 className="heading-xxl mb-space-5">
+              <GlitchTitle color="purple">
+                <Trans t={t}>Be a Vega+ Ambassador</Trans>
+              </GlitchTitle>
+            </h1>
+            <div className="body-xl mx-auto mb-space-5 max-w-[47.5rem] text-center text-current">
+              <Trans t={t}>
+                Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to
+                be a driving force of the Vega community.
+              </Trans>
             </div>
           </div>
+        </Container>
 
-          <div className="hidden lg:block lg:col-span-1"></div>
-
-          <div className="hidden md:block md:col-span-4 lg:col-span-4 mb-20">
-            <div className="sticky top-[6.75rem]">
-              <div className="title-s mb-3">
-                <Trans t={t}>Interested in joining?</Trans>
-              </div>
-              <p className="copy-xs text-current">
-                <Trans t={t}>
-                  Become one with Vega. Learn, create, and help grow Vega to be
-                  a leading derivatives Layer 1 in the crypto space
-                </Trans>
-              </p>
-              <BoxLinkSimple
-                link="https://vegaprotocol.typeform.com/ambassadorappQ2"
-                text={t("Apply now")}
-                className="mt-4 min-w-[15rem] text-left hidden md:inline-block"
-              />
-            </div>
-          </div>
+        <div className="mx-auto mb-space-10 max-w-[72.5rem] md:mb-space-11 lg:mb-space-13">
+          <AmbassadorsHero />
         </div>
 
-        <div className="mt-20 mb-16">
-          <div className="text-center">
-            <GlitchTitle
-              color="red"
-              level="2"
-              className="mb-4 title-m md:title-l lg:title-xxl md:max-w-[35rem] mx-auto"
+        <Container>
+          <h2 className="heading-xl mb-space-7 text-center md:mb-space-8 lg:mb-space-9">
+            <Trans t={t}>Join a team</Trans>
+          </h2>
+
+          <div className="mb-space-10 grid grid-cols-1 gap-space-5 md:mb-space-11 md:grid-cols-2 md:gap-space-7 lg:mb-space-13">
+            <TeamTile
+              title={t('Content collective')}
+              body={t(
+                'Join the team creating non-technical content and designs for exclusive bounties.'
+              )}
+              image={getImage(data.iconContentCollective)}
             >
+              <div className="heading-xxs font-not-glitched mb-space-5 uppercase">
+                <Trans t={t}>
+                  Tweets / Translations / Editorials / Infographics
+                </Trans>
+              </div>
+              <Button to="https://vegaprotocol.typeform.com/ambassadorappq4">
+                <Trans t={t}>Apply now</Trans>
+              </Button>
+            </TeamTile>
+
+            <TeamTile
+              title={t('Builders Club')}
+              body={t(
+                'Get support building on top of the Vega protocol and access exclusive builder club bounties.'
+              )}
+              image={getImage(data.iconBuildersClub)}
+            >
+              <div className="heading-xxs font-not-glitched mb-space-5 uppercase">
+                <Trans t={t}>Docs / Hackathons / Coding support</Trans>
+              </div>
+              <Button
+                to="https://vegaprotocol.typeform.com/ambassadorappq4"
+                className="mr-space-6"
+              >
+                <Trans t={t}>Apply now</Trans>
+              </Button>
+              <Button
+                to="/builders-club"
+                variant="secondary"
+                className="mt-space-3"
+              >
+                <Trans t={t}>See what's going on</Trans>
+              </Button>
+            </TeamTile>
+
+            <div className="col-span-1 flex justify-center md:col-span-2">
+              <div className="md:w-1/2">
+                <TeamTile
+                  title={t('Multilingual League')}
+                  body={t(
+                    'Be a part of the language specialists helping to make Vega accessible to more people across the globe.'
+                  )}
+                  image={getImage(data.iconMultilingualLeague)}
+                >
+                  <div className="heading-xxs font-not-glitched mb-space-5 uppercase">
+                    <Trans t={t}>
+                      Internationalisation / Local Language Groups / AMAs
+                    </Trans>
+                  </div>
+                  <Button to="https://vegaprotocol.typeform.com/ambassadorappq4">
+                    <Trans t={t}>Apply now</Trans>
+                  </Button>
+                </TeamTile>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-space-10 max-w-[47.5rem] md:mx-auto md:mb-space-11 lg:mb-space-13">
+            <h2 className="heading-l mb-space-6">
+              <Trans t={t}>Benefits of being an ambassador</Trans>
+            </h2>
+            <div className="body-l mb-space-6 text-vega-light-400 dark:text-vega-dark-400">
+              <Trans t={t}>
+                Vega+ Ambassadors are a valued extension of the team, and work
+                closely with core Vega members.
+              </Trans>
+            </div>
+
+            <div className="mb-space-4 border-t md:mb-space-11 lg:mb-space-13">
+              <NumberedListItem
+                number="1"
+                text={t(
+                  'Gain real-world experience in community building by shaping the Vega movement from the ground up'
+                )}
+              />
+              <NumberedListItem
+                number="2"
+                text={t('Access to exclusive Discord lounges')}
+              />
+              <NumberedListItem
+                number="3"
+                text={t('Early access to bounties, beta testing of products')}
+              />
+              <NumberedListItem
+                number="4"
+                text={t('Priority consideration on protocol feedback')}
+              />
+              <NumberedListItem
+                number="5"
+                text={t(
+                  "Exclusive meetups - Invitations to all of Vega's events, both offline and online"
+                )}
+              />
+              <NumberedListItem
+                number="6"
+                text={t('Limited Edition Vega swag')}
+              />
+              <NumberedListItem
+                number="7"
+                text={t('Priority minting of NFT drops (+ enhanced rarities)')}
+              />
+              <NumberedListItem
+                number="8"
+                text={t(
+                  'Grow with Vega - scaling rewards as you climb the ranks'
+                )}
+              />
+            </div>
+          </div>
+
+          <div className="max-w-[47.5rem] md:mx-auto">
+            <h2 className="heading-l mb-space-6">
+              <Trans t={t}>Leaderboard</Trans>
+            </h2>
+            <div className="body-l mb-space-6 text-vega-light-400 dark:text-vega-dark-400">
+              <Trans t={t}>
+                We celebrate our ambassadors and their work. Complete tasks to
+                top the leaderboard, rise up the ranks, and see your name here!
+              </Trans>
+            </div>
+
+            <div className="mb-space-4 md:mb-space-11 lg:mb-space-13">
+              <AmbassadorLeaderboard limit={8} />
+            </div>
+          </div>
+
+          <div className="mb:space-8 mb-space-7 max-w-[47.5rem] text-center md:mx-auto lg:mb-space-9">
+            <h2 className="heading-l mb-space-6">
+              <Trans t={t}>Expectations</Trans>
+            </h2>
+            <div className="body-l text-vega-light-400 dark:text-vega-dark-400">
+              <Trans t={t}>
+                There are no exact requirements to being an ambassador; the
+                extent of what you'll work on will depend on your team and role.
+                Nevertheless, these are the non-negotiables:
+              </Trans>
+            </div>
+          </div>
+          <div className="mb-space-10 grid grid-cols-2 gap-space-3 gap-y-space-6 md:mb-space-11 md:grid-cols-3 md:gap-x-space-7 md:gap-y-space-7 lg:mb-space-13 lg:gap-x-space-7 lg:gap-y-space-9">
+            <CalloutTile
+              icon={IconTick}
+              title={t('Agree with the code of conduct; keep to the rules')}
+            />
+            <CalloutTile
+              icon={IconPeople}
+              title={t(
+                'Attend most meetings with other ambassadors, engage with your team'
+              )}
+            />
+            <CalloutTile
+              icon={IconStairs}
+              title={t(
+                'Learn with the core team: attend office hours, ask questions, grow'
+              )}
+            />
+            <CalloutTile
+              icon={IconAlert}
+              title={t(
+                "Let us know when things aren't working for you, if you need a break, that's okay!"
+              )}
+            />
+            <CalloutTile
+              icon={IconDiscord}
+              title={t(
+                'Be active on Discord - most communication will take place there'
+              )}
+            />
+          </div>
+
+          <div className="mx-auto mb-space-7 max-w-[47.5rem] md:mb-space-10 lg:mb-space-11">
+            <AmbassadorsFooter />
+          </div>
+
+          <h2 className="heading-xl mx-auto max-w-[45rem] text-center">
+            <GlitchTitle color="blue">
               <Trans t={t}>Join the community</Trans>
             </GlitchTitle>
+          </h2>
+          <div className="mx-auto mt-12 mb-space-8 grid max-w-[50rem] grid-cols-2 gap-space-4 md:mb-space-10 md:grid-cols-3 md:gap-x-5 md:gap-y-4 lg:mb-space-11">
+            <ActionButton to="https://vega.xyz/discord">
+              <Trans t={t}>Discord</Trans>
+            </ActionButton>
+            <ActionButton to="https://t.me/vegacommunity/">
+              <Trans t={t}>Telegram</Trans>
+            </ActionButton>
+            <ActionButton to="https://github.com/vegaprotocol/">
+              <Trans t={t}>Github</Trans>
+            </ActionButton>
+            <ActionButton to="https://docs.vega.xyz/">
+              <Trans t={t}>Mainnet Docs</Trans>
+            </ActionButton>
+            <ActionButton to="https://docs.fairground.vega.xyz/">
+              <Trans t={t}>Fairground Docs</Trans>
+            </ActionButton>
+            <ActionButton to="https://twitter.com/vegaprotocol">
+              <Trans t={t}>Twitter</Trans>
+            </ActionButton>
+            <ActionButton to="https://community.vega.xyz/">
+              <Trans t={t}>Forum</Trans>
+            </ActionButton>
+            <ActionButton to="https://www.youtube.com/vegaprotocol/">
+              <Trans t={t}>YouTube</Trans>
+            </ActionButton>
+            <ActionButton to="https://www.twitch.tv/vegaprotocol/">
+              <Trans t={t}>Twitch</Trans>
+            </ActionButton>
           </div>
-
-          <div className="max-w-[50rem] grid gap-4 grid-cols-2 mt-12 mx-auto md:grid-cols-3">
-            <BoxLinkSimple
-              text={t("Discord")}
-              link="https://vega.xyz/discord"
-            />
-            <BoxLinkSimple
-              text={t("Telegram")}
-              link="https://t.me/vegacommunity/"
-            />
-
-            <BoxLinkSimple
-              text={t("Github")}
-              link="https://github.com/vegaprotocol/"
-            />
-            <BoxLinkSimple
-              text={t("Mainnet Docs")}
-              link="https://docs.vega.xyz/"
-            />
-            <BoxLinkSimple
-              text={t("Fairground Docs")}
-              link="https://docs.fairground.vega.xyz/"
-            />
-            <BoxLinkSimple
-              text={t("Twitter")}
-              link="https://twitter.com/vegaprotocol"
-            />
-            <BoxLinkSimple
-              text={t("Forum")}
-              link="https://community.vega.xyz/"
-            />
-            <BoxLinkSimple
-              text={t("YouTube")}
-              link="https://www.youtube.com/vegaprotocol/"
-            />
-            <BoxLinkSimple
-              text={t("Twitch")}
-              link="https://www.twitch.tv/vegaprotocol/"
-            />
-          </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Ambassadors;
+export default Ambassadors
 
 export const query = graphql`
   query ($language: String!) {
@@ -340,5 +302,36 @@ export const query = graphql`
         }
       }
     }
+    iconContentCollective: file(
+      relativePath: { eq: "content-collective-icon.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconBuildersClub: file(relativePath: { eq: "builders-club-icon.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    iconMultilingualLeague: file(
+      relativePath: { eq: "icon-ambassador-4.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
   }
-`;
+`
