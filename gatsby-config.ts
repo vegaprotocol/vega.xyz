@@ -155,7 +155,7 @@ module.exports = {
           keySeparator: false,
           saveMissing: true,
           nsSeparator: false,
-          debug: true,
+          debug: process.env.NODE_ENV === 'development' ? true : false,
         },
       },
     },
