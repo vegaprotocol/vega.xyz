@@ -18,7 +18,7 @@ const BlockD = (props) => {
           <div className="pt-6 md:grid md:grid-cols-2 md:gap-x-12" lang="en">
             <div>
               {props.comingSoon && (
-                <div className="mb-space-2 inline-block rounded bg-vega-pink px-space-3 py-px text-[0.875rem] uppercase text-white">
+                <div className="mb-space-3 inline-block rounded bg-vega-pink px-space-3 py-px text-[0.875rem] uppercase text-white">
                   <Trans t={t}>Coming soon</Trans>
                 </div>
               )}
