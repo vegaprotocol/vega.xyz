@@ -33,7 +33,7 @@ const DevelopPage = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <div dataCy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
+      <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
         <Container hideXOverflow={true}>
           <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
             <div className="md:grid md:grid-cols-12">
