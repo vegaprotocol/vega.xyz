@@ -4,17 +4,13 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
-import BoxTitle from '../../components/BoxTitle'
-import LinkCta from '../../components/LinkCta'
-import LeadingLine from '../../components/LeadingLine'
 import EpochCountdown from '../../components/EpochCountdown'
 import RewardFees from '../../components/RewardFees'
-import Callout from '../../components/UI/Callout'
-import UIButton from '../../components/UI/Button'
-import UILink from '../../components/UI/Link'
-import UICard from '../../components/UI/Card'
-import Stars from '../../components/Svg/Stars'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import Button from '../../components/UI/Button'
+import Tag from '../../components/UI/Tag'
+import GenericTile from '../../components/UI/GenericTile'
+//import Stars from '../../components/Svg/Stars'
+import { getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const RewardsPage = ({ data }) => {
@@ -25,33 +21,16 @@ const RewardsPage = ({ data }) => {
     setMissingTranslations(true)
   })
 
-  const Apy = ({ className }) => {
-    return (
-      <div className={`relative max-w-[37.5rem] lg:max-w-none ${className}`}>
-        <Stars className="hidden h-auto w-full lg:block" />
-        <div className="font-glitch-all bg-moshed2 bg-cover bg-clip-text text-[3rem] leading-none text-transparent lg:absolute lg:top-1/2 lg:left-0 lg:right-0 lg:-translate-y-1/2 lg:text-center lg:text-[5rem]">
-          <div>APY 29.9%</div>
-        </div>
-      </div>
-    )
-  }
-
-  const Card = ({ image, title, text, link, buttonText }) => {
-    return (
-      <UICard className="flex flex-col justify-between">
-        <div className="mb-6">
-          <GatsbyImage image={image} alt="" className="mb-5" />
-          <UILink to={link} className="title-s mb-3 block">
-            {title}
-          </UILink>
-          <div className="text-vega-grey">{text}</div>
-        </div>
-        <UIButton to={link} width="full">
-          {buttonText}
-        </UIButton>
-      </UICard>
-    )
-  }
+  // const Apy = ({ className }) => {
+  //   return (
+  //     <div className={`relative max-w-[37.5rem] lg:max-w-none ${className}`}>
+  //       <Stars className="hidden h-auto w-full lg:block" />
+  //       <div className="font-glitch-all bg-moshed2 bg-cover bg-clip-text text-[3rem] leading-none text-transparent lg:absolute lg:top-1/2 lg:left-0 lg:right-0 lg:-translate-y-1/2 lg:text-center lg:text-[5rem]">
+  //         <div>APY 29.9%</div>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   return (
     <Layout>
@@ -63,107 +42,112 @@ const RewardsPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mb-4 pt-6 md:mb-10 md:flex md:justify-between lg:pt-16">
+        <div className="mb-space-8 pt-space-5 md:flex md:justify-between md:pt-space-6 lg:pt-space-7">
           <div>
-            <BoxTitle text={t('Develop')} />
-            <h1 className="title-m font-glitched md:title-l mb-4 mt-4 max-w-[48rem] md:mb-12">
+            <Tag className="mb-space-4">
+              <Trans t={t}>Develop</Trans>
+            </Tag>
+            <h1 className="heading-l mb-space-8">
               <Trans t={t}>Rewards</Trans>
             </h1>
-            <LeadingLine className="!mb-0">
+            <div className="body-xl">
               <Trans t={t}>
                 Rewards are paid out from the treasury at the end of an epoch.
               </Trans>
-            </LeadingLine>
+            </div>
           </div>
           <div>
-            <LinkCta
+            <Button
+              variant="secondary"
               to="https://token.vega.xyz/rewards"
-              className="mt-2 md:mt-0"
+              className="mt-space-2 md:mt-0"
             >
               <Trans t={t}>Rewards I've earned</Trans>
-            </LinkCta>
+            </Button>
           </div>
         </div>
         <EpochCountdown />
         <RewardFees />
-        <div className="max-w-[43.75rem] text-[1.3125rem] text-vega-grey">
-          <Trans t={t}>
-            Any Vega network participant with assets can use the rewards
-            functionality to incentivise behaviours they would like to see in a
-            market for trading, liquidity provision.
-          </Trans>{' '}
-          <LinkCta
+        <div className="body-l max-w-[47.5rem]">
+          <div className="text-vega-light-400 dark:text-vega-dark-400">
+            <Trans t={t}>
+              Any Vega network participant with assets can use the rewards
+              functionality to incentivise behaviours they would like to see in
+              a market for trading, liquidity provision.
+            </Trans>{' '}
+          </div>
+          <Button
+            variant="secondary"
+            className="mt-space-2"
             to="https://docs.fairground.vega.xyz/docs/trading-questions/#trading-rewards"
-            className="text-black dark:text-white"
           >
             <Trans t={t}>Create your own reward</Trans>
-          </LinkCta>
+          </Button>
         </div>
 
-        <div className="my-16 rounded-lg border border-vega-light-200 bg-vega-light-100 p-6 dark:border-vega-dark-200 dark:bg-vega-dark-100 md:my-20 md:flex md:flex-row md:gap-x-6">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-            <div>
-              <div className="text-[1.5rem]">
-                <Trans t={t}>Staking rewards</Trans>
-              </div>
-              <p className="mb-4 text-vega-mid-grey lg:mb-6">
-                <Trans t={t}>
-                  Nominate a validator and earn treasury rewards for each full
-                  epoch staked, as well as a share of trading fees.
-                </Trans>
-              </p>
-              {/* <Apy className="lg:hidden max-w-[17.75rem] mb-6" /> */}
-              <div className="grid grid-cols-1 gap-6 md:flex md:items-center md:gap-6">
-                <div>
-                  <UIButton to="https://token.vega.xyz/">
-                    <Trans t={t}>Staking</Trans>
-                  </UIButton>
-                </div>
-                <UIButton
-                  variant="secondary"
-                  to="https://console.fairground.wtf/"
-                >
-                  <Trans t={t}>Become a validator</Trans>
-                </UIButton>
-              </div>
+        <div className="my-space-10 rounded-lg border border-vega-light-200 bg-vega-light-100 p-space-5 dark:border-vega-dark-200 dark:bg-vega-dark-100 md:my-space-11 md:flex md:flex-row md:gap-x-6">
+          <div>
+            <div className="body-xl mb-space-3">
+              <Trans t={t}>Staking rewards</Trans>
             </div>
-            {/* <Apy className="hidden lg:block" /> */}
+            <p className="body-l text-vega-light-300 dark:text-vega-dark-300">
+              <Trans t={t}>
+                Nominate a validator and earn treasury rewards for each full
+                epoch staked, as well as a share of trading fees.
+              </Trans>
+            </p>
+            {/* <Apy className="lg:hidden max-w-[17.75rem] mb-6" /> */}
+            <div className="mt-space-5 grid grid-cols-1 gap-6 md:flex md:items-center md:gap-6">
+              <div>
+                <Button to="https://token.vega.xyz/">
+                  <Trans t={t}>Staking</Trans>
+                </Button>
+              </div>
+              <Button variant="secondary" to="https://console.fairground.wtf/">
+                <Trans t={t}>Become a validator</Trans>
+              </Button>
+            </div>
           </div>
+          {/* <Apy className="hidden lg:block" /> */}
         </div>
 
-        <div className="my-16 md:my-20">
-          <h2 className="title-m font-glitched md:title-l mb-4 mt-4 max-w-[48rem] md:mb-12">
-            <Trans t={t}>Incentives and Bounties</Trans>
-          </h2>
-          <div className="my-10 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-8">
-            <Card
-              image={getImage(data.iconBounties)}
-              title={t('Bounties')}
-              text={t(
-                'Participate in developer bounties and get rewarded for your commitment.'
-              )}
-              link="https://github.com/vegaprotocol/bounties/"
-              buttonText={t('Bounties')}
-            />
-            <Card
-              image={getImage(data.iconSecurity)}
-              title={t('Security issues')}
-              text={t(
-                'Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.'
-              )}
-              link="/bug-bounties"
-              buttonText={t('Report a security issue')}
-            />
-            <Card
-              image={getImage(data.iconFairground)}
-              title={t('Fairground incentives')}
-              text={t(
-                "Earn rewards for helping to find bugs and battle harden Vega's Testnet."
-              )}
-              link="https://fairground.wtf/"
-              buttonText={t('Fairground')}
-            />
-          </div>
+        <h2 className="heading-l mb-space-9 max-w-[48rem]">
+          <Trans t={t}>Incentives and Bounties</Trans>
+        </h2>
+        <div className="mb-space-10 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-8">
+          <GenericTile
+            image={getImage(data.iconBounties)}
+            title={t('Bounties')}
+            description={t(
+              'Participate in developer bounties and get rewarded for your commitment.'
+            )}
+            link={{
+              to: 'https://github.com/vegaprotocol/bounties/',
+              title: t('Bounties'),
+            }}
+          />
+          <GenericTile
+            image={getImage(data.iconSecurity)}
+            title={t('Security issues')}
+            description={t(
+              'Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.'
+            )}
+            link={{
+              to: '/bug-bounties',
+              title: t('Report a security issue'),
+            }}
+          />
+          <GenericTile
+            image={getImage(data.iconFairground)}
+            title={t('Fairground incentives')}
+            description={t(
+              "Earn rewards for helping to find bugs and battle harden Vega's Testnet."
+            )}
+            link={{
+              to: 'https://fairground.wtf/',
+              title: t('Fairground'),
+            }}
+          />
         </div>
       </Container>
     </Layout>
