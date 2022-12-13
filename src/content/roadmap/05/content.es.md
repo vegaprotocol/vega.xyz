@@ -1,5 +1,5 @@
 ---
-step_title: H2 2023
+step_title: 2023 H2
 title: Version 2 Mainnet
 ---
 

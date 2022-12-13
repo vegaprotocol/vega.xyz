@@ -5,3 +5,11 @@ export const SnakeToCamel = (str) => {
 export const routeThroughInterstitialPage = (url) => {
   return `/external-link/?url=${encodeURIComponent(url)}`
 }
+
+export const addLineBreakIfTwoWords = (str) => {
+  if (str.split(' ').length === 2) {
+    return str.replace(' ', '<br>')
+  } else {
+    return str
+  }
+}

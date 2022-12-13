@@ -95,7 +95,6 @@ a {
     /* 15px */
     @apply text-[0.9375rem];
     @apply leading-[1.4];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -103,7 +102,6 @@ a {
     /* 18px */
     @apply text-[1.125rem];
     @apply leading-[1.4];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -111,7 +109,6 @@ a {
     /* 24px */
     @apply text-[1.5rem];
     @apply leading-[1.4];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -127,7 +124,6 @@ a {
     /* 54px */
     @apply text-[3.375rem];
     @apply leading-[1.1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -135,7 +131,6 @@ a {
     /* 72px */
     @apply text-[4.5rem];
     @apply leading-[1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -143,7 +138,6 @@ a {
     /* 84px */
     @apply text-[5.25rem];
     @apply leading-[1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -151,7 +145,6 @@ a {
     /* 114px */
     @apply text-[7.125rem];
     @apply leading-[1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -159,7 +152,6 @@ a {
     /* 144px */
     @apply text-[9rem];
     @apply leading-[1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -272,7 +264,6 @@ a {
     @apply leading-[88%];
     @apply uppercase;
     @apply lg:text-[1.5rem];
-    @apply my-[2rem];
   }
 
   .heading-m {

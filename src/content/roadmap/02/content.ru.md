@@ -1,5 +1,5 @@
 ---
-step_title: H1 2022
+step_title: 2022 H1
 title: Restricted Mainnet
 ---
 

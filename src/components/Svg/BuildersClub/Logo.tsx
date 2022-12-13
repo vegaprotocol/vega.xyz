@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Logo = ({ className }) => {
   return (
@@ -8,9 +8,9 @@ const Logo = ({ className }) => {
       viewBox="0 0 362 162"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className ? className : ""}
+      className={className ? className : ''}
     >
-      <g clip-path="url(#clip0_1181_39009)">
+      <g clipPath="url(#clip0_1181_39009)">
         <path
           d="M215.647 160.72H200.354V145.384H215.647V160.72Z"
           fill="#5A20FF"
@@ -65,6 +65,6 @@ const Logo = ({ className }) => {
         />
       </g>
     </svg>
-  );
-};
-export default Logo;
+  )
+}
+export default Logo
