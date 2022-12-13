@@ -22,7 +22,7 @@ const BlockD = (props) => {
                   <Trans t={t}>Coming soon</Trans>
                 </div>
               )}
-              <h2 className="title-m md:title-l max-w-[40rem] break-words pb-6">
+              <h2 className="title-m md:title-l max-w-[40rem] break-words pb-space-4">
                 {props.title}
               </h2>
             </div>
