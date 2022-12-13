@@ -727,6 +727,7 @@ type FileFieldsEnum =
   | 'childJson.Choose__create_a_new_wallet__in_the_app'
   | 'childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childJson.Closed_on_'
+  | 'childJson.Coming_soon'
   | 'childJson.Community'
   | 'childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childJson.Community_curation_of_markets'
@@ -1435,6 +1436,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Choose__create_a_new_wallet__in_the_app'
   | 'childTools.icon.childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childTools.icon.childJson.Closed_on_'
+  | 'childTools.icon.childJson.Coming_soon'
   | 'childTools.icon.childJson.Community'
   | 'childTools.icon.childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childTools.icon.childJson.Community_curation_of_markets'
@@ -1941,6 +1943,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'childTools.icon.childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childTools.icon.childrenJson.Closed_on_'
+  | 'childTools.icon.childrenJson.Coming_soon'
   | 'childTools.icon.childrenJson.Community'
   | 'childTools.icon.childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childTools.icon.childrenJson.Community_curation_of_markets'
@@ -2584,6 +2587,7 @@ type FileFieldsEnum =
   | 'childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childrenJson.Closed_on_'
+  | 'childrenJson.Coming_soon'
   | 'childrenJson.Community'
   | 'childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childrenJson.Community_curation_of_markets'
@@ -3295,6 +3299,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Choose__create_a_new_wallet__in_the_app'
   | 'childrenTools.icon.childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childrenTools.icon.childJson.Closed_on_'
+  | 'childrenTools.icon.childJson.Coming_soon'
   | 'childrenTools.icon.childJson.Community'
   | 'childrenTools.icon.childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childrenTools.icon.childJson.Community_curation_of_markets'
@@ -3801,6 +3806,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'childrenTools.icon.childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childrenTools.icon.childrenJson.Closed_on_'
+  | 'childrenTools.icon.childrenJson.Coming_soon'
   | 'childrenTools.icon.childrenJson.Community'
   | 'childrenTools.icon.childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childrenTools.icon.childrenJson.Community_curation_of_markets'
@@ -5380,6 +5386,7 @@ type Json = Node & {
   readonly Choose__create_a_new_wallet__in_the_app: Maybe<Scalars['String']>;
   readonly Choose_the_digital_asset_for_collateral_or_settlements_: Maybe<Scalars['String']>;
   readonly Closed_on_: Maybe<Scalars['String']>;
+  readonly Coming_soon: Maybe<Scalars['String']>;
   readonly Community: Maybe<Scalars['String']>;
   readonly Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_: Maybe<Scalars['String']>;
   readonly Community_curation_of_markets: Maybe<Scalars['String']>;
@@ -5903,6 +5910,7 @@ type JsonFieldsEnum =
   | 'Choose__create_a_new_wallet__in_the_app'
   | 'Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'Closed_on_'
+  | 'Coming_soon'
   | 'Community'
   | 'Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'Community_curation_of_markets'
@@ -6469,6 +6477,7 @@ type JsonFilterInput = {
   readonly Choose__create_a_new_wallet__in_the_app: InputMaybe<StringQueryOperatorInput>;
   readonly Choose_the_digital_asset_for_collateral_or_settlements_: InputMaybe<StringQueryOperatorInput>;
   readonly Closed_on_: InputMaybe<StringQueryOperatorInput>;
+  readonly Coming_soon: InputMaybe<StringQueryOperatorInput>;
   readonly Community: InputMaybe<StringQueryOperatorInput>;
   readonly Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_: InputMaybe<StringQueryOperatorInput>;
   readonly Community_curation_of_markets: InputMaybe<StringQueryOperatorInput>;
@@ -7414,6 +7423,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Choose__create_a_new_wallet__in_the_app'
   | 'frontmatter.featuredImage.childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'frontmatter.featuredImage.childJson.Closed_on_'
+  | 'frontmatter.featuredImage.childJson.Coming_soon'
   | 'frontmatter.featuredImage.childJson.Community'
   | 'frontmatter.featuredImage.childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'frontmatter.featuredImage.childJson.Community_curation_of_markets'
@@ -7920,6 +7930,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'frontmatter.featuredImage.childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'frontmatter.featuredImage.childrenJson.Closed_on_'
+  | 'frontmatter.featuredImage.childrenJson.Coming_soon'
   | 'frontmatter.featuredImage.childrenJson.Community'
   | 'frontmatter.featuredImage.childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'frontmatter.featuredImage.childrenJson.Community_curation_of_markets'
@@ -12011,6 +12022,7 @@ type Query_jsonArgs = {
   Choose__create_a_new_wallet__in_the_app: InputMaybe<StringQueryOperatorInput>;
   Choose_the_digital_asset_for_collateral_or_settlements_: InputMaybe<StringQueryOperatorInput>;
   Closed_on_: InputMaybe<StringQueryOperatorInput>;
+  Coming_soon: InputMaybe<StringQueryOperatorInput>;
   Community: InputMaybe<StringQueryOperatorInput>;
   Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_: InputMaybe<StringQueryOperatorInput>;
   Community_curation_of_markets: InputMaybe<StringQueryOperatorInput>;
@@ -14590,6 +14602,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Choose__create_a_new_wallet__in_the_app'
   | 'icon.childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'icon.childJson.Closed_on_'
+  | 'icon.childJson.Coming_soon'
   | 'icon.childJson.Community'
   | 'icon.childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'icon.childJson.Community_curation_of_markets'
@@ -15254,6 +15267,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'icon.childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'icon.childrenJson.Closed_on_'
+  | 'icon.childrenJson.Coming_soon'
   | 'icon.childrenJson.Community'
   | 'icon.childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'icon.childrenJson.Community_curation_of_markets'
