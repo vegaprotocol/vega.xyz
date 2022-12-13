@@ -1,59 +1,59 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import TranslationsBanner from "../../components/TranslationsBanner";
-import Container from "../../components/Container";
-import Seo from "../../components/Seo";
-import BoxTitle from "../../components/BoxTitle";
-import Sticky from "react-stickynode";
-import GlitchTitle from "../../components/GlitchTitle";
-import CalloutHero from "../../components/CalloutHero";
-import LeadingLine from "../../components/LeadingLine";
-import ScrollSpy from "react-scrollspy";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-import PurposeBuiltBlock from "../../components/KeyConcepts/Blocks/PurposeBuilt";
-import TextLink from "../../components/TextLink";
-import BlockA from "../../components/KeyConcepts/Blocks/BlockA";
-import BlockB from "../../components/KeyConcepts/Blocks/BlockB";
-import BlockC from "../../components/KeyConcepts/Blocks/BlockC";
-import BlockD from "../../components/KeyConcepts/Blocks/BlockD";
-import HighCapitalEfficiencyDiagram from "../../components/KeyConcepts/Diagrams/HighCapitalEfficiencyDiagram";
-import PseudononymousTradingDiagramResponsive from "../../components/KeyConcepts/Diagrams/PseudononymousTradingDiagram/Responsive";
-import EfficientPriceDiscoveryDiagramResponsive from "../../components/KeyConcepts/Diagrams/EfficientPriceDiscoveryDiagram/Responsive";
-import CommunityCurationOfMarketsDiagramResponsive from "../../components/KeyConcepts/Diagrams/CommunityCurationOfMarketsDiagram/Responsive";
-import FrontRunningProtectionDiagramResponsive from "../../components/KeyConcepts/Diagrams/FrontRunningProtectionDiagram/Responsive";
-import PermissionlessMarketCreationDiagram from "../../components/KeyConcepts/Diagrams/PermissionlessMarketCreationDiagram/Responsive";
-import MarketMakingDiagram from "../../components/KeyConcepts/Diagrams/MarketMakingDiagram/Responsive";
-import PeggedOrdersDiagram from "../../components/KeyConcepts/Diagrams/PeggedOrdersDiagram/Responsive";
-import DecentralisedNetworkDiagram from "../../components/KeyConcepts/Diagrams/DecentralisedNetworkDiagram";
-import CrossChainSupportDiagramResponsive from "../../components/KeyConcepts/Diagrams/CrossChainSupportDiagram/Responsive";
-import ScalableDefiInfrastructureDiagramResponsive from "../../components/KeyConcepts/Diagrams/ScalableDefiInfrastructureDiagram/Responsive";
-import NoGasFeesDiagramResponsive from "../../components/KeyConcepts/Diagrams/NoGasFeesDiagram/Responsive";
-import DynamicMarginsDiagramResponsive from "../../components/KeyConcepts/Diagrams/DynamicMarginsDiagram/Responsive";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../../components/Layout'
+import TranslationsBanner from '../../components/TranslationsBanner'
+import Container from '../../components/Container'
+import Seo from '../../components/Seo'
+import BoxTitle from '../../components/BoxTitle'
+import Sticky from 'react-stickynode'
+import GlitchTitle from '../../components/GlitchTitle'
+import CalloutHero from '../../components/CalloutHero'
+import LeadingLine from '../../components/LeadingLine'
+import ScrollSpy from 'react-scrollspy'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import PurposeBuiltBlock from '../../components/KeyConcepts/Blocks/PurposeBuilt'
+import TextLink from '../../components/TextLink'
+import BlockA from '../../components/KeyConcepts/Blocks/BlockA'
+import BlockB from '../../components/KeyConcepts/Blocks/BlockB'
+import BlockC from '../../components/KeyConcepts/Blocks/BlockC'
+import BlockD from '../../components/KeyConcepts/Blocks/BlockD'
+import HighCapitalEfficiencyDiagram from '../../components/KeyConcepts/Diagrams/HighCapitalEfficiencyDiagram'
+import PseudononymousTradingDiagramResponsive from '../../components/KeyConcepts/Diagrams/PseudononymousTradingDiagram/Responsive'
+import EfficientPriceDiscoveryDiagramResponsive from '../../components/KeyConcepts/Diagrams/EfficientPriceDiscoveryDiagram/Responsive'
+import CommunityCurationOfMarketsDiagramResponsive from '../../components/KeyConcepts/Diagrams/CommunityCurationOfMarketsDiagram/Responsive'
+import FrontRunningProtectionDiagramResponsive from '../../components/KeyConcepts/Diagrams/FrontRunningProtectionDiagram/Responsive'
+import PermissionlessMarketCreationDiagram from '../../components/KeyConcepts/Diagrams/PermissionlessMarketCreationDiagram/Responsive'
+import MarketMakingDiagram from '../../components/KeyConcepts/Diagrams/MarketMakingDiagram/Responsive'
+import PeggedOrdersDiagram from '../../components/KeyConcepts/Diagrams/PeggedOrdersDiagram/Responsive'
+import DecentralisedNetworkDiagram from '../../components/KeyConcepts/Diagrams/DecentralisedNetworkDiagram'
+import CrossChainSupportDiagramResponsive from '../../components/KeyConcepts/Diagrams/CrossChainSupportDiagram/Responsive'
+import ScalableDefiInfrastructureDiagramResponsive from '../../components/KeyConcepts/Diagrams/ScalableDefiInfrastructureDiagram/Responsive'
+import NoGasFeesDiagramResponsive from '../../components/KeyConcepts/Diagrams/NoGasFeesDiagram/Responsive'
+import DynamicMarginsDiagramResponsive from '../../components/KeyConcepts/Diagrams/DynamicMarginsDiagram/Responsive'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const KeyConceptsPage = () => {
-  const { i18n, t } = useTranslation("page.key-concepts");
-  const [missingTranslations, setMissingTranslations] = useState(false);
+  const { i18n, t } = useTranslation('page.key-concepts')
+  const [missingTranslations, setMissingTranslations] = useState(false)
 
-  i18n.on("missingKey", (lng) => {
-    setMissingTranslations(true);
-  });
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   const sections = [
     {
-      title: "Be as good as CeFi",
-      hash: "good",
+      title: 'Be as good as CeFi',
+      hash: 'good',
     },
     {
-      title: "Be better than CeFi",
-      hash: "better",
+      title: 'Be better than CeFi',
+      hash: 'better',
     },
     {
-      title: "Help DeFi mature",
-      hash: "mature",
+      title: 'Help DeFi mature',
+      hash: 'mature',
     },
-  ];
+  ]
 
   // t('Be as good as CeFi')
   // t('Be better than CeFi')
@@ -62,9 +62,9 @@ const KeyConceptsPage = () => {
   return (
     <Layout stickyHeader={false}>
       <Seo
-        title={t("Key Vega Concepts")}
+        title={t('Key Vega Concepts')}
         description={t(
-          "Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative."
+          'Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
@@ -72,22 +72,22 @@ const KeyConceptsPage = () => {
         <Container>
           <div className="my-10">
             <CalloutHero
-              title={t("The Vega mainnet is live, trading launch H2 2022")}
+              title={t('The Vega mainnet is live, trading launch H2 2022')}
               text={t(
-                "Token holders can participate in governance, stake and delegate."
+                'Token holders can participate in governance, stake and delegate.'
               )}
-              buttonText={t("View the Roadmap")}
+              buttonText={t('View the Roadmap')}
               buttonLink="/#roadmap"
             />
           </div>
         </Container>
-        <div className="max-w-[45rem] px-4 md:px-0 xl:max-w-[50rem] mx-auto text-center">
+        <div className="mx-auto max-w-[45rem] px-4 text-center md:px-0 xl:max-w-[50rem]">
           <h1 className="mb-6">
-            <BoxTitle text={t("Key concepts")} />
+            <BoxTitle text={t('Key concepts')} />
           </h1>
           <GlitchTitle
             level="2"
-            className="mb-6 title-m md:title-l xl:title-xl px-3"
+            className="title-m md:title-l xl:title-xl mb-6 px-3"
           >
             <Trans t={t}>What makes Vega different</Trans>
           </GlitchTitle>
@@ -100,7 +100,7 @@ const KeyConceptsPage = () => {
           </LeadingLine>
         </div>
         <Container>
-          <div className="relative max-w-[26.25rem] mt-4 pt-[10.5rem] mx-auto text-center after:content-[''] after:absolute after:w-px dark:after:bg-white after:bg-black after:top-0 after:h-[8rem] after:left-1/2">
+          <div className="relative mx-auto mt-4 max-w-[26.25rem] pt-[10.5rem] text-center after:absolute after:top-0 after:left-1/2 after:h-[8rem] after:w-px after:bg-black after:content-[''] dark:after:bg-white">
             <h2 className="title-m mb-6">
               <Trans t={t}>Vega is designed to:</Trans>
             </h2>
@@ -109,16 +109,16 @@ const KeyConceptsPage = () => {
         <div className="relative z-30">
           <Sticky enabled={true}>
             <div className="bg-white dark:bg-black">
-              <div className="mx-auto border-b overflow-x-scroll whitespace-nowrap md:whitespace-normal overflow-y-hidden border-vega-mid-grey md:flex md:justify-center md:gap-x-8 px-6 md:px-0">
+              <div className="mx-auto overflow-y-hidden overflow-x-scroll whitespace-nowrap border-b border-vega-mid-grey px-6 md:flex md:justify-center md:gap-x-8 md:whitespace-normal md:px-0">
                 <ScrollSpy
-                  items={["good", "better", "mature"]}
+                  items={['good', 'better', 'mature']}
                   currentClassName="border-b-current"
                   offset={-120}
                 >
                   {sections.map((section, index) => (
                     <AnchorLink
                       key={index}
-                      className={`inline-block text-center md:w-[13rem] title-s relative bottom-[-1px] last:mr-0 py-2 px-4 text-lg leading-7 border-t-4 border-b-4 hover:border-b-current border-transparent`}
+                      className={`title-s relative bottom-[-1px] inline-block border-t-4 border-b-4 border-transparent py-2 px-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current md:w-[13rem]`}
                       to={`/key-concepts/#${section.hash}`}
                       title={t(section.title)}
                       stripHash
@@ -135,8 +135,9 @@ const KeyConceptsPage = () => {
           <PurposeBuiltBlock />
 
           <BlockD
-            title={t("Anti front-running")}
+            title={t('Anti front-running')}
             diagram={<FrontRunningProtectionDiagramResponsive />}
+            comingSoon
           >
             <p>
               <Trans t={t} i18key="Vega's pre-protocol widget">
@@ -159,8 +160,8 @@ const KeyConceptsPage = () => {
                   className="inline-block"
                 >
                   'Wendy, the Good Little Fairness Widget'
-                </TextLink>{" "}
-                and{" "}
+                </TextLink>{' '}
+                and{' '}
                 <TextLink
                   to="https://vega.xyz/papers/Wendy_Grows_Up.pdf"
                   className="inline-block"
@@ -171,13 +172,13 @@ const KeyConceptsPage = () => {
             </p>
             <p className="text-base">
               <Trans t={t}>
-                Or try out the{" "}
+                Or try out the{' '}
                 <TextLink
                   to="https://github.com/vegaprotocol/wendy/"
                   className="inline-block"
                 >
                   Wendy prototype
-                </TextLink>{" "}
+                </TextLink>{' '}
                 on a simulated network
               </Trans>
             </p>
@@ -185,7 +186,7 @@ const KeyConceptsPage = () => {
         </div>
         <div id="better">
           <BlockD
-            title={t("Permissionless market creation")}
+            title={t('Permissionless market creation')}
             diagram={<PermissionlessMarketCreationDiagram />}
           >
             <p>
@@ -198,7 +199,7 @@ const KeyConceptsPage = () => {
           </BlockD>
 
           <BlockD
-            title={t("Built-in liquidity incentives")}
+            title={t('Built-in liquidity incentives')}
             diagram={<MarketMakingDiagram />}
           >
             <p>
@@ -213,7 +214,7 @@ const KeyConceptsPage = () => {
           </BlockD>
 
           <BlockA
-            title={t("Optimised for high capital efficiency")}
+            title={t('Optimised for high capital efficiency')}
             diagram={<HighCapitalEfficiencyDiagram />}
           >
             <p>
@@ -243,7 +244,7 @@ const KeyConceptsPage = () => {
             </div>
             <p className="text-base">
               <Trans t={t}>
-                High capital efficiency in section 3 of the Vega blog{" "}
+                High capital efficiency in section 3 of the Vega blog{' '}
                 <TextLink
                   to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
                   className="inline-block"
@@ -267,7 +268,7 @@ const KeyConceptsPage = () => {
           </BlockA>
 
           <BlockB
-            title={t("Efficient Price Discovery")}
+            title={t('Efficient Price Discovery')}
             diagram={<EfficientPriceDiscoveryDiagramResponsive />}
           >
             <p>
@@ -292,7 +293,7 @@ const KeyConceptsPage = () => {
             <p className="text-base">
               <Trans t={t}>
                 Different methods of price discovery in section 5 of the Vega
-                blog{" "}
+                blog{' '}
                 <TextLink
                   to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
                   className="inline-block"
@@ -304,7 +305,7 @@ const KeyConceptsPage = () => {
           </BlockB>
 
           <BlockC
-            title={t("Pseudonymous trading")}
+            title={t('Pseudonymous trading')}
             diagram={<PseudononymousTradingDiagramResponsive />}
           >
             <p>
@@ -320,7 +321,7 @@ const KeyConceptsPage = () => {
             <p className="text-base">
               <Trans t={t}>
                 The risk considerations behind pseudonymous environments and
-                Vega's protective measures in the Vega{" "}
+                Vega's protective measures in the Vega{' '}
                 <TextLink
                   to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
                   className="inline-block"
@@ -332,7 +333,7 @@ const KeyConceptsPage = () => {
           </BlockC>
 
           <BlockD
-            title={t("Community curation of markets")}
+            title={t('Community curation of markets')}
             diagram={<CommunityCurationOfMarketsDiagramResponsive />}
           >
             <p>
@@ -350,7 +351,7 @@ const KeyConceptsPage = () => {
             </div>
             <p className="text-base">
               <Trans t={t}>
-                Market curation in section 3.4 of the Vega{" "}
+                Market curation in section 3.4 of the Vega{' '}
                 <TextLink
                   to="https://vega.xyz/papers/vega-protocol-whitepaper.pdf"
                   className="inline-block"
@@ -362,7 +363,7 @@ const KeyConceptsPage = () => {
           </BlockD>
 
           <BlockD
-            title={t("Dynamic margins with cross margining")}
+            title={t('Dynamic margins with cross margining')}
             diagram={<DynamicMarginsDiagramResponsive />}
           >
             <p>
@@ -380,7 +381,7 @@ const KeyConceptsPage = () => {
             </div>
             <p className="text-base">
               <Trans t={t}>
-                Cross margining in the Vega blog{" "}
+                Cross margining in the Vega blog{' '}
                 <TextLink
                   to="https://blog.vega.xyz/credit-risk-and-margins-on-vega-e72bbac06723"
                   className="inline-block"
@@ -391,7 +392,7 @@ const KeyConceptsPage = () => {
             </p>
             <p className="text-base">
               <Trans t={t}>
-                Automated cross margining in section 3 of the Vega blog{" "}
+                Automated cross margining in section 3 of the Vega blog{' '}
                 <TextLink
                   to="https://blog.vega.xyz/why-vega-is-compelling-to-pro-traders-bd6fc3af2be2"
                   className="inline-block"
@@ -403,7 +404,7 @@ const KeyConceptsPage = () => {
           </BlockD>
 
           <BlockD
-            title={t("Pegged orders for automated order management")}
+            title={t('Pegged orders for automated order management')}
             diagram={<PeggedOrdersDiagram />}
           >
             <p>
@@ -421,7 +422,7 @@ const KeyConceptsPage = () => {
             </div>
             <p className="text-base">
               <Trans t={t}>
-                Pegged orders for automated management in the Vega blog{" "}
+                Pegged orders for automated management in the Vega blog{' '}
                 <TextLink
                   to="https://blog.vega.xyz/pegged-orders-on-vega-d78e55c17bb5"
                   className="inline-block"
@@ -433,7 +434,7 @@ const KeyConceptsPage = () => {
           </BlockD>
 
           <BlockB
-            title={t("Completely decentralised network")}
+            title={t('Completely decentralised network')}
             diagram={<DecentralisedNetworkDiagram />}
             diagramPosition="right"
           >
@@ -453,7 +454,7 @@ const KeyConceptsPage = () => {
           </BlockB>
 
           <BlockD
-            title={t("No gas fees on trading")}
+            title={t('No gas fees on trading')}
             diagram={<NoGasFeesDiagramResponsive />}
           >
             <p>
@@ -471,7 +472,7 @@ const KeyConceptsPage = () => {
             <p className="text-base">
               <Trans t={t}>
                 Gas fees under 'Miner extractable value (MEV) on blockchains' on
-                the blog{" "}
+                the blog{' '}
                 <TextLink
                   to="https://medium.com/greenfield-one/vega-protocol-fair-access-to-efficient-resilient-derivatives-markets-dba11fe281aa"
                   className="inline-block"
@@ -484,7 +485,7 @@ const KeyConceptsPage = () => {
         </div>
         <div id="mature">
           <BlockD
-            title={t("Cross chain support")}
+            title={t('Cross chain support')}
             diagram={<CrossChainSupportDiagramResponsive />}
             diagramFlush={true}
           >
@@ -514,7 +515,7 @@ const KeyConceptsPage = () => {
           </BlockD>
 
           <BlockD
-            title={t("Scalable DeFi infrastructure")}
+            title={t('Scalable DeFi infrastructure')}
             diagram={<ScalableDefiInfrastructureDiagramResponsive />}
           >
             <p>
@@ -538,10 +539,10 @@ const KeyConceptsPage = () => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default KeyConceptsPage;
+export default KeyConceptsPage
 
 export const query = graphql`
   query ($language: String!) {
@@ -555,4 +556,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
