@@ -6,12 +6,13 @@ import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import EpochCountdown from '../../components/EpochCountdown'
 import RewardFees from '../../components/RewardFees'
+import Stars from '../../components/Svg/Stars'
 import Button from '../../components/UI/Button'
 import Tag from '../../components/UI/Tag'
 import GenericTile from '../../components/UI/GenericTile'
-//import Stars from '../../components/Svg/Stars'
 import { getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { useStakingApy } from '../../hooks/use-staking-apy'
 
 const RewardsPage = ({ data }) => {
   const { t, i18n } = useTranslation('page.rewards')
@@ -21,16 +22,24 @@ const RewardsPage = ({ data }) => {
     setMissingTranslations(true)
   })
 
-  // const Apy = ({ className }) => {
-  //   return (
-  //     <div className={`relative max-w-[37.5rem] lg:max-w-none ${className}`}>
-  //       <Stars className="hidden h-auto w-full lg:block" />
-  //       <div className="font-glitch-all bg-moshed2 bg-cover bg-clip-text text-[3rem] leading-none text-transparent lg:absolute lg:top-1/2 lg:left-0 lg:right-0 lg:-translate-y-1/2 lg:text-center lg:text-[5rem]">
-  //         <div>APY 29.9%</div>
-  //       </div>
-  //     </div>
-  //   )
-  // }
+  const {
+    loading: loadingApy,
+    data: dataApy,
+    error: errorApy,
+  } = useStakingApy()
+
+  const Apy = ({ className }) => {
+    return (
+      <div className={`relative max-w-[37.5rem] lg:max-w-none ${className}`}>
+        <Stars className="hidden h-auto w-full lg:block" />
+        <div className="font-glitch-all bg-moshed2 bg-cover bg-clip-text bg-center text-[3rem] leading-[0.9] text-transparent lg:absolute lg:top-1/2 lg:left-0 lg:right-0 lg:-translate-y-1/2 lg:text-center lg:text-[4rem]">
+          {loadingApy && <div>Loading...</div>}
+          {dataApy && <div>APY {dataApy}%</div>}
+          {errorApy && <div>APY Error</div>}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <Layout>
@@ -96,7 +105,7 @@ const RewardsPage = ({ data }) => {
                 epoch staked, as well as a share of trading fees.
               </Trans>
             </p>
-            {/* <Apy className="lg:hidden max-w-[17.75rem] mb-6" /> */}
+            <Apy className="mt-6 max-w-[17.75rem] lg:hidden" />
             <div className="mt-space-5 grid grid-cols-1 gap-6 md:flex md:items-center md:gap-6">
               <div>
                 <Button to="https://token.vega.xyz/">
@@ -108,7 +117,7 @@ const RewardsPage = ({ data }) => {
               </Button>
             </div>
           </div>
-          {/* <Apy className="hidden lg:block" /> */}
+          <Apy className="hidden lg:block" />
         </div>
 
         <h2 className="heading-l mb-space-9 max-w-[48rem]">
