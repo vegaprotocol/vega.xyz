@@ -15,7 +15,11 @@ const Layout = ({ children, stickyHeader = true }) => {
         <div className="flex min-h-screen flex-col">
           <div className="grow">
             <Header sticky={stickyHeader} />
-            <div className="mt-[4.8125rem] md:mt-[6.25rem]">{children}</div>
+            <div
+              className={stickyHeader ? 'mt-[4.8125rem] md:mt-[6.25rem]' : ''}
+            >
+              {children}
+            </div>
           </div>
           <Footer />
         </div>

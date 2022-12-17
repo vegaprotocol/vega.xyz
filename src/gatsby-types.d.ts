@@ -727,6 +727,7 @@ type FileFieldsEnum =
   | 'childJson.Choose__create_a_new_wallet__in_the_app'
   | 'childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childJson.Closed_on_'
+  | 'childJson.Coming_soon'
   | 'childJson.Community'
   | 'childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childJson.Community_curation_of_markets'
@@ -1435,6 +1436,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Choose__create_a_new_wallet__in_the_app'
   | 'childTools.icon.childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childTools.icon.childJson.Closed_on_'
+  | 'childTools.icon.childJson.Coming_soon'
   | 'childTools.icon.childJson.Community'
   | 'childTools.icon.childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childTools.icon.childJson.Community_curation_of_markets'
@@ -1941,6 +1943,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'childTools.icon.childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childTools.icon.childrenJson.Closed_on_'
+  | 'childTools.icon.childrenJson.Coming_soon'
   | 'childTools.icon.childrenJson.Community'
   | 'childTools.icon.childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childTools.icon.childrenJson.Community_curation_of_markets'
@@ -2584,6 +2587,7 @@ type FileFieldsEnum =
   | 'childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childrenJson.Closed_on_'
+  | 'childrenJson.Coming_soon'
   | 'childrenJson.Community'
   | 'childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childrenJson.Community_curation_of_markets'
@@ -3295,6 +3299,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Choose__create_a_new_wallet__in_the_app'
   | 'childrenTools.icon.childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childrenTools.icon.childJson.Closed_on_'
+  | 'childrenTools.icon.childJson.Coming_soon'
   | 'childrenTools.icon.childJson.Community'
   | 'childrenTools.icon.childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childrenTools.icon.childJson.Community_curation_of_markets'
@@ -3801,6 +3806,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'childrenTools.icon.childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'childrenTools.icon.childrenJson.Closed_on_'
+  | 'childrenTools.icon.childrenJson.Coming_soon'
   | 'childrenTools.icon.childrenJson.Community'
   | 'childrenTools.icon.childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'childrenTools.icon.childrenJson.Community_curation_of_markets'
@@ -5380,6 +5386,7 @@ type Json = Node & {
   readonly Choose__create_a_new_wallet__in_the_app: Maybe<Scalars['String']>;
   readonly Choose_the_digital_asset_for_collateral_or_settlements_: Maybe<Scalars['String']>;
   readonly Closed_on_: Maybe<Scalars['String']>;
+  readonly Coming_soon: Maybe<Scalars['String']>;
   readonly Community: Maybe<Scalars['String']>;
   readonly Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_: Maybe<Scalars['String']>;
   readonly Community_curation_of_markets: Maybe<Scalars['String']>;
@@ -5903,6 +5910,7 @@ type JsonFieldsEnum =
   | 'Choose__create_a_new_wallet__in_the_app'
   | 'Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'Closed_on_'
+  | 'Coming_soon'
   | 'Community'
   | 'Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'Community_curation_of_markets'
@@ -6469,6 +6477,7 @@ type JsonFilterInput = {
   readonly Choose__create_a_new_wallet__in_the_app: InputMaybe<StringQueryOperatorInput>;
   readonly Choose_the_digital_asset_for_collateral_or_settlements_: InputMaybe<StringQueryOperatorInput>;
   readonly Closed_on_: InputMaybe<StringQueryOperatorInput>;
+  readonly Coming_soon: InputMaybe<StringQueryOperatorInput>;
   readonly Community: InputMaybe<StringQueryOperatorInput>;
   readonly Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_: InputMaybe<StringQueryOperatorInput>;
   readonly Community_curation_of_markets: InputMaybe<StringQueryOperatorInput>;
@@ -7414,6 +7423,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Choose__create_a_new_wallet__in_the_app'
   | 'frontmatter.featuredImage.childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'frontmatter.featuredImage.childJson.Closed_on_'
+  | 'frontmatter.featuredImage.childJson.Coming_soon'
   | 'frontmatter.featuredImage.childJson.Community'
   | 'frontmatter.featuredImage.childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'frontmatter.featuredImage.childJson.Community_curation_of_markets'
@@ -7920,6 +7930,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'frontmatter.featuredImage.childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'frontmatter.featuredImage.childrenJson.Closed_on_'
+  | 'frontmatter.featuredImage.childrenJson.Coming_soon'
   | 'frontmatter.featuredImage.childrenJson.Community'
   | 'frontmatter.featuredImage.childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'frontmatter.featuredImage.childrenJson.Community_curation_of_markets'
@@ -11662,7 +11673,6 @@ type Query = {
   readonly allSiteFunction: SiteFunctionConnection;
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
-  readonly allStaticImage: StaticImageConnection;
   readonly allTools: ToolsConnection;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
@@ -11680,7 +11690,6 @@ type Query = {
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
-  readonly staticImage: Maybe<StaticImage>;
   readonly tools: Maybe<Tools>;
 };
 
@@ -11810,14 +11819,6 @@ type Query_allSitePluginArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<SitePluginSortInput>;
-};
-
-
-type Query_allStaticImageArgs = {
-  filter: InputMaybe<StaticImageFilterInput>;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-  sort: InputMaybe<StaticImageSortInput>;
 };
 
 
@@ -12011,6 +12012,7 @@ type Query_jsonArgs = {
   Choose__create_a_new_wallet__in_the_app: InputMaybe<StringQueryOperatorInput>;
   Choose_the_digital_asset_for_collateral_or_settlements_: InputMaybe<StringQueryOperatorInput>;
   Closed_on_: InputMaybe<StringQueryOperatorInput>;
+  Coming_soon: InputMaybe<StringQueryOperatorInput>;
   Community: InputMaybe<StringQueryOperatorInput>;
   Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_: InputMaybe<StringQueryOperatorInput>;
   Community_curation_of_markets: InputMaybe<StringQueryOperatorInput>;
@@ -12718,46 +12720,6 @@ type Query_sitePluginArgs = {
   resolve: InputMaybe<StringQueryOperatorInput>;
   ssrAPIs: InputMaybe<StringQueryOperatorInput>;
   version: InputMaybe<StringQueryOperatorInput>;
-};
-
-
-type Query_staticImageArgs = {
-  absolutePath: InputMaybe<StringQueryOperatorInput>;
-  accessTime: InputMaybe<DateQueryOperatorInput>;
-  atime: InputMaybe<DateQueryOperatorInput>;
-  atimeMs: InputMaybe<FloatQueryOperatorInput>;
-  base: InputMaybe<StringQueryOperatorInput>;
-  birthTime: InputMaybe<DateQueryOperatorInput>;
-  birthtime: InputMaybe<DateQueryOperatorInput>;
-  birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  blksize: InputMaybe<IntQueryOperatorInput>;
-  blocks: InputMaybe<IntQueryOperatorInput>;
-  changeTime: InputMaybe<DateQueryOperatorInput>;
-  children: InputMaybe<NodeFilterListInput>;
-  ctime: InputMaybe<DateQueryOperatorInput>;
-  ctimeMs: InputMaybe<FloatQueryOperatorInput>;
-  dev: InputMaybe<IntQueryOperatorInput>;
-  dir: InputMaybe<StringQueryOperatorInput>;
-  ext: InputMaybe<StringQueryOperatorInput>;
-  extension: InputMaybe<StringQueryOperatorInput>;
-  id: InputMaybe<StringQueryOperatorInput>;
-  ino: InputMaybe<IntQueryOperatorInput>;
-  internal: InputMaybe<InternalFilterInput>;
-  mode: InputMaybe<IntQueryOperatorInput>;
-  modifiedTime: InputMaybe<DateQueryOperatorInput>;
-  mtime: InputMaybe<DateQueryOperatorInput>;
-  mtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  name: InputMaybe<StringQueryOperatorInput>;
-  nlink: InputMaybe<IntQueryOperatorInput>;
-  parent: InputMaybe<NodeFilterInput>;
-  prettySize: InputMaybe<StringQueryOperatorInput>;
-  rdev: InputMaybe<IntQueryOperatorInput>;
-  relativeDirectory: InputMaybe<StringQueryOperatorInput>;
-  relativePath: InputMaybe<StringQueryOperatorInput>;
-  root: InputMaybe<StringQueryOperatorInput>;
-  size: InputMaybe<IntQueryOperatorInput>;
-  sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
-  uid: InputMaybe<IntQueryOperatorInput>;
 };
 
 
@@ -13996,366 +13958,6 @@ type SortOrderEnum =
   | 'ASC'
   | 'DESC';
 
-type StaticImage = Node & {
-  readonly absolutePath: Maybe<Scalars['String']>;
-  readonly accessTime: Maybe<Scalars['Date']>;
-  readonly atime: Maybe<Scalars['Date']>;
-  readonly atimeMs: Maybe<Scalars['Float']>;
-  readonly base: Maybe<Scalars['String']>;
-  readonly birthTime: Maybe<Scalars['Date']>;
-  readonly birthtime: Maybe<Scalars['Date']>;
-  readonly birthtimeMs: Maybe<Scalars['Float']>;
-  readonly blksize: Maybe<Scalars['Int']>;
-  readonly blocks: Maybe<Scalars['Int']>;
-  readonly changeTime: Maybe<Scalars['Date']>;
-  readonly children: ReadonlyArray<Node>;
-  readonly ctime: Maybe<Scalars['Date']>;
-  readonly ctimeMs: Maybe<Scalars['Float']>;
-  readonly dev: Maybe<Scalars['Int']>;
-  readonly dir: Maybe<Scalars['String']>;
-  readonly ext: Maybe<Scalars['String']>;
-  readonly extension: Maybe<Scalars['String']>;
-  readonly id: Scalars['ID'];
-  readonly ino: Maybe<Scalars['Int']>;
-  readonly internal: Internal;
-  readonly mode: Maybe<Scalars['Int']>;
-  readonly modifiedTime: Maybe<Scalars['Date']>;
-  readonly mtime: Maybe<Scalars['Date']>;
-  readonly mtimeMs: Maybe<Scalars['Float']>;
-  readonly name: Maybe<Scalars['String']>;
-  readonly nlink: Maybe<Scalars['Int']>;
-  readonly parent: Maybe<Node>;
-  readonly prettySize: Maybe<Scalars['String']>;
-  readonly rdev: Maybe<Scalars['Int']>;
-  readonly relativeDirectory: Maybe<Scalars['String']>;
-  readonly relativePath: Maybe<Scalars['String']>;
-  readonly root: Maybe<Scalars['String']>;
-  readonly size: Maybe<Scalars['Int']>;
-  readonly sourceInstanceName: Maybe<Scalars['String']>;
-  readonly uid: Maybe<Scalars['Int']>;
-};
-
-
-type StaticImage_accessTimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_atimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_birthTimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_birthtimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_changeTimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_ctimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_modifiedTimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_mtimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-type StaticImageConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<StaticImageEdge>;
-  readonly group: ReadonlyArray<StaticImageGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<StaticImage>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type StaticImageConnection_distinctArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageConnection_groupArgs = {
-  field: StaticImageFieldsEnum;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type StaticImageConnection_maxArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageConnection_minArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageConnection_sumArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-type StaticImageEdge = {
-  readonly next: Maybe<StaticImage>;
-  readonly node: StaticImage;
-  readonly previous: Maybe<StaticImage>;
-};
-
-type StaticImageFieldsEnum =
-  | 'absolutePath'
-  | 'accessTime'
-  | 'atime'
-  | 'atimeMs'
-  | 'base'
-  | 'birthTime'
-  | 'birthtime'
-  | 'birthtimeMs'
-  | 'blksize'
-  | 'blocks'
-  | 'changeTime'
-  | 'children'
-  | 'children.children'
-  | 'children.children.children'
-  | 'children.children.children.children'
-  | 'children.children.children.id'
-  | 'children.children.id'
-  | 'children.children.internal.content'
-  | 'children.children.internal.contentDigest'
-  | 'children.children.internal.contentFilePath'
-  | 'children.children.internal.description'
-  | 'children.children.internal.fieldOwners'
-  | 'children.children.internal.ignoreType'
-  | 'children.children.internal.mediaType'
-  | 'children.children.internal.owner'
-  | 'children.children.internal.type'
-  | 'children.children.parent.children'
-  | 'children.children.parent.id'
-  | 'children.id'
-  | 'children.internal.content'
-  | 'children.internal.contentDigest'
-  | 'children.internal.contentFilePath'
-  | 'children.internal.description'
-  | 'children.internal.fieldOwners'
-  | 'children.internal.ignoreType'
-  | 'children.internal.mediaType'
-  | 'children.internal.owner'
-  | 'children.internal.type'
-  | 'children.parent.children'
-  | 'children.parent.children.children'
-  | 'children.parent.children.id'
-  | 'children.parent.id'
-  | 'children.parent.internal.content'
-  | 'children.parent.internal.contentDigest'
-  | 'children.parent.internal.contentFilePath'
-  | 'children.parent.internal.description'
-  | 'children.parent.internal.fieldOwners'
-  | 'children.parent.internal.ignoreType'
-  | 'children.parent.internal.mediaType'
-  | 'children.parent.internal.owner'
-  | 'children.parent.internal.type'
-  | 'children.parent.parent.children'
-  | 'children.parent.parent.id'
-  | 'ctime'
-  | 'ctimeMs'
-  | 'dev'
-  | 'dir'
-  | 'ext'
-  | 'extension'
-  | 'id'
-  | 'ino'
-  | 'internal.content'
-  | 'internal.contentDigest'
-  | 'internal.contentFilePath'
-  | 'internal.description'
-  | 'internal.fieldOwners'
-  | 'internal.ignoreType'
-  | 'internal.mediaType'
-  | 'internal.owner'
-  | 'internal.type'
-  | 'mode'
-  | 'modifiedTime'
-  | 'mtime'
-  | 'mtimeMs'
-  | 'name'
-  | 'nlink'
-  | 'parent.children'
-  | 'parent.children.children'
-  | 'parent.children.children.children'
-  | 'parent.children.children.id'
-  | 'parent.children.id'
-  | 'parent.children.internal.content'
-  | 'parent.children.internal.contentDigest'
-  | 'parent.children.internal.contentFilePath'
-  | 'parent.children.internal.description'
-  | 'parent.children.internal.fieldOwners'
-  | 'parent.children.internal.ignoreType'
-  | 'parent.children.internal.mediaType'
-  | 'parent.children.internal.owner'
-  | 'parent.children.internal.type'
-  | 'parent.children.parent.children'
-  | 'parent.children.parent.id'
-  | 'parent.id'
-  | 'parent.internal.content'
-  | 'parent.internal.contentDigest'
-  | 'parent.internal.contentFilePath'
-  | 'parent.internal.description'
-  | 'parent.internal.fieldOwners'
-  | 'parent.internal.ignoreType'
-  | 'parent.internal.mediaType'
-  | 'parent.internal.owner'
-  | 'parent.internal.type'
-  | 'parent.parent.children'
-  | 'parent.parent.children.children'
-  | 'parent.parent.children.id'
-  | 'parent.parent.id'
-  | 'parent.parent.internal.content'
-  | 'parent.parent.internal.contentDigest'
-  | 'parent.parent.internal.contentFilePath'
-  | 'parent.parent.internal.description'
-  | 'parent.parent.internal.fieldOwners'
-  | 'parent.parent.internal.ignoreType'
-  | 'parent.parent.internal.mediaType'
-  | 'parent.parent.internal.owner'
-  | 'parent.parent.internal.type'
-  | 'parent.parent.parent.children'
-  | 'parent.parent.parent.id'
-  | 'prettySize'
-  | 'rdev'
-  | 'relativeDirectory'
-  | 'relativePath'
-  | 'root'
-  | 'size'
-  | 'sourceInstanceName'
-  | 'uid';
-
-type StaticImageFilterInput = {
-  readonly absolutePath: InputMaybe<StringQueryOperatorInput>;
-  readonly accessTime: InputMaybe<DateQueryOperatorInput>;
-  readonly atime: InputMaybe<DateQueryOperatorInput>;
-  readonly atimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly base: InputMaybe<StringQueryOperatorInput>;
-  readonly birthTime: InputMaybe<DateQueryOperatorInput>;
-  readonly birthtime: InputMaybe<DateQueryOperatorInput>;
-  readonly birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly blksize: InputMaybe<IntQueryOperatorInput>;
-  readonly blocks: InputMaybe<IntQueryOperatorInput>;
-  readonly changeTime: InputMaybe<DateQueryOperatorInput>;
-  readonly children: InputMaybe<NodeFilterListInput>;
-  readonly ctime: InputMaybe<DateQueryOperatorInput>;
-  readonly ctimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly dev: InputMaybe<IntQueryOperatorInput>;
-  readonly dir: InputMaybe<StringQueryOperatorInput>;
-  readonly ext: InputMaybe<StringQueryOperatorInput>;
-  readonly extension: InputMaybe<StringQueryOperatorInput>;
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly ino: InputMaybe<IntQueryOperatorInput>;
-  readonly internal: InputMaybe<InternalFilterInput>;
-  readonly mode: InputMaybe<IntQueryOperatorInput>;
-  readonly modifiedTime: InputMaybe<DateQueryOperatorInput>;
-  readonly mtime: InputMaybe<DateQueryOperatorInput>;
-  readonly mtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly name: InputMaybe<StringQueryOperatorInput>;
-  readonly nlink: InputMaybe<IntQueryOperatorInput>;
-  readonly parent: InputMaybe<NodeFilterInput>;
-  readonly prettySize: InputMaybe<StringQueryOperatorInput>;
-  readonly rdev: InputMaybe<IntQueryOperatorInput>;
-  readonly relativeDirectory: InputMaybe<StringQueryOperatorInput>;
-  readonly relativePath: InputMaybe<StringQueryOperatorInput>;
-  readonly root: InputMaybe<StringQueryOperatorInput>;
-  readonly size: InputMaybe<IntQueryOperatorInput>;
-  readonly sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
-  readonly uid: InputMaybe<IntQueryOperatorInput>;
-};
-
-type StaticImageGroupConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<StaticImageEdge>;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-  readonly group: ReadonlyArray<StaticImageGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<StaticImage>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type StaticImageGroupConnection_distinctArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageGroupConnection_groupArgs = {
-  field: StaticImageFieldsEnum;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type StaticImageGroupConnection_maxArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageGroupConnection_minArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageGroupConnection_sumArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-type StaticImageSortInput = {
-  readonly fields: InputMaybe<ReadonlyArray<InputMaybe<StaticImageFieldsEnum>>>;
-  readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
-};
-
 type StringQueryOperatorInput = {
   readonly eq: InputMaybe<Scalars['String']>;
   readonly glob: InputMaybe<Scalars['String']>;
@@ -14590,6 +14192,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Choose__create_a_new_wallet__in_the_app'
   | 'icon.childJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'icon.childJson.Closed_on_'
+  | 'icon.childJson.Coming_soon'
   | 'icon.childJson.Community'
   | 'icon.childJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'icon.childJson.Community_curation_of_markets'
@@ -15254,6 +14857,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Choose__create_a_new_wallet__in_the_app'
   | 'icon.childrenJson.Choose_the_digital_asset_for_collateral_or_settlements_'
   | 'icon.childrenJson.Closed_on_'
+  | 'icon.childrenJson.Coming_soon'
   | 'icon.childrenJson.Community'
   | 'icon.childrenJson.Community_at_Vega_starts_with_our_global_team__We_re_a_fast_growing__collaborative__and_multi_disciplinary_team__learning_from_each_other_and_setting_our_sights_on_solving_complex_challenges__If_you_believe_in_the_power_of_decentralisation_and_want_to_change_the_world_of_finance__this_is_your_chance_'
   | 'icon.childrenJson.Community_curation_of_markets'
