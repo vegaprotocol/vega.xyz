@@ -1,4 +1,8 @@
 {
+  "Loading...": "",
+  "Error fetching APY": "",
+  "APY": "",
+  "$VEGA paid out this epoch": "",
   "Develop with Vega": "",
   "Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi.": "",
   "Develop": "",
@@ -11,6 +15,7 @@
   "Nominate a validator and earn treasury rewards for each full epoch staked, as well as a share of trading fees.": "",
   "Staking": "",
   "Become a validator": "",
+  "* The average annualised percentage return based on the last epoch's total rewards for staking / amount staked and the number of epochs in a year": "",
   "Incentives and Bounties": "",
   "Bounties": "",
   "Participate in developer bounties and get rewarded for your commitment.": "",

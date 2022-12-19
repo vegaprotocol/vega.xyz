@@ -31,12 +31,31 @@ const RewardsPage = ({ data }) => {
   const Apy = ({ className }) => {
     return (
       <div className={`relative max-w-[37.5rem] lg:max-w-none ${className}`}>
-        <Stars className="hidden h-auto w-full lg:block" />
-        <div className="font-glitch-all bg-moshed2 bg-cover bg-clip-text bg-center text-[3rem] leading-[0.9] text-transparent lg:absolute lg:top-1/2 lg:left-0 lg:right-0 lg:-translate-y-1/2 lg:text-center lg:text-[4rem]">
-          {loadingApy && <div>Loading...</div>}
-          {dataApy && <div>APY {dataApy}%</div>}
-          {errorApy && <div>APY Error</div>}
-        </div>
+        {loadingApy && (
+          <div>
+            <Trans t={t}>Loading...</Trans>
+          </div>
+        )}
+        {errorApy && (
+          <div>
+            <Trans t={t}>Error fetching APY</Trans>
+          </div>
+        )}
+
+        {dataApy && (
+          <div>
+            <Stars className="hidden h-auto w-full lg:block" />
+            <div className="bg-moshed2 bg-cover bg-clip-text bg-center text-[3rem] leading-[1.2] text-transparent lg:absolute lg:top-1/2 lg:left-0 lg:right-0 lg:-translate-y-1/2 lg:text-center lg:text-[3.5rem] lg:leading-[1.1]">
+              <div>
+                <Trans t={t}>APY</Trans> {dataApy.apy}%*
+              </div>
+              <div className="font-not-glitched bg-moshed bg-clip-text text-[1.2rem] lg:text-[1.5rem]">
+                {dataApy.totalRewardsThisEpoch}{' '}
+                <Trans t={t}>$VEGA paid out this epoch</Trans>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     )
   }
@@ -94,30 +113,46 @@ const RewardsPage = ({ data }) => {
           </Button>
         </div>
 
-        <div className="my-space-10 rounded-lg border border-vega-light-200 bg-vega-light-100 p-space-5 dark:border-vega-dark-200 dark:bg-vega-dark-100 md:my-space-11 md:flex md:flex-row md:gap-x-6">
-          <div>
-            <div className="body-xl mb-space-3">
-              <Trans t={t}>Staking rewards</Trans>
-            </div>
-            <p className="body-l text-vega-light-300 dark:text-vega-dark-300">
-              <Trans t={t}>
-                Nominate a validator and earn treasury rewards for each full
-                epoch staked, as well as a share of trading fees.
-              </Trans>
-            </p>
-            <Apy className="mt-6 max-w-[17.75rem] lg:hidden" />
-            <div className="mt-space-5 grid grid-cols-1 gap-6 md:flex md:items-center md:gap-6">
-              <div>
-                <Button to="https://token.vega.xyz/">
-                  <Trans t={t}>Staking</Trans>
+        <div className="my-space-10 md:my-space-11">
+          <div className="rounded-lg border border-vega-light-200 bg-vega-light-100 p-space-5 dark:border-vega-dark-200 dark:bg-vega-dark-100 md:flex md:flex-row md:gap-x-6">
+            <div>
+              <div className="body-xl mb-space-3">
+                <Trans t={t}>Staking rewards</Trans>
+              </div>
+              <p className="body-l text-vega-light-300 dark:text-vega-dark-300">
+                <Trans t={t}>
+                  Nominate a validator and earn treasury rewards for each full
+                  epoch staked, as well as a share of trading fees.
+                </Trans>
+              </p>
+              <Apy className="mt-6 max-w-[20rem] lg:hidden" />
+              <div className="mt-space-5 grid grid-cols-1 gap-6 md:flex md:items-center md:gap-6">
+                <div>
+                  <Button to="https://token.vega.xyz/">
+                    <Trans t={t}>Staking</Trans>
+                  </Button>
+                </div>
+                <Button
+                  variant="secondary"
+                  to="https://console.fairground.wtf/"
+                >
+                  <Trans t={t}>Become a validator</Trans>
                 </Button>
               </div>
-              <Button variant="secondary" to="https://console.fairground.wtf/">
-                <Trans t={t}>Become a validator</Trans>
-              </Button>
+            </div>
+            <div className="text-center">
+              <Apy className="hidden lg:block" />
             </div>
           </div>
-          <Apy className="hidden lg:block" />
+          <div className="mt-space-4">
+            <p className="text-vega-light-300 dark:text-vega-dark-300">
+              <Trans t={t}>
+                * The average annualised percentage return based on the last
+                epoch's total rewards for staking / amount staked and the number
+                of epochs in a year
+              </Trans>
+            </p>
+          </div>
         </div>
 
         <h2 className="heading-l mb-space-9 max-w-[48rem]">

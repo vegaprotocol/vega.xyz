@@ -1,4 +1,8 @@
 {
+  "Loading...": "Loading...",
+  "Error fetching APY": "Error fetching APY",
+  "APY": "APY",
+  "$VEGA paid out this epoch": "$VEGA paid out this epoch",
   "Develop with Vega": "Develop with Vega",
   "Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi.": "Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi.",
   "Develop": "Develop",
@@ -11,6 +15,7 @@
   "Nominate a validator and earn treasury rewards for each full epoch staked, as well as a share of trading fees.": "Nominate a validator and earn treasury rewards for each full epoch staked, as well as a share of trading fees.",
   "Staking": "Staking",
   "Become a validator": "Become a validator",
+  "* The average annualised percentage return based on the last epoch's total rewards for staking / amount staked and the number of epochs in a year": "* The average annualised percentage return based on the last epoch's total rewards for staking / amount staked and the number of epochs in a year",
   "Incentives and Bounties": "Incentives and Bounties",
   "Bounties": "Bounties",
   "Participate in developer bounties and get rewarded for your commitment.": "Participate in developer bounties and get rewarded for your commitment.",

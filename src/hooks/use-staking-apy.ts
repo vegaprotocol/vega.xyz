@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react'
 
 export const useStakingApy = () => {
-  const [error, setError] = useState<boolean>(false)
-  const [data, setData] = useState<string>('')
-  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState(false)
+  const [data, setData] = useState({})
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setLoading(true)
-
     Promise.all([
       fetch(`https://api.token.vega.xyz/epochs`),
       fetch(
@@ -52,11 +50,14 @@ export const useStakingApy = () => {
           3
         )
 
+        setData({
+          apy: apy,
+          totalRewardsThisEpoch: totalRewardsThisEpoch.toFixed(0),
+        })
         setLoading(false)
-        setData(apy)
       })
       .catch(function (error) {
-        setError(true)
+        setError(error)
       })
   }, [])
 
