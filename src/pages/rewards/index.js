@@ -31,31 +31,30 @@ const RewardsPage = ({ data }) => {
   const Apy = ({ className }) => {
     return (
       <div className={`relative max-w-[37.5rem] lg:max-w-none ${className}`}>
-        {loadingApy && (
-          <div>
-            <Trans t={t}>Loading...</Trans>
-          </div>
-        )}
-        {errorApy && (
-          <div>
-            <Trans t={t}>Error fetching APY</Trans>
-          </div>
-        )}
+        <div>
+          <Stars className="hidden h-auto w-full lg:block" />
+          <div className="bg-moshed2 bg-cover bg-clip-text bg-center text-[3rem] leading-[1.2] text-transparent lg:absolute lg:top-1/2 lg:left-0 lg:right-0 lg:-translate-y-1/2 lg:text-center lg:text-[3.5rem] lg:leading-[1.1]">
+            {loadingApy && <Trans t={t}>Loading...</Trans>}
 
-        {dataApy && (
-          <div>
-            <Stars className="hidden h-auto w-full lg:block" />
-            <div className="bg-moshed2 bg-cover bg-clip-text bg-center text-[3rem] leading-[1.2] text-transparent lg:absolute lg:top-1/2 lg:left-0 lg:right-0 lg:-translate-y-1/2 lg:text-center lg:text-[3.5rem] lg:leading-[1.1]">
+            {errorApy && (
+              <div className="text-[1.5rem]">
+                <Trans t={t}>Can't fetch APY right now...</Trans>
+              </div>
+            )}
+
+            {dataApy && (
               <div>
-                <Trans t={t}>APY</Trans> {dataApy.apy}%*
+                <div>
+                  <Trans t={t}>APY</Trans> {dataApy.apy}%*
+                </div>
+                <div className="font-not-glitched bg-moshed bg-clip-text text-[1.2rem] lg:text-[1.5rem]">
+                  {dataApy.totalRewardsThisEpoch}{' '}
+                  <Trans t={t}>$VEGA paid out this epoch</Trans>
+                </div>
               </div>
-              <div className="font-not-glitched bg-moshed bg-clip-text text-[1.2rem] lg:text-[1.5rem]">
-                {dataApy.totalRewardsThisEpoch}{' '}
-                <Trans t={t}>$VEGA paid out this epoch</Trans>
-              </div>
-            </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
     )
   }

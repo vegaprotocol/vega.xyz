@@ -722,6 +722,7 @@ type FileFieldsEnum =
   | 'childJson.Built_in_liquidity_incentives'
   | 'childJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'childJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'childJson.Can_t_fetch_APY_right_now___'
   | 'childJson.Cancel'
   | 'childJson.Careers'
   | 'childJson.Careers_at_Vega'
@@ -790,7 +791,6 @@ type FileFieldsEnum =
   | 'childJson.Enacting_changes'
   | 'childJson.Encrypted_or_anonymous_submissions'
   | 'childJson.Ended'
-  | 'childJson.Error_fetching_APY'
   | 'childJson.Error_fetching_proposals___'
   | 'childJson.Error_loading_value'
   | 'childJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -1458,6 +1458,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Built_in_liquidity_incentives'
   | 'childTools.icon.childJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'childTools.icon.childJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'childTools.icon.childJson.Can_t_fetch_APY_right_now___'
   | 'childTools.icon.childJson.Cancel'
   | 'childTools.icon.childJson.Careers'
   | 'childTools.icon.childJson.Careers_at_Vega'
@@ -1526,7 +1527,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Enacting_changes'
   | 'childTools.icon.childJson.Encrypted_or_anonymous_submissions'
   | 'childTools.icon.childJson.Ended'
-  | 'childTools.icon.childJson.Error_fetching_APY'
   | 'childTools.icon.childJson.Error_fetching_proposals___'
   | 'childTools.icon.childJson.Error_loading_value'
   | 'childTools.icon.childJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -1992,6 +1992,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Built_in_liquidity_incentives'
   | 'childTools.icon.childrenJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'childTools.icon.childrenJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'childTools.icon.childrenJson.Can_t_fetch_APY_right_now___'
   | 'childTools.icon.childrenJson.Cancel'
   | 'childTools.icon.childrenJson.Careers'
   | 'childTools.icon.childrenJson.Careers_at_Vega'
@@ -2060,7 +2061,6 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Enacting_changes'
   | 'childTools.icon.childrenJson.Encrypted_or_anonymous_submissions'
   | 'childTools.icon.childrenJson.Ended'
-  | 'childTools.icon.childrenJson.Error_fetching_APY'
   | 'childTools.icon.childrenJson.Error_fetching_proposals___'
   | 'childTools.icon.childrenJson.Error_loading_value'
   | 'childTools.icon.childrenJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -2663,6 +2663,7 @@ type FileFieldsEnum =
   | 'childrenJson.Built_in_liquidity_incentives'
   | 'childrenJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'childrenJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'childrenJson.Can_t_fetch_APY_right_now___'
   | 'childrenJson.Cancel'
   | 'childrenJson.Careers'
   | 'childrenJson.Careers_at_Vega'
@@ -2731,7 +2732,6 @@ type FileFieldsEnum =
   | 'childrenJson.Enacting_changes'
   | 'childrenJson.Encrypted_or_anonymous_submissions'
   | 'childrenJson.Ended'
-  | 'childrenJson.Error_fetching_APY'
   | 'childrenJson.Error_fetching_proposals___'
   | 'childrenJson.Error_loading_value'
   | 'childrenJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -3402,6 +3402,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Built_in_liquidity_incentives'
   | 'childrenTools.icon.childJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'childrenTools.icon.childJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'childrenTools.icon.childJson.Can_t_fetch_APY_right_now___'
   | 'childrenTools.icon.childJson.Cancel'
   | 'childrenTools.icon.childJson.Careers'
   | 'childrenTools.icon.childJson.Careers_at_Vega'
@@ -3470,7 +3471,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Enacting_changes'
   | 'childrenTools.icon.childJson.Encrypted_or_anonymous_submissions'
   | 'childrenTools.icon.childJson.Ended'
-  | 'childrenTools.icon.childJson.Error_fetching_APY'
   | 'childrenTools.icon.childJson.Error_fetching_proposals___'
   | 'childrenTools.icon.childJson.Error_loading_value'
   | 'childrenTools.icon.childJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -3936,6 +3936,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Built_in_liquidity_incentives'
   | 'childrenTools.icon.childrenJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'childrenTools.icon.childrenJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'childrenTools.icon.childrenJson.Can_t_fetch_APY_right_now___'
   | 'childrenTools.icon.childrenJson.Cancel'
   | 'childrenTools.icon.childrenJson.Careers'
   | 'childrenTools.icon.childrenJson.Careers_at_Vega'
@@ -4004,7 +4005,6 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Enacting_changes'
   | 'childrenTools.icon.childrenJson.Encrypted_or_anonymous_submissions'
   | 'childrenTools.icon.childrenJson.Ended'
-  | 'childrenTools.icon.childrenJson.Error_fetching_APY'
   | 'childrenTools.icon.childrenJson.Error_fetching_proposals___'
   | 'childrenTools.icon.childrenJson.Error_loading_value'
   | 'childrenTools.icon.childrenJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -5543,6 +5543,7 @@ type Json = Node & {
   readonly Built_in_liquidity_incentives: Maybe<Scalars['String']>;
   readonly Built_in_liquidity_incentives_for_bustling_markets_: Maybe<Scalars['String']>;
   readonly Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_: Maybe<Scalars['String']>;
+  readonly Can_t_fetch_APY_right_now___: Maybe<Scalars['String']>;
   readonly Cancel: Maybe<Scalars['String']>;
   readonly Careers: Maybe<Scalars['String']>;
   readonly Careers_at_Vega: Maybe<Scalars['String']>;
@@ -5611,7 +5612,6 @@ type Json = Node & {
   readonly Enacting_changes: Maybe<Scalars['String']>;
   readonly Encrypted_or_anonymous_submissions: Maybe<Scalars['String']>;
   readonly Ended: Maybe<Scalars['String']>;
-  readonly Error_fetching_APY: Maybe<Scalars['String']>;
   readonly Error_fetching_proposals___: Maybe<Scalars['String']>;
   readonly Error_loading_value: Maybe<Scalars['String']>;
   readonly Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_: Maybe<Scalars['String']>;
@@ -6094,6 +6094,7 @@ type JsonFieldsEnum =
   | 'Built_in_liquidity_incentives'
   | 'Built_in_liquidity_incentives_for_bustling_markets_'
   | 'Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'Can_t_fetch_APY_right_now___'
   | 'Cancel'
   | 'Careers'
   | 'Careers_at_Vega'
@@ -6162,7 +6163,6 @@ type JsonFieldsEnum =
   | 'Enacting_changes'
   | 'Encrypted_or_anonymous_submissions'
   | 'Ended'
-  | 'Error_fetching_APY'
   | 'Error_fetching_proposals___'
   | 'Error_loading_value'
   | 'Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -6688,6 +6688,7 @@ type JsonFilterInput = {
   readonly Built_in_liquidity_incentives: InputMaybe<StringQueryOperatorInput>;
   readonly Built_in_liquidity_incentives_for_bustling_markets_: InputMaybe<StringQueryOperatorInput>;
   readonly Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_: InputMaybe<StringQueryOperatorInput>;
+  readonly Can_t_fetch_APY_right_now___: InputMaybe<StringQueryOperatorInput>;
   readonly Cancel: InputMaybe<StringQueryOperatorInput>;
   readonly Careers: InputMaybe<StringQueryOperatorInput>;
   readonly Careers_at_Vega: InputMaybe<StringQueryOperatorInput>;
@@ -6756,7 +6757,6 @@ type JsonFilterInput = {
   readonly Enacting_changes: InputMaybe<StringQueryOperatorInput>;
   readonly Encrypted_or_anonymous_submissions: InputMaybe<StringQueryOperatorInput>;
   readonly Ended: InputMaybe<StringQueryOperatorInput>;
-  readonly Error_fetching_APY: InputMaybe<StringQueryOperatorInput>;
   readonly Error_fetching_proposals___: InputMaybe<StringQueryOperatorInput>;
   readonly Error_loading_value: InputMaybe<StringQueryOperatorInput>;
   readonly Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_: InputMaybe<StringQueryOperatorInput>;
@@ -7661,6 +7661,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Built_in_liquidity_incentives'
   | 'frontmatter.featuredImage.childJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'frontmatter.featuredImage.childJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'frontmatter.featuredImage.childJson.Can_t_fetch_APY_right_now___'
   | 'frontmatter.featuredImage.childJson.Cancel'
   | 'frontmatter.featuredImage.childJson.Careers'
   | 'frontmatter.featuredImage.childJson.Careers_at_Vega'
@@ -7729,7 +7730,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Enacting_changes'
   | 'frontmatter.featuredImage.childJson.Encrypted_or_anonymous_submissions'
   | 'frontmatter.featuredImage.childJson.Ended'
-  | 'frontmatter.featuredImage.childJson.Error_fetching_APY'
   | 'frontmatter.featuredImage.childJson.Error_fetching_proposals___'
   | 'frontmatter.featuredImage.childJson.Error_loading_value'
   | 'frontmatter.featuredImage.childJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -8195,6 +8195,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Built_in_liquidity_incentives'
   | 'frontmatter.featuredImage.childrenJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'frontmatter.featuredImage.childrenJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'frontmatter.featuredImage.childrenJson.Can_t_fetch_APY_right_now___'
   | 'frontmatter.featuredImage.childrenJson.Cancel'
   | 'frontmatter.featuredImage.childrenJson.Careers'
   | 'frontmatter.featuredImage.childrenJson.Careers_at_Vega'
@@ -8263,7 +8264,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Enacting_changes'
   | 'frontmatter.featuredImage.childrenJson.Encrypted_or_anonymous_submissions'
   | 'frontmatter.featuredImage.childrenJson.Ended'
-  | 'frontmatter.featuredImage.childrenJson.Error_fetching_APY'
   | 'frontmatter.featuredImage.childrenJson.Error_fetching_proposals___'
   | 'frontmatter.featuredImage.childrenJson.Error_loading_value'
   | 'frontmatter.featuredImage.childrenJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -12314,6 +12314,7 @@ type Query_jsonArgs = {
   Built_in_liquidity_incentives: InputMaybe<StringQueryOperatorInput>;
   Built_in_liquidity_incentives_for_bustling_markets_: InputMaybe<StringQueryOperatorInput>;
   Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_: InputMaybe<StringQueryOperatorInput>;
+  Can_t_fetch_APY_right_now___: InputMaybe<StringQueryOperatorInput>;
   Cancel: InputMaybe<StringQueryOperatorInput>;
   Careers: InputMaybe<StringQueryOperatorInput>;
   Careers_at_Vega: InputMaybe<StringQueryOperatorInput>;
@@ -12382,7 +12383,6 @@ type Query_jsonArgs = {
   Enacting_changes: InputMaybe<StringQueryOperatorInput>;
   Encrypted_or_anonymous_submissions: InputMaybe<StringQueryOperatorInput>;
   Ended: InputMaybe<StringQueryOperatorInput>;
-  Error_fetching_APY: InputMaybe<StringQueryOperatorInput>;
   Error_fetching_proposals___: InputMaybe<StringQueryOperatorInput>;
   Error_loading_value: InputMaybe<StringQueryOperatorInput>;
   Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_: InputMaybe<StringQueryOperatorInput>;
@@ -14921,6 +14921,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Built_in_liquidity_incentives'
   | 'icon.childJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'icon.childJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'icon.childJson.Can_t_fetch_APY_right_now___'
   | 'icon.childJson.Cancel'
   | 'icon.childJson.Careers'
   | 'icon.childJson.Careers_at_Vega'
@@ -14989,7 +14990,6 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Enacting_changes'
   | 'icon.childJson.Encrypted_or_anonymous_submissions'
   | 'icon.childJson.Ended'
-  | 'icon.childJson.Error_fetching_APY'
   | 'icon.childJson.Error_fetching_proposals___'
   | 'icon.childJson.Error_loading_value'
   | 'icon.childJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'
@@ -15613,6 +15613,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Built_in_liquidity_incentives'
   | 'icon.childrenJson.Built_in_liquidity_incentives_for_bustling_markets_'
   | 'icon.childrenJson.Built_in_live__automated_cross_margining_routes_a_trader_s_gains_made_on_one_market_to_offset_positions_on_other_markets_'
+  | 'icon.childrenJson.Can_t_fetch_APY_right_now___'
   | 'icon.childrenJson.Cancel'
   | 'icon.childrenJson.Careers'
   | 'icon.childrenJson.Careers_at_Vega'
@@ -15681,7 +15682,6 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Enacting_changes'
   | 'icon.childrenJson.Encrypted_or_anonymous_submissions'
   | 'icon.childrenJson.Ended'
-  | 'icon.childrenJson.Error_fetching_APY'
   | 'icon.childrenJson.Error_fetching_proposals___'
   | 'icon.childrenJson.Error_loading_value'
   | 'icon.childrenJson.Ethereum_and_other_blockchains_suffer_slow_performance_since_they_re_generalist_tools__with_smart_contracts_for_everything___applying_the_same_rules_regardless_of_what_you_use_them_for__They_charge_high_gas_fees_and_require_workarounds_to_be_applied_to_trading__Vega_is_built_from_the_ground_up_using_high_performing__purpose_built_smart_contracts_specifically_for_trading___meaning_no_fees_on_orders__and_fairness_at_its_core_'

@@ -1,6 +1,6 @@
 {
   "Loading...": "Loading...",
-  "Error fetching APY": "Error fetching APY",
+  "Can't fetch APY right now...": "Can't fetch APY right now...",
   "APY": "APY",
   "$VEGA paid out this epoch": "$VEGA paid out this epoch",
   "Develop with Vega": "Develop with Vega",

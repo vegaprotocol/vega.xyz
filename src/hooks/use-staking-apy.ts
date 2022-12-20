@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export const useStakingApy = () => {
   const [error, setError] = useState(false)
-  const [data, setData] = useState({})
+  const [data, setData] = useState<null | {}>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
