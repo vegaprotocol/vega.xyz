@@ -147,7 +147,7 @@ const RewardFees = () => {
             </div>
           }
           buttonText={t('Provide liquidity')}
-          buttonLink="https://docs.vega.xyz/docs/testnet/tutorials/providing-liquidity"
+          buttonLink="https://docs.vega.xyz/testnet/tutorials/committing-liquidity"
         />
         <RewardBox
           idx={2}

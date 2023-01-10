@@ -106,7 +106,7 @@ const RewardsPage = ({ data }) => {
           <Button
             variant="secondary"
             className="mt-space-2"
-            to="https://docs.fairground.vega.xyz/docs/trading-questions/#trading-rewards"
+            to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/fees-rewards#setting-rewards"
           >
             <Trans t={t}>Create your own reward</Trans>
           </Button>
@@ -133,7 +133,7 @@ const RewardsPage = ({ data }) => {
                 </div>
                 <Button
                   variant="secondary"
-                  to="https://console.fairground.wtf/"
+                  to="https://docs.vega.xyz/testnet/node-operators/setup-validator"
                 >
                   <Trans t={t}>Become a validator</Trans>
                 </Button>
