@@ -127,7 +127,7 @@ const RewardsPage = ({ data }) => {
               <Apy className="mt-6 max-w-[20rem] lg:hidden" />
               <div className="mt-space-5 grid grid-cols-1 gap-6 md:flex md:items-center md:gap-6">
                 <div>
-                  <Button to="https://token.vega.xyz/">
+                  <Button to="https://token.vega.xyz/staking">
                     <Trans t={t}>Staking</Trans>
                   </Button>
                 </div>
