@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { type Swiper as SwiperRef } from 'swiper'
 import Container from './Container'
 import Button from './UI/Button'
+import Tag from './UI/Tag'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import V2Mainnet from './Svg/Roadmap/V2Mainnet'
 import V1Mainnet from './Svg/Roadmap/V1Mainnet'
@@ -20,6 +21,7 @@ const RoadMap = (props) => {
   const { t } = useTranslation('component.roadmap')
   const planets = useRef<any[]>([])
   const swiperRef = useRef<SwiperRef>()
+  const currentStatus = 1
   const [timelineHeight, setTimelineHeight] = useState(0)
   const [selectedPlanet, setSelectedPlanet] = useState(0)
   planets.current = props.data.edges.map(
@@ -119,12 +121,16 @@ const RoadMap = (props) => {
                   setSelectedPlanet(swiper.activeIndex)
                 }}
                 slideToClickedSlide={true}
+                shortSwipes={false}
+                longSwipes={true}
+                longSwipesMs={100}
+                longSwipesRatio={0.1}
                 centeredSlides={true}
                 slidesPerView={1}
                 autoplay={{
                   delay: 1000,
                 }}
-                initialSlide={1}
+                initialSlide={currentStatus}
                 breakpoints={{
                   640: {
                     slidesPerView: 3,
@@ -151,12 +157,25 @@ const RoadMap = (props) => {
                       `}
                     >
                       <div
-                        className={`flex aspect-[251/210] items-center justify-center transition duration-700 group-hover:scale-125 ${
+                        className={`flex aspect-[251/210] items-center justify-center transition-opacity duration-700 group-hover:scale-125 ${
                           idx === selectedPlanet ? 'opacity-100' : 'opacity-50'
                         }`}
                         ref={planets.current[idx]}
                       >
                         {roadmapImage(idx)}
+                      </div>
+                      <div className="mt-space-5 text-center">
+                        {idx === currentStatus && (
+                          <Tag
+                            className={`mx-auto bg-white dark:bg-black ${
+                              idx === selectedPlanet
+                                ? ''
+                                : 'border-vega-light-300 dark:border-vega-dark-300'
+                            }`}
+                          >
+                            Current Status
+                          </Tag>
+                        )}
                       </div>
                       <div
                         className={`heading-m mx-auto mb-5 mt-space-5 max-w-[18rem] text-center transition-all duration-700 sm:mb-[1rem] ${
@@ -165,8 +184,12 @@ const RoadMap = (props) => {
                       >
                         {block.node.frontmatter.title}
                       </div>
-                      <div className="justify-self-end text-center text-[0.9375rem] uppercase transition-all duration-700">
-                        {block.node.frontmatter.step_title}
+                      <div className="justify-self-end text-center text-[0.9375rem] transition-all duration-700">
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: block.node.frontmatter.step_title,
+                          }}
+                        />
                       </div>
                     </div>
                   </SwiperSlide>

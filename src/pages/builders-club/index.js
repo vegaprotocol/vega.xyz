@@ -50,18 +50,18 @@ const BuildersClubPage = ({ data }) => {
       <div data-cy="main">
         <div className="bg-buildersClubHero bg-cover bg-top">
           <Container>
-            <div className="md:pt-16">
-              <div className="md:grid md:grid-cols-2 md:gap-x-12">
-                <div className="py-16">
+            <div className="md:pt-space-10">
+              <div className="md:grid md:grid-cols-2 md:gap-x-space-8">
+                <div className="py-space-10">
                   <div className="max-w-[43rem]">
-                    <BuildersClubLogo className="mb-6 h-auto w-full max-w-[22.625rem]" />
-                    <LeadingLine className="text-white">
+                    <BuildersClubLogo className="mb-space-5 h-auto w-full max-w-[22.625rem] md:mb-space-7" />
+                    <div className="body-xl mb-space-5">
                       <Trans t={t}>
                         Join the builders club VEGA+ Team to get support
                         building on top of the Vega protocol and access to
                         exclusive builder bounties.
                       </Trans>
-                    </LeadingLine>
+                    </div>
                     <div>
                       <Button
                         variant="hero"
@@ -75,7 +75,7 @@ const BuildersClubPage = ({ data }) => {
                         variant="secondary"
                         to="https://discord.com/channels/720571334798737489/732948871948533791"
                         colorMode="white"
-                        className="mt-6 md:ml-6 md:mt-0"
+                        className="md:ml-space-6"
                       >
                         <Trans t={t}>Meet us on Discord</Trans>
                       </Button>
@@ -88,10 +88,10 @@ const BuildersClubPage = ({ data }) => {
               </div>
             </div>
           </Container>
-          <BuildersClubHeroSmall className="relative -mt-28 h-auto w-full md:hidden" />
+          <BuildersClubHeroSmall className="relative -mt-space-13 h-auto w-full md:hidden" />
         </div>
         <div className="bg-buildersClubFooterLight bg-right-bottom bg-no-repeat dark:bg-buildersClubFooter">
-          <div className="my-20 text-center lg:my-32 xl:my-40">
+          <div className="my-space-11 text-center lg:my-space-14">
             <Container>
               <h2 className="heading-xl font-glitched mx-auto max-w-[60rem]">
                 <GlitchTitle color="blue">
@@ -100,10 +100,10 @@ const BuildersClubPage = ({ data }) => {
               </h2>
             </Container>
 
-            <div className="relative my-20">
+            <div className="relative my-space-11">
               <Container>
                 <div className="absolute left-0 right-0 top-[7.7rem] hidden h-px bg-[#404040] md:block"></div>
-                <div className="relative z-10 mb-12 grid grid-cols-2 md:mb-20 md:grid-cols-4">
+                <div className="relative z-10 mb-space-8 grid grid-cols-2 md:mb-space-10 md:grid-cols-4">
                   <div>
                     <GatsbyImage
                       image={getImage(data.buildersClubIcon1)}
@@ -146,7 +146,7 @@ const BuildersClubPage = ({ data }) => {
                   </div>
                 </div>
 
-                <p className="body-xl mb-12">
+                <p className="body-xl mb-space-8">
                   <Trans t={t}>
                     Plus access exclusive grants and bounties once you have
                     learned the basics!
@@ -161,9 +161,9 @@ const BuildersClubPage = ({ data }) => {
           </div>
 
           <Container>
-            <div className="grey-box bg-vega-light-grey p-6 dark:bg-vega-box-grey dark:text-white md:p-8">
-              <div className="mb-14 md:flex md:items-center md:justify-between">
-                <h1 className="heading-l !m-0">
+            <div className="grey-box bg-vega-light-grey p-space-5 dark:bg-vega-box-grey dark:text-white md:p-space-6">
+              <div className="mb-space-8 md:flex md:items-center md:justify-between">
+                <h1 className="heading-l">
                   <Trans t={t}>What's going on</Trans>
                 </h1>
                 <Button to="/community/events" className="hidden md:block">
@@ -174,9 +174,9 @@ const BuildersClubPage = ({ data }) => {
             </div>
           </Container>
 
-          <div className="pt-20 text-center lg:pt-40">
+          <div className="pt-space-10 text-center lg:pt-space-14">
             <Container>
-              <h2 className="heading-m mx-auto max-w-[58rem]">
+              <h2 className="heading-m mx-auto mb-space-5 max-w-[58rem]">
                 <Trans t={t}>
                   The builders club team is part of the ambassadors Vega+
                   program
@@ -186,7 +186,7 @@ const BuildersClubPage = ({ data }) => {
                 <Trans t={t}>Find out more about the Ambassadors program</Trans>
               </Button>
             </Container>
-            <FooterVegabond className="mx-auto mt-16 block" />
+            <FooterVegabond className="mx-auto mt-space-10 block" />
           </div>
         </div>
       </div>
