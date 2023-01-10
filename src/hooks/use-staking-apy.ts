@@ -7,7 +7,7 @@ export const useStakingApy = () => {
 
   useEffect(() => {
     Promise.all([
-      fetch(`https://api.token.vega.xyz/epochs`),
+      fetch(`https://api.vega.xyz/epochs`),
       fetch(
         `https://api.vega.xyz/parties/603f97f4499634372cc0fe50f4a0834bdf662d0b54c15b0bac5832367bae239b/rewards`
       ),
@@ -57,6 +57,7 @@ export const useStakingApy = () => {
         setLoading(false)
       })
       .catch(function (error) {
+        setLoading(false)
         setError(error)
       })
   }, [])
