@@ -120,11 +120,9 @@ const RoadMap = (props) => {
                 onActiveIndexChange={(swiper) => {
                   setSelectedPlanet(swiper.activeIndex)
                 }}
+                preventClicks={false}
                 slideToClickedSlide={true}
-                shortSwipes={false}
-                longSwipes={true}
-                longSwipesMs={100}
-                longSwipesRatio={0.1}
+                threshold={10}
                 centeredSlides={true}
                 slidesPerView={1}
                 autoplay={{
