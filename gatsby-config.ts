@@ -27,7 +27,7 @@ module.exports = {
     title: `Vega Protcol`,
     titleTemplate: `%s | Vega Protocol`,
     description: `Discover Web3's native derivatives trading platform that is helping DeFi mature.`,
-    image: `/images/vega-og.jpg`,
+    image: `/vega-og.jpg`,
     twitter: `@vegaprotocol`,
     languages: languages,
   },
