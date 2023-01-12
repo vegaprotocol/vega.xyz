@@ -21,7 +21,7 @@ const RoadMap = (props) => {
   const { t } = useTranslation('component.roadmap')
   const planets = useRef<any[]>([])
   const swiperRef = useRef<SwiperRef>()
-  const currentStatus = 2;
+  const currentStatus = 1
   const [timelineHeight, setTimelineHeight] = useState(0)
   const [selectedPlanet, setSelectedPlanet] = useState(0)
   planets.current = props.data.edges.map(
@@ -76,7 +76,9 @@ const RoadMap = (props) => {
                   <div className="flex aspect-[251/210] items-end justify-center">
                     <div className="pointer-events-auto flex w-full justify-between sm:justify-center">
                       <button
-                        className="flex items-center sm:hidden"
+                        className={`flex items-center sm:hidden ${
+                          selectedPlanet !== 0 ? '' : 'invisible'
+                        }`}
                         onClick={() => swiperRef.current?.slidePrev()}
                       >
                         <ArrowLeft className="mr-2" />
@@ -86,7 +88,11 @@ const RoadMap = (props) => {
                       </button>
                       <VegaBond className="relative top-px" />
                       <button
-                        className="flex items-center sm:hidden"
+                        className={`flex items-center sm:hidden ${
+                          selectedPlanet !== props.data.edges.length - 1
+                            ? ''
+                            : 'invisible'
+                        }`}
                         onClick={() => swiperRef.current?.slideNext()}
                       >
                         <div>
@@ -114,7 +120,9 @@ const RoadMap = (props) => {
                 onActiveIndexChange={(swiper) => {
                   setSelectedPlanet(swiper.activeIndex)
                 }}
+                preventClicks={false}
                 slideToClickedSlide={true}
+                threshold={10}
                 centeredSlides={true}
                 slidesPerView={1}
                 autoplay={{
@@ -154,12 +162,18 @@ const RoadMap = (props) => {
                       >
                         {roadmapImage(idx)}
                       </div>
-                      <div className="text-center mt-space-5">
-                        {idx === currentStatus && <Tag className={`mx-auto dark:bg-black bg-white ${
-                        idx === selectedPlanet
-                          ? ''
-                          : 'border-vega-light-300 dark:border-vega-dark-300'
-                      }`}>Current Status</Tag>}
+                      <div className="mt-space-5 text-center">
+                        {idx === currentStatus && (
+                          <Tag
+                            className={`mx-auto bg-white dark:bg-black ${
+                              idx === selectedPlanet
+                                ? ''
+                                : 'border-vega-light-300 dark:border-vega-dark-300'
+                            }`}
+                          >
+                            Current Status
+                          </Tag>
+                        )}
                       </div>
                       <div
                         className={`heading-m mx-auto mb-5 mt-space-5 max-w-[18rem] text-center transition-all duration-700 sm:mb-[1rem] ${
@@ -168,8 +182,12 @@ const RoadMap = (props) => {
                       >
                         {block.node.frontmatter.title}
                       </div>
-                      <div className="justify-self-end text-center text-[0.9375rem] uppercase transition-all duration-700">
-                        {block.node.frontmatter.step_title}
+                      <div className="justify-self-end text-center text-[0.9375rem] transition-all duration-700">
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: block.node.frontmatter.step_title,
+                          }}
+                        />
                       </div>
                     </div>
                   </SwiperSlide>
