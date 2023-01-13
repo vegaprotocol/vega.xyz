@@ -54,7 +54,7 @@ const Community = () => {
           />
           <NavigationItem
             text={t('Newsletter')}
-            link="https://vegacommunity.substack.com/subscribe"
+            link="https://vegacommunity.substack.com"
           />
           <NavigationItem
             text={t('Twitch')}
