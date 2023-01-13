@@ -96,7 +96,7 @@ const CommunityPage = ({ data }) => {
             text={t(
               "Roll up! Roll up! Vega's bi-weekly highlights newsletter."
             )}
-            link="https://vegacommunity.substack.com/subscribe"
+            link="https://vegacommunity.substack.com"
             icon={getImage(data.iconSubstack)}
           />
           <ToolBox
