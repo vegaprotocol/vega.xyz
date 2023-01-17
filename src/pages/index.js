@@ -37,7 +37,7 @@ import CrossChainSupportIcon from '../images/feature-icons/cross-chain-support.s
 const ToolBox = ({ title, description, icon, link }) => {
   return (
     <Link
-      to={routeThroughInterstitialPage(link)}
+      to={link}
       hideArrow
       className="flex gap-4 rounded-3xl border border-vega-border-muted p-4 hover:-translate-y-2 md:p-5 lg:block lg:pb-8"
     >
@@ -136,7 +136,9 @@ const IndexPage = ({ data }) => {
                   'Try out trading cash settled futures on the fully decentralised Vega network (Testnet).'
                 )}
                 icon={getImage(data.consoleIcon)}
-                link={'https://console.fairground.wtf'}
+                link={routeThroughInterstitialPage(
+                  'https://console.fairground.wtf'
+                )}
               />
               <ToolBox
                 title="Governance"
