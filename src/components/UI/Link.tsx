@@ -10,7 +10,7 @@ export interface LinkProps {
 }
 
 const Link = ({ to, children, hideArrow = false, className }: LinkProps) => {
-  const isExternal = to.startsWith('http')
+  const isExternal = to.startsWith('http') || to.startsWith('/external-link')
 
   return (
     <LinkWrapper to={to} className={className}>
