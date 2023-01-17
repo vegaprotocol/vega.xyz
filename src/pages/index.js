@@ -136,9 +136,7 @@ const IndexPage = ({ data }) => {
                   'Try out trading cash settled futures on the fully decentralised Vega network (Testnet).'
                 )}
                 icon={getImage(data.consoleIcon)}
-                link={routeThroughInterstitialPage(
-                  'https://console.fairground.wtf'
-                )}
+                link={'https://console.fairground.wtf'}
               />
               <ToolBox
                 title="Governance"
