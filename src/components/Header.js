@@ -7,7 +7,7 @@ import MobileMenu from '../components/Navigation/MobileMenu'
 import MobileMenuButton from '../components/Navigation/MobileMenuButton'
 import HeaderCta from '../components/HeaderCta'
 import LanguageToggle from '../components/LanguageToggle'
-// import SiteBanner from "../components/SiteBanner";
+import { routeThroughInterstitialPage } from '../utils/tools'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
@@ -54,7 +54,9 @@ const Header = ({ sticky }) => {
             <div className="flex items-center">
               {!menuIsOpen && (
                 <HeaderCta
-                  link="https://console.fairground.wtf/"
+                  link={routeThroughInterstitialPage(
+                    'https://console.fairground.wtf/'
+                  )}
                   text={t('Trade futures (Testnet)')}
                   className="mr-3 hidden md:block lg:hidden"
                 />
@@ -68,7 +70,9 @@ const Header = ({ sticky }) => {
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
                 {!menuIsOpen && (
                   <HeaderCta
-                    link="https://console.fairground.wtf/"
+                    link={routeThroughInterstitialPage(
+                      'https://console.fairground.wtf/'
+                    )}
                     text={t('Trade futures (Testnet)')}
                     className="ml-3 hidden lg:block"
                   />
