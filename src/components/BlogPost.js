@@ -1,11 +1,11 @@
-import React from "react";
-import SquareBullet from "./Svg/SquareBullet";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import React from 'react'
+import SquareBullet from './Svg/SquareBullet'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const BlogPost = ({ post }) => {
-  const { t } = useTranslation("component.blog-post");
+  const { t } = useTranslation('component.blog-post')
   return (
-    <div className="flex flex-col justify-between pb-3 border-b border-current">
+    <div className="flex flex-col justify-between border-b border-current pb-3">
       <div>
         <a
           href={`https://blog.vega.xyz/${post.node.uniqueSlug}`}
@@ -14,12 +14,12 @@ const BlogPost = ({ post }) => {
           className="block"
         >
           <div
-            className="aspect-w-16 aspect-h-9 bg-cover bg-center mb-4"
+            className="aspect-w-16 aspect-h-9 mb-4 bg-cover bg-center"
             style={{
               backgroundImage: `url(https://cdn-images-1.medium.com/${post.node.virtuals.previewImage.imageId})`,
             }}
           ></div>
-          <div className="text-[1.5rem] leading-[1.1] mb-4">
+          <div className="mb-4 text-[1.5rem] leading-[1.1]">
             {post.node.title}
           </div>
           <div className="copy-xs text-vega-mid-grey">
@@ -28,19 +28,19 @@ const BlogPost = ({ post }) => {
         </a>
       </div>
 
-      <div>
+      <div className="mt-space-3">
         <SquareBullet size="10" />
         {post.node.firstPublishedAt}
         &nbsp;&nbsp;&nbsp;
         <SquareBullet size="5" />
         <span className="text-vega-mid-grey">
-          {t("{{minutes}} minute read", {
+          {t('{{minutes}} minute read', {
             minutes: Math.ceil(post.node.virtuals.readingTime),
           })}
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPost

@@ -21,6 +21,7 @@ import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
 import WalletVideoWebM from '../../video/wallet-hero.webm'
 import WalletVideoMP4 from '../../video/wallet-hero.mp4'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { MQMediumDown, MQLargeUp } from '../../utils/media-queries.js'
 
 const platformIcons = {
   mac: IconPlatformMac,
@@ -191,21 +192,9 @@ const WalletPage = () => {
       </Container>
 
       <div className="relative pt-16 md:mt-12 md:pt-36">
-        <video
-          className="mx-auto h-auto w-full max-w-[90%] md:hidden"
-          autoPlay
-          muted
-          loop
-        >
-          <source type="video/webm" src={WalletVideoWebM} />
-          <source type="video/mp4" src={WalletVideoMP4} />
-        </video>
-
-        <WalletRip className="relative md:mt-16 lg:mt-0" />
-
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 transform">
+        <MQMediumDown>
           <video
-            className="hidden h-auto w-full md:block md:scale-150 lg:scale-100"
+            className="mx-auto h-auto w-full max-w-[90%] md:hidden"
             autoPlay
             muted
             loop
@@ -213,6 +202,22 @@ const WalletPage = () => {
             <source type="video/webm" src={WalletVideoWebM} />
             <source type="video/mp4" src={WalletVideoMP4} />
           </video>
+        </MQMediumDown>
+
+        <WalletRip className="relative md:mt-16 lg:mt-0" />
+
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3 transform">
+          <MQLargeUp>
+            <video
+              className="h-auto w-full md:scale-150 lg:scale-100"
+              autoPlay
+              muted
+              loop
+            >
+              <source type="video/webm" src={WalletVideoWebM} />
+              <source type="video/mp4" src={WalletVideoMP4} />
+            </video>
+          </MQLargeUp>
         </div>
       </div>
 
