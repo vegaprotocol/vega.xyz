@@ -83,9 +83,14 @@ const Community = () => {
           <Trans>Get rewarded</Trans>
         </NavigationHeading>
         <NavigationList>
+          <NavigationItem text={t('Rewards')} link="/rewards" />
           <NavigationItem
-            text={t('Incentives and bounties')}
-            link="/community/incentives-bounties/"
+            text={t('Fairground incentives')}
+            link="https://fairground.wtf/"
+          />
+          <NavigationItem
+            text={t('Bounties')}
+            link="https://github.com/vegaprotocol/bounties/"
           />
           <NavigationItem
             text={t('Report a security issue')}
