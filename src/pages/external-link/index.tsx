@@ -55,7 +55,7 @@ const ExternalLinkPage = () => {
       {notFound ? (
         <NotFoundPage />
       ) : (
-        <div className="flex min-h-screen items-center justify-center text-black dark:text-white">
+        <div className="flex min-h-screen items-center justify-center bg-white text-black text-black dark:bg-black dark:text-white">
           <Seo title={t("You're leaving Vega.xyz")} />
           <Container dataCy={'main'}>
             <div className="pt-space-4 pb-space-8 text-center md:pt-space-14 md:pb-space-14">
