@@ -6,10 +6,8 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import MarketCreationResponsive from '../../components/Svg/MarketCreation/Hero/Responsive'
-import PageSection from '../../components/PageSection'
 import MarketCreationFooter from '../../components/Svg/MarketCreation/Footer'
 import BoxTitle from '../../components/BoxTitle'
-import ButtonLink from '../../components/ButtonLink'
 import GlitchTitle from '../../components/GlitchTitle'
 import BoxLinkSimple from '../../components/BoxLinkSimple'
 import LeadingLine from '../../components/LeadingLine'
@@ -23,6 +21,7 @@ import Phase5 from '../../components/Svg/MarketCreation/Process/Phase5'
 import Phase6 from '../../components/Svg/MarketCreation/Process/Phase6'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import Callout from '../../components/UI/Callout'
+import { routeThroughInterstitialPage } from '../../utils/tools'
 
 const MarketCreationPage = ({ data }) => {
   const { i18n, t } = useTranslation('page.market-creation')
@@ -97,7 +96,9 @@ const MarketCreationPage = ({ data }) => {
         },
         {
           title: t('See what markets exist already (Testnet)'),
-          url: 'https://console.fairground.wtf/#/markets',
+          url: routeThroughInterstitialPage(
+            'https://console.fairground.wtf/#/markets'
+          ),
         },
       ],
       image: <Phase1 />,
@@ -234,7 +235,9 @@ const MarketCreationPage = ({ data }) => {
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
-              link="https://console.fairground.wtf/#/markets"
+              link={routeThroughInterstitialPage(
+                'https://console.fairground.wtf/#/markets'
+              )}
               text={t('See what markets already exist (Testnet)')}
             />
           </div>

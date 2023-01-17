@@ -1,19 +1,19 @@
-import React from "react";
-import { Link } from "gatsby";
-import VegaLogo from "../../components/Svg/VegaLogo";
-import MobileMenuButton from "./MobileMenuButton";
-import Container from "../../components/Container";
-import MobileNavigation from "./MobileNavigation";
-import HeaderCta from "../../components/HeaderCta";
-import { useTranslation } from "gatsby-plugin-react-i18next";
-// import SiteBanner from "../../components/SiteBanner";
+import React from 'react'
+import { Link } from 'gatsby'
+import VegaLogo from '../../components/Svg/VegaLogo'
+import MobileMenuButton from './MobileMenuButton'
+import Container from '../../components/Container'
+import MobileNavigation from './MobileNavigation'
+import HeaderCta from '../../components/HeaderCta'
+import { routeThroughInterstitialPage } from '../../utils/tools'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const MobileMenu = ({ toggleMenu, isOpen }) => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common')
   return (
     <div
-      className={`top-0 fixed bottom-0 left-0 right-0 pb-12 dark:bg-black bg-white overflow-y-scroll ${
-        isOpen ? "fixed" : "hidden"
+      className={`fixed top-0 bottom-0 left-0 right-0 overflow-y-scroll bg-white pb-12 dark:bg-black ${
+        isOpen ? 'fixed' : 'hidden'
       }`}
       id="mobileMenu"
     >
@@ -35,13 +35,13 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
         <MobileNavigation />
 
         <HeaderCta
-          link="https://console.fairground.wtf/"
-          text={t("Trade (Testnet)")}
+          link={routeThroughInterstitialPage('https://console.fairground.wtf/')}
+          text={t('Trade (Testnet)')}
           className="inline-block"
         />
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default MobileMenu;
+export default MobileMenu

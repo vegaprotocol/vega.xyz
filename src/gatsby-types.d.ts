@@ -1063,6 +1063,7 @@ type FileFieldsEnum =
   | 'childJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'childJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'childJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'childJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -1154,6 +1155,7 @@ type FileFieldsEnum =
   | 'childJson.With_the_wallet_you_can_'
   | 'childJson.YouTube'
   | 'childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'childJson.You_re_leaving_Vega_xyz'
   | 'childJson.Your_career_in_Defi_starts_here'
   | 'childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -1807,6 +1809,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'childTools.icon.childJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'childTools.icon.childJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'childTools.icon.childJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'childTools.icon.childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childTools.icon.childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childTools.icon.childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -1898,6 +1901,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.With_the_wallet_you_can_'
   | 'childTools.icon.childJson.YouTube'
   | 'childTools.icon.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'childTools.icon.childJson.You_re_leaving_Vega_xyz'
   | 'childTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -2349,6 +2353,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'childTools.icon.childrenJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'childTools.icon.childrenJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'childTools.icon.childrenJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'childTools.icon.childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childTools.icon.childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childTools.icon.childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -2440,6 +2445,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.With_the_wallet_you_can_'
   | 'childTools.icon.childrenJson.YouTube'
   | 'childTools.icon.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'childTools.icon.childrenJson.You_re_leaving_Vega_xyz'
   | 'childTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -3028,6 +3034,7 @@ type FileFieldsEnum =
   | 'childrenJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'childrenJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'childrenJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'childrenJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -3119,6 +3126,7 @@ type FileFieldsEnum =
   | 'childrenJson.With_the_wallet_you_can_'
   | 'childrenJson.YouTube'
   | 'childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'childrenJson.You_re_leaving_Vega_xyz'
   | 'childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -3775,6 +3783,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'childrenTools.icon.childJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'childrenTools.icon.childJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'childrenTools.icon.childJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'childrenTools.icon.childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childrenTools.icon.childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childrenTools.icon.childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -3866,6 +3875,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.With_the_wallet_you_can_'
   | 'childrenTools.icon.childJson.YouTube'
   | 'childrenTools.icon.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'childrenTools.icon.childJson.You_re_leaving_Vega_xyz'
   | 'childrenTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childrenTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -4317,6 +4327,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'childrenTools.icon.childrenJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'childrenTools.icon.childrenJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'childrenTools.icon.childrenJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'childrenTools.icon.childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'childrenTools.icon.childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'childrenTools.icon.childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -4408,6 +4419,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.With_the_wallet_you_can_'
   | 'childrenTools.icon.childrenJson.YouTube'
   | 'childrenTools.icon.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'childrenTools.icon.childrenJson.You_re_leaving_Vega_xyz'
   | 'childrenTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'childrenTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -5932,6 +5944,7 @@ type Json = Node & {
   readonly The_Vega_mainnet_is_live__trading_launch_H1_2023: Maybe<Scalars['String']>;
   readonly The_builders_club_team_is_part_of_the_ambassadors_Vega__program: Maybe<Scalars['String']>;
   readonly The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_: Maybe<Scalars['String']>;
+  readonly The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in: Maybe<Scalars['String']>;
   readonly The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_: Maybe<Scalars['String']>;
   readonly The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_: Maybe<Scalars['String']>;
   readonly The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_: Maybe<Scalars['String']>;
@@ -6023,6 +6036,7 @@ type Json = Node & {
   readonly With_the_wallet_you_can_: Maybe<Scalars['String']>;
   readonly YouTube: Maybe<Scalars['String']>;
   readonly You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_: Maybe<Scalars['String']>;
+  readonly You_re_leaving_Vega_xyz: Maybe<Scalars['String']>;
   readonly Your_career_in_Defi_starts_here: Maybe<Scalars['String']>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: Maybe<Scalars['String']>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: Maybe<Scalars['String']>;
@@ -6491,6 +6505,7 @@ type JsonFieldsEnum =
   | 'The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -6582,6 +6597,7 @@ type JsonFieldsEnum =
   | 'With_the_wallet_you_can_'
   | 'YouTube'
   | 'You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'You_re_leaving_Vega_xyz'
   | 'Your_career_in_Defi_starts_here'
   | 'Your_message_was_successfully_encrypted_and_delivered_'
   | '_0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -7093,6 +7109,7 @@ type JsonFilterInput = {
   readonly The_Vega_mainnet_is_live__trading_launch_H1_2023: InputMaybe<StringQueryOperatorInput>;
   readonly The_builders_club_team_is_part_of_the_ambassadors_Vega__program: InputMaybe<StringQueryOperatorInput>;
   readonly The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_: InputMaybe<StringQueryOperatorInput>;
+  readonly The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in: InputMaybe<StringQueryOperatorInput>;
   readonly The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_: InputMaybe<StringQueryOperatorInput>;
   readonly The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_: InputMaybe<StringQueryOperatorInput>;
   readonly The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
@@ -7184,6 +7201,7 @@ type JsonFilterInput = {
   readonly With_the_wallet_you_can_: InputMaybe<StringQueryOperatorInput>;
   readonly YouTube: InputMaybe<StringQueryOperatorInput>;
   readonly You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_: InputMaybe<StringQueryOperatorInput>;
+  readonly You_re_leaving_Vega_xyz: InputMaybe<StringQueryOperatorInput>;
   readonly Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
@@ -8074,6 +8092,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'frontmatter.featuredImage.childJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'frontmatter.featuredImage.childJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'frontmatter.featuredImage.childJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'frontmatter.featuredImage.childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'frontmatter.featuredImage.childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'frontmatter.featuredImage.childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -8165,6 +8184,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.With_the_wallet_you_can_'
   | 'frontmatter.featuredImage.childJson.YouTube'
   | 'frontmatter.featuredImage.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'frontmatter.featuredImage.childJson.You_re_leaving_Vega_xyz'
   | 'frontmatter.featuredImage.childJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'frontmatter.featuredImage.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -8616,6 +8636,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'frontmatter.featuredImage.childrenJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'frontmatter.featuredImage.childrenJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'frontmatter.featuredImage.childrenJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'frontmatter.featuredImage.childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'frontmatter.featuredImage.childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'frontmatter.featuredImage.childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -8707,6 +8728,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.With_the_wallet_you_can_'
   | 'frontmatter.featuredImage.childrenJson.YouTube'
   | 'frontmatter.featuredImage.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'frontmatter.featuredImage.childrenJson.You_re_leaving_Vega_xyz'
   | 'frontmatter.featuredImage.childrenJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'frontmatter.featuredImage.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -12056,6 +12078,7 @@ type Query = {
   readonly allSiteFunction: SiteFunctionConnection;
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
+  readonly allStaticImage: StaticImageConnection;
   readonly allTools: ToolsConnection;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
@@ -12073,6 +12096,7 @@ type Query = {
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
+  readonly staticImage: Maybe<StaticImage>;
   readonly tools: Maybe<Tools>;
 };
 
@@ -12202,6 +12226,14 @@ type Query_allSitePluginArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<SitePluginSortInput>;
+};
+
+
+type Query_allStaticImageArgs = {
+  filter: InputMaybe<StaticImageFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<StaticImageSortInput>;
 };
 
 
@@ -12731,6 +12763,7 @@ type Query_jsonArgs = {
   The_Vega_mainnet_is_live__trading_launch_H1_2023: InputMaybe<StringQueryOperatorInput>;
   The_builders_club_team_is_part_of_the_ambassadors_Vega__program: InputMaybe<StringQueryOperatorInput>;
   The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_: InputMaybe<StringQueryOperatorInput>;
+  The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in: InputMaybe<StringQueryOperatorInput>;
   The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_: InputMaybe<StringQueryOperatorInput>;
   The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_: InputMaybe<StringQueryOperatorInput>;
   The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
@@ -12822,6 +12855,7 @@ type Query_jsonArgs = {
   With_the_wallet_you_can_: InputMaybe<StringQueryOperatorInput>;
   YouTube: InputMaybe<StringQueryOperatorInput>;
   You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_: InputMaybe<StringQueryOperatorInput>;
+  You_re_leaving_Vega_xyz: InputMaybe<StringQueryOperatorInput>;
   Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
   _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
@@ -13138,6 +13172,46 @@ type Query_sitePluginArgs = {
   resolve: InputMaybe<StringQueryOperatorInput>;
   ssrAPIs: InputMaybe<StringQueryOperatorInput>;
   version: InputMaybe<StringQueryOperatorInput>;
+};
+
+
+type Query_staticImageArgs = {
+  absolutePath: InputMaybe<StringQueryOperatorInput>;
+  accessTime: InputMaybe<DateQueryOperatorInput>;
+  atime: InputMaybe<DateQueryOperatorInput>;
+  atimeMs: InputMaybe<FloatQueryOperatorInput>;
+  base: InputMaybe<StringQueryOperatorInput>;
+  birthTime: InputMaybe<DateQueryOperatorInput>;
+  birthtime: InputMaybe<DateQueryOperatorInput>;
+  birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
+  blksize: InputMaybe<IntQueryOperatorInput>;
+  blocks: InputMaybe<IntQueryOperatorInput>;
+  changeTime: InputMaybe<DateQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  ctime: InputMaybe<DateQueryOperatorInput>;
+  ctimeMs: InputMaybe<FloatQueryOperatorInput>;
+  dev: InputMaybe<IntQueryOperatorInput>;
+  dir: InputMaybe<StringQueryOperatorInput>;
+  ext: InputMaybe<StringQueryOperatorInput>;
+  extension: InputMaybe<StringQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  ino: InputMaybe<IntQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  mode: InputMaybe<IntQueryOperatorInput>;
+  modifiedTime: InputMaybe<DateQueryOperatorInput>;
+  mtime: InputMaybe<DateQueryOperatorInput>;
+  mtimeMs: InputMaybe<FloatQueryOperatorInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  nlink: InputMaybe<IntQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  prettySize: InputMaybe<StringQueryOperatorInput>;
+  rdev: InputMaybe<IntQueryOperatorInput>;
+  relativeDirectory: InputMaybe<StringQueryOperatorInput>;
+  relativePath: InputMaybe<StringQueryOperatorInput>;
+  root: InputMaybe<StringQueryOperatorInput>;
+  size: InputMaybe<IntQueryOperatorInput>;
+  sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
+  uid: InputMaybe<IntQueryOperatorInput>;
 };
 
 
@@ -14376,6 +14450,366 @@ type SortOrderEnum =
   | 'ASC'
   | 'DESC';
 
+type StaticImage = Node & {
+  readonly absolutePath: Maybe<Scalars['String']>;
+  readonly accessTime: Maybe<Scalars['Date']>;
+  readonly atime: Maybe<Scalars['Date']>;
+  readonly atimeMs: Maybe<Scalars['Float']>;
+  readonly base: Maybe<Scalars['String']>;
+  readonly birthTime: Maybe<Scalars['Date']>;
+  readonly birthtime: Maybe<Scalars['Date']>;
+  readonly birthtimeMs: Maybe<Scalars['Float']>;
+  readonly blksize: Maybe<Scalars['Int']>;
+  readonly blocks: Maybe<Scalars['Int']>;
+  readonly changeTime: Maybe<Scalars['Date']>;
+  readonly children: ReadonlyArray<Node>;
+  readonly ctime: Maybe<Scalars['Date']>;
+  readonly ctimeMs: Maybe<Scalars['Float']>;
+  readonly dev: Maybe<Scalars['Int']>;
+  readonly dir: Maybe<Scalars['String']>;
+  readonly ext: Maybe<Scalars['String']>;
+  readonly extension: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly ino: Maybe<Scalars['Int']>;
+  readonly internal: Internal;
+  readonly mode: Maybe<Scalars['Int']>;
+  readonly modifiedTime: Maybe<Scalars['Date']>;
+  readonly mtime: Maybe<Scalars['Date']>;
+  readonly mtimeMs: Maybe<Scalars['Float']>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly nlink: Maybe<Scalars['Int']>;
+  readonly parent: Maybe<Node>;
+  readonly prettySize: Maybe<Scalars['String']>;
+  readonly rdev: Maybe<Scalars['Int']>;
+  readonly relativeDirectory: Maybe<Scalars['String']>;
+  readonly relativePath: Maybe<Scalars['String']>;
+  readonly root: Maybe<Scalars['String']>;
+  readonly size: Maybe<Scalars['Int']>;
+  readonly sourceInstanceName: Maybe<Scalars['String']>;
+  readonly uid: Maybe<Scalars['Int']>;
+};
+
+
+type StaticImage_accessTimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_atimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_birthTimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_birthtimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_changeTimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_ctimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_modifiedTimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_mtimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type StaticImageConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<StaticImageEdge>;
+  readonly group: ReadonlyArray<StaticImageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<StaticImage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type StaticImageConnection_distinctArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageConnection_groupArgs = {
+  field: StaticImageFieldsEnum;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type StaticImageConnection_maxArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageConnection_minArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageConnection_sumArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+type StaticImageEdge = {
+  readonly next: Maybe<StaticImage>;
+  readonly node: StaticImage;
+  readonly previous: Maybe<StaticImage>;
+};
+
+type StaticImageFieldsEnum =
+  | 'absolutePath'
+  | 'accessTime'
+  | 'atime'
+  | 'atimeMs'
+  | 'base'
+  | 'birthTime'
+  | 'birthtime'
+  | 'birthtimeMs'
+  | 'blksize'
+  | 'blocks'
+  | 'changeTime'
+  | 'children'
+  | 'children.children'
+  | 'children.children.children'
+  | 'children.children.children.children'
+  | 'children.children.children.id'
+  | 'children.children.id'
+  | 'children.children.internal.content'
+  | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
+  | 'children.children.internal.description'
+  | 'children.children.internal.fieldOwners'
+  | 'children.children.internal.ignoreType'
+  | 'children.children.internal.mediaType'
+  | 'children.children.internal.owner'
+  | 'children.children.internal.type'
+  | 'children.children.parent.children'
+  | 'children.children.parent.id'
+  | 'children.id'
+  | 'children.internal.content'
+  | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
+  | 'children.internal.description'
+  | 'children.internal.fieldOwners'
+  | 'children.internal.ignoreType'
+  | 'children.internal.mediaType'
+  | 'children.internal.owner'
+  | 'children.internal.type'
+  | 'children.parent.children'
+  | 'children.parent.children.children'
+  | 'children.parent.children.id'
+  | 'children.parent.id'
+  | 'children.parent.internal.content'
+  | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
+  | 'children.parent.internal.description'
+  | 'children.parent.internal.fieldOwners'
+  | 'children.parent.internal.ignoreType'
+  | 'children.parent.internal.mediaType'
+  | 'children.parent.internal.owner'
+  | 'children.parent.internal.type'
+  | 'children.parent.parent.children'
+  | 'children.parent.parent.id'
+  | 'ctime'
+  | 'ctimeMs'
+  | 'dev'
+  | 'dir'
+  | 'ext'
+  | 'extension'
+  | 'id'
+  | 'ino'
+  | 'internal.content'
+  | 'internal.contentDigest'
+  | 'internal.contentFilePath'
+  | 'internal.description'
+  | 'internal.fieldOwners'
+  | 'internal.ignoreType'
+  | 'internal.mediaType'
+  | 'internal.owner'
+  | 'internal.type'
+  | 'mode'
+  | 'modifiedTime'
+  | 'mtime'
+  | 'mtimeMs'
+  | 'name'
+  | 'nlink'
+  | 'parent.children'
+  | 'parent.children.children'
+  | 'parent.children.children.children'
+  | 'parent.children.children.id'
+  | 'parent.children.id'
+  | 'parent.children.internal.content'
+  | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
+  | 'parent.children.internal.description'
+  | 'parent.children.internal.fieldOwners'
+  | 'parent.children.internal.ignoreType'
+  | 'parent.children.internal.mediaType'
+  | 'parent.children.internal.owner'
+  | 'parent.children.internal.type'
+  | 'parent.children.parent.children'
+  | 'parent.children.parent.id'
+  | 'parent.id'
+  | 'parent.internal.content'
+  | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
+  | 'parent.internal.description'
+  | 'parent.internal.fieldOwners'
+  | 'parent.internal.ignoreType'
+  | 'parent.internal.mediaType'
+  | 'parent.internal.owner'
+  | 'parent.internal.type'
+  | 'parent.parent.children'
+  | 'parent.parent.children.children'
+  | 'parent.parent.children.id'
+  | 'parent.parent.id'
+  | 'parent.parent.internal.content'
+  | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
+  | 'parent.parent.internal.description'
+  | 'parent.parent.internal.fieldOwners'
+  | 'parent.parent.internal.ignoreType'
+  | 'parent.parent.internal.mediaType'
+  | 'parent.parent.internal.owner'
+  | 'parent.parent.internal.type'
+  | 'parent.parent.parent.children'
+  | 'parent.parent.parent.id'
+  | 'prettySize'
+  | 'rdev'
+  | 'relativeDirectory'
+  | 'relativePath'
+  | 'root'
+  | 'size'
+  | 'sourceInstanceName'
+  | 'uid';
+
+type StaticImageFilterInput = {
+  readonly absolutePath: InputMaybe<StringQueryOperatorInput>;
+  readonly accessTime: InputMaybe<DateQueryOperatorInput>;
+  readonly atime: InputMaybe<DateQueryOperatorInput>;
+  readonly atimeMs: InputMaybe<FloatQueryOperatorInput>;
+  readonly base: InputMaybe<StringQueryOperatorInput>;
+  readonly birthTime: InputMaybe<DateQueryOperatorInput>;
+  readonly birthtime: InputMaybe<DateQueryOperatorInput>;
+  readonly birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
+  readonly blksize: InputMaybe<IntQueryOperatorInput>;
+  readonly blocks: InputMaybe<IntQueryOperatorInput>;
+  readonly changeTime: InputMaybe<DateQueryOperatorInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly ctime: InputMaybe<DateQueryOperatorInput>;
+  readonly ctimeMs: InputMaybe<FloatQueryOperatorInput>;
+  readonly dev: InputMaybe<IntQueryOperatorInput>;
+  readonly dir: InputMaybe<StringQueryOperatorInput>;
+  readonly ext: InputMaybe<StringQueryOperatorInput>;
+  readonly extension: InputMaybe<StringQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly ino: InputMaybe<IntQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly mode: InputMaybe<IntQueryOperatorInput>;
+  readonly modifiedTime: InputMaybe<DateQueryOperatorInput>;
+  readonly mtime: InputMaybe<DateQueryOperatorInput>;
+  readonly mtimeMs: InputMaybe<FloatQueryOperatorInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly nlink: InputMaybe<IntQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly prettySize: InputMaybe<StringQueryOperatorInput>;
+  readonly rdev: InputMaybe<IntQueryOperatorInput>;
+  readonly relativeDirectory: InputMaybe<StringQueryOperatorInput>;
+  readonly relativePath: InputMaybe<StringQueryOperatorInput>;
+  readonly root: InputMaybe<StringQueryOperatorInput>;
+  readonly size: InputMaybe<IntQueryOperatorInput>;
+  readonly sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
+  readonly uid: InputMaybe<IntQueryOperatorInput>;
+};
+
+type StaticImageGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<StaticImageEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<StaticImageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<StaticImage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type StaticImageGroupConnection_distinctArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageGroupConnection_groupArgs = {
+  field: StaticImageFieldsEnum;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type StaticImageGroupConnection_maxArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageGroupConnection_minArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageGroupConnection_sumArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+type StaticImageSortInput = {
+  readonly fields: InputMaybe<ReadonlyArray<InputMaybe<StaticImageFieldsEnum>>>;
+  readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
+};
+
 type StringQueryOperatorInput = {
   readonly eq: InputMaybe<Scalars['String']>;
   readonly glob: InputMaybe<Scalars['String']>;
@@ -14946,6 +15380,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'icon.childJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'icon.childJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'icon.childJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'icon.childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'icon.childJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'icon.childJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -15037,6 +15472,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.With_the_wallet_you_can_'
   | 'icon.childJson.YouTube'
   | 'icon.childJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'icon.childJson.You_re_leaving_Vega_xyz'
   | 'icon.childJson.Your_career_in_Defi_starts_here'
   | 'icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
@@ -15646,6 +16082,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'icon.childrenJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'icon.childrenJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
+  | 'icon.childrenJson.The_link_you_are_following_is_not_hosted_by_Vega__You_will_be_redirected_in'
   | 'icon.childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
   | 'icon.childrenJson.The_number_of_tokens_needed_to_vote_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal__Each_public_key_is_eligible_for_one_vote_'
   | 'icon.childrenJson.The_risk_considerations_behind_pseudonymous_environments_and_Vega_s_protective_measures_in_the_Vega__2_whitepaper__2_'
@@ -15737,6 +16174,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.With_the_wallet_you_can_'
   | 'icon.childrenJson.YouTube'
   | 'icon.childrenJson.You_can_have_multiple_wallets_within_the_Vega_Wallet_desktop_app_'
+  | 'icon.childrenJson.You_re_leaving_Vega_xyz'
   | 'icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
   | 'icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'

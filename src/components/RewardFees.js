@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import RewardsValuePlaceholder from '../components/Svg/RewardsValuePlaceholder'
+import { routeThroughInterstitialPage } from '../utils/tools'
 import UIButton from './UI/Button'
 
 const formatVegaValue = (value) => {
@@ -131,7 +132,9 @@ const RewardFees = () => {
             </div>
           }
           buttonText={t('Trade')}
-          buttonLink="https://console.fairground.wtf/"
+          buttonLink={routeThroughInterstitialPage(
+            'https://console.fairground.wtf/'
+          )}
         />
         <RewardBox
           idx={1}
