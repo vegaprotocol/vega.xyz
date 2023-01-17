@@ -22,7 +22,7 @@ const Callout = ({
 }: CalloutProps) => {
   return (
     <div
-      className={`rounded-lg border border-vega-light-200 bg-vega-light-100 dark:border-vega-dark-200 dark:bg-vega-dark-100 md:flex md:flex-row md:gap-x-6 ${
+      className={`justify-between rounded-lg border border-vega-light-200 bg-vega-light-100 dark:border-vega-dark-200 dark:bg-vega-dark-100 md:flex md:flex-row md:gap-x-6 ${
         className ? className : ''
       }`}
     >
@@ -49,7 +49,7 @@ const Callout = ({
           objectFit="contain"
           objectPosition="center bottom"
           alt=""
-          className="align-self-bottom mx-auto block shrink-0 md:max-w-[50%]"
+          className="align-self-bottom block shrink-0 md:max-w-[50%] lg:max-w-[36.25rem]"
         />
       )}
     </div>
