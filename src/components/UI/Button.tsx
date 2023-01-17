@@ -19,7 +19,7 @@ const ButtonLink = ({
   className,
   colorMode = 'auto',
 }: ButtonProps) => {
-  const isExternal = to.startsWith('http')
+  const isExternal = to.startsWith('http') || to.startsWith('/external-link')
   let buttonWrapperStyles
   let buttonBaseStyles
   let buttonBgColorStyles
