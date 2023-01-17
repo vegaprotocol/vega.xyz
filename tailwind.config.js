@@ -37,6 +37,10 @@ module.exports = {
         buildersClubFooter: "url('/builders-club-footer-background.jpg')",
         buildersClubFooterLight:
           "url('/builders-club-footer-background-light.jpg')",
+        countdownBar: "url('/countdown-marker.png')",
+        moshed: "url('/moshed.jpg')",
+        moshed2: "url('/moshed2.jpg')",
+        moshed3: "url('/moshed3.jpg')",
       },
       opacity: {
         15: '.15',

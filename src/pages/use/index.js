@@ -175,7 +175,7 @@ const UsePage = ({ data }) => {
       <div className="pt-space-5">
         <Container>
           <CalloutHero
-            title={t('The Vega mainnet is live, trading launch H2 2022')}
+            title={t('The Vega mainnet is live, trading launch H1 2023')}
             text={t(
               'Token holders can participate in governance, stake and delegate.'
             )}
