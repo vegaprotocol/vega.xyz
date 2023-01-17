@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react'
 
 const Cell = ({ children }) => {
   return (
-    <div className="px-8 py-3 body-l dark:text-vega-grey text-vega-mid-grey">
+    <div className="body-l px-space-3 py-space-5 text-vega-mid-grey dark:text-vega-grey">
       {children}
     </div>
-  );
-};
+  )
+}
 
 const Header = ({ children }) => {
-  return <div className="heading-xxs text-vega-mid-grey">{children}</div>;
-};
+  return <div className="heading-xxs text-vega-mid-grey">{children}</div>
+}
 
 const Row = ({ children }) => {
-  return <tr className="border-t border-[#525252]">{children}</tr>;
-};
+  return <tr className="border-t border-[#525252]">{children}</tr>
+}
 
 // TODO - This table needs generalising, it's specific to validator rewards
 const Table = ({ headings, rows }) => {
   return (
     <div className="overflow-x-scroll">
-      <table className="text-left max-w-[100vw] border-b border-[#525252] w-full">
+      <table className="w-full max-w-[100vw] border-b border-[#525252] text-left">
         <tbody>
           {headings.map((heading, idx) => (
             <Row key={idx}>
@@ -43,7 +43,7 @@ const Table = ({ headings, rows }) => {
         </tbody>
       </table>
     </div>
-  );
-};
+  )
+}
 
-export default Table;
+export default Table

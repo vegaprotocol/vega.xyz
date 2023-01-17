@@ -36,6 +36,14 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
+                    to="/validators/"
+                    className="py-1.5 block leading-[1.3]"
+                  >
+                    <Trans t={t}>Validate and secure the network</Trans>
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
                     to="https://console.fairground.wtf/"
                     className="block py-1.5 leading-[1.3]"
                   >
