@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
-import ExplainerVideoSrc from '../video/vega-explainer-video-vp8.webm'
+import ExplainerVideoSrcWebM from '../video/vega-explainer-video-vp8.webm'
+import ExplainerVideoSrcMp4 from '../video/vega-explainer-video.mp4'
 import ExplainerVideoCover from '../images/explainer-video-cover.jpg'
 
 const ExplainerVideo = () => {
@@ -20,7 +21,8 @@ const ExplainerVideo = () => {
         </button>
       )}
       <video className={`h-auto w-full`} controls ref={video}>
-        <source type="video/webm" src={ExplainerVideoSrc} />
+        <source type="video/webm" src={ExplainerVideoSrcWebM} />
+        <source type="video/mp4" src={ExplainerVideoSrcMp4} />
       </video>
     </div>
   )
