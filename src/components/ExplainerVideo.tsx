@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import ExplainerVideoSrc from '../video/vega-explainer-video.webm'
+import ExplainerVideoSrc from '../video/vega-explainer-video-vp8.webm'
 import ExplainerVideoCover from '../images/explainer-video-cover.jpg'
 
 const ExplainerVideo = () => {
