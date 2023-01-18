@@ -75,7 +75,7 @@ const Calendar = ({ limit = false, filter = false }) => {
       setEvents(sortedEvents)
     }
     fetchEvents()
-  }, [limit])
+  }, [limit, filter])
 
   return (
     <div className="border-t border-current">

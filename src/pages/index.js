@@ -33,6 +33,7 @@ import HighCapitalEfficiencyIcon from '../images/feature-icons/high-capital-effi
 import NoGasFeesIcon from '../images/feature-icons/no-gas-fees.svg'
 import NativeLiquidityProvision from '../images/feature-icons/native-liquidity-provision.svg'
 import CrossChainSupportIcon from '../images/feature-icons/cross-chain-support.svg'
+import ExplainerVideo from '../components/ExplainerVideo'
 
 const ToolBox = ({ title, description, icon, link }) => {
   return (
@@ -128,6 +129,8 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <Container dataCy={'main'}>
+          <ExplainerVideo />
+
           <div className="relative mx-auto mb-10 -mt-[15%] max-w-[29rem] md:mt-0 lg:max-w-[50rem]">
             <div className="grid gap-4 py-12 md:gap-8 lg:grid-cols-3">
               <ToolBox

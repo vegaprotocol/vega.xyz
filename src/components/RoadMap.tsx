@@ -1,4 +1,4 @@
-import React, { useState, useRef, createRef, useEffect } from 'react'
+import React, { useState, useRef, createRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { type Swiper as SwiperRef } from 'swiper'
 import Container from './Container'
