@@ -109,7 +109,7 @@ const KeyConceptsPage = () => {
         <div className="relative z-30">
           <Sticky enabled={true}>
             <div className="bg-white dark:bg-black">
-              <div className="mx-auto overflow-y-hidden overflow-x-scroll whitespace-nowrap border-b border-vega-mid-grey px-6 md:flex md:justify-center md:gap-x-8 md:whitespace-normal md:px-0">
+              <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap border-b border-vega-mid-grey px-6 md:flex md:justify-center md:gap-x-8 md:whitespace-normal md:px-0">
                 <ScrollSpy
                   items={['good', 'better', 'mature']}
                   currentClassName="border-b-current"
