@@ -71,8 +71,7 @@ const ExternalLinkPage = () => {
                 <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
                   <Trans t={t}>
                     We're about to redirect you to Console on Fairground, Vega's
-                    incentivised testnet. Look out for the launch of trading on
-                    mainnet soon.
+                    incentivised testnet.
                   </Trans>
                 </p>
                 <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
