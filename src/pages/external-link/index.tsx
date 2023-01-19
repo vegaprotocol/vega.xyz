@@ -76,11 +76,7 @@ const ExternalLinkPage = () => {
                   </Trans>
                 </p>
                 <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
-                  <Trans t={t}>
-                    The link you are following is not hosted by Vega. You will
-                    be redirected in
-                  </Trans>{' '}
-                  {seconds}...
+                  <Trans t={t}>You will be redirected in </Trans> {seconds}...
                 </p>
                 {url && (
                   <p className="body-xl">
