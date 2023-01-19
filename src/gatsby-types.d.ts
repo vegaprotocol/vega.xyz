@@ -1145,6 +1145,7 @@ type FileFieldsEnum =
   | 'childJson.We_are_not_network_operators'
   | 'childJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'childJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'childJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'childJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'childJson.What_makes_Vega_different'
   | 'childJson.What_s_going_on'
@@ -1891,6 +1892,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.We_are_not_network_operators'
   | 'childTools.icon.childJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'childTools.icon.childJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'childTools.icon.childJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'childTools.icon.childJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'childTools.icon.childJson.What_makes_Vega_different'
   | 'childTools.icon.childJson.What_s_going_on'
@@ -2435,6 +2437,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.We_are_not_network_operators'
   | 'childTools.icon.childrenJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'childTools.icon.childrenJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'childTools.icon.childrenJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'childTools.icon.childrenJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'childTools.icon.childrenJson.What_makes_Vega_different'
   | 'childTools.icon.childrenJson.What_s_going_on'
@@ -3116,6 +3119,7 @@ type FileFieldsEnum =
   | 'childrenJson.We_are_not_network_operators'
   | 'childrenJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'childrenJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'childrenJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'childrenJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'childrenJson.What_makes_Vega_different'
   | 'childrenJson.What_s_going_on'
@@ -3865,6 +3869,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.We_are_not_network_operators'
   | 'childrenTools.icon.childJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'childrenTools.icon.childJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'childrenTools.icon.childJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'childrenTools.icon.childJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'childrenTools.icon.childJson.What_makes_Vega_different'
   | 'childrenTools.icon.childJson.What_s_going_on'
@@ -4409,6 +4414,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.We_are_not_network_operators'
   | 'childrenTools.icon.childrenJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'childrenTools.icon.childrenJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'childrenTools.icon.childrenJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'childrenTools.icon.childrenJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'childrenTools.icon.childrenJson.What_makes_Vega_different'
   | 'childrenTools.icon.childrenJson.What_s_going_on'
@@ -6026,6 +6032,7 @@ type Json = Node & {
   readonly We_are_not_network_operators: Maybe<Scalars['String']>;
   readonly We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_: Maybe<Scalars['String']>;
   readonly We_don_t_currently_have_any_open_job_roles_: Maybe<Scalars['String']>;
+  readonly We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_: Maybe<Scalars['String']>;
   readonly Weekly_live_streams__Thursdays_6pm_BST_UTC_1_: Maybe<Scalars['String']>;
   readonly What_makes_Vega_different: Maybe<Scalars['String']>;
   readonly What_s_going_on: Maybe<Scalars['String']>;
@@ -6587,6 +6594,7 @@ type JsonFieldsEnum =
   | 'We_are_not_network_operators'
   | 'We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'We_don_t_currently_have_any_open_job_roles_'
+  | 'We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'What_makes_Vega_different'
   | 'What_s_going_on'
@@ -7191,6 +7199,7 @@ type JsonFilterInput = {
   readonly We_are_not_network_operators: InputMaybe<StringQueryOperatorInput>;
   readonly We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_: InputMaybe<StringQueryOperatorInput>;
   readonly We_don_t_currently_have_any_open_job_roles_: InputMaybe<StringQueryOperatorInput>;
+  readonly We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_: InputMaybe<StringQueryOperatorInput>;
   readonly Weekly_live_streams__Thursdays_6pm_BST_UTC_1_: InputMaybe<StringQueryOperatorInput>;
   readonly What_makes_Vega_different: InputMaybe<StringQueryOperatorInput>;
   readonly What_s_going_on: InputMaybe<StringQueryOperatorInput>;
@@ -8174,6 +8183,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.We_are_not_network_operators'
   | 'frontmatter.featuredImage.childJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'frontmatter.featuredImage.childJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'frontmatter.featuredImage.childJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'frontmatter.featuredImage.childJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'frontmatter.featuredImage.childJson.What_makes_Vega_different'
   | 'frontmatter.featuredImage.childJson.What_s_going_on'
@@ -8718,6 +8728,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.We_are_not_network_operators'
   | 'frontmatter.featuredImage.childrenJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'frontmatter.featuredImage.childrenJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'frontmatter.featuredImage.childrenJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'frontmatter.featuredImage.childrenJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'frontmatter.featuredImage.childrenJson.What_makes_Vega_different'
   | 'frontmatter.featuredImage.childrenJson.What_s_going_on'
@@ -11365,6 +11376,7 @@ type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
   readonly originalWidth: Maybe<Scalars['Int']>;
+  readonly repairedAt: Maybe<Scalars['Int']>;
   readonly unsplashPhotoId: Maybe<Scalars['String']>;
 };
 
@@ -11379,6 +11391,7 @@ type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
   readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
+  readonly repairedAt: InputMaybe<IntQueryOperatorInput>;
   readonly unsplashPhotoId: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -12845,6 +12858,7 @@ type Query_jsonArgs = {
   We_are_not_network_operators: InputMaybe<StringQueryOperatorInput>;
   We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_: InputMaybe<StringQueryOperatorInput>;
   We_don_t_currently_have_any_open_job_roles_: InputMaybe<StringQueryOperatorInput>;
+  We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_: InputMaybe<StringQueryOperatorInput>;
   Weekly_live_streams__Thursdays_6pm_BST_UTC_1_: InputMaybe<StringQueryOperatorInput>;
   What_makes_Vega_different: InputMaybe<StringQueryOperatorInput>;
   What_s_going_on: InputMaybe<StringQueryOperatorInput>;
@@ -15462,6 +15476,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.We_are_not_network_operators'
   | 'icon.childJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'icon.childJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'icon.childJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'icon.childJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'icon.childJson.What_makes_Vega_different'
   | 'icon.childJson.What_s_going_on'
@@ -16164,6 +16179,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.We_are_not_network_operators'
   | 'icon.childrenJson.We_celebrate_our_ambassadors_and_their_work__Complete_tasks_to_top_the_leaderboard__rise_up_the_ranks__and_see_your_name_here_'
   | 'icon.childrenJson.We_don_t_currently_have_any_open_job_roles_'
+  | 'icon.childrenJson.We_re_about_to_redirect_you_to_Console_on_Fairground__Vega_s_incentivised_testnet__Look_out_for_the_launch_of_trading_on_mainnet_soon_'
   | 'icon.childrenJson.Weekly_live_streams__Thursdays_6pm_BST_UTC_1_'
   | 'icon.childrenJson.What_makes_Vega_different'
   | 'icon.childrenJson.What_s_going_on'
