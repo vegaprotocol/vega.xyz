@@ -112,7 +112,7 @@ const IndexPage = ({ data }) => {
                   </h1>
                   <LeadingLine className="!mb-0 text-current lg:text-[1.75rem]">
                     <Trans t={t}>
-                      Vega is a Derivatives DEX optimised for permissionless market creation. Currently supports Futures trading with a fully decentralised on-chain order book.
+                      Vega is a derivatives DEX optimised for permissionless market creation. Currently supports futures trading with a fully decentralised on-chain order book.
                     </Trans>
                   </LeadingLine>
                 </div>
