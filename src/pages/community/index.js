@@ -122,7 +122,7 @@ const CommunityPage = ({ data }) => {
           <ToolBox
             title={t('Github')}
             text={t(
-              'Public repositories for Vega Protocol including related apps and tools.'
+              'Explore our online repositories, or collaborate with the Vega teams.'
             )}
             link="https://github.com/vegaprotocol"
             icon={getImage(data.iconGithub)}
