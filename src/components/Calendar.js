@@ -50,7 +50,7 @@ const Calendar = ({ limit = false, filter = false }) => {
             return extractData(elem)
           }
         })
-        .filter((el) => el !== null)
+        .filter((el) => el !== null && el.date.length > 0)
 
       // sort events by date
       let sortedEvents = result.sort(
