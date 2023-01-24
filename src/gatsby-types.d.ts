@@ -993,6 +993,7 @@ type FileFieldsEnum =
   | 'childJson.Provide_liquidity'
   | 'childJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'childJson.Pseudonymous_trading'
+  | 'childJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'childJson.Purpose_built_bespoke_blockchain'
   | 'childJson.Purpose_built_blockchain'
   | 'childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -1740,6 +1741,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Provide_liquidity'
   | 'childTools.icon.childJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'childTools.icon.childJson.Pseudonymous_trading'
+  | 'childTools.icon.childJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'childTools.icon.childJson.Purpose_built_bespoke_blockchain'
   | 'childTools.icon.childJson.Purpose_built_blockchain'
   | 'childTools.icon.childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -2285,6 +2287,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Provide_liquidity'
   | 'childTools.icon.childrenJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'childTools.icon.childrenJson.Pseudonymous_trading'
+  | 'childTools.icon.childrenJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'childTools.icon.childrenJson.Purpose_built_bespoke_blockchain'
   | 'childTools.icon.childrenJson.Purpose_built_blockchain'
   | 'childTools.icon.childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -2967,6 +2970,7 @@ type FileFieldsEnum =
   | 'childrenJson.Provide_liquidity'
   | 'childrenJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'childrenJson.Pseudonymous_trading'
+  | 'childrenJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'childrenJson.Purpose_built_bespoke_blockchain'
   | 'childrenJson.Purpose_built_blockchain'
   | 'childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -3717,6 +3721,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Provide_liquidity'
   | 'childrenTools.icon.childJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'childrenTools.icon.childJson.Pseudonymous_trading'
+  | 'childrenTools.icon.childJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'childrenTools.icon.childJson.Purpose_built_bespoke_blockchain'
   | 'childrenTools.icon.childJson.Purpose_built_blockchain'
   | 'childrenTools.icon.childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -4262,6 +4267,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Provide_liquidity'
   | 'childrenTools.icon.childrenJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'childrenTools.icon.childrenJson.Pseudonymous_trading'
+  | 'childrenTools.icon.childrenJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'childrenTools.icon.childrenJson.Purpose_built_bespoke_blockchain'
   | 'childrenTools.icon.childrenJson.Purpose_built_blockchain'
   | 'childrenTools.icon.childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -5880,6 +5886,7 @@ type Json = Node & {
   readonly Provide_liquidity: Maybe<Scalars['String']>;
   readonly Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_: Maybe<Scalars['String']>;
   readonly Pseudonymous_trading: Maybe<Scalars['String']>;
+  readonly Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_: Maybe<Scalars['String']>;
   readonly Purpose_built_bespoke_blockchain: Maybe<Scalars['String']>;
   readonly Purpose_built_blockchain: Maybe<Scalars['String']>;
   readonly Query_the_Vega_network_APIs_to_retrieve_on_chain_data_: Maybe<Scalars['String']>;
@@ -6442,6 +6449,7 @@ type JsonFieldsEnum =
   | 'Provide_liquidity'
   | 'Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'Pseudonymous_trading'
+  | 'Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'Purpose_built_bespoke_blockchain'
   | 'Purpose_built_blockchain'
   | 'Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -7047,6 +7055,7 @@ type JsonFilterInput = {
   readonly Provide_liquidity: InputMaybe<StringQueryOperatorInput>;
   readonly Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_: InputMaybe<StringQueryOperatorInput>;
   readonly Pseudonymous_trading: InputMaybe<StringQueryOperatorInput>;
+  readonly Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_: InputMaybe<StringQueryOperatorInput>;
   readonly Purpose_built_bespoke_blockchain: InputMaybe<StringQueryOperatorInput>;
   readonly Purpose_built_blockchain: InputMaybe<StringQueryOperatorInput>;
   readonly Query_the_Vega_network_APIs_to_retrieve_on_chain_data_: InputMaybe<StringQueryOperatorInput>;
@@ -8031,6 +8040,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Provide_liquidity'
   | 'frontmatter.featuredImage.childJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'frontmatter.featuredImage.childJson.Pseudonymous_trading'
+  | 'frontmatter.featuredImage.childJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'frontmatter.featuredImage.childJson.Purpose_built_bespoke_blockchain'
   | 'frontmatter.featuredImage.childJson.Purpose_built_blockchain'
   | 'frontmatter.featuredImage.childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -8576,6 +8586,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Provide_liquidity'
   | 'frontmatter.featuredImage.childrenJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'frontmatter.featuredImage.childrenJson.Pseudonymous_trading'
+  | 'frontmatter.featuredImage.childrenJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'frontmatter.featuredImage.childrenJson.Purpose_built_bespoke_blockchain'
   | 'frontmatter.featuredImage.childrenJson.Purpose_built_blockchain'
   | 'frontmatter.featuredImage.childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -11376,7 +11387,6 @@ type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
   readonly originalWidth: Maybe<Scalars['Int']>;
-  readonly repairedAt: Maybe<Scalars['Int']>;
   readonly unsplashPhotoId: Maybe<Scalars['String']>;
 };
 
@@ -11391,7 +11401,6 @@ type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
   readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
-  readonly repairedAt: InputMaybe<IntQueryOperatorInput>;
   readonly unsplashPhotoId: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -12706,6 +12715,7 @@ type Query_jsonArgs = {
   Provide_liquidity: InputMaybe<StringQueryOperatorInput>;
   Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_: InputMaybe<StringQueryOperatorInput>;
   Pseudonymous_trading: InputMaybe<StringQueryOperatorInput>;
+  Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_: InputMaybe<StringQueryOperatorInput>;
   Purpose_built_bespoke_blockchain: InputMaybe<StringQueryOperatorInput>;
   Purpose_built_blockchain: InputMaybe<StringQueryOperatorInput>;
   Query_the_Vega_network_APIs_to_retrieve_on_chain_data_: InputMaybe<StringQueryOperatorInput>;
@@ -15324,6 +15334,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Provide_liquidity'
   | 'icon.childJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'icon.childJson.Pseudonymous_trading'
+  | 'icon.childJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'icon.childJson.Purpose_built_bespoke_blockchain'
   | 'icon.childJson.Purpose_built_blockchain'
   | 'icon.childJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'
@@ -16027,6 +16038,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Provide_liquidity'
   | 'icon.childrenJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
   | 'icon.childrenJson.Pseudonymous_trading'
+  | 'icon.childrenJson.Public_repositories_for_Vega_Protocol_including_related_apps_and_tools_'
   | 'icon.childrenJson.Purpose_built_bespoke_blockchain'
   | 'icon.childrenJson.Purpose_built_blockchain'
   | 'icon.childrenJson.Query_the_Vega_network_APIs_to_retrieve_on_chain_data_'

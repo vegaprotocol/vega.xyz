@@ -119,6 +119,14 @@ const CommunityPage = ({ data }) => {
             link="https://medium.com/@Vega_Protocol"
             icon={getImage(data.iconMedium)}
           />
+          <ToolBox
+            title={t('Github')}
+            text={t(
+              'Public repositories for Vega Protocol including related apps and tools.'
+            )}
+            link="https://github.com/vegaprotocol"
+            icon={getImage(data.iconGithub)}
+          />
         </div>
 
         <Callout
@@ -173,7 +181,7 @@ const CommunityPage = ({ data }) => {
               'Contribute to the source code, and get building with our APIs.'
             )}
             link="https://github.com/vegaprotocol/"
-            icon={getImage(data.iconGithub)}
+            icon={getImage(data.iconWhereGithub)}
           />
           <ToolBox
             title={t('Docs')}
@@ -300,6 +308,15 @@ export const query = graphql`
         )
       }
     }
+    iconGithub: file(relativePath: { eq: "social-icons/github.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
     iconAmbassador: file(
       relativePath: { eq: "contribute-icons/ambassador.png" }
     ) {
@@ -342,7 +359,7 @@ export const query = graphql`
         )
       }
     }
-    iconGithub: file(relativePath: { eq: "contribute-icons/github.png" }) {
+    iconWhereGithub: file(relativePath: { eq: "contribute-icons/github.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 96
