@@ -214,14 +214,16 @@ const WalletPage = () => {
               wallets, multiple keys — and get access to the Vega network.
             </Trans>
           </LeadingLine>
-          <DownloadButton
-            binaries={binaries}
-            title={t('Download desktop app (Mainnet)')}
-          />
-          <DownloadButton
-            binaries={fairgroundBinaries}
-            title={t('Download desktop app (Fairground)')}
-          />
+          <div className="lg:flex lg:items-center lg:justify-center lg:gap-x-space-5">
+            <DownloadButton
+              binaries={binaries}
+              title={t('Download desktop app (Mainnet)')}
+            />
+            <DownloadButton
+              binaries={fairgroundBinaries}
+              title={t('Download desktop app (Fairground)')}
+            />
+          </div>
           <div className="mt-space-5 text-center">
             <Button
               variant="secondary"
