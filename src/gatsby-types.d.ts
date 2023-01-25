@@ -779,6 +779,7 @@ type FileFieldsEnum =
   | 'childJson.Docs'
   | 'childJson.Docs___Hackathons___Coding_support'
   | 'childJson.Documentation'
+  | 'childJson.Download_desktop_app__Fairground_'
   | 'childJson.Download_desktop_app__Mainnet_'
   | 'childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'childJson.Dynamic_margins_with_cross_margining'
@@ -1526,6 +1527,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Docs'
   | 'childTools.icon.childJson.Docs___Hackathons___Coding_support'
   | 'childTools.icon.childJson.Documentation'
+  | 'childTools.icon.childJson.Download_desktop_app__Fairground_'
   | 'childTools.icon.childJson.Download_desktop_app__Mainnet_'
   | 'childTools.icon.childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'childTools.icon.childJson.Dynamic_margins_with_cross_margining'
@@ -2071,6 +2073,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Docs'
   | 'childTools.icon.childrenJson.Docs___Hackathons___Coding_support'
   | 'childTools.icon.childrenJson.Documentation'
+  | 'childTools.icon.childrenJson.Download_desktop_app__Fairground_'
   | 'childTools.icon.childrenJson.Download_desktop_app__Mainnet_'
   | 'childTools.icon.childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'childTools.icon.childrenJson.Dynamic_margins_with_cross_margining'
@@ -2753,6 +2756,7 @@ type FileFieldsEnum =
   | 'childrenJson.Docs'
   | 'childrenJson.Docs___Hackathons___Coding_support'
   | 'childrenJson.Documentation'
+  | 'childrenJson.Download_desktop_app__Fairground_'
   | 'childrenJson.Download_desktop_app__Mainnet_'
   | 'childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'childrenJson.Dynamic_margins_with_cross_margining'
@@ -3503,6 +3507,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Docs'
   | 'childrenTools.icon.childJson.Docs___Hackathons___Coding_support'
   | 'childrenTools.icon.childJson.Documentation'
+  | 'childrenTools.icon.childJson.Download_desktop_app__Fairground_'
   | 'childrenTools.icon.childJson.Download_desktop_app__Mainnet_'
   | 'childrenTools.icon.childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'childrenTools.icon.childJson.Dynamic_margins_with_cross_margining'
@@ -4048,6 +4053,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Docs'
   | 'childrenTools.icon.childrenJson.Docs___Hackathons___Coding_support'
   | 'childrenTools.icon.childrenJson.Documentation'
+  | 'childrenTools.icon.childrenJson.Download_desktop_app__Fairground_'
   | 'childrenTools.icon.childrenJson.Download_desktop_app__Mainnet_'
   | 'childrenTools.icon.childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'childrenTools.icon.childrenJson.Dynamic_margins_with_cross_margining'
@@ -5666,6 +5672,7 @@ type Json = Node & {
   readonly Docs: Maybe<Scalars['String']>;
   readonly Docs___Hackathons___Coding_support: Maybe<Scalars['String']>;
   readonly Documentation: Maybe<Scalars['String']>;
+  readonly Download_desktop_app__Fairground_: Maybe<Scalars['String']>;
   readonly Download_desktop_app__Mainnet_: Maybe<Scalars['String']>;
   readonly Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_: Maybe<Scalars['String']>;
   readonly Dynamic_margins_with_cross_margining: Maybe<Scalars['String']>;
@@ -6228,6 +6235,7 @@ type JsonFieldsEnum =
   | 'Docs'
   | 'Docs___Hackathons___Coding_support'
   | 'Documentation'
+  | 'Download_desktop_app__Fairground_'
   | 'Download_desktop_app__Mainnet_'
   | 'Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'Dynamic_margins_with_cross_margining'
@@ -6833,6 +6841,7 @@ type JsonFilterInput = {
   readonly Docs: InputMaybe<StringQueryOperatorInput>;
   readonly Docs___Hackathons___Coding_support: InputMaybe<StringQueryOperatorInput>;
   readonly Documentation: InputMaybe<StringQueryOperatorInput>;
+  readonly Download_desktop_app__Fairground_: InputMaybe<StringQueryOperatorInput>;
   readonly Download_desktop_app__Mainnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_: InputMaybe<StringQueryOperatorInput>;
   readonly Dynamic_margins_with_cross_margining: InputMaybe<StringQueryOperatorInput>;
@@ -7817,6 +7826,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Docs'
   | 'frontmatter.featuredImage.childJson.Docs___Hackathons___Coding_support'
   | 'frontmatter.featuredImage.childJson.Documentation'
+  | 'frontmatter.featuredImage.childJson.Download_desktop_app__Fairground_'
   | 'frontmatter.featuredImage.childJson.Download_desktop_app__Mainnet_'
   | 'frontmatter.featuredImage.childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'frontmatter.featuredImage.childJson.Dynamic_margins_with_cross_margining'
@@ -8362,6 +8372,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Docs'
   | 'frontmatter.featuredImage.childrenJson.Docs___Hackathons___Coding_support'
   | 'frontmatter.featuredImage.childrenJson.Documentation'
+  | 'frontmatter.featuredImage.childrenJson.Download_desktop_app__Fairground_'
   | 'frontmatter.featuredImage.childrenJson.Download_desktop_app__Mainnet_'
   | 'frontmatter.featuredImage.childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'frontmatter.featuredImage.childrenJson.Dynamic_margins_with_cross_margining'
@@ -11376,6 +11387,7 @@ type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
   readonly originalWidth: Maybe<Scalars['Int']>;
+  readonly repairedAt: Maybe<Scalars['Int']>;
   readonly unsplashPhotoId: Maybe<Scalars['String']>;
 };
 
@@ -11390,6 +11402,7 @@ type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
   readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
+  readonly repairedAt: InputMaybe<IntQueryOperatorInput>;
   readonly unsplashPhotoId: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -12490,6 +12503,7 @@ type Query_jsonArgs = {
   Docs: InputMaybe<StringQueryOperatorInput>;
   Docs___Hackathons___Coding_support: InputMaybe<StringQueryOperatorInput>;
   Documentation: InputMaybe<StringQueryOperatorInput>;
+  Download_desktop_app__Fairground_: InputMaybe<StringQueryOperatorInput>;
   Download_desktop_app__Mainnet_: InputMaybe<StringQueryOperatorInput>;
   Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_: InputMaybe<StringQueryOperatorInput>;
   Dynamic_margins_with_cross_margining: InputMaybe<StringQueryOperatorInput>;
@@ -15108,6 +15122,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Docs'
   | 'icon.childJson.Docs___Hackathons___Coding_support'
   | 'icon.childJson.Documentation'
+  | 'icon.childJson.Download_desktop_app__Fairground_'
   | 'icon.childJson.Download_desktop_app__Mainnet_'
   | 'icon.childJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'icon.childJson.Dynamic_margins_with_cross_margining'
@@ -15811,6 +15826,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Docs'
   | 'icon.childrenJson.Docs___Hackathons___Coding_support'
   | 'icon.childrenJson.Documentation'
+  | 'icon.childrenJson.Download_desktop_app__Fairground_'
   | 'icon.childrenJson.Download_desktop_app__Mainnet_'
   | 'icon.childrenJson.Download_the_Vega_Wallet_desktop_app__to_help_you_manage_multiple_wallets__multiple_keys___and_get_access_to_the_Vega_network_'
   | 'icon.childrenJson.Dynamic_margins_with_cross_margining'
