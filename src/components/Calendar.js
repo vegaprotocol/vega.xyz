@@ -75,15 +75,27 @@ const Calendar = ({ limit = false, filter = false }) => {
       setEvents(sortedEvents)
     }
     fetchEvents()
-  }, [limit])
+  }, [limit, filter])
 
   return (
-    <div className="border-t border-current">
-      <div>
-        {events &&
-          events.map((event, idx) => <CalendarEvent key={idx} event={event} />)}
-      </div>
-      {limit && <ButtonLink link="/community/events" text={t('See more')} />}
+    <div>
+      {events && events.length > 0 && (
+        <div className="border-t border-current">
+          <div>
+            {events.map((event, idx) => (
+              <CalendarEvent key={idx} event={event} />
+            ))}
+          </div>
+          {limit && (
+            <ButtonLink link="/community/events" text={t('See more')} />
+          )}
+        </div>
+      )}
+      {events && events.length === 0 && (
+        <div className="body-l mb-space-10">
+          {t("Things are a little quiet. Check back to see what's on.")}
+        </div>
+      )}
     </div>
   )
 }
