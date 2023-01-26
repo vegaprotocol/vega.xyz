@@ -806,6 +806,7 @@ type FileFieldsEnum =
   | 'childJson.Explore'
   | 'childJson.Explore_all_proposals'
   | 'childJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'childJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'childJson.Explore_real_time_Vega_blockchain_information_'
   | 'childJson.Explore_the_docs'
   | 'childJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -1555,6 +1556,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Explore'
   | 'childTools.icon.childJson.Explore_all_proposals'
   | 'childTools.icon.childJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'childTools.icon.childJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'childTools.icon.childJson.Explore_real_time_Vega_blockchain_information_'
   | 'childTools.icon.childJson.Explore_the_docs'
   | 'childTools.icon.childJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -2102,6 +2104,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Explore'
   | 'childTools.icon.childrenJson.Explore_all_proposals'
   | 'childTools.icon.childrenJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'childTools.icon.childrenJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'childTools.icon.childrenJson.Explore_real_time_Vega_blockchain_information_'
   | 'childTools.icon.childrenJson.Explore_the_docs'
   | 'childTools.icon.childrenJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -2786,6 +2789,7 @@ type FileFieldsEnum =
   | 'childrenJson.Explore'
   | 'childrenJson.Explore_all_proposals'
   | 'childrenJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'childrenJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'childrenJson.Explore_real_time_Vega_blockchain_information_'
   | 'childrenJson.Explore_the_docs'
   | 'childrenJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -3538,6 +3542,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Explore'
   | 'childrenTools.icon.childJson.Explore_all_proposals'
   | 'childrenTools.icon.childJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'childrenTools.icon.childJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'childrenTools.icon.childJson.Explore_real_time_Vega_blockchain_information_'
   | 'childrenTools.icon.childJson.Explore_the_docs'
   | 'childrenTools.icon.childJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -4085,6 +4090,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Explore'
   | 'childrenTools.icon.childrenJson.Explore_all_proposals'
   | 'childrenTools.icon.childrenJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'childrenTools.icon.childrenJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'childrenTools.icon.childrenJson.Explore_real_time_Vega_blockchain_information_'
   | 'childrenTools.icon.childrenJson.Explore_the_docs'
   | 'childrenTools.icon.childrenJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -5705,6 +5711,7 @@ type Json = Node & {
   readonly Explore: Maybe<Scalars['String']>;
   readonly Explore_all_proposals: Maybe<Scalars['String']>;
   readonly Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_: Maybe<Scalars['String']>;
+  readonly Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_: Maybe<Scalars['String']>;
   readonly Explore_real_time_Vega_blockchain_information_: Maybe<Scalars['String']>;
   readonly Explore_the_docs: Maybe<Scalars['String']>;
   readonly Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_: Maybe<Scalars['String']>;
@@ -6269,6 +6276,7 @@ type JsonFieldsEnum =
   | 'Explore'
   | 'Explore_all_proposals'
   | 'Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'Explore_real_time_Vega_blockchain_information_'
   | 'Explore_the_docs'
   | 'Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -6876,6 +6884,7 @@ type JsonFilterInput = {
   readonly Explore: InputMaybe<StringQueryOperatorInput>;
   readonly Explore_all_proposals: InputMaybe<StringQueryOperatorInput>;
   readonly Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_: InputMaybe<StringQueryOperatorInput>;
+  readonly Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_: InputMaybe<StringQueryOperatorInput>;
   readonly Explore_real_time_Vega_blockchain_information_: InputMaybe<StringQueryOperatorInput>;
   readonly Explore_the_docs: InputMaybe<StringQueryOperatorInput>;
   readonly Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_: InputMaybe<StringQueryOperatorInput>;
@@ -7862,6 +7871,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Explore'
   | 'frontmatter.featuredImage.childJson.Explore_all_proposals'
   | 'frontmatter.featuredImage.childJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'frontmatter.featuredImage.childJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'frontmatter.featuredImage.childJson.Explore_real_time_Vega_blockchain_information_'
   | 'frontmatter.featuredImage.childJson.Explore_the_docs'
   | 'frontmatter.featuredImage.childJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -8409,6 +8419,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Explore'
   | 'frontmatter.featuredImage.childrenJson.Explore_all_proposals'
   | 'frontmatter.featuredImage.childrenJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'frontmatter.featuredImage.childrenJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'frontmatter.featuredImage.childrenJson.Explore_real_time_Vega_blockchain_information_'
   | 'frontmatter.featuredImage.childrenJson.Explore_the_docs'
   | 'frontmatter.featuredImage.childrenJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -11398,7 +11409,6 @@ type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
   readonly originalWidth: Maybe<Scalars['Int']>;
-  readonly repairedAt: Maybe<Scalars['Int']>;
   readonly unsplashPhotoId: Maybe<Scalars['String']>;
 };
 
@@ -11413,7 +11423,6 @@ type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
   readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
-  readonly repairedAt: InputMaybe<IntQueryOperatorInput>;
   readonly unsplashPhotoId: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -12541,6 +12550,7 @@ type Query_jsonArgs = {
   Explore: InputMaybe<StringQueryOperatorInput>;
   Explore_all_proposals: InputMaybe<StringQueryOperatorInput>;
   Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_: InputMaybe<StringQueryOperatorInput>;
+  Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_: InputMaybe<StringQueryOperatorInput>;
   Explore_real_time_Vega_blockchain_information_: InputMaybe<StringQueryOperatorInput>;
   Explore_the_docs: InputMaybe<StringQueryOperatorInput>;
   Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_: InputMaybe<StringQueryOperatorInput>;
@@ -15161,6 +15171,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Explore'
   | 'icon.childJson.Explore_all_proposals'
   | 'icon.childJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'icon.childJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'icon.childJson.Explore_real_time_Vega_blockchain_information_'
   | 'icon.childJson.Explore_the_docs'
   | 'icon.childJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
@@ -15866,6 +15877,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Explore'
   | 'icon.childrenJson.Explore_all_proposals'
   | 'icon.childrenJson.Explore_how_Vega_bridges_traditional_finance_and_DeFi_to_create_a_bespoke_trading_alternative_'
+  | 'icon.childrenJson.Explore_our_online_repositories__or_collaborate_with_the_Vega_teams_'
   | 'icon.childrenJson.Explore_real_time_Vega_blockchain_information_'
   | 'icon.childrenJson.Explore_the_docs'
   | 'icon.childrenJson.Explore_the_features_that_enable_you_to_trade_and_create_derivatives_on_a_fully_decentralised_network_'
