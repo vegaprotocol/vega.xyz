@@ -717,6 +717,7 @@ type FileFieldsEnum =
   | 'childJson.Bug_bounties'
   | 'childJson.Build'
   | 'childJson.Build___send_commands'
+  | 'childJson.Build__test___earn'
   | 'childJson.Builders_Club'
   | 'childJson.Builders_club'
   | 'childJson.Building_on_Vega_Parts_I_and_II'
@@ -899,6 +900,7 @@ type FileFieldsEnum =
   | 'childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childJson.Join'
   | 'childJson.Join_a_team'
+  | 'childJson.Join_the_Mainnet_Sims_now'
   | 'childJson.Join_the_Vega_community'
   | 'childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childJson.Join_the_builders_club'
@@ -931,12 +933,10 @@ type FileFieldsEnum =
   | 'childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childJson.Load_more___'
   | 'childJson.Loading___'
-  | 'childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childJson.Made_by___author__'
   | 'childJson.Mainnet_Docs'
-  | 'childJson.Mainnet_Sims'
   | 'childJson.Make_a_proposal'
   | 'childJson.Manage_multiple_wallets_and_keys'
   | 'childJson.Market_Creation'
@@ -1164,6 +1164,7 @@ type FileFieldsEnum =
   | 'childJson.You_will_be_redirected_in_'
   | 'childJson.Your_career_in_Defi_starts_here'
   | 'childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childJson._0_Click_here_to_contribute__0__'
   | 'childJson._VEGA_paid_out_this_epoch'
@@ -1469,6 +1470,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Bug_bounties'
   | 'childTools.icon.childJson.Build'
   | 'childTools.icon.childJson.Build___send_commands'
+  | 'childTools.icon.childJson.Build__test___earn'
   | 'childTools.icon.childJson.Builders_Club'
   | 'childTools.icon.childJson.Builders_club'
   | 'childTools.icon.childJson.Building_on_Vega_Parts_I_and_II'
@@ -1651,6 +1653,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childTools.icon.childJson.Join'
   | 'childTools.icon.childJson.Join_a_team'
+  | 'childTools.icon.childJson.Join_the_Mainnet_Sims_now'
   | 'childTools.icon.childJson.Join_the_Vega_community'
   | 'childTools.icon.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childTools.icon.childJson.Join_the_builders_club'
@@ -1683,12 +1686,10 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childTools.icon.childJson.Load_more___'
   | 'childTools.icon.childJson.Loading___'
-  | 'childTools.icon.childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childTools.icon.childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childTools.icon.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childTools.icon.childJson.Made_by___author__'
   | 'childTools.icon.childJson.Mainnet_Docs'
-  | 'childTools.icon.childJson.Mainnet_Sims'
   | 'childTools.icon.childJson.Make_a_proposal'
   | 'childTools.icon.childJson.Manage_multiple_wallets_and_keys'
   | 'childTools.icon.childJson.Market_Creation'
@@ -1916,6 +1917,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.You_will_be_redirected_in_'
   | 'childTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childTools.icon.childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childTools.icon.childJson._0_Click_here_to_contribute__0__'
   | 'childTools.icon.childJson._VEGA_paid_out_this_epoch'
@@ -2019,6 +2021,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Bug_bounties'
   | 'childTools.icon.childrenJson.Build'
   | 'childTools.icon.childrenJson.Build___send_commands'
+  | 'childTools.icon.childrenJson.Build__test___earn'
   | 'childTools.icon.childrenJson.Builders_Club'
   | 'childTools.icon.childrenJson.Builders_club'
   | 'childTools.icon.childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -2201,6 +2204,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childTools.icon.childrenJson.Join'
   | 'childTools.icon.childrenJson.Join_a_team'
+  | 'childTools.icon.childrenJson.Join_the_Mainnet_Sims_now'
   | 'childTools.icon.childrenJson.Join_the_Vega_community'
   | 'childTools.icon.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childTools.icon.childrenJson.Join_the_builders_club'
@@ -2233,12 +2237,10 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childTools.icon.childrenJson.Load_more___'
   | 'childTools.icon.childrenJson.Loading___'
-  | 'childTools.icon.childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childTools.icon.childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childTools.icon.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childTools.icon.childrenJson.Made_by___author__'
   | 'childTools.icon.childrenJson.Mainnet_Docs'
-  | 'childTools.icon.childrenJson.Mainnet_Sims'
   | 'childTools.icon.childrenJson.Make_a_proposal'
   | 'childTools.icon.childrenJson.Manage_multiple_wallets_and_keys'
   | 'childTools.icon.childrenJson.Market_Creation'
@@ -2466,6 +2468,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.You_will_be_redirected_in_'
   | 'childTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childTools.icon.childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childTools.icon.childrenJson._0_Click_here_to_contribute__0__'
   | 'childTools.icon.childrenJson._VEGA_paid_out_this_epoch'
@@ -2706,6 +2709,7 @@ type FileFieldsEnum =
   | 'childrenJson.Bug_bounties'
   | 'childrenJson.Build'
   | 'childrenJson.Build___send_commands'
+  | 'childrenJson.Build__test___earn'
   | 'childrenJson.Builders_Club'
   | 'childrenJson.Builders_club'
   | 'childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -2888,6 +2892,7 @@ type FileFieldsEnum =
   | 'childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenJson.Join'
   | 'childrenJson.Join_a_team'
+  | 'childrenJson.Join_the_Mainnet_Sims_now'
   | 'childrenJson.Join_the_Vega_community'
   | 'childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childrenJson.Join_the_builders_club'
@@ -2920,12 +2925,10 @@ type FileFieldsEnum =
   | 'childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenJson.Load_more___'
   | 'childrenJson.Loading___'
-  | 'childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childrenJson.Made_by___author__'
   | 'childrenJson.Mainnet_Docs'
-  | 'childrenJson.Mainnet_Sims'
   | 'childrenJson.Make_a_proposal'
   | 'childrenJson.Manage_multiple_wallets_and_keys'
   | 'childrenJson.Market_Creation'
@@ -3153,6 +3156,7 @@ type FileFieldsEnum =
   | 'childrenJson.You_will_be_redirected_in_'
   | 'childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenJson._0_Click_here_to_contribute__0__'
   | 'childrenJson._VEGA_paid_out_this_epoch'
@@ -3461,6 +3465,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Bug_bounties'
   | 'childrenTools.icon.childJson.Build'
   | 'childrenTools.icon.childJson.Build___send_commands'
+  | 'childrenTools.icon.childJson.Build__test___earn'
   | 'childrenTools.icon.childJson.Builders_Club'
   | 'childrenTools.icon.childJson.Builders_club'
   | 'childrenTools.icon.childJson.Building_on_Vega_Parts_I_and_II'
@@ -3643,6 +3648,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenTools.icon.childJson.Join'
   | 'childrenTools.icon.childJson.Join_a_team'
+  | 'childrenTools.icon.childJson.Join_the_Mainnet_Sims_now'
   | 'childrenTools.icon.childJson.Join_the_Vega_community'
   | 'childrenTools.icon.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childrenTools.icon.childJson.Join_the_builders_club'
@@ -3675,12 +3681,10 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenTools.icon.childJson.Load_more___'
   | 'childrenTools.icon.childJson.Loading___'
-  | 'childrenTools.icon.childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childrenTools.icon.childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childrenTools.icon.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childrenTools.icon.childJson.Made_by___author__'
   | 'childrenTools.icon.childJson.Mainnet_Docs'
-  | 'childrenTools.icon.childJson.Mainnet_Sims'
   | 'childrenTools.icon.childJson.Make_a_proposal'
   | 'childrenTools.icon.childJson.Manage_multiple_wallets_and_keys'
   | 'childrenTools.icon.childJson.Market_Creation'
@@ -3908,6 +3912,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.You_will_be_redirected_in_'
   | 'childrenTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childrenTools.icon.childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childrenTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenTools.icon.childJson._0_Click_here_to_contribute__0__'
   | 'childrenTools.icon.childJson._VEGA_paid_out_this_epoch'
@@ -4011,6 +4016,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Bug_bounties'
   | 'childrenTools.icon.childrenJson.Build'
   | 'childrenTools.icon.childrenJson.Build___send_commands'
+  | 'childrenTools.icon.childrenJson.Build__test___earn'
   | 'childrenTools.icon.childrenJson.Builders_Club'
   | 'childrenTools.icon.childrenJson.Builders_club'
   | 'childrenTools.icon.childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -4193,6 +4199,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenTools.icon.childrenJson.Join'
   | 'childrenTools.icon.childrenJson.Join_a_team'
+  | 'childrenTools.icon.childrenJson.Join_the_Mainnet_Sims_now'
   | 'childrenTools.icon.childrenJson.Join_the_Vega_community'
   | 'childrenTools.icon.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childrenTools.icon.childrenJson.Join_the_builders_club'
@@ -4225,12 +4232,10 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenTools.icon.childrenJson.Load_more___'
   | 'childrenTools.icon.childrenJson.Loading___'
-  | 'childrenTools.icon.childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childrenTools.icon.childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childrenTools.icon.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childrenTools.icon.childrenJson.Made_by___author__'
   | 'childrenTools.icon.childrenJson.Mainnet_Docs'
-  | 'childrenTools.icon.childrenJson.Mainnet_Sims'
   | 'childrenTools.icon.childrenJson.Make_a_proposal'
   | 'childrenTools.icon.childrenJson.Manage_multiple_wallets_and_keys'
   | 'childrenTools.icon.childrenJson.Market_Creation'
@@ -4458,6 +4463,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.You_will_be_redirected_in_'
   | 'childrenTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childrenTools.icon.childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childrenTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenTools.icon.childrenJson._0_Click_here_to_contribute__0__'
   | 'childrenTools.icon.childrenJson._VEGA_paid_out_this_epoch'
@@ -5634,6 +5640,7 @@ type Json = Node & {
   readonly Bug_bounties: Maybe<Scalars['String']>;
   readonly Build: Maybe<Scalars['String']>;
   readonly Build___send_commands: Maybe<Scalars['String']>;
+  readonly Build__test___earn: Maybe<Scalars['String']>;
   readonly Builders_Club: Maybe<Scalars['String']>;
   readonly Builders_club: Maybe<Scalars['String']>;
   readonly Building_on_Vega_Parts_I_and_II: Maybe<Scalars['String']>;
@@ -5816,6 +5823,7 @@ type Json = Node & {
   readonly It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: Maybe<Scalars['String']>;
   readonly Join: Maybe<Scalars['String']>;
   readonly Join_a_team: Maybe<Scalars['String']>;
+  readonly Join_the_Mainnet_Sims_now: Maybe<Scalars['String']>;
   readonly Join_the_Vega_community: Maybe<Scalars['String']>;
   readonly Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: Maybe<Scalars['String']>;
   readonly Join_the_builders_club: Maybe<Scalars['String']>;
@@ -5848,12 +5856,10 @@ type Json = Node & {
   readonly Livestreams__conferences__research_office_hours_and_community_calls: Maybe<Scalars['String']>;
   readonly Load_more___: Maybe<Scalars['String']>;
   readonly Loading___: Maybe<Scalars['String']>;
-  readonly Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_: Maybe<Scalars['String']>;
   readonly Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_: Maybe<Scalars['String']>;
   readonly Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_: Maybe<Scalars['String']>;
   readonly Made_by___author__: Maybe<Scalars['String']>;
   readonly Mainnet_Docs: Maybe<Scalars['String']>;
-  readonly Mainnet_Sims: Maybe<Scalars['String']>;
   readonly Make_a_proposal: Maybe<Scalars['String']>;
   readonly Manage_multiple_wallets_and_keys: Maybe<Scalars['String']>;
   readonly Market_Creation: Maybe<Scalars['String']>;
@@ -6081,6 +6087,7 @@ type Json = Node & {
   readonly You_will_be_redirected_in_: Maybe<Scalars['String']>;
   readonly Your_career_in_Defi_starts_here: Maybe<Scalars['String']>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: Maybe<Scalars['String']>;
+  readonly Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_: Maybe<Scalars['String']>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: Maybe<Scalars['String']>;
   readonly _0_Click_here_to_contribute__0__: Maybe<Scalars['String']>;
   readonly _VEGA_paid_out_this_epoch: Maybe<Scalars['String']>;
@@ -6201,6 +6208,7 @@ type JsonFieldsEnum =
   | 'Bug_bounties'
   | 'Build'
   | 'Build___send_commands'
+  | 'Build__test___earn'
   | 'Builders_Club'
   | 'Builders_club'
   | 'Building_on_Vega_Parts_I_and_II'
@@ -6383,6 +6391,7 @@ type JsonFieldsEnum =
   | 'It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'Join'
   | 'Join_a_team'
+  | 'Join_the_Mainnet_Sims_now'
   | 'Join_the_Vega_community'
   | 'Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'Join_the_builders_club'
@@ -6415,12 +6424,10 @@ type JsonFieldsEnum =
   | 'Livestreams__conferences__research_office_hours_and_community_calls'
   | 'Load_more___'
   | 'Loading___'
-  | 'Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'Made_by___author__'
   | 'Mainnet_Docs'
-  | 'Mainnet_Sims'
   | 'Make_a_proposal'
   | 'Manage_multiple_wallets_and_keys'
   | 'Market_Creation'
@@ -6648,6 +6655,7 @@ type JsonFieldsEnum =
   | 'You_will_be_redirected_in_'
   | 'Your_career_in_Defi_starts_here'
   | 'Your_message_was_successfully_encrypted_and_delivered_'
+  | 'Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | '_0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | '_0_Click_here_to_contribute__0__'
   | '_VEGA_paid_out_this_epoch'
@@ -6811,6 +6819,7 @@ type JsonFilterInput = {
   readonly Bug_bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Build: InputMaybe<StringQueryOperatorInput>;
   readonly Build___send_commands: InputMaybe<StringQueryOperatorInput>;
+  readonly Build__test___earn: InputMaybe<StringQueryOperatorInput>;
   readonly Builders_Club: InputMaybe<StringQueryOperatorInput>;
   readonly Builders_club: InputMaybe<StringQueryOperatorInput>;
   readonly Building_on_Vega_Parts_I_and_II: InputMaybe<StringQueryOperatorInput>;
@@ -6993,6 +7002,7 @@ type JsonFilterInput = {
   readonly It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: InputMaybe<StringQueryOperatorInput>;
   readonly Join: InputMaybe<StringQueryOperatorInput>;
   readonly Join_a_team: InputMaybe<StringQueryOperatorInput>;
+  readonly Join_the_Mainnet_Sims_now: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_Vega_community: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_builders_club: InputMaybe<StringQueryOperatorInput>;
@@ -7025,12 +7035,10 @@ type JsonFilterInput = {
   readonly Livestreams__conferences__research_office_hours_and_community_calls: InputMaybe<StringQueryOperatorInput>;
   readonly Load_more___: InputMaybe<StringQueryOperatorInput>;
   readonly Loading___: InputMaybe<StringQueryOperatorInput>;
-  readonly Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_: InputMaybe<StringQueryOperatorInput>;
   readonly Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_: InputMaybe<StringQueryOperatorInput>;
   readonly Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_: InputMaybe<StringQueryOperatorInput>;
   readonly Made_by___author__: InputMaybe<StringQueryOperatorInput>;
   readonly Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
-  readonly Mainnet_Sims: InputMaybe<StringQueryOperatorInput>;
   readonly Make_a_proposal: InputMaybe<StringQueryOperatorInput>;
   readonly Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Creation: InputMaybe<StringQueryOperatorInput>;
@@ -7258,6 +7266,7 @@ type JsonFilterInput = {
   readonly You_will_be_redirected_in_: InputMaybe<StringQueryOperatorInput>;
   readonly Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
+  readonly Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Click_here_to_contribute__0__: InputMaybe<StringQueryOperatorInput>;
   readonly _VEGA_paid_out_this_epoch: InputMaybe<StringQueryOperatorInput>;
@@ -7800,6 +7809,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Bug_bounties'
   | 'frontmatter.featuredImage.childJson.Build'
   | 'frontmatter.featuredImage.childJson.Build___send_commands'
+  | 'frontmatter.featuredImage.childJson.Build__test___earn'
   | 'frontmatter.featuredImage.childJson.Builders_Club'
   | 'frontmatter.featuredImage.childJson.Builders_club'
   | 'frontmatter.featuredImage.childJson.Building_on_Vega_Parts_I_and_II'
@@ -7982,6 +7992,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'frontmatter.featuredImage.childJson.Join'
   | 'frontmatter.featuredImage.childJson.Join_a_team'
+  | 'frontmatter.featuredImage.childJson.Join_the_Mainnet_Sims_now'
   | 'frontmatter.featuredImage.childJson.Join_the_Vega_community'
   | 'frontmatter.featuredImage.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'frontmatter.featuredImage.childJson.Join_the_builders_club'
@@ -8014,12 +8025,10 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'frontmatter.featuredImage.childJson.Load_more___'
   | 'frontmatter.featuredImage.childJson.Loading___'
-  | 'frontmatter.featuredImage.childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'frontmatter.featuredImage.childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'frontmatter.featuredImage.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'frontmatter.featuredImage.childJson.Made_by___author__'
   | 'frontmatter.featuredImage.childJson.Mainnet_Docs'
-  | 'frontmatter.featuredImage.childJson.Mainnet_Sims'
   | 'frontmatter.featuredImage.childJson.Make_a_proposal'
   | 'frontmatter.featuredImage.childJson.Manage_multiple_wallets_and_keys'
   | 'frontmatter.featuredImage.childJson.Market_Creation'
@@ -8247,6 +8256,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.You_will_be_redirected_in_'
   | 'frontmatter.featuredImage.childJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'frontmatter.featuredImage.childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'frontmatter.featuredImage.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'frontmatter.featuredImage.childJson._0_Click_here_to_contribute__0__'
   | 'frontmatter.featuredImage.childJson._VEGA_paid_out_this_epoch'
@@ -8350,6 +8360,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Bug_bounties'
   | 'frontmatter.featuredImage.childrenJson.Build'
   | 'frontmatter.featuredImage.childrenJson.Build___send_commands'
+  | 'frontmatter.featuredImage.childrenJson.Build__test___earn'
   | 'frontmatter.featuredImage.childrenJson.Builders_Club'
   | 'frontmatter.featuredImage.childrenJson.Builders_club'
   | 'frontmatter.featuredImage.childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -8532,6 +8543,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'frontmatter.featuredImage.childrenJson.Join'
   | 'frontmatter.featuredImage.childrenJson.Join_a_team'
+  | 'frontmatter.featuredImage.childrenJson.Join_the_Mainnet_Sims_now'
   | 'frontmatter.featuredImage.childrenJson.Join_the_Vega_community'
   | 'frontmatter.featuredImage.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'frontmatter.featuredImage.childrenJson.Join_the_builders_club'
@@ -8564,12 +8576,10 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'frontmatter.featuredImage.childrenJson.Load_more___'
   | 'frontmatter.featuredImage.childrenJson.Loading___'
-  | 'frontmatter.featuredImage.childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'frontmatter.featuredImage.childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'frontmatter.featuredImage.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'frontmatter.featuredImage.childrenJson.Made_by___author__'
   | 'frontmatter.featuredImage.childrenJson.Mainnet_Docs'
-  | 'frontmatter.featuredImage.childrenJson.Mainnet_Sims'
   | 'frontmatter.featuredImage.childrenJson.Make_a_proposal'
   | 'frontmatter.featuredImage.childrenJson.Manage_multiple_wallets_and_keys'
   | 'frontmatter.featuredImage.childrenJson.Market_Creation'
@@ -8797,6 +8807,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.You_will_be_redirected_in_'
   | 'frontmatter.featuredImage.childrenJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'frontmatter.featuredImage.childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'frontmatter.featuredImage.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'frontmatter.featuredImage.childrenJson._0_Click_here_to_contribute__0__'
   | 'frontmatter.featuredImage.childrenJson._VEGA_paid_out_this_epoch'
@@ -12459,6 +12470,7 @@ type Query_jsonArgs = {
   Bug_bounties: InputMaybe<StringQueryOperatorInput>;
   Build: InputMaybe<StringQueryOperatorInput>;
   Build___send_commands: InputMaybe<StringQueryOperatorInput>;
+  Build__test___earn: InputMaybe<StringQueryOperatorInput>;
   Builders_Club: InputMaybe<StringQueryOperatorInput>;
   Builders_club: InputMaybe<StringQueryOperatorInput>;
   Building_on_Vega_Parts_I_and_II: InputMaybe<StringQueryOperatorInput>;
@@ -12641,6 +12653,7 @@ type Query_jsonArgs = {
   It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: InputMaybe<StringQueryOperatorInput>;
   Join: InputMaybe<StringQueryOperatorInput>;
   Join_a_team: InputMaybe<StringQueryOperatorInput>;
+  Join_the_Mainnet_Sims_now: InputMaybe<StringQueryOperatorInput>;
   Join_the_Vega_community: InputMaybe<StringQueryOperatorInput>;
   Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: InputMaybe<StringQueryOperatorInput>;
   Join_the_builders_club: InputMaybe<StringQueryOperatorInput>;
@@ -12673,12 +12686,10 @@ type Query_jsonArgs = {
   Livestreams__conferences__research_office_hours_and_community_calls: InputMaybe<StringQueryOperatorInput>;
   Load_more___: InputMaybe<StringQueryOperatorInput>;
   Loading___: InputMaybe<StringQueryOperatorInput>;
-  Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_: InputMaybe<StringQueryOperatorInput>;
   Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_: InputMaybe<StringQueryOperatorInput>;
   Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_: InputMaybe<StringQueryOperatorInput>;
   Made_by___author__: InputMaybe<StringQueryOperatorInput>;
   Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
-  Mainnet_Sims: InputMaybe<StringQueryOperatorInput>;
   Make_a_proposal: InputMaybe<StringQueryOperatorInput>;
   Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
   Market_Creation: InputMaybe<StringQueryOperatorInput>;
@@ -12906,6 +12917,7 @@ type Query_jsonArgs = {
   You_will_be_redirected_in_: InputMaybe<StringQueryOperatorInput>;
   Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
+  Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_: InputMaybe<StringQueryOperatorInput>;
   _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
   _0_Click_here_to_contribute__0__: InputMaybe<StringQueryOperatorInput>;
   _VEGA_paid_out_this_epoch: InputMaybe<StringQueryOperatorInput>;
@@ -15081,6 +15093,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Bug_bounties'
   | 'icon.childJson.Build'
   | 'icon.childJson.Build___send_commands'
+  | 'icon.childJson.Build__test___earn'
   | 'icon.childJson.Builders_Club'
   | 'icon.childJson.Builders_club'
   | 'icon.childJson.Building_on_Vega_Parts_I_and_II'
@@ -15263,6 +15276,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'icon.childJson.Join'
   | 'icon.childJson.Join_a_team'
+  | 'icon.childJson.Join_the_Mainnet_Sims_now'
   | 'icon.childJson.Join_the_Vega_community'
   | 'icon.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'icon.childJson.Join_the_builders_club'
@@ -15295,12 +15309,10 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'icon.childJson.Load_more___'
   | 'icon.childJson.Loading___'
-  | 'icon.childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'icon.childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'icon.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'icon.childJson.Made_by___author__'
   | 'icon.childJson.Mainnet_Docs'
-  | 'icon.childJson.Mainnet_Sims'
   | 'icon.childJson.Make_a_proposal'
   | 'icon.childJson.Manage_multiple_wallets_and_keys'
   | 'icon.childJson.Market_Creation'
@@ -15528,6 +15540,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.You_will_be_redirected_in_'
   | 'icon.childJson.Your_career_in_Defi_starts_here'
   | 'icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'icon.childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'icon.childJson._0_Click_here_to_contribute__0__'
   | 'icon.childJson._VEGA_paid_out_this_epoch'
@@ -15789,6 +15802,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Bug_bounties'
   | 'icon.childrenJson.Build'
   | 'icon.childrenJson.Build___send_commands'
+  | 'icon.childrenJson.Build__test___earn'
   | 'icon.childrenJson.Builders_Club'
   | 'icon.childrenJson.Builders_club'
   | 'icon.childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -15971,6 +15985,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'icon.childrenJson.Join'
   | 'icon.childrenJson.Join_a_team'
+  | 'icon.childrenJson.Join_the_Mainnet_Sims_now'
   | 'icon.childrenJson.Join_the_Vega_community'
   | 'icon.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'icon.childrenJson.Join_the_builders_club'
@@ -16003,12 +16018,10 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'icon.childrenJson.Load_more___'
   | 'icon.childrenJson.Loading___'
-  | 'icon.childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'icon.childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'icon.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'icon.childrenJson.Made_by___author__'
   | 'icon.childrenJson.Mainnet_Docs'
-  | 'icon.childrenJson.Mainnet_Sims'
   | 'icon.childrenJson.Make_a_proposal'
   | 'icon.childrenJson.Manage_multiple_wallets_and_keys'
   | 'icon.childrenJson.Market_Creation'
@@ -16236,6 +16249,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.You_will_be_redirected_in_'
   | 'icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'icon.childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'icon.childrenJson._0_Click_here_to_contribute__0__'
   | 'icon.childrenJson._VEGA_paid_out_this_epoch'

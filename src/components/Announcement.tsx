@@ -58,8 +58,8 @@ const Announcement = ({ title, bodyText, link }: AnnouncementProps) => {
               className="overflow-hidden"
             >
               <div className="bg-black p-[9px] dark:bg-white">
-                <div className="border border-current p-space-4 pb-space-6">
-                  <div className="heading-m !my-0">{title}</div>
+                <div className="border border-current p-space-4">
+                  <div className="heading-m relative z-10 !my-0">{title}</div>
                   <p className="body-m mt-space-3">{bodyText}</p>
                   {link && (
                     <Button

@@ -18,12 +18,17 @@ const Layout = ({ children, stickyHeader = true }) => {
           <div className="grow">
             <Header sticky={stickyHeader} />
             <div
-              className={stickyHeader ? 'mt-[4.8125rem] md:mt-[6.25rem]' : ''}
+              className={stickyHeader ? 'mt-[4.8125rem] lg:mt-[6.25rem]' : ''}
             >
               <div>
                 <SiteBanner>
-                  <Link to="https://blog.vega.xyz/build-test-earn-with-the-launch-of-mainnet-simulations-ed1546c0c4c7">
-                    Join Mainnet sims
+                  The Mainnet Sims are live!{' '}
+                  <Link
+                    to="https://blog.vega.xyz/build-test-earn-with-the-launch-of-mainnet-simulations-ed1546c0c4c7"
+                    className="underline hover:no-underline"
+                  >
+                    <br className="md:hidden" />
+                    Come help stress test the network
                   </Link>
                 </SiteBanner>
                 {children}

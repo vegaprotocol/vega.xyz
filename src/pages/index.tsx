@@ -300,12 +300,12 @@ const IndexPage = ({ data }) => {
           </PageSection>
         </Container>
         <Announcement
-          title={t('Mainnet Sims')}
+          title={t('Build, test & earn')}
           bodyText={t(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac tristique elit.'
+            'Your participation strengthens the network and can earn you a piece of up to 150k VEGA rewards.'
           )}
           link={{
-            text: t('Learn more'),
+            text: t('Join the Mainnet Sims now'),
             url: 'https://blog.vega.xyz/build-test-earn-with-the-launch-of-mainnet-simulations-ed1546c0c4c7',
           }}
         />

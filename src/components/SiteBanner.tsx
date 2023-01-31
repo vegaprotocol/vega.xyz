@@ -11,8 +11,8 @@ interface SiteBannerProps {
 
 const SiteBanner = ({ children }) => {
   return (
-    <div className="flex h-[3rem] items-center justify-center bg-moshed bg-cover">
-      <div className="heading-xxs container mx-auto  py-space-3 text-center text-white underline hover:no-underline">
+    <div className="flex min-h-[3rem] items-center justify-center bg-moshed bg-cover">
+      <div className="heading-xxs container mx-auto py-space-3 text-center !leading-normal text-white">
         {children}
       </div>
     </div>
