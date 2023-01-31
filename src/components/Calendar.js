@@ -3,7 +3,7 @@ import CalendarEvent from './CalendarEvent'
 import ButtonLink from './ButtonLink'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
-const Calendar = ({ limit = false, filter = false }) => {
+const Calendar = ({ limit = -1, filter = false }) => {
   const [events, setEvents] = useState(null)
   const { t } = useTranslation('component.calendar')
 
@@ -68,7 +68,7 @@ const Calendar = ({ limit = false, filter = false }) => {
       // return only future events
       sortedEvents = sortedEvents.slice(startOfOldEvents, sortedEvents.length)
 
-      if (limit) {
+      if (limit > 0) {
         sortedEvents = sortedEvents.slice(0, limit)
       }
 

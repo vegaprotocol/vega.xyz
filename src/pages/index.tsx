@@ -11,7 +11,7 @@ import Ticker from '../components/Ticker'
 import GlitchTitle from '../components/UI/GlitchTitle'
 import LatestNews from '../components/LatestNews'
 import LeadingLine from '../components/LeadingLine'
-import ButtonLink from '../components/ButtonLink'
+import Button from '../components/UI/Button'
 import LinkCta from '../components/LinkCta'
 import PageSection from '../components/PageSection'
 import Calendar from '../components/Calendar'
@@ -25,6 +25,7 @@ import UniverseRight from '../components/Svg/Home/UniverseRight/Responsive'
 import UniverseBottom from '../components/Svg/Home/UniverseBottom/Responsive'
 import UniverseBottom2 from '../components/Svg/Home/UniverseBottom2'
 import UniverseTop from '../components/Svg/Home/UniverseTop'
+import Announcement from '../components/Announcement'
 import PermissionlessMarketCreationIcon from '../images/feature-icons/permissionless-market-creation.svg'
 import AntiFrontRunningProtectionIcon from '../images/feature-icons/anti-front-running-protection.svg'
 import PurposeBuiltBlockChainIcon from '../images/feature-icons/purpose-built.svg'
@@ -81,7 +82,6 @@ const IndexPage = ({ data }) => {
           "Discover Web3's native derivatives trading platform that is helping DeFi mature."
         )}
       />
-
       {missingTranslations && <TranslationsBanner />}
       <main>
         <div className="relative mt-6 md:mt-8">
@@ -231,11 +231,9 @@ const IndexPage = ({ data }) => {
                 />
               </div>
               <div className="text-center">
-                <ButtonLink
-                  link="/key-concepts"
-                  text={t('View all')}
-                  className="bg-vega-mid-grey"
-                />
+                <Button to="/key-concepts">
+                  <Trans t={t}>View all</Trans>
+                </Button>
               </div>
             </div>
           </Container>
@@ -301,6 +299,16 @@ const IndexPage = ({ data }) => {
             </div>
           </PageSection>
         </Container>
+        <Announcement
+          title={t('Mainnet Sims')}
+          bodyText={t(
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac tristique elit.'
+          )}
+          link={{
+            text: t('Learn more'),
+            url: 'https://blog.vega.xyz/build-test-earn-with-the-launch-of-mainnet-simulations-ed1546c0c4c7',
+          }}
+        />
       </main>
     </Layout>
   )

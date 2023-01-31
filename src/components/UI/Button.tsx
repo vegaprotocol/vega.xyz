@@ -11,7 +11,7 @@ export interface ButtonProps {
   colorMode?: string
 }
 
-const ButtonLink = ({
+const Button = ({
   variant = 'primary',
   width,
   to,
@@ -82,4 +82,4 @@ const ButtonLink = ({
   )
 }
 
-export default ButtonLink
+export default Button

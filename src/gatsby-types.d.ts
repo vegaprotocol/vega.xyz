@@ -931,10 +931,12 @@ type FileFieldsEnum =
   | 'childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childJson.Load_more___'
   | 'childJson.Loading___'
+  | 'childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childJson.Made_by___author__'
   | 'childJson.Mainnet_Docs'
+  | 'childJson.Mainnet_Sims'
   | 'childJson.Make_a_proposal'
   | 'childJson.Manage_multiple_wallets_and_keys'
   | 'childJson.Market_Creation'
@@ -1681,10 +1683,12 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childTools.icon.childJson.Load_more___'
   | 'childTools.icon.childJson.Loading___'
+  | 'childTools.icon.childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childTools.icon.childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childTools.icon.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childTools.icon.childJson.Made_by___author__'
   | 'childTools.icon.childJson.Mainnet_Docs'
+  | 'childTools.icon.childJson.Mainnet_Sims'
   | 'childTools.icon.childJson.Make_a_proposal'
   | 'childTools.icon.childJson.Manage_multiple_wallets_and_keys'
   | 'childTools.icon.childJson.Market_Creation'
@@ -2229,10 +2233,12 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childTools.icon.childrenJson.Load_more___'
   | 'childTools.icon.childrenJson.Loading___'
+  | 'childTools.icon.childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childTools.icon.childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childTools.icon.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childTools.icon.childrenJson.Made_by___author__'
   | 'childTools.icon.childrenJson.Mainnet_Docs'
+  | 'childTools.icon.childrenJson.Mainnet_Sims'
   | 'childTools.icon.childrenJson.Make_a_proposal'
   | 'childTools.icon.childrenJson.Manage_multiple_wallets_and_keys'
   | 'childTools.icon.childrenJson.Market_Creation'
@@ -2914,10 +2920,12 @@ type FileFieldsEnum =
   | 'childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenJson.Load_more___'
   | 'childrenJson.Loading___'
+  | 'childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childrenJson.Made_by___author__'
   | 'childrenJson.Mainnet_Docs'
+  | 'childrenJson.Mainnet_Sims'
   | 'childrenJson.Make_a_proposal'
   | 'childrenJson.Manage_multiple_wallets_and_keys'
   | 'childrenJson.Market_Creation'
@@ -3667,10 +3675,12 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenTools.icon.childJson.Load_more___'
   | 'childrenTools.icon.childJson.Loading___'
+  | 'childrenTools.icon.childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childrenTools.icon.childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childrenTools.icon.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childrenTools.icon.childJson.Made_by___author__'
   | 'childrenTools.icon.childJson.Mainnet_Docs'
+  | 'childrenTools.icon.childJson.Mainnet_Sims'
   | 'childrenTools.icon.childJson.Make_a_proposal'
   | 'childrenTools.icon.childJson.Manage_multiple_wallets_and_keys'
   | 'childrenTools.icon.childJson.Market_Creation'
@@ -4215,10 +4225,12 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenTools.icon.childrenJson.Load_more___'
   | 'childrenTools.icon.childrenJson.Loading___'
+  | 'childrenTools.icon.childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'childrenTools.icon.childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'childrenTools.icon.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childrenTools.icon.childrenJson.Made_by___author__'
   | 'childrenTools.icon.childrenJson.Mainnet_Docs'
+  | 'childrenTools.icon.childrenJson.Mainnet_Sims'
   | 'childrenTools.icon.childrenJson.Make_a_proposal'
   | 'childrenTools.icon.childrenJson.Manage_multiple_wallets_and_keys'
   | 'childrenTools.icon.childrenJson.Market_Creation'
@@ -5836,10 +5848,12 @@ type Json = Node & {
   readonly Livestreams__conferences__research_office_hours_and_community_calls: Maybe<Scalars['String']>;
   readonly Load_more___: Maybe<Scalars['String']>;
   readonly Loading___: Maybe<Scalars['String']>;
+  readonly Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_: Maybe<Scalars['String']>;
   readonly Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_: Maybe<Scalars['String']>;
   readonly Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_: Maybe<Scalars['String']>;
   readonly Made_by___author__: Maybe<Scalars['String']>;
   readonly Mainnet_Docs: Maybe<Scalars['String']>;
+  readonly Mainnet_Sims: Maybe<Scalars['String']>;
   readonly Make_a_proposal: Maybe<Scalars['String']>;
   readonly Manage_multiple_wallets_and_keys: Maybe<Scalars['String']>;
   readonly Market_Creation: Maybe<Scalars['String']>;
@@ -6401,10 +6415,12 @@ type JsonFieldsEnum =
   | 'Livestreams__conferences__research_office_hours_and_community_calls'
   | 'Load_more___'
   | 'Loading___'
+  | 'Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'Made_by___author__'
   | 'Mainnet_Docs'
+  | 'Mainnet_Sims'
   | 'Make_a_proposal'
   | 'Manage_multiple_wallets_and_keys'
   | 'Market_Creation'
@@ -7009,10 +7025,12 @@ type JsonFilterInput = {
   readonly Livestreams__conferences__research_office_hours_and_community_calls: InputMaybe<StringQueryOperatorInput>;
   readonly Load_more___: InputMaybe<StringQueryOperatorInput>;
   readonly Loading___: InputMaybe<StringQueryOperatorInput>;
+  readonly Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_: InputMaybe<StringQueryOperatorInput>;
   readonly Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_: InputMaybe<StringQueryOperatorInput>;
   readonly Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_: InputMaybe<StringQueryOperatorInput>;
   readonly Made_by___author__: InputMaybe<StringQueryOperatorInput>;
   readonly Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
+  readonly Mainnet_Sims: InputMaybe<StringQueryOperatorInput>;
   readonly Make_a_proposal: InputMaybe<StringQueryOperatorInput>;
   readonly Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Creation: InputMaybe<StringQueryOperatorInput>;
@@ -7996,10 +8014,12 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'frontmatter.featuredImage.childJson.Load_more___'
   | 'frontmatter.featuredImage.childJson.Loading___'
+  | 'frontmatter.featuredImage.childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'frontmatter.featuredImage.childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'frontmatter.featuredImage.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'frontmatter.featuredImage.childJson.Made_by___author__'
   | 'frontmatter.featuredImage.childJson.Mainnet_Docs'
+  | 'frontmatter.featuredImage.childJson.Mainnet_Sims'
   | 'frontmatter.featuredImage.childJson.Make_a_proposal'
   | 'frontmatter.featuredImage.childJson.Manage_multiple_wallets_and_keys'
   | 'frontmatter.featuredImage.childJson.Market_Creation'
@@ -8544,10 +8564,12 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'frontmatter.featuredImage.childrenJson.Load_more___'
   | 'frontmatter.featuredImage.childrenJson.Loading___'
+  | 'frontmatter.featuredImage.childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'frontmatter.featuredImage.childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'frontmatter.featuredImage.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'frontmatter.featuredImage.childrenJson.Made_by___author__'
   | 'frontmatter.featuredImage.childrenJson.Mainnet_Docs'
+  | 'frontmatter.featuredImage.childrenJson.Mainnet_Sims'
   | 'frontmatter.featuredImage.childrenJson.Make_a_proposal'
   | 'frontmatter.featuredImage.childrenJson.Manage_multiple_wallets_and_keys'
   | 'frontmatter.featuredImage.childrenJson.Market_Creation'
@@ -10470,7 +10492,6 @@ type MediumPostFieldsEnum =
   | 'author.children.parent.children'
   | 'author.children.parent.id'
   | 'author.createdAt'
-  | 'author.facebookDisplayName'
   | 'author.hasCompletedProfile'
   | 'author.hasSeenIcelandOnboarding'
   | 'author.id'
@@ -10517,7 +10538,6 @@ type MediumPostFieldsEnum =
   | 'author.posts.author.bio'
   | 'author.posts.author.children'
   | 'author.posts.author.createdAt'
-  | 'author.posts.author.facebookDisplayName'
   | 'author.posts.author.hasCompletedProfile'
   | 'author.posts.author.hasSeenIcelandOnboarding'
   | 'author.posts.author.id'
@@ -11189,22 +11209,14 @@ type MediumPostPreviewContentBodyModelParagraphsFilterListInput = {
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkups = {
-  readonly anchorType: Maybe<Scalars['Int']>;
   readonly end: Maybe<Scalars['Int']>;
-  readonly href: Maybe<Scalars['String']>;
-  readonly rel: Maybe<Scalars['String']>;
   readonly start: Maybe<Scalars['Int']>;
-  readonly title: Maybe<Scalars['String']>;
   readonly type: Maybe<Scalars['Int']>;
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput = {
-  readonly anchorType: InputMaybe<IntQueryOperatorInput>;
   readonly end: InputMaybe<IntQueryOperatorInput>;
-  readonly href: InputMaybe<StringQueryOperatorInput>;
-  readonly rel: InputMaybe<StringQueryOperatorInput>;
   readonly start: InputMaybe<IntQueryOperatorInput>;
-  readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly type: InputMaybe<IntQueryOperatorInput>;
 };
 
@@ -11400,11 +11412,6 @@ type MediumPostVirtualsTagsMetadata = {
 
 type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly alt: Maybe<Scalars['String']>;
-  readonly backgroundSize: Maybe<Scalars['String']>;
-  readonly externalSrc: Maybe<Scalars['String']>;
-  readonly filter: Maybe<Scalars['String']>;
-  readonly focusPercentX: Maybe<Scalars['Int']>;
-  readonly focusPercentY: Maybe<Scalars['Int']>;
   readonly id: Maybe<Scalars['String']>;
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
@@ -11414,11 +11421,6 @@ type MediumPostVirtualsTagsMetadataCoverImage = {
 
 type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly alt: InputMaybe<StringQueryOperatorInput>;
-  readonly backgroundSize: InputMaybe<StringQueryOperatorInput>;
-  readonly externalSrc: InputMaybe<StringQueryOperatorInput>;
-  readonly filter: InputMaybe<StringQueryOperatorInput>;
-  readonly focusPercentX: InputMaybe<IntQueryOperatorInput>;
-  readonly focusPercentY: InputMaybe<IntQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
@@ -11487,7 +11489,6 @@ type MediumUser = Node & {
   readonly bio: Maybe<Scalars['String']>;
   readonly children: ReadonlyArray<Node>;
   readonly createdAt: Maybe<Scalars['Date']>;
-  readonly facebookDisplayName: Maybe<Scalars['String']>;
   readonly hasCompletedProfile: Maybe<Scalars['Boolean']>;
   readonly hasSeenIcelandOnboarding: Maybe<Scalars['Boolean']>;
   readonly id: Scalars['ID'];
@@ -11610,7 +11611,6 @@ type MediumUserFieldsEnum =
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
   | 'createdAt'
-  | 'facebookDisplayName'
   | 'hasCompletedProfile'
   | 'hasSeenIcelandOnboarding'
   | 'id'
@@ -11685,7 +11685,6 @@ type MediumUserFieldsEnum =
   | 'posts.author.children.children'
   | 'posts.author.children.id'
   | 'posts.author.createdAt'
-  | 'posts.author.facebookDisplayName'
   | 'posts.author.hasCompletedProfile'
   | 'posts.author.hasSeenIcelandOnboarding'
   | 'posts.author.id'
@@ -11982,7 +11981,6 @@ type MediumUserFilterInput = {
   readonly bio: InputMaybe<StringQueryOperatorInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly createdAt: InputMaybe<DateQueryOperatorInput>;
-  readonly facebookDisplayName: InputMaybe<StringQueryOperatorInput>;
   readonly hasCompletedProfile: InputMaybe<BooleanQueryOperatorInput>;
   readonly hasSeenIcelandOnboarding: InputMaybe<BooleanQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
@@ -12675,10 +12673,12 @@ type Query_jsonArgs = {
   Livestreams__conferences__research_office_hours_and_community_calls: InputMaybe<StringQueryOperatorInput>;
   Load_more___: InputMaybe<StringQueryOperatorInput>;
   Loading___: InputMaybe<StringQueryOperatorInput>;
+  Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_: InputMaybe<StringQueryOperatorInput>;
   Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_: InputMaybe<StringQueryOperatorInput>;
   Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_: InputMaybe<StringQueryOperatorInput>;
   Made_by___author__: InputMaybe<StringQueryOperatorInput>;
   Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
+  Mainnet_Sims: InputMaybe<StringQueryOperatorInput>;
   Make_a_proposal: InputMaybe<StringQueryOperatorInput>;
   Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
   Market_Creation: InputMaybe<StringQueryOperatorInput>;
@@ -13126,7 +13126,6 @@ type Query_mediumUserArgs = {
   bio: InputMaybe<StringQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
   createdAt: InputMaybe<DateQueryOperatorInput>;
-  facebookDisplayName: InputMaybe<StringQueryOperatorInput>;
   hasCompletedProfile: InputMaybe<BooleanQueryOperatorInput>;
   hasSeenIcelandOnboarding: InputMaybe<BooleanQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
@@ -15296,10 +15295,12 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'icon.childJson.Load_more___'
   | 'icon.childJson.Loading___'
+  | 'icon.childJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'icon.childJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'icon.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'icon.childJson.Made_by___author__'
   | 'icon.childJson.Mainnet_Docs'
+  | 'icon.childJson.Mainnet_Sims'
   | 'icon.childJson.Make_a_proposal'
   | 'icon.childJson.Manage_multiple_wallets_and_keys'
   | 'icon.childJson.Market_Creation'
@@ -16002,10 +16003,12 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'icon.childrenJson.Load_more___'
   | 'icon.childrenJson.Loading___'
+  | 'icon.childrenJson.Lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__Morbi_ac_tristique_elit_'
   | 'icon.childrenJson.Lower_capital_costs_and_evaluate_risk_live_with_cross_margining_'
   | 'icon.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'icon.childrenJson.Made_by___author__'
   | 'icon.childrenJson.Mainnet_Docs'
+  | 'icon.childrenJson.Mainnet_Sims'
   | 'icon.childrenJson.Make_a_proposal'
   | 'icon.childrenJson.Manage_multiple_wallets_and_keys'
   | 'icon.childrenJson.Market_Creation'

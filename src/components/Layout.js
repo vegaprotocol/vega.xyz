@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Helmet } from 'react-helmet'
+import Link from '../components/UI/Link'
+import SiteBanner from '../components/SiteBanner'
 
 const Layout = ({ children, stickyHeader = true }) => {
   return (
@@ -18,7 +20,14 @@ const Layout = ({ children, stickyHeader = true }) => {
             <div
               className={stickyHeader ? 'mt-[4.8125rem] md:mt-[6.25rem]' : ''}
             >
-              {children}
+              <div>
+                <SiteBanner>
+                  <Link to="https://blog.vega.xyz/build-test-earn-with-the-launch-of-mainnet-simulations-ed1546c0c4c7">
+                    Join Mainnet sims
+                  </Link>
+                </SiteBanner>
+                {children}
+              </div>
             </div>
           </div>
           <Footer />
