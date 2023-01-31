@@ -153,12 +153,12 @@ const fairgroundBinaries = [
   {
     icon: 'mac',
     platform: 'MacOS (Intel)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.3/vegawallet-desktop-darwin-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.3/vegawallet-desktop-macos-intel.zip',
   },
   {
     icon: 'mac',
     platform: 'MacOS (M1 / M2)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.3/vegawallet-desktop-darwin-arm64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.3/vegawallet-desktop-macos-apple-silicon.zip',
   },
   {
     icon: 'linux',
