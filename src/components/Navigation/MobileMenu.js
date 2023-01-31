@@ -35,7 +35,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
         <MobileNavigation />
 
         <HeaderCta
-          link={routeThroughInterstitialPage('https://console.fairground.wtf/')}
+          link="https://console.fairground.wtf/"
           text={t('Trade (Testnet)')}
           className="inline-block"
         />

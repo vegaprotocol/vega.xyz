@@ -96,9 +96,7 @@ const MarketCreationPage = ({ data }) => {
         },
         {
           title: t('See what markets exist already (Testnet)'),
-          url: routeThroughInterstitialPage(
-            'https://console.fairground.wtf/#/markets'
-          ),
+          url: 'https://console.fairground.wtf/#/markets',
         },
       ],
       image: <Phase1 />,
@@ -235,9 +233,7 @@ const MarketCreationPage = ({ data }) => {
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
-              link={routeThroughInterstitialPage(
-                'https://console.fairground.wtf/#/markets'
-              )}
+              link="https://console.fairground.wtf/#/markets"
               text={t('See what markets already exist (Testnet)')}
             />
           </div>
