@@ -81,10 +81,17 @@ const Ambassadors = ({ data }) => {
             <Tag className="mb-space-4">
               <Trans t={t}>Contribute</Trans>
             </Tag>
-            <h1 className="heading-xxl mb-space-5">
-              <GlitchTitle color="purple">
-                <Trans t={t}>Be a Vega+ Ambassador</Trans>
-              </GlitchTitle>
+            <h1>
+              <div className="heading-xxl mb-space-5 hidden md:block">
+                <GlitchTitle color="purple">
+                  <Trans t={t}>Be a Vega+ Ambassador</Trans>
+                </GlitchTitle>
+              </div>
+              <div className="heading-l mb-space-3 md:hidden">
+                <GlitchTitle color="purple">
+                  <Trans t={t}>Be a Vega+ Ambassador</Trans>
+                </GlitchTitle>
+              </div>
             </h1>
             <div className="body-xl mx-auto mb-space-5 max-w-[47.5rem] text-center text-current">
               <Trans t={t}>
@@ -218,7 +225,7 @@ const Ambassadors = ({ data }) => {
             </div>
           </div>
 
-          <div className="mb-space-4 max-w-[47.5rem] md:mx-auto md:mb-space-11 lg:mb-space-13">
+          <div className="mb-space-11 max-w-[47.5rem] md:mx-auto lg:mb-space-13">
             <h2 className="heading-l mb-space-6">
               <Trans t={t}>Leaderboards</Trans>
             </h2>
