@@ -9,6 +9,10 @@ const Use = () => {
       <NavigationItem text={t("Use the network")} link="/use" />
       <NavigationItem text={t("Get the Vega Wallet")} link="/wallet" />
       <NavigationItem
+        text={t("Validate and secure the network")}
+        link="/validators"
+      />
+      <NavigationItem
         text={t("Experiment on Fairground Testnet")}
         link="https://fairground.wtf"
       />

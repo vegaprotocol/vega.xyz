@@ -6,6 +6,7 @@ import IconDiscord from '../components/Svg/IconDiscord'
 import IconGithub from '../components/Svg/IconGithub'
 import IconTelegram from '../components/Svg/IconTelegram'
 import IconTwitter from '../components/Svg/IconTwitter'
+import { routeThroughInterstitialPage } from '../utils/tools'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Footer = () => {
@@ -32,6 +33,14 @@ const Footer = () => {
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Vega Wallet</Trans>
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="/validators/"
+                    className="block py-1.5 leading-[1.3]"
+                  >
+                    <Trans t={t}>Validate and secure the network</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -124,10 +133,18 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="/community/incentives-bounties"
+                    to="https://fairground.wtf"
                     className="block py-1.5 leading-[1.3]"
                   >
-                    <Trans t={t}>Incentives + bounties</Trans>
+                    <Trans t={t}>Fairground incentives</Trans>
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://github.com/vegaprotocol/bounties/"
+                    className="block py-1.5 leading-[1.3]"
+                  >
+                    <Trans t={t}>Bounties</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -232,6 +249,14 @@ const Footer = () => {
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Get started</Trans>
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="/rewards/"
+                    className="block py-1.5 leading-[1.3]"
+                  >
+                    <Trans t={t}>Rewards</Trans>
                   </TextLink>
                 </li>
                 <li>

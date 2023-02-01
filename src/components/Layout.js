@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Helmet } from 'react-helmet'
+import Link from '../components/UI/Link'
+import SiteBanner from '../components/SiteBanner'
 
 const Layout = ({ children, stickyHeader = true }) => {
   return (
@@ -16,9 +18,21 @@ const Layout = ({ children, stickyHeader = true }) => {
           <div className="grow">
             <Header sticky={stickyHeader} />
             <div
-              className={stickyHeader ? 'mt-[4.8125rem] md:mt-[6.25rem]' : ''}
+              className={stickyHeader ? 'mt-[4.8125rem] lg:mt-[6.25rem]' : ''}
             >
-              {children}
+              <div>
+                <SiteBanner>
+                  The Mainnet Sims are live!{' '}
+                  <Link
+                    to="https://fairground.wtf/"
+                    className="font-bold underline hover:no-underline"
+                  >
+                    <br className="md:hidden" />
+                    Come help stress test the network
+                  </Link>
+                </SiteBanner>
+                {children}
+              </div>
             </div>
           </div>
           <Footer />

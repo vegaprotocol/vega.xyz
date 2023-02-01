@@ -7,7 +7,7 @@ import MobileMenu from '../components/Navigation/MobileMenu'
 import MobileMenuButton from '../components/Navigation/MobileMenuButton'
 import HeaderCta from '../components/HeaderCta'
 import LanguageToggle from '../components/LanguageToggle'
-// import SiteBanner from "../components/SiteBanner";
+import { routeThroughInterstitialPage } from '../utils/tools'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
@@ -34,7 +34,6 @@ const Header = ({ sticky }) => {
 
   return (
     <div>
-      {/* <SiteBanner /> */}
       <header
         className={`z-50 bg-white dark:bg-black ${
           sticky ? 'fixed top-0 left-0 right-0' : ''

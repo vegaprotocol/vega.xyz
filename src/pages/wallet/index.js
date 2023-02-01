@@ -49,6 +49,68 @@ const ListItem = ({ idx, text }) => {
   )
 }
 
+const DownloadButton = ({ binaries, title }) => {
+  const [downloadDropdown, setDownloadDropdown] = useState(false)
+
+  const showDownloadMenu = (state) => {
+    setDownloadDropdown(state)
+  }
+
+  return (
+    <div className="flex justify-center">
+      <div className="relative mx-auto mt-6 inline-block cursor-pointer">
+        <div
+          role="button"
+          tabIndex={0}
+          className="flex items-center border border-current"
+          onFocus={() => showDownloadMenu(true)}
+          onBlur={(e) => {
+            if (!e.relatedTarget?.dataset?.fileDownload) {
+              showDownloadMenu(false)
+            }
+          }}
+        >
+          <div className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase">
+            <div className="mr-4">
+              <DropdownArrow />
+            </div>
+            {title}
+          </div>
+          <div>
+            {downloadDropdown && (
+              <div className="absolute top-[100%] left-0 right-0 z-20 border border-t-0 border-current bg-white dark:bg-black">
+                <ul className="py-3 px-2">
+                  {binaries.map((binary, idx) => {
+                    return (
+                      <li className="my-1 cursor-pointer" key={idx}>
+                        <a
+                          href={binary.file}
+                          role="button"
+                          target="_blank"
+                          rel="noreferrer"
+                          data-file-download
+                          className={`flex w-full items-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10`}
+                        >
+                          <div className="px-3.5 py-2">
+                            {PlatformIcon(binary.icon)}
+                          </div>
+                          <div className="copy-xxs !mb-0 py-2 text-vega-mid-grey dark:text-vega-grey">
+                            {binary.platform}
+                          </div>
+                        </a>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const binaries = [
   {
     icon: 'windows',
@@ -77,18 +139,41 @@ const binaries = [
   },
 ]
 
+const fairgroundBinaries = [
+  {
+    icon: 'windows',
+    platform: 'Windows',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.3/vegawallet-desktop-windows-amd64.zip',
+  },
+  {
+    icon: 'windows',
+    platform: 'Windows (ARM64)',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.3/vegawallet-desktop-windows-arm64.zip',
+  },
+  {
+    icon: 'mac',
+    platform: 'MacOS (Intel)',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.3/vegawallet-desktop-macos-intel.zip',
+  },
+  {
+    icon: 'mac',
+    platform: 'MacOS (M1 / M2)',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.3/vegawallet-desktop-macos-apple-silicon.zip',
+  },
+  {
+    icon: 'linux',
+    platform: 'Linux',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.3/vegawallet-desktop-linux-amd64.zip',
+  },
+]
+
 const WalletPage = () => {
   const { i18n, t } = useTranslation('page.wallet')
-  const [downloadDropdown, setDownloadDropdown] = useState(false)
   const [missingTranslations, setMissingTranslations] = useState(false)
 
   i18n.on('missingKey', (lng) => {
     setMissingTranslations(true)
   })
-
-  const showDownloadMenu = (state) => {
-    setDownloadDropdown(state)
-  }
 
   const howToText = [
     t("Choose 'create a new wallet' in the app"),
@@ -129,56 +214,15 @@ const WalletPage = () => {
               wallets, multiple keys — and get access to the Vega network.
             </Trans>
           </LeadingLine>
-          <div className="flex justify-center">
-            <div className="relative mx-auto mt-6 inline-block cursor-pointer">
-              <div
-                role="button"
-                tabIndex={0}
-                className="flex items-center border border-current"
-                onFocus={() => showDownloadMenu(true)}
-                onBlur={(e) => {
-                  if (!e.relatedTarget?.dataset?.fileDownload) {
-                    showDownloadMenu(false)
-                  }
-                }}
-              >
-                <div className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase">
-                  <div className="mr-4">
-                    <DropdownArrow />
-                  </div>
-                  <Trans t={t}>Download desktop app (Mainnet)</Trans>
-                </div>
-                <div>
-                  {downloadDropdown && (
-                    <div className="absolute top-[100%] left-0 right-0 z-20 border border-t-0 border-current bg-white dark:bg-black">
-                      <ul className="py-3 px-2">
-                        {binaries.map((binary, idx) => {
-                          return (
-                            <li className="my-1 cursor-pointer" key={idx}>
-                              <a
-                                href={binary.file}
-                                role="button"
-                                target="_blank"
-                                rel="noreferrer"
-                                data-file-download
-                                className={`flex w-full items-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10`}
-                              >
-                                <div className="px-3.5 py-2">
-                                  {PlatformIcon(binary.icon)}
-                                </div>
-                                <div className="copy-xxs !mb-0 py-2 text-vega-mid-grey dark:text-vega-grey">
-                                  {binary.platform}
-                                </div>
-                              </a>
-                            </li>
-                          )
-                        })}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
+          <div className="lg:flex lg:items-center lg:justify-center lg:gap-x-space-5">
+            <DownloadButton
+              binaries={binaries}
+              title={t('Download desktop app (Mainnet)')}
+            />
+            <DownloadButton
+              binaries={fairgroundBinaries}
+              title={t('Download desktop app (Fairground)')}
+            />
           </div>
           <div className="mt-space-5 text-center">
             <Button

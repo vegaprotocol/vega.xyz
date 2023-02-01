@@ -5,6 +5,11 @@ import TitleGlitchPurple from '../../images/title-glitch-purple.png'
 import TitleGlitchBlue from '../../images/title-glitch-blue.png'
 import TitleGlitchOrange from '../../images/title-glitch-orange.png'
 
+export interface GlitchTitleProps {
+  children: React.ReactNode
+  color?: 'red' | 'purple' | 'blue' | 'orange'
+}
+
 const blink = keyframes`
   to {
     visibility: hidden;
@@ -37,12 +42,6 @@ const Title = styled.div`
     animation: ${blink} 1.5s steps(2, start) infinite;
   }
 `
-
-export interface GlitchTitleProps {
-  children: React.ReactNode
-  color?: string
-}
-
 const GlitchTitle = ({ children, color = 'orange' }: GlitchTitleProps) => {
   return <Title color={color}>{children}</Title>
 }

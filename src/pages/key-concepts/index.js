@@ -72,7 +72,7 @@ const KeyConceptsPage = () => {
         <Container>
           <div className="my-10">
             <CalloutHero
-              title={t('The Vega mainnet is live, trading launch H2 2022')}
+              title={t('The Vega mainnet is live, trading launch H1 2023')}
               text={t(
                 'Token holders can participate in governance, stake and delegate.'
               )}

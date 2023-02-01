@@ -12,6 +12,7 @@ import Fairground from '../../components/Fairground'
 import ToolBox from '../../components/ToolBox'
 import { getImage } from 'gatsby-plugin-image'
 import AddGraphic from '../../components/Svg/Use/Add/Add'
+import { routeThroughInterstitialPage } from '../../utils/tools'
 import { Link, Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const UsePage = ({ data }) => {
@@ -175,7 +176,7 @@ const UsePage = ({ data }) => {
       <div className="pt-space-5">
         <Container>
           <CalloutHero
-            title={t('The Vega mainnet is live, trading launch H2 2022')}
+            title={t('The Vega mainnet is live, trading launch H1 2023')}
             text={t(
               'Token holders can participate in governance, stake and delegate.'
             )}

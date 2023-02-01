@@ -211,10 +211,6 @@ const Ambassadors = ({ data }) => {
               />
               <NumberedListItem
                 number="7"
-                text={t('Priority minting of NFT drops (+ enhanced rarities)')}
-              />
-              <NumberedListItem
-                number="8"
                 text={t(
                   'Grow with Vega - scaling rewards as you climb the ranks'
                 )}

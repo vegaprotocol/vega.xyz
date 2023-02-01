@@ -6,10 +6,8 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import MarketCreationResponsive from '../../components/Svg/MarketCreation/Hero/Responsive'
-import PageSection from '../../components/PageSection'
 import MarketCreationFooter from '../../components/Svg/MarketCreation/Footer'
 import BoxTitle from '../../components/BoxTitle'
-import ButtonLink from '../../components/ButtonLink'
 import GlitchTitle from '../../components/GlitchTitle'
 import BoxLinkSimple from '../../components/BoxLinkSimple'
 import LeadingLine from '../../components/LeadingLine'
@@ -23,6 +21,7 @@ import Phase5 from '../../components/Svg/MarketCreation/Process/Phase5'
 import Phase6 from '../../components/Svg/MarketCreation/Process/Phase6'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import Callout from '../../components/UI/Callout'
+import { routeThroughInterstitialPage } from '../../utils/tools'
 
 const MarketCreationPage = ({ data }) => {
   const { i18n, t } = useTranslation('page.market-creation')
