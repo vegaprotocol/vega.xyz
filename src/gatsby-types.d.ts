@@ -10503,7 +10503,6 @@ type MediumPostFieldsEnum =
   | 'author.children.parent.children'
   | 'author.children.parent.id'
   | 'author.createdAt'
-  | 'author.facebookDisplayName'
   | 'author.hasCompletedProfile'
   | 'author.hasSeenIcelandOnboarding'
   | 'author.id'
@@ -10550,7 +10549,6 @@ type MediumPostFieldsEnum =
   | 'author.posts.author.bio'
   | 'author.posts.author.children'
   | 'author.posts.author.createdAt'
-  | 'author.posts.author.facebookDisplayName'
   | 'author.posts.author.hasCompletedProfile'
   | 'author.posts.author.hasSeenIcelandOnboarding'
   | 'author.posts.author.id'
@@ -11222,22 +11220,14 @@ type MediumPostPreviewContentBodyModelParagraphsFilterListInput = {
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkups = {
-  readonly anchorType: Maybe<Scalars['Int']>;
   readonly end: Maybe<Scalars['Int']>;
-  readonly href: Maybe<Scalars['String']>;
-  readonly rel: Maybe<Scalars['String']>;
   readonly start: Maybe<Scalars['Int']>;
-  readonly title: Maybe<Scalars['String']>;
   readonly type: Maybe<Scalars['Int']>;
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput = {
-  readonly anchorType: InputMaybe<IntQueryOperatorInput>;
   readonly end: InputMaybe<IntQueryOperatorInput>;
-  readonly href: InputMaybe<StringQueryOperatorInput>;
-  readonly rel: InputMaybe<StringQueryOperatorInput>;
   readonly start: InputMaybe<IntQueryOperatorInput>;
-  readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly type: InputMaybe<IntQueryOperatorInput>;
 };
 
@@ -11433,31 +11423,19 @@ type MediumPostVirtualsTagsMetadata = {
 
 type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly alt: Maybe<Scalars['String']>;
-  readonly backgroundSize: Maybe<Scalars['String']>;
-  readonly externalSrc: Maybe<Scalars['String']>;
-  readonly filter: Maybe<Scalars['String']>;
-  readonly focusPercentX: Maybe<Scalars['Int']>;
-  readonly focusPercentY: Maybe<Scalars['Int']>;
   readonly id: Maybe<Scalars['String']>;
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
   readonly originalWidth: Maybe<Scalars['Int']>;
-  readonly repairedAt: Maybe<Scalars['Int']>;
   readonly unsplashPhotoId: Maybe<Scalars['String']>;
 };
 
 type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly alt: InputMaybe<StringQueryOperatorInput>;
-  readonly backgroundSize: InputMaybe<StringQueryOperatorInput>;
-  readonly externalSrc: InputMaybe<StringQueryOperatorInput>;
-  readonly filter: InputMaybe<StringQueryOperatorInput>;
-  readonly focusPercentX: InputMaybe<IntQueryOperatorInput>;
-  readonly focusPercentY: InputMaybe<IntQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
   readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
-  readonly repairedAt: InputMaybe<IntQueryOperatorInput>;
   readonly unsplashPhotoId: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -11522,7 +11500,6 @@ type MediumUser = Node & {
   readonly bio: Maybe<Scalars['String']>;
   readonly children: ReadonlyArray<Node>;
   readonly createdAt: Maybe<Scalars['Date']>;
-  readonly facebookDisplayName: Maybe<Scalars['String']>;
   readonly hasCompletedProfile: Maybe<Scalars['Boolean']>;
   readonly hasSeenIcelandOnboarding: Maybe<Scalars['Boolean']>;
   readonly id: Scalars['ID'];
@@ -11645,7 +11622,6 @@ type MediumUserFieldsEnum =
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
   | 'createdAt'
-  | 'facebookDisplayName'
   | 'hasCompletedProfile'
   | 'hasSeenIcelandOnboarding'
   | 'id'
@@ -11720,7 +11696,6 @@ type MediumUserFieldsEnum =
   | 'posts.author.children.children'
   | 'posts.author.children.id'
   | 'posts.author.createdAt'
-  | 'posts.author.facebookDisplayName'
   | 'posts.author.hasCompletedProfile'
   | 'posts.author.hasSeenIcelandOnboarding'
   | 'posts.author.id'
@@ -12017,7 +11992,6 @@ type MediumUserFilterInput = {
   readonly bio: InputMaybe<StringQueryOperatorInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly createdAt: InputMaybe<DateQueryOperatorInput>;
-  readonly facebookDisplayName: InputMaybe<StringQueryOperatorInput>;
   readonly hasCompletedProfile: InputMaybe<BooleanQueryOperatorInput>;
   readonly hasSeenIcelandOnboarding: InputMaybe<BooleanQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
@@ -13164,7 +13138,6 @@ type Query_mediumUserArgs = {
   bio: InputMaybe<StringQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
   createdAt: InputMaybe<DateQueryOperatorInput>;
-  facebookDisplayName: InputMaybe<StringQueryOperatorInput>;
   hasCompletedProfile: InputMaybe<BooleanQueryOperatorInput>;
   hasSeenIcelandOnboarding: InputMaybe<BooleanQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
