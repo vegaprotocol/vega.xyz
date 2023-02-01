@@ -717,6 +717,7 @@ type FileFieldsEnum =
   | 'childJson.Bug_bounties'
   | 'childJson.Build'
   | 'childJson.Build___send_commands'
+  | 'childJson.Build__test___earn'
   | 'childJson.Builders_Club'
   | 'childJson.Builders_club'
   | 'childJson.Building_on_Vega_Parts_I_and_II'
@@ -899,6 +900,7 @@ type FileFieldsEnum =
   | 'childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childJson.Join'
   | 'childJson.Join_a_team'
+  | 'childJson.Join_the_Mainnet_Sims_now'
   | 'childJson.Join_the_Vega_community'
   | 'childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childJson.Join_the_builders_club'
@@ -1162,6 +1164,7 @@ type FileFieldsEnum =
   | 'childJson.You_will_be_redirected_in_'
   | 'childJson.Your_career_in_Defi_starts_here'
   | 'childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childJson._0_Click_here_to_contribute__0__'
   | 'childJson._VEGA_paid_out_this_epoch'
@@ -1467,6 +1470,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Bug_bounties'
   | 'childTools.icon.childJson.Build'
   | 'childTools.icon.childJson.Build___send_commands'
+  | 'childTools.icon.childJson.Build__test___earn'
   | 'childTools.icon.childJson.Builders_Club'
   | 'childTools.icon.childJson.Builders_club'
   | 'childTools.icon.childJson.Building_on_Vega_Parts_I_and_II'
@@ -1649,6 +1653,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childTools.icon.childJson.Join'
   | 'childTools.icon.childJson.Join_a_team'
+  | 'childTools.icon.childJson.Join_the_Mainnet_Sims_now'
   | 'childTools.icon.childJson.Join_the_Vega_community'
   | 'childTools.icon.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childTools.icon.childJson.Join_the_builders_club'
@@ -1912,6 +1917,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.You_will_be_redirected_in_'
   | 'childTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childTools.icon.childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childTools.icon.childJson._0_Click_here_to_contribute__0__'
   | 'childTools.icon.childJson._VEGA_paid_out_this_epoch'
@@ -2015,6 +2021,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Bug_bounties'
   | 'childTools.icon.childrenJson.Build'
   | 'childTools.icon.childrenJson.Build___send_commands'
+  | 'childTools.icon.childrenJson.Build__test___earn'
   | 'childTools.icon.childrenJson.Builders_Club'
   | 'childTools.icon.childrenJson.Builders_club'
   | 'childTools.icon.childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -2197,6 +2204,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childTools.icon.childrenJson.Join'
   | 'childTools.icon.childrenJson.Join_a_team'
+  | 'childTools.icon.childrenJson.Join_the_Mainnet_Sims_now'
   | 'childTools.icon.childrenJson.Join_the_Vega_community'
   | 'childTools.icon.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childTools.icon.childrenJson.Join_the_builders_club'
@@ -2460,6 +2468,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.You_will_be_redirected_in_'
   | 'childTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childTools.icon.childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childTools.icon.childrenJson._0_Click_here_to_contribute__0__'
   | 'childTools.icon.childrenJson._VEGA_paid_out_this_epoch'
@@ -2700,6 +2709,7 @@ type FileFieldsEnum =
   | 'childrenJson.Bug_bounties'
   | 'childrenJson.Build'
   | 'childrenJson.Build___send_commands'
+  | 'childrenJson.Build__test___earn'
   | 'childrenJson.Builders_Club'
   | 'childrenJson.Builders_club'
   | 'childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -2882,6 +2892,7 @@ type FileFieldsEnum =
   | 'childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenJson.Join'
   | 'childrenJson.Join_a_team'
+  | 'childrenJson.Join_the_Mainnet_Sims_now'
   | 'childrenJson.Join_the_Vega_community'
   | 'childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childrenJson.Join_the_builders_club'
@@ -3145,6 +3156,7 @@ type FileFieldsEnum =
   | 'childrenJson.You_will_be_redirected_in_'
   | 'childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenJson._0_Click_here_to_contribute__0__'
   | 'childrenJson._VEGA_paid_out_this_epoch'
@@ -3453,6 +3465,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Bug_bounties'
   | 'childrenTools.icon.childJson.Build'
   | 'childrenTools.icon.childJson.Build___send_commands'
+  | 'childrenTools.icon.childJson.Build__test___earn'
   | 'childrenTools.icon.childJson.Builders_Club'
   | 'childrenTools.icon.childJson.Builders_club'
   | 'childrenTools.icon.childJson.Building_on_Vega_Parts_I_and_II'
@@ -3635,6 +3648,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenTools.icon.childJson.Join'
   | 'childrenTools.icon.childJson.Join_a_team'
+  | 'childrenTools.icon.childJson.Join_the_Mainnet_Sims_now'
   | 'childrenTools.icon.childJson.Join_the_Vega_community'
   | 'childrenTools.icon.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childrenTools.icon.childJson.Join_the_builders_club'
@@ -3898,6 +3912,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.You_will_be_redirected_in_'
   | 'childrenTools.icon.childJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childrenTools.icon.childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childrenTools.icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenTools.icon.childJson._0_Click_here_to_contribute__0__'
   | 'childrenTools.icon.childJson._VEGA_paid_out_this_epoch'
@@ -4001,6 +4016,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Bug_bounties'
   | 'childrenTools.icon.childrenJson.Build'
   | 'childrenTools.icon.childrenJson.Build___send_commands'
+  | 'childrenTools.icon.childrenJson.Build__test___earn'
   | 'childrenTools.icon.childrenJson.Builders_Club'
   | 'childrenTools.icon.childrenJson.Builders_club'
   | 'childrenTools.icon.childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -4183,6 +4199,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenTools.icon.childrenJson.Join'
   | 'childrenTools.icon.childrenJson.Join_a_team'
+  | 'childrenTools.icon.childrenJson.Join_the_Mainnet_Sims_now'
   | 'childrenTools.icon.childrenJson.Join_the_Vega_community'
   | 'childrenTools.icon.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childrenTools.icon.childrenJson.Join_the_builders_club'
@@ -4446,6 +4463,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.You_will_be_redirected_in_'
   | 'childrenTools.icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenTools.icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'childrenTools.icon.childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childrenTools.icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenTools.icon.childrenJson._0_Click_here_to_contribute__0__'
   | 'childrenTools.icon.childrenJson._VEGA_paid_out_this_epoch'
@@ -5622,6 +5640,7 @@ type Json = Node & {
   readonly Bug_bounties: Maybe<Scalars['String']>;
   readonly Build: Maybe<Scalars['String']>;
   readonly Build___send_commands: Maybe<Scalars['String']>;
+  readonly Build__test___earn: Maybe<Scalars['String']>;
   readonly Builders_Club: Maybe<Scalars['String']>;
   readonly Builders_club: Maybe<Scalars['String']>;
   readonly Building_on_Vega_Parts_I_and_II: Maybe<Scalars['String']>;
@@ -5804,6 +5823,7 @@ type Json = Node & {
   readonly It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: Maybe<Scalars['String']>;
   readonly Join: Maybe<Scalars['String']>;
   readonly Join_a_team: Maybe<Scalars['String']>;
+  readonly Join_the_Mainnet_Sims_now: Maybe<Scalars['String']>;
   readonly Join_the_Vega_community: Maybe<Scalars['String']>;
   readonly Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: Maybe<Scalars['String']>;
   readonly Join_the_builders_club: Maybe<Scalars['String']>;
@@ -6067,6 +6087,7 @@ type Json = Node & {
   readonly You_will_be_redirected_in_: Maybe<Scalars['String']>;
   readonly Your_career_in_Defi_starts_here: Maybe<Scalars['String']>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: Maybe<Scalars['String']>;
+  readonly Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_: Maybe<Scalars['String']>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: Maybe<Scalars['String']>;
   readonly _0_Click_here_to_contribute__0__: Maybe<Scalars['String']>;
   readonly _VEGA_paid_out_this_epoch: Maybe<Scalars['String']>;
@@ -6187,6 +6208,7 @@ type JsonFieldsEnum =
   | 'Bug_bounties'
   | 'Build'
   | 'Build___send_commands'
+  | 'Build__test___earn'
   | 'Builders_Club'
   | 'Builders_club'
   | 'Building_on_Vega_Parts_I_and_II'
@@ -6369,6 +6391,7 @@ type JsonFieldsEnum =
   | 'It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'Join'
   | 'Join_a_team'
+  | 'Join_the_Mainnet_Sims_now'
   | 'Join_the_Vega_community'
   | 'Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'Join_the_builders_club'
@@ -6632,6 +6655,7 @@ type JsonFieldsEnum =
   | 'You_will_be_redirected_in_'
   | 'Your_career_in_Defi_starts_here'
   | 'Your_message_was_successfully_encrypted_and_delivered_'
+  | 'Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | '_0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | '_0_Click_here_to_contribute__0__'
   | '_VEGA_paid_out_this_epoch'
@@ -6795,6 +6819,7 @@ type JsonFilterInput = {
   readonly Bug_bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Build: InputMaybe<StringQueryOperatorInput>;
   readonly Build___send_commands: InputMaybe<StringQueryOperatorInput>;
+  readonly Build__test___earn: InputMaybe<StringQueryOperatorInput>;
   readonly Builders_Club: InputMaybe<StringQueryOperatorInput>;
   readonly Builders_club: InputMaybe<StringQueryOperatorInput>;
   readonly Building_on_Vega_Parts_I_and_II: InputMaybe<StringQueryOperatorInput>;
@@ -6977,6 +7002,7 @@ type JsonFilterInput = {
   readonly It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: InputMaybe<StringQueryOperatorInput>;
   readonly Join: InputMaybe<StringQueryOperatorInput>;
   readonly Join_a_team: InputMaybe<StringQueryOperatorInput>;
+  readonly Join_the_Mainnet_Sims_now: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_Vega_community: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_builders_club: InputMaybe<StringQueryOperatorInput>;
@@ -7240,6 +7266,7 @@ type JsonFilterInput = {
   readonly You_will_be_redirected_in_: InputMaybe<StringQueryOperatorInput>;
   readonly Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
+  readonly Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Click_here_to_contribute__0__: InputMaybe<StringQueryOperatorInput>;
   readonly _VEGA_paid_out_this_epoch: InputMaybe<StringQueryOperatorInput>;
@@ -7782,6 +7809,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Bug_bounties'
   | 'frontmatter.featuredImage.childJson.Build'
   | 'frontmatter.featuredImage.childJson.Build___send_commands'
+  | 'frontmatter.featuredImage.childJson.Build__test___earn'
   | 'frontmatter.featuredImage.childJson.Builders_Club'
   | 'frontmatter.featuredImage.childJson.Builders_club'
   | 'frontmatter.featuredImage.childJson.Building_on_Vega_Parts_I_and_II'
@@ -7964,6 +7992,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'frontmatter.featuredImage.childJson.Join'
   | 'frontmatter.featuredImage.childJson.Join_a_team'
+  | 'frontmatter.featuredImage.childJson.Join_the_Mainnet_Sims_now'
   | 'frontmatter.featuredImage.childJson.Join_the_Vega_community'
   | 'frontmatter.featuredImage.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'frontmatter.featuredImage.childJson.Join_the_builders_club'
@@ -8227,6 +8256,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.You_will_be_redirected_in_'
   | 'frontmatter.featuredImage.childJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'frontmatter.featuredImage.childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'frontmatter.featuredImage.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'frontmatter.featuredImage.childJson._0_Click_here_to_contribute__0__'
   | 'frontmatter.featuredImage.childJson._VEGA_paid_out_this_epoch'
@@ -8330,6 +8360,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Bug_bounties'
   | 'frontmatter.featuredImage.childrenJson.Build'
   | 'frontmatter.featuredImage.childrenJson.Build___send_commands'
+  | 'frontmatter.featuredImage.childrenJson.Build__test___earn'
   | 'frontmatter.featuredImage.childrenJson.Builders_Club'
   | 'frontmatter.featuredImage.childrenJson.Builders_club'
   | 'frontmatter.featuredImage.childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -8512,6 +8543,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'frontmatter.featuredImage.childrenJson.Join'
   | 'frontmatter.featuredImage.childrenJson.Join_a_team'
+  | 'frontmatter.featuredImage.childrenJson.Join_the_Mainnet_Sims_now'
   | 'frontmatter.featuredImage.childrenJson.Join_the_Vega_community'
   | 'frontmatter.featuredImage.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'frontmatter.featuredImage.childrenJson.Join_the_builders_club'
@@ -8775,6 +8807,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.You_will_be_redirected_in_'
   | 'frontmatter.featuredImage.childrenJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'frontmatter.featuredImage.childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'frontmatter.featuredImage.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'frontmatter.featuredImage.childrenJson._0_Click_here_to_contribute__0__'
   | 'frontmatter.featuredImage.childrenJson._VEGA_paid_out_this_epoch'
@@ -12437,6 +12470,7 @@ type Query_jsonArgs = {
   Bug_bounties: InputMaybe<StringQueryOperatorInput>;
   Build: InputMaybe<StringQueryOperatorInput>;
   Build___send_commands: InputMaybe<StringQueryOperatorInput>;
+  Build__test___earn: InputMaybe<StringQueryOperatorInput>;
   Builders_Club: InputMaybe<StringQueryOperatorInput>;
   Builders_club: InputMaybe<StringQueryOperatorInput>;
   Building_on_Vega_Parts_I_and_II: InputMaybe<StringQueryOperatorInput>;
@@ -12619,6 +12653,7 @@ type Query_jsonArgs = {
   It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: InputMaybe<StringQueryOperatorInput>;
   Join: InputMaybe<StringQueryOperatorInput>;
   Join_a_team: InputMaybe<StringQueryOperatorInput>;
+  Join_the_Mainnet_Sims_now: InputMaybe<StringQueryOperatorInput>;
   Join_the_Vega_community: InputMaybe<StringQueryOperatorInput>;
   Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: InputMaybe<StringQueryOperatorInput>;
   Join_the_builders_club: InputMaybe<StringQueryOperatorInput>;
@@ -12882,6 +12917,7 @@ type Query_jsonArgs = {
   You_will_be_redirected_in_: InputMaybe<StringQueryOperatorInput>;
   Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
+  Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_: InputMaybe<StringQueryOperatorInput>;
   _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
   _0_Click_here_to_contribute__0__: InputMaybe<StringQueryOperatorInput>;
   _VEGA_paid_out_this_epoch: InputMaybe<StringQueryOperatorInput>;
@@ -15057,6 +15093,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Bug_bounties'
   | 'icon.childJson.Build'
   | 'icon.childJson.Build___send_commands'
+  | 'icon.childJson.Build__test___earn'
   | 'icon.childJson.Builders_Club'
   | 'icon.childJson.Builders_club'
   | 'icon.childJson.Building_on_Vega_Parts_I_and_II'
@@ -15239,6 +15276,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'icon.childJson.Join'
   | 'icon.childJson.Join_a_team'
+  | 'icon.childJson.Join_the_Mainnet_Sims_now'
   | 'icon.childJson.Join_the_Vega_community'
   | 'icon.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'icon.childJson.Join_the_builders_club'
@@ -15502,6 +15540,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.You_will_be_redirected_in_'
   | 'icon.childJson.Your_career_in_Defi_starts_here'
   | 'icon.childJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'icon.childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'icon.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'icon.childJson._0_Click_here_to_contribute__0__'
   | 'icon.childJson._VEGA_paid_out_this_epoch'
@@ -15763,6 +15802,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Bug_bounties'
   | 'icon.childrenJson.Build'
   | 'icon.childrenJson.Build___send_commands'
+  | 'icon.childrenJson.Build__test___earn'
   | 'icon.childrenJson.Builders_Club'
   | 'icon.childrenJson.Builders_club'
   | 'icon.childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -15945,6 +15985,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'icon.childrenJson.Join'
   | 'icon.childrenJson.Join_a_team'
+  | 'icon.childrenJson.Join_the_Mainnet_Sims_now'
   | 'icon.childrenJson.Join_the_Vega_community'
   | 'icon.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'icon.childrenJson.Join_the_builders_club'
@@ -16208,6 +16249,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.You_will_be_redirected_in_'
   | 'icon.childrenJson.Your_career_in_Defi_starts_here'
   | 'icon.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
+  | 'icon.childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'icon.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'icon.childrenJson._0_Click_here_to_contribute__0__'
   | 'icon.childrenJson._VEGA_paid_out_this_epoch'

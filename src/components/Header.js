@@ -34,7 +34,6 @@ const Header = ({ sticky }) => {
 
   return (
     <div>
-      {/* <SiteBanner /> */}
       <header
         className={`z-50 bg-white dark:bg-black ${
           sticky ? 'fixed top-0 left-0 right-0' : ''

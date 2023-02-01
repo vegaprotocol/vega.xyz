@@ -3,8 +3,9 @@ import NewsCard from './NewsCard'
 import Button from './UI/Button'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { stringify } from 'querystring'
 
-const LatestNews = ({ data }) => {
+const LatestNews = () => {
   const { t } = useTranslation('component.latest-news')
   const latestPosts = useStaticQuery(graphql`
     query {
@@ -85,6 +86,7 @@ const LatestNews = ({ data }) => {
       }
     }
   `)
+
   const [tweet, setTweet] = useState(null)
 
   useEffect(() => {
