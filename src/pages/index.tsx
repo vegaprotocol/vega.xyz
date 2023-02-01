@@ -306,7 +306,7 @@ const IndexPage = ({ data }) => {
           )}
           link={{
             text: t('Join the Mainnet Sims now'),
-            url: 'https://blog.vega.xyz/build-test-earn-with-the-launch-of-mainnet-simulations-ed1546c0c4c7',
+            url: 'https://fairground.wtf/',
           }}
         />
       </main>

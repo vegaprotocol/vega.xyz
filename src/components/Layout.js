@@ -24,8 +24,8 @@ const Layout = ({ children, stickyHeader = true }) => {
                 <SiteBanner>
                   The Mainnet Sims are live!{' '}
                   <Link
-                    to="https://blog.vega.xyz/build-test-earn-with-the-launch-of-mainnet-simulations-ed1546c0c4c7"
-                    className="underline hover:no-underline"
+                    to="https://fairground.wtf/"
+                    className="font-bold underline hover:no-underline"
                   >
                     <br className="md:hidden" />
                     Come help stress test the network
