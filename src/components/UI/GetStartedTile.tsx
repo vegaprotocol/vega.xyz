@@ -16,7 +16,7 @@ export interface GenericTileProps {
   link?: Link
 }
 
-const GenericTile = ({
+const GetStartedTile = ({
   title,
   image,
   subline,
@@ -24,7 +24,7 @@ const GenericTile = ({
   children,
 }: GenericTileProps) => {
   return (
-    <div className="mb-space-4 flex flex-col justify-between border p-space-5">
+    <div className="flex flex-col justify-between rounded-[1.875rem] border p-space-5">
       <div>
         {image && <GatsbyImage image={image} alt="" className="mb-space-5" />}
         <div className="heading-s mb-space-4">{title}</div>
@@ -40,12 +40,14 @@ const GenericTile = ({
         )}
       </div>
       {link && (
-        <Button to={link.to} width="full" className="mt-space-6">
-          {link.title}
-        </Button>
+        <div>
+          <Button to={link.to} className="mt-space-6">
+            {link.title}
+          </Button>
+        </div>
       )}
     </div>
   )
 }
 
-export default GenericTile
+export default GetStartedTile

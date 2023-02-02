@@ -61,6 +61,8 @@
   "Experiment on Fairground Testnet": "Experimenta en la red de prueba Fairground",
   "Build": "Construir",
   "Getting started": "Empezando",
+  "Tutorials": "",
+  "API documentation": "",
   "Start": "Comienza",
   "Governance on Vega": "Gobernanza en Vega",
   "Governance documentation": "Documentación de gobernanza",
@@ -71,7 +73,6 @@
   "The Vega wallet": "",
   "Trading": "",
   "Trade futures (Testnet)": "",
-  "Liquidity opportunities": "",
   "Market make and provide liquidity using our APIs": "",
   "Use Vega": "Usa Vega"
 }

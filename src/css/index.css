@@ -243,6 +243,12 @@ a {
     font-variant-ligatures: normal;
   }
 
+  .heading-xxxs {
+    @apply text-[0.75rem];
+    @apply leading-[96%];
+    @apply uppercase;
+  }
+
   .heading-xxs {
     @apply text-[0.9375rem];
     @apply leading-[96%];
