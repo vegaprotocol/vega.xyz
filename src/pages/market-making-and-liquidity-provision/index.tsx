@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
@@ -18,7 +19,7 @@ import CoreNodes from '../../components/RestAPI/CoreNodes'
 import DataNodes from '../../components/RestAPI/DataNodes'
 import VegaWallet from '../../components/RestAPI/VegaWallet'
 
-const MarketMakingAndLiquidityProvision = () => {
+const MarketMakingAndLiquidityProvision = ({ data }) => {
   const { t, i18n } = useTranslation(
     'page.market-making-and-liquidity-provision'
   )
@@ -290,3 +291,17 @@ const MarketMakingAndLiquidityProvision = () => {
 }
 
 export default MarketMakingAndLiquidityProvision
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

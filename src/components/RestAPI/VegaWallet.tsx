@@ -18,10 +18,6 @@ const VegaWallet = () => {
         `https://raw.githubusercontent.com/vegaprotocol/documentation/main/specs/v${version}/openrpc.json`
       )
       data = await data.json()
-
-      console.log(
-        `https://raw.githubusercontent.com/vegaprotocol/documentation/main/specs/v${version}/openrpc.json`
-      )
       setData(data.methods)
     }
     fetchNetworkVersions()
