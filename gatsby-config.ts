@@ -113,12 +113,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-medium`,
-      options: {
-        username: `vegaprotocol`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-apollo`,
       options: {
         uri: process.env.GATSBY_VEGA_API,

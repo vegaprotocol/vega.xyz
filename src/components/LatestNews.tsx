@@ -3,35 +3,11 @@ import NewsCard from './NewsCard'
 import Button from './UI/Button'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import { stringify } from 'querystring'
 
 const LatestNews = () => {
   const { t } = useTranslation('component.latest-news')
   const latestPosts = useStaticQuery(graphql`
     query {
-      blogPosts: allMediumPost(
-        limit: 1
-        sort: { fields: [firstPublishedAt], order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            title
-            uniqueSlug
-            firstPublishedAt(formatString: "ll")
-            virtuals {
-              subtitle
-              readingTime
-              previewImage {
-                imageId
-              }
-            }
-            author {
-              name
-            }
-          }
-        }
-      }
       talks: allMarkdownRemark(
         limit: 1
         filter: { collection: { eq: "talks" } }
@@ -88,6 +64,8 @@ const LatestNews = () => {
   `)
 
   const [tweet, setTweet] = useState(null)
+  const [blogPost, setBlogPost] = useState(null)
+  const [blogPostError, setBlogPostError] = useState(false)
 
   useEffect(() => {
     async function fetchLatestTweet() {
@@ -100,6 +78,18 @@ const LatestNews = () => {
       })
     }
     fetchLatestTweet()
+
+    async function fetchLatestBlogPosts() {
+      let response = await fetch('/.netlify/functions/latest-blog-posts')
+      let data = await response.json()
+
+      if (response.status === 200) {
+        setBlogPost(data.data[0])
+      } else {
+        setBlogPostError(true)
+      }
+    }
+    fetchLatestBlogPosts()
   }, [])
 
   return (
@@ -111,24 +101,31 @@ const LatestNews = () => {
       </div>
       <div className="mx-auto grid max-w-[26.25rem] grid-cols-1 gap-12 md:max-w-none md:grid-cols-2 lg:grid-cols-4">
         <div className="flex h-full flex-col justify-between">
-          <NewsCard
-            title={latestPosts.blogPosts.edges[0].node.title}
-            text={latestPosts.blogPosts.edges[0].node.virtuals.subtitle}
-            link={`https://blog.vega.xyz/${latestPosts.blogPosts.edges[0].node.uniqueSlug}`}
-            date={latestPosts.blogPosts.edges[0].node.firstPublishedAt}
-            extra={t('{{minutes}} minute read', {
-              minutes: Math.ceil(
-                latestPosts.blogPosts.edges[0].node.virtuals.readingTime
-              ),
-            })}
-            image={`https://cdn-images-1.medium.com/${latestPosts.blogPosts.edges[0].node.virtuals.previewImage.imageId}`}
-            className="mb-space-5"
-          />
-          <div>
-            <Button to="https://blog.vega.xyz">
-              <Trans t={t}>Read our blog</Trans>
-            </Button>
-          </div>
+          {blogPost && (
+            <>
+              <NewsCard
+                title={blogPost.title}
+                text={blogPost.virtuals.subtitle}
+                link={`https://blog.vega.xyz/${blogPost.uniqueSlug}`}
+                date={blogPost.firstPublishedAt}
+                extra={t('{{minutes}} minute read', {
+                  minutes: Math.ceil(blogPost.virtuals.readingTime),
+                })}
+                image={`https://cdn-images-1.medium.com/${blogPost.virtuals.previewImage.imageId}`}
+                className="mb-space-5"
+              />
+              <div>
+                <Button to="https://blog.vega.xyz">
+                  <Trans t={t}>Read our blog</Trans>
+                </Button>
+              </div>
+            </>
+          )}
+          {blogPostError && (
+            <div>
+              <Trans t={t}>Error fetching blog post...</Trans>
+            </div>
+          )}
         </div>
 
         {tweet ? (
