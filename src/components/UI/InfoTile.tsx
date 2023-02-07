@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Link from '../../components/UI/Link'
-import Button from '../../components/UI/Button'
+import Link from './Link'
+import Button from './Button'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 export interface Link {
@@ -16,7 +16,7 @@ export interface GenericTileProps {
   link?: Link
 }
 
-const GetStartedTile = ({
+const InfoTile = ({
   title,
   image,
   subline,
@@ -41,7 +41,7 @@ const GetStartedTile = ({
       </div>
       {link && (
         <div>
-          <Button to={link.to} className="mt-space-6">
+          <Button to={link.to} className="mt-space-2">
             {link.title}
           </Button>
         </div>
@@ -50,4 +50,4 @@ const GetStartedTile = ({
   )
 }
 
-export default GetStartedTile
+export default InfoTile
