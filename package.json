@@ -52,6 +52,7 @@
     "gsap": "^3.10.4",
     "i18next": "^21.8.10",
     "markdown-to-jsx": "^7.1.7",
+    "node-fetch": "2",
     "openpgp": "^5.3.1",
     "postcss": "^8.4.14",
     "raw-loader": "^4.0.2",

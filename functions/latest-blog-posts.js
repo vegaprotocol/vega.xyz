@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 exports.handler = async (event) => {
   const convertTimestamps = (nextObj, prevObj, prevKey) => {
     if (typeof nextObj === `object`) {
@@ -17,6 +19,7 @@ exports.handler = async (event) => {
   return fetch('https://medium.com/vegaprotocol?format=json')
     .then((response) => response.text())
     .then((data) => {
+      console.log(data)
       data = data.replace(`])}while(1);</x>`, ``)
       const { payload } = JSON.parse(data)
 
