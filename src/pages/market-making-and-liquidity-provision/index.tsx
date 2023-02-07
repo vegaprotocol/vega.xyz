@@ -37,10 +37,13 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
     return (
       <Trans t={t}>
         Place static or pegged order limit volume on the book, manage your
-        spread and position, and receive maker fees when an incoming trade
-        matches your order. Currently set to{' '}
-        <NetworkParameter param="market_fee_factors_makerFee"></NetworkParameter>{' '}
-        of the trade value.
+        spread and position, and receive{' '}
+        <NetworkParameter
+          param="market_fee_factors_makerFee"
+          expressPercentage
+          suffix="%"
+        ></NetworkParameter>{' '}
+        of the trade value when an incoming trade matches your order.
       </Trans>
     )
   }
@@ -63,17 +66,47 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
           </h1>
           <h2 className="heading-xl mb-space-5">
             <GlitchTitle color="purple">
-              <Trans t={t}>APIs for market making and liquidity</Trans>
+              <Trans t={t}>
+                Market make and provide liquidity using our APIs
+              </Trans>
             </GlitchTitle>
           </h2>
           <div className="body-xl">
             <Trans t={t}>
-              Getting down to brass tacks, here is everything you need to create
-              markets and provide liquidity on Vega. There are certain
-              prerequisites before you can fulfill either role. Learn about them
-              here.
+              On Vega, price takers pay a fee on every trade - 100% of which is
+              distributed between validators and token holders, market makers
+              and liquidity providers. The are no gas fees on Vega.
             </Trans>
           </div>
+        </div>
+
+        {/* <div className="mx-auto mb-space-8 max-w-[60rem] md:mb-space-10"> */}
+        {/* <h2 className="heading-l mb-space-6 text-center">
+            <Trans t={t}>How fees work</Trans>
+          </h2> */}
+
+        {/* <p className="body-xl text-center">
+            <Trans t={t}>
+              On Vega, price takers pay a fee on every trade - 100% of which is
+              distributed between validators and token holders, market makers
+              and liquidity providers. The are no gas fees on Vega.
+            </Trans>
+          </p> */}
+        {/* </div> */}
+
+        <div className="mb-space-10 grid grid-cols-1 gap-space-4 md:mb-space-11 md:grid-cols-2 md:gap-space-7">
+          <TeamTile
+            title={t('Market makers')}
+            body={<MarketMakerText />}
+            image={getImage(data.iconMarketMaker)}
+          />
+          <TeamTile
+            title={t('Liquidity providers')}
+            body={t(
+              'Access liquidity provision fees on Vega, commit (and continue to support) a set bond amount to help keep a market liquid. The total liquidity needed on a market is determined by the protocol, and you specify the fee % you would like to receive. Active liquidity providers (starting with the cheapest first) then receive liquidity provider fees.'
+            )}
+            image={getImage(data.iconLiquidityProvider)}
+          />
         </div>
 
         <div className="mb-space-10 max-w-[47.5rem] md:mx-auto md:mb-space-11 lg:mb-space-13">
@@ -81,12 +114,12 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
             <Trans t={t}>Prerequisites</Trans>
           </h2>
 
-          <p className="body-l light:text-vega-light-400 mb-space-6 text-center dark:text-vega-dark-400 ">
+          {/* <p className="body-l light:text-vega-light-400 mb-space-6 text-center dark:text-vega-dark-400 ">
             <Trans t={t}>
               Before you can start market making or providiing liquidity, you
               need to meet certain criteria. Ideally, you will know how to:
             </Trans>
-          </p>
+          </p> */}
 
           <div className="mb-space-4 border-t md:mb-space-11 lg:mb-space-13">
             <NumberedListItem
@@ -123,56 +156,6 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
               number="6"
               text={t('Manage risk in a leveraged trading environment')}
             />
-          </div>
-        </div>
-
-        <div className="mx-auto mb-space-8 max-w-[60rem] md:mb-space-10">
-          <h2 className="heading-l mb-space-6 text-center">
-            <Trans t={t}>How fees work</Trans>
-          </h2>
-
-          <p className="body-xl text-center">
-            <Trans t={t}>
-              On Vega, price takers pay a fee on every trade - 100% of which is
-              distributed between validators and token holders, market makers
-              and liquidity providers. The are no gas fees on Vega.
-            </Trans>
-          </p>
-        </div>
-
-        <div className="mb-space-10 grid grid-cols-1 gap-space-4 md:mb-space-11 md:grid-cols-2 md:gap-space-7">
-          <TeamTile
-            title={t('You are a market maker if you...')}
-            body={<MarketMakerText />}
-            image={getImage(data.iconMarketMaker)}
-          />
-          <TeamTile
-            title={t('You are a liquidity provider if you...')}
-            body={t(
-              'Access liquidity provision fees on Vega, commit (and continue to support) a set bond amount to help keep a market liquid. The total liquidity needed on a market is determined by the protocol, and you specify the fee % you would like to receive. Active liquidity providers (starting with the cheapest first) then receive liquidity provider fees.'
-            )}
-            image={getImage(data.iconLiquidityProvider)}
-          />
-        </div>
-
-        <div className="mb-space-10 md:mb-space-11 md:grid-cols-2 lg:mb-space-14">
-          <h2 className="heading-l mb-space-6 text-center md:mb-space-8 lg:mb-space-10">
-            <Trans t={t}>Key Resources</Trans>
-          </h2>
-
-          <div className="grid grid-cols-1 gap-space-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-space-7">
-            <ActionButton to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/market-lifecycle">
-              <Trans t={t}>Vega market lifecycle</Trans>
-            </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/trading-modes">
-              <Trans t={t}>Vega trading modes</Trans>
-            </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/fees-rewards#">
-              <Trans t={t}>Fees & trading rewards</Trans>
-            </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/testnet/concepts/liquidity/provision">
-              <Trans t={t}>Providing liquidity</Trans>
-            </ActionButton>
           </div>
         </div>
 
@@ -294,6 +277,27 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
               title={t('Deposit and withdraw collateral')}
               link={{ to: '', title: t('View') }}
             ></InfoTile>
+          </div>
+        </div>
+
+        <div className="mb-space-10 md:mb-space-11 md:grid-cols-2 lg:mb-space-14">
+          <h2 className="heading-l mb-space-6 text-center md:mb-space-8 lg:mb-space-10">
+            <Trans t={t}>Key Resources</Trans>
+          </h2>
+
+          <div className="grid grid-cols-1 gap-space-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-space-7">
+            <ActionButton to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/market-lifecycle">
+              <Trans t={t}>Vega market lifecycle</Trans>
+            </ActionButton>
+            <ActionButton to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/trading-modes">
+              <Trans t={t}>Vega trading modes</Trans>
+            </ActionButton>
+            <ActionButton to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/fees-rewards#">
+              <Trans t={t}>Fees & trading rewards</Trans>
+            </ActionButton>
+            <ActionButton to="https://docs.vega.xyz/testnet/concepts/liquidity/provision">
+              <Trans t={t}>Providing liquidity</Trans>
+            </ActionButton>
           </div>
         </div>
       </Container>
