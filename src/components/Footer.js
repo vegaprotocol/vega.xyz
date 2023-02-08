@@ -376,6 +376,9 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+              <TextLink to="https://blog.vega.xyz/tagged/vega-incident-reports">
+                <Trans t={t}>Mainnet status and incidents</Trans>
+              </TextLink>
               <TextLink to="/bug-bounties">
                 <Trans t={t}>Report a security issue</Trans>
               </TextLink>

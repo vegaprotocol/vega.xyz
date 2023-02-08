@@ -937,6 +937,7 @@ type FileFieldsEnum =
   | 'childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childJson.Made_by___author__'
   | 'childJson.Mainnet_Docs'
+  | 'childJson.Mainnet_status_and_incidents'
   | 'childJson.Make_a_proposal'
   | 'childJson.Manage_multiple_wallets_and_keys'
   | 'childJson.Market_Creation'
@@ -1690,6 +1691,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childTools.icon.childJson.Made_by___author__'
   | 'childTools.icon.childJson.Mainnet_Docs'
+  | 'childTools.icon.childJson.Mainnet_status_and_incidents'
   | 'childTools.icon.childJson.Make_a_proposal'
   | 'childTools.icon.childJson.Manage_multiple_wallets_and_keys'
   | 'childTools.icon.childJson.Market_Creation'
@@ -2241,6 +2243,7 @@ type FileFieldsEnum =
   | 'childTools.icon.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childTools.icon.childrenJson.Made_by___author__'
   | 'childTools.icon.childrenJson.Mainnet_Docs'
+  | 'childTools.icon.childrenJson.Mainnet_status_and_incidents'
   | 'childTools.icon.childrenJson.Make_a_proposal'
   | 'childTools.icon.childrenJson.Manage_multiple_wallets_and_keys'
   | 'childTools.icon.childrenJson.Market_Creation'
@@ -2929,6 +2932,7 @@ type FileFieldsEnum =
   | 'childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childrenJson.Made_by___author__'
   | 'childrenJson.Mainnet_Docs'
+  | 'childrenJson.Mainnet_status_and_incidents'
   | 'childrenJson.Make_a_proposal'
   | 'childrenJson.Manage_multiple_wallets_and_keys'
   | 'childrenJson.Market_Creation'
@@ -3685,6 +3689,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childrenTools.icon.childJson.Made_by___author__'
   | 'childrenTools.icon.childJson.Mainnet_Docs'
+  | 'childrenTools.icon.childJson.Mainnet_status_and_incidents'
   | 'childrenTools.icon.childJson.Make_a_proposal'
   | 'childrenTools.icon.childJson.Manage_multiple_wallets_and_keys'
   | 'childrenTools.icon.childJson.Market_Creation'
@@ -4236,6 +4241,7 @@ type FileFieldsEnum =
   | 'childrenTools.icon.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'childrenTools.icon.childrenJson.Made_by___author__'
   | 'childrenTools.icon.childrenJson.Mainnet_Docs'
+  | 'childrenTools.icon.childrenJson.Mainnet_status_and_incidents'
   | 'childrenTools.icon.childrenJson.Make_a_proposal'
   | 'childrenTools.icon.childrenJson.Manage_multiple_wallets_and_keys'
   | 'childrenTools.icon.childrenJson.Market_Creation'
@@ -5860,6 +5866,7 @@ type Json = Node & {
   readonly Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_: Maybe<Scalars['String']>;
   readonly Made_by___author__: Maybe<Scalars['String']>;
   readonly Mainnet_Docs: Maybe<Scalars['String']>;
+  readonly Mainnet_status_and_incidents: Maybe<Scalars['String']>;
   readonly Make_a_proposal: Maybe<Scalars['String']>;
   readonly Manage_multiple_wallets_and_keys: Maybe<Scalars['String']>;
   readonly Market_Creation: Maybe<Scalars['String']>;
@@ -6428,6 +6435,7 @@ type JsonFieldsEnum =
   | 'Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'Made_by___author__'
   | 'Mainnet_Docs'
+  | 'Mainnet_status_and_incidents'
   | 'Make_a_proposal'
   | 'Manage_multiple_wallets_and_keys'
   | 'Market_Creation'
@@ -7039,6 +7047,7 @@ type JsonFilterInput = {
   readonly Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_: InputMaybe<StringQueryOperatorInput>;
   readonly Made_by___author__: InputMaybe<StringQueryOperatorInput>;
   readonly Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
+  readonly Mainnet_status_and_incidents: InputMaybe<StringQueryOperatorInput>;
   readonly Make_a_proposal: InputMaybe<StringQueryOperatorInput>;
   readonly Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Creation: InputMaybe<StringQueryOperatorInput>;
@@ -8029,6 +8038,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'frontmatter.featuredImage.childJson.Made_by___author__'
   | 'frontmatter.featuredImage.childJson.Mainnet_Docs'
+  | 'frontmatter.featuredImage.childJson.Mainnet_status_and_incidents'
   | 'frontmatter.featuredImage.childJson.Make_a_proposal'
   | 'frontmatter.featuredImage.childJson.Manage_multiple_wallets_and_keys'
   | 'frontmatter.featuredImage.childJson.Market_Creation'
@@ -8580,6 +8590,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'frontmatter.featuredImage.childrenJson.Made_by___author__'
   | 'frontmatter.featuredImage.childrenJson.Mainnet_Docs'
+  | 'frontmatter.featuredImage.childrenJson.Mainnet_status_and_incidents'
   | 'frontmatter.featuredImage.childrenJson.Make_a_proposal'
   | 'frontmatter.featuredImage.childrenJson.Manage_multiple_wallets_and_keys'
   | 'frontmatter.featuredImage.childrenJson.Market_Creation'
@@ -12690,6 +12701,7 @@ type Query_jsonArgs = {
   Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_: InputMaybe<StringQueryOperatorInput>;
   Made_by___author__: InputMaybe<StringQueryOperatorInput>;
   Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
+  Mainnet_status_and_incidents: InputMaybe<StringQueryOperatorInput>;
   Make_a_proposal: InputMaybe<StringQueryOperatorInput>;
   Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
   Market_Creation: InputMaybe<StringQueryOperatorInput>;
@@ -15313,6 +15325,7 @@ type ToolsFieldsEnum =
   | 'icon.childJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'icon.childJson.Made_by___author__'
   | 'icon.childJson.Mainnet_Docs'
+  | 'icon.childJson.Mainnet_status_and_incidents'
   | 'icon.childJson.Make_a_proposal'
   | 'icon.childJson.Manage_multiple_wallets_and_keys'
   | 'icon.childJson.Market_Creation'
@@ -16022,6 +16035,7 @@ type ToolsFieldsEnum =
   | 'icon.childrenJson.Lowering_the_barrier_to_wealth_and_value_creation_calls_for_pseudonymous_identities__In_this_way__the_Vega_network_is_accessible_to_anyone_in_the_world_without_restriction_'
   | 'icon.childrenJson.Made_by___author__'
   | 'icon.childrenJson.Mainnet_Docs'
+  | 'icon.childrenJson.Mainnet_status_and_incidents'
   | 'icon.childrenJson.Make_a_proposal'
   | 'icon.childrenJson.Manage_multiple_wallets_and_keys'
   | 'icon.childrenJson.Market_Creation'
