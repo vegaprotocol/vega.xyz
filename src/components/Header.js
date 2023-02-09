@@ -53,7 +53,9 @@ const Header = ({ sticky }) => {
             <div className="flex items-center">
               {!menuIsOpen && (
                 <HeaderCta
-                  link="https://console.fairground.wtf/"
+                  link={routeThroughInterstitialPage(
+                    'https://console.fairground.wtf/'
+                  )}
                   text={t('Trade futures (Testnet)')}
                   className="mr-3 hidden md:block lg:hidden"
                 />
@@ -67,7 +69,9 @@ const Header = ({ sticky }) => {
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
                 {!menuIsOpen && (
                   <HeaderCta
-                    link="https://console.fairground.wtf/"
+                    link={routeThroughInterstitialPage(
+                      'https://console.fairground.wtf/'
+                    )}
                     text={t('Trade futures (Testnet)')}
                     className="ml-3 hidden lg:block"
                   />
