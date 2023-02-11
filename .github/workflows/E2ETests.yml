@@ -20,7 +20,7 @@ jobs:
         uses: lewagon/wait-on-check-action@v1.2.0
         with:
           ref: ${{ github.ref }}
-          check-name: 'Netlify'
+          check-name: 'Netlify / Redirect rules'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 300
     
