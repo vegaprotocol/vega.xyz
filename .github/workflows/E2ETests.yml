@@ -16,14 +16,14 @@ jobs:
         # run n copies of the current job in parallel
         containers: [2]
     steps:
-      - name: Wait on check
-        uses: lewagon/wait-on-check-action@v1.2.0
-        with:
-          ref: ${{ github.ref }}
-          running-workflow-name: Netlify
-          check-name: Netlify / Redirect rules
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
+     # - name: Wait on check
+     #   uses: lewagon/wait-on-check-action@v1.2.0
+       # with:
+      #    ref: ${{ github.ref }}
+      #    repo-token: ${{ secrets.GITHUB_TOKEN }}
+      #    running-workflow-name: Netlify
+       #   check-name: Netlify / Redirect rules
+       #   wait-interval: 10
       
     
       - name: Checkout
