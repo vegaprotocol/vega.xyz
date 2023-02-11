@@ -64,4 +64,4 @@ The Ambassadors will also notify the community in Discord to let everyone know t
 
 ## Contributing translations
 
-Create a branch for the translations you wish to contribute. Make the necessary edits to the locale and/or markdown files. When you are done, submit a pull request with the relevant Ambassador for your language as the reviewer. The Ambassador will review the translation for accuracy before releasing it to the website.
+Create a branch for the translations you wish to contribute. Make the necessary edits to the locale and/or markdown files. When you are done, submit a pull request with the relevant Ambassador for your language as the reviewer. The Ambassador will review the translation for accuracy before releasing it to the website..
