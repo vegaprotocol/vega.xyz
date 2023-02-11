@@ -1,7 +1,7 @@
 name: End-to-end tests
 on:
   pull_request:
-  workflow_dispatch:
+ # workflow_dispatch:
 
 jobs:
   cypress-run:
@@ -17,7 +17,7 @@ jobs:
         containers: [2]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           repository: 'vegaprotocol/vega-website-cypress-tests'
              
@@ -26,7 +26,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          wait-on: "https://vega.xyz"
+          wait-on: "https://deploy-preview-${{github.event.pull_request.number}}--vega.netlify.app"
+          config: baseUrl="https://deploy-preview-${{github.event.pull_request.number}}--vega.netlify.app"
           record: true
           parallel: true
         env:
