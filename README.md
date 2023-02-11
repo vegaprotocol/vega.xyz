@@ -24,7 +24,7 @@ Netlify is configured for continuous deployment.
 # Internationalisation
 
 The website uses [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next) plugin to handle translations. This is based on [react-i18next](https://react.i18next.com/).
-a
+
 ### Locale files
 
 Translations can be found in JSON files located in `~/locales`. There is a folder for each language and a file for each individual page and component. Files follow a logical naming convention to help you understand where it is referenced in the website.
