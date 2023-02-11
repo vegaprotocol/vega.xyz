@@ -15,7 +15,7 @@ yarn install
 gatsby develop
 ```
 
-## Deployment
+## Deploymenta
 
 Netlify is configured for continuous deployment.
 
