@@ -20,7 +20,7 @@ jobs:
         uses: lewagon/wait-on-check-action@v1.2.0
         with:
           ref: ${{ github.ref }}
-          running-workflow-name: 'deploy/netlify'
+          running-workflow-name: 'Netlify'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 300
     
