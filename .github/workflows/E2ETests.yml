@@ -17,7 +17,7 @@ jobs:
         containers: [2]
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v3
         with:
           repository: 'vegaprotocol/vega-website-cypress-tests'
              
