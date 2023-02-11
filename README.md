@@ -17,7 +17,7 @@ gatsby develop
 
 ## Deployment
 
-Netlify is configured for continuous deployment.
+Netlify is cosnfigured for continuous deployment.
 
 ---
 
