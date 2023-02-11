@@ -22,7 +22,7 @@ jobs:
           ref: ${{ github.ref }}
           check-name: 'deploy/netlify'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
+          wait-interval: 300
     
     
       - name: Checkout
