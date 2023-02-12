@@ -27,7 +27,7 @@ The website uses [gatsby-plugin-react-i18next](https://github.com/microapps/gats
 
 ### Locale files
 
-Translations can be found in JSON files located in `~/locales`. There is a folder for each language and a file for each individual page and component. Files follow a logical naming convention to help you understand where it is referenced in the website.
+Translations can be found in JSON files located in `~/locales`. There is a folder for each language and a file for each individual page and component. Files follow a logical anaming convention to help you understand where it is referenced in the website.
 
 Entries use natural language keys, so all you need to do is read the key and provide the translation in the right hand part of the key/value pair. For example:
 
