@@ -16,14 +16,13 @@ jobs:
         # run n copies of the current job in parallel
         containers: [2]
     steps:
-      - name: Wait on check
-        uses: lewagon/wait-on-check-action@v1.2.0
+      - name: Wait for build to succeed
+        uses: fountainhead/action-wait-for-check@v1.1.0
+        id: wait-for-build
         with:
-          ref: ${{ github.ref }}
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          running-workflow-name: End-to-end tests
-        #  check-name: Pages changed
-          wait-interval: 10
+          token: ${{ secrets.GITHUB_TOKEN }}
+          checkName: Pages changed
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       
     
       - name: Checkout
