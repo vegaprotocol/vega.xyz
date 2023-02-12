@@ -13,7 +13,7 @@ Welcome to the repo for the new [vega.xyz](https://vega.xyz) website.
 ```
 yarn install
 gatsby develop
-```
+```a
 
 ## Deployment
 
