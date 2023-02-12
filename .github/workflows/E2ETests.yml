@@ -21,7 +21,7 @@ jobs:
         id: wait-for-build
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          checkName: deploy/netlify
+          checkName: Pages changed
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
       
     
