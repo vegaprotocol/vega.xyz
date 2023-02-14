@@ -80,7 +80,7 @@ const Calendar = ({ limit = -1, filter = false }) => {
   return (
     <div>
       {events && events.length > 0 && (
-        <div className="border-t border-current">
+        <div className="border-t border-current" data-cy="events">
           <div>
             {events.map((event, idx) => (
               <CalendarEvent key={idx} event={event} />
@@ -92,7 +92,7 @@ const Calendar = ({ limit = -1, filter = false }) => {
         </div>
       )}
       {events && events.length === 0 && (
-        <div className="body-l mb-space-10">
+        <div className="body-l mb-space-10" data-cy="thingsAreQuiet">
           {t("Things are a little quiet. Check back to see what's on.")}
         </div>
       )}

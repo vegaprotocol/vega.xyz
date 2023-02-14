@@ -1,7 +1,7 @@
 name: End-to-end tests
 on:
   pull_request:
-  workflow_dispatch:
+ # workflow_dispatch:
 
 jobs:
   cypress-run:
@@ -16,6 +16,15 @@ jobs:
         # run n copies of the current job in parallel
         containers: [2]
     steps:
+      - name: Wait for build to succeed
+        uses: fountainhead/action-wait-for-check@v1.1.0
+        id: wait-for-build
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          checkName: Pages changed
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      
+    
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -26,7 +35,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          wait-on: "https://vega.xyz"
+          wait-on: "https://deploy-preview-${{github.event.pull_request.number}}--vega.netlify.app"
+          config: baseUrl="https://deploy-preview-${{github.event.pull_request.number}}--vega.netlify.app"
           record: true
           parallel: true
         env:

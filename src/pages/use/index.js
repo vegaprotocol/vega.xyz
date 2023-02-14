@@ -201,7 +201,7 @@ const UsePage = ({ data }) => {
           </div>
         </div>
         <div className="mx-auto max-w-[90rem] md:px-6 lg:px-8">
-          <div className="mx-auto overflow-y-hidden overflow-x-scroll whitespace-nowrap border-b border-vega-mid-grey px-6 text-center md:flex md:justify-center md:gap-x-8 md:whitespace-normal">
+          <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap border-b border-vega-mid-grey px-6 text-center md:flex md:justify-center md:gap-x-8 md:whitespace-normal">
             <button
               tabIndex={0}
               onClick={() => changeFilter(null)}
