@@ -11,16 +11,20 @@ import Button from '../../components/UI/Button'
 import NumberedListItem from '../../components/UI/NumberedListItem'
 import CalloutTile from '../../components/UI/CalloutTile'
 import ActionButton from '../../components/UI/ActionButton'
+import { Tabs, Tab } from '../../components/UI/Tabs'
 import { getImage } from 'gatsby-plugin-image'
 import AmbassadorsHero from '../../components/Svg/Ambassadors/Hero/Responsive'
 import AmbassadorsFooter from '../../components/Svg/Ambassadors/Footer/Responsive'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import AmbassadorLeaderboard from '../../components/AmbassadorLeaderboard'
+import Leaderboard from '../../components/Leaderboard'
 import IconTick from '../../images/icons/tick.svg'
 import IconPeople from '../../images/icons/people.svg'
 import IconStairs from '../../images/icons/stairs.svg'
 import IconAlert from '../../images/icons/alert.svg'
 import IconDiscord from '../../images/icons/discord.svg'
+import { useLeaderboard } from '../../hooks/use-leaderboard'
+import { addLineBreakIfTwoWords } from '../../utils/tools'
+import AmbassadorLeaderboards from '../../content/leaderboards/ambassadors'
 
 const Ambassadors = ({ data }) => {
   const { i18n, t } = useTranslation('page.community.ambassadors')
@@ -28,6 +32,38 @@ const Ambassadors = ({ data }) => {
 
   i18n.on('missingKey', (lng) => {
     setMissingTranslations(true)
+  })
+
+  const {
+    loading: ccAllTimeLoading,
+    data: ccAllTimeData,
+    error: ccAllTimeError,
+  } = useLeaderboard({
+    url: AmbassadorLeaderboards.contentCollectiveAllTime,
+  })
+
+  const {
+    loading: ccAllLast30DaysLoading,
+    data: ccAllLast30DaysData,
+    error: ccAllLast30DaysError,
+  } = useLeaderboard({
+    url: AmbassadorLeaderboards.contentCollective30Days,
+  })
+
+  const {
+    loading: mllAllTimeLoading,
+    data: mllAllTimeData,
+    error: mllAllTimeError,
+  } = useLeaderboard({
+    url: AmbassadorLeaderboards.multilingualLeagueAllTime,
+  })
+
+  const {
+    loading: mllLast30DaysLoading,
+    data: mllLast30DaysData,
+    error: mllLast30DaysError,
+  } = useLeaderboard({
+    url: AmbassadorLeaderboards.multilingualLeague30Days,
   })
 
   return (
@@ -45,10 +81,17 @@ const Ambassadors = ({ data }) => {
             <Tag className="mb-space-4">
               <Trans t={t}>Contribute</Trans>
             </Tag>
-            <h1 className="heading-xxl mb-space-5">
-              <GlitchTitle color="purple">
-                <Trans t={t}>Be a Vega+ Ambassador</Trans>
-              </GlitchTitle>
+            <h1>
+              <div className="heading-xxl mb-space-5 hidden md:block">
+                <GlitchTitle color="purple">
+                  <Trans t={t}>Be a Vega+ Ambassador</Trans>
+                </GlitchTitle>
+              </div>
+              <div className="heading-l mb-space-3 md:hidden">
+                <GlitchTitle color="purple">
+                  <Trans t={t}>Be a Vega+ Ambassador</Trans>
+                </GlitchTitle>
+              </div>
             </h1>
             <div className="body-xl mx-auto mb-space-5 max-w-[47.5rem] text-center text-current">
               <Trans t={t}>
@@ -175,10 +218,6 @@ const Ambassadors = ({ data }) => {
               />
               <NumberedListItem
                 number="7"
-                text={t('Priority minting of NFT drops (+ enhanced rarities)')}
-              />
-              <NumberedListItem
-                number="8"
                 text={t(
                   'Grow with Vega - scaling rewards as you climb the ranks'
                 )}
@@ -186,9 +225,9 @@ const Ambassadors = ({ data }) => {
             </div>
           </div>
 
-          <div className="max-w-[47.5rem] md:mx-auto">
+          <div className="mb-space-11 max-w-[47.5rem] md:mx-auto lg:mb-space-13">
             <h2 className="heading-l mb-space-6">
-              <Trans t={t}>Leaderboard</Trans>
+              <Trans t={t}>Leaderboards</Trans>
             </h2>
             <div className="body-l mb-space-6 text-vega-light-400 dark:text-vega-dark-400">
               <Trans t={t}>
@@ -197,9 +236,102 @@ const Ambassadors = ({ data }) => {
               </Trans>
             </div>
 
-            <div className="mb-space-4 md:mb-space-11 lg:mb-space-13">
-              <AmbassadorLeaderboard limit={8} />
+            <h2
+              className="heading-m mb-space-4"
+              dangerouslySetInnerHTML={{
+                __html: addLineBreakIfTwoWords('Content Collective'),
+              }}
+            ></h2>
+
+            <div className="mb-space-10">
+              <Tabs>
+                <Tab label="allTime" tabName="All time">
+                  {ccAllTimeLoading && (
+                    <div>
+                      <Trans t={t}>Loading...</Trans>
+                    </div>
+                  )}
+                  {ccAllTimeData && (
+                    <Leaderboard
+                      data={ccAllTimeData}
+                      limit={3}
+                      moreLink="/community/ambassador-leaderboards?leaderboard=contentCollective&group=allTime"
+                    />
+                  )}
+                  {ccAllTimeError && (
+                    <div>
+                      <Trans t={t}>Error retrieving leaderboard...</Trans>
+                    </div>
+                  )}
+                </Tab>
+                <Tab label="thirtyDays" tabName="30 days">
+                  {ccAllLast30DaysLoading && (
+                    <div>
+                      <Trans t={t}>Loading...</Trans>
+                    </div>
+                  )}
+                  {ccAllLast30DaysData && (
+                    <Leaderboard
+                      data={ccAllLast30DaysData}
+                      limit={3}
+                      moreLink="/community/ambassador-leaderboards?leaderboard=contentCollective&group=thirtyDays"
+                    />
+                  )}
+                  {ccAllLast30DaysError && (
+                    <div>
+                      <Trans t={t}>Error retrieving leaderboard...</Trans>
+                    </div>
+                  )}
+                </Tab>
+              </Tabs>
             </div>
+
+            <h2
+              className="heading-m mb-space-4"
+              dangerouslySetInnerHTML={{
+                __html: addLineBreakIfTwoWords('Multilingual League'),
+              }}
+            ></h2>
+            <Tabs>
+              <Tab label="allTime" tabName="All time">
+                {mllAllTimeLoading && (
+                  <div>
+                    <Trans t={t}>Loading...</Trans>
+                  </div>
+                )}
+                {mllAllTimeData && (
+                  <Leaderboard
+                    data={mllAllTimeData}
+                    limit={3}
+                    moreLink="/community/ambassador-leaderboards?leaderboard=multilingualLeague&group=allTime"
+                  />
+                )}
+                {mllAllTimeError && (
+                  <div>
+                    <Trans t={t}>Error retrieving leaderboard...</Trans>
+                  </div>
+                )}
+              </Tab>
+              <Tab label="thirtyDays" tabName="30 days">
+                {mllLast30DaysLoading && (
+                  <div>
+                    <Trans t={t}>Loading...</Trans>
+                  </div>
+                )}
+                {mllLast30DaysData && (
+                  <Leaderboard
+                    data={mllLast30DaysData}
+                    limit={3}
+                    moreLink="/community/ambassador-leaderboards?leaderboard=multilingualLeague&group=thirtyDays"
+                  />
+                )}
+                {mllLast30DaysError && (
+                  <div>
+                    <Trans t={t}>Error retrieving leaderboard...</Trans>
+                  </div>
+                )}
+              </Tab>
+            </Tabs>
           </div>
 
           <div className="mb:space-8 mb-space-7 max-w-[47.5rem] text-center md:mx-auto lg:mb-space-9">
