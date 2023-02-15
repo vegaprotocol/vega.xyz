@@ -4,22 +4,22 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
-import PageSection from '../../components/PageSection'
-import GlitchTitle from '../../components/GlitchTitle'
+import GlitchTitle from '../../components/UI/GlitchTitle'
 import WalletRip from '../../components/Svg/WalletRip'
 import WalletHowTo from '../../components/Svg/WalletHowTo'
 import WalletLeft from '../../components/Svg/WalletLeft'
 import WalletRight from '../../components/Svg/WalletRight'
 import WalletHowToSmall from '../../components/Svg/WalletHowToSmall'
-import LeadingLine from '../../components/LeadingLine'
 import ButtonLink from '../../components/ButtonLink'
 import Button from '../../components/UI/Button'
+import LinkWrapper from '../../components/UI/LinkWrapper'
 import DropdownArrow from '../../components/Svg/DropdownArrow'
 import IconPlatformMac from '../../components/Svg/IconPlatformMac'
 import IconPlatformWindows from '../../components/Svg/IconPlatformWindows'
 import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
 import WalletVideoWebM from '../../video/wallet-hero.webm'
 import WalletVideoMP4 from '../../video/wallet-hero.mp4'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import { MQMediumDown, MQLargeUp } from '../../utils/media-queries.js'
 
@@ -167,7 +167,7 @@ const fairgroundBinaries = [
   },
 ]
 
-const WalletPage = () => {
+const WalletPage = ({ data }) => {
   const { i18n, t } = useTranslation('page.wallet')
   const [missingTranslations, setMissingTranslations] = useState(false)
 
@@ -204,16 +204,18 @@ const WalletPage = () => {
       <Container dataCy={'main'}>
         <div className="mx-auto max-w-[38rem] pt-6 md:max-w-none lg:pt-16">
           <div className="mx-auto max-w-[28rem] text-center md:max-w-[38rem] lg:max-w-[42rem]">
-            <GlitchTitle level="1" className="title-l md:title-xxl my-4">
-              <Trans t={t}>Get the Vega Wallet</Trans>
-            </GlitchTitle>
+            <h1 className="heading-xl mb-space-6">
+              <GlitchTitle color="purple">
+                <Trans t={t}>Get the Vega Wallet</Trans>
+              </GlitchTitle>
+            </h1>
           </div>
-          <LeadingLine className="mx-auto max-w-[56rem] text-center text-current">
+          <p className="body-xl mx-auto max-w-[56rem] text-center">
             <Trans t={t}>
               Download the Vega Wallet desktop app, to help you manage multiple
               wallets, multiple keys — and get access to the Vega network.
             </Trans>
-          </LeadingLine>
+          </p>
           <div className="lg:flex lg:items-center lg:justify-center lg:gap-x-space-5">
             <DownloadButton
               binaries={binaries}
@@ -235,7 +237,7 @@ const WalletPage = () => {
         </div>
       </Container>
 
-      <div className="relative pt-16 md:mt-12 md:pt-36">
+      <div className="relative mb-space-10 pt-space-8 md:mt-space-6 md:mb-space-11 md:pt-space-13 lg:mb-space-13">
         <MQMediumDown>
           <video
             className="mx-auto h-auto w-full max-w-[90%] md:hidden"
@@ -266,7 +268,7 @@ const WalletPage = () => {
       </div>
 
       <Container>
-        <PageSection>
+        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <div className="text-center">
             <h2 className="title-m">
               <Trans t={t}>With the wallet you can:</Trans>
@@ -451,22 +453,33 @@ const WalletPage = () => {
               voting on community proposals.
             </Trans>
           </p>
-        </PageSection>
+        </div>
 
-        <PageSection>
+        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
+          <h2 className="heading-xl mb-space-6 text-center md:mb-space-10">
+            <GlitchTitle>
+              <Trans t={t}>How-to use</Trans>
+            </GlitchTitle>
+          </h2>
+          <div class="flex justify-center">
+            <LinkWrapper to="https://www.youtube.com/watch?v=fFmLQeQUa1k">
+              <GatsbyImage
+                image={getImage(data.walletVideoPoster)}
+                alt=""
+                className="mx-auto mb-space-5 max-w-[43.75rem]"
+              />
+            </LinkWrapper>
+          </div>
+        </div>
+
+        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <WalletHowToSmall className="mb-8 md:hidden" />
           <div className="lg:gap-21 mx-auto grid max-w-[62rem] grid-cols-12 md:gap-12">
             <div className="col-span-12 md:col-span-4">
-              <h2 className="title-l md:title-xl mb-3 max-w-[17rem] md:max-w-none">
-                <Trans t={t}>How to use</Trans>
+              <h2 className="heading-xl  mb-3 max-w-[17rem] md:max-w-none">
+                <Trans t={t}>Step by step</Trans>
               </h2>
-              <p className="copy-xs">
-                <Trans t={t}>
-                  You can have multiple wallets within the Vega Wallet desktop
-                  app.
-                </Trans>
-              </p>
-              <p className="copy-xxs">
+              <p className="body-m">
                 <Trans t={t}>
                   To learn more about the Vega Wallet desktop app, including
                   full, step by step details on restoring wallets, updating the
@@ -475,8 +488,8 @@ const WalletPage = () => {
               </p>
             </div>
 
-            <div className="col-span-12 md:col-span-8 lg:pl-12">
-              <ol className="mt-6 list-none p-0 md:mt-0">
+            <div className="col-span-12 md:col-span-8 lg:pl-space-6">
+              <ol className="mt-space-6 list-none p-0 md:mt-0">
                 {howToText.map((text, idx) => {
                   return <ListItem idx={idx} key={idx} text={t(text)} />
                 })}
@@ -484,10 +497,10 @@ const WalletPage = () => {
             </div>
           </div>
           <WalletHowTo className="mt-5 hidden md:block" />
-        </PageSection>
+        </div>
       </Container>
 
-      <PageSection>
+      <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
         <div className="flex items-center justify-between">
           <div className="hidden w-[200px] md:block">
             <WalletLeft />
@@ -595,7 +608,7 @@ const WalletPage = () => {
             <WalletRight />
           </div>
         </div>
-      </PageSection>
+      </div>
     </Layout>
   )
 }
@@ -616,6 +629,15 @@ export const query = graphql`
           data
           language
         }
+      }
+    }
+    walletVideoPoster: file(relativePath: { eq: "wallet-video-poster.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }
