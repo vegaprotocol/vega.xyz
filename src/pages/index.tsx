@@ -237,9 +237,6 @@ const IndexPage = ({ data }) => {
           </Container>
         </div>
         <Rip />
-        <!--div className="pt-16">
-          <Ticker />
-        </div-->
 
         <div className="pt-16 md:pt-32 lg:pt-40">
           <div id="roadmap">
