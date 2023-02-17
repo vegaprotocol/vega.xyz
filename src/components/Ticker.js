@@ -44,7 +44,7 @@ const Ticker = () => {
       .then(function (data) {
         updateStats({
           name: 'validators',
-          value: data[0].epoch.validators.length,
+          value: data[0].epoch.validators.filter(n => n.rankingScore.votingPower > 0).length,
         })
 
         updateStats({
