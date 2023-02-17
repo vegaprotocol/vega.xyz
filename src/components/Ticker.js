@@ -93,7 +93,7 @@ const Ticker = () => {
               }}
             >
               <SwiperSlide>
-                <TickerCell label={t('Validators')} value={stats.validators} />
+                <TickerCell label={t('Validators')} value={13} />
               </SwiperSlide>
               <SwiperSlide>
                 <TickerCell
