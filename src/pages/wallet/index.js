@@ -70,7 +70,7 @@ const DownloadButton = ({ binaries, title }) => {
             }
           }}
         >
-          <div className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase">
+          <div className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase" data-cy={title}>
             <div className="mr-4">
               <DropdownArrow />
             </div>
@@ -89,12 +89,12 @@ const DownloadButton = ({ binaries, title }) => {
                           target="_blank"
                           rel="noreferrer"
                           data-file-download
-                          className={`flex w-full items-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10`}
+                          className={`flex w-full items-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10`} data-cy={'downloadLink'}
                         >
                           <div className="px-3.5 py-2">
                             {PlatformIcon(binary.icon)}
                           </div>
-                          <div className="copy-xxs !mb-0 py-2 text-vega-mid-grey dark:text-vega-grey">
+                          <div className="copy-xxs !mb-0 py-2 text-vega-mid-grey dark:text-vega-grey" data-cy={'downloadPlatform'}>
                             {binary.platform}
                           </div>
                         </a>
