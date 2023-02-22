@@ -174,7 +174,7 @@ const IndexPage = ({ data }) => {
                 <Trans t={t}>Vega in 120 seconds</Trans>
               </GlitchTitle>
             </h2>
-            <div className="mx-auto max-w-[75rem] py-8 lg:pt-16">
+            <div className="mx-auto max-w-[75rem] py-8 md:mx-[8%] lg:pt-16">
               <LinkWrapper to="https://youtu.be/vcgY5zi1JQs">
                 <GatsbyImage
                   image={getImage(data.explainerVideoCover)}
