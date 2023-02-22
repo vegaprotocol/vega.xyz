@@ -10,16 +10,16 @@ import TranslationsBanner from '../components/TranslationsBanner'
 import Ticker from '../components/Ticker'
 import GlitchTitle from '../components/UI/GlitchTitle'
 import LatestNews from '../components/LatestNews'
-import LeadingLine from '../components/LeadingLine'
 import Button from '../components/UI/Button'
 import LinkCta from '../components/LinkCta'
+import LinkWrapper from '../components/UI/LinkWrapper'
 import PageSection from '../components/PageSection'
 import Calendar from '../components/Calendar'
 import AsSeenOn from '../components/AsSeenOn'
 import BoxLinkSimple from '../components/BoxLinkSimple'
 import RoadMap from '../components/RoadMap'
 import Rip from '../components/Svg/Home/Rip/Responsive'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import UniverseLeft from '../components/Svg/Home/UniverseLeft/Responsive'
 import UniverseRight from '../components/Svg/Home/UniverseRight/Responsive'
 import UniverseBottom from '../components/Svg/Home/UniverseBottom/Responsive'
@@ -40,10 +40,10 @@ const ToolBox = ({ title, description, icon, link }) => {
     <Link
       to={link}
       hideArrow
-      className="flex gap-4 rounded-3xl border border-vega-border-muted p-4 hover:-translate-y-2 md:p-5 lg:block lg:pb-8"
+      className="flex gap-4 rounded-3xl border border-vega-border-muted p-4 hover:-translate-y-2 md:block md:p-5 md:pb-8"
     >
       <div className="w-[4.75rem] shrink-0 lg:w-[5.9375rem]">
-        <GatsbyImage image={icon} alt={title} className="lg:mb-6 lg:w-auto " />
+        <GatsbyImage image={icon} alt={title} className="md:mb-6 lg:w-auto " />
       </div>
       <div>
         <div className="title-s mb-1 md:mb-3">{title}</div>
@@ -103,20 +103,22 @@ const IndexPage = ({ data }) => {
           <div className="mx-auto max-w-[100rem] md:grid md:grid-cols-12">
             <div className="hidden md:col-span-3 md:block"></div>
             <div className="md:col-span-6">
-              <div className="mx-auto max-w-[25rem] pt-8 text-center md:max-w-[35rem] md:pt-20">
-                <div>
-                  <h1 className="title-l md:title-xxl mb-2 xl:text-[7.1875rem]">
+              <div className="pt-8 text-center  md:pt-20">
+                <Container>
+                  <h1 className="title-l md:title-xxl mx-auto mb-space-5 max-w-[25rem] md:max-w-[35rem] xl:text-[7.1875rem]">
                     <GlitchTitle color="red">
                       <Trans t={t}>Toward a new era of finance</Trans>
                     </GlitchTitle>
                   </h1>
-                  <LeadingLine className="!mb-0 text-current lg:text-[1.75rem]">
+                  <p className="body-xl mx-auto max-w-[30rem] md:max-w-none">
                     <Trans t={t}>
-                      Decentralised infrastructure for the fair creation and
-                      trading of derivatives.
+                      Vega is Web3's native derivatives layer. Fully
+                      decentralised and optimised for permissionless market
+                      creation. Currently supports futures trading with an
+                      on-chain order book.
                     </Trans>
-                  </LeadingLine>
-                </div>
+                  </p>
+                </Container>
               </div>
             </div>
             <div className="hidden md:col-span-3 md:block"></div>
@@ -128,8 +130,8 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <Container dataCy={'main'}>
-          <div className="relative mx-auto mb-10 -mt-[15%] max-w-[29rem] md:mt-0 lg:max-w-[50rem]">
-            <div className="grid gap-4 py-12 md:gap-8 lg:grid-cols-3">
+          <div className="relative mx-auto mb-10 -mt-[15%] max-w-[29rem] md:mt-0 md:max-w-[50rem] lg:max-w-[50rem]">
+            <div className="grid gap-4 py-12 md:grid-cols-3 md:gap-8">
               <ToolBox
                 title="Console"
                 description={t(
@@ -164,7 +166,25 @@ const IndexPage = ({ data }) => {
         <div className="mx-auto mb-20 hidden max-w-[38rem] md:block xl:max-w-[45rem]">
           <UniverseBottom />
         </div>
-        <div className="py-8 lg:py-16">
+
+        <div className="pt-8 lg:pt-16">
+          <Container>
+            <h2 className="title-l md:title-xl mx-auto max-w-[45rem] md:text-center xl:text-[5.875rem]">
+              <GlitchTitle color="orange">
+                <Trans t={t}>Vega in 120 seconds</Trans>
+              </GlitchTitle>
+            </h2>
+            <div className="mx-auto max-w-[75rem] py-8 lg:pt-16">
+              <LinkWrapper to="https://youtu.be/vcgY5zi1JQs">
+                <GatsbyImage
+                  image={getImage(data.explainerVideoCover)}
+                  alt="Vega explainer video"
+                />
+              </LinkWrapper>
+            </div>
+          </Container>
+        </div>
+        <div className="pt-16 md:pt-32 lg:pt-40">
           <Container>
             <h2 className="title-l md:title-xl mb-4 max-w-[20rem] md:max-w-none md:text-center lg:mb-0 xl:text-[5.875rem]">
               <GlitchTitle color="orange">
@@ -375,6 +395,17 @@ export const query = graphql`
         gatsbyImageData(
           width: 96
           height: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    explainerVideoCover: file(
+      relativePath: { eq: "vega-explainer-video-cover.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1920
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
