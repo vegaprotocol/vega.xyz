@@ -1,6 +1,6 @@
 {
-  "Validators": "",
-  "Total Staked": "",
-  "Avg. Block Time": "",
-  "Current Epoch": ""
+  "Validators": "Валидаторы",
+  "Total Staked": "Всего в стейкинге",
+  "Avg. Block Time": "Avg. Время блока",
+  "Current Epoch": "Текущая эпоха"
 }
