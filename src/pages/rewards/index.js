@@ -111,49 +111,8 @@ const RewardsPage = ({ data }) => {
             <Trans t={t}>Create your own reward</Trans>
           </Button>
         </div>
-
-        <div className="my-space-10 md:my-space-11">
-          <div className="rounded-lg border border-vega-light-200 bg-vega-light-100 p-space-5 dark:border-vega-dark-200 dark:bg-vega-dark-100 md:flex md:flex-row md:gap-x-6">
-            <div>
-              <div className="body-xl mb-space-3">
-                <Trans t={t}>Staking rewards</Trans>
-              </div>
-              <p className="body-l text-vega-light-300 dark:text-vega-dark-300">
-                <Trans t={t}>
-                  Nominate a validator and earn treasury rewards for each full
-                  epoch staked, as well as a share of trading fees.
-                </Trans>
-              </p>
-              <Apy className="mt-6 max-w-[20rem] lg:hidden" />
-              <div className="mt-space-5 grid grid-cols-1 gap-6 md:flex md:items-center md:gap-6">
-                <div>
-                  <Button to="https://token.vega.xyz/staking">
-                    <Trans t={t}>Staking</Trans>
-                  </Button>
-                </div>
-                <Button
-                  variant="secondary"
-                  to="https://docs.vega.xyz/testnet/node-operators/setup-validator"
-                >
-                  <Trans t={t}>Become a validator</Trans>
-                </Button>
-              </div>
-            </div>
-            <div className="text-center">
-              <Apy className="hidden lg:block" />
-            </div>
-          </div>
-          <div className="mt-space-4">
-            <p className="text-vega-light-300 dark:text-vega-dark-300">
-              <Trans t={t}>
-                * The average annualised percentage return based on the last
-                epoch's total rewards for staking / amount staked and the number
-                of epochs in a year
-              </Trans>
-            </p>
-          </div>
+        <div><p><br></br><br></br></p>
         </div>
-
         <h2 className="heading-l mb-space-9 max-w-[48rem]">
           <Trans t={t}>Incentives and Bounties</Trans>
         </h2>
