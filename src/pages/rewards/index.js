@@ -111,7 +111,7 @@ const RewardsPage = ({ data }) => {
             <Trans t={t}>Create your own reward</Trans>
           </Button>
         </div>
-        <div><p></p>
+        <div><p><br></br><br></br></p>
         </div>
         <h2 className="heading-l mb-space-9 max-w-[48rem]">
           <Trans t={t}>Incentives and Bounties</Trans>
