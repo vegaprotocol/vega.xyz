@@ -112,7 +112,7 @@ const RewardsPage = ({ data }) => {
           </Button>
         </div>
 
-        <div className="my-space-10 md:my-space-11">
+        <!--div className="my-space-10 md:my-space-11">
           <div className="rounded-lg border border-vega-light-200 bg-vega-light-100 p-space-5 dark:border-vega-dark-200 dark:bg-vega-dark-100 md:flex md:flex-row md:gap-x-6">
             <div>
               <div className="body-xl mb-space-3">
@@ -152,7 +152,7 @@ const RewardsPage = ({ data }) => {
               </Trans>
             </p>
           </div>
-        </div>
+        </div-->
 
         <h2 className="heading-l mb-space-9 max-w-[48rem]">
           <Trans t={t}>Incentives and Bounties</Trans>
