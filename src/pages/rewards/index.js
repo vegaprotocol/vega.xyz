@@ -62,9 +62,9 @@ const RewardsPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Develop with Vega')}
+        title={t('Rewards')}
         description={t(
-          'Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi.'
+          'Get rewarded for participating in the future of DeFi.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
