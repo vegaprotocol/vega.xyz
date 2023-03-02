@@ -8807,14 +8807,22 @@ type MediumPostPreviewContentBodyModelParagraphsFilterListInput = {
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkups = {
+  readonly anchorType: Maybe<Scalars['Int']>;
   readonly end: Maybe<Scalars['Int']>;
+  readonly href: Maybe<Scalars['String']>;
+  readonly rel: Maybe<Scalars['String']>;
   readonly start: Maybe<Scalars['Int']>;
+  readonly title: Maybe<Scalars['String']>;
   readonly type: Maybe<Scalars['Int']>;
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput = {
+  readonly anchorType: InputMaybe<IntQueryOperatorInput>;
   readonly end: InputMaybe<IntQueryOperatorInput>;
+  readonly href: InputMaybe<StringQueryOperatorInput>;
+  readonly rel: InputMaybe<StringQueryOperatorInput>;
   readonly start: InputMaybe<IntQueryOperatorInput>;
+  readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly type: InputMaybe<IntQueryOperatorInput>;
 };
 
@@ -9010,31 +9018,19 @@ type MediumPostVirtualsTagsMetadata = {
 
 type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly alt: Maybe<Scalars['String']>;
-  readonly backgroundSize: Maybe<Scalars['String']>;
-  readonly externalSrc: Maybe<Scalars['String']>;
-  readonly filter: Maybe<Scalars['String']>;
-  readonly focusPercentX: Maybe<Scalars['Int']>;
-  readonly focusPercentY: Maybe<Scalars['Int']>;
   readonly id: Maybe<Scalars['String']>;
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
   readonly originalWidth: Maybe<Scalars['Int']>;
-  readonly repairedAt: Maybe<Scalars['Int']>;
   readonly unsplashPhotoId: Maybe<Scalars['String']>;
 };
 
 type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly alt: InputMaybe<StringQueryOperatorInput>;
-  readonly backgroundSize: InputMaybe<StringQueryOperatorInput>;
-  readonly externalSrc: InputMaybe<StringQueryOperatorInput>;
-  readonly filter: InputMaybe<StringQueryOperatorInput>;
-  readonly focusPercentX: InputMaybe<IntQueryOperatorInput>;
-  readonly focusPercentY: InputMaybe<IntQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
   readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
-  readonly repairedAt: InputMaybe<IntQueryOperatorInput>;
   readonly unsplashPhotoId: InputMaybe<StringQueryOperatorInput>;
 };
 
