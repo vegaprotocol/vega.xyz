@@ -70,7 +70,10 @@ const DownloadButton = ({ binaries, title }) => {
             }
           }}
         >
-          <div className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase" data-cy={title}>
+          <div
+            className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase"
+            data-cy={title}
+          >
             <div className="mr-4">
               <DropdownArrow />
             </div>
@@ -89,12 +92,16 @@ const DownloadButton = ({ binaries, title }) => {
                           target="_blank"
                           rel="noreferrer"
                           data-file-download
-                          className={`flex w-full items-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10`} data-cy={'downloadLink'}
+                          className={`flex w-full items-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10`}
+                          data-cy={'downloadLink'}
                         >
                           <div className="px-3.5 py-2">
                             {PlatformIcon(binary.icon)}
                           </div>
-                          <div className="copy-xxs !mb-0 py-2 text-vega-mid-grey dark:text-vega-grey" data-cy={'downloadPlatform'}>
+                          <div
+                            className="copy-xxs !mb-0 py-2 text-vega-mid-grey dark:text-vega-grey"
+                            data-cy={'downloadPlatform'}
+                          >
                             {binary.platform}
                           </div>
                         </a>
@@ -461,7 +468,7 @@ const WalletPage = ({ data }) => {
               <Trans t={t}>How-to use</Trans>
             </GlitchTitle>
           </h2>
-          <div class="flex justify-center">
+          <div className="flex justify-center">
             <LinkWrapper to="https://www.youtube.com/watch?v=fFmLQeQUa1k">
               <GatsbyImage
                 image={getImage(data.walletVideoPoster)}
@@ -617,12 +624,7 @@ export default WalletPage
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(
-      filter: {
-        ns: { in: ["common", "component.navigation", "page.wallet"] }
-        language: { eq: $language }
-      }
-    ) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns
