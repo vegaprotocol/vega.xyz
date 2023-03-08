@@ -4,7 +4,7 @@
   "Token holders consider and vote for or against active proposals. Tokens used for voting are not locked or transferred - they can be used for staking as well as voting on any/all active proposals, but cannot be used to trade. Note, each public key with a minimum of 1 $VEGA gets just one vote per proposal.": "",
   "The number of tokens needed to vote differs by proposal type, for example <2></2> for a new market proposal. Each public key is eligible for one vote.": "",
   "If a proposal receives enough participation and reaches the majority threshold within the voting period, the change is automatically enacted (with the exception of free form proposals). The thresholds differ by proposal type, for example a new market proposal requires participation of <2></2> and a majority of <6></6>.": "",
-  "Phase 1": "",
+  "Phase 1": "1 단계",
   "Sense check": "",
   "Start a topic and share an outline of your proposal on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.": "",
   "Start a topic on the forum": "",
