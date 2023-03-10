@@ -28,7 +28,7 @@ const Layout = ({ children, stickyHeader = true }) => {
                     className="font-bold underline hover:no-underline"
                   >
                     <br className="md:hidden" />
-                    Find out more
+                    Learn more
                   </Link>
                 </SiteBanner>
                 {children}
