@@ -1,11 +1,11 @@
 {
-  "Validate and secure the network": "",
-  "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator.": "",
-  "Use Vega": "",
-  "Validator rewards": "",
-  "* The no. of Consensus Validators is expected to increase through governance, further decentralising the protocol over time, with the no. of Standby Validators increasing as a multiple of the number of Consensus Validators, currently configured to <2></2>.": "",
-  "** Consensus validators secure the network, earning a <2></2> rate on rewards. Standby validators are ready to step up and fill open consensus validator slots, earning a <6></6> rate on rewards.": "",
-  "Become a Mainnet Validator": "",
-  "Any participant in the Vega network can become a validator. You'll need to set up a node and its infrastructure, submit a transaction on chain, self-stake <2></2> and attract token holders to stake (delegate) their tokens to you.": "",
-  "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>.": ""
+  "Validate and secure the network": "네트워크 검증 및 안정화",
+  "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator.": "Vega는 네트워크 보안에 대한 보상을 받는 한정된 수의 밸리데이터가 있는 위임 지분 증명 네트워크입니다. 합의 밸리데이터는 네트워크의 트랜잭션이 포함된 블록을 검증하는 노드를 실행하고 Vega 토큰 홀더는 스테이킹을 통해 밸리데이터를 지명하여 VEGA를 선택한 밸리데이터에게 위임합니다.",
+  "Use Vega": "베가 사용",
+  "Validator rewards": "밸리데이터 보상",
+  "* The no. of Consensus Validators is expected to increase through governance, further decentralising the protocol over time, with the no. of Standby Validators increasing as a multiple of the number of Consensus Validators, currently configured to <2></2>.": "* 합의 밸리데이터의 수는 거버넌스를 통해 증가할 것으로 예상되며 시간이 지남에 따라 프로토콜을 더욱 분산화합니다. 현재 <2></2>로 구성된 합의 밸리데이터 수의 배수로 증가하는 대기 검증자 수.",
+  "** Consensus validators secure the network, earning a <2></2> rate on rewards. Standby validators are ready to step up and fill open consensus validator slots, earning a <6></6> rate on rewards.": "** 합의 밸리데이터는 네트워크를 보호하여 보상에 대해 <2></2> 비율을 얻습니다. 대기 밸리데이터는 한 걸음 더 나아가 열린 합의 밸리데이터 슬롯을 채울 준비가 되어 있으며 보상에 대해 <6></6> 비율을 얻습니다.",
+  "Become a Mainnet Validator": "메인넷 밸리데이터 되기",
+  "Any participant in the Vega network can become a validator. You'll need to set up a node and its infrastructure, submit a transaction on chain, self-stake <2></2> and attract token holders to stake (delegate) their tokens to you.": "Vega 네트워크의 모든 참가자는 밸리데이터가 될 수 있습니다. 노드와 해당 인프라를 설정하고, 체인에서 트랜잭션을 제출하고, <2></2> 자체 스테이킹하고 토큰 홀더를 유치(위임)해야 합니다.",
+  "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>.": "가장 높은 <2>밸리데이터 점수</2>(성과 및 지분 측정)를 가진 사람들은 합의 밸리데이터가 되고 모든 거래 및 전송에 대해 지불된 인프라 수수료에서 가장 큰 보상을 얻습니다. 일부는 스테이커 및 예비 밸리데이터에게 분배됩니다. <6>밸리데이터 목록</6>은 <10></10> Epoch마다 새로고침됩니다."
 }
