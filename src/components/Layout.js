@@ -22,7 +22,7 @@ const Layout = ({ children, stickyHeader = true }) => {
             >
               <div>
                 <SiteBanner>
-                  Mainnet Sim 3 is coming soon!{' '}
+                  Wait no longer, SIM3 is here!{' '}
                   <Link
                     to="https://fairground.wtf/"
                     className="font-bold underline hover:no-underline"
