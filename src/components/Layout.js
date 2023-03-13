@@ -24,7 +24,7 @@ const Layout = ({ children, stickyHeader = true }) => {
                 <SiteBanner>
                   Wait no longer, SIM3 is here!{' '}
                   <Link
-                    to="https://fairground.wtf/"
+                    to="https://fairground.wtf/sim3"
                     className="font-bold underline hover:no-underline"
                   >
                     <br className="md:hidden" />
