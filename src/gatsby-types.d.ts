@@ -8997,31 +8997,19 @@ type MediumPostVirtualsTagsMetadata = {
 
 type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly alt: Maybe<Scalars['String']>;
-  readonly backgroundSize: Maybe<Scalars['String']>;
-  readonly externalSrc: Maybe<Scalars['String']>;
-  readonly filter: Maybe<Scalars['String']>;
-  readonly focusPercentX: Maybe<Scalars['Int']>;
-  readonly focusPercentY: Maybe<Scalars['Int']>;
   readonly id: Maybe<Scalars['String']>;
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
   readonly originalWidth: Maybe<Scalars['Int']>;
-  readonly repairedAt: Maybe<Scalars['Int']>;
   readonly unsplashPhotoId: Maybe<Scalars['String']>;
 };
 
 type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly alt: InputMaybe<StringQueryOperatorInput>;
-  readonly backgroundSize: InputMaybe<StringQueryOperatorInput>;
-  readonly externalSrc: InputMaybe<StringQueryOperatorInput>;
-  readonly filter: InputMaybe<StringQueryOperatorInput>;
-  readonly focusPercentX: InputMaybe<IntQueryOperatorInput>;
-  readonly focusPercentY: InputMaybe<IntQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
   readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
-  readonly repairedAt: InputMaybe<IntQueryOperatorInput>;
   readonly unsplashPhotoId: InputMaybe<StringQueryOperatorInput>;
 };
 
