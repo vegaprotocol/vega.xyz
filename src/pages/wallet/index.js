@@ -62,7 +62,7 @@ const DownloadButton = ({ binaries, title }) => {
         <div
           role="button"
           tabIndex={0}
-          className="flex items-center border border-current"
+          className="flex items-center border border-current" data-cy={title}
           onFocus={() => showDownloadMenu(true)}
           onBlur={(e) => {
             if (!e.relatedTarget?.dataset?.fileDownload) {
@@ -71,9 +71,7 @@ const DownloadButton = ({ binaries, title }) => {
           }}
         >
           <div
-            className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase"
-            data-cy={title}
-          >
+            className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase">
             <div className="mr-4">
               <DropdownArrow />
             </div>
