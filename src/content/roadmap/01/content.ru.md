@@ -1,12 +1,13 @@
 ---
 step_title: 2021 H1
-title: Testnet (Fairground)
+title: Тестнет (Fairground)
 ---
 
-## Play without consequences
+## Игра без последствий
 
-- Experiment with trading
-- Create permissionless markets
-- Create and vote on governance proposals
-- Start staking
-- Explore the blockchain
+- Экспериментируйте с торговлей
+- Создавайте рынки без разрешений
+- Создавайте и голосуйте за предложения по управлению
+- Начать делать ставки
+- Изучите блокчейн
+
