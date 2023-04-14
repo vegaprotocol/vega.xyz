@@ -1,11 +1,11 @@
 ---
 step_title: 2024 H1
-title: Version 2 Mainnet
+title: 2 Версия Майннет
 ---
 
-## Protocol V2
+## Протокол V2
 
-- Create your own products, risk models and control other aspects of the protocol using WASM
-- Advanced products like options
-- Enhanced performance and security
-- Core protocol upgrades and simplifications
+- Создавайте собственные продукты, модели риска и контролируйте другие аспекты протокола с помощью WASM
+- Расширенные продукты, такие как опционы
+- Повышенная производительность и безопасность
+- Модернизация и упрощение основного протокола
