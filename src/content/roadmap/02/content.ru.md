@@ -1,10 +1,11 @@
 ---
 step_title: 2022 H1
-title: Restricted Mainnet
+title: Ограниченная основная сеть
 ---
 
-## Secure and govern the network
+## Безопасность и управление сетью
 
-- Validators run a decentralised network connected to the Ethereum mainnet
-- Create and vote on governance proposals
-- Stake and delegate tokens
+- Валидаторы управляют децентрализованной сетью, подключенной к мейннету Ethereum
+- Создают предложения по управлению и голосуют по ним
+- Размещать и делегировать токены
+
