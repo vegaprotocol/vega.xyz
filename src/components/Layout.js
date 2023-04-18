@@ -19,6 +19,7 @@ const Layout = ({ children, stickyHeader = true }) => {
               className={stickyHeader ? 'mt-[4.8125rem] lg:mt-[6.25rem]' : ''}
             >
               <div>
+              >
                 {children}
               </div>
             </div>
