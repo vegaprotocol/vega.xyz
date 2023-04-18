@@ -2,8 +2,6 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Helmet } from 'react-helmet'
-import Link from '../components/UI/Link'
-import SiteBanner from '../components/SiteBanner'
 
 const Layout = ({ children, stickyHeader = true }) => {
   return (
@@ -21,16 +19,6 @@ const Layout = ({ children, stickyHeader = true }) => {
               className={stickyHeader ? 'mt-[4.8125rem] lg:mt-[6.25rem]' : ''}
             >
               <div>
-                <SiteBanner>
-                  Mainnet SIM #4 is live!{' '}
-                  <Link
-                    to="https://fairground.wtf/sim4"
-                    className="font-bold underline hover:no-underline"
-                  >
-                    <br className="md:hidden" />
-                    Get involved
-                  </Link>
-                </SiteBanner>
                 {children}
               </div>
             </div>
