@@ -25,7 +25,6 @@ import UniverseRight from '../components/Svg/Home/UniverseRight/Responsive'
 import UniverseBottom from '../components/Svg/Home/UniverseBottom/Responsive'
 import UniverseBottom2 from '../components/Svg/Home/UniverseBottom2'
 import UniverseTop from '../components/Svg/Home/UniverseTop'
-import Announcement from '../components/Announcement'
 import PermissionlessMarketCreationIcon from '../images/feature-icons/permissionless-market-creation.svg'
 import AntiFrontRunningProtectionIcon from '../images/feature-icons/anti-front-running-protection.svg'
 import PurposeBuiltBlockChainIcon from '../images/feature-icons/purpose-built.svg'
@@ -297,16 +296,6 @@ const IndexPage = ({ data }) => {
             </div>
           </PageSection>
         </Container>
-        <Announcement
-          title={t('Build, test & earn')}
-          bodyText={t(
-            'Your participation strengthens the network and can earn you a piece of up to 150k VEGA rewards.'
-          )}
-          link={{
-            text: t('Join the Mainnet Sims now'),
-            url: 'https://fairground.wtf/',
-          }}
-        />
       </main>
     </Layout>
   )
