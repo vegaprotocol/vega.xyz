@@ -83,38 +83,38 @@ module.exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
-exports.sourceNodes = async ({
-  actions,
-  createNodeId,
-  createContentDigest,
-}) => {
-  const incentivesData = await fetch(
-    `https://notion-data-service.ops.vega.xyz/query?id=aa64c6a0-0e0d-460d-ad44-ceacc6cd5957`
-  )
-  const incentivesResultData = await incentivesData.json()
-  incentivesResultData.notion_data.forEach((incentive) => {
-    const node = {
-      name: incentive.properties.find((o) => o.name === 'Name').values,
-      type: incentive.properties.find((o) => o.name === 'Type').values,
-      status: incentive.properties.find((o) => o.name === 'Status').values,
-      reward: incentive.properties.find((o) => o.name === 'Reward').values,
-      end_date: incentive.properties.find((o) => o.name === 'End Date').values,
-      start_date: incentive.properties.find((o) => o.name === 'Start Date')
-        .values,
-      link: incentive.properties.find((o) => o.name === 'Link').values,
-      tags: incentive.properties.find((o) => o.name === 'Tags').values,
+// exports.sourceNodes = async ({
+//   actions,
+//   createNodeId,
+//   createContentDigest,
+// }) => {
+//   const incentivesData = await fetch(
+//     `https://notion-data-service.ops.vega.xyz/query?id=aa64c6a0-0e0d-460d-ad44-ceacc6cd5957`
+//   )
+//   const incentivesResultData = await incentivesData.json()
+//   incentivesResultData.notion_data.forEach((incentive) => {
+//     const node = {
+//       name: incentive.properties.find((o) => o.name === 'Name').values,
+//       type: incentive.properties.find((o) => o.name === 'Type').values,
+//       status: incentive.properties.find((o) => o.name === 'Status').values,
+//       reward: incentive.properties.find((o) => o.name === 'Reward').values,
+//       end_date: incentive.properties.find((o) => o.name === 'End Date').values,
+//       start_date: incentive.properties.find((o) => o.name === 'Start Date')
+//         .values,
+//       link: incentive.properties.find((o) => o.name === 'Link').values,
+//       tags: incentive.properties.find((o) => o.name === 'Tags').values,
 
-      id: createNodeId(`incentive-${incentive.id}`),
-      parent: null,
-      children: [],
-      internal: {
-        type: `Incentives`,
-        contentDigest: createContentDigest(incentive),
-      },
-    }
-    actions.createNode(node)
-  })
-}
+//       id: createNodeId(`incentive-${incentive.id}`),
+//       parent: null,
+//       children: [],
+//       internal: {
+//         type: `Incentives`,
+//         contentDigest: createContentDigest(incentive),
+//       },
+//     }
+//     actions.createNode(node)
+//   })
+// }
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
