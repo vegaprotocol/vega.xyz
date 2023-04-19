@@ -34,6 +34,11 @@ const Calendar = ({ limit = -1, filter = false }) => {
         }
       }
 
+      if (response.notion_data === null) {
+        setEvents([])
+        return false
+      }
+
       // extract relevant data
       const result = response.notion_data
         .map((elem) => {
