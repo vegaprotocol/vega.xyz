@@ -2892,246 +2892,6 @@ type ImageSharpSortInput = {
   readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
 };
 
-type Incentives = Node & {
-  readonly children: ReadonlyArray<Node>;
-  readonly end_date: Maybe<ReadonlyArray<Maybe<Scalars['Date']>>>;
-  readonly id: Scalars['ID'];
-  readonly internal: Internal;
-  readonly link: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  readonly name: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  readonly parent: Maybe<Node>;
-  readonly reward: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  readonly start_date: Maybe<ReadonlyArray<Maybe<Scalars['Date']>>>;
-  readonly status: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-  readonly type: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
-};
-
-
-type Incentives_end_dateArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type Incentives_start_dateArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-type IncentivesConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<IncentivesEdge>;
-  readonly group: ReadonlyArray<IncentivesGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<Incentives>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type IncentivesConnection_distinctArgs = {
-  field: IncentivesFieldsEnum;
-};
-
-
-type IncentivesConnection_groupArgs = {
-  field: IncentivesFieldsEnum;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type IncentivesConnection_maxArgs = {
-  field: IncentivesFieldsEnum;
-};
-
-
-type IncentivesConnection_minArgs = {
-  field: IncentivesFieldsEnum;
-};
-
-
-type IncentivesConnection_sumArgs = {
-  field: IncentivesFieldsEnum;
-};
-
-type IncentivesEdge = {
-  readonly next: Maybe<Incentives>;
-  readonly node: Incentives;
-  readonly previous: Maybe<Incentives>;
-};
-
-type IncentivesFieldsEnum =
-  | 'children'
-  | 'children.children'
-  | 'children.children.children'
-  | 'children.children.children.children'
-  | 'children.children.children.id'
-  | 'children.children.id'
-  | 'children.children.internal.content'
-  | 'children.children.internal.contentDigest'
-  | 'children.children.internal.contentFilePath'
-  | 'children.children.internal.description'
-  | 'children.children.internal.fieldOwners'
-  | 'children.children.internal.ignoreType'
-  | 'children.children.internal.mediaType'
-  | 'children.children.internal.owner'
-  | 'children.children.internal.type'
-  | 'children.children.parent.children'
-  | 'children.children.parent.id'
-  | 'children.id'
-  | 'children.internal.content'
-  | 'children.internal.contentDigest'
-  | 'children.internal.contentFilePath'
-  | 'children.internal.description'
-  | 'children.internal.fieldOwners'
-  | 'children.internal.ignoreType'
-  | 'children.internal.mediaType'
-  | 'children.internal.owner'
-  | 'children.internal.type'
-  | 'children.parent.children'
-  | 'children.parent.children.children'
-  | 'children.parent.children.id'
-  | 'children.parent.id'
-  | 'children.parent.internal.content'
-  | 'children.parent.internal.contentDigest'
-  | 'children.parent.internal.contentFilePath'
-  | 'children.parent.internal.description'
-  | 'children.parent.internal.fieldOwners'
-  | 'children.parent.internal.ignoreType'
-  | 'children.parent.internal.mediaType'
-  | 'children.parent.internal.owner'
-  | 'children.parent.internal.type'
-  | 'children.parent.parent.children'
-  | 'children.parent.parent.id'
-  | 'end_date'
-  | 'id'
-  | 'internal.content'
-  | 'internal.contentDigest'
-  | 'internal.contentFilePath'
-  | 'internal.description'
-  | 'internal.fieldOwners'
-  | 'internal.ignoreType'
-  | 'internal.mediaType'
-  | 'internal.owner'
-  | 'internal.type'
-  | 'link'
-  | 'name'
-  | 'parent.children'
-  | 'parent.children.children'
-  | 'parent.children.children.children'
-  | 'parent.children.children.id'
-  | 'parent.children.id'
-  | 'parent.children.internal.content'
-  | 'parent.children.internal.contentDigest'
-  | 'parent.children.internal.contentFilePath'
-  | 'parent.children.internal.description'
-  | 'parent.children.internal.fieldOwners'
-  | 'parent.children.internal.ignoreType'
-  | 'parent.children.internal.mediaType'
-  | 'parent.children.internal.owner'
-  | 'parent.children.internal.type'
-  | 'parent.children.parent.children'
-  | 'parent.children.parent.id'
-  | 'parent.id'
-  | 'parent.internal.content'
-  | 'parent.internal.contentDigest'
-  | 'parent.internal.contentFilePath'
-  | 'parent.internal.description'
-  | 'parent.internal.fieldOwners'
-  | 'parent.internal.ignoreType'
-  | 'parent.internal.mediaType'
-  | 'parent.internal.owner'
-  | 'parent.internal.type'
-  | 'parent.parent.children'
-  | 'parent.parent.children.children'
-  | 'parent.parent.children.id'
-  | 'parent.parent.id'
-  | 'parent.parent.internal.content'
-  | 'parent.parent.internal.contentDigest'
-  | 'parent.parent.internal.contentFilePath'
-  | 'parent.parent.internal.description'
-  | 'parent.parent.internal.fieldOwners'
-  | 'parent.parent.internal.ignoreType'
-  | 'parent.parent.internal.mediaType'
-  | 'parent.parent.internal.owner'
-  | 'parent.parent.internal.type'
-  | 'parent.parent.parent.children'
-  | 'parent.parent.parent.id'
-  | 'reward'
-  | 'start_date'
-  | 'status'
-  | 'tags'
-  | 'type';
-
-type IncentivesFilterInput = {
-  readonly children: InputMaybe<NodeFilterListInput>;
-  readonly end_date: InputMaybe<DateQueryOperatorInput>;
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly internal: InputMaybe<InternalFilterInput>;
-  readonly link: InputMaybe<StringQueryOperatorInput>;
-  readonly name: InputMaybe<StringQueryOperatorInput>;
-  readonly parent: InputMaybe<NodeFilterInput>;
-  readonly reward: InputMaybe<StringQueryOperatorInput>;
-  readonly start_date: InputMaybe<DateQueryOperatorInput>;
-  readonly status: InputMaybe<StringQueryOperatorInput>;
-  readonly tags: InputMaybe<StringQueryOperatorInput>;
-  readonly type: InputMaybe<StringQueryOperatorInput>;
-};
-
-type IncentivesGroupConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<IncentivesEdge>;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-  readonly group: ReadonlyArray<IncentivesGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<Incentives>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type IncentivesGroupConnection_distinctArgs = {
-  field: IncentivesFieldsEnum;
-};
-
-
-type IncentivesGroupConnection_groupArgs = {
-  field: IncentivesFieldsEnum;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type IncentivesGroupConnection_maxArgs = {
-  field: IncentivesFieldsEnum;
-};
-
-
-type IncentivesGroupConnection_minArgs = {
-  field: IncentivesFieldsEnum;
-};
-
-
-type IncentivesGroupConnection_sumArgs = {
-  field: IncentivesFieldsEnum;
-};
-
-type IncentivesSortInput = {
-  readonly fields: InputMaybe<ReadonlyArray<InputMaybe<IncentivesFieldsEnum>>>;
-  readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
-};
-
 type IntQueryOperatorInput = {
   readonly eq: InputMaybe<Scalars['Int']>;
   readonly gt: InputMaybe<Scalars['Int']>;
@@ -8786,22 +8546,14 @@ type MediumPostPreviewContentBodyModelParagraphsFilterListInput = {
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkups = {
-  readonly anchorType: Maybe<Scalars['Int']>;
   readonly end: Maybe<Scalars['Int']>;
-  readonly href: Maybe<Scalars['String']>;
-  readonly rel: Maybe<Scalars['String']>;
   readonly start: Maybe<Scalars['Int']>;
-  readonly title: Maybe<Scalars['String']>;
   readonly type: Maybe<Scalars['Int']>;
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput = {
-  readonly anchorType: InputMaybe<IntQueryOperatorInput>;
   readonly end: InputMaybe<IntQueryOperatorInput>;
-  readonly href: InputMaybe<StringQueryOperatorInput>;
-  readonly rel: InputMaybe<StringQueryOperatorInput>;
   readonly start: InputMaybe<IntQueryOperatorInput>;
-  readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly type: InputMaybe<IntQueryOperatorInput>;
 };
 
@@ -9692,7 +9444,6 @@ type Query = {
   readonly allDirectory: DirectoryConnection;
   readonly allFile: FileConnection;
   readonly allImageSharp: ImageSharpConnection;
-  readonly allIncentives: IncentivesConnection;
   readonly allJson: JsonConnection;
   readonly allLocale: LocaleConnection;
   readonly allMarkdownRemark: MarkdownRemarkConnection;
@@ -9709,7 +9460,6 @@ type Query = {
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
-  readonly incentives: Maybe<Incentives>;
   readonly json: Maybe<Json>;
   readonly locale: Maybe<Locale>;
   readonly markdownRemark: Maybe<MarkdownRemark>;
@@ -9747,14 +9497,6 @@ type Query_allImageSharpArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ImageSharpSortInput>;
-};
-
-
-type Query_allIncentivesArgs = {
-  filter: InputMaybe<IncentivesFilterInput>;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-  sort: InputMaybe<IncentivesSortInput>;
 };
 
 
@@ -9961,22 +9703,6 @@ type Query_imageSharpArgs = {
   original: InputMaybe<ImageSharpOriginalFilterInput>;
   parent: InputMaybe<NodeFilterInput>;
   resize: InputMaybe<ImageSharpResizeFilterInput>;
-};
-
-
-type Query_incentivesArgs = {
-  children: InputMaybe<NodeFilterListInput>;
-  end_date: InputMaybe<DateQueryOperatorInput>;
-  id: InputMaybe<StringQueryOperatorInput>;
-  internal: InputMaybe<InternalFilterInput>;
-  link: InputMaybe<StringQueryOperatorInput>;
-  name: InputMaybe<StringQueryOperatorInput>;
-  parent: InputMaybe<NodeFilterInput>;
-  reward: InputMaybe<StringQueryOperatorInput>;
-  start_date: InputMaybe<DateQueryOperatorInput>;
-  status: InputMaybe<StringQueryOperatorInput>;
-  tags: InputMaybe<StringQueryOperatorInput>;
-  type: InputMaybe<StringQueryOperatorInput>;
 };
 
 
