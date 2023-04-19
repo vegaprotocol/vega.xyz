@@ -18,8 +18,13 @@ const Incentives = ({ limit = 10, allowLoadMore = false }) => {
       )
       response = await response.json()
 
-      // the following logic will probably be made redundant when the calendar API feed is updated
+      if (response.notion_data === null) {
+        setIncentives([])
+        setList([])
+        return false
+      }
 
+      // the following logic will probably be made redundant when the calendar API feed is updated
       // extract relevant data
       let result = response.notion_data.map((elem) => {
         return {
@@ -97,7 +102,12 @@ const Incentives = ({ limit = 10, allowLoadMore = false }) => {
           </Button>
         </div>
       </div>
-      {list ? (
+      {list && list.length === 0 && (
+        <div className="body-l mb-space-10" data-cy="thingsAreQuiet">
+          {t("Things are a little quiet. Check back to see what's happening.")}
+        </div>
+      )}
+      {list && list.length > 0 && (
         <div>
           {list.map((incentive, idx) => (
             <Incentive
@@ -130,10 +140,6 @@ const Incentives = ({ limit = 10, allowLoadMore = false }) => {
               <Trans t={t}>View all</Trans>
             </Button>
           </div>
-        </div>
-      ) : (
-        <div>
-          <p>Loading...</p>
         </div>
       )}
     </div>
