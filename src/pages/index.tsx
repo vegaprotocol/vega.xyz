@@ -20,7 +20,6 @@ import Rip from '../components/Svg/Home/Rip/Responsive'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import PlanetA from '../components/Svg/Home/PlanetA'
 import PlanetB from '../components/Svg/Home/PlanetB'
-import Announcement from '../components/Announcement'
 import Markets from '../components/Home/Markets'
 import PermissionlessMarketCreationIcon from '../images/feature-icons/permissionless-market-creation.svg'
 import AntiFrontRunningProtectionIcon from '../images/feature-icons/anti-front-running-protection.svg'
@@ -271,16 +270,6 @@ const IndexPage = ({ data }) => {
             </div>
           </PageSection>
         </Container>
-        <Announcement
-          title={t('Build, test & earn')}
-          bodyText={t(
-            'Your participation strengthens the network and can earn you a piece of up to 150k VEGA rewards.'
-          )}
-          link={{
-            text: t('Join the Mainnet Sims now'),
-            url: 'https://fairground.wtf/',
-          }}
-        />
       </main>
     </Layout>
   )
