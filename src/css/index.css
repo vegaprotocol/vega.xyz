@@ -69,6 +69,40 @@ body {
   }
 }
 
+/* Customise Swiper for Markets components */
+
+@layer utilities {
+  .market-swiper .swiper-wrapper {
+    @apply pb-space-7;
+  }
+
+  .market-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    @apply bottom-0;
+  }
+
+  .market-swiper .swiper-pagination {
+    @apply text-right;
+  }
+
+  .market-swiper .swiper-pagination-bullet {
+    width: 15px;
+    height: 2px;
+    @apply rounded-none;
+    @apply bg-vega-dark-100;
+    @apply dark:bg-vega-light-100;
+  }
+
+  .market-swiper
+    .swiper-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet,
+  .market-swiper
+    .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    @apply m-0.5;
+  }
+}
+
 a {
   @apply transition-colors;
 }
@@ -241,6 +275,12 @@ a {
 
   *[class^='heading-'] {
     font-variant-ligatures: normal;
+  }
+
+  .heading-xxxs {
+    @apply text-[0.75rem];
+    @apply leading-[96%];
+    @apply uppercase;
   }
 
   .heading-xxs {

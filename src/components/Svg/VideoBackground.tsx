@@ -9,8 +9,8 @@ export interface Params {
 const VideoBackground = ({ className, circle = false }: Params) => {
   const video = createRef<HTMLVideoElement>()
   const [replaceVideoWithPoster, setReplaceVideoWithPoster] = useState(false)
-  const cssClass = `absolute left-0 top-0 h-full w-full rounded-full object-cover ${
-    circle ? 'rounded-full' : ''
+  const cssClass = `absolute left-0 top-0 h-full w-full object-cover ${
+    circle === true ? 'rounded-full' : ''
   }`
 
   useEffect(() => {

@@ -20,7 +20,11 @@ import Rip from '../components/Svg/Home/Rip/Responsive'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import PlanetA from '../components/Svg/Home/PlanetA'
 import PlanetB from '../components/Svg/Home/PlanetB'
+import Explore from '../components/Svg/Home/Explore'
 import Markets from '../components/Home/Markets'
+import LogoGRPC from '../components/Svg/LogoGRPC'
+import LogoGraphQL from '../components/Svg/LogoGraphQL'
+import LogoRestAPI from '../components/Svg/LogoRestAPI'
 import PermissionlessMarketCreationIcon from '../images/feature-icons/permissionless-market-creation.svg'
 import AntiFrontRunningProtectionIcon from '../images/feature-icons/anti-front-running-protection.svg'
 import PurposeBuiltBlockChainIcon from '../images/feature-icons/purpose-built.svg'
@@ -133,8 +137,37 @@ const IndexPage = ({ data }) => {
             </div>
             <BackerLogos />
           </div>
-
           <Markets />
+
+          <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
+            <div className="grid md:grid-cols-2">
+              <div className="p-space-5">
+                <h2 className="heading-m mb-space-4">Explore Vega's APIS</h2>
+                <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-6">
+                  Vega's decentralised datanode architecture provides rich
+                  CEX-like APIs and full historic price data for everyone!
+                </p>
+                <div>
+                  <div className="flex items-center gap-x-space-5">
+                    <div className="max-w-[4.6875rem]">
+                      <LogoGRPC />
+                    </div>
+                    <div className="max-w-[3.125rem]">
+                      <LogoRestAPI />
+                    </div>
+                    <div className="max-w-[6.25rem]">
+                      <LogoGraphQL />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-end justify-end">
+                <div className="relative mr-space-3 w-full max-w-[33.25rem]">
+                  <Explore />
+                </div>
+              </div>
+            </div>
+          </div>
         </Container>
 
         <div className="py-8 lg:py-16">
