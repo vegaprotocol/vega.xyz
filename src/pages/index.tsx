@@ -137,7 +137,14 @@ const IndexPage = ({ data }) => {
             </div>
             <BackerLogos />
           </div>
-          <Markets />
+
+          <div className="my-space-10 md:my-space-12 lg:my-space-14">
+            <Markets />
+          </div>
+
+          <div className="my-space-10 md:my-space-12 lg:my-space-14">
+            <Ticker />
+          </div>
 
           <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
             <div className="grid md:grid-cols-2">
@@ -170,7 +177,7 @@ const IndexPage = ({ data }) => {
           </div>
         </Container>
 
-        <div className="py-8 lg:py-16">
+        <div className="pt-16 md:pt-32 lg:pt-40">
           <Container>
             <h2 className="title-l md:title-xl mb-4 max-w-[20rem] md:max-w-none md:text-center lg:mb-0 xl:text-[5.875rem]">
               <GlitchTitle color="orange">
@@ -243,9 +250,6 @@ const IndexPage = ({ data }) => {
           </Container>
         </div>
         <Rip />
-        <div className="pt-16">
-          <Ticker />
-        </div>
 
         <div className="pt-16 md:pt-32 lg:pt-40">
           <div id="roadmap">

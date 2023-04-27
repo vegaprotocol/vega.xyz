@@ -4,6 +4,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFade, Autoplay } from 'swiper'
 import { MQMediumDown, MQLargeUp } from '../utils/media-queries.js'
+import Numeral from 'react-numeral'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 
@@ -20,11 +21,13 @@ const Ticker = () => {
 
   const TickerCell = ({ label, value }) => {
     return (
-      <div className="bg-white text-center dark:bg-black">
-        <div className="text-[3.375rem] md:text-[2.75rem] xl:text-[3.375rem]">
+      <div className="relative bg-white px-space-6 text-center after:absolute after:top-0 after:bottom-0 after:right-0 after:w-px after:bg-vega-light-200 after:content-[''] last:after:hidden dark:bg-black dark:after:bg-vega-dark-200">
+        <div className="mb-space-3 text-[3.375rem] leading-none md:text-[2.75rem] xl:text-[3.375rem]">
           {value}
         </div>
-        <div className="text-[0.9375rem] uppercase text-vega-grey">{label}</div>
+        <div className="mx-auto max-w-[10rem] whitespace-normal text-[0.9375rem] uppercase leading-none text-vega-grey">
+          {label}
+        </div>
       </div>
     )
   }
@@ -44,7 +47,16 @@ const Ticker = () => {
       .then(function (data) {
         updateStats({
           name: 'validators',
-          value: data[0].epoch.validators.filter(n => n.rankingScore.votingPower > 0).length,
+          value: (
+            <Numeral
+              value={
+                data[0].epoch.validators.filter(
+                  (n) => n.rankingScore.votingPower > 0
+                ).length
+              }
+              format={'0a'}
+            />
+          ),
         })
 
         updateStats({
@@ -63,10 +75,15 @@ const Ticker = () => {
           stakedTotal = stakedTotal.plus(validatorTotal)
         })
 
+        const stakedTotalVal = stakedTotal
+          .dividedBy(Math.pow(10, 18))
+          .dp(2)
+          .toFormat(0, 1)
+
         if (stakedTotal.isGreaterThan(0)) {
           updateStats({
             name: 'stakedTotal',
-            value: stakedTotal.dividedBy(Math.pow(10, 18)).dp(2).toFormat(0, 1),
+            value: <Numeral value={stakedTotalVal} format={'0.0a'} />,
           })
         }
       })
@@ -93,38 +110,47 @@ const Ticker = () => {
               }}
             >
               <SwiperSlide>
-                <TickerCell label={t('Validators')} value={stats.validators} />
+                <TickerCell
+                  label={t('# of validators prelaunch')}
+                  value={stats.validators}
+                />
               </SwiperSlide>
               <SwiperSlide>
                 <TickerCell
-                  label={t('Total Staked')}
+                  label={t('Total staked prelaunch')}
                   value={stats.stakedTotal}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <TickerCell
-                  label={t('Avg. Block Time')}
+                  label={t('# stakers prelaunch (TBC)')}
                   value={stats.blockDuration}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <TickerCell
-                  label={t('Current Epoch')}
+                  label={t('Current epoch prelaunch')}
                   value={stats.currentEpoch}
                 />
               </SwiperSlide>
             </Swiper>
           </MQMediumDown>
           <MQLargeUp>
-            <div className="relative flex justify-center gap-12">
-              <TickerCell label={t('Validators')} value={stats.validators} />
-              <TickerCell label={t('Total Staked')} value={stats.stakedTotal} />
+            <div className="relative flex justify-center">
               <TickerCell
-                label={t('Avg. Block Time')}
+                label={t('# of validators prelaunch')}
+                value={stats.validators}
+              />
+              <TickerCell
+                label={t('Total staked prelaunch')}
+                value={stats.stakedTotal}
+              />
+              <TickerCell
+                label={t('# stakers prelaunch (TBC)')}
                 value={stats.blockDuration}
               />
               <TickerCell
-                label={t('Current Epoch')}
+                label={t('Current epoch prelaunch')}
                 value={stats.currentEpoch}
               />
             </div>

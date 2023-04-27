@@ -1,6 +1,6 @@
 {
-  "Validators": "Validators",
-  "Total Staked": "Total Staked",
-  "Avg. Block Time": "Avg. Block Time",
-  "Current Epoch": "Current Epoch"
+  "# of validators prelaunch": "# of validators prelaunch",
+  "Total staked prelaunch": "Total staked prelaunch",
+  "# stakers prelaunch (TBC)": "# stakers prelaunch (TBC)",
+  "Current epoch prelaunch": "Current epoch prelaunch"
 }

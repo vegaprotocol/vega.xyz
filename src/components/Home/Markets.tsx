@@ -63,7 +63,7 @@ const Markets = () => {
   }, [])
 
   return marketsData.length > 0 ? (
-    <div className="py-space-8 md:py-space-12 lg:py-space-14">
+    <div>
       <div className="mb-space-5 grid grid-cols-2 md:flex md:items-center md:justify-between">
         <h2 className="heading-m">Markets</h2>
 

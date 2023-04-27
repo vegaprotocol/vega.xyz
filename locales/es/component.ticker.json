@@ -1,6 +1,6 @@
 {
-  "Validators": "Validadores",
-  "Total Staked": "Total apostado",
-  "Avg. Block Time": "Promedio tiempo de bloque",
-  "Current Epoch": "Época actual"
+  "# of validators prelaunch": "",
+  "Total staked prelaunch": "",
+  "# stakers prelaunch (TBC)": "",
+  "Current epoch prelaunch": ""
 }
