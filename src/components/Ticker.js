@@ -110,26 +110,23 @@ const Ticker = () => {
               }}
             >
               <SwiperSlide>
-                <TickerCell
-                  label={t('# of validators prelaunch')}
-                  value={stats.validators}
-                />
+                <TickerCell label={t('Validators')} value={stats.validators} />
               </SwiperSlide>
               <SwiperSlide>
                 <TickerCell
-                  label={t('Total staked prelaunch')}
+                  label={t('Total Staked')}
                   value={stats.stakedTotal}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <TickerCell
-                  label={t('# stakers prelaunch (TBC)')}
+                  label={t('Avg. Block Time')}
                   value={stats.blockDuration}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <TickerCell
-                  label={t('Current epoch prelaunch')}
+                  label={t('Current Epoch')}
                   value={stats.currentEpoch}
                 />
               </SwiperSlide>
@@ -137,20 +134,14 @@ const Ticker = () => {
           </MQMediumDown>
           <MQLargeUp>
             <div className="relative flex justify-center">
+              <TickerCell label={t('Validators')} value={stats.validators} />
+              <TickerCell label={t('Total Staked')} value={stats.stakedTotal} />
               <TickerCell
-                label={t('# of validators prelaunch')}
-                value={stats.validators}
-              />
-              <TickerCell
-                label={t('Total staked prelaunch')}
-                value={stats.stakedTotal}
-              />
-              <TickerCell
-                label={t('# stakers prelaunch (TBC)')}
+                label={t('Avg. Block Time')}
                 value={stats.blockDuration}
               />
               <TickerCell
-                label={t('Current epoch prelaunch')}
+                label={t('Current Epoch')}
                 value={stats.currentEpoch}
               />
             </div>
