@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
               </div>
 
               <div className="mb-space-8 md:mb-space-7 xl:flex xl:items-center xl:gap-x-6">
-                <Button variant="hero" to="https://console.vega.xyz">
+                <Button variant="hero" to="https://console.fairground.wtf/">
                   Launch console app
                 </Button>
                 <div className="mt-space-4 flex items-center justify-center gap-x-6 md:justify-start xl:mt-0 xl:justify-center">

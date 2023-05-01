@@ -10,7 +10,7 @@ const MarketTile = () => {
           <MarketBadge />
         </div>
         <div>
-          <div className="leading-none">USDT/GPB</div>
+          <div className="leading-none">USDT/GBP</div>
           <div className="text-vega-light-300 dark:text-vega-dark-300">
             Vol 8.7M
           </div>
