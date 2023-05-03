@@ -7,7 +7,7 @@ const GreenField = () => {
       width="147"
       height="60"
       viewBox="0 0 147 60"
-      className="h-auto w-[8rem] fill-black stroke-black dark:fill-white dark:stroke-white"
+      className="h-auto w-[7rem] fill-black stroke-black dark:fill-white dark:stroke-white"
     >
       <path d="M54.7962 0H21.9185V10.9113H54.7962V0Z" />
       <path d="M54.7962 43.6451H21.9185V54.5564H54.7962V43.6451Z" />

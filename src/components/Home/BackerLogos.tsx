@@ -15,10 +15,21 @@ const BackerLogos = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const logoPages = [
-    [<Alliance />, <ArringtonCapital />, <Pantera />],
-    [<EdenBlock />, <Coinbase />, <Hashed />],
-    [<GreenField />, <Cumberland />, <NGCVentures />],
-    [<SignumCapital />, <GumiCryptosCapital />],
+    [
+      <Pantera />,
+      <Coinbase />,
+      <ArringtonCapital />,
+      <Cumberland />,
+      <Hashed />,
+    ],
+    [
+      <EdenBlock />,
+      <Alliance />,
+      <GreenField />,
+      <NGCVentures />,
+      <SignumCapital />,
+      <GumiCryptosCapital />,
+    ],
   ]
 
   useEffect(() => {
@@ -30,7 +41,7 @@ const BackerLogos = () => {
   }, [currentIndex, logoPages.length])
 
   return (
-    <div className="grid">
+    <div className="grid max-w-[25rem]">
       {logoPages.map((logos, index) => (
         <div
           key={index}
@@ -39,9 +50,11 @@ const BackerLogos = () => {
           }`}
           style={{ gridArea: '1 / 1' }}
         >
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
             {logos.map((logo, index) => (
-              <div key={index}>{logo}</div>
+              <div className="" key={index}>
+                {logo}
+              </div>
             ))}
           </div>
         </div>
