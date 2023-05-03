@@ -5,6 +5,7 @@ import MarketTile from '../MarketTile'
 import Button from '../UI/Button'
 import Pill from '../UI/Pill'
 import 'swiper/swiper-bundle.css'
+import { useMarkets } from '../../hooks/use-markets'
 
 interface MarketDataEntry {
   title: string
@@ -18,6 +19,9 @@ const Markets = () => {
   const [isSwiperInit, setIsSwiperInit] = useState(false)
   const breakpointWidth = 768
 
+  const since = '2023-05-02T00:00:00.000000000Z'
+  const { loading, error, data } = useMarkets(since)
+
   SwiperCore.use([Pagination])
 
   const tabs = ['Top volume', 'Top gainers', 'Top losers', 'New markets']
@@ -26,6 +30,15 @@ const Markets = () => {
     setActiveTab(index)
     setShowMarketsDropdown(false)
   }
+
+  useEffect(() => {
+    if (!loading && !error && data) {
+      console.log('Markets data:', data)
+    }
+    if (error) {
+      console.log('Error', error)
+    }
+  }, [data, loading, error])
 
   useEffect(() => {
     const handleResize = () => {
