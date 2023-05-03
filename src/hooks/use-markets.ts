@@ -7,6 +7,16 @@ export const MarketsDataFieldsFragmentDoc = gql`
       tradableInstrument {
         instrument {
           name
+          code
+          product {
+            ... on Future {
+              settlementAsset {
+                id
+                symbol
+                decimals
+              }
+            }
+          }
         }
       }
     }

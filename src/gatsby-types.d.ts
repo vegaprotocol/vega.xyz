@@ -935,6 +935,8 @@ type FileFieldsEnum =
   | 'childJson.Market_Creation_with_Vega'
   | 'childJson.Market_creation'
   | 'childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'childJson.Markets'
+  | 'childJson.Markets_and_Liqudity'
   | 'childJson.Medium'
   | 'childJson.Meet'
   | 'childJson.Meet_our_contributors'
@@ -1713,6 +1715,8 @@ type FileFieldsEnum =
   | 'childrenJson.Market_Creation_with_Vega'
   | 'childrenJson.Market_creation'
   | 'childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'childrenJson.Markets'
+  | 'childrenJson.Markets_and_Liqudity'
   | 'childrenJson.Medium'
   | 'childrenJson.Meet'
   | 'childrenJson.Meet_our_contributors'
@@ -3187,6 +3191,8 @@ type Json = Node & {
   readonly Market_Creation_with_Vega: Maybe<Scalars['String']>;
   readonly Market_creation: Maybe<Scalars['String']>;
   readonly Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: Maybe<Scalars['String']>;
+  readonly Markets: Maybe<Scalars['String']>;
+  readonly Markets_and_Liqudity: Maybe<Scalars['String']>;
   readonly Medium: Maybe<Scalars['String']>;
   readonly Meet: Maybe<Scalars['String']>;
   readonly Meet_our_contributors: Maybe<Scalars['String']>;
@@ -3739,6 +3745,8 @@ type JsonFieldsEnum =
   | 'Market_Creation_with_Vega'
   | 'Market_creation'
   | 'Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'Markets'
+  | 'Markets_and_Liqudity'
   | 'Medium'
   | 'Meet'
   | 'Meet_our_contributors'
@@ -4334,6 +4342,8 @@ type JsonFilterInput = {
   readonly Market_Creation_with_Vega: InputMaybe<StringQueryOperatorInput>;
   readonly Market_creation: InputMaybe<StringQueryOperatorInput>;
   readonly Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
+  readonly Markets: InputMaybe<StringQueryOperatorInput>;
+  readonly Markets_and_Liqudity: InputMaybe<StringQueryOperatorInput>;
   readonly Medium: InputMaybe<StringQueryOperatorInput>;
   readonly Meet: InputMaybe<StringQueryOperatorInput>;
   readonly Meet_our_contributors: InputMaybe<StringQueryOperatorInput>;
@@ -5308,6 +5318,8 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Market_Creation_with_Vega'
   | 'frontmatter.featuredImage.childJson.Market_creation'
   | 'frontmatter.featuredImage.childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'frontmatter.featuredImage.childJson.Markets'
+  | 'frontmatter.featuredImage.childJson.Markets_and_Liqudity'
   | 'frontmatter.featuredImage.childJson.Medium'
   | 'frontmatter.featuredImage.childJson.Meet'
   | 'frontmatter.featuredImage.childJson.Meet_our_contributors'
@@ -5835,6 +5847,8 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Market_Creation_with_Vega'
   | 'frontmatter.featuredImage.childrenJson.Market_creation'
   | 'frontmatter.featuredImage.childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'frontmatter.featuredImage.childrenJson.Markets'
+  | 'frontmatter.featuredImage.childrenJson.Markets_and_Liqudity'
   | 'frontmatter.featuredImage.childrenJson.Medium'
   | 'frontmatter.featuredImage.childrenJson.Meet'
   | 'frontmatter.featuredImage.childrenJson.Meet_our_contributors'
@@ -9884,6 +9898,8 @@ type Query_jsonArgs = {
   Market_Creation_with_Vega: InputMaybe<StringQueryOperatorInput>;
   Market_creation: InputMaybe<StringQueryOperatorInput>;
   Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
+  Markets: InputMaybe<StringQueryOperatorInput>;
+  Markets_and_Liqudity: InputMaybe<StringQueryOperatorInput>;
   Medium: InputMaybe<StringQueryOperatorInput>;
   Meet: InputMaybe<StringQueryOperatorInput>;
   Meet_our_contributors: InputMaybe<StringQueryOperatorInput>;
