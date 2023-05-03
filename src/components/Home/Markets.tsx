@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 import MarketTile from '../MarketTile'
@@ -6,6 +6,13 @@ import Button from '../UI/Button'
 import Pill from '../UI/Pill'
 import 'swiper/swiper-bundle.css'
 import { useMarkets } from '../../hooks/use-markets'
+import {
+  sortMarketsByTopVolume,
+  sortMarketsByTopGainers,
+  sortMarketsByTopLosers,
+  processMarketData,
+  toRFC3339Nano,
+} from '../../utils/vega/Markets'
 
 interface MarketDataEntry {
   title: string
@@ -19,8 +26,13 @@ const Markets = () => {
   const [isSwiperInit, setIsSwiperInit] = useState(false)
   const breakpointWidth = 768
 
-  const since = '2023-05-02T00:00:00.000000000Z'
-  const { loading, error, data } = useMarkets(since)
+  const twentyFourHoursAgoNano = useMemo(() => {
+    const now = new Date()
+    const twentyFourHoursAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000)
+    return toRFC3339Nano(twentyFourHoursAgo)
+  }, [])
+
+  const { loading, error, data } = useMarkets(twentyFourHoursAgoNano)
 
   SwiperCore.use([Pagination])
 
@@ -33,7 +45,33 @@ const Markets = () => {
 
   useEffect(() => {
     if (!loading && !error && data) {
-      console.log('Markets data:', data)
+      const processedMarketData = processMarketData(data)
+      const sortedByTopVolume = sortMarketsByTopVolume(processedMarketData)
+      const sortedByTopGainers = sortMarketsByTopGainers(processedMarketData)
+      const sortedByTopLosers = sortMarketsByTopLosers(processedMarketData)
+
+      const tabs = [
+        {
+          title: 'Top volume',
+          markets: sortedByTopVolume.map((market) => (
+            <MarketTile {...market} />
+          )),
+        },
+        {
+          title: 'Top gainers',
+          markets: sortedByTopGainers.map((market) => (
+            <MarketTile {...market} />
+          )),
+        },
+        {
+          title: 'Top losers',
+          markets: sortedByTopLosers.map((market) => (
+            <MarketTile {...market} />
+          )),
+        },
+      ]
+
+      setMarketsData(tabs)
     }
     if (error) {
       console.log('Error', error)
@@ -58,22 +96,6 @@ const Markets = () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [isSwiperInit, breakpointWidth])
-
-  useEffect(() => {
-    let data: MarketDataEntry[] = []
-    tabs.map((tab) => {
-      data.push({
-        title: tab,
-        markets: [
-          <MarketTile />,
-          <MarketTile />,
-          <MarketTile />,
-          <MarketTile />,
-        ],
-      })
-      setMarketsData(data)
-    })
-  }, [])
 
   return marketsData.length > 0 ? (
     <div>
