@@ -55,8 +55,6 @@ const BackerLogos = () => {
     </>,
   ]
 
-  console.log(logoPages)
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((currentIndex + 1) % logoPages.length)

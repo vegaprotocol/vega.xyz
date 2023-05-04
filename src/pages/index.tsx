@@ -164,11 +164,11 @@ const IndexPage = ({ data }) => {
             <BackerLogos />
           </div>
 
-          <div className="my-space-10 md:my-space-12 lg:my-space-14">
+          <div className="mt-space-10 mb-0 md:my-space-12 lg:my-space-14">
             <Markets />
           </div>
 
-          <div className="my-space-10 md:my-space-12 lg:my-space-14">
+          <div className="mb-space-10 mt-space-6 md:my-space-12 lg:my-space-14">
             <Ticker />
           </div>
 

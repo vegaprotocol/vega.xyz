@@ -121,8 +121,9 @@ const Markets = () => {
             <div
               role="button"
               tabIndex={0}
-              className="font-not-glitched heading-xxxs flex items-center justify-between gap-x-space-2 px-space-4 py-space-2"
+              className="font-not-glitched heading-xxxs touch-action-manipulation flex items-center justify-between gap-x-space-2 px-space-4 py-space-2"
               onClick={() => setShowMarketsDropdown(true)}
+              onTouchStart={() => setShowMarketsDropdown(true)}
               onFocus={() => setShowMarketsDropdown(true)}
               onBlur={(e) => {
                 if (!e.relatedTarget?.dataset?.changeMarket) {
@@ -146,13 +147,15 @@ const Markets = () => {
               </svg>
             </div>
             {showMarketsDropdown && (
-              <div>
+              <div className="relative">
                 {marketsData.map((group, index) => (
                   <button
                     role="button"
-                    className="font-not-glitched heading-xxxs block w-full px-space-4 py-space-2 text-left hover:dark:bg-vega-dark-100 dark:hover:bg-vega-dark-100"
+                    className="font-not-glitched heading-xxxs touch-action-manipulation block w-full cursor-pointer px-space-4 py-space-2 text-left hover:dark:bg-vega-dark-100 dark:hover:bg-vega-dark-100"
                     key={index}
+                    aria-label="Change market"
                     onClick={() => changeTab(index)}
+                    onTouchStart={() => changeTab(index)}
                     data-change-market
                   >
                     <div>{marketsData[index].title}</div>
