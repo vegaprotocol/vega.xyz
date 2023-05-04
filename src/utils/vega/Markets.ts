@@ -1,4 +1,5 @@
 import BigNumber from 'bignumber.js'
+import { addDecimalsFormatNumber } from '@vegaprotocol/utils'
 
 export const calc24hVolume = (candles) => {
   return candles
@@ -70,37 +71,38 @@ export const processMarketData = (marketData) => {
       const decimals =
         edge.node.data.market.tradableInstrument.instrument.product
           .settlementAsset.decimals
+      const positionDecimalPlaces = edge.node.data.market.positionDecimalPlaces
       const openTimestamp = edge.node.data.market.marketTimestamps.open
 
       if (!markPrice.isZero()) {
         const candles = edge.node.candlesConnection?.edges
 
-        let volume24h = new BigNumber(0)
+        // let volume24h = new BigNumber(0)
         let priceChange24h = new BigNumber(0)
 
         if (candles && candles.length >= 2) {
           const firstCandle = candles[0].node
           const lastCandle = candles[candles.length - 1].node
-          volume24h = candles.reduce(
-            (total, candle) => total.plus(candle.node.volume),
-            new BigNumber(0)
-          )
+
+          const volume24h = calc24hVolume(candles)
           const openPrice = new BigNumber(firstCandle.open)
           const closePrice = new BigNumber(lastCandle.close)
           priceChange24h = closePrice
             .minus(openPrice)
             .dividedBy(openPrice)
             .multipliedBy(100)
-        }
 
-        return {
-          name: marketName,
-          volume: volume24h.toFixed(2),
-          lastPrice: markPrice.toFixed(2),
-          priceChange: priceChange24h.toFixed(2) + '%',
-          sparkLineValues: sparkLineValues(candles),
-          decimals: decimals,
-          openTimestamp: openTimestamp,
+          return {
+            name: marketName,
+            volume: addDecimalsFormatNumber(
+              volume24h.toString(),
+              positionDecimalPlaces
+            ),
+            lastPrice: addDecimalsFormatNumber(markPrice.toString(), decimals),
+            priceChange: priceChange24h.toFixed(2) + '%',
+            sparkLineValues: sparkLineValues(candles),
+            openTimestamp: openTimestamp,
+          }
         }
       }
     })
