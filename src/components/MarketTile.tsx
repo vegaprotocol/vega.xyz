@@ -28,14 +28,16 @@ const MarketTile = ({
         <div className="">
           <div className="body-xl !leading-none">{lastPrice}</div>
           <div
-            className={`body-m ${gain ? 'text-vega-mint' : 'text-vega-pink'}`}
+            className={`body-m ${
+              gain ? 'text-vega-green-550' : 'text-vega-pink'
+            }`}
           >
             {priceChange}
           </div>
         </div>
         <div className="w-full max-w-[50%]">
           <Sparklines data={sparkLineValues}>
-            <SparklinesLine color={`${gain ? '#00F780' : '#FF077F'}`} />
+            <SparklinesLine color={`${gain ? '#01C566' : '#FF077F'}`} />
           </Sparklines>
         </div>
       </div>

@@ -69,6 +69,7 @@ module.exports = {
         'vega-light-200': '#D2D2D2',
         'vega-light-300': '#A7A7A7',
         'vega-light-400': '#626262',
+        'vega-green-550': '#01C566',
       },
       scale: {
         185: '1.85',
