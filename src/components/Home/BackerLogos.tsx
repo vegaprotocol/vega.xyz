@@ -1,47 +1,72 @@
 import React, { useState, useEffect } from 'react'
-import Pantera from '../Svg/BackerLogos/Pantera'
-import ArringtonCapital from '../Svg/BackerLogos/ArringtonCapital'
-import Alliance from '../Svg/BackerLogos/Alliance'
-import Coinbase from '../Svg/BackerLogos/Coinbase'
-import Cumberland from '../Svg/BackerLogos/Cumberland'
-import EdenBlock from '../Svg/BackerLogos/EdenBlock'
-import GreenField from '../Svg/BackerLogos/GreenField'
-import GumiCryptosCapital from '../Svg/BackerLogos/GumiCryptosCapital'
-import Hashed from '../Svg/BackerLogos/Hashed'
-import SignumCapital from '../Svg/BackerLogos/SignumCapital'
-import NGCVentures from '../Svg/BackerLogos/NGCVentures'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const BackerLogos = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const logoPages = [
-    [
-      <Pantera />,
-      <Coinbase />,
-      <ArringtonCapital />,
-      <Cumberland />,
-      <Hashed />,
-    ],
-    [
-      <EdenBlock />,
-      <Alliance />,
-      <GreenField />,
-      <NGCVentures />,
-      <SignumCapital />,
-      <GumiCryptosCapital />,
-    ],
+    <>
+      <StaticImage
+        src="../../images/backer-logos/backer-logos-1-dark.png"
+        className="hidden h-auto w-full dark:block"
+        layout="fullWidth"
+        placeholder="none"
+        alt=""
+      />
+      <StaticImage
+        src="../../images/backer-logos/backer-logos-1.png"
+        className="dark:hidden"
+        layout="fullWidth"
+        placeholder="none"
+        alt=""
+      />
+    </>,
+    <>
+      <StaticImage
+        src="../../images/backer-logos/backer-logos-2-dark.png"
+        className="hidden dark:block"
+        layout="fullWidth"
+        placeholder="none"
+        alt=""
+      />
+      <StaticImage
+        src="../../images/backer-logos/backer-logos-2.png"
+        className="dark:hidden"
+        layout="fullWidth"
+        placeholder="none"
+        alt=""
+      />
+    </>,
+    <>
+      <StaticImage
+        src="../../images/backer-logos/backer-logos-3-dark.png"
+        className="hidden dark:block"
+        layout="fullWidth"
+        placeholder="none"
+        alt=""
+      />
+      <StaticImage
+        src="../../images/backer-logos/backer-logos-3.png"
+        className="dark:hidden"
+        layout="fullWidth"
+        placeholder="none"
+        alt=""
+      />
+    </>,
   ]
+
+  console.log(logoPages)
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((currentIndex + 1) % logoPages.length)
-    }, 2000)
+    }, 3200)
 
     return () => clearInterval(interval)
   }, [currentIndex, logoPages.length])
 
   return (
-    <div className="grid max-w-[25rem]">
+    <div className="grid max-w-[36em]">
       {logoPages.map((logos, index) => (
         <div
           key={index}
@@ -50,13 +75,7 @@ const BackerLogos = () => {
           }`}
           style={{ gridArea: '1 / 1' }}
         >
-          <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
-            {logos.map((logo, index) => (
-              <div className="" key={index}>
-                {logo}
-              </div>
-            ))}
-          </div>
+          <div className="bg-white dark:bg-black">{logos}</div>
         </div>
       ))}
     </div>
