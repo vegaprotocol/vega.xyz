@@ -27,6 +27,16 @@ export const sortMarketsByTopVolume = (processedMarketData, limit = 4) => {
     .slice(0, limit)
 }
 
+export const sortMarketsByNewest = (processedMarketData, limit = 4) => {
+  return processedMarketData
+    .sort(
+      (a, b) =>
+        new Date(b.openTimestamp).getTime() -
+        new Date(a.openTimestamp).getTime()
+    )
+    .slice(0, limit)
+}
+
 export const sortMarketsByTopGainers = (processedMarketData, limit = 4) => {
   return processedMarketData
     .slice()
@@ -55,32 +65,41 @@ export const processMarketData = (marketData) => {
   const result = marketData.marketsConnection.edges.map((edge) => {
     const marketName = edge.node.data.market.tradableInstrument.instrument.name
     const markPrice = new BigNumber(edge.node.data.markPrice)
-    const candles = edge.node.candlesConnection?.edges
+    const decimals =
+      edge.node.data.market.tradableInstrument.instrument.product
+        .settlementAsset.decimals
+    const openTimestamp = edge.node.data.market.marketTimestamps.open
 
-    let volume24h = new BigNumber(0)
-    let priceChange24h = new BigNumber(0)
+    if (!markPrice.isZero()) {
+      const candles = edge.node.candlesConnection?.edges
 
-    if (candles && candles.length >= 2) {
-      const firstCandle = candles[0].node
-      const lastCandle = candles[candles.length - 1].node
-      volume24h = candles.reduce(
-        (total, candle) => total.plus(candle.node.volume),
-        new BigNumber(0)
-      )
-      const openPrice = new BigNumber(firstCandle.open)
-      const closePrice = new BigNumber(lastCandle.close)
-      priceChange24h = closePrice
-        .minus(openPrice)
-        .dividedBy(openPrice)
-        .multipliedBy(100)
-    }
+      let volume24h = new BigNumber(0)
+      let priceChange24h = new BigNumber(0)
 
-    return {
-      name: marketName,
-      volume: volume24h.toFixed(2),
-      lastPrice: markPrice.toFixed(2),
-      priceChange: priceChange24h.toFixed(2) + '%',
-      sparkLineValues: sparkLineValues(candles),
+      if (candles && candles.length >= 2) {
+        const firstCandle = candles[0].node
+        const lastCandle = candles[candles.length - 1].node
+        volume24h = candles.reduce(
+          (total, candle) => total.plus(candle.node.volume),
+          new BigNumber(0)
+        )
+        const openPrice = new BigNumber(firstCandle.open)
+        const closePrice = new BigNumber(lastCandle.close)
+        priceChange24h = closePrice
+          .minus(openPrice)
+          .dividedBy(openPrice)
+          .multipliedBy(100)
+      }
+
+      return {
+        name: marketName,
+        volume: volume24h.toFixed(2),
+        lastPrice: markPrice.toFixed(2),
+        priceChange: priceChange24h.toFixed(2) + '%',
+        sparkLineValues: sparkLineValues(candles),
+        decimals: decimals,
+        openTimestamp: openTimestamp,
+      }
     }
   })
 

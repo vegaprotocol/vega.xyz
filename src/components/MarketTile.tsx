@@ -1,7 +1,8 @@
 import React from 'react'
-import MarketBadge from './Svg/MarketBadge'
+// import MarketBadge from './Svg/MarketBadge'
 import { Sparklines, SparklinesLine } from 'react-sparklines'
 import { formatNumberWithSuffix } from '../utils/tools'
+import { addDecimalsFormatNumber } from '@vegaprotocol/utils'
 
 const MarketTile = ({
   name,
@@ -9,6 +10,7 @@ const MarketTile = ({
   lastPrice,
   priceChange,
   sparkLineValues,
+  decimals,
 }) => {
   const gain = parseFloat(priceChange.replace('%', '')) > 0
   return (
@@ -26,9 +28,11 @@ const MarketTile = ({
       </div>
       <div className="flex items-end justify-between">
         <div className="">
-          <div className="body-xl !leading-none">{lastPrice}</div>
+          <div className="body-xl !leading-none">
+            {addDecimalsFormatNumber(lastPrice, decimals)}
+          </div>
           <div
-            className={`body-m ${
+            className={`body-m mt-space-1 !leading-none ${
               gain ? 'text-vega-green-550' : 'text-vega-pink'
             }`}
           >

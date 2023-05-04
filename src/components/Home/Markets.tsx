@@ -10,6 +10,7 @@ import {
   sortMarketsByTopVolume,
   sortMarketsByTopGainers,
   sortMarketsByTopLosers,
+  sortMarketsByNewest,
   processMarketData,
   toRFC3339Nano,
 } from '../../utils/vega/Markets'
@@ -49,25 +50,30 @@ const Markets = () => {
       const sortedByTopVolume = sortMarketsByTopVolume(processedMarketData)
       const sortedByTopGainers = sortMarketsByTopGainers(processedMarketData)
       const sortedByTopLosers = sortMarketsByTopLosers(processedMarketData)
+      const sortedByNewest = sortMarketsByNewest(processedMarketData)
 
       const tabs = [
         {
-          title: 'Top volume',
+          title: 'Top Volume',
           markets: sortedByTopVolume.map((market) => (
             <MarketTile {...market} />
           )),
         },
         {
-          title: 'Top gainers',
+          title: 'Top Gainers',
           markets: sortedByTopGainers.map((market) => (
             <MarketTile {...market} />
           )),
         },
         {
-          title: 'Top losers',
+          title: 'Top Losers',
           markets: sortedByTopLosers.map((market) => (
             <MarketTile {...market} />
           )),
+        },
+        {
+          title: 'New Markets',
+          markets: sortedByNewest.map((market) => <MarketTile {...market} />),
         },
       ]
 
