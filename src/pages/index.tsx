@@ -66,72 +66,96 @@ const IndexPage = ({ data }) => {
       {missingTranslations && <TranslationsBanner />}
       <main data-cy="main">
         <Container>
-          <div className="my-space-7 md:grid md:grid-cols-12 md:items-center md:gap-6">
+          <div className="py-space-7 md:grid md:grid-cols-12 md:items-center md:gap-6">
             <div className="text-center md:col-span-6 md:text-left">
-              <div className="mx-auto mb-space-7 max-w-[20.9375rem] md:mx-0 md:max-w-[28.75rem]">
-                <h1 className="mb-space-2 text-[2rem] leading-none md:text-[2.5rem] lg:text-[3rem]">
-                  Uncompromisingly Decentralised.
-                  <br />
-                  <span className="text-vega-dark-300">
-                    The world's most advanced DEX.
-                  </span>
-                </h1>
-                <div className="text-[1.125rem] leading-normal md:text-[1.5rem]">
-                  Cash settled futures are now live on Vega's Alpha Mainnet.
+              <div className="md:pr-space-6 lg:pr-0">
+                <div className="mx-auto mb-space-7 max-w-[20.9375rem] md:mx-0 md:max-w-[28.75rem]">
+                  <h1 className="mb-space-2 text-[2rem] leading-none md:text-[2.5rem] lg:text-[3rem]">
+                    Uncompromisingly Decentralised.
+                    <br />
+                    <span className="text-vega-dark-300">
+                      The world's most advanced DEX.
+                    </span>
+                  </h1>
+                  <div className="text-[1.125rem] leading-normal md:text-[1.5rem]">
+                    Cash settled futures are now live on Vega's Alpha Mainnet.
+                  </div>
+                </div>
+
+                <div className="mb-space-8 md:mb-space-7 xl:flex xl:items-center xl:gap-x-6">
+                  <Button variant="hero" to="https://console.fairground.wtf/">
+                    Launch console app
+                  </Button>
+                  <div className="mt-space-4 flex items-center justify-center gap-x-6 md:justify-start xl:mt-0 xl:justify-center">
+                    <Button
+                      className="text-vega-dark-300"
+                      variant="secondary"
+                      to="/wallet"
+                    >
+                      Vega Wallet
+                    </Button>
+                    <Button
+                      className="text-vega-dark-300"
+                      variant="secondary"
+                      to="https://vega.xyz/discord"
+                    >
+                      Discord
+                    </Button>
+                    <Button
+                      className="text-vega-dark-300"
+                      variant="secondary"
+                      to="https://docs.vega.xyz/"
+                    >
+                      Docs
+                    </Button>
+                  </div>
                 </div>
               </div>
 
-              <div className="mb-space-8 md:mb-space-7 xl:flex xl:items-center xl:gap-x-6">
-                <Button variant="hero" to="https://console.fairground.wtf/">
-                  Launch console app
-                </Button>
-                <div className="mt-space-4 flex items-center justify-center gap-x-6 md:justify-start xl:mt-0 xl:justify-center">
-                  <Button
-                    className="text-vega-dark-300"
-                    variant="secondary"
-                    to="/wallet"
-                  >
-                    Vega Wallet
-                  </Button>
-                  <Button
-                    className="text-vega-dark-300"
-                    variant="secondary"
-                    to="https://vega.xyz/discord"
-                  >
-                    Discord
-                  </Button>
-                  <Button
-                    className="text-vega-dark-300"
-                    variant="secondary"
-                    to="https://docs.vega.xyz/"
-                  >
-                    Docs
-                  </Button>
+              <div className="lg:mt-space-16 mt-space-8 hidden md:block">
+                <div className="heading-xxs !font-not-glitched mb-space-4 text-vega-dark-300">
+                  Backed by:
+                </div>
+                <BackerLogos />
+              </div>
+            </div>
+            <div className="md:col-span-6 xl:flex xl:justify-end">
+              <div className="relative">
+                <div className="absolute top-0 left-0 hidden h-[180px] w-[200px] translate-y-20 -translate-x-10 md:block lg:-translate-x-20 2xl:-translate-x-32">
+                  <PlanetA />
+                </div>
+                <div className="absolute bottom-0 right-0 z-10 hidden h-[120px] w-[175px] translate-y-[5.625rem] md:block">
+                  <PlanetB />
+                </div>
+                <div className="after:from-10% after:to-100% relative after:absolute after:right-0 after:top-0 after:bottom-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
+                  <div className="w-full overflow-hidden md:h-[460px] 2xl:origin-right 2xl:scale-110">
+                    <GatsbyImage
+                      image={getImage(data.consoleDark)}
+                      alt=""
+                      className="hidden md:dark:block"
+                    />
+                    <GatsbyImage
+                      image={getImage(data.consoleLight)}
+                      alt=""
+                      className="hidden dark:hidden md:block"
+                    />
+                    <GatsbyImage
+                      image={getImage(data.consoleDarkSmall)}
+                      alt=""
+                      className="hidden dark:block md:hidden"
+                    />
+                    <GatsbyImage
+                      image={getImage(data.consoleLightSmall)}
+                      alt=""
+                      className="dark:hidden md:hidden"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="relative md:col-span-6">
-              <div className="absolute top-0 left-0 hidden h-[180px] w-[200px] translate-y-20 -translate-x-10 md:block lg:-translate-x-20">
-                <PlanetA />
-              </div>
-              <div className="absolute bottom-0 right-0 z-10 hidden h-[120px] w-[175px] translate-y-[5.625rem] md:block">
-                <PlanetB />
-              </div>
-              <div className="after:from-10% after:to-100% relative after:absolute after:right-0 after:top-0 after:bottom-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-black after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8">
-                <GatsbyImage
-                  image={getImage(data.consoleImageLarge)}
-                  className="hidden lg:block"
-                  alt=""
-                />
-                <GatsbyImage
-                  image={getImage(data.consoleImageMedium)}
-                  className="lg:hidden"
-                  alt=""
-                />
-              </div>
-            </div>
           </div>
-          <div className="lg:mb-space-16 mb-space-8">
+
+          <div className="md:hidden">
             <div className="heading-xxs !font-not-glitched mb-space-4 text-vega-dark-300">
               Backed by:
             </div>
@@ -348,24 +372,42 @@ export const query = graphql`
         }
       }
     }
-    consoleImageLarge: file(relativePath: { eq: "console-screen-large.png" }) {
+    consoleDarkSmall: file(relativePath: { eq: "console-dark.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 780
           layout: FULL_WIDTH
-          placeholder: BLURRED
+          placeholder: NONE
           formats: [AUTO, WEBP, AVIF]
         )
       }
     }
-    consoleImageMedium: file(
-      relativePath: { eq: "console-screen-medium.png" }
-    ) {
+    consoleLightSmall: file(relativePath: { eq: "console-light.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 364
           layout: FULL_WIDTH
-          placeholder: BLURRED
+          placeholder: NONE
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    consoleDark: file(relativePath: { eq: "console-dark.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FIXED
+          width: 620
+          height: 460
+          placeholder: NONE
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    consoleLight: file(relativePath: { eq: "console-light.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FIXED
+          width: 620
+          height: 460
+          placeholder: NONE
           formats: [AUTO, WEBP, AVIF]
         )
       }
