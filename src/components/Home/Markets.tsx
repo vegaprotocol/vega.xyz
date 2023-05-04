@@ -80,7 +80,8 @@ const Markets = () => {
       setMarketsData(tabs)
     }
     if (error) {
-      console.log('Error', error)
+      setMarketsData([])
+      console.log('Error loading markets')
     }
   }, [data, loading, error])
 
@@ -206,7 +207,7 @@ const Markets = () => {
       </Button>
     </div>
   ) : (
-    <div>Loading...</div>
+    <></>
   )
 }
 
