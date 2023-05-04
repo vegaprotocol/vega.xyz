@@ -71,14 +71,16 @@ const IndexPage = ({ data }) => {
               <div className="md:pr-space-6 lg:pr-0">
                 <div className="mx-auto mb-space-7 max-w-[20.9375rem] md:mx-0 md:max-w-[28.75rem]">
                   <h1 className="mb-space-2 text-[2rem] leading-none md:text-[2.5rem] lg:text-[3rem]">
-                    Uncompromisingly Decentralised.
+                    <Trans t={t}>Uncompromisingly Decentralised.</Trans>
                     <br />
                     <span className="text-vega-dark-300">
-                      The world's most advanced DEX.
+                      <Trans t={t}>The world's most advanced DEX.</Trans>
                     </span>
                   </h1>
                   <div className="text-[1.125rem] leading-normal md:text-[1.5rem]">
-                    Cash settled futures are now live on Vega's Alpha Mainnet.
+                    <Trans t={t}>
+                      Cash settled futures are now live on Vega's Alpha Mainnet.
+                    </Trans>
                   </div>
                 </div>
 
@@ -113,8 +115,8 @@ const IndexPage = ({ data }) => {
               </div>
 
               <div className="lg:mt-space-16 mt-space-8 hidden md:block">
-                <div className="heading-xxs !font-not-glitched mb-space-4 text-vega-dark-300">
-                  Backed by:
+                <div className="heading-xxs !font-not-glitched mb-space-6 text-vega-dark-300">
+                  <Trans t={t}>Backed by:</Trans>
                 </div>
                 <BackerLogos />
               </div>
@@ -157,7 +159,7 @@ const IndexPage = ({ data }) => {
 
           <div className="md:hidden">
             <div className="heading-xxs !font-not-glitched mb-space-4 text-vega-dark-300">
-              Backed by:
+              <Trans t={t}>Backed by:</Trans>
             </div>
             <BackerLogos />
           </div>
@@ -175,8 +177,10 @@ const IndexPage = ({ data }) => {
               <div className="p-space-5">
                 <h2 className="heading-m mb-space-4">Explore Vega's APIS</h2>
                 <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-6">
-                  Vega's decentralised datanode architecture provides rich
-                  CEX-like APIs and full historic price data for everyone!
+                  <Trans t={t}>
+                    Vega's decentralised datanode architecture provides rich
+                    CEX-like APIs and full historic price data for everyone!
+                  </Trans>
                 </p>
                 <div>
                   <div className="flex items-center gap-x-space-5">
