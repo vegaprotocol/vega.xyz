@@ -76,8 +76,6 @@ export const processMarketData = (marketData) => {
 
       if (!markPrice.isZero()) {
         const candles = edge.node.candlesConnection?.edges
-
-        // let volume24h = new BigNumber(0)
         let priceChange24h = new BigNumber(0)
 
         if (candles && candles.length >= 2) {

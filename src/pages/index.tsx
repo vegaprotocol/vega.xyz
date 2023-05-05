@@ -215,58 +215,60 @@ const IndexPage = ({ data }) => {
             <div className="py-8 lg:pt-16">
               <div className="mb-12 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-12">
                 <FeatureBox
-                  title={t('Permissionless market creation')}
-                  description={t('Propose a market on any underlying.')}
-                  icon={PermissionlessMarketCreationIcon}
+                  title={t('Non-custodial and pseudonymous')}
+                  description={t('No third party has access to your funds.')}
+                  // icon={}
                 />
                 <FeatureBox
-                  title={t('Anti front running')}
+                  title={t('Purpose built proof of stake blockchain')}
                   description={t(
-                    'Fair access to the order book, preventing miner extractable value (MEV).'
-                  )}
-                  icon={AntiFrontRunningProtectionIcon}
-                />
-                <FeatureBox
-                  title={t('Purpose-built blockchain')}
-                  description={t(
-                    'High performing smart contracts for sophisticated trading.'
+                    'Fully decentralised high performance peer-to-network trading.'
                   )}
                   icon={PurposeBuiltBlockChainIcon}
                 />
                 <FeatureBox
-                  title={t('Pseudonymous trading')}
+                  title={t('Low fees and no cost to place orders')}
                   description={t(
-                    'Keep control of your data, and protect your privacy.'
-                  )}
-                  icon={PseudononymousTradingIcon}
-                />
-                <FeatureBox
-                  title={t('High capital efficiency')}
-                  description={t(
-                    'Lower capital costs and evaluate risk live with cross margining.'
-                  )}
-                  icon={HighCapitalEfficiencyIcon}
-                />
-                <FeatureBox
-                  title={t('No gas fees on trading')}
-                  description={t(
-                    'Fees only on trades on a market in continuous trading.'
+                    'Fees work like a CEX with no per-transaction gas for orders'
                   )}
                   icon={NoGasFeesIcon}
                 />
                 <FeatureBox
-                  title={t('Native liquidity provision')}
+                  title={t('Transparent and open source trading')}
                   description={t(
-                    'Built-in liquidity incentives for bustling markets.'
+                    'All Vega source code and trading data are publicly available.'
+                  )}
+                  icon={PseudononymousTradingIcon}
+                />
+                <FeatureBox
+                  title={t('Capital efficient margin trading')}
+                  description={t(
+                    'Leveraged trading with full cross-margining.'
+                  )}
+                  icon={HighCapitalEfficiencyIcon}
+                />
+
+                <FeatureBox
+                  title={t('Rich CEX-style order book and APIs')}
+                  description={t(
+                    'Fully decentralised limit order book (dCLOB) and historic data APIs.'
+                  )}
+                  // icon={}
+                />
+                <FeatureBox
+                  title={t('Decentralised liquidity incentivisation')}
+                  description={t(
+                    'Liquidity provision is fairly rewarded from fee revenue by the protocol.'
                   )}
                   icon={NativeLiquidityProvision}
                 />
+
                 <FeatureBox
-                  title={t('Cross-chain support')}
+                  title={t('Permissionless market creation')}
                   description={t(
-                    'Choose the digital asset for collateral or settlements.'
+                    'Create any market on any underlying with on-chain governance'
                   )}
-                  icon={CrossChainSupportIcon}
+                  icon={PermissionlessMarketCreationIcon}
                 />
               </div>
               <div className="text-center">
