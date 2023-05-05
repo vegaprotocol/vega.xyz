@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { gql, useQuery } from "@apollo/client";
-import Proposal from "./Proposal";
-import ButtonLinkSimple from "../components/ButtonLinkSimple";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React, { useState } from 'react'
+import { gql, useQuery } from '@apollo/client'
+import Proposal from './Proposal'
+import ButtonLinkSimple from '../components/ButtonLinkSimple'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const allProposalsQuery = gql`
   query Proposals {
@@ -47,7 +47,7 @@ const allProposalsQuery = gql`
       }
     }
   }
-`;
+`
 
 const proposalsQuery = gql`
   query Proposals($proposalState: ProposalState!) {
@@ -92,7 +92,7 @@ const proposalsQuery = gql`
       }
     }
   }
-`;
+`
 
 // const Selector = ({ title, options, selected, callback }) => {
 //   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -142,13 +142,13 @@ const proposalsQuery = gql`
 
 const Proposals = () => {
   //const [proposalState, setProposalState] = useState("Enacted");
-  const [proposalState] = useState("STATE_ENACTED");
-  const { t } = useTranslation("component.proposals");
+  const [proposalState] = useState('Enacted')
+  const { t } = useTranslation('component.proposals')
 
-  const { data: anyProposals } = useQuery(allProposalsQuery);
+  const { data: anyProposals } = useQuery(allProposalsQuery)
   const { data, loading, error } = useQuery(proposalsQuery, {
     variables: { proposalState },
-  });
+  })
 
   // const updateProposalState = (state) => {
   //   setProposalState(state);
@@ -156,9 +156,9 @@ const Proposals = () => {
 
   if (anyProposals && anyProposals.proposals) {
     return (
-      <div className="grey-box p-6 dark:text-white dark:bg-vega-box-grey bg-vega-light-grey">
-        <div className="md:flex md:justify-between md:items-center">
-          <h3 className="text-[2.125rem] leading-[0.85] lg:text-[3.375rem] mb-4 md:mb-8 uppercase">
+      <div className="grey-box bg-vega-light-grey p-6 dark:bg-vega-box-grey dark:text-white">
+        <div className="md:flex md:items-center md:justify-between">
+          <h3 className="mb-4 text-[2.125rem] uppercase leading-[0.85] md:mb-8 lg:text-[3.375rem]">
             <Trans t={t}>Latest Proposals</Trans>
           </h3>
           <div className="mb-5 md:mb-0">
@@ -197,15 +197,15 @@ const Proposals = () => {
         </div>
 
         <ButtonLinkSimple
-          text={t("Explore all proposals")}
+          text={t('Explore all proposals')}
           className="dark:bg-vega-box-grey"
           link={`${process.env.GATSBY_TOKEN_FRONTEND}governance`}
         />
       </div>
-    );
+    )
   } else {
-    return <div></div>;
+    return <div></div>
   }
-};
+}
 
-export default Proposals;
+export default Proposals

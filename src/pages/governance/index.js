@@ -334,8 +334,9 @@ const GovernancePage = ({ data }) => {
             </div>
           </div>
         </div>
-
-        <Proposals />
+        <div className="mb-space-8 md:mb-space-10">
+          <Proposals />
+        </div>
       </Container>
     </Layout>
   )
