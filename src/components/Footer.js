@@ -45,10 +45,12 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://console.fairground.wtf/"
+                    to={routeThroughInterstitialPage(
+                      'https://console.fairground.wtf/'
+                    )}
                     className="block py-1.5 leading-[1.3]"
                   >
-                    <Trans t={t}>Trade</Trans>
+                    <Trans t={t}>Launch Console</Trans>
                   </TextLink>
                 </li>
                 <li>

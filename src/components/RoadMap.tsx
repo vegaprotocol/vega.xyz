@@ -21,7 +21,7 @@ const RoadMap = (props) => {
   const { t } = useTranslation('component.roadmap')
   const planets = useRef<any[]>([])
   const swiperRef = useRef<SwiperRef>()
-  const currentStatus = 1
+  const currentStatus = 2
   const [timelineHeight, setTimelineHeight] = useState(0)
   const [selectedPlanet, setSelectedPlanet] = useState(0)
   planets.current = props.data.edges.map(

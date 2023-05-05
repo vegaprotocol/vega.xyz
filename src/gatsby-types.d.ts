@@ -664,7 +664,7 @@ type FileFieldsEnum =
   | 'childImageSharp.resize.width'
   | 'childJson.APY'
   | 'childJson.A_Vega_wallet_is_used_to_access_and_sign_transactions_and_connect_to_any_dApp_running_on_Vega_'
-  | 'childJson.A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'childJson.A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'childJson.A_fee_for_every_transaction'
   | 'childJson.A_proposal_cannot_be_changed_once_submitted___it_will_be_validated_by_the_nodes_and_enter_straight_into_the_voting_period___therefore_it_s_important_to_submit_only_when_you_are_happy_with_the_proposal_s_content__Anyone_with__2___2__who_has_staked_to_a_validator__can_submit_a_new_market_proposal__Once_submitted__head_back_to_the_forum_to_rally_the_community_to_vote_'
   | 'childJson.Access_Vega_apps__such_as_the_token_site_and_Console'
@@ -915,6 +915,7 @@ type FileFieldsEnum =
   | 'childJson.Latest_Proposals'
   | 'childJson.Latest_news'
   | 'childJson.Latest_news_on_the_Vega_blog_'
+  | 'childJson.Launch_Console'
   | 'childJson.Launch_Market'
   | 'childJson.Launch_a_new_market_on_Vega__or_trade__confident_in_the_knowledge_that_the_latest_and_most_accurate_price_is_available_to_you_'
   | 'childJson.Leaderboards'
@@ -1081,8 +1082,6 @@ type FileFieldsEnum =
   | 'childJson.Tools_built_on_Vega'
   | 'childJson.Total_Staked'
   | 'childJson.Trade'
-  | 'childJson.Trade__Testnet_'
-  | 'childJson.Trade_futures__Testnet_'
   | 'childJson.Trading'
   | 'childJson.Translate'
   | 'childJson.Transparent_and_open_source_trading'
@@ -1458,7 +1457,7 @@ type FileFieldsEnum =
   | 'childrenJson'
   | 'childrenJson.APY'
   | 'childrenJson.A_Vega_wallet_is_used_to_access_and_sign_transactions_and_connect_to_any_dApp_running_on_Vega_'
-  | 'childrenJson.A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'childrenJson.A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'childrenJson.A_fee_for_every_transaction'
   | 'childrenJson.A_proposal_cannot_be_changed_once_submitted___it_will_be_validated_by_the_nodes_and_enter_straight_into_the_voting_period___therefore_it_s_important_to_submit_only_when_you_are_happy_with_the_proposal_s_content__Anyone_with__2___2__who_has_staked_to_a_validator__can_submit_a_new_market_proposal__Once_submitted__head_back_to_the_forum_to_rally_the_community_to_vote_'
   | 'childrenJson.Access_Vega_apps__such_as_the_token_site_and_Console'
@@ -1709,6 +1708,7 @@ type FileFieldsEnum =
   | 'childrenJson.Latest_Proposals'
   | 'childrenJson.Latest_news'
   | 'childrenJson.Latest_news_on_the_Vega_blog_'
+  | 'childrenJson.Launch_Console'
   | 'childrenJson.Launch_Market'
   | 'childrenJson.Launch_a_new_market_on_Vega__or_trade__confident_in_the_knowledge_that_the_latest_and_most_accurate_price_is_available_to_you_'
   | 'childrenJson.Leaderboards'
@@ -1875,8 +1875,6 @@ type FileFieldsEnum =
   | 'childrenJson.Tools_built_on_Vega'
   | 'childrenJson.Total_Staked'
   | 'childrenJson.Trade'
-  | 'childrenJson.Trade__Testnet_'
-  | 'childrenJson.Trade_futures__Testnet_'
   | 'childrenJson.Trading'
   | 'childrenJson.Translate'
   | 'childrenJson.Transparent_and_open_source_trading'
@@ -2948,7 +2946,7 @@ type JSONQueryOperatorInput = {
 type Json = Node & {
   readonly APY: Maybe<Scalars['String']>;
   readonly A_Vega_wallet_is_used_to_access_and_sign_transactions_and_connect_to_any_dApp_running_on_Vega_: Maybe<Scalars['String']>;
-  readonly A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__: Maybe<Scalars['String']>;
+  readonly A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_: Maybe<Scalars['String']>;
   readonly A_fee_for_every_transaction: Maybe<Scalars['String']>;
   readonly A_proposal_cannot_be_changed_once_submitted___it_will_be_validated_by_the_nodes_and_enter_straight_into_the_voting_period___therefore_it_s_important_to_submit_only_when_you_are_happy_with_the_proposal_s_content__Anyone_with__2___2__who_has_staked_to_a_validator__can_submit_a_new_market_proposal__Once_submitted__head_back_to_the_forum_to_rally_the_community_to_vote_: Maybe<Scalars['String']>;
   readonly Access_Vega_apps__such_as_the_token_site_and_Console: Maybe<Scalars['String']>;
@@ -3199,6 +3197,7 @@ type Json = Node & {
   readonly Latest_Proposals: Maybe<Scalars['String']>;
   readonly Latest_news: Maybe<Scalars['String']>;
   readonly Latest_news_on_the_Vega_blog_: Maybe<Scalars['String']>;
+  readonly Launch_Console: Maybe<Scalars['String']>;
   readonly Launch_Market: Maybe<Scalars['String']>;
   readonly Launch_a_new_market_on_Vega__or_trade__confident_in_the_knowledge_that_the_latest_and_most_accurate_price_is_available_to_you_: Maybe<Scalars['String']>;
   readonly Leaderboards: Maybe<Scalars['String']>;
@@ -3365,8 +3364,6 @@ type Json = Node & {
   readonly Tools_built_on_Vega: Maybe<Scalars['String']>;
   readonly Total_Staked: Maybe<Scalars['String']>;
   readonly Trade: Maybe<Scalars['String']>;
-  readonly Trade__Testnet_: Maybe<Scalars['String']>;
-  readonly Trade_futures__Testnet_: Maybe<Scalars['String']>;
   readonly Trading: Maybe<Scalars['String']>;
   readonly Translate: Maybe<Scalars['String']>;
   readonly Transparent_and_open_source_trading: Maybe<Scalars['String']>;
@@ -3516,7 +3513,7 @@ type JsonEdge = {
 type JsonFieldsEnum =
   | 'APY'
   | 'A_Vega_wallet_is_used_to_access_and_sign_transactions_and_connect_to_any_dApp_running_on_Vega_'
-  | 'A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'A_fee_for_every_transaction'
   | 'A_proposal_cannot_be_changed_once_submitted___it_will_be_validated_by_the_nodes_and_enter_straight_into_the_voting_period___therefore_it_s_important_to_submit_only_when_you_are_happy_with_the_proposal_s_content__Anyone_with__2___2__who_has_staked_to_a_validator__can_submit_a_new_market_proposal__Once_submitted__head_back_to_the_forum_to_rally_the_community_to_vote_'
   | 'Access_Vega_apps__such_as_the_token_site_and_Console'
@@ -3767,6 +3764,7 @@ type JsonFieldsEnum =
   | 'Latest_Proposals'
   | 'Latest_news'
   | 'Latest_news_on_the_Vega_blog_'
+  | 'Launch_Console'
   | 'Launch_Market'
   | 'Launch_a_new_market_on_Vega__or_trade__confident_in_the_knowledge_that_the_latest_and_most_accurate_price_is_available_to_you_'
   | 'Leaderboards'
@@ -3933,8 +3931,6 @@ type JsonFieldsEnum =
   | 'Tools_built_on_Vega'
   | 'Total_Staked'
   | 'Trade'
-  | 'Trade__Testnet_'
-  | 'Trade_futures__Testnet_'
   | 'Trading'
   | 'Translate'
   | 'Transparent_and_open_source_trading'
@@ -4127,7 +4123,7 @@ type JsonFieldsEnum =
 type JsonFilterInput = {
   readonly APY: InputMaybe<StringQueryOperatorInput>;
   readonly A_Vega_wallet_is_used_to_access_and_sign_transactions_and_connect_to_any_dApp_running_on_Vega_: InputMaybe<StringQueryOperatorInput>;
-  readonly A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__: InputMaybe<StringQueryOperatorInput>;
+  readonly A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_: InputMaybe<StringQueryOperatorInput>;
   readonly A_fee_for_every_transaction: InputMaybe<StringQueryOperatorInput>;
   readonly A_proposal_cannot_be_changed_once_submitted___it_will_be_validated_by_the_nodes_and_enter_straight_into_the_voting_period___therefore_it_s_important_to_submit_only_when_you_are_happy_with_the_proposal_s_content__Anyone_with__2___2__who_has_staked_to_a_validator__can_submit_a_new_market_proposal__Once_submitted__head_back_to_the_forum_to_rally_the_community_to_vote_: InputMaybe<StringQueryOperatorInput>;
   readonly Access_Vega_apps__such_as_the_token_site_and_Console: InputMaybe<StringQueryOperatorInput>;
@@ -4378,6 +4374,7 @@ type JsonFilterInput = {
   readonly Latest_Proposals: InputMaybe<StringQueryOperatorInput>;
   readonly Latest_news: InputMaybe<StringQueryOperatorInput>;
   readonly Latest_news_on_the_Vega_blog_: InputMaybe<StringQueryOperatorInput>;
+  readonly Launch_Console: InputMaybe<StringQueryOperatorInput>;
   readonly Launch_Market: InputMaybe<StringQueryOperatorInput>;
   readonly Launch_a_new_market_on_Vega__or_trade__confident_in_the_knowledge_that_the_latest_and_most_accurate_price_is_available_to_you_: InputMaybe<StringQueryOperatorInput>;
   readonly Leaderboards: InputMaybe<StringQueryOperatorInput>;
@@ -4544,8 +4541,6 @@ type JsonFilterInput = {
   readonly Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
   readonly Total_Staked: InputMaybe<StringQueryOperatorInput>;
   readonly Trade: InputMaybe<StringQueryOperatorInput>;
-  readonly Trade__Testnet_: InputMaybe<StringQueryOperatorInput>;
-  readonly Trade_futures__Testnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Trading: InputMaybe<StringQueryOperatorInput>;
   readonly Translate: InputMaybe<StringQueryOperatorInput>;
   readonly Transparent_and_open_source_trading: InputMaybe<StringQueryOperatorInput>;
@@ -5117,7 +5112,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childImageSharp.id'
   | 'frontmatter.featuredImage.childJson.APY'
   | 'frontmatter.featuredImage.childJson.A_Vega_wallet_is_used_to_access_and_sign_transactions_and_connect_to_any_dApp_running_on_Vega_'
-  | 'frontmatter.featuredImage.childJson.A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'frontmatter.featuredImage.childJson.A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'frontmatter.featuredImage.childJson.A_fee_for_every_transaction'
   | 'frontmatter.featuredImage.childJson.A_proposal_cannot_be_changed_once_submitted___it_will_be_validated_by_the_nodes_and_enter_straight_into_the_voting_period___therefore_it_s_important_to_submit_only_when_you_are_happy_with_the_proposal_s_content__Anyone_with__2___2__who_has_staked_to_a_validator__can_submit_a_new_market_proposal__Once_submitted__head_back_to_the_forum_to_rally_the_community_to_vote_'
   | 'frontmatter.featuredImage.childJson.Access_Vega_apps__such_as_the_token_site_and_Console'
@@ -5368,6 +5363,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Latest_Proposals'
   | 'frontmatter.featuredImage.childJson.Latest_news'
   | 'frontmatter.featuredImage.childJson.Latest_news_on_the_Vega_blog_'
+  | 'frontmatter.featuredImage.childJson.Launch_Console'
   | 'frontmatter.featuredImage.childJson.Launch_Market'
   | 'frontmatter.featuredImage.childJson.Launch_a_new_market_on_Vega__or_trade__confident_in_the_knowledge_that_the_latest_and_most_accurate_price_is_available_to_you_'
   | 'frontmatter.featuredImage.childJson.Leaderboards'
@@ -5534,8 +5530,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Tools_built_on_Vega'
   | 'frontmatter.featuredImage.childJson.Total_Staked'
   | 'frontmatter.featuredImage.childJson.Trade'
-  | 'frontmatter.featuredImage.childJson.Trade__Testnet_'
-  | 'frontmatter.featuredImage.childJson.Trade_futures__Testnet_'
   | 'frontmatter.featuredImage.childJson.Trading'
   | 'frontmatter.featuredImage.childJson.Translate'
   | 'frontmatter.featuredImage.childJson.Transparent_and_open_source_trading'
@@ -5660,7 +5654,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson'
   | 'frontmatter.featuredImage.childrenJson.APY'
   | 'frontmatter.featuredImage.childrenJson.A_Vega_wallet_is_used_to_access_and_sign_transactions_and_connect_to_any_dApp_running_on_Vega_'
-  | 'frontmatter.featuredImage.childrenJson.A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
+  | 'frontmatter.featuredImage.childrenJson.A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'frontmatter.featuredImage.childrenJson.A_fee_for_every_transaction'
   | 'frontmatter.featuredImage.childrenJson.A_proposal_cannot_be_changed_once_submitted___it_will_be_validated_by_the_nodes_and_enter_straight_into_the_voting_period___therefore_it_s_important_to_submit_only_when_you_are_happy_with_the_proposal_s_content__Anyone_with__2___2__who_has_staked_to_a_validator__can_submit_a_new_market_proposal__Once_submitted__head_back_to_the_forum_to_rally_the_community_to_vote_'
   | 'frontmatter.featuredImage.childrenJson.Access_Vega_apps__such_as_the_token_site_and_Console'
@@ -5911,6 +5905,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Latest_Proposals'
   | 'frontmatter.featuredImage.childrenJson.Latest_news'
   | 'frontmatter.featuredImage.childrenJson.Latest_news_on_the_Vega_blog_'
+  | 'frontmatter.featuredImage.childrenJson.Launch_Console'
   | 'frontmatter.featuredImage.childrenJson.Launch_Market'
   | 'frontmatter.featuredImage.childrenJson.Launch_a_new_market_on_Vega__or_trade__confident_in_the_knowledge_that_the_latest_and_most_accurate_price_is_available_to_you_'
   | 'frontmatter.featuredImage.childrenJson.Leaderboards'
@@ -6077,8 +6072,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Tools_built_on_Vega'
   | 'frontmatter.featuredImage.childrenJson.Total_Staked'
   | 'frontmatter.featuredImage.childrenJson.Trade'
-  | 'frontmatter.featuredImage.childrenJson.Trade__Testnet_'
-  | 'frontmatter.featuredImage.childrenJson.Trade_futures__Testnet_'
   | 'frontmatter.featuredImage.childrenJson.Trading'
   | 'frontmatter.featuredImage.childrenJson.Translate'
   | 'frontmatter.featuredImage.childrenJson.Transparent_and_open_source_trading'
@@ -9731,7 +9724,7 @@ type Query_imageSharpArgs = {
 type Query_jsonArgs = {
   APY: InputMaybe<StringQueryOperatorInput>;
   A_Vega_wallet_is_used_to_access_and_sign_transactions_and_connect_to_any_dApp_running_on_Vega_: InputMaybe<StringQueryOperatorInput>;
-  A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__: InputMaybe<StringQueryOperatorInput>;
+  A_dApp_for_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_: InputMaybe<StringQueryOperatorInput>;
   A_fee_for_every_transaction: InputMaybe<StringQueryOperatorInput>;
   A_proposal_cannot_be_changed_once_submitted___it_will_be_validated_by_the_nodes_and_enter_straight_into_the_voting_period___therefore_it_s_important_to_submit_only_when_you_are_happy_with_the_proposal_s_content__Anyone_with__2___2__who_has_staked_to_a_validator__can_submit_a_new_market_proposal__Once_submitted__head_back_to_the_forum_to_rally_the_community_to_vote_: InputMaybe<StringQueryOperatorInput>;
   Access_Vega_apps__such_as_the_token_site_and_Console: InputMaybe<StringQueryOperatorInput>;
@@ -9982,6 +9975,7 @@ type Query_jsonArgs = {
   Latest_Proposals: InputMaybe<StringQueryOperatorInput>;
   Latest_news: InputMaybe<StringQueryOperatorInput>;
   Latest_news_on_the_Vega_blog_: InputMaybe<StringQueryOperatorInput>;
+  Launch_Console: InputMaybe<StringQueryOperatorInput>;
   Launch_Market: InputMaybe<StringQueryOperatorInput>;
   Launch_a_new_market_on_Vega__or_trade__confident_in_the_knowledge_that_the_latest_and_most_accurate_price_is_available_to_you_: InputMaybe<StringQueryOperatorInput>;
   Leaderboards: InputMaybe<StringQueryOperatorInput>;
@@ -10148,8 +10142,6 @@ type Query_jsonArgs = {
   Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
   Total_Staked: InputMaybe<StringQueryOperatorInput>;
   Trade: InputMaybe<StringQueryOperatorInput>;
-  Trade__Testnet_: InputMaybe<StringQueryOperatorInput>;
-  Trade_futures__Testnet_: InputMaybe<StringQueryOperatorInput>;
   Trading: InputMaybe<StringQueryOperatorInput>;
   Translate: InputMaybe<StringQueryOperatorInput>;
   Transparent_and_open_source_trading: InputMaybe<StringQueryOperatorInput>;
