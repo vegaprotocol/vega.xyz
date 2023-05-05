@@ -1,4 +1,4 @@
-import { useMediaQuery } from "react-responsive";
+import useWindowMediaQuery from '../hooks/use-window-media-query'
 
 // Small <= 639
 // Medium 640 - 767
@@ -8,51 +8,59 @@ import { useMediaQuery } from "react-responsive";
 // XXXLarge >= 1536
 
 export const MQXXXLarge = ({ children }) => {
-  const isXXXLarge = useMediaQuery({ minWidth: 1536 });
-  return isXXXLarge ? children : null;
-};
+  const isXXXLarge = useWindowMediaQuery('(min-width: 1536px)')
+  return isXXXLarge ? children : null
+}
 
 export const MQXXLarge = ({ children }) => {
-  const isXXLarge = useMediaQuery({ minWidth: 1280, maxWidth: 1535 });
-  return isXXLarge ? children : null;
-};
+  const isXXLarge = useWindowMediaQuery(
+    '(min-width: 1280px) and (max-width: 1535px)'
+  )
+  return isXXLarge ? children : null
+}
 
 export const MQXLargeUp = ({ children }) => {
-  const isXLargeUp = useMediaQuery({ minWidth: 1024 });
-  return isXLargeUp ? children : null;
-};
+  const isXLargeUp = useWindowMediaQuery('(min-width: 1024px)')
+  return isXLargeUp ? children : null
+}
 
 export const MQXLarge = ({ children }) => {
-  const isXLarge = useMediaQuery({ minWidth: 1024, maxWidth: 1279 });
-  return isXLarge ? children : null;
-};
+  const isXLarge = useWindowMediaQuery(
+    '(min-width: 1024px) and (max-width: 1279px)'
+  )
+  return isXLarge ? children : null
+}
 
 export const MQLargeUp = ({ children }) => {
-  const isLargeUp = useMediaQuery({ minWidth: 768 });
-  return isLargeUp ? children : null;
-};
+  const isLargeUp = useWindowMediaQuery('(min-width: 768px)')
+  return isLargeUp ? children : null
+}
 
 export const MQLarge = ({ children }) => {
-  const isLarge = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  return isLarge ? children : null;
-};
+  const isLarge = useWindowMediaQuery(
+    '(min-width: 768px) and (max-width: 1023px)'
+  )
+  return isLarge ? children : null
+}
 
 export const MQMediumDown = ({ children }) => {
-  const isMediumDown = useMediaQuery({ maxWidth: 767 });
-  return isMediumDown ? children : null;
-};
+  const isMediumDown = useWindowMediaQuery('(max-width: 767px)')
+  return isMediumDown ? children : null
+}
 
 export const MQMediumUp = ({ children }) => {
-  const isMediumUp = useMediaQuery({ minWidth: 640 });
-  return isMediumUp ? children : null;
-};
+  const isMediumUp = useWindowMediaQuery('(min-width: 640px)')
+  return isMediumUp ? children : null
+}
 
 export const MQMedium = ({ children }) => {
-  const isMedium = useMediaQuery({ minWidth: 640, maxWidth: 767 });
-  return isMedium ? children : null;
-};
+  const isMedium = useWindowMediaQuery(
+    '(min-width: 640px) and (max-width: 767px)'
+  )
+  return isMedium ? children : null
+}
 
 export const MQSmall = ({ children }) => {
-  const isSmall = useMediaQuery({ maxWidth: 639 });
-  return isSmall ? children : null;
-};
+  const isSmall = useWindowMediaQuery('(max-width: 639px)')
+  return isSmall ? children : null
+}
