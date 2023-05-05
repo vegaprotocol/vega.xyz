@@ -6,7 +6,7 @@ const ConditionalContainer = ({ condition, children }) =>
   condition ? children : <Container>{children}</Container>
 
 const BlockD = (props) => {
-  const { i18n, t } = useTranslation('page.key-concepts')
+  const { t } = useTranslation('page.key-concepts')
 
   return (
     <div className="pt-20 md:pt-32">
