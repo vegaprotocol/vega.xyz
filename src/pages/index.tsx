@@ -8,6 +8,7 @@ import { routeThroughInterstitialPage } from '../utils/tools'
 import TranslationsBanner from '../components/TranslationsBanner'
 import Ticker from '../components/Ticker'
 import GlitchTitle from '../components/UI/GlitchTitle'
+import Link from '../components/UI/Link'
 import LatestNews from '../components/LatestNews'
 import Button from '../components/UI/Button'
 import PageSection from '../components/PageSection'
@@ -26,13 +27,13 @@ import LogoGRPC from '../components/Svg/LogoGRPC'
 import LogoGraphQL from '../components/Svg/LogoGraphQL'
 import LogoRestAPI from '../components/Svg/LogoRestAPI'
 import PermissionlessMarketCreationIcon from '../images/feature-icons/permissionless-market-creation.svg'
-import AntiFrontRunningProtectionIcon from '../images/feature-icons/anti-front-running-protection.svg'
+import NonCustodialIcon from '../images/feature-icons/non-custodial.svg'
 import PurposeBuiltBlockChainIcon from '../images/feature-icons/purpose-built.svg'
 import PseudononymousTradingIcon from '../images/feature-icons/pseudononymous-trading.svg'
 import HighCapitalEfficiencyIcon from '../images/feature-icons/high-capital-efficiency.svg'
 import NoGasFeesIcon from '../images/feature-icons/no-gas-fees.svg'
 import NativeLiquidityProvision from '../images/feature-icons/native-liquidity-provision.svg'
-import CrossChainSupportIcon from '../images/feature-icons/cross-chain-support.svg'
+import RichCEXStyleIcon from '../images/feature-icons/rich-cex-style.svg'
 
 const FeatureBox = ({ title, description, icon }) => {
   return (
@@ -190,19 +191,34 @@ const IndexPage = ({ data }) => {
                 <div>
                   <div className="flex items-center gap-x-space-5">
                     <div className="max-w-[4.6875rem]">
-                      <LogoGRPC />
+                      <Link
+                        hideArrow
+                        to={'https://docs.vega.xyz/mainnet/api/overview'}
+                      >
+                        <LogoGRPC />
+                      </Link>
                     </div>
                     <div className="max-w-[3.125rem]">
-                      <LogoRestAPI />
+                      <Link
+                        hideArrow
+                        to={'https://docs.vega.xyz/mainnet/api/overview'}
+                      >
+                        <LogoRestAPI />
+                      </Link>
                     </div>
                     <div className="max-w-[6.25rem]">
-                      <LogoGraphQL />
+                      <Link
+                        hideArrow
+                        to={'https://docs.vega.xyz/mainnet/api/overview'}
+                      >
+                        <LogoGraphQL />
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="flex items-end justify-end">
-                <div className="relative mr-space-3 w-full max-w-[33.25rem]">
+                <div className="relative ml-space-3 mr-space-3 w-full max-w-[33.25rem]">
                   <Explore />
                 </div>
               </div>
@@ -222,7 +238,7 @@ const IndexPage = ({ data }) => {
                 <FeatureBox
                   title={t('Non-custodial and pseudonymous')}
                   description={t('No third party has access to your funds.')}
-                  // icon={}
+                  icon={NonCustodialIcon}
                 />
                 <FeatureBox
                   title={t('Purpose built proof of stake blockchain')}
@@ -258,7 +274,7 @@ const IndexPage = ({ data }) => {
                   description={t(
                     'Fully decentralised limit order book (dCLOB) and historic data APIs.'
                   )}
-                  // icon={}
+                  icon={RichCEXStyleIcon}
                 />
                 <FeatureBox
                   title={t('Decentralised liquidity incentivisation')}
