@@ -151,10 +151,6 @@ const GovernancePage = ({ data }) => {
           title: t('Read the docs to make a proposal'),
           url: 'https://docs.vega.xyz/mainnet/concepts/vega-protocol#governance',
         },
-        {
-          title: t('Submit your proposal'),
-          url: 'https://governance.vega.xyz/proposals/propose/',
-        },
       ],
       image: <Phase3 />,
     },
