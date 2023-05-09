@@ -86,7 +86,7 @@ const RewardsPage = ({ data }) => {
           <div>
             <Button
               variant="secondary"
-              to="https://token.vega.xyz/rewards"
+              to="https://governance.vega.xyz/rewards"
               className="mt-space-2 md:mt-0"
             >
               <Trans t={t}>Rewards I've earned</Trans>
