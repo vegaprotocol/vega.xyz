@@ -131,13 +131,11 @@ const binaries = [
     icon: 'mac',
     platform: 'MacOS (Intel)',
     file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-intel.zip',
-',
   },
   {
     icon: 'mac',
     platform: 'MacOS (M1 / M2)',
     file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-apple-silicon.zip',
-',
   },
   {
     icon: 'linux',
