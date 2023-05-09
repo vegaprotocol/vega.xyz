@@ -128,10 +128,6 @@ const MarketCreationPage = ({ data }) => {
           title: t('Read the docs to make a proposal (Testnet)'),
           url: 'https://docs.vega.xyz/testnet/tutorials/proposals/new-market-proposal',
         },
-        {
-          title: t('Submit your proposal (Testnet)'),
-          url: 'https://token.fairground.wtf/governance/propose/new-market',
-        },
       ],
       image: <Phase3 />,
     },
