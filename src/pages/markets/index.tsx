@@ -111,7 +111,7 @@ const MarketsLiquidity = () => {
                 if (loading) return null
                 if (data) {
                   const liquidityFee = data.market.fees?.factors?.liquidityFee
-                  return liquidityFee
+                  return `${liquidityFee}%`
                 }
                 return null
               }}
