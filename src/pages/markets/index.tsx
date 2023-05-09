@@ -7,6 +7,7 @@ import {
 } from '@vegaprotocol/ui-toolkit'
 import {
   addDecimalsFormatNumber,
+  formatNumber,
   formatNumberPercentage,
   toBigNum,
 } from '@vegaprotocol/utils'
@@ -67,15 +68,28 @@ const MarketsLiquidity = () => {
             <AgGridColumn
               headerName={'Mark Price'}
               field={'node.data.markPrice'}
+              cellRenderer={(params) => {
+                const markPrice = params.data.node.data.markPrice
+                const decimals =
+                  params.data.node.data.market.tradableInstrument.instrument
+                    .product.settlementAsset.decimals
+                const formattedMarkPrice = addDecimalsFormatNumber(markPrice, decimals)
+                console.log('price:', {
+                  markPrice,
+                  decimals,
+                  formattedMarkPrice,
+                })
+                return formattedMarkPrice
+              }}
             />
             <AgGridColumn
               headerName={'Target Stake'}
               cellRenderer={(params) => {
                 const targetStake = params.data.node.data.targetStake
-                const formattedTargetStake = addDecimalsFormatNumber(
-                  targetStake,
-                  5
-                )
+                const decimals =
+                  params.data.node.data.market.tradableInstrument.instrument
+                    .product.settlementAsset.decimals
+                const formattedTargetStake = addDecimalsFormatNumber(targetStake, decimals)
                 return formattedTargetStake
               }}
             />
@@ -83,9 +97,12 @@ const MarketsLiquidity = () => {
               headerName={'Supplied Stake'}
               cellRenderer={(params) => {
                 const suppliedStake = params.data.node.data.suppliedStake
+                const decimals =
+                  params.data.node.data.market.tradableInstrument.instrument
+                    .product.settlementAsset.decimals
                 const formattedSuppliedStake = addDecimalsFormatNumber(
                   suppliedStake,
-                  5
+                  decimals
                 )
                 const percentageStaked = percentageLiquidity(
                   params.data.node.data.suppliedStake,
