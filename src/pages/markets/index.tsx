@@ -91,9 +91,11 @@ const MarketsLiquidity = () => {
                   params.data.node.data.suppliedStake,
                   params.data.node.data.targetStake
                 )
+                const status = params.data.node.data.marketTradingMode
+                const intent = intentForStatus(status)
                 return (
                   <div>
-                    <Indicator variant={Intent.Danger} />
+                    <Indicator variant={intent} />
                     {formattedSuppliedStake} <br />
                     {`(${percentageStaked})`}
                   </div>
