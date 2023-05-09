@@ -53,7 +53,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://governance.vega.xyz/proposals"
+                    to="https://governance.vega.xyz/"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Govern</Trans>
