@@ -1,5 +1,5 @@
 ---
-step_title: <strike>2022 H2</strike> <i>any week now!</i><br><a class="underline hover:no-underline" target="_blank" href="https://github.com/orgs/vegaprotocol/projects/125/views/2">See what's left</a>
+step_title: Alpha Mainnet network is live! <i>Expected launch of first markets: 22/05/23</i><br><a class="underline hover:no-underline" target="_blank" href="https://vegaprotocol.notion.site/The-Road-to-Vega-Mainnet-Countdown-to-Trading-576bc2655b0742cd941d38569c456240">Follow the countdown to launch here</a>
 title: Alpha Mainnet
 ---
 
