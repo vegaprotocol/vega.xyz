@@ -143,7 +143,7 @@ const IndexPage = ({ data }) => {
                   'Submit and vote on proposals to create and change markets, network parameters and assets.'
                 )}
                 icon={getImage(data.governanceIcon)}
-                link="https://token.vega.xyz/governance"
+                link="https://governance.vega.xyz/proposals"
               />
               <ToolBox
                 title="Block Explorer"

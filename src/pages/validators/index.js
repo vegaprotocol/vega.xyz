@@ -180,7 +180,7 @@ const ValidatorsPage = ({ data }) => {
                 and earn the greatest rewards from infrastructure fees paid on
                 every trade and transfer, with a portion distributed to stakers
                 and standby validators. The{' '}
-                <Link to="https://token.vega.xyz/staking">validators list</Link>{' '}
+                <Link to="https://governance.vega.xyz/validators">validators list</Link>{' '}
                 is refreshed every epoch{' '}
                 <NetworkParameter param="validators_epoch_length" />.
               </Trans>

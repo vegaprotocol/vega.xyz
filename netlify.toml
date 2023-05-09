@@ -7,7 +7,7 @@
   NODE_VERSION = "16.15.1"
 
 [context.production.environment]
-  GATSBY_TOKEN_FRONTEND = "https://token.vega.xyz/"
+  GATSBY_TOKEN_FRONTEND = "https://governance.vega.xyz/"
   GATSBY_VEGA_API = "https://api.vega.xyz/query"
 
 [context.deploy-preview.environment]
