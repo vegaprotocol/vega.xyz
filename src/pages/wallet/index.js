@@ -150,27 +150,27 @@ const fairgroundBinaries = [
   {
     icon: 'windows',
     platform: 'Windows',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.1/fairground-wallet-desktop-windows-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.0/fairground-wallet-desktop-windows-amd64.zip',
   },
   {
     icon: 'windows',
     platform: 'Windows (ARM64)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.1/fairground-wallet-desktop-windows-arm64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.0/fairground-wallet-desktop-windows-arm64.zip',
   },
   {
     icon: 'mac',
     platform: 'MacOS (Intel)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.1/fairground-wallet-desktop-macos-intel.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.0/fairground-wallet-desktop-macos-intel.zip',
   },
   {
     icon: 'mac',
     platform: 'MacOS (M1 / M2)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.1/fairground-wallet-desktop-macos-apple-silicon.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.0/fairground-wallet-desktop-macos-apple-silicon.zip',
   },
   {
     icon: 'linux',
     platform: 'Linux',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.1/fairground-wallet-desktop-linux-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.0/fairground-wallet-desktop-linux-amd64.zip',
   },
 ]
 
