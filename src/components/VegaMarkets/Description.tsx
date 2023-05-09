@@ -10,9 +10,11 @@ export const Description = ({ market }: { market: any }) => {
     <div style={{}}>
       {marketName}
       <br />
-      {marketCode}
-      <br />
-      {symbol}
+      <div style={{ color: '#8B8B8B' }}>
+        {marketCode}
+        <br />
+        {symbol}
+      </div>
     </div>
   )
 }

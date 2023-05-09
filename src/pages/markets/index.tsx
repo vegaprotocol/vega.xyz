@@ -97,7 +97,9 @@ const MarketsLiquidity = () => {
                   <div>
                     <Indicator variant={intent} />
                     {formattedSuppliedStake} <br />
-                    {`(${percentageStaked})`}
+                    <div
+                      style={{ color: '#8B8B8B' }}
+                    >{`(${percentageStaked})`}</div>
                   </div>
                 )
               }}
