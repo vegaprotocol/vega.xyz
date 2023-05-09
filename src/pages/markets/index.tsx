@@ -59,6 +59,10 @@ const MarketsLiquidity = () => {
             <AgGridColumn
               headerName={'Market'}
               field={'node.data.market.tradableInstrument.instrument.name'}
+              cellRenderer={(params) => {
+                const market = params.data.node.data.market
+                return <Description market={market} />
+              }}
             />
             <AgGridColumn
               headerName={'Mark Price'}
@@ -224,6 +228,7 @@ export const query = graphql`
 `
 
 import * as Schema from '@vegaprotocol/types'
+import { Description } from '../../components/VegaMarkets/Description'
 
 const marketTradingModeStyle = {
   [Schema.MarketTradingMode.TRADING_MODE_CONTINUOUS]: '#00D46E',
