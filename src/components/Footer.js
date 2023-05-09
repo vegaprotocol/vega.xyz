@@ -53,7 +53,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/governance"
+                    to="https://governance.vega.xyz/proposals"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Govern</Trans>
@@ -61,7 +61,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/staking"
+                    to="https://governance.vega.xyz/validators"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Stake</Trans>
@@ -221,7 +221,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/governance"
+                    to="https://governance.vega.xyz/proposals"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Governance dApp</Trans>

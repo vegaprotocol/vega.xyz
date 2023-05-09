@@ -153,7 +153,7 @@ const GovernancePage = ({ data }) => {
         },
         {
           title: t('Submit your proposal'),
-          url: 'https://token.vega.xyz/governance/propose/',
+          url: 'https://governance.vega.xyz/proposals/propose/',
         },
       ],
       image: <Phase3 />,
@@ -165,7 +165,7 @@ const GovernancePage = ({ data }) => {
       links: [
         {
           title: t('Vote for proposals'),
-          url: 'https://token.vega.xyz/governance',
+          url: 'https://governance.vega.xyz/proposals',
         },
       ],
       image: <Phase4 />,
@@ -236,7 +236,7 @@ const GovernancePage = ({ data }) => {
           <ToolBox
             icon={getImage(data.tokenInterfaceIcon)}
             title={t('Governance')}
-            link="https://token.vega.xyz/governance"
+            link="https://governance.vega.xyz/proposals"
             text={t('Review, vote on, and submit governance proposals.')}
             type="DAPP"
           />
