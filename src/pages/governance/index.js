@@ -212,29 +212,30 @@ const GovernancePage = ({ data }) => {
         <div className="mx-auto mt-10 mb-space-10 grid max-w-[75rem] grid-cols-1 gap-5 md:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10">
           <ToolBox
             icon={getImage(data.forumIcon)}
-            title={t('Forum')}
+            title={t('Discuss proposals')}
             link="https://community.vega.xyz/c/governance/25"
             text={t(
-              'Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more.'
+              'Read initial proposals and get involved in the discussion before the proposal goes to vote.'
             )}
             type="Tool"
           />
           <ToolBox
-            icon={getImage(data.tokenInterfaceIcon)}
-            title={t('Governance')}
-            link="https://governance.vega.xyz/proposals"
-            text={t('Review, vote on, and submit governance proposals.')}
-            type="DAPP"
-          />
-          <ToolBox
             icon={getImage(data.makeProposalIcon)}
-            title={t('Make a proposal')}
+            title={t('Submit a proposal')}
             link="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
             text={t(
               'Read the docs to create and submit a proposal using Vega APIs.'
             )}
             type="DOCS"
+          />        
+          <ToolBox
+            icon={getImage(data.tokenInterfaceIcon)}
+            title={t('Vote on proposals')}
+            link="https://governance.vega.xyz/proposals"
+            text={t('Review and vote on governance proposals.')}
+            type="DAPP"
           />
+
         </div>
 
         <div className="mb-space-8 md:mb-space-10">
