@@ -28,7 +28,7 @@ const Layout = ({ children, stickyHeader = true }) => {
                     className="font-bold underline hover:no-underline"
                   >
                     <br className="md:hidden" />
-                    Follow the countdown to launch
+                    Real time updates here
                   </Link>
                 </SiteBanner>
                 {children}
