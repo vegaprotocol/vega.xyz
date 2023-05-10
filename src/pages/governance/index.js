@@ -209,12 +209,7 @@ const GovernancePage = ({ data }) => {
       </Container>
 
       <Container>
-        <h2
-          className="title-m md:title-l mx-auto mb-6 max-w-[30rem] text-center lg:max-w-none"
-          id="governanceTools"
-        >
-          <Trans t={t}>Governance Tools</Trans>
-        </h2>
+
         <div className="mx-auto mt-10 mb-space-10 grid max-w-[75rem] grid-cols-1 gap-5 md:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10">
           <ToolBox
             icon={getImage(data.forumIcon)}
