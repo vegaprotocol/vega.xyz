@@ -176,9 +176,9 @@ const UsePage = ({ data }) => {
       <div className="pt-space-5">
         <Container>
           <CalloutHero
-            title={t('The Vega mainnet is live, trading launch H1 2023')}
+            title={t('Alpha Mainnet network is live!')}
             text={t(
-              'Token holders can participate in governance, stake and delegate.'
+              'Expected launch of first markets: 22/05/23'
             )}
             buttonText={t('View the Roadmap')}
             buttonLink="/#roadmap"
