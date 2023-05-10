@@ -55,6 +55,7 @@ const MarketsLiquidity = () => {
               sortable: true,
               unSortIcon: true,
               cellClass: ['flex', 'flex-col', 'justify-center'],
+              minWidth: 120,
             }}
           >
             <AgGridColumn
@@ -64,6 +65,7 @@ const MarketsLiquidity = () => {
                 const market = params.data.node.data.market
                 return <Description market={market} />
               }}
+              minWidth={200}
             />
             <AgGridColumn
               headerName={'Mark Price'}
