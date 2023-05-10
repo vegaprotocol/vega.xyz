@@ -4,6 +4,8 @@ export const MarketsDataFieldsFragmentDoc = gql`
   fragment MarketsDataFields on MarketData {
     market {
       id
+      decimalPlaces
+      positionDecimalPlaces
       tradableInstrument {
         instrument {
           name
