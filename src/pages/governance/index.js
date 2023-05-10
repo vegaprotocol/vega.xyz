@@ -304,7 +304,8 @@ const GovernancePage = ({ data }) => {
               />
             </div>
           </div>          
-        <div className="mb-space-8 md:mb-space-10">          
+        <div>
+        <br>              
         <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
           <Trans t={t}>Governance lifecycle</Trans>
         </h2>
