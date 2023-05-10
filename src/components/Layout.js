@@ -22,7 +22,7 @@ const Layout = ({ children, stickyHeader = true }) => {
             >
               <div>
                 <SiteBanner>
-                  Alpha Mainnet is live! Expected launch of first markets 22/05/23{' '}
+                  Alpha Mainnet is live! Expected launch of first markets: 22/05/23{' '}
                   <Link
                     to="https://vegaprotocol.notion.site/The-Road-to-Vega-Mainnet-Countdown-to-Trading-576bc2655b0742cd941d38569c456240"
                     className="font-bold underline hover:no-underline"
