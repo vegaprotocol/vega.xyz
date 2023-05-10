@@ -208,10 +208,6 @@ const GovernancePage = ({ data }) => {
         </div>
       </Container>
 
-      <div className="mb-space-8 md:mb-space-10">
-        <GovernanceResponsive />
-      </div>
-
       <Container>
         <h2
           className="title-m md:title-l mx-auto mb-6 max-w-[30rem] text-center lg:max-w-none"
@@ -247,26 +243,11 @@ const GovernancePage = ({ data }) => {
           />
         </div>
 
-        <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
-          <Trans t={t}>Governance lifecycle</Trans>
-        </h2>
-
         <div className="mb-space-8 md:mb-space-10">
-          <Accordion
-            data={governanceProcess}
-            transNamespace="page.governance"
-          />
-        </div>
-
-        <Callout
-          title={t('Propose a futures market on any underlying.')}
-          image={getImage(data.marketMakingImage)}
-          linkText={t('Create a new market')}
-          link="/market-creation"
-          className="mb-space-8 md:mb-space-11"
-        />
-
-        <div className="mb-space-8 md:mb-space-10">
+          <GovernanceResponsive />
+        </div>           
+        
+                <div className="mb-space-8 md:mb-space-10">
           <h2 className="title-m md:title-l lg:title-xl mb-12 px-1 text-center">
             <Trans t={t}>Get started voting</Trans>
           </h2>
@@ -327,7 +308,28 @@ const GovernancePage = ({ data }) => {
                 link="/governance/#governanceTools"
                 text={t('Governance tools')}
               />
-            </div>
+            </div>          
+                  
+        <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
+          <Trans t={t}>Governance lifecycle</Trans>
+        </h2>
+
+        <div className="mb-space-8 md:mb-space-10">
+          <Accordion
+            data={governanceProcess}
+            transNamespace="page.governance"
+          />
+        </div>
+
+        <Callout
+          title={t('Propose a futures market on any underlying.')}
+          image={getImage(data.marketMakingImage)}
+          linkText={t('Create a new market')}
+          link="/market-creation"
+          className="mb-space-8 md:mb-space-11"
+        />
+
+
           </div>
         </div>
 
