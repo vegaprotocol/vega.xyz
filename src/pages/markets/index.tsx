@@ -73,12 +73,10 @@ const MarketsLiquidity = () => {
                 const decimals =
                   params.data.node.data.market.tradableInstrument.instrument
                     .product.settlementAsset.decimals
-                const formattedMarkPrice = addDecimalsFormatNumber(markPrice, decimals)
-                console.log('price:', {
+                const formattedMarkPrice = addDecimalsFormatNumber(
                   markPrice,
-                  decimals,
-                  formattedMarkPrice,
-                })
+                  decimals
+                )
                 return formattedMarkPrice
               }}
             />
@@ -89,7 +87,10 @@ const MarketsLiquidity = () => {
                 const decimals =
                   params.data.node.data.market.tradableInstrument.instrument
                     .product.settlementAsset.decimals
-                const formattedTargetStake = addDecimalsFormatNumber(targetStake, decimals)
+                const formattedTargetStake = addDecimalsFormatNumber(
+                  targetStake,
+                  decimals
+                )
                 return formattedTargetStake
               }}
             />
@@ -141,7 +142,13 @@ const MarketsLiquidity = () => {
                 const volume24h = calc24hVolume(
                   params.data.node.candlesConnection?.edges || []
                 )
-                return volume24h
+                const positionDecimals =
+                  params.data.node.data.market.positionDecimals
+                const formattedVolume24h = addDecimalsFormatNumber(
+                  volume24h,
+                  positionDecimals
+                )
+                return formattedVolume24h
               }}
             />
             <AgGridColumn
