@@ -155,7 +155,6 @@ const MarketsLiquidity = () => {
               headerName={'Trading Mode'}
               field={'node.data.marketTradingMode'}
               cellRenderer={(params) => {
-                const tradingMode = params.data.node.data.marketTradingMode
                 const { data, loading, error } = useMarketLiquidityProviders(
                   params.data.node.data.market.id
                 )
@@ -170,9 +169,15 @@ const MarketsLiquidity = () => {
                     data.market?.liquidityProvisionsConnection?.edges || []
                   )
 
+                  const tradingMode = params.data.node.data.marketTradingMode
+                  const auctionTrigger = params.data.node.data.auctionTrigger
+                  const tradingModeLabel = getStatus(
+                    tradingMode,
+                    auctionTrigger
+                  )
                   return (
                     <div>
-                      {tradingMode}
+                      {tradingModeLabel}
                       <br />
                       <HealthBar
                         target={targetStake}
@@ -257,6 +262,7 @@ export const query = graphql`
 
 import * as Schema from '@vegaprotocol/types'
 import { Description } from '../../components/VegaMarkets/Description'
+import { getStatus } from '../../utils/vega/getStatus'
 
 const marketTradingModeStyle = {
   [Schema.MarketTradingMode.TRADING_MODE_CONTINUOUS]: '#00D46E',
