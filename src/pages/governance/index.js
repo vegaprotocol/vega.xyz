@@ -208,10 +208,6 @@ const GovernancePage = ({ data }) => {
         </div>
       </Container>
 
-      <div className="mb-space-8 md:mb-space-10">
-        <GovernanceResponsive />
-      </div>
-
       <Container>
         <div className="mx-auto mt-10 mb-space-10 grid max-w-[75rem] grid-cols-1 gap-5 md:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10">
           <ToolBox
@@ -241,6 +237,10 @@ const GovernancePage = ({ data }) => {
           />
         </div>
 
+        <div className="mb-space-8 md:mb-space-10">
+          <GovernanceResponsive />
+        </div>          
+                  
         <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
           <Trans t={t}>Governance lifecycle</Trans>
         </h2>
