@@ -71,7 +71,7 @@
 # IPFS REDIRECT START
 [[redirects]]
   from = "/console"
-  to = "/external-link/?url="
+  to = "/external-link/?url=bafybeiaexsmewuaw74xuw7ekdiubfvh3cnjwodwjkhck6igvxyjid3nvfe"
   status = 301
   force = true
 # IPFS REDIRECT END
