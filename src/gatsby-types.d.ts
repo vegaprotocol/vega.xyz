@@ -672,6 +672,7 @@ type FileFieldsEnum =
   | 'childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childJson.All'
   | 'childJson.Allows_for_unfair_front_running'
+  | 'childJson.Alpha_Mainnet_network_is_live_'
   | 'childJson.Ambassador'
   | 'childJson.Ambassador_Leaderboards'
   | 'childJson.Ambassador_program'
@@ -712,7 +713,6 @@ type FileFieldsEnum =
   | 'childJson.Bug_bounties'
   | 'childJson.Build'
   | 'childJson.Build___send_commands'
-  | 'childJson.Build__test___earn'
   | 'childJson.Builders_Club'
   | 'childJson.Builders_club'
   | 'childJson.Building_on_Vega_Parts_I_and_II'
@@ -799,6 +799,7 @@ type FileFieldsEnum =
   | 'childJson.Events_and_meetups'
   | 'childJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'childJson.Expectations'
+  | 'childJson.Expected_launch_of_first_markets__22_05_23'
   | 'childJson.Experiment_on_Fairground_Testnet'
   | 'childJson.Explore'
   | 'childJson.Explore_all_proposals'
@@ -897,7 +898,6 @@ type FileFieldsEnum =
   | 'childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childJson.Join'
   | 'childJson.Join_a_team'
-  | 'childJson.Join_the_Mainnet_Sims_now'
   | 'childJson.Join_the_Vega_community'
   | 'childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childJson.Join_the_builders_club'
@@ -1053,14 +1053,12 @@ type FileFieldsEnum =
   | 'childJson.Submit_and_vote_on_proposals_to_create_and_change_markets__network_parameters_and_assets_'
   | 'childJson.Submit_bug_report'
   | 'childJson.Submit_your_proposal'
-  | 'childJson.Submit_your_proposal__Testnet_'
   | 'childJson.Substack'
   | 'childJson.Swag'
   | 'childJson.Talks'
   | 'childJson.Technical_overview'
   | 'childJson.Telegram'
   | 'childJson.The_Vega_Community'
-  | 'childJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'childJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'childJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
   | 'childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
@@ -1074,7 +1072,6 @@ type FileFieldsEnum =
   | 'childJson.Those_with_the_highest__2_validator_scores__2___a_measure_of_performance_and_stake__become_consensus_validators_and_earn_the_greatest_rewards_from_infrastructure_fees_paid_on_every_trade_and_transfer__with_a_portion_distributed_to_stakers_and_standby_validators__The__6_validators_list__6__is_refreshed_every_epoch__10___10__'
   | 'childJson.To_learn_more_about_the_Vega_Wallet_desktop_app__including_full__step_by_step_details_on_restoring_wallets__updating_the_app__and_troubleshooting__visit_the_docs_pages_'
   | 'childJson.To_update_the_app__delete_your_existing_version_and_download_the_new_one'
-  | 'childJson.Token_holders_can_participate_in_governance__stake_and_delegate_'
   | 'childJson.Token_holders_consider_and_vote_for_or_against_active_proposals__Tokens_used_for_voting_are_not_locked_or_transferred___they_can_be_used_for_staking_as_well_as_voting_on_any_all_active_proposals__but_cannot_be_used_to_trade__Note__each_public_key_with_a_minimum_of_1__VEGA_gets_just_one_vote_per_proposal_'
   | 'childJson.Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'childJson.Tools_built_on_Vega'
@@ -1160,7 +1157,6 @@ type FileFieldsEnum =
   | 'childJson.You_will_be_redirected_in_'
   | 'childJson.Your_career_in_Defi_starts_here'
   | 'childJson.Your_message_was_successfully_encrypted_and_delivered_'
-  | 'childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childJson._0_Click_here_to_contribute__0__'
   | 'childJson._VEGA_paid_out_this_epoch'
@@ -1465,6 +1461,7 @@ type FileFieldsEnum =
   | 'childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childrenJson.All'
   | 'childrenJson.Allows_for_unfair_front_running'
+  | 'childrenJson.Alpha_Mainnet_network_is_live_'
   | 'childrenJson.Ambassador'
   | 'childrenJson.Ambassador_Leaderboards'
   | 'childrenJson.Ambassador_program'
@@ -1505,7 +1502,6 @@ type FileFieldsEnum =
   | 'childrenJson.Bug_bounties'
   | 'childrenJson.Build'
   | 'childrenJson.Build___send_commands'
-  | 'childrenJson.Build__test___earn'
   | 'childrenJson.Builders_Club'
   | 'childrenJson.Builders_club'
   | 'childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -1592,6 +1588,7 @@ type FileFieldsEnum =
   | 'childrenJson.Events_and_meetups'
   | 'childrenJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'childrenJson.Expectations'
+  | 'childrenJson.Expected_launch_of_first_markets__22_05_23'
   | 'childrenJson.Experiment_on_Fairground_Testnet'
   | 'childrenJson.Explore'
   | 'childrenJson.Explore_all_proposals'
@@ -1690,7 +1687,6 @@ type FileFieldsEnum =
   | 'childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'childrenJson.Join'
   | 'childrenJson.Join_a_team'
-  | 'childrenJson.Join_the_Mainnet_Sims_now'
   | 'childrenJson.Join_the_Vega_community'
   | 'childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'childrenJson.Join_the_builders_club'
@@ -1846,14 +1842,12 @@ type FileFieldsEnum =
   | 'childrenJson.Submit_and_vote_on_proposals_to_create_and_change_markets__network_parameters_and_assets_'
   | 'childrenJson.Submit_bug_report'
   | 'childrenJson.Submit_your_proposal'
-  | 'childrenJson.Submit_your_proposal__Testnet_'
   | 'childrenJson.Substack'
   | 'childrenJson.Swag'
   | 'childrenJson.Talks'
   | 'childrenJson.Technical_overview'
   | 'childrenJson.Telegram'
   | 'childrenJson.The_Vega_Community'
-  | 'childrenJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'childrenJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'childrenJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
   | 'childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
@@ -1867,7 +1861,6 @@ type FileFieldsEnum =
   | 'childrenJson.Those_with_the_highest__2_validator_scores__2___a_measure_of_performance_and_stake__become_consensus_validators_and_earn_the_greatest_rewards_from_infrastructure_fees_paid_on_every_trade_and_transfer__with_a_portion_distributed_to_stakers_and_standby_validators__The__6_validators_list__6__is_refreshed_every_epoch__10___10__'
   | 'childrenJson.To_learn_more_about_the_Vega_Wallet_desktop_app__including_full__step_by_step_details_on_restoring_wallets__updating_the_app__and_troubleshooting__visit_the_docs_pages_'
   | 'childrenJson.To_update_the_app__delete_your_existing_version_and_download_the_new_one'
-  | 'childrenJson.Token_holders_can_participate_in_governance__stake_and_delegate_'
   | 'childrenJson.Token_holders_consider_and_vote_for_or_against_active_proposals__Tokens_used_for_voting_are_not_locked_or_transferred___they_can_be_used_for_staking_as_well_as_voting_on_any_all_active_proposals__but_cannot_be_used_to_trade__Note__each_public_key_with_a_minimum_of_1__VEGA_gets_just_one_vote_per_proposal_'
   | 'childrenJson.Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'childrenJson.Tools_built_on_Vega'
@@ -1953,7 +1946,6 @@ type FileFieldsEnum =
   | 'childrenJson.You_will_be_redirected_in_'
   | 'childrenJson.Your_career_in_Defi_starts_here'
   | 'childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
-  | 'childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'childrenJson._0_Click_here_to_contribute__0__'
   | 'childrenJson._VEGA_paid_out_this_epoch'
@@ -2954,6 +2946,7 @@ type Json = Node & {
   readonly Agree_with_the_code_of_conduct__keep_to_the_rules: Maybe<Scalars['String']>;
   readonly All: Maybe<Scalars['String']>;
   readonly Allows_for_unfair_front_running: Maybe<Scalars['String']>;
+  readonly Alpha_Mainnet_network_is_live_: Maybe<Scalars['String']>;
   readonly Ambassador: Maybe<Scalars['String']>;
   readonly Ambassador_Leaderboards: Maybe<Scalars['String']>;
   readonly Ambassador_program: Maybe<Scalars['String']>;
@@ -2994,7 +2987,6 @@ type Json = Node & {
   readonly Bug_bounties: Maybe<Scalars['String']>;
   readonly Build: Maybe<Scalars['String']>;
   readonly Build___send_commands: Maybe<Scalars['String']>;
-  readonly Build__test___earn: Maybe<Scalars['String']>;
   readonly Builders_Club: Maybe<Scalars['String']>;
   readonly Builders_club: Maybe<Scalars['String']>;
   readonly Building_on_Vega_Parts_I_and_II: Maybe<Scalars['String']>;
@@ -3081,6 +3073,7 @@ type Json = Node & {
   readonly Events_and_meetups: Maybe<Scalars['String']>;
   readonly Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online: Maybe<Scalars['String']>;
   readonly Expectations: Maybe<Scalars['String']>;
+  readonly Expected_launch_of_first_markets__22_05_23: Maybe<Scalars['String']>;
   readonly Experiment_on_Fairground_Testnet: Maybe<Scalars['String']>;
   readonly Explore: Maybe<Scalars['String']>;
   readonly Explore_all_proposals: Maybe<Scalars['String']>;
@@ -3179,7 +3172,6 @@ type Json = Node & {
   readonly It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: Maybe<Scalars['String']>;
   readonly Join: Maybe<Scalars['String']>;
   readonly Join_a_team: Maybe<Scalars['String']>;
-  readonly Join_the_Mainnet_Sims_now: Maybe<Scalars['String']>;
   readonly Join_the_Vega_community: Maybe<Scalars['String']>;
   readonly Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: Maybe<Scalars['String']>;
   readonly Join_the_builders_club: Maybe<Scalars['String']>;
@@ -3335,14 +3327,12 @@ type Json = Node & {
   readonly Submit_and_vote_on_proposals_to_create_and_change_markets__network_parameters_and_assets_: Maybe<Scalars['String']>;
   readonly Submit_bug_report: Maybe<Scalars['String']>;
   readonly Submit_your_proposal: Maybe<Scalars['String']>;
-  readonly Submit_your_proposal__Testnet_: Maybe<Scalars['String']>;
   readonly Substack: Maybe<Scalars['String']>;
   readonly Swag: Maybe<Scalars['String']>;
   readonly Talks: Maybe<Scalars['String']>;
   readonly Technical_overview: Maybe<Scalars['String']>;
   readonly Telegram: Maybe<Scalars['String']>;
   readonly The_Vega_Community: Maybe<Scalars['String']>;
-  readonly The_Vega_mainnet_is_live__trading_launch_H1_2023: Maybe<Scalars['String']>;
   readonly The_builders_club_team_is_part_of_the_ambassadors_Vega__program: Maybe<Scalars['String']>;
   readonly The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_: Maybe<Scalars['String']>;
   readonly The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_: Maybe<Scalars['String']>;
@@ -3356,7 +3346,6 @@ type Json = Node & {
   readonly Those_with_the_highest__2_validator_scores__2___a_measure_of_performance_and_stake__become_consensus_validators_and_earn_the_greatest_rewards_from_infrastructure_fees_paid_on_every_trade_and_transfer__with_a_portion_distributed_to_stakers_and_standby_validators__The__6_validators_list__6__is_refreshed_every_epoch__10___10__: Maybe<Scalars['String']>;
   readonly To_learn_more_about_the_Vega_Wallet_desktop_app__including_full__step_by_step_details_on_restoring_wallets__updating_the_app__and_troubleshooting__visit_the_docs_pages_: Maybe<Scalars['String']>;
   readonly To_update_the_app__delete_your_existing_version_and_download_the_new_one: Maybe<Scalars['String']>;
-  readonly Token_holders_can_participate_in_governance__stake_and_delegate_: Maybe<Scalars['String']>;
   readonly Token_holders_consider_and_vote_for_or_against_active_proposals__Tokens_used_for_voting_are_not_locked_or_transferred___they_can_be_used_for_staking_as_well_as_voting_on_any_all_active_proposals__but_cannot_be_used_to_trade__Note__each_public_key_with_a_minimum_of_1__VEGA_gets_just_one_vote_per_proposal_: Maybe<Scalars['String']>;
   readonly Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking: Maybe<Scalars['String']>;
   readonly Tools_built_on_Vega: Maybe<Scalars['String']>;
@@ -3442,7 +3431,6 @@ type Json = Node & {
   readonly You_will_be_redirected_in_: Maybe<Scalars['String']>;
   readonly Your_career_in_Defi_starts_here: Maybe<Scalars['String']>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: Maybe<Scalars['String']>;
-  readonly Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_: Maybe<Scalars['String']>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: Maybe<Scalars['String']>;
   readonly _0_Click_here_to_contribute__0__: Maybe<Scalars['String']>;
   readonly _VEGA_paid_out_this_epoch: Maybe<Scalars['String']>;
@@ -3521,6 +3509,7 @@ type JsonFieldsEnum =
   | 'Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'All'
   | 'Allows_for_unfair_front_running'
+  | 'Alpha_Mainnet_network_is_live_'
   | 'Ambassador'
   | 'Ambassador_Leaderboards'
   | 'Ambassador_program'
@@ -3561,7 +3550,6 @@ type JsonFieldsEnum =
   | 'Bug_bounties'
   | 'Build'
   | 'Build___send_commands'
-  | 'Build__test___earn'
   | 'Builders_Club'
   | 'Builders_club'
   | 'Building_on_Vega_Parts_I_and_II'
@@ -3648,6 +3636,7 @@ type JsonFieldsEnum =
   | 'Events_and_meetups'
   | 'Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'Expectations'
+  | 'Expected_launch_of_first_markets__22_05_23'
   | 'Experiment_on_Fairground_Testnet'
   | 'Explore'
   | 'Explore_all_proposals'
@@ -3746,7 +3735,6 @@ type JsonFieldsEnum =
   | 'It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'Join'
   | 'Join_a_team'
-  | 'Join_the_Mainnet_Sims_now'
   | 'Join_the_Vega_community'
   | 'Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'Join_the_builders_club'
@@ -3902,14 +3890,12 @@ type JsonFieldsEnum =
   | 'Submit_and_vote_on_proposals_to_create_and_change_markets__network_parameters_and_assets_'
   | 'Submit_bug_report'
   | 'Submit_your_proposal'
-  | 'Submit_your_proposal__Testnet_'
   | 'Substack'
   | 'Swag'
   | 'Talks'
   | 'Technical_overview'
   | 'Telegram'
   | 'The_Vega_Community'
-  | 'The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
   | 'The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
@@ -3923,7 +3909,6 @@ type JsonFieldsEnum =
   | 'Those_with_the_highest__2_validator_scores__2___a_measure_of_performance_and_stake__become_consensus_validators_and_earn_the_greatest_rewards_from_infrastructure_fees_paid_on_every_trade_and_transfer__with_a_portion_distributed_to_stakers_and_standby_validators__The__6_validators_list__6__is_refreshed_every_epoch__10___10__'
   | 'To_learn_more_about_the_Vega_Wallet_desktop_app__including_full__step_by_step_details_on_restoring_wallets__updating_the_app__and_troubleshooting__visit_the_docs_pages_'
   | 'To_update_the_app__delete_your_existing_version_and_download_the_new_one'
-  | 'Token_holders_can_participate_in_governance__stake_and_delegate_'
   | 'Token_holders_consider_and_vote_for_or_against_active_proposals__Tokens_used_for_voting_are_not_locked_or_transferred___they_can_be_used_for_staking_as_well_as_voting_on_any_all_active_proposals__but_cannot_be_used_to_trade__Note__each_public_key_with_a_minimum_of_1__VEGA_gets_just_one_vote_per_proposal_'
   | 'Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'Tools_built_on_Vega'
@@ -4009,7 +3994,6 @@ type JsonFieldsEnum =
   | 'You_will_be_redirected_in_'
   | 'Your_career_in_Defi_starts_here'
   | 'Your_message_was_successfully_encrypted_and_delivered_'
-  | 'Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | '_0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | '_0_Click_here_to_contribute__0__'
   | '_VEGA_paid_out_this_epoch'
@@ -4131,6 +4115,7 @@ type JsonFilterInput = {
   readonly Agree_with_the_code_of_conduct__keep_to_the_rules: InputMaybe<StringQueryOperatorInput>;
   readonly All: InputMaybe<StringQueryOperatorInput>;
   readonly Allows_for_unfair_front_running: InputMaybe<StringQueryOperatorInput>;
+  readonly Alpha_Mainnet_network_is_live_: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador_Leaderboards: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador_program: InputMaybe<StringQueryOperatorInput>;
@@ -4171,7 +4156,6 @@ type JsonFilterInput = {
   readonly Bug_bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Build: InputMaybe<StringQueryOperatorInput>;
   readonly Build___send_commands: InputMaybe<StringQueryOperatorInput>;
-  readonly Build__test___earn: InputMaybe<StringQueryOperatorInput>;
   readonly Builders_Club: InputMaybe<StringQueryOperatorInput>;
   readonly Builders_club: InputMaybe<StringQueryOperatorInput>;
   readonly Building_on_Vega_Parts_I_and_II: InputMaybe<StringQueryOperatorInput>;
@@ -4258,6 +4242,7 @@ type JsonFilterInput = {
   readonly Events_and_meetups: InputMaybe<StringQueryOperatorInput>;
   readonly Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online: InputMaybe<StringQueryOperatorInput>;
   readonly Expectations: InputMaybe<StringQueryOperatorInput>;
+  readonly Expected_launch_of_first_markets__22_05_23: InputMaybe<StringQueryOperatorInput>;
   readonly Experiment_on_Fairground_Testnet: InputMaybe<StringQueryOperatorInput>;
   readonly Explore: InputMaybe<StringQueryOperatorInput>;
   readonly Explore_all_proposals: InputMaybe<StringQueryOperatorInput>;
@@ -4356,7 +4341,6 @@ type JsonFilterInput = {
   readonly It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: InputMaybe<StringQueryOperatorInput>;
   readonly Join: InputMaybe<StringQueryOperatorInput>;
   readonly Join_a_team: InputMaybe<StringQueryOperatorInput>;
-  readonly Join_the_Mainnet_Sims_now: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_Vega_community: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: InputMaybe<StringQueryOperatorInput>;
   readonly Join_the_builders_club: InputMaybe<StringQueryOperatorInput>;
@@ -4512,14 +4496,12 @@ type JsonFilterInput = {
   readonly Submit_and_vote_on_proposals_to_create_and_change_markets__network_parameters_and_assets_: InputMaybe<StringQueryOperatorInput>;
   readonly Submit_bug_report: InputMaybe<StringQueryOperatorInput>;
   readonly Submit_your_proposal: InputMaybe<StringQueryOperatorInput>;
-  readonly Submit_your_proposal__Testnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Substack: InputMaybe<StringQueryOperatorInput>;
   readonly Swag: InputMaybe<StringQueryOperatorInput>;
   readonly Talks: InputMaybe<StringQueryOperatorInput>;
   readonly Technical_overview: InputMaybe<StringQueryOperatorInput>;
   readonly Telegram: InputMaybe<StringQueryOperatorInput>;
   readonly The_Vega_Community: InputMaybe<StringQueryOperatorInput>;
-  readonly The_Vega_mainnet_is_live__trading_launch_H1_2023: InputMaybe<StringQueryOperatorInput>;
   readonly The_builders_club_team_is_part_of_the_ambassadors_Vega__program: InputMaybe<StringQueryOperatorInput>;
   readonly The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_: InputMaybe<StringQueryOperatorInput>;
   readonly The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_: InputMaybe<StringQueryOperatorInput>;
@@ -4533,7 +4515,6 @@ type JsonFilterInput = {
   readonly Those_with_the_highest__2_validator_scores__2___a_measure_of_performance_and_stake__become_consensus_validators_and_earn_the_greatest_rewards_from_infrastructure_fees_paid_on_every_trade_and_transfer__with_a_portion_distributed_to_stakers_and_standby_validators__The__6_validators_list__6__is_refreshed_every_epoch__10___10__: InputMaybe<StringQueryOperatorInput>;
   readonly To_learn_more_about_the_Vega_Wallet_desktop_app__including_full__step_by_step_details_on_restoring_wallets__updating_the_app__and_troubleshooting__visit_the_docs_pages_: InputMaybe<StringQueryOperatorInput>;
   readonly To_update_the_app__delete_your_existing_version_and_download_the_new_one: InputMaybe<StringQueryOperatorInput>;
-  readonly Token_holders_can_participate_in_governance__stake_and_delegate_: InputMaybe<StringQueryOperatorInput>;
   readonly Token_holders_consider_and_vote_for_or_against_active_proposals__Tokens_used_for_voting_are_not_locked_or_transferred___they_can_be_used_for_staking_as_well_as_voting_on_any_all_active_proposals__but_cannot_be_used_to_trade__Note__each_public_key_with_a_minimum_of_1__VEGA_gets_just_one_vote_per_proposal_: InputMaybe<StringQueryOperatorInput>;
   readonly Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking: InputMaybe<StringQueryOperatorInput>;
   readonly Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
@@ -4619,7 +4600,6 @@ type JsonFilterInput = {
   readonly You_will_be_redirected_in_: InputMaybe<StringQueryOperatorInput>;
   readonly Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   readonly Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
-  readonly Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
   readonly _0_Click_here_to_contribute__0__: InputMaybe<StringQueryOperatorInput>;
   readonly _VEGA_paid_out_this_epoch: InputMaybe<StringQueryOperatorInput>;
@@ -5120,6 +5100,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'frontmatter.featuredImage.childJson.All'
   | 'frontmatter.featuredImage.childJson.Allows_for_unfair_front_running'
+  | 'frontmatter.featuredImage.childJson.Alpha_Mainnet_network_is_live_'
   | 'frontmatter.featuredImage.childJson.Ambassador'
   | 'frontmatter.featuredImage.childJson.Ambassador_Leaderboards'
   | 'frontmatter.featuredImage.childJson.Ambassador_program'
@@ -5160,7 +5141,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Bug_bounties'
   | 'frontmatter.featuredImage.childJson.Build'
   | 'frontmatter.featuredImage.childJson.Build___send_commands'
-  | 'frontmatter.featuredImage.childJson.Build__test___earn'
   | 'frontmatter.featuredImage.childJson.Builders_Club'
   | 'frontmatter.featuredImage.childJson.Builders_club'
   | 'frontmatter.featuredImage.childJson.Building_on_Vega_Parts_I_and_II'
@@ -5247,6 +5227,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Events_and_meetups'
   | 'frontmatter.featuredImage.childJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'frontmatter.featuredImage.childJson.Expectations'
+  | 'frontmatter.featuredImage.childJson.Expected_launch_of_first_markets__22_05_23'
   | 'frontmatter.featuredImage.childJson.Experiment_on_Fairground_Testnet'
   | 'frontmatter.featuredImage.childJson.Explore'
   | 'frontmatter.featuredImage.childJson.Explore_all_proposals'
@@ -5345,7 +5326,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'frontmatter.featuredImage.childJson.Join'
   | 'frontmatter.featuredImage.childJson.Join_a_team'
-  | 'frontmatter.featuredImage.childJson.Join_the_Mainnet_Sims_now'
   | 'frontmatter.featuredImage.childJson.Join_the_Vega_community'
   | 'frontmatter.featuredImage.childJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'frontmatter.featuredImage.childJson.Join_the_builders_club'
@@ -5501,14 +5481,12 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Submit_and_vote_on_proposals_to_create_and_change_markets__network_parameters_and_assets_'
   | 'frontmatter.featuredImage.childJson.Submit_bug_report'
   | 'frontmatter.featuredImage.childJson.Submit_your_proposal'
-  | 'frontmatter.featuredImage.childJson.Submit_your_proposal__Testnet_'
   | 'frontmatter.featuredImage.childJson.Substack'
   | 'frontmatter.featuredImage.childJson.Swag'
   | 'frontmatter.featuredImage.childJson.Talks'
   | 'frontmatter.featuredImage.childJson.Technical_overview'
   | 'frontmatter.featuredImage.childJson.Telegram'
   | 'frontmatter.featuredImage.childJson.The_Vega_Community'
-  | 'frontmatter.featuredImage.childJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'frontmatter.featuredImage.childJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'frontmatter.featuredImage.childJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
   | 'frontmatter.featuredImage.childJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
@@ -5522,7 +5500,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Those_with_the_highest__2_validator_scores__2___a_measure_of_performance_and_stake__become_consensus_validators_and_earn_the_greatest_rewards_from_infrastructure_fees_paid_on_every_trade_and_transfer__with_a_portion_distributed_to_stakers_and_standby_validators__The__6_validators_list__6__is_refreshed_every_epoch__10___10__'
   | 'frontmatter.featuredImage.childJson.To_learn_more_about_the_Vega_Wallet_desktop_app__including_full__step_by_step_details_on_restoring_wallets__updating_the_app__and_troubleshooting__visit_the_docs_pages_'
   | 'frontmatter.featuredImage.childJson.To_update_the_app__delete_your_existing_version_and_download_the_new_one'
-  | 'frontmatter.featuredImage.childJson.Token_holders_can_participate_in_governance__stake_and_delegate_'
   | 'frontmatter.featuredImage.childJson.Token_holders_consider_and_vote_for_or_against_active_proposals__Tokens_used_for_voting_are_not_locked_or_transferred___they_can_be_used_for_staking_as_well_as_voting_on_any_all_active_proposals__but_cannot_be_used_to_trade__Note__each_public_key_with_a_minimum_of_1__VEGA_gets_just_one_vote_per_proposal_'
   | 'frontmatter.featuredImage.childJson.Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'frontmatter.featuredImage.childJson.Tools_built_on_Vega'
@@ -5608,7 +5585,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.You_will_be_redirected_in_'
   | 'frontmatter.featuredImage.childJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childJson.Your_message_was_successfully_encrypted_and_delivered_'
-  | 'frontmatter.featuredImage.childJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'frontmatter.featuredImage.childJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'frontmatter.featuredImage.childJson._0_Click_here_to_contribute__0__'
   | 'frontmatter.featuredImage.childJson._VEGA_paid_out_this_epoch'
@@ -5662,6 +5638,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'frontmatter.featuredImage.childrenJson.All'
   | 'frontmatter.featuredImage.childrenJson.Allows_for_unfair_front_running'
+  | 'frontmatter.featuredImage.childrenJson.Alpha_Mainnet_network_is_live_'
   | 'frontmatter.featuredImage.childrenJson.Ambassador'
   | 'frontmatter.featuredImage.childrenJson.Ambassador_Leaderboards'
   | 'frontmatter.featuredImage.childrenJson.Ambassador_program'
@@ -5702,7 +5679,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Bug_bounties'
   | 'frontmatter.featuredImage.childrenJson.Build'
   | 'frontmatter.featuredImage.childrenJson.Build___send_commands'
-  | 'frontmatter.featuredImage.childrenJson.Build__test___earn'
   | 'frontmatter.featuredImage.childrenJson.Builders_Club'
   | 'frontmatter.featuredImage.childrenJson.Builders_club'
   | 'frontmatter.featuredImage.childrenJson.Building_on_Vega_Parts_I_and_II'
@@ -5789,6 +5765,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Events_and_meetups'
   | 'frontmatter.featuredImage.childrenJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'frontmatter.featuredImage.childrenJson.Expectations'
+  | 'frontmatter.featuredImage.childrenJson.Expected_launch_of_first_markets__22_05_23'
   | 'frontmatter.featuredImage.childrenJson.Experiment_on_Fairground_Testnet'
   | 'frontmatter.featuredImage.childrenJson.Explore'
   | 'frontmatter.featuredImage.childrenJson.Explore_all_proposals'
@@ -5887,7 +5864,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_'
   | 'frontmatter.featuredImage.childrenJson.Join'
   | 'frontmatter.featuredImage.childrenJson.Join_a_team'
-  | 'frontmatter.featuredImage.childrenJson.Join_the_Mainnet_Sims_now'
   | 'frontmatter.featuredImage.childrenJson.Join_the_Vega_community'
   | 'frontmatter.featuredImage.childrenJson.Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_'
   | 'frontmatter.featuredImage.childrenJson.Join_the_builders_club'
@@ -6043,14 +6019,12 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Submit_and_vote_on_proposals_to_create_and_change_markets__network_parameters_and_assets_'
   | 'frontmatter.featuredImage.childrenJson.Submit_bug_report'
   | 'frontmatter.featuredImage.childrenJson.Submit_your_proposal'
-  | 'frontmatter.featuredImage.childrenJson.Submit_your_proposal__Testnet_'
   | 'frontmatter.featuredImage.childrenJson.Substack'
   | 'frontmatter.featuredImage.childrenJson.Swag'
   | 'frontmatter.featuredImage.childrenJson.Talks'
   | 'frontmatter.featuredImage.childrenJson.Technical_overview'
   | 'frontmatter.featuredImage.childrenJson.Telegram'
   | 'frontmatter.featuredImage.childrenJson.The_Vega_Community'
-  | 'frontmatter.featuredImage.childrenJson.The_Vega_mainnet_is_live__trading_launch_H1_2023'
   | 'frontmatter.featuredImage.childrenJson.The_builders_club_team_is_part_of_the_ambassadors_Vega__program'
   | 'frontmatter.featuredImage.childrenJson.The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_'
   | 'frontmatter.featuredImage.childrenJson.The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_'
@@ -6064,7 +6038,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Those_with_the_highest__2_validator_scores__2___a_measure_of_performance_and_stake__become_consensus_validators_and_earn_the_greatest_rewards_from_infrastructure_fees_paid_on_every_trade_and_transfer__with_a_portion_distributed_to_stakers_and_standby_validators__The__6_validators_list__6__is_refreshed_every_epoch__10___10__'
   | 'frontmatter.featuredImage.childrenJson.To_learn_more_about_the_Vega_Wallet_desktop_app__including_full__step_by_step_details_on_restoring_wallets__updating_the_app__and_troubleshooting__visit_the_docs_pages_'
   | 'frontmatter.featuredImage.childrenJson.To_update_the_app__delete_your_existing_version_and_download_the_new_one'
-  | 'frontmatter.featuredImage.childrenJson.Token_holders_can_participate_in_governance__stake_and_delegate_'
   | 'frontmatter.featuredImage.childrenJson.Token_holders_consider_and_vote_for_or_against_active_proposals__Tokens_used_for_voting_are_not_locked_or_transferred___they_can_be_used_for_staking_as_well_as_voting_on_any_all_active_proposals__but_cannot_be_used_to_trade__Note__each_public_key_with_a_minimum_of_1__VEGA_gets_just_one_vote_per_proposal_'
   | 'frontmatter.featuredImage.childrenJson.Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'frontmatter.featuredImage.childrenJson.Tools_built_on_Vega'
@@ -6150,7 +6123,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.You_will_be_redirected_in_'
   | 'frontmatter.featuredImage.childrenJson.Your_career_in_Defi_starts_here'
   | 'frontmatter.featuredImage.childrenJson.Your_message_was_successfully_encrypted_and_delivered_'
-  | 'frontmatter.featuredImage.childrenJson.Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_'
   | 'frontmatter.featuredImage.childrenJson._0_Chat_to_us_on_Discord__0__and__3_start_building__3__'
   | 'frontmatter.featuredImage.childrenJson._0_Click_here_to_contribute__0__'
   | 'frontmatter.featuredImage.childrenJson._VEGA_paid_out_this_epoch'
@@ -8553,22 +8525,14 @@ type MediumPostPreviewContentBodyModelParagraphsFilterListInput = {
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkups = {
-  readonly anchorType: Maybe<Scalars['Int']>;
   readonly end: Maybe<Scalars['Int']>;
-  readonly href: Maybe<Scalars['String']>;
-  readonly rel: Maybe<Scalars['String']>;
   readonly start: Maybe<Scalars['Int']>;
-  readonly title: Maybe<Scalars['String']>;
   readonly type: Maybe<Scalars['Int']>;
 };
 
 type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput = {
-  readonly anchorType: InputMaybe<IntQueryOperatorInput>;
   readonly end: InputMaybe<IntQueryOperatorInput>;
-  readonly href: InputMaybe<StringQueryOperatorInput>;
-  readonly rel: InputMaybe<StringQueryOperatorInput>;
   readonly start: InputMaybe<IntQueryOperatorInput>;
-  readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly type: InputMaybe<IntQueryOperatorInput>;
 };
 
@@ -8764,31 +8728,19 @@ type MediumPostVirtualsTagsMetadata = {
 
 type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly alt: Maybe<Scalars['String']>;
-  readonly backgroundSize: Maybe<Scalars['String']>;
-  readonly externalSrc: Maybe<Scalars['String']>;
-  readonly filter: Maybe<Scalars['String']>;
-  readonly focusPercentX: Maybe<Scalars['Int']>;
-  readonly focusPercentY: Maybe<Scalars['Int']>;
   readonly id: Maybe<Scalars['String']>;
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
   readonly originalWidth: Maybe<Scalars['Int']>;
-  readonly repairedAt: Maybe<Scalars['Int']>;
   readonly unsplashPhotoId: Maybe<Scalars['String']>;
 };
 
 type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly alt: InputMaybe<StringQueryOperatorInput>;
-  readonly backgroundSize: InputMaybe<StringQueryOperatorInput>;
-  readonly externalSrc: InputMaybe<StringQueryOperatorInput>;
-  readonly filter: InputMaybe<StringQueryOperatorInput>;
-  readonly focusPercentX: InputMaybe<IntQueryOperatorInput>;
-  readonly focusPercentY: InputMaybe<IntQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
   readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
-  readonly repairedAt: InputMaybe<IntQueryOperatorInput>;
   readonly unsplashPhotoId: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -9483,7 +9435,6 @@ type Query = {
   readonly allSiteFunction: SiteFunctionConnection;
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
-  readonly allStaticImage: StaticImageConnection;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
@@ -9499,7 +9450,6 @@ type Query = {
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
-  readonly staticImage: Maybe<StaticImage>;
 };
 
 
@@ -9623,14 +9573,6 @@ type Query_allSitePluginArgs = {
 };
 
 
-type Query_allStaticImageArgs = {
-  filter: InputMaybe<StaticImageFilterInput>;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-  sort: InputMaybe<StaticImageSortInput>;
-};
-
-
 type Query_directoryArgs = {
   absolutePath: InputMaybe<StringQueryOperatorInput>;
   accessTime: InputMaybe<DateQueryOperatorInput>;
@@ -9744,6 +9686,7 @@ type Query_jsonArgs = {
   Agree_with_the_code_of_conduct__keep_to_the_rules: InputMaybe<StringQueryOperatorInput>;
   All: InputMaybe<StringQueryOperatorInput>;
   Allows_for_unfair_front_running: InputMaybe<StringQueryOperatorInput>;
+  Alpha_Mainnet_network_is_live_: InputMaybe<StringQueryOperatorInput>;
   Ambassador: InputMaybe<StringQueryOperatorInput>;
   Ambassador_Leaderboards: InputMaybe<StringQueryOperatorInput>;
   Ambassador_program: InputMaybe<StringQueryOperatorInput>;
@@ -9784,7 +9727,6 @@ type Query_jsonArgs = {
   Bug_bounties: InputMaybe<StringQueryOperatorInput>;
   Build: InputMaybe<StringQueryOperatorInput>;
   Build___send_commands: InputMaybe<StringQueryOperatorInput>;
-  Build__test___earn: InputMaybe<StringQueryOperatorInput>;
   Builders_Club: InputMaybe<StringQueryOperatorInput>;
   Builders_club: InputMaybe<StringQueryOperatorInput>;
   Building_on_Vega_Parts_I_and_II: InputMaybe<StringQueryOperatorInput>;
@@ -9871,6 +9813,7 @@ type Query_jsonArgs = {
   Events_and_meetups: InputMaybe<StringQueryOperatorInput>;
   Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online: InputMaybe<StringQueryOperatorInput>;
   Expectations: InputMaybe<StringQueryOperatorInput>;
+  Expected_launch_of_first_markets__22_05_23: InputMaybe<StringQueryOperatorInput>;
   Experiment_on_Fairground_Testnet: InputMaybe<StringQueryOperatorInput>;
   Explore: InputMaybe<StringQueryOperatorInput>;
   Explore_all_proposals: InputMaybe<StringQueryOperatorInput>;
@@ -9969,7 +9912,6 @@ type Query_jsonArgs = {
   It_s_also_the_starting_point_for_trading__staking_tokens__and_voting_on_community_proposals_: InputMaybe<StringQueryOperatorInput>;
   Join: InputMaybe<StringQueryOperatorInput>;
   Join_a_team: InputMaybe<StringQueryOperatorInput>;
-  Join_the_Mainnet_Sims_now: InputMaybe<StringQueryOperatorInput>;
   Join_the_Vega_community: InputMaybe<StringQueryOperatorInput>;
   Join_the_Vega_community__where_a_fair_finance_future_is_being_co_created___starting_with_derivatives_: InputMaybe<StringQueryOperatorInput>;
   Join_the_builders_club: InputMaybe<StringQueryOperatorInput>;
@@ -10125,14 +10067,12 @@ type Query_jsonArgs = {
   Submit_and_vote_on_proposals_to_create_and_change_markets__network_parameters_and_assets_: InputMaybe<StringQueryOperatorInput>;
   Submit_bug_report: InputMaybe<StringQueryOperatorInput>;
   Submit_your_proposal: InputMaybe<StringQueryOperatorInput>;
-  Submit_your_proposal__Testnet_: InputMaybe<StringQueryOperatorInput>;
   Substack: InputMaybe<StringQueryOperatorInput>;
   Swag: InputMaybe<StringQueryOperatorInput>;
   Talks: InputMaybe<StringQueryOperatorInput>;
   Technical_overview: InputMaybe<StringQueryOperatorInput>;
   Telegram: InputMaybe<StringQueryOperatorInput>;
   The_Vega_Community: InputMaybe<StringQueryOperatorInput>;
-  The_Vega_mainnet_is_live__trading_launch_H1_2023: InputMaybe<StringQueryOperatorInput>;
   The_builders_club_team_is_part_of_the_ambassadors_Vega__program: InputMaybe<StringQueryOperatorInput>;
   The_importance_of_a_purpose_built_blockchain_for_trading_on_the_Vega_blog__2__Innovating_in_decentralised_financial_markets___2_: InputMaybe<StringQueryOperatorInput>;
   The_number_of_tokens_needed_to_make_a_proposal_differs_by_proposal_type__for_example__2___2__for_a_new_market_proposal_: InputMaybe<StringQueryOperatorInput>;
@@ -10146,7 +10086,6 @@ type Query_jsonArgs = {
   Those_with_the_highest__2_validator_scores__2___a_measure_of_performance_and_stake__become_consensus_validators_and_earn_the_greatest_rewards_from_infrastructure_fees_paid_on_every_trade_and_transfer__with_a_portion_distributed_to_stakers_and_standby_validators__The__6_validators_list__6__is_refreshed_every_epoch__10___10__: InputMaybe<StringQueryOperatorInput>;
   To_learn_more_about_the_Vega_Wallet_desktop_app__including_full__step_by_step_details_on_restoring_wallets__updating_the_app__and_troubleshooting__visit_the_docs_pages_: InputMaybe<StringQueryOperatorInput>;
   To_update_the_app__delete_your_existing_version_and_download_the_new_one: InputMaybe<StringQueryOperatorInput>;
-  Token_holders_can_participate_in_governance__stake_and_delegate_: InputMaybe<StringQueryOperatorInput>;
   Token_holders_consider_and_vote_for_or_against_active_proposals__Tokens_used_for_voting_are_not_locked_or_transferred___they_can_be_used_for_staking_as_well_as_voting_on_any_all_active_proposals__but_cannot_be_used_to_trade__Note__each_public_key_with_a_minimum_of_1__VEGA_gets_just_one_vote_per_proposal_: InputMaybe<StringQueryOperatorInput>;
   Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking: InputMaybe<StringQueryOperatorInput>;
   Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
@@ -10232,7 +10171,6 @@ type Query_jsonArgs = {
   You_will_be_redirected_in_: InputMaybe<StringQueryOperatorInput>;
   Your_career_in_Defi_starts_here: InputMaybe<StringQueryOperatorInput>;
   Your_message_was_successfully_encrypted_and_delivered_: InputMaybe<StringQueryOperatorInput>;
-  Your_participation_strengthens_the_network_and_can_earn_you_a_piece_of_up_to_150k_VEGA_rewards_: InputMaybe<StringQueryOperatorInput>;
   _0_Chat_to_us_on_Discord__0__and__3_start_building__3__: InputMaybe<StringQueryOperatorInput>;
   _0_Click_here_to_contribute__0__: InputMaybe<StringQueryOperatorInput>;
   _VEGA_paid_out_this_epoch: InputMaybe<StringQueryOperatorInput>;
@@ -10545,46 +10483,6 @@ type Query_sitePluginArgs = {
   resolve: InputMaybe<StringQueryOperatorInput>;
   ssrAPIs: InputMaybe<StringQueryOperatorInput>;
   version: InputMaybe<StringQueryOperatorInput>;
-};
-
-
-type Query_staticImageArgs = {
-  absolutePath: InputMaybe<StringQueryOperatorInput>;
-  accessTime: InputMaybe<DateQueryOperatorInput>;
-  atime: InputMaybe<DateQueryOperatorInput>;
-  atimeMs: InputMaybe<FloatQueryOperatorInput>;
-  base: InputMaybe<StringQueryOperatorInput>;
-  birthTime: InputMaybe<DateQueryOperatorInput>;
-  birthtime: InputMaybe<DateQueryOperatorInput>;
-  birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  blksize: InputMaybe<IntQueryOperatorInput>;
-  blocks: InputMaybe<IntQueryOperatorInput>;
-  changeTime: InputMaybe<DateQueryOperatorInput>;
-  children: InputMaybe<NodeFilterListInput>;
-  ctime: InputMaybe<DateQueryOperatorInput>;
-  ctimeMs: InputMaybe<FloatQueryOperatorInput>;
-  dev: InputMaybe<IntQueryOperatorInput>;
-  dir: InputMaybe<StringQueryOperatorInput>;
-  ext: InputMaybe<StringQueryOperatorInput>;
-  extension: InputMaybe<StringQueryOperatorInput>;
-  id: InputMaybe<StringQueryOperatorInput>;
-  ino: InputMaybe<IntQueryOperatorInput>;
-  internal: InputMaybe<InternalFilterInput>;
-  mode: InputMaybe<IntQueryOperatorInput>;
-  modifiedTime: InputMaybe<DateQueryOperatorInput>;
-  mtime: InputMaybe<DateQueryOperatorInput>;
-  mtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  name: InputMaybe<StringQueryOperatorInput>;
-  nlink: InputMaybe<IntQueryOperatorInput>;
-  parent: InputMaybe<NodeFilterInput>;
-  prettySize: InputMaybe<StringQueryOperatorInput>;
-  rdev: InputMaybe<IntQueryOperatorInput>;
-  relativeDirectory: InputMaybe<StringQueryOperatorInput>;
-  relativePath: InputMaybe<StringQueryOperatorInput>;
-  root: InputMaybe<StringQueryOperatorInput>;
-  size: InputMaybe<IntQueryOperatorInput>;
-  sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
-  uid: InputMaybe<IntQueryOperatorInput>;
 };
 
 type Site = Node & {
@@ -11807,366 +11705,6 @@ type SiteSortInput = {
 type SortOrderEnum =
   | 'ASC'
   | 'DESC';
-
-type StaticImage = Node & {
-  readonly absolutePath: Maybe<Scalars['String']>;
-  readonly accessTime: Maybe<Scalars['Date']>;
-  readonly atime: Maybe<Scalars['Date']>;
-  readonly atimeMs: Maybe<Scalars['Float']>;
-  readonly base: Maybe<Scalars['String']>;
-  readonly birthTime: Maybe<Scalars['Date']>;
-  readonly birthtime: Maybe<Scalars['Date']>;
-  readonly birthtimeMs: Maybe<Scalars['Float']>;
-  readonly blksize: Maybe<Scalars['Int']>;
-  readonly blocks: Maybe<Scalars['Int']>;
-  readonly changeTime: Maybe<Scalars['Date']>;
-  readonly children: ReadonlyArray<Node>;
-  readonly ctime: Maybe<Scalars['Date']>;
-  readonly ctimeMs: Maybe<Scalars['Float']>;
-  readonly dev: Maybe<Scalars['Int']>;
-  readonly dir: Maybe<Scalars['String']>;
-  readonly ext: Maybe<Scalars['String']>;
-  readonly extension: Maybe<Scalars['String']>;
-  readonly id: Scalars['ID'];
-  readonly ino: Maybe<Scalars['Int']>;
-  readonly internal: Internal;
-  readonly mode: Maybe<Scalars['Int']>;
-  readonly modifiedTime: Maybe<Scalars['Date']>;
-  readonly mtime: Maybe<Scalars['Date']>;
-  readonly mtimeMs: Maybe<Scalars['Float']>;
-  readonly name: Maybe<Scalars['String']>;
-  readonly nlink: Maybe<Scalars['Int']>;
-  readonly parent: Maybe<Node>;
-  readonly prettySize: Maybe<Scalars['String']>;
-  readonly rdev: Maybe<Scalars['Int']>;
-  readonly relativeDirectory: Maybe<Scalars['String']>;
-  readonly relativePath: Maybe<Scalars['String']>;
-  readonly root: Maybe<Scalars['String']>;
-  readonly size: Maybe<Scalars['Int']>;
-  readonly sourceInstanceName: Maybe<Scalars['String']>;
-  readonly uid: Maybe<Scalars['Int']>;
-};
-
-
-type StaticImage_accessTimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_atimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_birthTimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_birthtimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_changeTimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_ctimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_modifiedTimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type StaticImage_mtimeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-type StaticImageConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<StaticImageEdge>;
-  readonly group: ReadonlyArray<StaticImageGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<StaticImage>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type StaticImageConnection_distinctArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageConnection_groupArgs = {
-  field: StaticImageFieldsEnum;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type StaticImageConnection_maxArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageConnection_minArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageConnection_sumArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-type StaticImageEdge = {
-  readonly next: Maybe<StaticImage>;
-  readonly node: StaticImage;
-  readonly previous: Maybe<StaticImage>;
-};
-
-type StaticImageFieldsEnum =
-  | 'absolutePath'
-  | 'accessTime'
-  | 'atime'
-  | 'atimeMs'
-  | 'base'
-  | 'birthTime'
-  | 'birthtime'
-  | 'birthtimeMs'
-  | 'blksize'
-  | 'blocks'
-  | 'changeTime'
-  | 'children'
-  | 'children.children'
-  | 'children.children.children'
-  | 'children.children.children.children'
-  | 'children.children.children.id'
-  | 'children.children.id'
-  | 'children.children.internal.content'
-  | 'children.children.internal.contentDigest'
-  | 'children.children.internal.contentFilePath'
-  | 'children.children.internal.description'
-  | 'children.children.internal.fieldOwners'
-  | 'children.children.internal.ignoreType'
-  | 'children.children.internal.mediaType'
-  | 'children.children.internal.owner'
-  | 'children.children.internal.type'
-  | 'children.children.parent.children'
-  | 'children.children.parent.id'
-  | 'children.id'
-  | 'children.internal.content'
-  | 'children.internal.contentDigest'
-  | 'children.internal.contentFilePath'
-  | 'children.internal.description'
-  | 'children.internal.fieldOwners'
-  | 'children.internal.ignoreType'
-  | 'children.internal.mediaType'
-  | 'children.internal.owner'
-  | 'children.internal.type'
-  | 'children.parent.children'
-  | 'children.parent.children.children'
-  | 'children.parent.children.id'
-  | 'children.parent.id'
-  | 'children.parent.internal.content'
-  | 'children.parent.internal.contentDigest'
-  | 'children.parent.internal.contentFilePath'
-  | 'children.parent.internal.description'
-  | 'children.parent.internal.fieldOwners'
-  | 'children.parent.internal.ignoreType'
-  | 'children.parent.internal.mediaType'
-  | 'children.parent.internal.owner'
-  | 'children.parent.internal.type'
-  | 'children.parent.parent.children'
-  | 'children.parent.parent.id'
-  | 'ctime'
-  | 'ctimeMs'
-  | 'dev'
-  | 'dir'
-  | 'ext'
-  | 'extension'
-  | 'id'
-  | 'ino'
-  | 'internal.content'
-  | 'internal.contentDigest'
-  | 'internal.contentFilePath'
-  | 'internal.description'
-  | 'internal.fieldOwners'
-  | 'internal.ignoreType'
-  | 'internal.mediaType'
-  | 'internal.owner'
-  | 'internal.type'
-  | 'mode'
-  | 'modifiedTime'
-  | 'mtime'
-  | 'mtimeMs'
-  | 'name'
-  | 'nlink'
-  | 'parent.children'
-  | 'parent.children.children'
-  | 'parent.children.children.children'
-  | 'parent.children.children.id'
-  | 'parent.children.id'
-  | 'parent.children.internal.content'
-  | 'parent.children.internal.contentDigest'
-  | 'parent.children.internal.contentFilePath'
-  | 'parent.children.internal.description'
-  | 'parent.children.internal.fieldOwners'
-  | 'parent.children.internal.ignoreType'
-  | 'parent.children.internal.mediaType'
-  | 'parent.children.internal.owner'
-  | 'parent.children.internal.type'
-  | 'parent.children.parent.children'
-  | 'parent.children.parent.id'
-  | 'parent.id'
-  | 'parent.internal.content'
-  | 'parent.internal.contentDigest'
-  | 'parent.internal.contentFilePath'
-  | 'parent.internal.description'
-  | 'parent.internal.fieldOwners'
-  | 'parent.internal.ignoreType'
-  | 'parent.internal.mediaType'
-  | 'parent.internal.owner'
-  | 'parent.internal.type'
-  | 'parent.parent.children'
-  | 'parent.parent.children.children'
-  | 'parent.parent.children.id'
-  | 'parent.parent.id'
-  | 'parent.parent.internal.content'
-  | 'parent.parent.internal.contentDigest'
-  | 'parent.parent.internal.contentFilePath'
-  | 'parent.parent.internal.description'
-  | 'parent.parent.internal.fieldOwners'
-  | 'parent.parent.internal.ignoreType'
-  | 'parent.parent.internal.mediaType'
-  | 'parent.parent.internal.owner'
-  | 'parent.parent.internal.type'
-  | 'parent.parent.parent.children'
-  | 'parent.parent.parent.id'
-  | 'prettySize'
-  | 'rdev'
-  | 'relativeDirectory'
-  | 'relativePath'
-  | 'root'
-  | 'size'
-  | 'sourceInstanceName'
-  | 'uid';
-
-type StaticImageFilterInput = {
-  readonly absolutePath: InputMaybe<StringQueryOperatorInput>;
-  readonly accessTime: InputMaybe<DateQueryOperatorInput>;
-  readonly atime: InputMaybe<DateQueryOperatorInput>;
-  readonly atimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly base: InputMaybe<StringQueryOperatorInput>;
-  readonly birthTime: InputMaybe<DateQueryOperatorInput>;
-  readonly birthtime: InputMaybe<DateQueryOperatorInput>;
-  readonly birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly blksize: InputMaybe<IntQueryOperatorInput>;
-  readonly blocks: InputMaybe<IntQueryOperatorInput>;
-  readonly changeTime: InputMaybe<DateQueryOperatorInput>;
-  readonly children: InputMaybe<NodeFilterListInput>;
-  readonly ctime: InputMaybe<DateQueryOperatorInput>;
-  readonly ctimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly dev: InputMaybe<IntQueryOperatorInput>;
-  readonly dir: InputMaybe<StringQueryOperatorInput>;
-  readonly ext: InputMaybe<StringQueryOperatorInput>;
-  readonly extension: InputMaybe<StringQueryOperatorInput>;
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly ino: InputMaybe<IntQueryOperatorInput>;
-  readonly internal: InputMaybe<InternalFilterInput>;
-  readonly mode: InputMaybe<IntQueryOperatorInput>;
-  readonly modifiedTime: InputMaybe<DateQueryOperatorInput>;
-  readonly mtime: InputMaybe<DateQueryOperatorInput>;
-  readonly mtimeMs: InputMaybe<FloatQueryOperatorInput>;
-  readonly name: InputMaybe<StringQueryOperatorInput>;
-  readonly nlink: InputMaybe<IntQueryOperatorInput>;
-  readonly parent: InputMaybe<NodeFilterInput>;
-  readonly prettySize: InputMaybe<StringQueryOperatorInput>;
-  readonly rdev: InputMaybe<IntQueryOperatorInput>;
-  readonly relativeDirectory: InputMaybe<StringQueryOperatorInput>;
-  readonly relativePath: InputMaybe<StringQueryOperatorInput>;
-  readonly root: InputMaybe<StringQueryOperatorInput>;
-  readonly size: InputMaybe<IntQueryOperatorInput>;
-  readonly sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
-  readonly uid: InputMaybe<IntQueryOperatorInput>;
-};
-
-type StaticImageGroupConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<StaticImageEdge>;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-  readonly group: ReadonlyArray<StaticImageGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<StaticImage>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type StaticImageGroupConnection_distinctArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageGroupConnection_groupArgs = {
-  field: StaticImageFieldsEnum;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type StaticImageGroupConnection_maxArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageGroupConnection_minArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-
-type StaticImageGroupConnection_sumArgs = {
-  field: StaticImageFieldsEnum;
-};
-
-type StaticImageSortInput = {
-  readonly fields: InputMaybe<ReadonlyArray<InputMaybe<StaticImageFieldsEnum>>>;
-  readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
-};
 
 type StringQueryOperatorInput = {
   readonly eq: InputMaybe<Scalars['String']>;
