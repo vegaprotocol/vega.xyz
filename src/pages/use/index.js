@@ -172,19 +172,6 @@ const UsePage = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-
-      <div className="pt-space-5">
-        <Container>
-          <CalloutHero
-            title={t('Alpha Mainnet network is live!')}
-            text={t(
-              'Expected launch of first markets: 22/05/23'
-            )}
-            buttonText={t('View the Roadmap')}
-            buttonLink="/#roadmap"
-          />
-        </Container>
-      </div>
       <Container dataCy={'main'}>
         <div className="mb-8 pt-6 text-center md:mb-12 md:pt-16">
           <div className="mx-auto max-w-[61rem] text-center">

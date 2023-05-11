@@ -672,7 +672,6 @@ type FileFieldsEnum =
   | 'childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childJson.All'
   | 'childJson.Allows_for_unfair_front_running'
-  | 'childJson.Alpha_Mainnet_network_is_live_'
   | 'childJson.Ambassador'
   | 'childJson.Ambassador_Leaderboards'
   | 'childJson.Ambassador_program'
@@ -800,7 +799,6 @@ type FileFieldsEnum =
   | 'childJson.Events_and_meetups'
   | 'childJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'childJson.Expectations'
-  | 'childJson.Expected_launch_of_first_markets__22_05_23'
   | 'childJson.Experiment_on_Fairground_Testnet'
   | 'childJson.Explore'
   | 'childJson.Explore_all_proposals'
@@ -1129,7 +1127,6 @@ type FileFieldsEnum =
   | 'childJson.View_detailed_roadmap'
   | 'childJson.View_more'
   | 'childJson.View_on_Github'
-  | 'childJson.View_the_Roadmap'
   | 'childJson.Vote_for_proposals'
   | 'childJson.Vote_for_proposals__Testnet_'
   | 'childJson.Vote_on_proposals'
@@ -1459,7 +1456,6 @@ type FileFieldsEnum =
   | 'childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childrenJson.All'
   | 'childrenJson.Allows_for_unfair_front_running'
-  | 'childrenJson.Alpha_Mainnet_network_is_live_'
   | 'childrenJson.Ambassador'
   | 'childrenJson.Ambassador_Leaderboards'
   | 'childrenJson.Ambassador_program'
@@ -1587,7 +1583,6 @@ type FileFieldsEnum =
   | 'childrenJson.Events_and_meetups'
   | 'childrenJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'childrenJson.Expectations'
-  | 'childrenJson.Expected_launch_of_first_markets__22_05_23'
   | 'childrenJson.Experiment_on_Fairground_Testnet'
   | 'childrenJson.Explore'
   | 'childrenJson.Explore_all_proposals'
@@ -1916,7 +1911,6 @@ type FileFieldsEnum =
   | 'childrenJson.View_detailed_roadmap'
   | 'childrenJson.View_more'
   | 'childrenJson.View_on_Github'
-  | 'childrenJson.View_the_Roadmap'
   | 'childrenJson.Vote_for_proposals'
   | 'childrenJson.Vote_for_proposals__Testnet_'
   | 'childrenJson.Vote_on_proposals'
@@ -2942,7 +2936,6 @@ type Json = Node & {
   readonly Agree_with_the_code_of_conduct__keep_to_the_rules: Maybe<Scalars['String']>;
   readonly All: Maybe<Scalars['String']>;
   readonly Allows_for_unfair_front_running: Maybe<Scalars['String']>;
-  readonly Alpha_Mainnet_network_is_live_: Maybe<Scalars['String']>;
   readonly Ambassador: Maybe<Scalars['String']>;
   readonly Ambassador_Leaderboards: Maybe<Scalars['String']>;
   readonly Ambassador_program: Maybe<Scalars['String']>;
@@ -3070,7 +3063,6 @@ type Json = Node & {
   readonly Events_and_meetups: Maybe<Scalars['String']>;
   readonly Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online: Maybe<Scalars['String']>;
   readonly Expectations: Maybe<Scalars['String']>;
-  readonly Expected_launch_of_first_markets__22_05_23: Maybe<Scalars['String']>;
   readonly Experiment_on_Fairground_Testnet: Maybe<Scalars['String']>;
   readonly Explore: Maybe<Scalars['String']>;
   readonly Explore_all_proposals: Maybe<Scalars['String']>;
@@ -3399,7 +3391,6 @@ type Json = Node & {
   readonly View_detailed_roadmap: Maybe<Scalars['String']>;
   readonly View_more: Maybe<Scalars['String']>;
   readonly View_on_Github: Maybe<Scalars['String']>;
-  readonly View_the_Roadmap: Maybe<Scalars['String']>;
   readonly Vote_for_proposals: Maybe<Scalars['String']>;
   readonly Vote_for_proposals__Testnet_: Maybe<Scalars['String']>;
   readonly Vote_on_proposals: Maybe<Scalars['String']>;
@@ -3503,7 +3494,6 @@ type JsonFieldsEnum =
   | 'Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'All'
   | 'Allows_for_unfair_front_running'
-  | 'Alpha_Mainnet_network_is_live_'
   | 'Ambassador'
   | 'Ambassador_Leaderboards'
   | 'Ambassador_program'
@@ -3631,7 +3621,6 @@ type JsonFieldsEnum =
   | 'Events_and_meetups'
   | 'Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'Expectations'
-  | 'Expected_launch_of_first_markets__22_05_23'
   | 'Experiment_on_Fairground_Testnet'
   | 'Explore'
   | 'Explore_all_proposals'
@@ -3960,7 +3949,6 @@ type JsonFieldsEnum =
   | 'View_detailed_roadmap'
   | 'View_more'
   | 'View_on_Github'
-  | 'View_the_Roadmap'
   | 'Vote_for_proposals'
   | 'Vote_for_proposals__Testnet_'
   | 'Vote_on_proposals'
@@ -4107,7 +4095,6 @@ type JsonFilterInput = {
   readonly Agree_with_the_code_of_conduct__keep_to_the_rules: InputMaybe<StringQueryOperatorInput>;
   readonly All: InputMaybe<StringQueryOperatorInput>;
   readonly Allows_for_unfair_front_running: InputMaybe<StringQueryOperatorInput>;
-  readonly Alpha_Mainnet_network_is_live_: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador_Leaderboards: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador_program: InputMaybe<StringQueryOperatorInput>;
@@ -4235,7 +4222,6 @@ type JsonFilterInput = {
   readonly Events_and_meetups: InputMaybe<StringQueryOperatorInput>;
   readonly Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online: InputMaybe<StringQueryOperatorInput>;
   readonly Expectations: InputMaybe<StringQueryOperatorInput>;
-  readonly Expected_launch_of_first_markets__22_05_23: InputMaybe<StringQueryOperatorInput>;
   readonly Experiment_on_Fairground_Testnet: InputMaybe<StringQueryOperatorInput>;
   readonly Explore: InputMaybe<StringQueryOperatorInput>;
   readonly Explore_all_proposals: InputMaybe<StringQueryOperatorInput>;
@@ -4564,7 +4550,6 @@ type JsonFilterInput = {
   readonly View_detailed_roadmap: InputMaybe<StringQueryOperatorInput>;
   readonly View_more: InputMaybe<StringQueryOperatorInput>;
   readonly View_on_Github: InputMaybe<StringQueryOperatorInput>;
-  readonly View_the_Roadmap: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_for_proposals: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_for_proposals__Testnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_on_proposals: InputMaybe<StringQueryOperatorInput>;
@@ -5090,7 +5075,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'frontmatter.featuredImage.childJson.All'
   | 'frontmatter.featuredImage.childJson.Allows_for_unfair_front_running'
-  | 'frontmatter.featuredImage.childJson.Alpha_Mainnet_network_is_live_'
   | 'frontmatter.featuredImage.childJson.Ambassador'
   | 'frontmatter.featuredImage.childJson.Ambassador_Leaderboards'
   | 'frontmatter.featuredImage.childJson.Ambassador_program'
@@ -5218,7 +5202,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Events_and_meetups'
   | 'frontmatter.featuredImage.childJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'frontmatter.featuredImage.childJson.Expectations'
-  | 'frontmatter.featuredImage.childJson.Expected_launch_of_first_markets__22_05_23'
   | 'frontmatter.featuredImage.childJson.Experiment_on_Fairground_Testnet'
   | 'frontmatter.featuredImage.childJson.Explore'
   | 'frontmatter.featuredImage.childJson.Explore_all_proposals'
@@ -5547,7 +5530,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.View_detailed_roadmap'
   | 'frontmatter.featuredImage.childJson.View_more'
   | 'frontmatter.featuredImage.childJson.View_on_Github'
-  | 'frontmatter.featuredImage.childJson.View_the_Roadmap'
   | 'frontmatter.featuredImage.childJson.Vote_for_proposals'
   | 'frontmatter.featuredImage.childJson.Vote_for_proposals__Testnet_'
   | 'frontmatter.featuredImage.childJson.Vote_on_proposals'
@@ -5626,7 +5608,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'frontmatter.featuredImage.childrenJson.All'
   | 'frontmatter.featuredImage.childrenJson.Allows_for_unfair_front_running'
-  | 'frontmatter.featuredImage.childrenJson.Alpha_Mainnet_network_is_live_'
   | 'frontmatter.featuredImage.childrenJson.Ambassador'
   | 'frontmatter.featuredImage.childrenJson.Ambassador_Leaderboards'
   | 'frontmatter.featuredImage.childrenJson.Ambassador_program'
@@ -5754,7 +5735,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Events_and_meetups'
   | 'frontmatter.featuredImage.childrenJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'frontmatter.featuredImage.childrenJson.Expectations'
-  | 'frontmatter.featuredImage.childrenJson.Expected_launch_of_first_markets__22_05_23'
   | 'frontmatter.featuredImage.childrenJson.Experiment_on_Fairground_Testnet'
   | 'frontmatter.featuredImage.childrenJson.Explore'
   | 'frontmatter.featuredImage.childrenJson.Explore_all_proposals'
@@ -6083,7 +6063,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.View_detailed_roadmap'
   | 'frontmatter.featuredImage.childrenJson.View_more'
   | 'frontmatter.featuredImage.childrenJson.View_on_Github'
-  | 'frontmatter.featuredImage.childrenJson.View_the_Roadmap'
   | 'frontmatter.featuredImage.childrenJson.Vote_for_proposals'
   | 'frontmatter.featuredImage.childrenJson.Vote_for_proposals__Testnet_'
   | 'frontmatter.featuredImage.childrenJson.Vote_on_proposals'
@@ -9694,7 +9673,6 @@ type Query_jsonArgs = {
   Agree_with_the_code_of_conduct__keep_to_the_rules: InputMaybe<StringQueryOperatorInput>;
   All: InputMaybe<StringQueryOperatorInput>;
   Allows_for_unfair_front_running: InputMaybe<StringQueryOperatorInput>;
-  Alpha_Mainnet_network_is_live_: InputMaybe<StringQueryOperatorInput>;
   Ambassador: InputMaybe<StringQueryOperatorInput>;
   Ambassador_Leaderboards: InputMaybe<StringQueryOperatorInput>;
   Ambassador_program: InputMaybe<StringQueryOperatorInput>;
@@ -9822,7 +9800,6 @@ type Query_jsonArgs = {
   Events_and_meetups: InputMaybe<StringQueryOperatorInput>;
   Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online: InputMaybe<StringQueryOperatorInput>;
   Expectations: InputMaybe<StringQueryOperatorInput>;
-  Expected_launch_of_first_markets__22_05_23: InputMaybe<StringQueryOperatorInput>;
   Experiment_on_Fairground_Testnet: InputMaybe<StringQueryOperatorInput>;
   Explore: InputMaybe<StringQueryOperatorInput>;
   Explore_all_proposals: InputMaybe<StringQueryOperatorInput>;
@@ -10151,7 +10128,6 @@ type Query_jsonArgs = {
   View_detailed_roadmap: InputMaybe<StringQueryOperatorInput>;
   View_more: InputMaybe<StringQueryOperatorInput>;
   View_on_Github: InputMaybe<StringQueryOperatorInput>;
-  View_the_Roadmap: InputMaybe<StringQueryOperatorInput>;
   Vote_for_proposals: InputMaybe<StringQueryOperatorInput>;
   Vote_for_proposals__Testnet_: InputMaybe<StringQueryOperatorInput>;
   Vote_on_proposals: InputMaybe<StringQueryOperatorInput>;
