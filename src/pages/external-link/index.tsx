@@ -8,10 +8,10 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import interstitialAllowList from '../../../interstitial-allow.json'
 import NotFoundPage from '../404'
 
-function generateGatewayLink(cid, type) {
+function generateGatewayLink(cid, type, hash) {
   const base = interstitialAllowList.ipfsGateway
 
-  return base.replace('#1#', cid).replace('#2#', type)
+  return base.replace('#1#', cid).replace('#2#', type) + hash
 }
 
 const ExternalLinkPage = () => {
@@ -29,6 +29,7 @@ const ExternalLinkPage = () => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
     const urlValue = urlParams.get('url')
+    const hash = window.location.hash
 
     if (urlValue !== null) {
       setUrl(urlValue)
@@ -47,13 +48,13 @@ const ExternalLinkPage = () => {
           interstitialAllowList.allowedIPFS.indexOf(urlValue) !== -1
         ) {
           setIsIPFS(true)
-          setUrl(generateGatewayLink(urlValue, 'ipfs'))
+          setUrl(generateGatewayLink(urlValue, 'ipfs', hash))
         } else if (
           urlValue &&
           interstitialAllowList.allowedIPNS.indexOf(urlValue) !== -1
         ) {
           setIsIPFS(true)
-          setUrl(generateGatewayLink(urlValue, 'ipns'))
+          setUrl(generateGatewayLink(urlValue, 'ipns', hash))
         } else {
           setNotFound(true)
         }
