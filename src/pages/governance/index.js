@@ -133,7 +133,7 @@ const GovernancePage = ({ data }) => {
       links: [
         {
           title: t('Read the docs to make a proposal'),
-          url: 'https://docs.vega.xyz/mainnet/concepts/vega-protocol#governance',
+          url: 'https://docs.vega.xyz/mainnet/tutorials/proposals',
         },
         {
           title: t('Check out the forum'),
@@ -149,7 +149,7 @@ const GovernancePage = ({ data }) => {
       links: [
         {
           title: t('Read the docs to make a proposal'),
-          url: 'https://docs.vega.xyz/mainnet/concepts/vega-protocol#governance',
+          url: 'https://docs.vega.xyz/mainnet/tutorials/proposals',
         },
       ],
       image: <Phase3 />,
