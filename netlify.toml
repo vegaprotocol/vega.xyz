@@ -67,3 +67,6 @@
   to = "https://vega.xyz/:splat"
   status = 301
   force = true
+
+# IPFS REDIRECT START
+# IPFS REDIRECT END
