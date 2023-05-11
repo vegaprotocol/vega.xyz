@@ -8,6 +8,12 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import interstitialAllowList from '../../../interstitial-allow.json'
 import NotFoundPage from '../404'
 
+function generateGatewayLink(cid, type) {
+  const base = interstitialAllowList.ipfsGateway
+
+  return base.replace('#1#', cid).replace('#2#', type)
+}
+
 const ExternalLinkPage = () => {
   const { t, i18n } = useTranslation('page.external-link')
   const [missingTranslations, setMissingTranslations] = useState(false)
@@ -30,24 +36,42 @@ const ExternalLinkPage = () => {
     // if no URL supplied, or not in whitelist then redirect to 404
     if (
       urlValue === null ||
-      !interstitialAllowList.allowed
+      !interstitialAllowList.allowedSites
         .map((url) => url.replace(/\/$/, ''))
         .includes(urlValue.replace(/\/$/, '')) // strip trailing slashes for comparison
     ) {
-      setNotFound(true)
+      try {
+        if (
+          urlValue &&
+          interstitialAllowList.allowedIPFS.indexOf(urlValue) !== -1
+        ) {
+          setUrl(generateGatewayLink(urlValue, 'ipfs'))
+        } else if (
+          urlValue &&
+          interstitialAllowList.allowedIPNS.indexOf(urlValue) !== -1
+        ) {
+          setUrl(generateGatewayLink(urlValue, 'ipns'))
+        } else {
+          setNotFound(true)
+        }
+      } catch (e) {
+        setNotFound(true)
+      }
     }
 
-    const timer = setInterval(() => {
-      if (seconds === 0) {
+    if (notFound === false) {
+      const timer = setInterval(() => {
+        if (seconds === 0) {
+          clearInterval(timer)
+          window.location.assign(url)
+          return false
+        } else {
+          setSeconds((seconds) => seconds - 1)
+        }
+      }, 1000)
+      return () => {
         clearInterval(timer)
-        window.location.assign(url)
-        return false
-      } else {
-        setSeconds((seconds) => seconds - 1)
       }
-    }, 1000)
-    return () => {
-      clearInterval(timer)
     }
   }, [seconds])
 
