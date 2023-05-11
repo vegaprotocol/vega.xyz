@@ -672,7 +672,6 @@ type FileFieldsEnum =
   | 'childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childJson.All'
   | 'childJson.Allows_for_unfair_front_running'
-  | 'childJson.Alpha_Mainnet_network_is_live_'
   | 'childJson.Ambassador'
   | 'childJson.Ambassador_Leaderboards'
   | 'childJson.Ambassador_program'
@@ -799,7 +798,6 @@ type FileFieldsEnum =
   | 'childJson.Events_and_meetups'
   | 'childJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'childJson.Expectations'
-  | 'childJson.Expected_launch_of_first_markets__22_05_23'
   | 'childJson.Experiment_on_Fairground_Testnet'
   | 'childJson.Explore'
   | 'childJson.Explore_all_proposals'
@@ -1131,7 +1129,6 @@ type FileFieldsEnum =
   | 'childJson.View_detailed_roadmap'
   | 'childJson.View_more'
   | 'childJson.View_on_Github'
-  | 'childJson.View_the_Roadmap'
   | 'childJson.Vote_for_proposals'
   | 'childJson.Vote_for_proposals__Testnet_'
   | 'childJson.Vote_on_proposals'
@@ -1461,7 +1458,6 @@ type FileFieldsEnum =
   | 'childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'childrenJson.All'
   | 'childrenJson.Allows_for_unfair_front_running'
-  | 'childrenJson.Alpha_Mainnet_network_is_live_'
   | 'childrenJson.Ambassador'
   | 'childrenJson.Ambassador_Leaderboards'
   | 'childrenJson.Ambassador_program'
@@ -1588,7 +1584,6 @@ type FileFieldsEnum =
   | 'childrenJson.Events_and_meetups'
   | 'childrenJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'childrenJson.Expectations'
-  | 'childrenJson.Expected_launch_of_first_markets__22_05_23'
   | 'childrenJson.Experiment_on_Fairground_Testnet'
   | 'childrenJson.Explore'
   | 'childrenJson.Explore_all_proposals'
@@ -1920,7 +1915,6 @@ type FileFieldsEnum =
   | 'childrenJson.View_detailed_roadmap'
   | 'childrenJson.View_more'
   | 'childrenJson.View_on_Github'
-  | 'childrenJson.View_the_Roadmap'
   | 'childrenJson.Vote_for_proposals'
   | 'childrenJson.Vote_for_proposals__Testnet_'
   | 'childrenJson.Vote_on_proposals'
@@ -2946,7 +2940,6 @@ type Json = Node & {
   readonly Agree_with_the_code_of_conduct__keep_to_the_rules: Maybe<Scalars['String']>;
   readonly All: Maybe<Scalars['String']>;
   readonly Allows_for_unfair_front_running: Maybe<Scalars['String']>;
-  readonly Alpha_Mainnet_network_is_live_: Maybe<Scalars['String']>;
   readonly Ambassador: Maybe<Scalars['String']>;
   readonly Ambassador_Leaderboards: Maybe<Scalars['String']>;
   readonly Ambassador_program: Maybe<Scalars['String']>;
@@ -3073,7 +3066,6 @@ type Json = Node & {
   readonly Events_and_meetups: Maybe<Scalars['String']>;
   readonly Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online: Maybe<Scalars['String']>;
   readonly Expectations: Maybe<Scalars['String']>;
-  readonly Expected_launch_of_first_markets__22_05_23: Maybe<Scalars['String']>;
   readonly Experiment_on_Fairground_Testnet: Maybe<Scalars['String']>;
   readonly Explore: Maybe<Scalars['String']>;
   readonly Explore_all_proposals: Maybe<Scalars['String']>;
@@ -3405,7 +3397,6 @@ type Json = Node & {
   readonly View_detailed_roadmap: Maybe<Scalars['String']>;
   readonly View_more: Maybe<Scalars['String']>;
   readonly View_on_Github: Maybe<Scalars['String']>;
-  readonly View_the_Roadmap: Maybe<Scalars['String']>;
   readonly Vote_for_proposals: Maybe<Scalars['String']>;
   readonly Vote_for_proposals__Testnet_: Maybe<Scalars['String']>;
   readonly Vote_on_proposals: Maybe<Scalars['String']>;
@@ -3509,7 +3500,6 @@ type JsonFieldsEnum =
   | 'Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'All'
   | 'Allows_for_unfair_front_running'
-  | 'Alpha_Mainnet_network_is_live_'
   | 'Ambassador'
   | 'Ambassador_Leaderboards'
   | 'Ambassador_program'
@@ -3636,7 +3626,6 @@ type JsonFieldsEnum =
   | 'Events_and_meetups'
   | 'Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'Expectations'
-  | 'Expected_launch_of_first_markets__22_05_23'
   | 'Experiment_on_Fairground_Testnet'
   | 'Explore'
   | 'Explore_all_proposals'
@@ -3968,7 +3957,6 @@ type JsonFieldsEnum =
   | 'View_detailed_roadmap'
   | 'View_more'
   | 'View_on_Github'
-  | 'View_the_Roadmap'
   | 'Vote_for_proposals'
   | 'Vote_for_proposals__Testnet_'
   | 'Vote_on_proposals'
@@ -4115,7 +4103,6 @@ type JsonFilterInput = {
   readonly Agree_with_the_code_of_conduct__keep_to_the_rules: InputMaybe<StringQueryOperatorInput>;
   readonly All: InputMaybe<StringQueryOperatorInput>;
   readonly Allows_for_unfair_front_running: InputMaybe<StringQueryOperatorInput>;
-  readonly Alpha_Mainnet_network_is_live_: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador_Leaderboards: InputMaybe<StringQueryOperatorInput>;
   readonly Ambassador_program: InputMaybe<StringQueryOperatorInput>;
@@ -4242,7 +4229,6 @@ type JsonFilterInput = {
   readonly Events_and_meetups: InputMaybe<StringQueryOperatorInput>;
   readonly Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online: InputMaybe<StringQueryOperatorInput>;
   readonly Expectations: InputMaybe<StringQueryOperatorInput>;
-  readonly Expected_launch_of_first_markets__22_05_23: InputMaybe<StringQueryOperatorInput>;
   readonly Experiment_on_Fairground_Testnet: InputMaybe<StringQueryOperatorInput>;
   readonly Explore: InputMaybe<StringQueryOperatorInput>;
   readonly Explore_all_proposals: InputMaybe<StringQueryOperatorInput>;
@@ -4574,7 +4560,6 @@ type JsonFilterInput = {
   readonly View_detailed_roadmap: InputMaybe<StringQueryOperatorInput>;
   readonly View_more: InputMaybe<StringQueryOperatorInput>;
   readonly View_on_Github: InputMaybe<StringQueryOperatorInput>;
-  readonly View_the_Roadmap: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_for_proposals: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_for_proposals__Testnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_on_proposals: InputMaybe<StringQueryOperatorInput>;
@@ -5100,7 +5085,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'frontmatter.featuredImage.childJson.All'
   | 'frontmatter.featuredImage.childJson.Allows_for_unfair_front_running'
-  | 'frontmatter.featuredImage.childJson.Alpha_Mainnet_network_is_live_'
   | 'frontmatter.featuredImage.childJson.Ambassador'
   | 'frontmatter.featuredImage.childJson.Ambassador_Leaderboards'
   | 'frontmatter.featuredImage.childJson.Ambassador_program'
@@ -5227,7 +5211,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Events_and_meetups'
   | 'frontmatter.featuredImage.childJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'frontmatter.featuredImage.childJson.Expectations'
-  | 'frontmatter.featuredImage.childJson.Expected_launch_of_first_markets__22_05_23'
   | 'frontmatter.featuredImage.childJson.Experiment_on_Fairground_Testnet'
   | 'frontmatter.featuredImage.childJson.Explore'
   | 'frontmatter.featuredImage.childJson.Explore_all_proposals'
@@ -5559,7 +5542,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.View_detailed_roadmap'
   | 'frontmatter.featuredImage.childJson.View_more'
   | 'frontmatter.featuredImage.childJson.View_on_Github'
-  | 'frontmatter.featuredImage.childJson.View_the_Roadmap'
   | 'frontmatter.featuredImage.childJson.Vote_for_proposals'
   | 'frontmatter.featuredImage.childJson.Vote_for_proposals__Testnet_'
   | 'frontmatter.featuredImage.childJson.Vote_on_proposals'
@@ -5638,7 +5620,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Agree_with_the_code_of_conduct__keep_to_the_rules'
   | 'frontmatter.featuredImage.childrenJson.All'
   | 'frontmatter.featuredImage.childrenJson.Allows_for_unfair_front_running'
-  | 'frontmatter.featuredImage.childrenJson.Alpha_Mainnet_network_is_live_'
   | 'frontmatter.featuredImage.childrenJson.Ambassador'
   | 'frontmatter.featuredImage.childrenJson.Ambassador_Leaderboards'
   | 'frontmatter.featuredImage.childrenJson.Ambassador_program'
@@ -5765,7 +5746,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Events_and_meetups'
   | 'frontmatter.featuredImage.childrenJson.Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online'
   | 'frontmatter.featuredImage.childrenJson.Expectations'
-  | 'frontmatter.featuredImage.childrenJson.Expected_launch_of_first_markets__22_05_23'
   | 'frontmatter.featuredImage.childrenJson.Experiment_on_Fairground_Testnet'
   | 'frontmatter.featuredImage.childrenJson.Explore'
   | 'frontmatter.featuredImage.childrenJson.Explore_all_proposals'
@@ -6097,7 +6077,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.View_detailed_roadmap'
   | 'frontmatter.featuredImage.childrenJson.View_more'
   | 'frontmatter.featuredImage.childrenJson.View_on_Github'
-  | 'frontmatter.featuredImage.childrenJson.View_the_Roadmap'
   | 'frontmatter.featuredImage.childrenJson.Vote_for_proposals'
   | 'frontmatter.featuredImage.childrenJson.Vote_for_proposals__Testnet_'
   | 'frontmatter.featuredImage.childrenJson.Vote_on_proposals'
@@ -9435,6 +9414,7 @@ type Query = {
   readonly allSiteFunction: SiteFunctionConnection;
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
+  readonly allStaticImage: StaticImageConnection;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
@@ -9450,6 +9430,7 @@ type Query = {
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
+  readonly staticImage: Maybe<StaticImage>;
 };
 
 
@@ -9573,6 +9554,14 @@ type Query_allSitePluginArgs = {
 };
 
 
+type Query_allStaticImageArgs = {
+  filter: InputMaybe<StaticImageFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<StaticImageSortInput>;
+};
+
+
 type Query_directoryArgs = {
   absolutePath: InputMaybe<StringQueryOperatorInput>;
   accessTime: InputMaybe<DateQueryOperatorInput>;
@@ -9686,7 +9675,6 @@ type Query_jsonArgs = {
   Agree_with_the_code_of_conduct__keep_to_the_rules: InputMaybe<StringQueryOperatorInput>;
   All: InputMaybe<StringQueryOperatorInput>;
   Allows_for_unfair_front_running: InputMaybe<StringQueryOperatorInput>;
-  Alpha_Mainnet_network_is_live_: InputMaybe<StringQueryOperatorInput>;
   Ambassador: InputMaybe<StringQueryOperatorInput>;
   Ambassador_Leaderboards: InputMaybe<StringQueryOperatorInput>;
   Ambassador_program: InputMaybe<StringQueryOperatorInput>;
@@ -9813,7 +9801,6 @@ type Query_jsonArgs = {
   Events_and_meetups: InputMaybe<StringQueryOperatorInput>;
   Exclusive_meetups___Invitations_to_all_of_Vega_s_events__both_offline_and_online: InputMaybe<StringQueryOperatorInput>;
   Expectations: InputMaybe<StringQueryOperatorInput>;
-  Expected_launch_of_first_markets__22_05_23: InputMaybe<StringQueryOperatorInput>;
   Experiment_on_Fairground_Testnet: InputMaybe<StringQueryOperatorInput>;
   Explore: InputMaybe<StringQueryOperatorInput>;
   Explore_all_proposals: InputMaybe<StringQueryOperatorInput>;
@@ -10145,7 +10132,6 @@ type Query_jsonArgs = {
   View_detailed_roadmap: InputMaybe<StringQueryOperatorInput>;
   View_more: InputMaybe<StringQueryOperatorInput>;
   View_on_Github: InputMaybe<StringQueryOperatorInput>;
-  View_the_Roadmap: InputMaybe<StringQueryOperatorInput>;
   Vote_for_proposals: InputMaybe<StringQueryOperatorInput>;
   Vote_for_proposals__Testnet_: InputMaybe<StringQueryOperatorInput>;
   Vote_on_proposals: InputMaybe<StringQueryOperatorInput>;
@@ -10483,6 +10469,46 @@ type Query_sitePluginArgs = {
   resolve: InputMaybe<StringQueryOperatorInput>;
   ssrAPIs: InputMaybe<StringQueryOperatorInput>;
   version: InputMaybe<StringQueryOperatorInput>;
+};
+
+
+type Query_staticImageArgs = {
+  absolutePath: InputMaybe<StringQueryOperatorInput>;
+  accessTime: InputMaybe<DateQueryOperatorInput>;
+  atime: InputMaybe<DateQueryOperatorInput>;
+  atimeMs: InputMaybe<FloatQueryOperatorInput>;
+  base: InputMaybe<StringQueryOperatorInput>;
+  birthTime: InputMaybe<DateQueryOperatorInput>;
+  birthtime: InputMaybe<DateQueryOperatorInput>;
+  birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
+  blksize: InputMaybe<IntQueryOperatorInput>;
+  blocks: InputMaybe<IntQueryOperatorInput>;
+  changeTime: InputMaybe<DateQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  ctime: InputMaybe<DateQueryOperatorInput>;
+  ctimeMs: InputMaybe<FloatQueryOperatorInput>;
+  dev: InputMaybe<IntQueryOperatorInput>;
+  dir: InputMaybe<StringQueryOperatorInput>;
+  ext: InputMaybe<StringQueryOperatorInput>;
+  extension: InputMaybe<StringQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  ino: InputMaybe<IntQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  mode: InputMaybe<IntQueryOperatorInput>;
+  modifiedTime: InputMaybe<DateQueryOperatorInput>;
+  mtime: InputMaybe<DateQueryOperatorInput>;
+  mtimeMs: InputMaybe<FloatQueryOperatorInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  nlink: InputMaybe<IntQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  prettySize: InputMaybe<StringQueryOperatorInput>;
+  rdev: InputMaybe<IntQueryOperatorInput>;
+  relativeDirectory: InputMaybe<StringQueryOperatorInput>;
+  relativePath: InputMaybe<StringQueryOperatorInput>;
+  root: InputMaybe<StringQueryOperatorInput>;
+  size: InputMaybe<IntQueryOperatorInput>;
+  sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
+  uid: InputMaybe<IntQueryOperatorInput>;
 };
 
 type Site = Node & {
@@ -11705,6 +11731,366 @@ type SiteSortInput = {
 type SortOrderEnum =
   | 'ASC'
   | 'DESC';
+
+type StaticImage = Node & {
+  readonly absolutePath: Maybe<Scalars['String']>;
+  readonly accessTime: Maybe<Scalars['Date']>;
+  readonly atime: Maybe<Scalars['Date']>;
+  readonly atimeMs: Maybe<Scalars['Float']>;
+  readonly base: Maybe<Scalars['String']>;
+  readonly birthTime: Maybe<Scalars['Date']>;
+  readonly birthtime: Maybe<Scalars['Date']>;
+  readonly birthtimeMs: Maybe<Scalars['Float']>;
+  readonly blksize: Maybe<Scalars['Int']>;
+  readonly blocks: Maybe<Scalars['Int']>;
+  readonly changeTime: Maybe<Scalars['Date']>;
+  readonly children: ReadonlyArray<Node>;
+  readonly ctime: Maybe<Scalars['Date']>;
+  readonly ctimeMs: Maybe<Scalars['Float']>;
+  readonly dev: Maybe<Scalars['Int']>;
+  readonly dir: Maybe<Scalars['String']>;
+  readonly ext: Maybe<Scalars['String']>;
+  readonly extension: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly ino: Maybe<Scalars['Int']>;
+  readonly internal: Internal;
+  readonly mode: Maybe<Scalars['Int']>;
+  readonly modifiedTime: Maybe<Scalars['Date']>;
+  readonly mtime: Maybe<Scalars['Date']>;
+  readonly mtimeMs: Maybe<Scalars['Float']>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly nlink: Maybe<Scalars['Int']>;
+  readonly parent: Maybe<Node>;
+  readonly prettySize: Maybe<Scalars['String']>;
+  readonly rdev: Maybe<Scalars['Int']>;
+  readonly relativeDirectory: Maybe<Scalars['String']>;
+  readonly relativePath: Maybe<Scalars['String']>;
+  readonly root: Maybe<Scalars['String']>;
+  readonly size: Maybe<Scalars['Int']>;
+  readonly sourceInstanceName: Maybe<Scalars['String']>;
+  readonly uid: Maybe<Scalars['Int']>;
+};
+
+
+type StaticImage_accessTimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_atimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_birthTimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_birthtimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_changeTimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_ctimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_modifiedTimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type StaticImage_mtimeArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type StaticImageConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<StaticImageEdge>;
+  readonly group: ReadonlyArray<StaticImageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<StaticImage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type StaticImageConnection_distinctArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageConnection_groupArgs = {
+  field: StaticImageFieldsEnum;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type StaticImageConnection_maxArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageConnection_minArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageConnection_sumArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+type StaticImageEdge = {
+  readonly next: Maybe<StaticImage>;
+  readonly node: StaticImage;
+  readonly previous: Maybe<StaticImage>;
+};
+
+type StaticImageFieldsEnum =
+  | 'absolutePath'
+  | 'accessTime'
+  | 'atime'
+  | 'atimeMs'
+  | 'base'
+  | 'birthTime'
+  | 'birthtime'
+  | 'birthtimeMs'
+  | 'blksize'
+  | 'blocks'
+  | 'changeTime'
+  | 'children'
+  | 'children.children'
+  | 'children.children.children'
+  | 'children.children.children.children'
+  | 'children.children.children.id'
+  | 'children.children.id'
+  | 'children.children.internal.content'
+  | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
+  | 'children.children.internal.description'
+  | 'children.children.internal.fieldOwners'
+  | 'children.children.internal.ignoreType'
+  | 'children.children.internal.mediaType'
+  | 'children.children.internal.owner'
+  | 'children.children.internal.type'
+  | 'children.children.parent.children'
+  | 'children.children.parent.id'
+  | 'children.id'
+  | 'children.internal.content'
+  | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
+  | 'children.internal.description'
+  | 'children.internal.fieldOwners'
+  | 'children.internal.ignoreType'
+  | 'children.internal.mediaType'
+  | 'children.internal.owner'
+  | 'children.internal.type'
+  | 'children.parent.children'
+  | 'children.parent.children.children'
+  | 'children.parent.children.id'
+  | 'children.parent.id'
+  | 'children.parent.internal.content'
+  | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
+  | 'children.parent.internal.description'
+  | 'children.parent.internal.fieldOwners'
+  | 'children.parent.internal.ignoreType'
+  | 'children.parent.internal.mediaType'
+  | 'children.parent.internal.owner'
+  | 'children.parent.internal.type'
+  | 'children.parent.parent.children'
+  | 'children.parent.parent.id'
+  | 'ctime'
+  | 'ctimeMs'
+  | 'dev'
+  | 'dir'
+  | 'ext'
+  | 'extension'
+  | 'id'
+  | 'ino'
+  | 'internal.content'
+  | 'internal.contentDigest'
+  | 'internal.contentFilePath'
+  | 'internal.description'
+  | 'internal.fieldOwners'
+  | 'internal.ignoreType'
+  | 'internal.mediaType'
+  | 'internal.owner'
+  | 'internal.type'
+  | 'mode'
+  | 'modifiedTime'
+  | 'mtime'
+  | 'mtimeMs'
+  | 'name'
+  | 'nlink'
+  | 'parent.children'
+  | 'parent.children.children'
+  | 'parent.children.children.children'
+  | 'parent.children.children.id'
+  | 'parent.children.id'
+  | 'parent.children.internal.content'
+  | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
+  | 'parent.children.internal.description'
+  | 'parent.children.internal.fieldOwners'
+  | 'parent.children.internal.ignoreType'
+  | 'parent.children.internal.mediaType'
+  | 'parent.children.internal.owner'
+  | 'parent.children.internal.type'
+  | 'parent.children.parent.children'
+  | 'parent.children.parent.id'
+  | 'parent.id'
+  | 'parent.internal.content'
+  | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
+  | 'parent.internal.description'
+  | 'parent.internal.fieldOwners'
+  | 'parent.internal.ignoreType'
+  | 'parent.internal.mediaType'
+  | 'parent.internal.owner'
+  | 'parent.internal.type'
+  | 'parent.parent.children'
+  | 'parent.parent.children.children'
+  | 'parent.parent.children.id'
+  | 'parent.parent.id'
+  | 'parent.parent.internal.content'
+  | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
+  | 'parent.parent.internal.description'
+  | 'parent.parent.internal.fieldOwners'
+  | 'parent.parent.internal.ignoreType'
+  | 'parent.parent.internal.mediaType'
+  | 'parent.parent.internal.owner'
+  | 'parent.parent.internal.type'
+  | 'parent.parent.parent.children'
+  | 'parent.parent.parent.id'
+  | 'prettySize'
+  | 'rdev'
+  | 'relativeDirectory'
+  | 'relativePath'
+  | 'root'
+  | 'size'
+  | 'sourceInstanceName'
+  | 'uid';
+
+type StaticImageFilterInput = {
+  readonly absolutePath: InputMaybe<StringQueryOperatorInput>;
+  readonly accessTime: InputMaybe<DateQueryOperatorInput>;
+  readonly atime: InputMaybe<DateQueryOperatorInput>;
+  readonly atimeMs: InputMaybe<FloatQueryOperatorInput>;
+  readonly base: InputMaybe<StringQueryOperatorInput>;
+  readonly birthTime: InputMaybe<DateQueryOperatorInput>;
+  readonly birthtime: InputMaybe<DateQueryOperatorInput>;
+  readonly birthtimeMs: InputMaybe<FloatQueryOperatorInput>;
+  readonly blksize: InputMaybe<IntQueryOperatorInput>;
+  readonly blocks: InputMaybe<IntQueryOperatorInput>;
+  readonly changeTime: InputMaybe<DateQueryOperatorInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly ctime: InputMaybe<DateQueryOperatorInput>;
+  readonly ctimeMs: InputMaybe<FloatQueryOperatorInput>;
+  readonly dev: InputMaybe<IntQueryOperatorInput>;
+  readonly dir: InputMaybe<StringQueryOperatorInput>;
+  readonly ext: InputMaybe<StringQueryOperatorInput>;
+  readonly extension: InputMaybe<StringQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly ino: InputMaybe<IntQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly mode: InputMaybe<IntQueryOperatorInput>;
+  readonly modifiedTime: InputMaybe<DateQueryOperatorInput>;
+  readonly mtime: InputMaybe<DateQueryOperatorInput>;
+  readonly mtimeMs: InputMaybe<FloatQueryOperatorInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly nlink: InputMaybe<IntQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly prettySize: InputMaybe<StringQueryOperatorInput>;
+  readonly rdev: InputMaybe<IntQueryOperatorInput>;
+  readonly relativeDirectory: InputMaybe<StringQueryOperatorInput>;
+  readonly relativePath: InputMaybe<StringQueryOperatorInput>;
+  readonly root: InputMaybe<StringQueryOperatorInput>;
+  readonly size: InputMaybe<IntQueryOperatorInput>;
+  readonly sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
+  readonly uid: InputMaybe<IntQueryOperatorInput>;
+};
+
+type StaticImageGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<StaticImageEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<StaticImageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<StaticImage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type StaticImageGroupConnection_distinctArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageGroupConnection_groupArgs = {
+  field: StaticImageFieldsEnum;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type StaticImageGroupConnection_maxArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageGroupConnection_minArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+
+type StaticImageGroupConnection_sumArgs = {
+  field: StaticImageFieldsEnum;
+};
+
+type StaticImageSortInput = {
+  readonly fields: InputMaybe<ReadonlyArray<InputMaybe<StaticImageFieldsEnum>>>;
+  readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
+};
 
 type StringQueryOperatorInput = {
   readonly eq: InputMaybe<Scalars['String']>;
