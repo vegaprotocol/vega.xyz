@@ -18,6 +18,7 @@ const ExternalLinkPage = () => {
   const { t, i18n } = useTranslation('page.external-link')
   const [missingTranslations, setMissingTranslations] = useState(false)
   const [seconds, setSeconds] = useState(5)
+  const [isIPFS, setIsIPFS] = useState(false)
   const [notFound, setNotFound] = useState(false)
   const [url, setUrl] = useState('')
 
@@ -45,11 +46,13 @@ const ExternalLinkPage = () => {
           urlValue &&
           interstitialAllowList.allowedIPFS.indexOf(urlValue) !== -1
         ) {
+          setIsIPFS(true)
           setUrl(generateGatewayLink(urlValue, 'ipfs'))
         } else if (
           urlValue &&
           interstitialAllowList.allowedIPNS.indexOf(urlValue) !== -1
         ) {
+          setIsIPFS(true)
           setUrl(generateGatewayLink(urlValue, 'ipns'))
         } else {
           setNotFound(true)
@@ -75,6 +78,9 @@ const ExternalLinkPage = () => {
     }
   }, [seconds])
 
+  const message = isIPFS
+    ? `We're about to redirect you to an application on IPFS`
+    : `We're about to redirect you to:`
   return (
     <div>
       {notFound ? (
@@ -93,10 +99,7 @@ const ExternalLinkPage = () => {
                   </GlitchTitle>
                 </h1>
                 <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
-                  <Trans t={t}>
-                    We're about to redirect you to Console on Fairground, Vega's
-                    incentivised testnet.
-                  </Trans>
+                  <Trans t={t}>{message}</Trans>
                 </p>
                 <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
                   <Trans t={t}>You will be redirected in </Trans> {seconds}...
