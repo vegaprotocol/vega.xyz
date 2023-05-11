@@ -1,6 +1,10 @@
 {
   "ipfsGateway": "https://#1#.#2#.cf-ipfs.com/",
-  "allowedSites": ["https://console.fairground.wtf"],
-  "allowedIPFS": [],
+  "allowedSites": [
+    "https://console.fairground.wtf"
+  ],
+  "allowedIPFS": [
+    "QmNf98m6QhvNuuQMxXxEeuNaFvRnoy4iPAZ4eAcM32ifRi"
+  ],
   "allowedIPNS": []
 }
