@@ -1,10 +1,8 @@
 {
-    "ipfsGateway": "https://#1#.#2#.cf-ipfs.com/",
-    "allowedSites": [
-        "https://console.fairground.wtf"
-    ],
-    "allowedIPFS": [
-        "bafybeiaexsmewuaw74xuw7ekdiubfvh3cnjwodwjkhck6igvxyjid3nvfe"
-    ],
-    "allowedIPNS": []
+  "ipfsGateway": "https://#1#.#2#.dweb.link/",
+  "allowedSites": ["https://console.fairground.wtf"],
+  "allowedIPFS": [
+    "bafybeiaexsmewuaw74xuw7ekdiubfvh3cnjwodwjkhck6igvxyjid3nvfe"
+  ],
+  "allowedIPNS": []
 }
