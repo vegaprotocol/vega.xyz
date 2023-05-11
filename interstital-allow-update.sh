@@ -6,3 +6,5 @@ cat interstitial-allow.json \
     > new-interstitial-allow.json
 jq . new-interstitial-allow.json > interstitial-allow.json
 rm new-interstitial-allow.json
+converted_hash=$(ipfs cid format -v 1 -b base32 $new_hash)
+sed -i "s|to = \"/external-link/?url=\"|to = \"/external-link/?url=$converted_hash\"|g" netlify.toml
