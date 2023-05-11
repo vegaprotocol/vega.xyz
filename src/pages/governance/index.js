@@ -227,7 +227,7 @@ const GovernancePage = ({ data }) => {
               'Read the docs to create and submit a proposal using Vega APIs.'
             )}
             type="DOCS"
-          />        
+          />
           <ToolBox
             icon={getImage(data.tokenInterfaceIcon)}
             title={t('Vote on proposals')}
@@ -235,13 +235,12 @@ const GovernancePage = ({ data }) => {
             text={t('Review and vote on governance proposals.')}
             type="DAPP"
           />
-
         </div>
 
         <div className="mb-space-8 md:mb-space-10">
           <GovernanceResponsive />
-        </div>          
-       
+        </div>
+
         <div className="mb-space-8 md:mb-space-10">
           <h2 className="title-m md:title-l lg:title-xl mb-12 px-1 text-center">
             <Trans t={t}>Get started voting</Trans>
@@ -304,32 +303,30 @@ const GovernancePage = ({ data }) => {
                 text={t('Governance tools')}
               />
             </div>
-          </div>          
-        <div>
-        <p><br></br></p>   
-        <p><br></br></p>   
-        <p><br></br></p>              
-        <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
-          <Trans t={t}>Governance lifecycle</Trans>
-        </h2>
+          </div>
         </div>
 
         <div className="mb-space-8 md:mb-space-10">
-          <Accordion
-            data={governanceProcess}
-            transNamespace="page.governance"
+          <div>
+            <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
+              <Trans t={t}>Governance lifecycle</Trans>
+            </h2>
+          </div>
+
+          <div className="mb-space-8 md:mb-space-10">
+            <Accordion
+              data={governanceProcess}
+              transNamespace="page.governance"
+            />
+          </div>
+
+          <Callout
+            title={t('Propose a futures market on any underlying.')}
+            image={getImage(data.marketMakingImage)}
+            linkText={t('Create a new market')}
+            link="/market-creation"
+            className="mb-space-8 md:mb-space-11"
           />
-        </div>
-
-        <Callout
-          title={t('Propose a futures market on any underlying.')}
-          image={getImage(data.marketMakingImage)}
-          linkText={t('Create a new market')}
-          link="/market-creation"
-          className="mb-space-8 md:mb-space-11"
-        />
-
-
         </div>
 
         <Proposals />
