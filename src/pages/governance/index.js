@@ -328,8 +328,9 @@ const GovernancePage = ({ data }) => {
             className="mb-space-8 md:mb-space-11"
           />
         </div>
-
-        <Proposals />
+        <div className="mb-space-8 md:mb-space-10">
+          <Proposals />
+        </div>
       </Container>
     </Layout>
   )
