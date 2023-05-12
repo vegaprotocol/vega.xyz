@@ -1,0 +1,11 @@
+---
+title: Crypto Derivatives, Futures and Options Trading
+location: Virtual
+date: 2023-05-10
+links:
+  - title: Watch on CoinDesk TV
+    link: https://www.coindesk.com/video/crypto-derivatives-protocol-vegas-mainnet-goes-live-for-futures-options-trading/
+---
+
+Vega Founder <a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a>s joins "First Mover" to discuss what the protocol will offer users and why it aims to make trading as good as TradFi "but entirely decentralized."
+
