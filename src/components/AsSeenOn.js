@@ -1,9 +1,9 @@
-import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const AsSeenOn = () => {
-  const { t } = useTranslation("component.as-seen-on");
+  const { t } = useTranslation('component.as-seen-on')
 
   return (
     <div>
@@ -12,9 +12,9 @@ const AsSeenOn = () => {
           <Trans t={t}>As seen on</Trans>
         </h2>
       </div>
-      <div className="mx-auto max-w-[26.25rem] md:max-w-none grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="mx-auto grid max-w-[26.25rem] grid-cols-1 gap-12 md:max-w-none md:grid-cols-3">
         <a
-          href="https://www.youtube.com/watch?v=LBiBT0g6gGY"
+          href="https://www.coindesk.com/video/crypto-derivatives-protocol-vegas-mainnet-goes-live-for-futures-options-trading/"
           rel="noreferrer"
           target="_blank"
         >
@@ -28,8 +28,9 @@ const AsSeenOn = () => {
             height={368}
           />
 
-          <h3 className="text-[1.3125rem] font-glitched leading-[1.15]">
-            Ethereum Merge: Educational Curve and Potential Risks
+          <h3 className="font-glitched text-[1.3125rem] leading-[1.15]">
+            A community of independent validators have deployed Vega Protocol on
+            Alpha Mainnet
           </h3>
         </a>
         <a
@@ -46,7 +47,7 @@ const AsSeenOn = () => {
             width={720}
             height={368}
           />
-          <h3 className="text-[1.3125rem] font-glitched leading-[1.15]">
+          <h3 className="font-glitched text-[1.3125rem] leading-[1.15]">
             How to build through the bear
           </h3>
         </a>
@@ -64,13 +65,13 @@ const AsSeenOn = () => {
             width={720}
             height={368}
           />
-          <h3 className="text-[1.3125rem] font-glitched leading-[1.15]">
+          <h3 className="font-glitched text-[1.3125rem] leading-[1.15]">
             7 investors discuss web3's present and peer into its future
           </h3>
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AsSeenOn;
+export default AsSeenOn

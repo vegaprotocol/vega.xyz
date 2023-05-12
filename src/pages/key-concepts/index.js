@@ -68,19 +68,7 @@ const KeyConceptsPage = () => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <div data-cy="main" className="mb-16">
-        <Container>
-          <div className="my-10">
-            <CalloutHero
-              title={t('The Vega mainnet is live, trading launch H1 2023')}
-              text={t(
-                'Token holders can participate in governance, stake and delegate.'
-              )}
-              buttonText={t('View the Roadmap')}
-              buttonLink="/#roadmap"
-            />
-          </div>
-        </Container>
+      <div data-cy="main" className="mb-16 pt-6 lg:pt-16">
         <div className="mx-auto max-w-[45rem] px-4 text-center md:px-0 xl:max-w-[50rem]">
           <h1 className="mb-6">
             <BoxTitle text={t('Key concepts')} />
