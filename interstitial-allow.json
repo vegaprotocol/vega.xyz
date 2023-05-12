@@ -1,6 +1,10 @@
 {
   "ipfsGateway": "https://#1#.#2#.dweb.link/",
-  "allowedSites": ["https://console.fairground.wtf"],
-  "allowedIPFS": [],
+  "allowedSites": [
+    "https://console.fairground.wtf"
+  ],
+  "allowedIPFS": [
+    "bafybeibmfp2h4gx4xugznplgvipbwu73xocuijj5bcoqq6tt2jw3xffz74"
+  ],
   "allowedIPNS": []
 }
