@@ -861,6 +861,7 @@ type FileFieldsEnum =
   | 'childJson.Governance'
   | 'childJson.Governance_allows_the_Vega_network_to_arrive_at_on_chain_decisions__where_tokenholders_can_create_proposals_that_other_tokenholders_can_vote_to_approve_or_reject_'
   | 'childJson.Governance_dApp'
+  | 'childJson.Governance_dapp_with_Vote'
   | 'childJson.Governance_docs'
   | 'childJson.Governance_documentation'
   | 'childJson.Governance_lifecycle'
@@ -933,6 +934,7 @@ type FileFieldsEnum =
   | 'childJson.Made_by___author__'
   | 'childJson.Mainnet_Docs'
   | 'childJson.Mainnet_status_and_incidents'
+  | 'childJson.Making_a_proposal'
   | 'childJson.Manage_multiple_wallets_and_keys'
   | 'childJson.Market_Creation'
   | 'childJson.Market_Creation_with_Vega'
@@ -1648,6 +1650,7 @@ type FileFieldsEnum =
   | 'childrenJson.Governance'
   | 'childrenJson.Governance_allows_the_Vega_network_to_arrive_at_on_chain_decisions__where_tokenholders_can_create_proposals_that_other_tokenholders_can_vote_to_approve_or_reject_'
   | 'childrenJson.Governance_dApp'
+  | 'childrenJson.Governance_dapp_with_Vote'
   | 'childrenJson.Governance_docs'
   | 'childrenJson.Governance_documentation'
   | 'childrenJson.Governance_lifecycle'
@@ -1720,6 +1723,7 @@ type FileFieldsEnum =
   | 'childrenJson.Made_by___author__'
   | 'childrenJson.Mainnet_Docs'
   | 'childrenJson.Mainnet_status_and_incidents'
+  | 'childrenJson.Making_a_proposal'
   | 'childrenJson.Manage_multiple_wallets_and_keys'
   | 'childrenJson.Market_Creation'
   | 'childrenJson.Market_Creation_with_Vega'
@@ -3131,6 +3135,7 @@ type Json = Node & {
   readonly Governance: Maybe<Scalars['String']>;
   readonly Governance_allows_the_Vega_network_to_arrive_at_on_chain_decisions__where_tokenholders_can_create_proposals_that_other_tokenholders_can_vote_to_approve_or_reject_: Maybe<Scalars['String']>;
   readonly Governance_dApp: Maybe<Scalars['String']>;
+  readonly Governance_dapp_with_Vote: Maybe<Scalars['String']>;
   readonly Governance_docs: Maybe<Scalars['String']>;
   readonly Governance_documentation: Maybe<Scalars['String']>;
   readonly Governance_lifecycle: Maybe<Scalars['String']>;
@@ -3203,6 +3208,7 @@ type Json = Node & {
   readonly Made_by___author__: Maybe<Scalars['String']>;
   readonly Mainnet_Docs: Maybe<Scalars['String']>;
   readonly Mainnet_status_and_incidents: Maybe<Scalars['String']>;
+  readonly Making_a_proposal: Maybe<Scalars['String']>;
   readonly Manage_multiple_wallets_and_keys: Maybe<Scalars['String']>;
   readonly Market_Creation: Maybe<Scalars['String']>;
   readonly Market_Creation_with_Vega: Maybe<Scalars['String']>;
@@ -3692,6 +3698,7 @@ type JsonFieldsEnum =
   | 'Governance'
   | 'Governance_allows_the_Vega_network_to_arrive_at_on_chain_decisions__where_tokenholders_can_create_proposals_that_other_tokenholders_can_vote_to_approve_or_reject_'
   | 'Governance_dApp'
+  | 'Governance_dapp_with_Vote'
   | 'Governance_docs'
   | 'Governance_documentation'
   | 'Governance_lifecycle'
@@ -3764,6 +3771,7 @@ type JsonFieldsEnum =
   | 'Made_by___author__'
   | 'Mainnet_Docs'
   | 'Mainnet_status_and_incidents'
+  | 'Making_a_proposal'
   | 'Manage_multiple_wallets_and_keys'
   | 'Market_Creation'
   | 'Market_Creation_with_Vega'
@@ -4296,6 +4304,7 @@ type JsonFilterInput = {
   readonly Governance: InputMaybe<StringQueryOperatorInput>;
   readonly Governance_allows_the_Vega_network_to_arrive_at_on_chain_decisions__where_tokenholders_can_create_proposals_that_other_tokenholders_can_vote_to_approve_or_reject_: InputMaybe<StringQueryOperatorInput>;
   readonly Governance_dApp: InputMaybe<StringQueryOperatorInput>;
+  readonly Governance_dapp_with_Vote: InputMaybe<StringQueryOperatorInput>;
   readonly Governance_docs: InputMaybe<StringQueryOperatorInput>;
   readonly Governance_documentation: InputMaybe<StringQueryOperatorInput>;
   readonly Governance_lifecycle: InputMaybe<StringQueryOperatorInput>;
@@ -4368,6 +4377,7 @@ type JsonFilterInput = {
   readonly Made_by___author__: InputMaybe<StringQueryOperatorInput>;
   readonly Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
   readonly Mainnet_status_and_incidents: InputMaybe<StringQueryOperatorInput>;
+  readonly Making_a_proposal: InputMaybe<StringQueryOperatorInput>;
   readonly Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Creation: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Creation_with_Vega: InputMaybe<StringQueryOperatorInput>;
@@ -5279,6 +5289,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Governance'
   | 'frontmatter.featuredImage.childJson.Governance_allows_the_Vega_network_to_arrive_at_on_chain_decisions__where_tokenholders_can_create_proposals_that_other_tokenholders_can_vote_to_approve_or_reject_'
   | 'frontmatter.featuredImage.childJson.Governance_dApp'
+  | 'frontmatter.featuredImage.childJson.Governance_dapp_with_Vote'
   | 'frontmatter.featuredImage.childJson.Governance_docs'
   | 'frontmatter.featuredImage.childJson.Governance_documentation'
   | 'frontmatter.featuredImage.childJson.Governance_lifecycle'
@@ -5351,6 +5362,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Made_by___author__'
   | 'frontmatter.featuredImage.childJson.Mainnet_Docs'
   | 'frontmatter.featuredImage.childJson.Mainnet_status_and_incidents'
+  | 'frontmatter.featuredImage.childJson.Making_a_proposal'
   | 'frontmatter.featuredImage.childJson.Manage_multiple_wallets_and_keys'
   | 'frontmatter.featuredImage.childJson.Market_Creation'
   | 'frontmatter.featuredImage.childJson.Market_Creation_with_Vega'
@@ -5815,6 +5827,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Governance'
   | 'frontmatter.featuredImage.childrenJson.Governance_allows_the_Vega_network_to_arrive_at_on_chain_decisions__where_tokenholders_can_create_proposals_that_other_tokenholders_can_vote_to_approve_or_reject_'
   | 'frontmatter.featuredImage.childrenJson.Governance_dApp'
+  | 'frontmatter.featuredImage.childrenJson.Governance_dapp_with_Vote'
   | 'frontmatter.featuredImage.childrenJson.Governance_docs'
   | 'frontmatter.featuredImage.childrenJson.Governance_documentation'
   | 'frontmatter.featuredImage.childrenJson.Governance_lifecycle'
@@ -5887,6 +5900,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Made_by___author__'
   | 'frontmatter.featuredImage.childrenJson.Mainnet_Docs'
   | 'frontmatter.featuredImage.childrenJson.Mainnet_status_and_incidents'
+  | 'frontmatter.featuredImage.childrenJson.Making_a_proposal'
   | 'frontmatter.featuredImage.childrenJson.Manage_multiple_wallets_and_keys'
   | 'frontmatter.featuredImage.childrenJson.Market_Creation'
   | 'frontmatter.featuredImage.childrenJson.Market_Creation_with_Vega'
@@ -9883,6 +9897,7 @@ type Query_jsonArgs = {
   Governance: InputMaybe<StringQueryOperatorInput>;
   Governance_allows_the_Vega_network_to_arrive_at_on_chain_decisions__where_tokenholders_can_create_proposals_that_other_tokenholders_can_vote_to_approve_or_reject_: InputMaybe<StringQueryOperatorInput>;
   Governance_dApp: InputMaybe<StringQueryOperatorInput>;
+  Governance_dapp_with_Vote: InputMaybe<StringQueryOperatorInput>;
   Governance_docs: InputMaybe<StringQueryOperatorInput>;
   Governance_documentation: InputMaybe<StringQueryOperatorInput>;
   Governance_lifecycle: InputMaybe<StringQueryOperatorInput>;
@@ -9955,6 +9970,7 @@ type Query_jsonArgs = {
   Made_by___author__: InputMaybe<StringQueryOperatorInput>;
   Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
   Mainnet_status_and_incidents: InputMaybe<StringQueryOperatorInput>;
+  Making_a_proposal: InputMaybe<StringQueryOperatorInput>;
   Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
   Market_Creation: InputMaybe<StringQueryOperatorInput>;
   Market_Creation_with_Vega: InputMaybe<StringQueryOperatorInput>;
