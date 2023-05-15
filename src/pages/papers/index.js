@@ -36,7 +36,7 @@ const PapersPage = ({ data }) => {
 
           {data.allMarkdownRemark.group.map((group, idx) => (
             <div key={idx}>
-              <div className="grid grid-cols-12">
+              <div className="mb-space-10 grid grid-cols-12 md:mb-0">
                 <div className="col-span-12 md:col-span-4">
                   <div className="title-m md:title-s xl:title-m mb-12 md:sticky md:top-6 md:mb-0 md:pr-12 md:pb-16">
                     {t(group.fieldValue)}
