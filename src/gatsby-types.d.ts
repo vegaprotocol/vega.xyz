@@ -998,6 +998,7 @@ type FileFieldsEnum =
   | 'childJson.Read_initial_proposals_and_get_involved_in_the_discussion_before_the_proposal_goes_to_vote_'
   | 'childJson.Read_more_about_'
   | 'childJson.Read_our_blog'
+  | 'childJson.Read_the_docs_about_liquidity_provision'
   | 'childJson.Read_the_docs_about_liquidity_provision__Testnet_'
   | 'childJson.Read_the_docs_to_create_and_submit_a_proposal_using_Vega_APIs_'
   | 'childJson.Read_the_docs_to_make_a_proposal'
@@ -1021,6 +1022,7 @@ type FileFieldsEnum =
   | 'childJson.Security_issues'
   | 'childJson.See_all_Tweets'
   | 'childJson.See_more'
+  | 'childJson.See_some_example_markets__Testnet_'
   | 'childJson.See_the_roadmap'
   | 'childJson.See_what_markets_already_exist__Testnet_'
   | 'childJson.See_what_markets_exist_already__Testnet_'
@@ -1783,6 +1785,7 @@ type FileFieldsEnum =
   | 'childrenJson.Read_initial_proposals_and_get_involved_in_the_discussion_before_the_proposal_goes_to_vote_'
   | 'childrenJson.Read_more_about_'
   | 'childrenJson.Read_our_blog'
+  | 'childrenJson.Read_the_docs_about_liquidity_provision'
   | 'childrenJson.Read_the_docs_about_liquidity_provision__Testnet_'
   | 'childrenJson.Read_the_docs_to_create_and_submit_a_proposal_using_Vega_APIs_'
   | 'childrenJson.Read_the_docs_to_make_a_proposal'
@@ -1806,6 +1809,7 @@ type FileFieldsEnum =
   | 'childrenJson.Security_issues'
   | 'childrenJson.See_all_Tweets'
   | 'childrenJson.See_more'
+  | 'childrenJson.See_some_example_markets__Testnet_'
   | 'childrenJson.See_the_roadmap'
   | 'childrenJson.See_what_markets_already_exist__Testnet_'
   | 'childrenJson.See_what_markets_exist_already__Testnet_'
@@ -3264,6 +3268,7 @@ type Json = Node & {
   readonly Read_initial_proposals_and_get_involved_in_the_discussion_before_the_proposal_goes_to_vote_: Maybe<Scalars['String']>;
   readonly Read_more_about_: Maybe<Scalars['String']>;
   readonly Read_our_blog: Maybe<Scalars['String']>;
+  readonly Read_the_docs_about_liquidity_provision: Maybe<Scalars['String']>;
   readonly Read_the_docs_about_liquidity_provision__Testnet_: Maybe<Scalars['String']>;
   readonly Read_the_docs_to_create_and_submit_a_proposal_using_Vega_APIs_: Maybe<Scalars['String']>;
   readonly Read_the_docs_to_make_a_proposal: Maybe<Scalars['String']>;
@@ -3287,6 +3292,7 @@ type Json = Node & {
   readonly Security_issues: Maybe<Scalars['String']>;
   readonly See_all_Tweets: Maybe<Scalars['String']>;
   readonly See_more: Maybe<Scalars['String']>;
+  readonly See_some_example_markets__Testnet_: Maybe<Scalars['String']>;
   readonly See_the_roadmap: Maybe<Scalars['String']>;
   readonly See_what_markets_already_exist__Testnet_: Maybe<Scalars['String']>;
   readonly See_what_markets_exist_already__Testnet_: Maybe<Scalars['String']>;
@@ -3823,6 +3829,7 @@ type JsonFieldsEnum =
   | 'Read_initial_proposals_and_get_involved_in_the_discussion_before_the_proposal_goes_to_vote_'
   | 'Read_more_about_'
   | 'Read_our_blog'
+  | 'Read_the_docs_about_liquidity_provision'
   | 'Read_the_docs_about_liquidity_provision__Testnet_'
   | 'Read_the_docs_to_create_and_submit_a_proposal_using_Vega_APIs_'
   | 'Read_the_docs_to_make_a_proposal'
@@ -3846,6 +3853,7 @@ type JsonFieldsEnum =
   | 'Security_issues'
   | 'See_all_Tweets'
   | 'See_more'
+  | 'See_some_example_markets__Testnet_'
   | 'See_the_roadmap'
   | 'See_what_markets_already_exist__Testnet_'
   | 'See_what_markets_exist_already__Testnet_'
@@ -4425,6 +4433,7 @@ type JsonFilterInput = {
   readonly Read_initial_proposals_and_get_involved_in_the_discussion_before_the_proposal_goes_to_vote_: InputMaybe<StringQueryOperatorInput>;
   readonly Read_more_about_: InputMaybe<StringQueryOperatorInput>;
   readonly Read_our_blog: InputMaybe<StringQueryOperatorInput>;
+  readonly Read_the_docs_about_liquidity_provision: InputMaybe<StringQueryOperatorInput>;
   readonly Read_the_docs_about_liquidity_provision__Testnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Read_the_docs_to_create_and_submit_a_proposal_using_Vega_APIs_: InputMaybe<StringQueryOperatorInput>;
   readonly Read_the_docs_to_make_a_proposal: InputMaybe<StringQueryOperatorInput>;
@@ -4448,6 +4457,7 @@ type JsonFilterInput = {
   readonly Security_issues: InputMaybe<StringQueryOperatorInput>;
   readonly See_all_Tweets: InputMaybe<StringQueryOperatorInput>;
   readonly See_more: InputMaybe<StringQueryOperatorInput>;
+  readonly See_some_example_markets__Testnet_: InputMaybe<StringQueryOperatorInput>;
   readonly See_the_roadmap: InputMaybe<StringQueryOperatorInput>;
   readonly See_what_markets_already_exist__Testnet_: InputMaybe<StringQueryOperatorInput>;
   readonly See_what_markets_exist_already__Testnet_: InputMaybe<StringQueryOperatorInput>;
@@ -5406,6 +5416,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Read_initial_proposals_and_get_involved_in_the_discussion_before_the_proposal_goes_to_vote_'
   | 'frontmatter.featuredImage.childJson.Read_more_about_'
   | 'frontmatter.featuredImage.childJson.Read_our_blog'
+  | 'frontmatter.featuredImage.childJson.Read_the_docs_about_liquidity_provision'
   | 'frontmatter.featuredImage.childJson.Read_the_docs_about_liquidity_provision__Testnet_'
   | 'frontmatter.featuredImage.childJson.Read_the_docs_to_create_and_submit_a_proposal_using_Vega_APIs_'
   | 'frontmatter.featuredImage.childJson.Read_the_docs_to_make_a_proposal'
@@ -5429,6 +5440,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Security_issues'
   | 'frontmatter.featuredImage.childJson.See_all_Tweets'
   | 'frontmatter.featuredImage.childJson.See_more'
+  | 'frontmatter.featuredImage.childJson.See_some_example_markets__Testnet_'
   | 'frontmatter.featuredImage.childJson.See_the_roadmap'
   | 'frontmatter.featuredImage.childJson.See_what_markets_already_exist__Testnet_'
   | 'frontmatter.featuredImage.childJson.See_what_markets_exist_already__Testnet_'
@@ -5940,6 +5952,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Read_initial_proposals_and_get_involved_in_the_discussion_before_the_proposal_goes_to_vote_'
   | 'frontmatter.featuredImage.childrenJson.Read_more_about_'
   | 'frontmatter.featuredImage.childrenJson.Read_our_blog'
+  | 'frontmatter.featuredImage.childrenJson.Read_the_docs_about_liquidity_provision'
   | 'frontmatter.featuredImage.childrenJson.Read_the_docs_about_liquidity_provision__Testnet_'
   | 'frontmatter.featuredImage.childrenJson.Read_the_docs_to_create_and_submit_a_proposal_using_Vega_APIs_'
   | 'frontmatter.featuredImage.childrenJson.Read_the_docs_to_make_a_proposal'
@@ -5963,6 +5976,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Security_issues'
   | 'frontmatter.featuredImage.childrenJson.See_all_Tweets'
   | 'frontmatter.featuredImage.childrenJson.See_more'
+  | 'frontmatter.featuredImage.childrenJson.See_some_example_markets__Testnet_'
   | 'frontmatter.featuredImage.childrenJson.See_the_roadmap'
   | 'frontmatter.featuredImage.childrenJson.See_what_markets_already_exist__Testnet_'
   | 'frontmatter.featuredImage.childrenJson.See_what_markets_exist_already__Testnet_'
@@ -10006,6 +10020,7 @@ type Query_jsonArgs = {
   Read_initial_proposals_and_get_involved_in_the_discussion_before_the_proposal_goes_to_vote_: InputMaybe<StringQueryOperatorInput>;
   Read_more_about_: InputMaybe<StringQueryOperatorInput>;
   Read_our_blog: InputMaybe<StringQueryOperatorInput>;
+  Read_the_docs_about_liquidity_provision: InputMaybe<StringQueryOperatorInput>;
   Read_the_docs_about_liquidity_provision__Testnet_: InputMaybe<StringQueryOperatorInput>;
   Read_the_docs_to_create_and_submit_a_proposal_using_Vega_APIs_: InputMaybe<StringQueryOperatorInput>;
   Read_the_docs_to_make_a_proposal: InputMaybe<StringQueryOperatorInput>;
@@ -10029,6 +10044,7 @@ type Query_jsonArgs = {
   Security_issues: InputMaybe<StringQueryOperatorInput>;
   See_all_Tweets: InputMaybe<StringQueryOperatorInput>;
   See_more: InputMaybe<StringQueryOperatorInput>;
+  See_some_example_markets__Testnet_: InputMaybe<StringQueryOperatorInput>;
   See_the_roadmap: InputMaybe<StringQueryOperatorInput>;
   See_what_markets_already_exist__Testnet_: InputMaybe<StringQueryOperatorInput>;
   See_what_markets_exist_already__Testnet_: InputMaybe<StringQueryOperatorInput>;
