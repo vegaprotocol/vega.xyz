@@ -8,7 +8,7 @@
 
 [context.production.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.vega.xyz/"
-  GATSBY_VEGA_API = "https://api.vega.xyz/query"
+  GATSBY_VEGA_API = "https://api.vega.community/graphql"
 
 [context.deploy-preview.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
