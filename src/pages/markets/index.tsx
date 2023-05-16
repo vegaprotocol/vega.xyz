@@ -29,6 +29,8 @@ import { calc24hVolume } from '../../utils/vega/24hVolume'
 import './markets.css'
 
 const MarketsLiquidity = () => {
+  const { i18n, t } = useTranslation('page.governance')
+
   const yesterday = useYesterday()
   const yTimestamp = useMemo(() => {
     return new Date(yesterday).toISOString()
@@ -41,7 +43,40 @@ const MarketsLiquidity = () => {
 
   return (
     <Layout stickyHeader={false}>
+      <Container dataCy={'main'}>
+        <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
+          <h1>
+            <BoxTitle text={t('Use Vega')} />
+          </h1>
+          <GlitchTitle
+            level="1"
+            color="red"
+            className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
+          >
+            <Trans t={t}>
+              Provide Liquidity
+            </Trans>
+          </GlitchTitle>
+        </div>
+        <div className="mx-auto max-w-[44rem]">
+          <LeadingLine className="text-center">
+            <Trans t={t}>
+              Liquidity providers receive a share of fees paid during trading in
+              exchange for providing liquidity on the network.
+            </Trans>
+          </LeadingLine>
+        </div>
+        <div className="text-center">
+          <Link
+            to="https://docs.vega.xyz/mainnet/concepts/liquidity/provision"
+            className="underline"
+          >
+            Learn more about committing liquidity
+          </Link>
+        </div>
+      </Container>
       <AsyncRenderer loading={loading} error={error} data={data}>
+        <div className='title-m mb-3 relative w-full px-4 md:px-6 lg:px-8'>Futures</div>
         <div
           className="ag-theme-alpine relative w-full px-4 md:px-6 lg:px-8"
           style={{
@@ -265,6 +300,13 @@ export const query = graphql`
 import * as Schema from '@vegaprotocol/types'
 import { Description } from '../../components/VegaMarkets/Description'
 import { getStatus } from '../../utils/vega/getStatus'
+import Container from '../../components/Container'
+import BoxTitle from '../../components/BoxTitle'
+import GlitchTitle from '../../components/GlitchTitle'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import LeadingLine from '../../components/LeadingLine'
+import Link from '../../components/UI/Link'
+import Header from '../../components/Header'
 
 const marketTradingModeStyle = {
   [Schema.MarketTradingMode.TRADING_MODE_CONTINUOUS]: '#00D46E',
