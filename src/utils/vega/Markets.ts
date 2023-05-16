@@ -68,10 +68,8 @@ export const processMarketData = (marketData) => {
       const marketName =
         edge.node.data.market.tradableInstrument.instrument.name
       const markPrice = new BigNumber(edge.node.data.markPrice)
-      const decimals =
-        edge.node.data.market.tradableInstrument.instrument.product
-          .settlementAsset.decimals
       const positionDecimalPlaces = edge.node.data.market.positionDecimalPlaces
+      const decimalPlaces = edge.node.data.market.decimalPlaces
       const openTimestamp = edge.node.data.market.marketTimestamps.open
 
       if (!markPrice.isZero()) {
@@ -96,7 +94,10 @@ export const processMarketData = (marketData) => {
               volume24h.toString(),
               positionDecimalPlaces
             ),
-            lastPrice: addDecimalsFormatNumber(markPrice.toString(), decimals),
+            lastPrice: addDecimalsFormatNumber(
+              markPrice.toString(),
+              decimalPlaces
+            ),
             priceChange: priceChange24h.toFixed(2) + '%',
             sparkLineValues: sparkLineValues(candles),
             openTimestamp: openTimestamp,

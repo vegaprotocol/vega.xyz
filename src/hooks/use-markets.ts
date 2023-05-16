@@ -21,6 +21,7 @@ export const MarketsDataFieldsFragmentDoc = gql`
       marketTimestamps {
         open
       }
+      decimalPlaces
       positionDecimalPlaces
     }
     bestBidPrice
