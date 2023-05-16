@@ -95,7 +95,7 @@ const MarketCreationPage = ({ data }) => {
         },
         {
           title: t('See what markets exist already (Testnet)'),
-          url: 'https://console.fairground.wtf/#/markets',
+          url: 'https://vega.trading/#/markets',
         },
       ],
       image: <Phase1 />,
@@ -232,7 +232,7 @@ const MarketCreationPage = ({ data }) => {
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
-              link="https://console.fairground.wtf/#/markets"
+              link="/external-link?url=https://vega.trading/#/markets"
               text={t('See what markets already exist (Testnet)')}
             />
           </div>

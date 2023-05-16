@@ -132,9 +132,7 @@ const RewardFees = () => {
             </div>
           }
           buttonText={t('Trade')}
-          buttonLink={routeThroughInterstitialPage(
-            'https://console.fairground.wtf/'
-          )}
+          buttonLink={routeThroughInterstitialPage('https://vega.trading')}
         />
         <RewardBox
           idx={1}

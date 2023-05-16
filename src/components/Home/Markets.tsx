@@ -212,7 +212,7 @@ const Markets = () => {
       </div>
 
       <Button
-        to="https://console.vega.xyz/"
+        to="https://vega.trading/#/markets"
         className="-translate-y-space-5 text-vega-dark-300 md:translate-y-0"
         variant="secondary"
       >
