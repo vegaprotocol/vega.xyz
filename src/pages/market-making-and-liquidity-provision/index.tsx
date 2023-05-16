@@ -206,7 +206,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
               <Button
                 className="mt-space-5"
                 variant="secondary"
-                to="https://docs.vega.xyz/testnet/category/api/rest/core/core-service"
+                to="https://docs.vega.xyz/mainnet/category/api/rest/core/core-service"
               >
                 <Trans t={t}>View all core nodes</Trans>
               </Button>
@@ -219,7 +219,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
               <Button
                 className="mt-space-5"
                 variant="secondary"
-                to="https://docs.vega.xyz/testnet/category/api/rest/data-v2/trading-data-service"
+                to="https://docs.vega.xyz/mainnet/category/api/rest/data-v2/trading-data-service"
               >
                 <Trans t={t}>View all data nodes</Trans>
               </Button>
@@ -232,7 +232,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
               <Button
                 className="mt-space-5"
                 variant="secondary"
-                to="https://docs.vega.xyz/testnet/api/vega-wallet/v2-api/get-started"
+                to="https://docs.vega.xyz/mainnet/concepts/vega-wallet"
               >
                 <Trans t={t}>View Vega Wallet API</Trans>
               </Button>
@@ -286,16 +286,16 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
           </h2>
 
           <div className="grid grid-cols-1 gap-space-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-space-7">
-            <ActionButton to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/market-lifecycle">
+            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/market-lifecycle">
               <Trans t={t}>Vega market lifecycle</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/trading-modes">
+            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/trading-modes">
               <Trans t={t}>Vega trading modes</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/fees-rewards#">
+            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/fees-rewards#">
               <Trans t={t}>Fees & trading rewards</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/testnet/concepts/liquidity/provision">
+            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/liquidity/provision">
               <Trans t={t}>Providing liquidity</Trans>
             </ActionButton>
           </div>
