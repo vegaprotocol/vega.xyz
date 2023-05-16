@@ -77,7 +77,18 @@ const Markets = () => {
         },
       ]
 
-      setMarketsData(tabs)
+      if (
+        [
+          sortedByTopVolume,
+          sortedByTopGainers,
+          sortedByTopLosers,
+          sortedByNewest,
+        ].some((array) => array.length > 0)
+      ) {
+        setMarketsData(tabs)
+      } else {
+        setMarketsData([])
+      }
     }
     if (error) {
       setMarketsData([])
@@ -103,6 +114,8 @@ const Markets = () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [isSwiperInit, breakpointWidth])
+
+  console.log(marketsData)
 
   return marketsData.length > 0 ? (
     <div>
