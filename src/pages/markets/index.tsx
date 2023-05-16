@@ -1,31 +1,39 @@
 import { useYesterday } from '@vegaprotocol/react-helpers'
+import * as Schema from '@vegaprotocol/types'
 import {
   AsyncRenderer,
   HealthBar,
   Indicator,
-  Intent,
+  Intent
 } from '@vegaprotocol/ui-toolkit'
 import {
   addDecimalsFormatNumber,
   formatNumber,
   formatNumberPercentage,
-  toBigNum,
+  toBigNum
 } from '@vegaprotocol/utils'
 import 'ag-grid-community/dist/styles/ag-grid.css'
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css'
 import type {
   AgGridReact as AgGridReactType,
   AgGridReactProps,
-  AgReactUiProps,
+  AgReactUiProps
 } from 'ag-grid-react'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react'
 import { graphql } from 'gatsby'
-import { ReactNode } from 'react'
-import React, { useCallback, useEffect, useMemo, useRef } from 'react'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import React, { ReactNode, useCallback, useEffect, useMemo, useRef } from 'react'
+import BoxTitle from '../../components/BoxTitle'
+import Container from '../../components/Container'
+import GlitchTitle from '../../components/GlitchTitle'
 import Layout from '../../components/Layout'
+import LeadingLine from '../../components/LeadingLine'
+import Link from '../../components/UI/Link'
+import { Description } from '../../components/VegaMarkets/Description'
 import { useMarketLiquidityProviders } from '../../hooks/use-market-liquidity'
 import { useMarkets } from '../../hooks/use-markets'
 import { calc24hVolume } from '../../utils/vega/24hVolume'
+import { getStatus } from '../../utils/vega/getStatus'
 import './markets.css'
 
 const MarketsLiquidity = () => {
@@ -296,16 +304,6 @@ export const query = graphql`
   }
 `
 
-import * as Schema from '@vegaprotocol/types'
-import { Description } from '../../components/VegaMarkets/Description'
-import { getStatus } from '../../utils/vega/getStatus'
-import Container from '../../components/Container'
-import BoxTitle from '../../components/BoxTitle'
-import GlitchTitle from '../../components/GlitchTitle'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import LeadingLine from '../../components/LeadingLine'
-import Link from '../../components/UI/Link'
-import Header from '../../components/Header'
 
 const marketTradingModeStyle = {
   [Schema.MarketTradingMode.TRADING_MODE_CONTINUOUS]: '#00D46E',
