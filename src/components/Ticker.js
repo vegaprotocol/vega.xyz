@@ -34,8 +34,8 @@ const Ticker = () => {
 
   useEffect(() => {
     Promise.all([
-      fetch(`https://api.vega.xyz/epochs`),
-      fetch(`https://api.vega.xyz/statistics`),
+      fetch(`https://api.vega.community/api/v2/epoch`),
+      fetch(`https://api.vega.community/statistics`),
     ])
       .then((responses) => {
         return Promise.all(
