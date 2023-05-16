@@ -82,161 +82,161 @@ const MarketsLiquidity = () => {
             Learn more about committing liquidity
           </Link>
         </div>
-      </Container>
-      <AsyncRenderer loading={loading} error={error} data={data}>
-        <div className='title-m mb-3 relative w-full px-4 md:px-6 lg:px-8'>Futures</div>
-        <div
-          className="ag-theme-alpine relative w-full px-4 md:px-6 lg:px-8"
-          style={{
-            overflow: 'hidden',
-          }}
-        >
-          <Grid
-            rowData={markets}
-            defaultColDef={{
-              resizable: true,
-              sortable: true,
-              unSortIcon: true,
-              cellClass: ['flex', 'flex-col', 'justify-center'],
-              minWidth: 120,
+        <AsyncRenderer loading={loading} error={error} data={data}>
+          <div className='title-m mb-3 relative w-full'>Futures</div>
+          <div
+            className="ag-theme-alpine relative w-full"
+            style={{
+              overflow: 'hidden',
             }}
           >
-            <AgGridColumn
-              headerName={'Market'}
-              field={'node.data.market.tradableInstrument.instrument.name'}
-              cellRenderer={(params) => {
-                const market = params.data.node.data.market
-                return <Description market={market} />
+            <Grid
+              rowData={markets}
+              defaultColDef={{
+                resizable: true,
+                sortable: true,
+                unSortIcon: true,
+                cellClass: ['flex', 'flex-col', 'justify-center'],
+                minWidth: 120,
               }}
-              minWidth={200}
-            />
-            <AgGridColumn
-              headerName={'Mark Price'}
-              field={'node.data.markPrice'}
-              cellRenderer={(params) => {
-                const markPrice = params.data.node.data.markPrice
-                const decimals =
-                  params.data.node.data.market.decimals
-                const formattedMarkPrice = addDecimalsFormatNumber(
-                  markPrice,
-                  decimals
-                )
-                return formattedMarkPrice
-              }}
-            />
-            <AgGridColumn
-              headerName={'Target Stake'}
-              cellRenderer={(params) => {
-                const targetStake = params.data.node.data.targetStake
-                const decimals =
-                  params.data.node.data.market.tradableInstrument.instrument
-                    .product.settlementAsset.decimals
-                const formattedTargetStake = addDecimalsFormatNumber(
-                  targetStake,
-                  decimals
-                )
-                return formattedTargetStake
-              }}
-            />
-            <AgGridColumn
-              headerName={'Supplied Stake'}
-              cellRenderer={(params) => {
-                const suppliedStake = params.data.node.data.suppliedStake
-                const decimals =
-                  params.data.node.data.market.tradableInstrument.instrument
-                    .product.settlementAsset.decimals
-                const formattedSuppliedStake = addDecimalsFormatNumber(
-                  suppliedStake,
-                  decimals
-                )
-                const percentageStaked = percentageLiquidity(
-                  params.data.node.data.suppliedStake,
-                  params.data.node.data.targetStake
-                )
-                const status = params.data.node.data.marketTradingMode
-                const intent = intentForStatus(status)
-                return (
-                  <div>
-                    <Indicator variant={intent} />
-                    {formattedSuppliedStake} <br />
-                    <div
-                      style={{ color: '#8B8B8B' }}
-                    >{`(${percentageStaked})`}</div>
-                  </div>
-                )
-              }}
-            />
-            <AgGridColumn
-              headerName={'Liquidity Fee'}
-              cellRenderer={(params) => {
-                const { data, loading, error } = useMarketLiquidityProviders(
-                  params.data.node.data.market.id
-                )
-                if (loading) return null
-                if (data) {
-                  const liquidityFee = data.market.fees?.factors?.liquidityFee
-                  return `${liquidityFee}%`
-                }
-                return null
-              }}
-            />
-            <AgGridColumn
-              headerName={'Volume (24h)'}
-              cellRenderer={(params) => {
-                const volume24h = calc24hVolume(
-                  params.data.node.candlesConnection?.edges || []
-                )
-                const positionDecimals =
-                  params.data.node.data.market.positionDecimals
-                const formattedVolume24h = addDecimalsFormatNumber(
-                  volume24h,
-                  positionDecimals
-                )
-                return formattedVolume24h
-              }}
-            />
-            <AgGridColumn
-              headerName={'Trading Mode'}
-              field={'node.data.marketTradingMode'}
-              cellRenderer={(params) => {
-                const { data, loading, error } = useMarketLiquidityProviders(
-                  params.data.node.data.market.id
-                )
-
-                if (loading) return null
-                if (data) {
+            >
+              <AgGridColumn
+                headerName={'Market'}
+                field={'node.data.market.tradableInstrument.instrument.name'}
+                cellRenderer={(params) => {
+                  const market = params.data.node.data.market
+                  return <Description market={market} />
+                }}
+                minWidth={200}
+              />
+              <AgGridColumn
+                headerName={'Mark Price'}
+                field={'node.data.markPrice'}
+                cellRenderer={(params) => {
+                  const markPrice = params.data.node.data.markPrice
+                  const decimals =
+                    params.data.node.data.market.decimals
+                  const formattedMarkPrice = addDecimalsFormatNumber(
+                    markPrice,
+                    decimals
+                  )
+                  return formattedMarkPrice
+                }}
+              />
+              <AgGridColumn
+                headerName={'Target Stake'}
+                cellRenderer={(params) => {
                   const targetStake = params.data.node.data.targetStake
-                  const settlementAssetDecimals =
-                    data.market.tradableInstrument.instrument.product
-                      .settlementAsset.decimals
-                  const feeLevels = getFeeLevels(
-                    data.market?.liquidityProvisionsConnection?.edges || []
+                  const decimals =
+                    params.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
+                  const formattedTargetStake = addDecimalsFormatNumber(
+                    targetStake,
+                    decimals
                   )
-
-                  const tradingMode = params.data.node.data.marketTradingMode
-                  const auctionTrigger = params.data.node.data.auctionTrigger
-                  const tradingModeLabel = getStatus(
-                    tradingMode,
-                    auctionTrigger
+                  return formattedTargetStake
+                }}
+              />
+              <AgGridColumn
+                headerName={'Supplied Stake'}
+                cellRenderer={(params) => {
+                  const suppliedStake = params.data.node.data.suppliedStake
+                  const decimals =
+                    params.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
+                  const formattedSuppliedStake = addDecimalsFormatNumber(
+                    suppliedStake,
+                    decimals
                   )
+                  const percentageStaked = percentageLiquidity(
+                    params.data.node.data.suppliedStake,
+                    params.data.node.data.targetStake
+                  )
+                  const status = params.data.node.data.marketTradingMode
+                  const intent = intentForStatus(status)
                   return (
                     <div>
-                      {tradingModeLabel}
-                      <br />
-                      <HealthBar
-                        target={targetStake}
-                        decimals={settlementAssetDecimals}
-                        levels={feeLevels}
-                        intent={intentForStatus(tradingMode)}
-                      />
+                      <Indicator variant={intent} />
+                      {formattedSuppliedStake} <br />
+                      <div
+                        style={{ color: '#8B8B8B' }}
+                      >{`(${percentageStaked})`}</div>
                     </div>
                   )
-                }
-              }}
-            />
-          </Grid>
-        </div>
-      </AsyncRenderer>
+                }}
+              />
+              <AgGridColumn
+                headerName={'Liquidity Fee'}
+                cellRenderer={(params) => {
+                  const { data, loading, error } = useMarketLiquidityProviders(
+                    params.data.node.data.market.id
+                  )
+                  if (loading) return null
+                  if (data) {
+                    const liquidityFee = data.market.fees?.factors?.liquidityFee
+                    return `${liquidityFee}%`
+                  }
+                  return null
+                }}
+              />
+              <AgGridColumn
+                headerName={'Volume (24h)'}
+                cellRenderer={(params) => {
+                  const volume24h = calc24hVolume(
+                    params.data.node.candlesConnection?.edges || []
+                  )
+                  const positionDecimals =
+                    params.data.node.data.market.positionDecimals
+                  const formattedVolume24h = addDecimalsFormatNumber(
+                    volume24h,
+                    positionDecimals
+                  )
+                  return formattedVolume24h
+                }}
+              />
+              <AgGridColumn
+                headerName={'Trading Mode'}
+                field={'node.data.marketTradingMode'}
+                cellRenderer={(params) => {
+                  const { data, loading, error } = useMarketLiquidityProviders(
+                    params.data.node.data.market.id
+                  )
+
+                  if (loading) return null
+                  if (data) {
+                    const targetStake = params.data.node.data.targetStake
+                    const settlementAssetDecimals =
+                      data.market.tradableInstrument.instrument.product
+                        .settlementAsset.decimals
+                    const feeLevels = getFeeLevels(
+                      data.market?.liquidityProvisionsConnection?.edges || []
+                    )
+
+                    const tradingMode = params.data.node.data.marketTradingMode
+                    const auctionTrigger = params.data.node.data.auctionTrigger
+                    const tradingModeLabel = getStatus(
+                      tradingMode,
+                      auctionTrigger
+                    )
+                    return (
+                      <div>
+                        {tradingModeLabel}
+                        <br />
+                        <HealthBar
+                          target={targetStake}
+                          decimals={settlementAssetDecimals}
+                          levels={feeLevels}
+                          intent={intentForStatus(tradingMode)}
+                        />
+                      </div>
+                    )
+                  }
+                }}
+              />
+            </Grid>
+          </div>
+        </AsyncRenderer>
+      </Container>
     </Layout>
   )
 }
