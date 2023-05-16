@@ -28,9 +28,6 @@ const Navigation = () => {
         <Dropdown title={t('Learn')}>
           <Learn />
         </Dropdown>
-        <Dropdown title={t('Markets')}>
-          <Markets />
-        </Dropdown>
       </ul>
     </nav>
   )
