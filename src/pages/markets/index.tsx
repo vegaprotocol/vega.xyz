@@ -115,7 +115,7 @@ const MarketsLiquidity = () => {
                 cellRenderer={(params) => {
                   const markPrice = params.data.node.data.markPrice
                   const decimals =
-                    params.data.node.data.market.decimals
+                    params.data.node.data.market.decimalPlaces
                   const formattedMarkPrice = addDecimalsFormatNumber(
                     markPrice,
                     decimals
