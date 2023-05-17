@@ -64,7 +64,7 @@ const RewardFees = () => {
     async function fetchRewardFees() {
       try {
         let response = await fetch(
-          'https://api.n07.testnet.vega.xyz/api/v2/rewards?pagination.first=2000'
+          `${process.env.GATSBY_VEGA_REST_API}/api/v2/rewards?pagination.first=2000`
         )
         response = await response.json()
         let makerPaidFeeReward = 0

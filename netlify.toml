@@ -9,11 +9,13 @@
 [context.production.environment]
   GATSBY_TOKEN_FRONTEND = "https://governance.vega.xyz/"
   GATSBY_VEGA_API = "https://api.vega.community/graphql"
+  GATSBY_VEGA_REST_API = "https://api.vega.community"
 
 [context.deploy-preview.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
   GATSBY_VEGA_API = "https://api-testnet.vega.rocks/graphql"
-
+  GATSBY_VEGA_REST_API = "https://api-testnet.vega.rocks"
+  
 [functions."send-bug-report"]
   included_files = ["vega-public-key.asc"]
 
