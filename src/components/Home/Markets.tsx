@@ -138,7 +138,7 @@ const Markets = () => {
               onTouchStart={() => setShowMarketsDropdown(true)}
               onFocus={() => setShowMarketsDropdown(true)}
               onBlur={(e) => {
-                if (!e.relatedTarget?.dataset?.changeMarket) {
+                if (!(e.relatedTarget as HTMLElement)?.dataset?.changeMarket) {
                   setShowMarketsDropdown(false)
                 }
               }}
