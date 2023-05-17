@@ -12,7 +12,7 @@
 
 [context.deploy-preview.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
-  GATSBY_VEGA_API = "https://api.vega.xyz/query"
+  GATSBY_VEGA_API = "https://api-testnet.vega.rocks/graphql"
 
 [functions."send-bug-report"]
   included_files = ["vega-public-key.asc"]

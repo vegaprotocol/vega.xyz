@@ -89,7 +89,9 @@ const RewardFees = () => {
               node.node.rewardType === 'ACCOUNT_TYPE_REWARD_MAKER_PAID_FEES'
             ) {
               makerPaidFeeReward += Number(node.node.amount)
-            } else if (node.node.rewardType === 'ACCOUNT_TYPE_FEES_LIQUIDITY') {
+            } else if (
+              node.node.rewardType === 'ACCOUNT_TYPE_REWARD_LP_RECEIVED_FEES'
+            ) {
               lpFeeReward += Number(node.node.amount)
             } else if (
               node.node.rewardType === 'ACCOUNT_TYPE_REWARD_MARKET_PROPOSERS'
