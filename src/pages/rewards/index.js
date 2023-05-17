@@ -84,7 +84,7 @@ const RewardsPage = ({ data }) => {
           <div>
             <Button
               variant="secondary"
-              to="https://token.vega.xyz/rewards"
+              to="https://governance.vega.xyz/rewards"
               className="mt-space-2 md:mt-0"
             >
               <Trans t={t}>Rewards I've earned</Trans>
@@ -104,7 +104,7 @@ const RewardsPage = ({ data }) => {
           <Button
             variant="secondary"
             className="mt-space-2"
-            to="https://docs.vega.xyz/testnet/concepts/trading-on-vega/fees-rewards#setting-rewards"
+            to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/fees-rewards"
           >
             <Trans t={t}>Create your own reward</Trans>
           </Button>

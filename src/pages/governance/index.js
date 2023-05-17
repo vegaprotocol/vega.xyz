@@ -133,7 +133,7 @@ const GovernancePage = ({ data }) => {
       links: [
         {
           title: t('Read the docs to make a proposal'),
-          url: 'https://docs.vega.xyz/mainnet/concepts/vega-protocol#governance',
+          url: 'https://docs.vega.xyz/mainnet/tutorials/proposals',
         },
         {
           title: t('Check out the forum'),
@@ -149,11 +149,7 @@ const GovernancePage = ({ data }) => {
       links: [
         {
           title: t('Read the docs to make a proposal'),
-          url: 'https://docs.vega.xyz/mainnet/concepts/vega-protocol#governance',
-        },
-        {
-          title: t('Submit your proposal'),
-          url: 'https://token.vega.xyz/governance/propose/',
+          url: 'https://docs.vega.xyz/mainnet/tutorials/proposals',
         },
       ],
       image: <Phase3 />,
@@ -165,7 +161,7 @@ const GovernancePage = ({ data }) => {
       links: [
         {
           title: t('Vote for proposals'),
-          url: 'https://token.vega.xyz/governance',
+          url: 'https://governance.vega.xyz/proposals',
         },
       ],
       image: <Phase4 />,
@@ -212,63 +208,41 @@ const GovernancePage = ({ data }) => {
         </div>
       </Container>
 
-      <div className="mb-space-8 md:mb-space-10">
-        <GovernanceResponsive />
-      </div>
-
       <Container>
-        <h2
-          className="title-m md:title-l mx-auto mb-6 max-w-[30rem] text-center lg:max-w-none"
+        <div
+          className="mx-auto mt-10 mb-space-10 grid max-w-[75rem] grid-cols-1 gap-5 md:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10"
           id="governanceTools"
         >
-          <Trans t={t}>Governance Tools</Trans>
-        </h2>
-        <div className="mx-auto mt-10 mb-space-10 grid max-w-[75rem] grid-cols-1 gap-5 md:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10">
           <ToolBox
             icon={getImage(data.forumIcon)}
-            title={t('Forum')}
+            title={t('Discuss proposals')}
             link="https://community.vega.xyz/c/governance/25"
             text={t(
-              'Sense check and formalise proposals for the Vega network - add or change markets, network parameters, external assets and more.'
+              'Read initial proposals and get involved in the discussion before the proposal goes to vote.'
             )}
             type="Tool"
           />
           <ToolBox
-            icon={getImage(data.tokenInterfaceIcon)}
-            title={t('Governance')}
-            link="https://token.vega.xyz/governance"
-            text={t('Review, vote on, and submit governance proposals.')}
-            type="DAPP"
-          />
-          <ToolBox
             icon={getImage(data.makeProposalIcon)}
-            title={t('Make a proposal')}
+            title={t('Submit a proposal')}
             link="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
             text={t(
               'Read the docs to create and submit a proposal using Vega APIs.'
             )}
             type="DOCS"
           />
-        </div>
-
-        <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
-          <Trans t={t}>Governance lifecycle</Trans>
-        </h2>
-
-        <div className="mb-space-8 md:mb-space-10">
-          <Accordion
-            data={governanceProcess}
-            transNamespace="page.governance"
+          <ToolBox
+            icon={getImage(data.tokenInterfaceIcon)}
+            title={t('Vote on proposals')}
+            link="https://governance.vega.xyz/proposals"
+            text={t('Review and vote on governance proposals.')}
+            type="DAPP"
           />
         </div>
 
-        <Callout
-          title={t('Propose a futures market on any underlying.')}
-          image={getImage(data.marketMakingImage)}
-          linkText={t('Create a new market')}
-          link="/market-creation"
-          className="mb-space-8 md:mb-space-11"
-        />
+        <div className="mb-space-8 md:mb-space-10">
+          <GovernanceResponsive />
+        </div>
 
         <div className="mb-space-8 md:mb-space-10">
           <h2 className="title-m md:title-l lg:title-xl mb-12 px-1 text-center">
@@ -335,7 +309,31 @@ const GovernancePage = ({ data }) => {
           </div>
         </div>
 
-        <Proposals />
+        <div className="mb-space-8 md:mb-space-10">
+          <div>
+            <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
+              <Trans t={t}>Governance lifecycle</Trans>
+            </h2>
+          </div>
+
+          <div className="mb-space-8 md:mb-space-10">
+            <Accordion
+              data={governanceProcess}
+              transNamespace="page.governance"
+            />
+          </div>
+
+          <Callout
+            title={t('Propose a futures market on any underlying.')}
+            image={getImage(data.marketMakingImage)}
+            linkText={t('Create a new market')}
+            link="/market-creation"
+            className="mb-space-8 md:mb-space-11"
+          />
+        </div>
+        <div className="mb-space-8 md:mb-space-10">
+          <Proposals />
+        </div>
       </Container>
     </Layout>
   )

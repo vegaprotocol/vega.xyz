@@ -115,8 +115,6 @@ const Markets = () => {
     }
   }, [isSwiperInit, breakpointWidth])
 
-  console.log(marketsData)
-
   return marketsData.length > 0 ? (
     <div>
       <div className="mb-space-5 grid grid-cols-2 md:flex md:items-center md:justify-between">

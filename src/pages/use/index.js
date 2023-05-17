@@ -81,7 +81,7 @@ const UsePage = ({ data }) => {
       icon: data.governanceIcon,
       title: 'Governance',
       author: 'Vega',
-      link: 'https://token.vega.xyz/governance',
+      link: 'https://governance.vega.xyz/proposals',
       description: t('Review and vote on governance proposals.'),
       categories: ['governance'],
     },
@@ -101,7 +101,7 @@ const UsePage = ({ data }) => {
       icon: data.stakingIcon,
       title: 'Staking',
       author: 'Vega',
-      link: 'https://token.vega.xyz/staking',
+      link: 'https://governance.vega.xyz/validators',
       description: t('Stake $VEGA tokens and get rewarded.'),
       categories: ['governance', 'staking'],
     },
@@ -130,7 +130,7 @@ const UsePage = ({ data }) => {
       icon: data.vestingIcon,
       title: 'Vesting',
       author: 'Vega',
-      link: 'https://token.vega.xyz/vesting',
+      link: 'https://governance.vega.xyz/token/redeem',
       description: t('Redeem locked vega tokens.'),
       categories: [],
     },
@@ -174,19 +174,6 @@ const UsePage = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-
-      <div className="pt-space-5">
-        <Container>
-          <CalloutHero
-            title={t('The Vega mainnet is live, trading launch H1 2023')}
-            text={t(
-              'Token holders can participate in governance, stake and delegate.'
-            )}
-            buttonText={t('View the Roadmap')}
-            buttonLink="/#roadmap"
-          />
-        </Container>
-      </div>
       <Container dataCy={'main'}>
         <div className="mb-8 pt-6 text-center md:mb-12 md:pt-16">
           <div className="mx-auto max-w-[61rem] text-center">
