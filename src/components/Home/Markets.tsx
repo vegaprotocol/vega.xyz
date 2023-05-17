@@ -4,6 +4,7 @@ import SwiperCore, { Navigation, Pagination } from 'swiper'
 import MarketTile from '../MarketTile'
 import Button from '../UI/Button'
 import Pill from '../UI/Pill'
+import { routeThroughInterstitialPage } from '../../utils/tools'
 import 'swiper/swiper-bundle.css'
 import { useMarkets } from '../../hooks/use-markets'
 import {
@@ -210,7 +211,7 @@ const Markets = () => {
       </div>
 
       <Button
-        to="https://vega.trading/#/markets"
+        to={routeThroughInterstitialPage('https://vega.trading/#/markets')}
         className="-translate-y-space-5 text-vega-dark-300 md:translate-y-0"
         variant="secondary"
       >

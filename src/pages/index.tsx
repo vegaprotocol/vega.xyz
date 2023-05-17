@@ -92,7 +92,7 @@ const IndexPage = ({ data }) => {
                       variant="hero"
                       to={routeThroughInterstitialPage('https://vega.trading')}
                     >
-                      Launch console app
+                      <Trans t={t}>Launch console</Trans>
                     </Button>
                     <div className="mt-space-4 flex items-center justify-center gap-x-6 md:justify-start xl:mt-0 xl:justify-center">
                       <Button
@@ -100,7 +100,7 @@ const IndexPage = ({ data }) => {
                         variant="secondary"
                         to="/wallet"
                       >
-                        Vega Wallet
+                        <Trans t={t}>Vega Wallet</Trans>
                       </Button>
                       <Button
                         className="text-vega-dark-300"
@@ -114,7 +114,7 @@ const IndexPage = ({ data }) => {
                         variant="secondary"
                         to="https://docs.vega.xyz/"
                       >
-                        Docs
+                        <Trans t={t}>Docs</Trans>
                       </Button>
                     </div>
                   </div>
