@@ -6,7 +6,7 @@ import NavigationHeading from '../Heading'
 const Use = () => {
   const { t } = useTranslation('component.navigation')
   return (
-    <div className="gap-6 lg:grid lg:grid-cols-2">
+    <ul className="gap-6 lg:grid lg:grid-cols-2">
       <div className="lg:col-span-1">
         <NavigationHeading>
           <Trans t={t}>Infrastructure</Trans>
@@ -32,7 +32,7 @@ const Use = () => {
           link="/liquidity-provision"
         />
       </div>
-    </div>
+    </ul>
   )
 }
 
