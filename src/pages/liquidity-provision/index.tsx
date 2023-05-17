@@ -4,25 +4,30 @@ import {
   AsyncRenderer,
   HealthBar,
   Indicator,
-  Intent
+  Intent,
 } from '@vegaprotocol/ui-toolkit'
 import {
   addDecimalsFormatNumber,
-  formatNumber,
   formatNumberPercentage,
-  toBigNum
+  toBigNum,
 } from '@vegaprotocol/utils'
 import 'ag-grid-community/dist/styles/ag-grid.css'
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css'
 import type {
   AgGridReact as AgGridReactType,
   AgGridReactProps,
-  AgReactUiProps
+  AgReactUiProps,
 } from 'ag-grid-react'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react'
 import { graphql } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import React, { ReactNode, useCallback, useEffect, useMemo, useRef } from 'react'
+import React, {
+  ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+} from 'react'
 import BoxTitle from '../../components/BoxTitle'
 import Container from '../../components/Container'
 import GlitchTitle from '../../components/GlitchTitle'
@@ -61,9 +66,7 @@ const MarketsLiquidity = () => {
             color="red"
             className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
           >
-            <Trans t={t}>
-              Provide Liquidity
-            </Trans>
+            <Trans t={t}>Provide Liquidity</Trans>
           </GlitchTitle>
         </div>
         <div className="mx-auto max-w-[44rem]">
@@ -83,7 +86,7 @@ const MarketsLiquidity = () => {
           </Link>
         </div>
         <AsyncRenderer loading={loading} error={error} data={data}>
-          <div className='title-m mb-3 relative w-full'>Futures</div>
+          <div className="title-m relative mb-3 w-full">Futures</div>
           <div
             className="ag-theme-alpine relative w-full"
             style={{
@@ -101,7 +104,7 @@ const MarketsLiquidity = () => {
               }}
             >
               <AgGridColumn
-                headerName={'Market'}
+                headerName={t('Market')}
                 field={'node.data.market.tradableInstrument.instrument.name'}
                 cellRenderer={(params) => {
                   const market = params.data.node.data.market
@@ -110,12 +113,11 @@ const MarketsLiquidity = () => {
                 minWidth={200}
               />
               <AgGridColumn
-                headerName={'Mark Price'}
+                headerName={t('Mark Price')}
                 field={'node.data.markPrice'}
                 cellRenderer={(params) => {
                   const markPrice = params.data.node.data.markPrice
-                  const decimals =
-                    params.data.node.data.market.decimalPlaces
+                  const decimals = params.data.node.data.market.decimalPlaces
                   const formattedMarkPrice = addDecimalsFormatNumber(
                     markPrice,
                     decimals
@@ -124,7 +126,7 @@ const MarketsLiquidity = () => {
                 }}
               />
               <AgGridColumn
-                headerName={'Target Stake'}
+                headerName={t('Target Stake')}
                 cellRenderer={(params) => {
                   const targetStake = params.data.node.data.targetStake
                   const decimals =
@@ -138,7 +140,7 @@ const MarketsLiquidity = () => {
                 }}
               />
               <AgGridColumn
-                headerName={'Supplied Stake'}
+                headerName={t('Supplied Stake')}
                 cellRenderer={(params) => {
                   const suppliedStake = params.data.node.data.suppliedStake
                   const decimals =
@@ -166,7 +168,7 @@ const MarketsLiquidity = () => {
                 }}
               />
               <AgGridColumn
-                headerName={'Liquidity Fee'}
+                headerName={t('Liquidity Fee')}
                 cellRenderer={(params) => {
                   const { data, loading, error } = useMarketLiquidityProviders(
                     params.data.node.data.market.id
@@ -180,7 +182,7 @@ const MarketsLiquidity = () => {
                 }}
               />
               <AgGridColumn
-                headerName={'Volume (24h)'}
+                headerName={t('Volume (24h)')}
                 cellRenderer={(params) => {
                   const volume24h = calc24hVolume(
                     params.data.node.candlesConnection?.edges || []
@@ -195,7 +197,7 @@ const MarketsLiquidity = () => {
                 }}
               />
               <AgGridColumn
-                headerName={'Trading Mode'}
+                headerName={t('Trading Mode')}
                 field={'node.data.marketTradingMode'}
                 cellRenderer={(params) => {
                   const { data, loading, error } = useMarketLiquidityProviders(
@@ -303,7 +305,6 @@ export const query = graphql`
     }
   }
 `
-
 
 const marketTradingModeStyle = {
   [Schema.MarketTradingMode.TRADING_MODE_CONTINUOUS]: '#00D46E',
