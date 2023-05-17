@@ -34,10 +34,10 @@ import { useMarketLiquidityProviders } from '../../hooks/use-market-liquidity'
 import { useMarkets } from '../../hooks/use-markets'
 import { calc24hVolume } from '../../utils/vega/24hVolume'
 import { getStatus } from '../../utils/vega/getStatus'
-import './markets.css'
+import './liquidity-provision.css'
 
 const MarketsLiquidity = () => {
-  const { i18n, t } = useTranslation('page.governance')
+  const { i18n, t } = useTranslation('page.liquidity-provision')
 
   const yesterday = useYesterday()
   const yTimestamp = useMemo(() => {

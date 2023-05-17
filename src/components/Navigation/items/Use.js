@@ -27,7 +27,10 @@ const Use = () => {
           text={t('Experiment on Fairground Testnet')}
           link="https://fairground.wtf"
         />
-        <NavigationItem text={t('Liquidity Provision')} link="/markets" />
+        <NavigationItem
+          text={t('Liquidity Provision')}
+          link="/liquidity-provision"
+        />
       </div>
     </div>
   )
