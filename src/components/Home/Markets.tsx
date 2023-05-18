@@ -38,8 +38,6 @@ const Markets = () => {
 
   SwiperCore.use([Pagination])
 
-  const tabs = ['Top volume', 'Top gainers', 'Top losers', 'New markets']
-
   const changeTab = (index) => {
     setActiveTab(index)
     setShowMarketsDropdown(false)

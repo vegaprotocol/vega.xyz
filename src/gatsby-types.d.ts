@@ -890,6 +890,7 @@ type FileFieldsEnum =
   | 'childJson.Incentives___bounties'
   | 'childJson.Incentives_and_Bounties'
   | 'childJson.Incentives_and_bounties'
+  | 'childJson.Infrastructure'
   | 'childJson.Insights'
   | 'childJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'childJson.Isolate_keys'
@@ -926,7 +927,9 @@ type FileFieldsEnum =
   | 'childJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
   | 'childJson.Leveraged_trading_with_full_cross_margining_'
   | 'childJson.Limited_Edition_Vega_swag'
+  | 'childJson.Liquidity_Fee'
   | 'childJson.Liquidity_Provision'
+  | 'childJson.Liquidity_providers_receive_a_share_of_fees_paid_during_trading_in_exchange_for_providing_liquidity_on_the_network_'
   | 'childJson.Liquidity_provision_is_fairly_rewarded_from_fee_revenue_by_the_protocol_'
   | 'childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childJson.Load_more___'
@@ -937,10 +940,14 @@ type FileFieldsEnum =
   | 'childJson.Mainnet_Docs'
   | 'childJson.Mainnet_status_and_incidents'
   | 'childJson.Manage_multiple_wallets_and_keys'
+  | 'childJson.Mark_Price'
+  | 'childJson.Market'
   | 'childJson.Market_Creation'
   | 'childJson.Market_Creation_with_Vega'
   | 'childJson.Market_creation'
   | 'childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'childJson.Markets'
+  | 'childJson.Markets_and_Liqudity'
   | 'childJson.Medium'
   | 'childJson.Meet'
   | 'childJson.Meet_our_contributors'
@@ -989,6 +996,7 @@ type FileFieldsEnum =
   | 'childJson.Priority_consideration_on_protocol_feedback'
   | 'childJson.Privacy___Cookie_Policy'
   | 'childJson.Propose_a_futures_market_on_any_underlying_'
+  | 'childJson.Provide_Liquidity'
   | 'childJson.Provide_feedback'
   | 'childJson.Provide_liquidity'
   | 'childJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
@@ -1050,8 +1058,10 @@ type FileFieldsEnum =
   | 'childJson.Submit_bug_report'
   | 'childJson.Submit_your_proposal'
   | 'childJson.Substack'
+  | 'childJson.Supplied_Stake'
   | 'childJson.Swag'
   | 'childJson.Talks'
+  | 'childJson.Target_Stake'
   | 'childJson.Technical_overview'
   | 'childJson.Telegram'
   | 'childJson.The_Vega_Community'
@@ -1076,6 +1086,7 @@ type FileFieldsEnum =
   | 'childJson.Tools_built_on_Vega'
   | 'childJson.Total_Staked'
   | 'childJson.Trading'
+  | 'childJson.Trading_Mode'
   | 'childJson.Translate'
   | 'childJson.Transparent_and_open_source_trading'
   | 'childJson.Tweets___Translations___Editorials___Infographics'
@@ -1128,6 +1139,7 @@ type FileFieldsEnum =
   | 'childJson.View_detailed_roadmap'
   | 'childJson.View_more'
   | 'childJson.View_on_Github'
+  | 'childJson.Volume__24h_'
   | 'childJson.Vote_for_proposals'
   | 'childJson.Vote_on_proposals'
   | 'childJson.Vote_to_exercise_your_influence'
@@ -1673,6 +1685,7 @@ type FileFieldsEnum =
   | 'childrenJson.Incentives___bounties'
   | 'childrenJson.Incentives_and_Bounties'
   | 'childrenJson.Incentives_and_bounties'
+  | 'childrenJson.Infrastructure'
   | 'childrenJson.Insights'
   | 'childrenJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'childrenJson.Isolate_keys'
@@ -1709,7 +1722,9 @@ type FileFieldsEnum =
   | 'childrenJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
   | 'childrenJson.Leveraged_trading_with_full_cross_margining_'
   | 'childrenJson.Limited_Edition_Vega_swag'
+  | 'childrenJson.Liquidity_Fee'
   | 'childrenJson.Liquidity_Provision'
+  | 'childrenJson.Liquidity_providers_receive_a_share_of_fees_paid_during_trading_in_exchange_for_providing_liquidity_on_the_network_'
   | 'childrenJson.Liquidity_provision_is_fairly_rewarded_from_fee_revenue_by_the_protocol_'
   | 'childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'childrenJson.Load_more___'
@@ -1720,10 +1735,14 @@ type FileFieldsEnum =
   | 'childrenJson.Mainnet_Docs'
   | 'childrenJson.Mainnet_status_and_incidents'
   | 'childrenJson.Manage_multiple_wallets_and_keys'
+  | 'childrenJson.Mark_Price'
+  | 'childrenJson.Market'
   | 'childrenJson.Market_Creation'
   | 'childrenJson.Market_Creation_with_Vega'
   | 'childrenJson.Market_creation'
   | 'childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'childrenJson.Markets'
+  | 'childrenJson.Markets_and_Liqudity'
   | 'childrenJson.Medium'
   | 'childrenJson.Meet'
   | 'childrenJson.Meet_our_contributors'
@@ -1772,6 +1791,7 @@ type FileFieldsEnum =
   | 'childrenJson.Priority_consideration_on_protocol_feedback'
   | 'childrenJson.Privacy___Cookie_Policy'
   | 'childrenJson.Propose_a_futures_market_on_any_underlying_'
+  | 'childrenJson.Provide_Liquidity'
   | 'childrenJson.Provide_feedback'
   | 'childrenJson.Provide_liquidity'
   | 'childrenJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
@@ -1833,8 +1853,10 @@ type FileFieldsEnum =
   | 'childrenJson.Submit_bug_report'
   | 'childrenJson.Submit_your_proposal'
   | 'childrenJson.Substack'
+  | 'childrenJson.Supplied_Stake'
   | 'childrenJson.Swag'
   | 'childrenJson.Talks'
+  | 'childrenJson.Target_Stake'
   | 'childrenJson.Technical_overview'
   | 'childrenJson.Telegram'
   | 'childrenJson.The_Vega_Community'
@@ -1859,6 +1881,7 @@ type FileFieldsEnum =
   | 'childrenJson.Tools_built_on_Vega'
   | 'childrenJson.Total_Staked'
   | 'childrenJson.Trading'
+  | 'childrenJson.Trading_Mode'
   | 'childrenJson.Translate'
   | 'childrenJson.Transparent_and_open_source_trading'
   | 'childrenJson.Tweets___Translations___Editorials___Infographics'
@@ -1911,6 +1934,7 @@ type FileFieldsEnum =
   | 'childrenJson.View_detailed_roadmap'
   | 'childrenJson.View_more'
   | 'childrenJson.View_on_Github'
+  | 'childrenJson.Volume__24h_'
   | 'childrenJson.Vote_for_proposals'
   | 'childrenJson.Vote_on_proposals'
   | 'childrenJson.Vote_to_exercise_your_influence'
@@ -3152,6 +3176,7 @@ type Json = Node & {
   readonly Incentives___bounties: Maybe<Scalars['String']>;
   readonly Incentives_and_Bounties: Maybe<Scalars['String']>;
   readonly Incentives_and_bounties: Maybe<Scalars['String']>;
+  readonly Infrastructure: Maybe<Scalars['String']>;
   readonly Insights: Maybe<Scalars['String']>;
   readonly Internationalisation___Local_Language_Groups___AMAs: Maybe<Scalars['String']>;
   readonly Isolate_keys: Maybe<Scalars['String']>;
@@ -3188,7 +3213,9 @@ type Json = Node & {
   readonly Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_: Maybe<Scalars['String']>;
   readonly Leveraged_trading_with_full_cross_margining_: Maybe<Scalars['String']>;
   readonly Limited_Edition_Vega_swag: Maybe<Scalars['String']>;
+  readonly Liquidity_Fee: Maybe<Scalars['String']>;
   readonly Liquidity_Provision: Maybe<Scalars['String']>;
+  readonly Liquidity_providers_receive_a_share_of_fees_paid_during_trading_in_exchange_for_providing_liquidity_on_the_network_: Maybe<Scalars['String']>;
   readonly Liquidity_provision_is_fairly_rewarded_from_fee_revenue_by_the_protocol_: Maybe<Scalars['String']>;
   readonly Livestreams__conferences__research_office_hours_and_community_calls: Maybe<Scalars['String']>;
   readonly Load_more___: Maybe<Scalars['String']>;
@@ -3199,10 +3226,14 @@ type Json = Node & {
   readonly Mainnet_Docs: Maybe<Scalars['String']>;
   readonly Mainnet_status_and_incidents: Maybe<Scalars['String']>;
   readonly Manage_multiple_wallets_and_keys: Maybe<Scalars['String']>;
+  readonly Mark_Price: Maybe<Scalars['String']>;
+  readonly Market: Maybe<Scalars['String']>;
   readonly Market_Creation: Maybe<Scalars['String']>;
   readonly Market_Creation_with_Vega: Maybe<Scalars['String']>;
   readonly Market_creation: Maybe<Scalars['String']>;
   readonly Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: Maybe<Scalars['String']>;
+  readonly Markets: Maybe<Scalars['String']>;
+  readonly Markets_and_Liqudity: Maybe<Scalars['String']>;
   readonly Medium: Maybe<Scalars['String']>;
   readonly Meet: Maybe<Scalars['String']>;
   readonly Meet_our_contributors: Maybe<Scalars['String']>;
@@ -3251,6 +3282,7 @@ type Json = Node & {
   readonly Priority_consideration_on_protocol_feedback: Maybe<Scalars['String']>;
   readonly Privacy___Cookie_Policy: Maybe<Scalars['String']>;
   readonly Propose_a_futures_market_on_any_underlying_: Maybe<Scalars['String']>;
+  readonly Provide_Liquidity: Maybe<Scalars['String']>;
   readonly Provide_feedback: Maybe<Scalars['String']>;
   readonly Provide_liquidity: Maybe<Scalars['String']>;
   readonly Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_: Maybe<Scalars['String']>;
@@ -3312,8 +3344,10 @@ type Json = Node & {
   readonly Submit_bug_report: Maybe<Scalars['String']>;
   readonly Submit_your_proposal: Maybe<Scalars['String']>;
   readonly Substack: Maybe<Scalars['String']>;
+  readonly Supplied_Stake: Maybe<Scalars['String']>;
   readonly Swag: Maybe<Scalars['String']>;
   readonly Talks: Maybe<Scalars['String']>;
+  readonly Target_Stake: Maybe<Scalars['String']>;
   readonly Technical_overview: Maybe<Scalars['String']>;
   readonly Telegram: Maybe<Scalars['String']>;
   readonly The_Vega_Community: Maybe<Scalars['String']>;
@@ -3338,6 +3372,7 @@ type Json = Node & {
   readonly Tools_built_on_Vega: Maybe<Scalars['String']>;
   readonly Total_Staked: Maybe<Scalars['String']>;
   readonly Trading: Maybe<Scalars['String']>;
+  readonly Trading_Mode: Maybe<Scalars['String']>;
   readonly Translate: Maybe<Scalars['String']>;
   readonly Transparent_and_open_source_trading: Maybe<Scalars['String']>;
   readonly Tweets___Translations___Editorials___Infographics: Maybe<Scalars['String']>;
@@ -3390,6 +3425,7 @@ type Json = Node & {
   readonly View_detailed_roadmap: Maybe<Scalars['String']>;
   readonly View_more: Maybe<Scalars['String']>;
   readonly View_on_Github: Maybe<Scalars['String']>;
+  readonly Volume__24h_: Maybe<Scalars['String']>;
   readonly Vote_for_proposals: Maybe<Scalars['String']>;
   readonly Vote_on_proposals: Maybe<Scalars['String']>;
   readonly Vote_to_exercise_your_influence: Maybe<Scalars['String']>;
@@ -3709,6 +3745,7 @@ type JsonFieldsEnum =
   | 'Incentives___bounties'
   | 'Incentives_and_Bounties'
   | 'Incentives_and_bounties'
+  | 'Infrastructure'
   | 'Insights'
   | 'Internationalisation___Local_Language_Groups___AMAs'
   | 'Isolate_keys'
@@ -3745,7 +3782,9 @@ type JsonFieldsEnum =
   | 'Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
   | 'Leveraged_trading_with_full_cross_margining_'
   | 'Limited_Edition_Vega_swag'
+  | 'Liquidity_Fee'
   | 'Liquidity_Provision'
+  | 'Liquidity_providers_receive_a_share_of_fees_paid_during_trading_in_exchange_for_providing_liquidity_on_the_network_'
   | 'Liquidity_provision_is_fairly_rewarded_from_fee_revenue_by_the_protocol_'
   | 'Livestreams__conferences__research_office_hours_and_community_calls'
   | 'Load_more___'
@@ -3756,10 +3795,14 @@ type JsonFieldsEnum =
   | 'Mainnet_Docs'
   | 'Mainnet_status_and_incidents'
   | 'Manage_multiple_wallets_and_keys'
+  | 'Mark_Price'
+  | 'Market'
   | 'Market_Creation'
   | 'Market_Creation_with_Vega'
   | 'Market_creation'
   | 'Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'Markets'
+  | 'Markets_and_Liqudity'
   | 'Medium'
   | 'Meet'
   | 'Meet_our_contributors'
@@ -3808,6 +3851,7 @@ type JsonFieldsEnum =
   | 'Priority_consideration_on_protocol_feedback'
   | 'Privacy___Cookie_Policy'
   | 'Propose_a_futures_market_on_any_underlying_'
+  | 'Provide_Liquidity'
   | 'Provide_feedback'
   | 'Provide_liquidity'
   | 'Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
@@ -3869,8 +3913,10 @@ type JsonFieldsEnum =
   | 'Submit_bug_report'
   | 'Submit_your_proposal'
   | 'Substack'
+  | 'Supplied_Stake'
   | 'Swag'
   | 'Talks'
+  | 'Target_Stake'
   | 'Technical_overview'
   | 'Telegram'
   | 'The_Vega_Community'
@@ -3895,6 +3941,7 @@ type JsonFieldsEnum =
   | 'Tools_built_on_Vega'
   | 'Total_Staked'
   | 'Trading'
+  | 'Trading_Mode'
   | 'Translate'
   | 'Transparent_and_open_source_trading'
   | 'Tweets___Translations___Editorials___Infographics'
@@ -3947,6 +3994,7 @@ type JsonFieldsEnum =
   | 'View_detailed_roadmap'
   | 'View_more'
   | 'View_on_Github'
+  | 'Volume__24h_'
   | 'Vote_for_proposals'
   | 'Vote_on_proposals'
   | 'Vote_to_exercise_your_influence'
@@ -4309,6 +4357,7 @@ type JsonFilterInput = {
   readonly Incentives___bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Incentives_and_Bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Incentives_and_bounties: InputMaybe<StringQueryOperatorInput>;
+  readonly Infrastructure: InputMaybe<StringQueryOperatorInput>;
   readonly Insights: InputMaybe<StringQueryOperatorInput>;
   readonly Internationalisation___Local_Language_Groups___AMAs: InputMaybe<StringQueryOperatorInput>;
   readonly Isolate_keys: InputMaybe<StringQueryOperatorInput>;
@@ -4345,7 +4394,9 @@ type JsonFilterInput = {
   readonly Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_: InputMaybe<StringQueryOperatorInput>;
   readonly Leveraged_trading_with_full_cross_margining_: InputMaybe<StringQueryOperatorInput>;
   readonly Limited_Edition_Vega_swag: InputMaybe<StringQueryOperatorInput>;
+  readonly Liquidity_Fee: InputMaybe<StringQueryOperatorInput>;
   readonly Liquidity_Provision: InputMaybe<StringQueryOperatorInput>;
+  readonly Liquidity_providers_receive_a_share_of_fees_paid_during_trading_in_exchange_for_providing_liquidity_on_the_network_: InputMaybe<StringQueryOperatorInput>;
   readonly Liquidity_provision_is_fairly_rewarded_from_fee_revenue_by_the_protocol_: InputMaybe<StringQueryOperatorInput>;
   readonly Livestreams__conferences__research_office_hours_and_community_calls: InputMaybe<StringQueryOperatorInput>;
   readonly Load_more___: InputMaybe<StringQueryOperatorInput>;
@@ -4356,10 +4407,14 @@ type JsonFilterInput = {
   readonly Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
   readonly Mainnet_status_and_incidents: InputMaybe<StringQueryOperatorInput>;
   readonly Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
+  readonly Mark_Price: InputMaybe<StringQueryOperatorInput>;
+  readonly Market: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Creation: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Creation_with_Vega: InputMaybe<StringQueryOperatorInput>;
   readonly Market_creation: InputMaybe<StringQueryOperatorInput>;
   readonly Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
+  readonly Markets: InputMaybe<StringQueryOperatorInput>;
+  readonly Markets_and_Liqudity: InputMaybe<StringQueryOperatorInput>;
   readonly Medium: InputMaybe<StringQueryOperatorInput>;
   readonly Meet: InputMaybe<StringQueryOperatorInput>;
   readonly Meet_our_contributors: InputMaybe<StringQueryOperatorInput>;
@@ -4408,6 +4463,7 @@ type JsonFilterInput = {
   readonly Priority_consideration_on_protocol_feedback: InputMaybe<StringQueryOperatorInput>;
   readonly Privacy___Cookie_Policy: InputMaybe<StringQueryOperatorInput>;
   readonly Propose_a_futures_market_on_any_underlying_: InputMaybe<StringQueryOperatorInput>;
+  readonly Provide_Liquidity: InputMaybe<StringQueryOperatorInput>;
   readonly Provide_feedback: InputMaybe<StringQueryOperatorInput>;
   readonly Provide_liquidity: InputMaybe<StringQueryOperatorInput>;
   readonly Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_: InputMaybe<StringQueryOperatorInput>;
@@ -4469,8 +4525,10 @@ type JsonFilterInput = {
   readonly Submit_bug_report: InputMaybe<StringQueryOperatorInput>;
   readonly Submit_your_proposal: InputMaybe<StringQueryOperatorInput>;
   readonly Substack: InputMaybe<StringQueryOperatorInput>;
+  readonly Supplied_Stake: InputMaybe<StringQueryOperatorInput>;
   readonly Swag: InputMaybe<StringQueryOperatorInput>;
   readonly Talks: InputMaybe<StringQueryOperatorInput>;
+  readonly Target_Stake: InputMaybe<StringQueryOperatorInput>;
   readonly Technical_overview: InputMaybe<StringQueryOperatorInput>;
   readonly Telegram: InputMaybe<StringQueryOperatorInput>;
   readonly The_Vega_Community: InputMaybe<StringQueryOperatorInput>;
@@ -4495,6 +4553,7 @@ type JsonFilterInput = {
   readonly Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
   readonly Total_Staked: InputMaybe<StringQueryOperatorInput>;
   readonly Trading: InputMaybe<StringQueryOperatorInput>;
+  readonly Trading_Mode: InputMaybe<StringQueryOperatorInput>;
   readonly Translate: InputMaybe<StringQueryOperatorInput>;
   readonly Transparent_and_open_source_trading: InputMaybe<StringQueryOperatorInput>;
   readonly Tweets___Translations___Editorials___Infographics: InputMaybe<StringQueryOperatorInput>;
@@ -4547,6 +4606,7 @@ type JsonFilterInput = {
   readonly View_detailed_roadmap: InputMaybe<StringQueryOperatorInput>;
   readonly View_more: InputMaybe<StringQueryOperatorInput>;
   readonly View_on_Github: InputMaybe<StringQueryOperatorInput>;
+  readonly Volume__24h_: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_for_proposals: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_on_proposals: InputMaybe<StringQueryOperatorInput>;
   readonly Vote_to_exercise_your_influence: InputMaybe<StringQueryOperatorInput>;
@@ -5288,6 +5348,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Incentives___bounties'
   | 'frontmatter.featuredImage.childJson.Incentives_and_Bounties'
   | 'frontmatter.featuredImage.childJson.Incentives_and_bounties'
+  | 'frontmatter.featuredImage.childJson.Infrastructure'
   | 'frontmatter.featuredImage.childJson.Insights'
   | 'frontmatter.featuredImage.childJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'frontmatter.featuredImage.childJson.Isolate_keys'
@@ -5324,7 +5385,9 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
   | 'frontmatter.featuredImage.childJson.Leveraged_trading_with_full_cross_margining_'
   | 'frontmatter.featuredImage.childJson.Limited_Edition_Vega_swag'
+  | 'frontmatter.featuredImage.childJson.Liquidity_Fee'
   | 'frontmatter.featuredImage.childJson.Liquidity_Provision'
+  | 'frontmatter.featuredImage.childJson.Liquidity_providers_receive_a_share_of_fees_paid_during_trading_in_exchange_for_providing_liquidity_on_the_network_'
   | 'frontmatter.featuredImage.childJson.Liquidity_provision_is_fairly_rewarded_from_fee_revenue_by_the_protocol_'
   | 'frontmatter.featuredImage.childJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'frontmatter.featuredImage.childJson.Load_more___'
@@ -5335,10 +5398,14 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Mainnet_Docs'
   | 'frontmatter.featuredImage.childJson.Mainnet_status_and_incidents'
   | 'frontmatter.featuredImage.childJson.Manage_multiple_wallets_and_keys'
+  | 'frontmatter.featuredImage.childJson.Mark_Price'
+  | 'frontmatter.featuredImage.childJson.Market'
   | 'frontmatter.featuredImage.childJson.Market_Creation'
   | 'frontmatter.featuredImage.childJson.Market_Creation_with_Vega'
   | 'frontmatter.featuredImage.childJson.Market_creation'
   | 'frontmatter.featuredImage.childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'frontmatter.featuredImage.childJson.Markets'
+  | 'frontmatter.featuredImage.childJson.Markets_and_Liqudity'
   | 'frontmatter.featuredImage.childJson.Medium'
   | 'frontmatter.featuredImage.childJson.Meet'
   | 'frontmatter.featuredImage.childJson.Meet_our_contributors'
@@ -5387,6 +5454,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Priority_consideration_on_protocol_feedback'
   | 'frontmatter.featuredImage.childJson.Privacy___Cookie_Policy'
   | 'frontmatter.featuredImage.childJson.Propose_a_futures_market_on_any_underlying_'
+  | 'frontmatter.featuredImage.childJson.Provide_Liquidity'
   | 'frontmatter.featuredImage.childJson.Provide_feedback'
   | 'frontmatter.featuredImage.childJson.Provide_liquidity'
   | 'frontmatter.featuredImage.childJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
@@ -5448,8 +5516,10 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Submit_bug_report'
   | 'frontmatter.featuredImage.childJson.Submit_your_proposal'
   | 'frontmatter.featuredImage.childJson.Substack'
+  | 'frontmatter.featuredImage.childJson.Supplied_Stake'
   | 'frontmatter.featuredImage.childJson.Swag'
   | 'frontmatter.featuredImage.childJson.Talks'
+  | 'frontmatter.featuredImage.childJson.Target_Stake'
   | 'frontmatter.featuredImage.childJson.Technical_overview'
   | 'frontmatter.featuredImage.childJson.Telegram'
   | 'frontmatter.featuredImage.childJson.The_Vega_Community'
@@ -5474,6 +5544,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Tools_built_on_Vega'
   | 'frontmatter.featuredImage.childJson.Total_Staked'
   | 'frontmatter.featuredImage.childJson.Trading'
+  | 'frontmatter.featuredImage.childJson.Trading_Mode'
   | 'frontmatter.featuredImage.childJson.Translate'
   | 'frontmatter.featuredImage.childJson.Transparent_and_open_source_trading'
   | 'frontmatter.featuredImage.childJson.Tweets___Translations___Editorials___Infographics'
@@ -5526,6 +5597,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.View_detailed_roadmap'
   | 'frontmatter.featuredImage.childJson.View_more'
   | 'frontmatter.featuredImage.childJson.View_on_Github'
+  | 'frontmatter.featuredImage.childJson.Volume__24h_'
   | 'frontmatter.featuredImage.childJson.Vote_for_proposals'
   | 'frontmatter.featuredImage.childJson.Vote_on_proposals'
   | 'frontmatter.featuredImage.childJson.Vote_to_exercise_your_influence'
@@ -5820,6 +5892,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Incentives___bounties'
   | 'frontmatter.featuredImage.childrenJson.Incentives_and_Bounties'
   | 'frontmatter.featuredImage.childrenJson.Incentives_and_bounties'
+  | 'frontmatter.featuredImage.childrenJson.Infrastructure'
   | 'frontmatter.featuredImage.childrenJson.Insights'
   | 'frontmatter.featuredImage.childrenJson.Internationalisation___Local_Language_Groups___AMAs'
   | 'frontmatter.featuredImage.childrenJson.Isolate_keys'
@@ -5856,7 +5929,9 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_'
   | 'frontmatter.featuredImage.childrenJson.Leveraged_trading_with_full_cross_margining_'
   | 'frontmatter.featuredImage.childrenJson.Limited_Edition_Vega_swag'
+  | 'frontmatter.featuredImage.childrenJson.Liquidity_Fee'
   | 'frontmatter.featuredImage.childrenJson.Liquidity_Provision'
+  | 'frontmatter.featuredImage.childrenJson.Liquidity_providers_receive_a_share_of_fees_paid_during_trading_in_exchange_for_providing_liquidity_on_the_network_'
   | 'frontmatter.featuredImage.childrenJson.Liquidity_provision_is_fairly_rewarded_from_fee_revenue_by_the_protocol_'
   | 'frontmatter.featuredImage.childrenJson.Livestreams__conferences__research_office_hours_and_community_calls'
   | 'frontmatter.featuredImage.childrenJson.Load_more___'
@@ -5867,10 +5942,14 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Mainnet_Docs'
   | 'frontmatter.featuredImage.childrenJson.Mainnet_status_and_incidents'
   | 'frontmatter.featuredImage.childrenJson.Manage_multiple_wallets_and_keys'
+  | 'frontmatter.featuredImage.childrenJson.Mark_Price'
+  | 'frontmatter.featuredImage.childrenJson.Market'
   | 'frontmatter.featuredImage.childrenJson.Market_Creation'
   | 'frontmatter.featuredImage.childrenJson.Market_Creation_with_Vega'
   | 'frontmatter.featuredImage.childrenJson.Market_creation'
   | 'frontmatter.featuredImage.childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
+  | 'frontmatter.featuredImage.childrenJson.Markets'
+  | 'frontmatter.featuredImage.childrenJson.Markets_and_Liqudity'
   | 'frontmatter.featuredImage.childrenJson.Medium'
   | 'frontmatter.featuredImage.childrenJson.Meet'
   | 'frontmatter.featuredImage.childrenJson.Meet_our_contributors'
@@ -5919,6 +5998,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Priority_consideration_on_protocol_feedback'
   | 'frontmatter.featuredImage.childrenJson.Privacy___Cookie_Policy'
   | 'frontmatter.featuredImage.childrenJson.Propose_a_futures_market_on_any_underlying_'
+  | 'frontmatter.featuredImage.childrenJson.Provide_Liquidity'
   | 'frontmatter.featuredImage.childrenJson.Provide_feedback'
   | 'frontmatter.featuredImage.childrenJson.Provide_liquidity'
   | 'frontmatter.featuredImage.childrenJson.Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_'
@@ -5980,8 +6060,10 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Submit_bug_report'
   | 'frontmatter.featuredImage.childrenJson.Submit_your_proposal'
   | 'frontmatter.featuredImage.childrenJson.Substack'
+  | 'frontmatter.featuredImage.childrenJson.Supplied_Stake'
   | 'frontmatter.featuredImage.childrenJson.Swag'
   | 'frontmatter.featuredImage.childrenJson.Talks'
+  | 'frontmatter.featuredImage.childrenJson.Target_Stake'
   | 'frontmatter.featuredImage.childrenJson.Technical_overview'
   | 'frontmatter.featuredImage.childrenJson.Telegram'
   | 'frontmatter.featuredImage.childrenJson.The_Vega_Community'
@@ -6006,6 +6088,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Tools_built_on_Vega'
   | 'frontmatter.featuredImage.childrenJson.Total_Staked'
   | 'frontmatter.featuredImage.childrenJson.Trading'
+  | 'frontmatter.featuredImage.childrenJson.Trading_Mode'
   | 'frontmatter.featuredImage.childrenJson.Translate'
   | 'frontmatter.featuredImage.childrenJson.Transparent_and_open_source_trading'
   | 'frontmatter.featuredImage.childrenJson.Tweets___Translations___Editorials___Infographics'
@@ -6058,6 +6141,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.View_detailed_roadmap'
   | 'frontmatter.featuredImage.childrenJson.View_more'
   | 'frontmatter.featuredImage.childrenJson.View_on_Github'
+  | 'frontmatter.featuredImage.childrenJson.Volume__24h_'
   | 'frontmatter.featuredImage.childrenJson.Vote_for_proposals'
   | 'frontmatter.featuredImage.childrenJson.Vote_on_proposals'
   | 'frontmatter.featuredImage.childrenJson.Vote_to_exercise_your_influence'
@@ -9884,6 +9968,7 @@ type Query_jsonArgs = {
   Incentives___bounties: InputMaybe<StringQueryOperatorInput>;
   Incentives_and_Bounties: InputMaybe<StringQueryOperatorInput>;
   Incentives_and_bounties: InputMaybe<StringQueryOperatorInput>;
+  Infrastructure: InputMaybe<StringQueryOperatorInput>;
   Insights: InputMaybe<StringQueryOperatorInput>;
   Internationalisation___Local_Language_Groups___AMAs: InputMaybe<StringQueryOperatorInput>;
   Isolate_keys: InputMaybe<StringQueryOperatorInput>;
@@ -9920,7 +10005,9 @@ type Query_jsonArgs = {
   Let_us_know_when_things_aren_t_working_for_you__if_you_need_a_break__that_s_okay_: InputMaybe<StringQueryOperatorInput>;
   Leveraged_trading_with_full_cross_margining_: InputMaybe<StringQueryOperatorInput>;
   Limited_Edition_Vega_swag: InputMaybe<StringQueryOperatorInput>;
+  Liquidity_Fee: InputMaybe<StringQueryOperatorInput>;
   Liquidity_Provision: InputMaybe<StringQueryOperatorInput>;
+  Liquidity_providers_receive_a_share_of_fees_paid_during_trading_in_exchange_for_providing_liquidity_on_the_network_: InputMaybe<StringQueryOperatorInput>;
   Liquidity_provision_is_fairly_rewarded_from_fee_revenue_by_the_protocol_: InputMaybe<StringQueryOperatorInput>;
   Livestreams__conferences__research_office_hours_and_community_calls: InputMaybe<StringQueryOperatorInput>;
   Load_more___: InputMaybe<StringQueryOperatorInput>;
@@ -9931,10 +10018,14 @@ type Query_jsonArgs = {
   Mainnet_Docs: InputMaybe<StringQueryOperatorInput>;
   Mainnet_status_and_incidents: InputMaybe<StringQueryOperatorInput>;
   Manage_multiple_wallets_and_keys: InputMaybe<StringQueryOperatorInput>;
+  Mark_Price: InputMaybe<StringQueryOperatorInput>;
+  Market: InputMaybe<StringQueryOperatorInput>;
   Market_Creation: InputMaybe<StringQueryOperatorInput>;
   Market_Creation_with_Vega: InputMaybe<StringQueryOperatorInput>;
   Market_creation: InputMaybe<StringQueryOperatorInput>;
   Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
+  Markets: InputMaybe<StringQueryOperatorInput>;
+  Markets_and_Liqudity: InputMaybe<StringQueryOperatorInput>;
   Medium: InputMaybe<StringQueryOperatorInput>;
   Meet: InputMaybe<StringQueryOperatorInput>;
   Meet_our_contributors: InputMaybe<StringQueryOperatorInput>;
@@ -9983,6 +10074,7 @@ type Query_jsonArgs = {
   Priority_consideration_on_protocol_feedback: InputMaybe<StringQueryOperatorInput>;
   Privacy___Cookie_Policy: InputMaybe<StringQueryOperatorInput>;
   Propose_a_futures_market_on_any_underlying_: InputMaybe<StringQueryOperatorInput>;
+  Provide_Liquidity: InputMaybe<StringQueryOperatorInput>;
   Provide_feedback: InputMaybe<StringQueryOperatorInput>;
   Provide_liquidity: InputMaybe<StringQueryOperatorInput>;
   Provide_sufficient_information__for_example__a_detailed_description_including_logs__how_to_reproduce_the_vulnerability__scripts__screenshots__etc___so_that_the_security_issue_can_be_addressed_as_effectively_as_possible_: InputMaybe<StringQueryOperatorInput>;
@@ -10044,8 +10136,10 @@ type Query_jsonArgs = {
   Submit_bug_report: InputMaybe<StringQueryOperatorInput>;
   Submit_your_proposal: InputMaybe<StringQueryOperatorInput>;
   Substack: InputMaybe<StringQueryOperatorInput>;
+  Supplied_Stake: InputMaybe<StringQueryOperatorInput>;
   Swag: InputMaybe<StringQueryOperatorInput>;
   Talks: InputMaybe<StringQueryOperatorInput>;
+  Target_Stake: InputMaybe<StringQueryOperatorInput>;
   Technical_overview: InputMaybe<StringQueryOperatorInput>;
   Telegram: InputMaybe<StringQueryOperatorInput>;
   The_Vega_Community: InputMaybe<StringQueryOperatorInput>;
@@ -10070,6 +10164,7 @@ type Query_jsonArgs = {
   Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
   Total_Staked: InputMaybe<StringQueryOperatorInput>;
   Trading: InputMaybe<StringQueryOperatorInput>;
+  Trading_Mode: InputMaybe<StringQueryOperatorInput>;
   Translate: InputMaybe<StringQueryOperatorInput>;
   Transparent_and_open_source_trading: InputMaybe<StringQueryOperatorInput>;
   Tweets___Translations___Editorials___Infographics: InputMaybe<StringQueryOperatorInput>;
@@ -10122,6 +10217,7 @@ type Query_jsonArgs = {
   View_detailed_roadmap: InputMaybe<StringQueryOperatorInput>;
   View_more: InputMaybe<StringQueryOperatorInput>;
   View_on_Github: InputMaybe<StringQueryOperatorInput>;
+  Volume__24h_: InputMaybe<StringQueryOperatorInput>;
   Vote_for_proposals: InputMaybe<StringQueryOperatorInput>;
   Vote_on_proposals: InputMaybe<StringQueryOperatorInput>;
   Vote_to_exercise_your_influence: InputMaybe<StringQueryOperatorInput>;
