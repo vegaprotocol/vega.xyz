@@ -53,6 +53,7 @@ const GovernancePage = ({ data }) => {
             type, for example{' '}
             <NetworkParameter
               param="governance_proposal_market_minProposerBalance"
+              formatForVega={true}
               suffix=" $VEGA"
             />{' '}
             for a new market proposal.
@@ -80,6 +81,7 @@ const GovernancePage = ({ data }) => {
             example{' '}
             <NetworkParameter
               param="governance_proposal_market_minVoterBalance"
+              formatForVega={true}
               suffix=" $VEGA"
             ></NetworkParameter>{' '}
             for a new market proposal. Each public key is eligible for one vote.
