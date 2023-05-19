@@ -2,35 +2,39 @@ import React from 'react'
 import NavigationItem from '../Item'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import NavigationHeading from '../Heading'
+import NavigationList from '../List'
 
 const Use = () => {
   const { t } = useTranslation('component.navigation')
   return (
     <ul className="gap-6 lg:grid lg:grid-cols-2">
-      <div className="lg:col-span-1">
+      <div>
         <NavigationHeading>
           <Trans t={t}>Infrastructure</Trans>
         </NavigationHeading>
-
-        <NavigationItem text={t('Use the network')} link="/use" />
-        <NavigationItem text={t('Get the Vega Wallet')} link="/wallet" />
-        <NavigationItem
-          text={t('Validate and secure the network')}
-          link="/validators"
-        />
+        <NavigationList>
+          <NavigationItem text={t('Use the network')} link="/use" />
+          <NavigationItem text={t('Get the Vega Wallet')} link="/wallet" />
+          <NavigationItem
+            text={t('Validate and secure the network')}
+            link="/validators"
+          />
+        </NavigationList>
       </div>
-      <div className="lg:col-span-1">
+      <div>
         <NavigationHeading>
           <Trans t={t}>Trading</Trans>
         </NavigationHeading>
-        <NavigationItem
-          text={t('Experiment on Fairground Testnet')}
-          link="https://fairground.wtf"
-        />
-        <NavigationItem
+        <NavigationList>
+          <NavigationItem
+            text={t('Experiment on Fairground Testnet')}
+            link="https://fairground.wtf"
+          />
+          {/* <NavigationItem
           text={t('Liquidity Provision')}
           link="/liquidity-provision"
-        />
+        /> */}
+        </NavigationList>
       </div>
     </ul>
   )

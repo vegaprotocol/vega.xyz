@@ -737,6 +737,7 @@ type FileFieldsEnum =
   | 'childJson.Completely_decentralised_network'
   | 'childJson.Connect'
   | 'childJson.Connect_to_networks'
+  | 'childJson.Console'
   | 'childJson.Content_collective'
   | 'childJson.Contribute'
   | 'childJson.Contribute_and_get_rewarded'
@@ -1532,6 +1533,7 @@ type FileFieldsEnum =
   | 'childrenJson.Completely_decentralised_network'
   | 'childrenJson.Connect'
   | 'childrenJson.Connect_to_networks'
+  | 'childrenJson.Console'
   | 'childrenJson.Content_collective'
   | 'childrenJson.Contribute'
   | 'childrenJson.Contribute_and_get_rewarded'
@@ -3023,6 +3025,7 @@ type Json = Node & {
   readonly Completely_decentralised_network: Maybe<Scalars['String']>;
   readonly Connect: Maybe<Scalars['String']>;
   readonly Connect_to_networks: Maybe<Scalars['String']>;
+  readonly Console: Maybe<Scalars['String']>;
   readonly Content_collective: Maybe<Scalars['String']>;
   readonly Contribute: Maybe<Scalars['String']>;
   readonly Contribute_and_get_rewarded: Maybe<Scalars['String']>;
@@ -3592,6 +3595,7 @@ type JsonFieldsEnum =
   | 'Completely_decentralised_network'
   | 'Connect'
   | 'Connect_to_networks'
+  | 'Console'
   | 'Content_collective'
   | 'Contribute'
   | 'Contribute_and_get_rewarded'
@@ -4204,6 +4208,7 @@ type JsonFilterInput = {
   readonly Completely_decentralised_network: InputMaybe<StringQueryOperatorInput>;
   readonly Connect: InputMaybe<StringQueryOperatorInput>;
   readonly Connect_to_networks: InputMaybe<StringQueryOperatorInput>;
+  readonly Console: InputMaybe<StringQueryOperatorInput>;
   readonly Content_collective: InputMaybe<StringQueryOperatorInput>;
   readonly Contribute: InputMaybe<StringQueryOperatorInput>;
   readonly Contribute_and_get_rewarded: InputMaybe<StringQueryOperatorInput>;
@@ -5195,6 +5200,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Completely_decentralised_network'
   | 'frontmatter.featuredImage.childJson.Connect'
   | 'frontmatter.featuredImage.childJson.Connect_to_networks'
+  | 'frontmatter.featuredImage.childJson.Console'
   | 'frontmatter.featuredImage.childJson.Content_collective'
   | 'frontmatter.featuredImage.childJson.Contribute'
   | 'frontmatter.featuredImage.childJson.Contribute_and_get_rewarded'
@@ -5739,6 +5745,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Completely_decentralised_network'
   | 'frontmatter.featuredImage.childrenJson.Connect'
   | 'frontmatter.featuredImage.childrenJson.Connect_to_networks'
+  | 'frontmatter.featuredImage.childrenJson.Console'
   | 'frontmatter.featuredImage.childrenJson.Content_collective'
   | 'frontmatter.featuredImage.childrenJson.Contribute'
   | 'frontmatter.featuredImage.childrenJson.Contribute_and_get_rewarded'
@@ -9815,6 +9822,7 @@ type Query_jsonArgs = {
   Completely_decentralised_network: InputMaybe<StringQueryOperatorInput>;
   Connect: InputMaybe<StringQueryOperatorInput>;
   Connect_to_networks: InputMaybe<StringQueryOperatorInput>;
+  Console: InputMaybe<StringQueryOperatorInput>;
   Content_collective: InputMaybe<StringQueryOperatorInput>;
   Contribute: InputMaybe<StringQueryOperatorInput>;
   Contribute_and_get_rewarded: InputMaybe<StringQueryOperatorInput>;
