@@ -33,7 +33,7 @@ const NetworkParameter = ({
     if (formatForVega) {
       return formatVegaValue(value)
     } else if (expressPercentage) {
-      return value * 100
+      return Math.round(value * 100)
     } else {
       return value
     }

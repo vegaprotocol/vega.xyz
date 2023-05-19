@@ -101,9 +101,17 @@ const GovernancePage = ({ data }) => {
             enacted (with the exception of free form proposals). The thresholds
             differ by proposal type, for example a new market proposal requires
             participation of{' '}
-            <NetworkParameter param="governance_proposal_market_requiredParticipation" />{' '}
+            <NetworkParameter
+              param="governance_proposal_market_requiredParticipation"
+              expressPercentage={true}
+              suffix="%"
+            />{' '}
             and a majority of{' '}
-            <NetworkParameter param="governance_proposal_market_requiredMajority" />
+            <NetworkParameter
+              param="governance_proposal_market_requiredMajority"
+              expressPercentage={true}
+              suffix="%"
+            />
             .
           </Trans>
         </p>
