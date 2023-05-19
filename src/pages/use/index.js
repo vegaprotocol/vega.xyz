@@ -1,280 +1,291 @@
-import React, { useState, useEffect, useRef } from "react";
-import { graphql } from "gatsby";
-import Seo from "../../components/Seo";
-import Layout from "../../components/Layout";
-import Container from "../../components/Container";
-import TranslationsBanner from "../../components/TranslationsBanner";
-import GlitchTitle from "../../components/GlitchTitle";
-import CalloutHero from "../../components/CalloutHero";
-import BoxTitle from "../../components/BoxTitle";
-import Fairground from "../../components/Fairground";
-import ToolBox from "../../components/ToolBox";
-import { getImage } from "gatsby-plugin-image";
-import AddGraphic from "../../components/Svg/Use/Add/Add";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React, { useState, useEffect, useRef } from 'react'
+import { graphql } from 'gatsby'
+import Seo from '../../components/Seo'
+import Layout from '../../components/Layout'
+import Container from '../../components/Container'
+import TranslationsBanner from '../../components/TranslationsBanner'
+import GlitchTitle from '../../components/GlitchTitle'
+import CalloutHero from '../../components/CalloutHero'
+import Callout from '../../components/UI/Callout'
+import BoxTitle from '../../components/BoxTitle'
+import Fairground from '../../components/Fairground'
+import ToolBox from '../../components/ToolBox'
+import { getImage } from 'gatsby-plugin-image'
+import AddGraphic from '../../components/Svg/Use/Add/Add'
+import { routeThroughInterstitialPage } from '../../utils/tools'
+import { Link, Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const UsePage = ({ data }) => {
-  const { t, i18n } = useTranslation("page.use");
-  const [missingTranslations, setMissingTranslations] = useState(false);
-  const tabs = useRef(null);
-  const [filter, setFilter] = useState(null);
+  const { t, i18n } = useTranslation('page.use')
+  const [missingTranslations, setMissingTranslations] = useState(false)
+  const tabs = useRef(null)
+  const [filter, setFilter] = useState(null)
 
   const changeFilter = (filter) => {
-    setFilter(filter);
-  };
+    setFilter(filter)
+  }
 
-  i18n.on("missingKey", (lng) => {
-    setMissingTranslations(true);
-  });
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   useEffect(() => {
     if (filter) {
       for (let el of tabs.current.children) {
-        el.classList.add("hidden");
+        el.classList.add('hidden')
       }
 
       tabs.current
         .querySelectorAll(`div.${filter}`)
-        .forEach((el) => el.classList.remove("hidden"));
+        .forEach((el) => el.classList.remove('hidden'))
     } else {
       for (let el of tabs.current.children) {
-        el.classList.remove("hidden");
+        el.classList.remove('hidden')
       }
     }
-  }, [filter, tabs]);
+  }, [filter, tabs])
+
+  // t('wallets')
+  // t('governance')
+  // t('staking')
+  // t('trading')
+  // t('network')
 
   const tools = [
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.desktopWalletIcon,
-      title: "Desktop Wallet",
-      author: "Vega",
-      link: "/wallet/",
-      description:
-        "An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.",
-      category: "WALLET",
+      title: 'Desktop Wallet',
+      author: 'Vega',
+      link: '/wallet/',
+      description: t(
+        'An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.'
+      ),
+      categories: ['wallets', 'governance', 'staking', 'trading'],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.consoleIcon,
-      title: "Console",
-      author: "Vega",
-      link: "https://console.fairground.wtf/",
-      description: "A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).",
-      category: "DAPP",
+      title: 'Console',
+      author: 'Vega',
+      link: 'https://console.fairground.wtf/',
+      description: t(
+        'A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).'
+      ),
+      categories: ['trading'],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.governanceIcon,
-      title: "Governance",
-      author: "Vega",
-      link: "https://token.vega.xyz/governance",
-      description: "Review and vote on governance proposals.",
-      category: "TOOL",
+      title: 'Governance',
+      author: 'Vega',
+      link: 'https://governance.vega.xyz/proposals',
+      description: t('Review and vote on governance proposals.'),
+      categories: ['governance'],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.blockExplorerIcon,
-      title: "Block Explorer",
-      author: "Vega",
-      link: "https://explorer.vega.xyz/",
-      description:
-        "Dashboard with real-time information about the Vega blockchain.",
-      category: "TOOL",
+      title: 'Block Explorer',
+      author: 'Vega',
+      link: 'https://explorer.vega.xyz/',
+      description: t(
+        'Dashboard with real-time information about the Vega blockchain.'
+      ),
+      categories: ['network'],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.stakingIcon,
-      title: "Staking",
-      author: "Vega",
-      link: "https://token.vega.xyz/staking",
-      description: "Stake $VEGA tokens and get rewarded.",
-      category: "TOOL",
+      title: 'Staking',
+      author: 'Vega',
+      link: 'https://governance.vega.xyz/validators',
+      description: t('Stake $VEGA tokens and get rewarded.'),
+      categories: ['governance', 'staking'],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.cliWalletIcon,
-      title: "CLI Wallet",
-      author: "Vega",
-      link: "https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet",
-      description:
-        "Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.",
-      category: "WALLET",
+      title: 'CLI Wallet',
+      author: 'Vega',
+      link: 'https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet',
+      description: t(
+        'Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.'
+      ),
+      categories: ['wallets'],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.nodesGuruIcon,
-      title: "Vega World",
-      author: "Nodes Guru",
-      link: "https://nodes.guru/vega",
-      description: "Who the validators are and reward history, stake history.",
-      category: "TOOL",
+      title: 'Vega World',
+      author: 'Nodes Guru',
+      link: 'https://nodes.guru/vega',
+      description: 'Who the validators are and reward history, stake history.',
+      categories: ['staking'],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.vestingIcon,
-      title: "Vesting",
-      author: "Vega",
-      link: "https://token.vega.xyz/vesting",
-      description: "Redeem locked vega tokens.",
-      category: "TOOL",
+      title: 'Vesting',
+      author: 'Vega',
+      link: 'https://governance.vega.xyz/token/redeem',
+      description: t('Redeem locked vega tokens.'),
+      categories: [],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.dataNodeIcon,
-      title: "Data Node",
-      author: "Vega",
-      link: "https://github.com/vegaprotocol/data-node",
-      description: "Query the Vega network APIs to retrieve on chain data.",
-      category: "TOOL",
+      title: 'Data Node',
+      author: 'Vega',
+      link: 'https://github.com/vegaprotocol/data-node',
+      description: t('Query the Vega network APIs to retrieve on chain data.'),
+      categories: ['network'],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.vegaCapsuleIcon,
-      title: "Vega Capsule",
-      author: "Vega",
-      link: "https://github.com/vegaprotocol/vegacapsule",
-      description:
-        "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.",
-      category: "TOOL",
+      title: 'Vega Capsule',
+      author: 'Vega',
+      link: 'https://github.com/vegaprotocol/vegacapsule',
+      description: t(
+        'Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.'
+      ),
+      categories: ['trading'],
     },
     {
-      collection: "tools",
+      collection: 'tools',
       icon: data.vegaValidatorsIcon,
-      title: "Vega Validators and Delegators",
-      author: "XPRV",
-      link: "https://xprv-0.github.io/",
-      description: "Validators performance scores in a given Epoch.",
-      category: "TOOL",
+      title: 'Vega Validators and Delegators',
+      author: 'XPRV',
+      link: 'https://xprv-0.github.io/',
+      description: t('Validators performance scores in a given Epoch.'),
+      categories: ['staking'],
     },
-  ];
-
-  // t('Desktop Wallet')
-  // t('An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.')
-  // t('Console')
-  // t('A dApp for trading on the Vega network (Testnet).')
-  // t('Governance')
-  // t('Review and vote on governance proposals.')
-  // t('Block Explorer')
-  // t('Dashboard with real-time information about the Vega blockchain.')
-  // t('Staking')
-  // t('Stake $VEGA tokens and get rewarded.')
-  // t('CLI Wallet')
-  // t('Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.')
-  // t('Vega World')
-  // t('Who the validators are and reward history, stake history.')
-  // t('Vesting')
-  // t('Redeem locked vega tokens.')
-  // t('Data Node')
-  // t('Query the Vega network APIs to retrieve on chain data.')
-  // t('Vega Capsule')
-  // t('Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.')
-  // t('Vega Validators and Delegators')
-  // t('Validators performance scores in a given Epoch.')
-  // t('WALLET')
-  // t('DAPP')
-  // t('TOOL')
+  ]
 
   return (
     <Layout>
       <Seo
-        title={t("Use the network")}
+        title={t('Use the network')}
         description={t(
-          "Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy."
+          'Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <Container>
-        <div className="my-10">
-          <CalloutHero
-            title={t("The Vega mainnet is live, trading launch H2 2022")}
-            text={t(
-              "Token holders can participate in governance, stake and delegate."
-            )}
-            buttonText={t("View the Roadmap")}
-            buttonLink="/#roadmap"
-          />
-        </div>
-      </Container>
-      <Container dataCy={"main"}>
-        <div className="text-center mb-8 md:mb-12 pt-6 md:pt-16">
-          <div className="max-w-[61rem] mx-auto text-center">
+      <Container dataCy={'main'}>
+        <div className="mb-8 pt-6 text-center md:mb-12 md:pt-16">
+          <div className="mx-auto max-w-[61rem] text-center">
             <h1>
-              <BoxTitle text={t("Use Vega")} />
+              <BoxTitle text={t('Use Vega')} />
             </h1>
             <GlitchTitle
               level="2"
               color="red"
-              className="title-m md:title-l lg:title-xl mb-4 md:mb-6 mt-4 text-center"
+              className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
             >
               <Trans t={t}>Tools built on Vega</Trans>
             </GlitchTitle>
           </div>
         </div>
-        <div className="max-w-[90rem] md:px-6 lg:px-8 mx-auto">
-          <div className="text-center mx-auto border-b overflow-x-scroll whitespace-nowrap md:whitespace-normal overflow-y-hidden border-vega-mid-grey md:flex md:justify-center md:gap-x-8 px-6">
+        <div className="mx-auto max-w-[90rem] md:px-6 lg:px-8">
+          <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap border-b border-vega-mid-grey px-6 text-center md:flex md:justify-center md:gap-x-8 md:whitespace-normal">
             <button
               tabIndex={0}
               onClick={() => changeFilter(null)}
-              className={`inline-block title-s px-3 py-5 border-b-2 ${
+              className={`title-s inline-block border-b-2 px-3 py-5 ${
                 filter === null
-                  ? "border-current"
-                  : "border-transparent hover:border-current"
+                  ? 'border-current'
+                  : 'border-transparent hover:border-current'
               }`}
             >
               <Trans t={t}>All</Trans>
             </button>
             <button
               tabIndex={0}
-              onClick={() => changeFilter("wallet")}
-              className={`inline-block title-s px-3 py-5 border-b-2 ${
-                filter === "wallet"
-                  ? "border-current"
-                  : "border-transparent over:border-current"
+              onClick={() => changeFilter('wallets')}
+              className={`title-s inline-block border-b-2 px-3 py-5 ${
+                filter === 'wallets'
+                  ? 'border-current'
+                  : 'over:border-current border-transparent'
               }`}
             >
               <Trans t={t}>Wallets</Trans>
             </button>
             <button
               tabIndex={0}
-              onClick={() => changeFilter("dapp")}
-              className={`inline-block title-s px-3 py-5 border-b-2 ${
-                filter === "dapp"
-                  ? "border-current"
-                  : "border-transparent hover:border-current"
+              onClick={() => changeFilter('governance')}
+              className={`title-s inline-block border-b-2 px-3 py-5 ${
+                filter === 'governance'
+                  ? 'border-current'
+                  : 'border-transparent hover:border-current'
               }`}
             >
-              <Trans t={t}>dApps</Trans>
+              <Trans t={t}>Governance</Trans>
             </button>
             <button
               tabIndex={0}
-              onClick={() => changeFilter("tool")}
-              className={`inline-block title-s px-3 py-5 border-b-2 ${
-                filter === "tool"
-                  ? "border-current"
-                  : "border-transparent hover:border-current"
+              onClick={() => changeFilter('staking')}
+              className={`title-s inline-block border-b-2 px-3 py-5 ${
+                filter === 'staking'
+                  ? 'border-current'
+                  : 'border-transparent hover:border-current'
               }`}
             >
-              <Trans t={t}>Tools</Trans>
+              <Trans t={t}>Staking</Trans>
+            </button>
+            <button
+              tabIndex={0}
+              onClick={() => changeFilter('trading')}
+              className={`title-s inline-block border-b-2 px-3 py-5 ${
+                filter === 'trading'
+                  ? 'border-current'
+                  : 'border-transparent hover:border-current'
+              }`}
+            >
+              <Trans t={t}>Trading</Trans>
+            </button>
+            <button
+              tabIndex={0}
+              onClick={() => changeFilter('network')}
+              className={`title-s inline-block border-b-2 px-3 py-5 ${
+                filter === 'network'
+                  ? 'border-current'
+                  : 'border-transparent hover:border-current'
+              }`}
+            >
+              <Trans t={t}>Network</Trans>
             </button>
           </div>
         </div>
+        {filter === 'governance' && (
+          <Callout
+            className="mt-space-8"
+            title={t('Vega is governed by its token holders')}
+            subtitle={t(
+              'Token holders propose changes, vote on proposals, create markets, and support validators by staking'
+            )}
+            link="/governance"
+            linkText={t('Learn more')}
+          />
+        )}
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10 py-16 md:mb-12"
+          className="grid grid-cols-1 gap-4 py-16 md:mb-12 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10"
           ref={tabs}
         >
           {tools.map((tool, idx) => (
             <div
-              className={`${tool.category.toLowerCase()} max-w-[26rem] w-full mx-auto md:max-w-none`}
+              className={`${tool.categories.join(
+                ' '
+              )} mx-auto w-full max-w-[26rem] md:max-w-none`}
               key={idx}
             >
               <ToolBox
                 icon={getImage(tool.icon)}
-                title={t(tool.title)}
+                title={tool.title}
                 link={tool.link}
                 author={tool.author}
-                text={t(tool.description)}
-                category={t(tool.category)}
+                text={tool.description}
+                categories={tool.categories.map((category) => t(category))}
               />
             </div>
           ))}
@@ -284,7 +295,7 @@ const UsePage = ({ data }) => {
             <p className="title-m mb-3">
               <Trans t={t}>Want to add something to this list?</Trans>
             </p>
-            <p className="prose copy-s text-vega-mid-grey">
+            <p className="copy-s prose text-vega-mid-grey">
               <Trans t={t}>
                 <a
                   href="https://vega.xyz/discord/"
@@ -292,12 +303,12 @@ const UsePage = ({ data }) => {
                   rel="noreferrer"
                 >
                   Chat to us on Discord
-                </a>{" "}
+                </a>{' '}
                 and <Link to="/develop">start building</Link>.
               </Trans>
             </p>
           </div>
-          <AddGraphic className="max-w-[16rem] w-full self-end" />
+          <AddGraphic className="w-full max-w-[16rem] self-end" />
         </div>
       </Container>
 
@@ -305,10 +316,10 @@ const UsePage = ({ data }) => {
         <Fairground />
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default UsePage;
+export default UsePage
 
 export const query = graphql`
   query ($language: String!) {
@@ -438,4 +449,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

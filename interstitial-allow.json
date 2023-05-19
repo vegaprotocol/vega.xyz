@@ -1,0 +1,8 @@
+{
+  "ipfsGateway": "https://#1#.#2#.dweb.link/",
+  "allowedSites": [
+    "https://console.fairground.wtf"
+  ],
+  "allowedIPFS": [],
+  "allowedIPNS": []
+}

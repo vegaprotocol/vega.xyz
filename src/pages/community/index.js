@@ -8,7 +8,7 @@ import ButtonLink from '../../components/ButtonLink'
 import BoxTitle from '../../components/BoxTitle'
 import Fairground from '../../components/Fairground'
 import LeadingLine from '../../components/LeadingLine'
-import Callout from '../../components/Callout'
+import Callout from '../../components/UI/Callout'
 import { getImage } from 'gatsby-plugin-image'
 import CommunityResponsive from '../../components/Svg/Community/Hero/Responsive'
 import ToolBox from '../../components/ToolBox'
@@ -96,7 +96,7 @@ const CommunityPage = ({ data }) => {
             text={t(
               "Roll up! Roll up! Vega's bi-weekly highlights newsletter."
             )}
-            link="https://vegacommunity.substack.com/subscribe"
+            link="https://vegacommunity.substack.com"
             icon={getImage(data.iconSubstack)}
           />
           <ToolBox
@@ -119,16 +119,25 @@ const CommunityPage = ({ data }) => {
             link="https://medium.com/@Vega_Protocol"
             icon={getImage(data.iconMedium)}
           />
+          <ToolBox
+            title={t('Github')}
+            text={t(
+              'Explore our online repositories, or collaborate with the Vega teams.'
+            )}
+            link="https://github.com/vegaprotocol"
+            icon={getImage(data.iconGithub)}
+          />
         </div>
 
         <Callout
           title={t('Upcoming events')}
-          text={t(
+          subtitle={t(
             'Livestreams, conferences, research office hours and community calls'
           )}
           linkText={t('Events and meetups')}
           link="/community/events"
           image={getImage(data.eventsGraphic)}
+          className="mb-space-10"
         />
 
         <h2 className="title-m font-glitched md:title-l mb-14">
@@ -172,7 +181,7 @@ const CommunityPage = ({ data }) => {
               'Contribute to the source code, and get building with our APIs.'
             )}
             link="https://github.com/vegaprotocol/"
-            icon={getImage(data.iconGithub)}
+            icon={getImage(data.iconWhereGithub)}
           />
           <ToolBox
             title={t('Docs')}
@@ -184,10 +193,11 @@ const CommunityPage = ({ data }) => {
 
         <Callout
           title={t('Incentives')}
-          text={t('Get rewarded for your efforts testing the network')}
+          subtitle={t('Get rewarded for your efforts testing the network')}
           linkText={t('Earn rewards')}
-          link="/community/incentives-bounties"
+          link="https://fairground.wtf/"
           image={getImage(data.incentivesGraphic)}
+          className="mb-space-10"
         />
       </Container>
       <Fairground />
@@ -298,6 +308,15 @@ export const query = graphql`
         )
       }
     }
+    iconGithub: file(relativePath: { eq: "social-icons/github.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
     iconAmbassador: file(
       relativePath: { eq: "contribute-icons/ambassador.png" }
     ) {
@@ -340,7 +359,7 @@ export const query = graphql`
         )
       }
     }
-    iconGithub: file(relativePath: { eq: "contribute-icons/github.png" }) {
+    iconWhereGithub: file(relativePath: { eq: "contribute-icons/github.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 96

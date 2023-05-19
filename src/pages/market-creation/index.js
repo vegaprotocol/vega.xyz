@@ -6,10 +6,8 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import MarketCreationResponsive from '../../components/Svg/MarketCreation/Hero/Responsive'
-import PageSection from '../../components/PageSection'
 import MarketCreationFooter from '../../components/Svg/MarketCreation/Footer'
 import BoxTitle from '../../components/BoxTitle'
-import ButtonLink from '../../components/ButtonLink'
 import GlitchTitle from '../../components/GlitchTitle'
 import BoxLinkSimple from '../../components/BoxLinkSimple'
 import LeadingLine from '../../components/LeadingLine'
@@ -23,6 +21,7 @@ import Phase5 from '../../components/Svg/MarketCreation/Process/Phase5'
 import Phase6 from '../../components/Svg/MarketCreation/Process/Phase6'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import Callout from '../../components/UI/Callout'
+import { routeThroughInterstitialPage } from '../../utils/tools'
 
 const MarketCreationPage = ({ data }) => {
   const { i18n, t } = useTranslation('page.market-creation')
@@ -92,11 +91,11 @@ const MarketCreationPage = ({ data }) => {
       ),
       links: [
         {
-          title: t('Start a topic on the forum (Testnet)'),
-          url: 'https://community.vega.xyz/c/fairground-testnet-governance/32',
+          title: t('Start a topic on the forum'),
+          url: 'https://community.vega.xyz/c/governance/market-proposals/28',
         },
         {
-          title: t('See what markets exist already (Testnet)'),
+          title: t('See some example markets (Testnet)'),
           url: 'https://console.fairground.wtf/#/markets',
         },
       ],
@@ -110,12 +109,12 @@ const MarketCreationPage = ({ data }) => {
       ),
       links: [
         {
-          title: t('Read the docs to make a proposal (Testnet)'),
-          url: 'https://docs.vega.xyz/testnet/tutorials/proposals/new-market-proposal',
+          title: t('Read the docs to make a proposal'),
+          url: 'https://docs.vega.xyz/mainnet/tutorials/proposals/new-market-proposal',
         },
         {
-          title: t('Check out the forum (Testnet)'),
-          url: 'https://community.vega.xyz/c/fairground-testnet-governance/32',
+          title: t('Check out the forum'),
+          url: 'https://community.vega.xyz/c/governance/market-proposals/28',
         },
       ],
       image: <Phase2 />,
@@ -126,12 +125,8 @@ const MarketCreationPage = ({ data }) => {
       component: <Phase3Text />,
       links: [
         {
-          title: t('Read the docs to make a proposal (Testnet)'),
-          url: 'https://docs.vega.xyz/testnet/tutorials/proposals/new-market-proposal',
-        },
-        {
-          title: t('Submit your proposal (Testnet)'),
-          url: 'https://token.fairground.wtf/governance/propose/new-market',
+          title: t('Read the docs to make a proposal'),
+          url: 'https://docs.vega.xyz/mainnet/tutorials/proposals/new-market-proposal',
         },
       ],
       image: <Phase3 />,
@@ -142,8 +137,8 @@ const MarketCreationPage = ({ data }) => {
       component: <Phase4Text />,
       links: [
         {
-          title: t('Vote for proposals (Testnet)'),
-          url: 'https://token.fairground.wtf/governance/',
+          title: t('Vote for proposals'),
+          url: 'https://governance.vega.xyz/proposals',
         },
       ],
       image: <Phase4 />,
@@ -156,8 +151,8 @@ const MarketCreationPage = ({ data }) => {
       ),
       links: [
         {
-          title: t('Read the docs about liquidity provision (Testnet)'),
-          url: 'https://docs.vega.xyz/testnet/tutorials/committing-liquidity',
+          title: t('Read the docs about liquidity provision'),
+          url: 'https://docs.vega.xyz/mainnet/concepts/liquidity/provision',
         },
       ],
       image: <Phase5 />,

@@ -236,7 +236,7 @@ const BugBountiesPage = ({ data }) => {
                     <textarea
                       ref={form}
                       required
-                      className="font-not-glitched mb-6 w-full bg-vega-box-grey p-3 focus:outline-vega-pink border border-white/20 focus:border-white/20"
+                      className="font-not-glitched mb-6 w-full bg-vega-box-grey p-3 focus:outline-vega-pink border border-white/20 focus:border-white/20" data-cy={'bugBountyForm'}
                       rows="15"
                       onChange={(e) => {
                         setMessage(e.target.value);
@@ -247,13 +247,13 @@ const BugBountiesPage = ({ data }) => {
                       <div className="text-vega-pink">{formError.message}</div>
                     )}
                     {confirmationMessage !== "" && (
-                      <div className="text-vega-mint">
+                      <div className="text-vega-mint" data-cy={'confirmationMsg'}>
                         {confirmationMessage}
                       </div>
                     )}
                     <br />
                     <button
-                      className="inline-block px-8 py-3 leading-1 text-[0.9375rem] tracking-[0.01rem] border border-current text-current uppercase"
+                      className="inline-block px-8 py-3 leading-1 text-[0.9375rem] tracking-[0.01rem] border border-current text-current uppercase" data-cy={'sendMsgBtn'}
                       type="button"
                       onClick={(e) => confirmSubmit()}
                     >
@@ -264,7 +264,7 @@ const BugBountiesPage = ({ data }) => {
 
                 {confirmDialog && (
                   <div className="fixed bg-vega-box-grey/80 top-0 left-0 right-0 bottom-0 grid place-items-center">
-                    <div className="bg-black w-full min-w-[17.5rem] max-w-[30rem]">
+                    <div className="bg-black w-full min-w-[17.5rem] max-w-[30rem]" data-cy={'submitDialog'}>
                       <div className="p-6">
                         <div className="title-s">
                           <Trans t={t}>Submit bug report</Trans>
@@ -281,7 +281,7 @@ const BugBountiesPage = ({ data }) => {
 
                       <div className="flex items-center justify-end mt-6 px-6 py-3">
                         <button
-                          className="ml-6 uppercase cursor-pointer"
+                          className="ml-6 uppercase cursor-pointer" data-cy={'cancelSubmitDiaglog'}
                           onClick={(e) => setConfirmDialog(false)}
                         >
                           <Trans t={t}>Cancel</Trans>
@@ -290,7 +290,7 @@ const BugBountiesPage = ({ data }) => {
                           <Loader className="ml-3" />
                         ) : (
                           <button
-                            className="ml-6 uppercase cursor-pointer"
+                            className="ml-6 uppercase cursor-pointer" data-cy={'confirmSubmitDialog'}
                             onClick={(e) => send(e)}
                           >
                             <Trans t={t}>Submit</Trans>

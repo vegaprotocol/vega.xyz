@@ -11,7 +11,7 @@ export interface ButtonProps {
   colorMode?: string
 }
 
-const ButtonLink = ({
+const Button = ({
   variant = 'primary',
   width,
   to,
@@ -19,7 +19,7 @@ const ButtonLink = ({
   className,
   colorMode = 'auto',
 }: ButtonProps) => {
-  const isExternal = to.startsWith('http')
+  const isExternal = to.startsWith('http') || to.startsWith('/external-link')
   let buttonWrapperStyles
   let buttonBaseStyles
   let buttonBgColorStyles
@@ -82,4 +82,4 @@ const ButtonLink = ({
   )
 }
 
-export default ButtonLink
+export default Button

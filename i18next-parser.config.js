@@ -3,9 +3,9 @@ module.exports = {
   namespaceSeparator: false,
   saveMissing: true,
   skipDefaultValues: true,
-  locales: ["en", "es", "ru", "cn"],
+  locales: ['en', 'es', 'ru', 'cn', 'ko'],
   lexers: {
-    js: ["JsxLexer"],
-    tsx: ["JsxLexer"],
+    js: ['JsxLexer'],
+    tsx: ['JsxLexer'],
   },
-};
+}

@@ -1,11 +1,13 @@
 import * as React from "react";
-import { Link } from "gatsby-plugin-react-i18next";
+import UILinkWrapper from "./UI/LinkWrapper";
 
 const LinkCta = (props) => {
   return (
-    <Link
+    <UILinkWrapper
       to={props.to}
-      className="copy-xs inline-block text-[1.3125rem] underline-offset-8 underline hover:no-underline"
+      className={`copy-xs inline-block text-[1.3125rem] underline-offset-8 underline hover:no-underline ${
+        props.className ? props.className : ""
+      }`}
     >
       {props.children}
       <svg
@@ -29,7 +31,7 @@ const LinkCta = (props) => {
           strokeMiterlimit="10"
         />
       </svg>
-    </Link>
+    </UILinkWrapper>
   );
 };
 

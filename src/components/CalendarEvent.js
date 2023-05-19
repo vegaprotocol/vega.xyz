@@ -11,7 +11,7 @@ const CalendarEvent = ({ event }) => {
   const dateParseFormat = "YYYY-MM-DD HH:mm:ss";
 
   return (
-    <div className="pb-12 pt-6 border-b border-current relative last:border-b-0">
+    <div className="pb-12 pt-6 border-b border-current relative last:border-b-0" data-cy="eventDetail" >
       <div className="grid grid-cols-12 gap-x-6">
         <div className="col-span-12 md:col-span-6">
           {event.tags.length ? (
