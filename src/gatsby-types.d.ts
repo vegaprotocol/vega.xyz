@@ -693,6 +693,7 @@ type FileFieldsEnum =
   | 'childJson.Attract_liquidity'
   | 'childJson.Automated_cross_margining_in_section_3_of_the_Vega_blog__2__Pro_traders___Vega___2_'
   | 'childJson.Available'
+  | 'childJson.Average_total_paid_out_per_epoch'
   | 'childJson.Avg__Block_Time'
   | 'childJson.Backed_by_'
   | 'childJson.Be_a_Vega__Ambassador'
@@ -707,6 +708,7 @@ type FileFieldsEnum =
   | 'childJson.Blockchains_for_web2_devs'
   | 'childJson.Blog'
   | 'childJson.Blog_posts'
+  | 'childJson.Bonus_paid_to_the_proposer_of_any_market_that_reaches_a_cumulative_volume_of_approx__2___2__USD_equivalent'
   | 'childJson.Bounties'
   | 'childJson.Bounty'
   | 'childJson.Brand_assets'
@@ -1489,6 +1491,7 @@ type FileFieldsEnum =
   | 'childrenJson.Attract_liquidity'
   | 'childrenJson.Automated_cross_margining_in_section_3_of_the_Vega_blog__2__Pro_traders___Vega___2_'
   | 'childrenJson.Available'
+  | 'childrenJson.Average_total_paid_out_per_epoch'
   | 'childrenJson.Avg__Block_Time'
   | 'childrenJson.Backed_by_'
   | 'childrenJson.Be_a_Vega__Ambassador'
@@ -1503,6 +1506,7 @@ type FileFieldsEnum =
   | 'childrenJson.Blockchains_for_web2_devs'
   | 'childrenJson.Blog'
   | 'childrenJson.Blog_posts'
+  | 'childrenJson.Bonus_paid_to_the_proposer_of_any_market_that_reaches_a_cumulative_volume_of_approx__2___2__USD_equivalent'
   | 'childrenJson.Bounties'
   | 'childrenJson.Bounty'
   | 'childrenJson.Brand_assets'
@@ -2981,6 +2985,7 @@ type Json = Node & {
   readonly Attract_liquidity: Maybe<Scalars['String']>;
   readonly Automated_cross_margining_in_section_3_of_the_Vega_blog__2__Pro_traders___Vega___2_: Maybe<Scalars['String']>;
   readonly Available: Maybe<Scalars['String']>;
+  readonly Average_total_paid_out_per_epoch: Maybe<Scalars['String']>;
   readonly Avg__Block_Time: Maybe<Scalars['String']>;
   readonly Backed_by_: Maybe<Scalars['String']>;
   readonly Be_a_Vega__Ambassador: Maybe<Scalars['String']>;
@@ -2995,6 +3000,7 @@ type Json = Node & {
   readonly Blockchains_for_web2_devs: Maybe<Scalars['String']>;
   readonly Blog: Maybe<Scalars['String']>;
   readonly Blog_posts: Maybe<Scalars['String']>;
+  readonly Bonus_paid_to_the_proposer_of_any_market_that_reaches_a_cumulative_volume_of_approx__2___2__USD_equivalent: Maybe<Scalars['String']>;
   readonly Bounties: Maybe<Scalars['String']>;
   readonly Bounty: Maybe<Scalars['String']>;
   readonly Brand_assets: Maybe<Scalars['String']>;
@@ -3551,6 +3557,7 @@ type JsonFieldsEnum =
   | 'Attract_liquidity'
   | 'Automated_cross_margining_in_section_3_of_the_Vega_blog__2__Pro_traders___Vega___2_'
   | 'Available'
+  | 'Average_total_paid_out_per_epoch'
   | 'Avg__Block_Time'
   | 'Backed_by_'
   | 'Be_a_Vega__Ambassador'
@@ -3565,6 +3572,7 @@ type JsonFieldsEnum =
   | 'Blockchains_for_web2_devs'
   | 'Blog'
   | 'Blog_posts'
+  | 'Bonus_paid_to_the_proposer_of_any_market_that_reaches_a_cumulative_volume_of_approx__2___2__USD_equivalent'
   | 'Bounties'
   | 'Bounty'
   | 'Brand_assets'
@@ -4164,6 +4172,7 @@ type JsonFilterInput = {
   readonly Attract_liquidity: InputMaybe<StringQueryOperatorInput>;
   readonly Automated_cross_margining_in_section_3_of_the_Vega_blog__2__Pro_traders___Vega___2_: InputMaybe<StringQueryOperatorInput>;
   readonly Available: InputMaybe<StringQueryOperatorInput>;
+  readonly Average_total_paid_out_per_epoch: InputMaybe<StringQueryOperatorInput>;
   readonly Avg__Block_Time: InputMaybe<StringQueryOperatorInput>;
   readonly Backed_by_: InputMaybe<StringQueryOperatorInput>;
   readonly Be_a_Vega__Ambassador: InputMaybe<StringQueryOperatorInput>;
@@ -4178,6 +4187,7 @@ type JsonFilterInput = {
   readonly Blockchains_for_web2_devs: InputMaybe<StringQueryOperatorInput>;
   readonly Blog: InputMaybe<StringQueryOperatorInput>;
   readonly Blog_posts: InputMaybe<StringQueryOperatorInput>;
+  readonly Bonus_paid_to_the_proposer_of_any_market_that_reaches_a_cumulative_volume_of_approx__2___2__USD_equivalent: InputMaybe<StringQueryOperatorInput>;
   readonly Bounties: InputMaybe<StringQueryOperatorInput>;
   readonly Bounty: InputMaybe<StringQueryOperatorInput>;
   readonly Brand_assets: InputMaybe<StringQueryOperatorInput>;
@@ -5156,6 +5166,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Attract_liquidity'
   | 'frontmatter.featuredImage.childJson.Automated_cross_margining_in_section_3_of_the_Vega_blog__2__Pro_traders___Vega___2_'
   | 'frontmatter.featuredImage.childJson.Available'
+  | 'frontmatter.featuredImage.childJson.Average_total_paid_out_per_epoch'
   | 'frontmatter.featuredImage.childJson.Avg__Block_Time'
   | 'frontmatter.featuredImage.childJson.Backed_by_'
   | 'frontmatter.featuredImage.childJson.Be_a_Vega__Ambassador'
@@ -5170,6 +5181,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Blockchains_for_web2_devs'
   | 'frontmatter.featuredImage.childJson.Blog'
   | 'frontmatter.featuredImage.childJson.Blog_posts'
+  | 'frontmatter.featuredImage.childJson.Bonus_paid_to_the_proposer_of_any_market_that_reaches_a_cumulative_volume_of_approx__2___2__USD_equivalent'
   | 'frontmatter.featuredImage.childJson.Bounties'
   | 'frontmatter.featuredImage.childJson.Bounty'
   | 'frontmatter.featuredImage.childJson.Brand_assets'
@@ -5701,6 +5713,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Attract_liquidity'
   | 'frontmatter.featuredImage.childrenJson.Automated_cross_margining_in_section_3_of_the_Vega_blog__2__Pro_traders___Vega___2_'
   | 'frontmatter.featuredImage.childrenJson.Available'
+  | 'frontmatter.featuredImage.childrenJson.Average_total_paid_out_per_epoch'
   | 'frontmatter.featuredImage.childrenJson.Avg__Block_Time'
   | 'frontmatter.featuredImage.childrenJson.Backed_by_'
   | 'frontmatter.featuredImage.childrenJson.Be_a_Vega__Ambassador'
@@ -5715,6 +5728,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Blockchains_for_web2_devs'
   | 'frontmatter.featuredImage.childrenJson.Blog'
   | 'frontmatter.featuredImage.childrenJson.Blog_posts'
+  | 'frontmatter.featuredImage.childrenJson.Bonus_paid_to_the_proposer_of_any_market_that_reaches_a_cumulative_volume_of_approx__2___2__USD_equivalent'
   | 'frontmatter.featuredImage.childrenJson.Bounties'
   | 'frontmatter.featuredImage.childrenJson.Bounty'
   | 'frontmatter.featuredImage.childrenJson.Brand_assets'
@@ -9778,6 +9792,7 @@ type Query_jsonArgs = {
   Attract_liquidity: InputMaybe<StringQueryOperatorInput>;
   Automated_cross_margining_in_section_3_of_the_Vega_blog__2__Pro_traders___Vega___2_: InputMaybe<StringQueryOperatorInput>;
   Available: InputMaybe<StringQueryOperatorInput>;
+  Average_total_paid_out_per_epoch: InputMaybe<StringQueryOperatorInput>;
   Avg__Block_Time: InputMaybe<StringQueryOperatorInput>;
   Backed_by_: InputMaybe<StringQueryOperatorInput>;
   Be_a_Vega__Ambassador: InputMaybe<StringQueryOperatorInput>;
@@ -9792,6 +9807,7 @@ type Query_jsonArgs = {
   Blockchains_for_web2_devs: InputMaybe<StringQueryOperatorInput>;
   Blog: InputMaybe<StringQueryOperatorInput>;
   Blog_posts: InputMaybe<StringQueryOperatorInput>;
+  Bonus_paid_to_the_proposer_of_any_market_that_reaches_a_cumulative_volume_of_approx__2___2__USD_equivalent: InputMaybe<StringQueryOperatorInput>;
   Bounties: InputMaybe<StringQueryOperatorInput>;
   Bounty: InputMaybe<StringQueryOperatorInput>;
   Brand_assets: InputMaybe<StringQueryOperatorInput>;

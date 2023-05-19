@@ -12,6 +12,9 @@ import Tag from '../../components/UI/Tag'
 import GenericTile from '../../components/UI/GenericTile'
 import { getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import LiquidityProvisionRewards from '../../components/Rewards/LiquidityProvisionRewards'
+import TradingRewards from '../../components/Rewards/TradingRewards'
+import MarketCreationRewards from '../../components/Rewards/MarketCreationRewards'
 //import { useStakingApy } from '../../hooks/use-staking-apy'
 
 const RewardsPage = ({ data }) => {
@@ -92,7 +95,15 @@ const RewardsPage = ({ data }) => {
           </div>
         </div>
         <EpochCountdown />
-        <RewardFees />
+
+        <div className="my-space-7">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4 lg:gap-8">
+            <TradingRewards />
+            <LiquidityProvisionRewards />
+            <MarketCreationRewards />
+          </div>
+        </div>
+
         <div className="body-l max-w-[47.5rem]">
           <div className="text-vega-light-400 dark:text-vega-dark-400">
             <Trans t={t}>

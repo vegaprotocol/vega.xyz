@@ -10,11 +10,13 @@
   GATSBY_TOKEN_FRONTEND = "https://governance.vega.xyz/"
   GATSBY_VEGA_API = "https://api.vega.community/graphql"
   GATSBY_VEGA_REST_API = "https://api.vega.community"
+  GATSBY_VEGA_ASSET_ID = "d1984e3d365faa05bcafbe41f50f90e3663ee7c0da22bb1e24b164e9532691b2"
 
 [context.deploy-preview.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
   GATSBY_VEGA_API = "https://api-testnet.vega.rocks/graphql"
   GATSBY_VEGA_REST_API = "https://api-testnet.vega.rocks"
+  GATSBY_VEGA_ASSET_ID = "fc7fd956078fb1fc9db5c19b88f0874c4299b2a7639ad05a47a28c0aef291b55"
   
 [functions."send-bug-report"]
   included_files = ["vega-public-key.asc"]

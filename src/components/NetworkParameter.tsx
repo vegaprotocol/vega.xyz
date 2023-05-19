@@ -1,9 +1,10 @@
 import React from 'react'
 import { useNetworkParams } from '../hooks/use-network-params'
 import { SnakeToCamel } from '../utils/tools'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import ParameterBox from './ParameterBox'
 import { addDecimalsFormatNumber } from '@vegaprotocol/utils'
+import { formatNumberWithSuffix } from '../utils/tools'
 
 export interface NetworkParameterProps {
   param: string
@@ -11,6 +12,7 @@ export interface NetworkParameterProps {
   suffix?: string
   formatForVega?: boolean
   expressPercentage?: boolean
+  prettyNumber?: boolean
 }
 
 const explorerUrl = 'https://explorer.vega.xyz/network-parameters'
@@ -21,6 +23,7 @@ const NetworkParameter = ({
   suffix,
   formatForVega = false,
   expressPercentage = false,
+  prettyNumber = false,
 }: NetworkParameterProps) => {
   const { params, loading, error } = useNetworkParams()
   const { t } = useTranslation('component.network-parameter')
@@ -34,6 +37,8 @@ const NetworkParameter = ({
       return formatVegaValue(value)
     } else if (expressPercentage) {
       return Math.round(value * 100)
+    } else if (prettyNumber) {
+      return formatNumberWithSuffix(value)
     } else {
       return value
     }

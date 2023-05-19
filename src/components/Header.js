@@ -67,7 +67,7 @@ const Header = ({ sticky }) => {
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
                 {!menuIsOpen && (
                   <>
-                    <div class="hidden lg:block xl:hidden">
+                    <div className="hidden lg:block xl:hidden">
                       <HeaderCta
                         link={routeThroughInterstitialPage(
                           'https://vega.trading'
@@ -76,7 +76,7 @@ const Header = ({ sticky }) => {
                         className="ml-3 hidden lg:block"
                       />
                     </div>
-                    <div class="hidden xl:block">
+                    <div className="hidden xl:block">
                       <HeaderCta
                         link={routeThroughInterstitialPage(
                           'https://vega.trading'

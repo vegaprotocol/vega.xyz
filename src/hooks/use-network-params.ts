@@ -26,6 +26,8 @@ export const NETWORK_PARAMETER_QUERY = gql`
 
 export const NetworkParams = {
   blockchains_ethereumConfig: 'blockchains_ethereumConfig',
+  rewards_marketCreationQuantumMultiple:
+    'rewards_marketCreationQuantumMultiple',
   reward_asset: 'reward_asset',
   reward_staking_delegation_payoutDelay:
     'reward_staking_delegation_payoutDelay',
@@ -131,6 +133,8 @@ type Result = {
 
 export const useNetworkParams = <T extends NetworkParamsKey[]>(params?: T) => {
   const { data, loading, error } = useQuery(NETWORK_PARAMETERS_QUERY)
+
+  console.log(data)
 
   const paramsObj = useMemo(() => {
     if (!data?.networkParametersConnection.edges) return null
