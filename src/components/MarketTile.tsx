@@ -1,7 +1,6 @@
 import React from 'react'
 // import MarketBadge from './Svg/MarketBadge'
 import { Sparklines, SparklinesLine } from 'react-sparklines'
-import { formatNumberWithSuffix } from '../utils/tools'
 
 const MarketTile = ({
   name,

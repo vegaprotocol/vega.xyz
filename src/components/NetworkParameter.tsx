@@ -3,6 +3,7 @@ import { useNetworkParams } from '../hooks/use-network-params'
 import { SnakeToCamel } from '../utils/tools'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import ParameterBox from './ParameterBox'
+import { addDecimalsFormatNumber } from '@vegaprotocol/utils'
 
 export interface NetworkParameterProps {
   param: string
@@ -25,7 +26,7 @@ const NetworkParameter = ({
   const { t } = useTranslation('component.network-parameter')
 
   const formatVegaValue = (value) => {
-    return (value / 1000000000000000000).toFixed(2)
+    return addDecimalsFormatNumber(value, 18)
   }
 
   const formatValue = (value) => {

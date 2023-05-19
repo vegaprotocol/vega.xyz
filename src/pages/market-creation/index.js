@@ -51,6 +51,7 @@ const MarketCreationPage = ({ data }) => {
             <NetworkParameter
               param="governance_proposal_market_minProposerBalance"
               suffix=" $VEGA"
+              formatForVega={true}
             />{' '}
             who has staked to a validator, can submit a new market proposal.
             Once submitted, head back to the forum to rally the community to
@@ -74,6 +75,7 @@ const MarketCreationPage = ({ data }) => {
             <NetworkParameter
               param="governance_proposal_market_minVoterBalance"
               suffix=" $VEGA"
+              formatForVega={true}
             />{' '}
             gets just one vote per proposal.
           </Trans>
