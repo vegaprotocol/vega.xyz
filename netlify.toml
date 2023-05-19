@@ -8,11 +8,11 @@
 
 [context.production.environment]
   GATSBY_TOKEN_FRONTEND = "https://governance.vega.xyz/"
-  GATSBY_VEGA_API = "https://api.vega.xyz/query"
+  GATSBY_VEGA_API = "https://api.vega.community/graphql"
 
 [context.deploy-preview.environment]
   GATSBY_TOKEN_FRONTEND = "https://token.fairground.wtf/"
-  GATSBY_VEGA_API = "https://api.vega.xyz/query"
+  GATSBY_VEGA_API = "https://api.vega.community/graphql"
 
 [functions."send-bug-report"]
   included_files = ["vega-public-key.asc"]
