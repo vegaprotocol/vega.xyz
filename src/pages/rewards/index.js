@@ -94,38 +94,36 @@ const RewardsPage = ({ data }) => {
             </Button>
           </div>
         </div>
-        <EpochCountdown />
 
-        <div className="my-space-7">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4 lg:gap-8">
+        <div className="my-space-6">
+          <EpochCountdown />
+        </div>
+
+        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
+          <div className="my-space-6 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4 lg:gap-8">
             <TradingRewards />
             <LiquidityProvisionRewards />
             <MarketCreationRewards />
           </div>
+
+          <div className="body-l max-w-[47.5rem]">
+            <div className="text-vega-light-400 dark:text-vega-dark-400">
+              <Trans t={t}>
+                Any Vega network participant with assets can use the rewards
+                functionality to incentivise behaviours they would like to see
+                in a market for trading, liquidity provision.
+              </Trans>{' '}
+            </div>
+            <Button
+              variant="secondary"
+              className="mt-space-2"
+              to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/fees-rewards"
+            >
+              <Trans t={t}>Create your own reward</Trans>
+            </Button>
+          </div>
         </div>
 
-        <div className="body-l max-w-[47.5rem]">
-          <div className="text-vega-light-400 dark:text-vega-dark-400">
-            <Trans t={t}>
-              Any Vega network participant with assets can use the rewards
-              functionality to incentivise behaviours they would like to see in
-              a market for trading, liquidity provision.
-            </Trans>{' '}
-          </div>
-          <Button
-            variant="secondary"
-            className="mt-space-2"
-            to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/fees-rewards"
-          >
-            <Trans t={t}>Create your own reward</Trans>
-          </Button>
-        </div>
-        <div>
-          <p>
-            <br></br>
-            <br></br>
-          </p>
-        </div>
         <h2 className="heading-l mb-space-9 max-w-[48rem]">
           <Trans t={t}>Incentives and Bounties</Trans>
         </h2>
