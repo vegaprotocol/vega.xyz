@@ -15,11 +15,11 @@ const useRewardsLiquidityProvision = () => {
 
         const epoch = await epochResponse.json()
         const currentEpoch = epoch.statistics.epochSeq
-        const sevenEpochsAgo = currentEpoch - 7
+        const thirtyEpochsAgo = currentEpoch - 30
         let rewardsAmount = 0
 
         let rewardsResponse = await fetch(
-          `${process.env.GATSBY_VEGA_REST_API}/api/v2/rewards/epoch/summaries?filter.assetIds=${process.env.GATSBY_VEGA_ASSET_ID}&filter.fromEpoch=${sevenEpochsAgo}&filter.toEpoch=${currentEpoch}`
+          `${process.env.GATSBY_VEGA_REST_API}/api/v2/rewards/epoch/summaries?filter.assetIds=${process.env.GATSBY_VEGA_ASSET_ID}&filter.fromEpoch=${thirtyEpochsAgo}&filter.toEpoch=${currentEpoch}`
         )
         const response = await rewardsResponse.json()
 
@@ -30,8 +30,6 @@ const useRewardsLiquidityProvision = () => {
             rewardsAmount += Number(summary.node.amount)
           }
         })
-
-        rewardsAmount = rewardsAmount / 7
 
         setRewards(rewardsAmount)
         setLoading(false)

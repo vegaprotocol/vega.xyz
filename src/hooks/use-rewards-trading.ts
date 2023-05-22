@@ -15,7 +15,7 @@ const useRewardsTrading = () => {
 
         const epoch = await epochResponse.json()
         const currentEpoch = epoch.statistics.epochSeq
-        const sevenEpochsAgo = currentEpoch - 30
+        const sevenEpochsAgo = currentEpoch - 7
         let rewardsAmount = 0
 
         let rewardsResponse = await fetch(
@@ -32,6 +32,8 @@ const useRewardsTrading = () => {
             rewardsAmount += Number(summary.node.amount)
           }
         })
+
+        rewardsAmount = rewardsAmount / 7
 
         setRewards(rewardsAmount)
         setLoading(false)
