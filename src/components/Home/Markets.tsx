@@ -119,7 +119,7 @@ const Markets = () => {
       <div className="mb-space-5 grid grid-cols-2 md:flex md:items-center md:justify-between">
         <h2 className="heading-m">Markets</h2>
 
-        <div className="hidden items-center gap-x-space-3 md:flex">
+        <div className="!hidden items-center gap-x-space-3 md:flex">
           {marketsData.map((group, index) => (
             <button key={index} onClick={() => setActiveTab(index)}>
               <Pill active={index === activeTab}>{group.title}</Pill>
@@ -127,7 +127,7 @@ const Markets = () => {
           ))}
         </div>
 
-        <div className="relative z-10 md:hidden">
+        <div className="relative z-10 hidden md:hidden">
           <div className="absolute right-0 top-0 rounded-md border border-vega-light-200 bg-white py-space-1 dark:border-vega-dark-200 dark:bg-black">
             <div
               role="button"
