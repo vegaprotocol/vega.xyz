@@ -1,6 +1,5 @@
 import React from 'react'
 import RewardBox from './RewardBox'
-import { formatVegaValue } from '../../utils/tools'
 import useRewardsLiquidityProvision from '../../hooks/use-rewards-liquidity-provision'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
@@ -10,10 +9,10 @@ const LiquidityProvisionRewards = () => {
 
   return (
     <>
-      {rewards && (
+      {rewards !== null && (
         <RewardBox
           title={t('Liquidity Provision')}
-          rewardValue={formatVegaValue(rewards)}
+          rewardValue={rewards}
           rewardValueQualifier={t('Average total paid out per epoch')}
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">

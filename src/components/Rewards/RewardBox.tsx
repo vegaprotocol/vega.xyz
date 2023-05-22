@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { formatVegaValue } from '../../utils/tools'
 import RewardsValuePlaceholder from '../../components/Svg/RewardsValuePlaceholder'
 import UIButton from '../UI/Button'
 
@@ -33,7 +34,7 @@ const RewardBox = ({
             {rewardValue === null || rewardValue === 0 ? (
               <RewardsValuePlaceholder />
             ) : (
-              rewardValue
+              formatVegaValue(rewardValue)
             )}
           </div>
         </div>

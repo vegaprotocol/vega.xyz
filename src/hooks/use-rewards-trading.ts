@@ -26,7 +26,7 @@ const useRewardsTrading = () => {
         response.summaries.edges.forEach((summary) => {
           if (
             summary.node.rewardType ===
-              'ACCOUNT_TYPE_REWARD_MARKET_PROPOSERS' ||
+              'ACCOUNT_TYPE_REWARD_MAKER_RECEIVED_FEES' ||
             summary.node.rewardType === 'ACCOUNT_TYPE_REWARD_MAKER_PAID_FEES'
           ) {
             rewardsAmount += Number(summary.node.amount)

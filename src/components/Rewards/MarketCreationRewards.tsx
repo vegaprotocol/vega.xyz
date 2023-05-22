@@ -1,6 +1,5 @@
 import React from 'react'
 import RewardBox from './RewardBox'
-import { formatVegaValue } from '../../utils/tools'
 import useRewardsMarketCreation from '../../hooks/use-rewards-market-creation'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import { routeThroughInterstitialPage } from '../../utils/tools'
@@ -12,10 +11,10 @@ const MarketCreationRewards = () => {
 
   return (
     <>
-      {rewards && (
+      {rewards !== null && (
         <RewardBox
           title={t('Market Creation')}
-          rewardValue={formatVegaValue(rewards)}
+          rewardValue={rewards}
           rewardValueQualifier="Cumulative total paid out in last 30 days"
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
