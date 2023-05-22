@@ -4,7 +4,7 @@ import { Sparklines, SparklinesLine } from 'react-sparklines'
 
 const MarketTile = ({
   name,
-  volume,
+  formattedVolume,
   lastPrice,
   priceChange,
   sparkLineValues,
@@ -19,11 +19,11 @@ const MarketTile = ({
         <div>
           <div className="leading-none">{name}</div>
           <div className="text-vega-light-300 dark:text-vega-dark-300">
-            Vol {volume}
+            Vol {formattedVolume}
           </div>
         </div>
       </div>
-      <div className="flex items-end justify-between">
+      <div className="flex items-end justify-between gap-x-space-3">
         <div className="">
           <div className="body-xl !leading-none">{lastPrice}</div>
           <div

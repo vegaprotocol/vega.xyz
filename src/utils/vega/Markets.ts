@@ -90,7 +90,8 @@ export const processMarketData = (marketData) => {
 
           return {
             name: marketName,
-            volume: addDecimalsFormatNumber(
+            volume: volume24h,
+            formattedVolume: addDecimalsFormatNumber(
               volume24h.toString(),
               positionDecimalPlaces
             ),
