@@ -116,11 +116,22 @@ const UsePage = ({ data }) => {
     },
     {
       collection: 'tools',
+      icon: data.guidesIcon,
+      title: t('Guides'),
+      author: 'Vega Community',
+      link: 'https://docs.vega.xyz/mainnet/tutorials/community-created',
+      description: '',
+      categories: [],
+    },
+    {
+      collection: 'tools',
       icon: data.nodesGuruIcon,
       title: 'Vega World',
       author: 'Nodes Guru',
-      link: 'https://nodes.guru/vega',
-      description: 'Who the validators are and reward history, stake history.',
+      link: 'https://stake.nodes.guru/vega/world',
+      description: t(
+        'Data around validators, staking and rewards past and present.'
+      ),
       categories: ['staking'],
     },
     {
@@ -148,7 +159,9 @@ const UsePage = ({ data }) => {
       author: 'Vega',
       link: 'https://github.com/vegaprotocol/vegacapsule',
       description: t(
-        'Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.'
+        t(
+          'Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.'
+        )
       ),
       categories: ['trading'],
     },
@@ -417,6 +430,16 @@ export const query = graphql`
       }
     }
     dataNodeIcon: file(relativePath: { eq: "tool-icons/data-node.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          height: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    guidesIcon: file(relativePath: { eq: "tool-icons/guides.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 96
