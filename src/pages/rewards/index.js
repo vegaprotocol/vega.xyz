@@ -140,36 +140,42 @@ const RewardsPage = ({ data }) => {
           <GenericTile
             image={getImage(data.iconBounties)}
             title={t('Bounties')}
-            description={t(
-              'Participate in developer bounties and get rewarded for your commitment.'
-            )}
             link={{
               to: 'https://github.com/vegaprotocol/bounties/',
               title: t('Bounties'),
             }}
-          />
+          >
+            <Trans t={t}>
+              Participate in developer bounties and get rewarded for your
+              commitment.
+            </Trans>
+          </GenericTile>
           <GenericTile
             image={getImage(data.iconSecurity)}
             title={t('Security issues')}
-            description={t(
-              'Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.'
-            )}
             link={{
               to: '/bug-bounties',
               title: t('Report a security issue'),
             }}
-          />
+          >
+            <Trans t={t}>
+              Found a software security issue? Report it to us and earn rewards
+              by finding bugs that affect the Vega Network.
+            </Trans>
+          </GenericTile>
           <GenericTile
             image={getImage(data.iconFairground)}
             title={t('Fairground incentives')}
-            description={t(
-              "Earn rewards for helping to find bugs and battle harden Vega's Testnet."
-            )}
             link={{
               to: 'https://fairground.wtf/',
               title: t('Fairground'),
             }}
-          />
+          >
+            <Trans t={t}>
+              Earn rewards for helping to find bugs and battle harden Vega's
+              Testnet.
+            </Trans>
+          </GenericTile>
         </div>
       </Container>
     </Layout>

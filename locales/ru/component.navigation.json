@@ -62,6 +62,8 @@
   "Experiment on Fairground Testnet": "",
   "Build": "",
   "Getting started": "",
+  "Tutorials": "",
+  "API documentation": "",
   "Start": "",
   "Governance on Vega": "",
   "Governance documentation": "",
@@ -72,5 +74,6 @@
   "Infrastructure": "",
   "Get the Vega Wallet": "",
   "Trading": "",
+  "Market make and provide liquidity using our APIs": "",
   "Use Vega": ""
 }

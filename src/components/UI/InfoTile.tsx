@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Link from '../../components/UI/Link'
-import Button from '../../components/UI/Button'
+import Link from './Link'
+import Button from './Button'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 export interface Link {
@@ -11,12 +11,12 @@ export interface Link {
 export interface GenericTileProps {
   title: string
   image?: IGatsbyImageData
-  children: React.ReactNode
+  children?: React.ReactNode
   subline?: string
   link?: Link
 }
 
-const GenericTile = ({
+const InfoTile = ({
   title,
   image,
   subline,
@@ -24,7 +24,7 @@ const GenericTile = ({
   children,
 }: GenericTileProps) => {
   return (
-    <div className="mb-space-4 flex flex-col justify-between border p-space-5">
+    <div className="flex flex-col justify-between rounded-[1.875rem] border p-space-5">
       <div>
         {image && <GatsbyImage image={image} alt="" className="mb-space-5" />}
         <div className="heading-s mb-space-4">{title}</div>
@@ -40,12 +40,14 @@ const GenericTile = ({
         )}
       </div>
       {link && (
-        <Button to={link.to} width="full" className="mt-space-6">
-          {link.title}
-        </Button>
+        <div>
+          <Button to={link.to} className="mt-space-2">
+            {link.title}
+          </Button>
+        </div>
       )}
     </div>
   )
 }
 
-export default GenericTile
+export default InfoTile
