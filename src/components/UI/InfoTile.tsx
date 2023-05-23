@@ -11,7 +11,7 @@ export interface Link {
 export interface GenericTileProps {
   title: string
   image?: IGatsbyImageData
-  children: React.ReactNode
+  children?: React.ReactNode
   subline?: string
   link?: Link
 }

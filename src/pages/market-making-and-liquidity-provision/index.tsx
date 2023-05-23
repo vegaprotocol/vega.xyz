@@ -262,21 +262,59 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
 
           <div className="grid grid-cols-1 gap-space-4 md:grid-cols-4 md:gap-space-7">
             <InfoTile
-              title={t('Building a basic market maker')}
-              link={{ to: '', title: t('View') }}
-            ></InfoTile>
+              title={t('Getting started')}
+              link={{
+                to: 'https://docs.vega.xyz/testnet/tutorials/building-a-bot/getting-started',
+                title: t('View'),
+              }}
+            >
+              <div className="prose mb-space-4">
+                <p>
+                  <Trans t={t}>
+                    Start development of a bot to trade on Vega
+                  </Trans>
+                </p>
+              </div>
+            </InfoTile>
             <InfoTile
-              title={t('Providing and maintaining a liquidity commitment')}
-              link={{ to: '', title: t('View') }}
-            ></InfoTile>
+              title={t('Streaming data')}
+              link={{
+                to: 'https://docs.vega.xyz/testnet/tutorials/building-a-bot/streaming-data',
+                title: t('View'),
+              }}
+            >
+              <div className="prose mb-space-4">
+                <p>
+                  <Trans t={t}>Enhance the bot with a data stream</Trans>
+                </p>
+              </div>
+            </InfoTile>
             <InfoTile
-              title={t('Build an arbitrage strategy')}
-              link={{ to: '', title: t('View') }}
-            ></InfoTile>
+              title={t('Adding a liquidity commitment')}
+              link={{
+                to: 'https://docs.vega.xyz/testnet/tutorials/building-a-bot/adding-a-liquidity-commitment',
+                title: t('View'),
+              }}
+            >
+              <div className="prose mb-space-4">
+                <p>
+                  <Trans t={t}>Add a liquidity commitment to the bot</Trans>
+                </p>
+              </div>
+            </InfoTile>
             <InfoTile
-              title={t('Deposit and withdraw collateral')}
-              link={{ to: '', title: t('View') }}
-            ></InfoTile>
+              title={t('Adding an external price feed')}
+              link={{
+                to: 'https://docs.vega.xyz/testnet/tutorials/building-a-bot/adding-an-external-price',
+                title: t('View'),
+              }}
+            >
+              <div className="prose mb-space-4">
+                <p>
+                  <Trans t={t}>Add an external price feed to the bot</Trans>
+                </p>
+              </div>
+            </InfoTile>
           </div>
         </div>
 
