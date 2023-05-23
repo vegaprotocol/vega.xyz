@@ -1105,6 +1105,7 @@ type FileFieldsEnum =
   | 'childJson.Use'
   | 'childJson.Use_Fairground__the_Vega_testnet__to_play_without_consequences_'
   | 'childJson.Use_Vega'
+  | 'childJson.Use_Vega_Capsule_to_create_an_instance_of_the_Vega_network_on_your_computer_to_experiment_with_using_the_protocol_'
   | 'childJson.Use_our_governance_tools_'
   | 'childJson.Use_pegged_orders_on_any_market__at_any_time__to_place_orders_and_automatically_track_another_price_on_the_market__This_enables_advanced_trading_strategies_and_fast_reaction_times_while_removing_concerns_about_latency_and_reducing_the_number_of_manual_transactions_needed_to_maintain_liquidity_provider_orders_'
   | 'childJson.Use_the_network'
@@ -1901,6 +1902,7 @@ type FileFieldsEnum =
   | 'childrenJson.Use'
   | 'childrenJson.Use_Fairground__the_Vega_testnet__to_play_without_consequences_'
   | 'childrenJson.Use_Vega'
+  | 'childrenJson.Use_Vega_Capsule_to_create_an_instance_of_the_Vega_network_on_your_computer_to_experiment_with_using_the_protocol_'
   | 'childrenJson.Use_our_governance_tools_'
   | 'childrenJson.Use_pegged_orders_on_any_market__at_any_time__to_place_orders_and_automatically_track_another_price_on_the_market__This_enables_advanced_trading_strategies_and_fast_reaction_times_while_removing_concerns_about_latency_and_reducing_the_number_of_manual_transactions_needed_to_maintain_liquidity_provider_orders_'
   | 'childrenJson.Use_the_network'
@@ -3393,6 +3395,7 @@ type Json = Node & {
   readonly Use: Maybe<Scalars['String']>;
   readonly Use_Fairground__the_Vega_testnet__to_play_without_consequences_: Maybe<Scalars['String']>;
   readonly Use_Vega: Maybe<Scalars['String']>;
+  readonly Use_Vega_Capsule_to_create_an_instance_of_the_Vega_network_on_your_computer_to_experiment_with_using_the_protocol_: Maybe<Scalars['String']>;
   readonly Use_our_governance_tools_: Maybe<Scalars['String']>;
   readonly Use_pegged_orders_on_any_market__at_any_time__to_place_orders_and_automatically_track_another_price_on_the_market__This_enables_advanced_trading_strategies_and_fast_reaction_times_while_removing_concerns_about_latency_and_reducing_the_number_of_manual_transactions_needed_to_maintain_liquidity_provider_orders_: Maybe<Scalars['String']>;
   readonly Use_the_network: Maybe<Scalars['String']>;
@@ -3963,6 +3966,7 @@ type JsonFieldsEnum =
   | 'Use'
   | 'Use_Fairground__the_Vega_testnet__to_play_without_consequences_'
   | 'Use_Vega'
+  | 'Use_Vega_Capsule_to_create_an_instance_of_the_Vega_network_on_your_computer_to_experiment_with_using_the_protocol_'
   | 'Use_our_governance_tools_'
   | 'Use_pegged_orders_on_any_market__at_any_time__to_place_orders_and_automatically_track_another_price_on_the_market__This_enables_advanced_trading_strategies_and_fast_reaction_times_while_removing_concerns_about_latency_and_reducing_the_number_of_manual_transactions_needed_to_maintain_liquidity_provider_orders_'
   | 'Use_the_network'
@@ -4576,6 +4580,7 @@ type JsonFilterInput = {
   readonly Use: InputMaybe<StringQueryOperatorInput>;
   readonly Use_Fairground__the_Vega_testnet__to_play_without_consequences_: InputMaybe<StringQueryOperatorInput>;
   readonly Use_Vega: InputMaybe<StringQueryOperatorInput>;
+  readonly Use_Vega_Capsule_to_create_an_instance_of_the_Vega_network_on_your_computer_to_experiment_with_using_the_protocol_: InputMaybe<StringQueryOperatorInput>;
   readonly Use_our_governance_tools_: InputMaybe<StringQueryOperatorInput>;
   readonly Use_pegged_orders_on_any_market__at_any_time__to_place_orders_and_automatically_track_another_price_on_the_market__This_enables_advanced_trading_strategies_and_fast_reaction_times_while_removing_concerns_about_latency_and_reducing_the_number_of_manual_transactions_needed_to_maintain_liquidity_provider_orders_: InputMaybe<StringQueryOperatorInput>;
   readonly Use_the_network: InputMaybe<StringQueryOperatorInput>;
@@ -5568,6 +5573,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Use'
   | 'frontmatter.featuredImage.childJson.Use_Fairground__the_Vega_testnet__to_play_without_consequences_'
   | 'frontmatter.featuredImage.childJson.Use_Vega'
+  | 'frontmatter.featuredImage.childJson.Use_Vega_Capsule_to_create_an_instance_of_the_Vega_network_on_your_computer_to_experiment_with_using_the_protocol_'
   | 'frontmatter.featuredImage.childJson.Use_our_governance_tools_'
   | 'frontmatter.featuredImage.childJson.Use_pegged_orders_on_any_market__at_any_time__to_place_orders_and_automatically_track_another_price_on_the_market__This_enables_advanced_trading_strategies_and_fast_reaction_times_while_removing_concerns_about_latency_and_reducing_the_number_of_manual_transactions_needed_to_maintain_liquidity_provider_orders_'
   | 'frontmatter.featuredImage.childJson.Use_the_network'
@@ -6113,6 +6119,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Use'
   | 'frontmatter.featuredImage.childrenJson.Use_Fairground__the_Vega_testnet__to_play_without_consequences_'
   | 'frontmatter.featuredImage.childrenJson.Use_Vega'
+  | 'frontmatter.featuredImage.childrenJson.Use_Vega_Capsule_to_create_an_instance_of_the_Vega_network_on_your_computer_to_experiment_with_using_the_protocol_'
   | 'frontmatter.featuredImage.childrenJson.Use_our_governance_tools_'
   | 'frontmatter.featuredImage.childrenJson.Use_pegged_orders_on_any_market__at_any_time__to_place_orders_and_automatically_track_another_price_on_the_market__This_enables_advanced_trading_strategies_and_fast_reaction_times_while_removing_concerns_about_latency_and_reducing_the_number_of_manual_transactions_needed_to_maintain_liquidity_provider_orders_'
   | 'frontmatter.featuredImage.childrenJson.Use_the_network'
@@ -10190,6 +10197,7 @@ type Query_jsonArgs = {
   Use: InputMaybe<StringQueryOperatorInput>;
   Use_Fairground__the_Vega_testnet__to_play_without_consequences_: InputMaybe<StringQueryOperatorInput>;
   Use_Vega: InputMaybe<StringQueryOperatorInput>;
+  Use_Vega_Capsule_to_create_an_instance_of_the_Vega_network_on_your_computer_to_experiment_with_using_the_protocol_: InputMaybe<StringQueryOperatorInput>;
   Use_our_governance_tools_: InputMaybe<StringQueryOperatorInput>;
   Use_pegged_orders_on_any_market__at_any_time__to_place_orders_and_automatically_track_another_price_on_the_market__This_enables_advanced_trading_strategies_and_fast_reaction_times_while_removing_concerns_about_latency_and_reducing_the_number_of_manual_transactions_needed_to_maintain_liquidity_provider_orders_: InputMaybe<StringQueryOperatorInput>;
   Use_the_network: InputMaybe<StringQueryOperatorInput>;

@@ -14,6 +14,7 @@
   "Data around validators, staking and rewards past and present.": "Data around validators, staking and rewards past and present.",
   "Redeem locked vega tokens.": "Redeem locked vega tokens.",
   "Query the Vega network APIs to retrieve on chain data.": "Query the Vega network APIs to retrieve on chain data.",
+  "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.": "Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.",
   "Validators performance scores in a given Epoch.": "Validators performance scores in a given Epoch.",
   "Use the network": "Use the network",
   "Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy.": "Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy.",

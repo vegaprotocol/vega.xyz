@@ -159,9 +159,7 @@ const UsePage = ({ data }) => {
       author: 'Vega',
       link: 'https://github.com/vegaprotocol/vegacapsule',
       description: t(
-        t(
-          'Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.'
-        )
+        'Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.'
       ),
       categories: ['trading'],
     },
