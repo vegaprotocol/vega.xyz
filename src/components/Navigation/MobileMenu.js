@@ -35,8 +35,8 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
         <MobileNavigation />
 
         <HeaderCta
-          link="https://console.fairground.wtf/"
-          text={t('Trade (Testnet)')}
+          link={routeThroughInterstitialPage('https://vega.trading/')}
+          text={t('Launch console')}
           className="inline-block"
         />
       </Container>

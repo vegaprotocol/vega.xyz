@@ -1,5 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import LinkArrow from './Svg/LinkArrow'
 
 const HeaderCta = ({ text, link, className }) => {
   const isExternal =
@@ -11,7 +12,10 @@ const HeaderCta = ({ text, link, className }) => {
   if (isExternal) {
     return (
       <a href={link} target="_blank" rel="noreferrer" className={linkClass}>
-        <div className={buttonClass}>{text}</div>
+        <div className={buttonClass}>
+          {text} &nbsp;&nbsp;
+          <LinkArrow className="inline" />
+        </div>
         <div className={buttonBgClass}></div>
       </a>
     )
