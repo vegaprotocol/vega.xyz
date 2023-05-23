@@ -45,7 +45,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to={routeThroughInterstitialPage('https://vega.trading')}
+                    to={routeThroughInterstitialPage('https://vega.trading/')}
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Launch Console</Trans>

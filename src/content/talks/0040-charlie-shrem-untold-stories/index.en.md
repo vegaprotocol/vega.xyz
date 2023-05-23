@@ -1,5 +1,5 @@
 ---
-title: Toys vs. Real World Innovations in Crypto & Bitcoin
+title: The Charlie Shrem Show
 location: Virtual
 date: 2023-04-27
 links:

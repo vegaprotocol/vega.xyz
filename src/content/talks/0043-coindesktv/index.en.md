@@ -1,5 +1,5 @@
 ---
-title: Crypto Derivatives, Futures and Options Trading
+title: CoinDesk TV
 location: Virtual
 date: 2023-05-10
 links:

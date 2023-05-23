@@ -35,8 +35,8 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
         <MobileNavigation />
 
         <HeaderCta
-          link={routeThroughInterstitialPage('https://vega.trading')}
-          text={t('Launch Console')}
+          link={routeThroughInterstitialPage('https://vega.trading/')}
+          text={t('Launch console')}
           className="inline-block"
         />
       </Container>

@@ -53,7 +53,7 @@ const Header = ({ sticky }) => {
             <div className="flex items-center">
               {!menuIsOpen && (
                 <HeaderCta
-                  link={routeThroughInterstitialPage('https://vega.trading')}
+                  link={routeThroughInterstitialPage('https://vega.trading/')}
                   text={t('Launch Console')}
                   className="mr-3 hidden md:block lg:hidden"
                 />
@@ -70,7 +70,7 @@ const Header = ({ sticky }) => {
                     <div className="hidden lg:block xl:hidden">
                       <HeaderCta
                         link={routeThroughInterstitialPage(
-                          'https://vega.trading'
+                          'https://vega.trading/'
                         )}
                         text={t('Console')}
                         className="ml-3 hidden lg:block"
@@ -79,7 +79,7 @@ const Header = ({ sticky }) => {
                     <div className="hidden xl:block">
                       <HeaderCta
                         link={routeThroughInterstitialPage(
-                          'https://vega.trading'
+                          'https://vega.trading/'
                         )}
                         text={t('Launch Console')}
                         className="ml-3 hidden lg:block"

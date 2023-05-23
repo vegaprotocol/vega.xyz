@@ -1127,7 +1127,6 @@ type FileFieldsEnum =
   | 'childJson.Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'childJson.Tools_built_on_Vega'
   | 'childJson.Total_Staked'
-  | 'childJson.Trade'
   | 'childJson.Trading'
   | 'childJson.Trading_Mode'
   | 'childJson.Translate'
@@ -1977,7 +1976,6 @@ type FileFieldsEnum =
   | 'childrenJson.Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'childrenJson.Tools_built_on_Vega'
   | 'childrenJson.Total_Staked'
-  | 'childrenJson.Trade'
   | 'childrenJson.Trading'
   | 'childrenJson.Trading_Mode'
   | 'childrenJson.Translate'
@@ -3523,7 +3521,6 @@ type Json = Node & {
   readonly Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking: Maybe<Scalars['String']>;
   readonly Tools_built_on_Vega: Maybe<Scalars['String']>;
   readonly Total_Staked: Maybe<Scalars['String']>;
-  readonly Trade: Maybe<Scalars['String']>;
   readonly Trading: Maybe<Scalars['String']>;
   readonly Trading_Mode: Maybe<Scalars['String']>;
   readonly Translate: Maybe<Scalars['String']>;
@@ -4147,7 +4144,6 @@ type JsonFieldsEnum =
   | 'Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'Tools_built_on_Vega'
   | 'Total_Staked'
-  | 'Trade'
   | 'Trading'
   | 'Trading_Mode'
   | 'Translate'
@@ -4814,7 +4810,6 @@ type JsonFilterInput = {
   readonly Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking: InputMaybe<StringQueryOperatorInput>;
   readonly Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
   readonly Total_Staked: InputMaybe<StringQueryOperatorInput>;
-  readonly Trade: InputMaybe<StringQueryOperatorInput>;
   readonly Trading: InputMaybe<StringQueryOperatorInput>;
   readonly Trading_Mode: InputMaybe<StringQueryOperatorInput>;
   readonly Translate: InputMaybe<StringQueryOperatorInput>;
@@ -5860,7 +5855,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'frontmatter.featuredImage.childJson.Tools_built_on_Vega'
   | 'frontmatter.featuredImage.childJson.Total_Staked'
-  | 'frontmatter.featuredImage.childJson.Trade'
   | 'frontmatter.featuredImage.childJson.Trading'
   | 'frontmatter.featuredImage.childJson.Trading_Mode'
   | 'frontmatter.featuredImage.childJson.Translate'
@@ -6459,7 +6453,6 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking'
   | 'frontmatter.featuredImage.childrenJson.Tools_built_on_Vega'
   | 'frontmatter.featuredImage.childrenJson.Total_Staked'
-  | 'frontmatter.featuredImage.childrenJson.Trade'
   | 'frontmatter.featuredImage.childrenJson.Trading'
   | 'frontmatter.featuredImage.childrenJson.Trading_Mode'
   | 'frontmatter.featuredImage.childrenJson.Translate'
@@ -10590,7 +10583,6 @@ type Query_jsonArgs = {
   Token_holders_propose_changes__vote_on_proposals__create_markets__and_support_validators_by_staking: InputMaybe<StringQueryOperatorInput>;
   Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
   Total_Staked: InputMaybe<StringQueryOperatorInput>;
-  Trade: InputMaybe<StringQueryOperatorInput>;
   Trading: InputMaybe<StringQueryOperatorInput>;
   Trading_Mode: InputMaybe<StringQueryOperatorInput>;
   Translate: InputMaybe<StringQueryOperatorInput>;
