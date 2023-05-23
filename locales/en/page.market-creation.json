@@ -6,7 +6,7 @@
   "Sense check your market idea": "Sense check your market idea",
   "<p>Start a topic and share an outline of the market you propose on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.</p>": "<p>Start a topic and share an outline of the market you propose on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.</p>",
   "Start a topic on the forum": "Start a topic on the forum",
-  "See some example markets (Testnet)": "See some example markets (Testnet)",
+  "See what markets already exist": "See what markets already exist",
   "Phase 2": "Phase 2",
   "Formalise your proposal": "Formalise your proposal",
   "<p>Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the the market, including the data (JSON or similar) that would be submitted on chain i.e. market name and code, Oracle / data source the market will use for settlement, and risk model (to calculate margin requirements and ensure safe trading).</p><p>Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.</p>": "<p>Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the the market, including the data (JSON or similar) that would be submitted on chain i.e. market name and code, Oracle / data source the market will use for settlement, and risk model (to calculate margin requirements and ensure safe trading).</p><p>Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.</p>",
@@ -32,6 +32,5 @@
   "How to create a new market on Vega": "How to create a new market on Vega",
   "Creating a market is part of Vega governance. To get started, get and hold $VEGA tokens in your wallet.": "Creating a market is part of Vega governance. To get started, get and hold $VEGA tokens in your wallet.",
   "Find out more": "Find out more",
-  "Get started": "Get started",
-  "See what markets already exist (Testnet)": "See what markets already exist (Testnet)"
+  "Get started": "Get started"
 }

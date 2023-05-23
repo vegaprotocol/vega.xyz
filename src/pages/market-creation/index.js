@@ -51,6 +51,7 @@ const MarketCreationPage = ({ data }) => {
             <NetworkParameter
               param="governance_proposal_market_minProposerBalance"
               suffix=" $VEGA"
+              formatForVega={true}
             />{' '}
             who has staked to a validator, can submit a new market proposal.
             Once submitted, head back to the forum to rally the community to
@@ -74,6 +75,7 @@ const MarketCreationPage = ({ data }) => {
             <NetworkParameter
               param="governance_proposal_market_minVoterBalance"
               suffix=" $VEGA"
+              formatForVega={true}
             />{' '}
             gets just one vote per proposal.
           </Trans>
@@ -95,8 +97,8 @@ const MarketCreationPage = ({ data }) => {
           url: 'https://community.vega.xyz/c/governance/market-proposals/28',
         },
         {
-          title: t('See some example markets (Testnet)'),
-          url: 'https://console.fairground.wtf/#/markets',
+          title: t('See what markets already exist'),
+          url: routeThroughInterstitialPage('https://vega.trading/#/markets'),
         },
       ],
       image: <Phase1 />,
@@ -229,8 +231,10 @@ const MarketCreationPage = ({ data }) => {
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
-              link="https://console.fairground.wtf/#/markets"
-              text={t('See what markets already exist (Testnet)')}
+              link={routeThroughInterstitialPage(
+                'https://vega.trading/#/markets'
+              )}
+              text={t('See what markets already exist')}
             />
           </div>
         </div>

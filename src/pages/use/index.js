@@ -5,7 +5,6 @@ import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import GlitchTitle from '../../components/GlitchTitle'
-import CalloutHero from '../../components/CalloutHero'
 import Callout from '../../components/UI/Callout'
 import BoxTitle from '../../components/BoxTitle'
 import Fairground from '../../components/Fairground'
@@ -70,7 +69,7 @@ const UsePage = ({ data }) => {
       author: 'Vega',
       link: routeThroughInterstitialPage('https://vega.trading/'),
       description: t(
-        'A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).'
+        'A dApp for trading cash settled futures on the fully decentralised Vega network.'
       ),
       categories: ['trading'],
     },
@@ -116,11 +115,22 @@ const UsePage = ({ data }) => {
     },
     {
       collection: 'tools',
+      icon: data.guidesIcon,
+      title: t('Guides'),
+      author: 'Vega Community',
+      link: 'https://docs.vega.xyz/mainnet/tutorials/community-created',
+      description: '',
+      categories: [],
+    },
+    {
+      collection: 'tools',
       icon: data.nodesGuruIcon,
       title: 'Vega World',
       author: 'Nodes Guru',
-      link: 'https://nodes.guru/vega',
-      description: 'Who the validators are and reward history, stake history.',
+      link: 'https://stake.nodes.guru/vega/world',
+      description: t(
+        'Data around validators, staking and rewards past and present.'
+      ),
       categories: ['staking'],
     },
     {
@@ -417,6 +427,16 @@ export const query = graphql`
       }
     }
     dataNodeIcon: file(relativePath: { eq: "tool-icons/data-node.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          height: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    guidesIcon: file(relativePath: { eq: "tool-icons/guides.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 96

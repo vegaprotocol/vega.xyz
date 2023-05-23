@@ -6,7 +6,7 @@
   "Sense check your market idea": "Sense comprueba tu idea de mercado",
   "<p>Start a topic and share an outline of the market you propose on the forum with a 'sense-check' tag. Get an idea of whether there is support for your proposal from the likes and replies you receive, and refine your plans.</p>": "<p>Inicie un tema y comparta un resumen del mercado que propone en el foro con una etiqueta de 'comprobación de sentido'. Obtenga una idea de si hay apoyo para su propuesta a partir de los Me gusta y las respuestas que recibe, y perfeccione sus planes.</p>",
   "Start a topic on the forum": "",
-  "See some example markets (Testnet)": "",
+  "See what markets already exist": "",
   "Phase 2": "Fase 2",
   "Formalise your proposal": "Formaliza tu propuesta",
   "<p>Update your proposal topic based on the feedback received, and ensure you have included the rationale and specifics of the the market, including the data (JSON or similar) that would be submitted on chain i.e. market name and code, Oracle / data source the market will use for settlement, and risk model (to calculate margin requirements and ensure safe trading).</p><p>Update the tag and invite debate and discussion to amend the proposal until it reaches a final state, ready to submit.</p>": "<p>Actualice el tema de su propuesta en función de los comentarios recibidos y asegúrese de haber incluido la justificación y las especificaciones del mercado, incluidos los datos (JSON o similar) que se enviarían en la cadena, es decir, nombre y código del mercado, Oracle/datos la fuente que utilizará el mercado para la liquidación y el modelo de riesgo (para calcular los requisitos de margen y garantizar una negociación segura).</p><p>Actualice la etiqueta e invite al debate y la discusión para modificar la propuesta hasta que llegue a un estado final, listo para enviar.</p>",
@@ -32,6 +32,5 @@
   "How to create a new market on Vega": "Cómo crear un nuevo mercado en Vega",
   "Creating a market is part of Vega governance. To get started, get and hold $VEGA tokens in your wallet.": "Crear un mercado es parte de la gobernanza de Vega. Para comenzar, obtenga y mantenga tokens de $VEGA en su billetera.",
   "Find out more": "Saber más",
-  "Get started": "Empezar",
-  "See what markets already exist (Testnet)": "Ver qué mercados ya existen (Testnet)"
+  "Get started": "Empezar"
 }

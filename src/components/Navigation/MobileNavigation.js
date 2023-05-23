@@ -1,28 +1,28 @@
-import React, { useState } from "react";
-import Use from "./items/Use";
-import Community from "./items/Community";
-import Governance from "./items/Governance";
-import Develop from "./items/Develop";
-import Learn from "./items/Learn";
-import MobileDropdown from "./MobileDropdown";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import React, { useState } from 'react'
+import Use from './items/Use'
+import Community from './items/Community'
+import Governance from './items/Governance'
+import Develop from './items/Develop'
+import Learn from './items/Learn'
+import MobileDropdown from './MobileDropdown'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const MobileNavigation = () => {
-  const { t } = useTranslation("component.navigation");
-  const [showId, setShowId] = useState();
+  const { t } = useTranslation('component.navigation')
+  const [showId, setShowId] = useState()
   const handleShow = (id) => {
     if (id !== showId) {
-      setShowId(id);
+      setShowId(id)
     } else {
-      setShowId(-1);
+      setShowId(-1)
     }
-  };
+  }
 
   return (
     <nav>
-      <ul className="max-w-[20rem] text-lg tracking-wide w-full py-4">
+      <ul className="w-full max-w-[40rem] py-4 text-lg tracking-wide">
         <MobileDropdown
-          title={t("Use Vega")}
+          title={t('Use Vega')}
           id={1}
           show={showId === 1}
           onShow={handleShow}
@@ -30,7 +30,7 @@ const MobileNavigation = () => {
           <Use />
         </MobileDropdown>
         <MobileDropdown
-          title={t("Community")}
+          title={t('Community')}
           id={2}
           show={showId === 2}
           onShow={handleShow}
@@ -38,7 +38,7 @@ const MobileNavigation = () => {
           <Community />
         </MobileDropdown>
         <MobileDropdown
-          title={t("Governance")}
+          title={t('Governance')}
           id={3}
           show={showId === 3}
           onShow={handleShow}
@@ -46,7 +46,7 @@ const MobileNavigation = () => {
           <Governance />
         </MobileDropdown>
         <MobileDropdown
-          title={t("Develop")}
+          title={t('Develop')}
           id={4}
           show={showId === 4}
           onShow={handleShow}
@@ -54,7 +54,7 @@ const MobileNavigation = () => {
           <Develop />
         </MobileDropdown>
         <MobileDropdown
-          title={t("Learn")}
+          title={t('Learn')}
           id={5}
           show={showId === 5}
           onShow={handleShow}
@@ -63,7 +63,7 @@ const MobileNavigation = () => {
         </MobileDropdown>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default MobileNavigation;
+export default MobileNavigation
