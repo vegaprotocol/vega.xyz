@@ -132,10 +132,10 @@ const IndexPage = ({ data }) => {
               <ToolBox
                 title="Console"
                 description={t(
-                  'Try out trading cash settled futures on the fully decentralised Vega network (Testnet).'
+                  'Try out trading cash settled futures on the fully decentralised Vega network.'
                 )}
                 icon={getImage(data.consoleIcon)}
-                link="https://console.fairground.wtf"
+                link={routeThroughInterstitialPage('https://vega.trading/')}
               />
               <ToolBox
                 title="Governance"

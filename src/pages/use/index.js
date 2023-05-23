@@ -68,7 +68,7 @@ const UsePage = ({ data }) => {
       icon: data.consoleIcon,
       title: 'Console',
       author: 'Vega',
-      link: 'https://console.fairground.wtf/',
+      link: routeThroughInterstitialPage('https://vega.trading/'),
       description: t(
         'A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).'
       ),
