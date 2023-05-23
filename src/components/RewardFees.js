@@ -121,7 +121,7 @@ const RewardFees = () => {
         <RewardBox
           idx={0}
           title={t('Trading')}
-          rewardValue={rewardValues.makerPaidFeeReward}
+          rewardValue={0}
           rewardValueQualifier="Average total paid out per epoch"
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
@@ -132,14 +132,12 @@ const RewardFees = () => {
             </div>
           }
           buttonText={t('Trade')}
-          buttonLink={routeThroughInterstitialPage(
-            'https://console.fairground.wtf/'
-          )}
+          buttonLink="https://console.fairground.wtf/"
         />
         <RewardBox
           idx={1}
           title={t('Liquidity Provision')}
-          rewardValue={rewardValues.lpFeeReward}
+          rewardValue={0}
           rewardValueQualifier="Average total paid out per epoch"
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
@@ -150,12 +148,12 @@ const RewardFees = () => {
             </div>
           }
           buttonText={t('Provide liquidity')}
-          buttonLink="https://docs.vega.xyz/testnet/tutorials/committing-liquidity"
+          buttonLink="https://docs.vega.xyz/mainnet/concepts/liquidity/provision"
         />
         <RewardBox
           idx={2}
           title={t('Market Creation')}
-          rewardValue={rewardValues.marketProposerReward}
+          rewardValue={0}
           rewardValueQualifier="Average total paid out per epoch"
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">

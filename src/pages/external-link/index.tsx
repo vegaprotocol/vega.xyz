@@ -8,10 +8,17 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import interstitialAllowList from '../../../interstitial-allow.json'
 import NotFoundPage from '../404'
 
+function generateGatewayLink(cid, type, hash) {
+  const base = interstitialAllowList.ipfsGateway
+
+  return base.replace('#1#', cid).replace('#2#', type) + hash
+}
+
 const ExternalLinkPage = () => {
   const { t, i18n } = useTranslation('page.external-link')
   const [missingTranslations, setMissingTranslations] = useState(false)
   const [seconds, setSeconds] = useState(5)
+  const [isIPFS, setIsIPFS] = useState(false)
   const [notFound, setNotFound] = useState(false)
   const [url, setUrl] = useState('')
 
@@ -22,6 +29,7 @@ const ExternalLinkPage = () => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
     const urlValue = urlParams.get('url')
+    const hash = window.location.hash
 
     if (urlValue !== null) {
       setUrl(urlValue)
@@ -30,27 +38,50 @@ const ExternalLinkPage = () => {
     // if no URL supplied, or not in whitelist then redirect to 404
     if (
       urlValue === null ||
-      !interstitialAllowList.allowed
+      !interstitialAllowList.allowedSites
         .map((url) => url.replace(/\/$/, ''))
         .includes(urlValue.replace(/\/$/, '')) // strip trailing slashes for comparison
     ) {
-      setNotFound(true)
+      try {
+        if (
+          urlValue &&
+          interstitialAllowList.allowedIPFS.indexOf(urlValue) !== -1
+        ) {
+          setIsIPFS(true)
+          setUrl(generateGatewayLink(urlValue, 'ipfs', hash))
+        } else if (
+          urlValue &&
+          interstitialAllowList.allowedIPNS.indexOf(urlValue) !== -1
+        ) {
+          setIsIPFS(true)
+          setUrl(generateGatewayLink(urlValue, 'ipns', hash))
+        } else {
+          setNotFound(true)
+        }
+      } catch (e) {
+        setNotFound(true)
+      }
     }
 
-    const timer = setInterval(() => {
-      if (seconds === 0) {
+    if (notFound === false) {
+      const timer = setInterval(() => {
+        if (seconds === 0) {
+          clearInterval(timer)
+          window.location.assign(url)
+          return false
+        } else {
+          setSeconds((seconds) => seconds - 1)
+        }
+      }, 1000)
+      return () => {
         clearInterval(timer)
-        window.location.assign(url)
-        return false
-      } else {
-        setSeconds((seconds) => seconds - 1)
       }
-    }, 1000)
-    return () => {
-      clearInterval(timer)
     }
   }, [seconds])
 
+  const message = isIPFS
+    ? `We're about to redirect you to an application on IPFS`
+    : `We're about to redirect you to:`
   return (
     <div>
       {notFound ? (
@@ -69,10 +100,7 @@ const ExternalLinkPage = () => {
                   </GlitchTitle>
                 </h1>
                 <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
-                  <Trans t={t}>
-                    We're about to redirect you to Console on Fairground, Vega's
-                    incentivised testnet.
-                  </Trans>
+                  <Trans t={t}>{message}</Trans>
                 </p>
                 <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
                   <Trans t={t}>You will be redirected in </Trans> {seconds}...

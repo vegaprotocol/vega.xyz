@@ -8,8 +8,18 @@ const LinkWrapper = ({
   internalWrapper,
   externalWrapper,
   children,
-  className,
 }) => (condition ? externalWrapper(children) : internalWrapper(children))
+
+interface NewsCardProps {
+  title: string
+  text: string
+  link: string
+  image?: string
+  date?: string
+  category?: string
+  extra?: string
+  className?: string
+}
 
 const NewsCard = ({
   title,
@@ -20,7 +30,7 @@ const NewsCard = ({
   category,
   extra,
   className,
-}) => {
+}: NewsCardProps) => {
   return (
     <div className={className ? className : ''}>
       <LinkWrapper

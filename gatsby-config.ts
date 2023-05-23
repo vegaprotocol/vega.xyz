@@ -19,6 +19,10 @@ const languages = [
     code: 'cn',
     localName: '简体中文',
   },
+  {
+    code: 'ko',
+    localName: '한국인',
+  },
 ]
 
 module.exports = {
@@ -129,13 +133,6 @@ module.exports = {
       options: {
         path: `${__dirname}/locales`,
         name: `locale`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/tools`,
-        name: `tools`,
       },
     },
     {

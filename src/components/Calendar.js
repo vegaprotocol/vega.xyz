@@ -3,7 +3,7 @@ import CalendarEvent from './CalendarEvent'
 import ButtonLink from './ButtonLink'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
-const Calendar = ({ limit = false, filter = false }) => {
+const Calendar = ({ limit = -1, filter = false }) => {
   const [events, setEvents] = useState(null)
   const { t } = useTranslation('component.calendar')
 
@@ -13,6 +13,11 @@ const Calendar = ({ limit = false, filter = false }) => {
         'https://notion-data-service.ops.vega.xyz/query?id=3c75eae1-dec3-4b2c-aa38-c1e9adcc7e13'
       )
       response = await response.json()
+
+      if (response.notion_data === null) {
+        setEvents([])
+        return false
+      }
 
       // the following logic will probably be made redundant when the calendar API feed is updated
 
@@ -68,7 +73,7 @@ const Calendar = ({ limit = false, filter = false }) => {
       // return only future events
       sortedEvents = sortedEvents.slice(startOfOldEvents, sortedEvents.length)
 
-      if (limit) {
+      if (limit > 0) {
         sortedEvents = sortedEvents.slice(0, limit)
       }
 
@@ -80,7 +85,7 @@ const Calendar = ({ limit = false, filter = false }) => {
   return (
     <div>
       {events && events.length > 0 && (
-        <div className="border-t border-current">
+        <div className="border-t border-current" data-cy="events">
           <div>
             {events.map((event, idx) => (
               <CalendarEvent key={idx} event={event} />
@@ -92,7 +97,7 @@ const Calendar = ({ limit = false, filter = false }) => {
         </div>
       )}
       {events && events.length === 0 && (
-        <div className="body-l mb-space-10">
+        <div className="body-l mb-space-10" data-cy="thingsAreQuiet">
           {t("Things are a little quiet. Check back to see what's on.")}
         </div>
       )}

@@ -68,7 +68,7 @@ const UsePage = ({ data }) => {
       icon: data.consoleIcon,
       title: 'Console',
       author: 'Vega',
-      link: routeThroughInterstitialPage('https://console.fairground.wtf/'),
+      link: 'https://console.fairground.wtf/',
       description: t(
         'A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).'
       ),
@@ -79,7 +79,7 @@ const UsePage = ({ data }) => {
       icon: data.governanceIcon,
       title: 'Governance',
       author: 'Vega',
-      link: 'https://token.vega.xyz/governance',
+      link: 'https://governance.vega.xyz/proposals',
       description: t('Review and vote on governance proposals.'),
       categories: ['governance'],
     },
@@ -99,7 +99,7 @@ const UsePage = ({ data }) => {
       icon: data.stakingIcon,
       title: 'Staking',
       author: 'Vega',
-      link: 'https://token.vega.xyz/staking',
+      link: 'https://governance.vega.xyz/validators',
       description: t('Stake $VEGA tokens and get rewarded.'),
       categories: ['governance', 'staking'],
     },
@@ -128,7 +128,7 @@ const UsePage = ({ data }) => {
       icon: data.vestingIcon,
       title: 'Vesting',
       author: 'Vega',
-      link: 'https://token.vega.xyz/vesting',
+      link: 'https://governance.vega.xyz/token/redeem',
       description: t('Redeem locked vega tokens.'),
       categories: [],
     },
@@ -172,19 +172,6 @@ const UsePage = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-
-      <div className="pt-space-5">
-        <Container>
-          <CalloutHero
-            title={t('The Vega mainnet is live, trading launch H1 2023')}
-            text={t(
-              'Token holders can participate in governance, stake and delegate.'
-            )}
-            buttonText={t('View the Roadmap')}
-            buttonLink="/#roadmap"
-          />
-        </Container>
-      </div>
       <Container dataCy={'main'}>
         <div className="mb-8 pt-6 text-center md:mb-12 md:pt-16">
           <div className="mx-auto max-w-[61rem] text-center">
@@ -201,7 +188,7 @@ const UsePage = ({ data }) => {
           </div>
         </div>
         <div className="mx-auto max-w-[90rem] md:px-6 lg:px-8">
-          <div className="mx-auto overflow-y-hidden overflow-x-scroll whitespace-nowrap border-b border-vega-mid-grey px-6 text-center md:flex md:justify-center md:gap-x-8 md:whitespace-normal">
+          <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap border-b border-vega-mid-grey px-6 text-center md:flex md:justify-center md:gap-x-8 md:whitespace-normal">
             <button
               tabIndex={0}
               onClick={() => changeFilter(null)}

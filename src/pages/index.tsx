@@ -11,7 +11,7 @@ import Ticker from '../components/Ticker'
 import GlitchTitle from '../components/UI/GlitchTitle'
 import LatestNews from '../components/LatestNews'
 import LeadingLine from '../components/LeadingLine'
-import ButtonLink from '../components/ButtonLink'
+import Button from '../components/UI/Button'
 import LinkCta from '../components/LinkCta'
 import PageSection from '../components/PageSection'
 import Calendar from '../components/Calendar'
@@ -81,7 +81,6 @@ const IndexPage = ({ data }) => {
           "Discover Web3's native derivatives trading platform that is helping DeFi mature."
         )}
       />
-
       {missingTranslations && <TranslationsBanner />}
       <main>
         <div className="relative mt-6 md:mt-8">
@@ -136,9 +135,7 @@ const IndexPage = ({ data }) => {
                   'Try out trading cash settled futures on the fully decentralised Vega network (Testnet).'
                 )}
                 icon={getImage(data.consoleIcon)}
-                link={routeThroughInterstitialPage(
-                  'https://console.fairground.wtf'
-                )}
+                link="https://console.fairground.wtf"
               />
               <ToolBox
                 title="Governance"
@@ -146,7 +143,7 @@ const IndexPage = ({ data }) => {
                   'Submit and vote on proposals to create and change markets, network parameters and assets.'
                 )}
                 icon={getImage(data.governanceIcon)}
-                link="https://token.vega.xyz/governance"
+                link="https://governance.vega.xyz/proposals"
               />
               <ToolBox
                 title="Block Explorer"
@@ -231,11 +228,9 @@ const IndexPage = ({ data }) => {
                 />
               </div>
               <div className="text-center">
-                <ButtonLink
-                  link="/key-concepts"
-                  text={t('View all')}
-                  className="bg-vega-mid-grey"
-                />
+                <Button to="/key-concepts">
+                  <Trans t={t}>View all</Trans>
+                </Button>
               </div>
             </div>
           </Container>

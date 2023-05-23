@@ -31,8 +31,8 @@ const Ticker = () => {
 
   useEffect(() => {
     Promise.all([
-      fetch(`https://api.vega.xyz/epochs`),
-      fetch(`https://api.vega.xyz/statistics`),
+      fetch(`https://api.vega.community/api/v2/epoch`),
+      fetch(`https://api.vega.community/statistics`),
     ])
       .then((responses) => {
         return Promise.all(
@@ -44,7 +44,9 @@ const Ticker = () => {
       .then(function (data) {
         updateStats({
           name: 'validators',
-          value: data[0].epoch.validators.length,
+          value: data[0].epoch.validators.filter(
+            (n) => n.rankingScore.votingPower > 0
+          ).length,
         })
 
         updateStats({

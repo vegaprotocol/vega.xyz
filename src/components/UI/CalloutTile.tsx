@@ -4,7 +4,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 export interface CalloutTileProps {
   icon?: string
   title: string
-  description: string
+  description?: string
 }
 
 const CalloutTile = ({ icon, title, description }: CalloutTileProps) => {

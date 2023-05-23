@@ -19,7 +19,7 @@ const Row = ({ children }) => {
 // TODO - This table needs generalising, it's specific to validator rewards
 const Table = ({ headings, rows }) => {
   return (
-    <div className="overflow-x-scroll">
+    <div className="overflow-x-auto">
       <table className="w-full max-w-[100vw] border-b border-[#525252] text-left">
         <tbody>
           {headings.map((heading, idx) => (

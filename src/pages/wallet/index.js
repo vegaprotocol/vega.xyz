@@ -4,22 +4,22 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
-import PageSection from '../../components/PageSection'
-import GlitchTitle from '../../components/GlitchTitle'
+import GlitchTitle from '../../components/UI/GlitchTitle'
 import WalletRip from '../../components/Svg/WalletRip'
 import WalletHowTo from '../../components/Svg/WalletHowTo'
 import WalletLeft from '../../components/Svg/WalletLeft'
 import WalletRight from '../../components/Svg/WalletRight'
 import WalletHowToSmall from '../../components/Svg/WalletHowToSmall'
-import LeadingLine from '../../components/LeadingLine'
 import ButtonLink from '../../components/ButtonLink'
 import Button from '../../components/UI/Button'
+import LinkWrapper from '../../components/UI/LinkWrapper'
 import DropdownArrow from '../../components/Svg/DropdownArrow'
 import IconPlatformMac from '../../components/Svg/IconPlatformMac'
 import IconPlatformWindows from '../../components/Svg/IconPlatformWindows'
 import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
 import WalletVideoWebM from '../../video/wallet-hero.webm'
 import WalletVideoMP4 from '../../video/wallet-hero.mp4'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import { MQMediumDown, MQLargeUp } from '../../utils/media-queries.js'
 
@@ -62,7 +62,7 @@ const DownloadButton = ({ binaries, title }) => {
         <div
           role="button"
           tabIndex={0}
-          className="flex items-center border border-current"
+          className="flex items-center border border-current" data-cy={title}
           onFocus={() => showDownloadMenu(true)}
           onBlur={(e) => {
             if (!e.relatedTarget?.dataset?.fileDownload) {
@@ -70,7 +70,8 @@ const DownloadButton = ({ binaries, title }) => {
             }
           }}
         >
-          <div className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase">
+          <div
+            className="border-px copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 text-center uppercase">
             <div className="mr-4">
               <DropdownArrow />
             </div>
@@ -90,11 +91,15 @@ const DownloadButton = ({ binaries, title }) => {
                           rel="noreferrer"
                           data-file-download
                           className={`flex w-full items-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10`}
+                          data-cy={'downloadLink'}
                         >
                           <div className="px-3.5 py-2">
                             {PlatformIcon(binary.icon)}
                           </div>
-                          <div className="copy-xxs !mb-0 py-2 text-vega-mid-grey dark:text-vega-grey">
+                          <div
+                            className="copy-xxs !mb-0 py-2 text-vega-mid-grey dark:text-vega-grey"
+                            data-cy={'downloadPlatform'}
+                          >
                             {binary.platform}
                           </div>
                         </a>
@@ -115,27 +120,27 @@ const binaries = [
   {
     icon: 'windows',
     platform: 'Windows',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-windows-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-amd64.zip',
   },
   {
     icon: 'windows',
     platform: 'Windows (ARM64)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-windows-arm64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-arm64.zip',
   },
   {
     icon: 'mac',
     platform: 'MacOS (Intel)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-darwin-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-intel.zip',
   },
   {
     icon: 'mac',
     platform: 'MacOS (M1 / M2)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-darwin-arm64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-apple-silicon.zip',
   },
   {
     icon: 'linux',
     platform: 'Linux',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vegawallet-desktop-linux-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-linux-amd64.zip',
   },
 ]
 
@@ -143,31 +148,31 @@ const fairgroundBinaries = [
   {
     icon: 'windows',
     platform: 'Windows',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.2/vegawallet-desktop-windows-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-windows-amd64.zip',
   },
   {
     icon: 'windows',
     platform: 'Windows (ARM64)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.2/vegawallet-desktop-windows-arm64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-windows-arm64.zip',
   },
   {
     icon: 'mac',
     platform: 'MacOS (Intel)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.2/vegawallet-desktop-darwin-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-macos-intel.zip',
   },
   {
     icon: 'mac',
     platform: 'MacOS (M1 / M2)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.2/vegawallet-desktop-darwin-arm64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-macos-apple-silicon.zip',
   },
   {
     icon: 'linux',
     platform: 'Linux',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.8.2/vegawallet-desktop-linux-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-linux-amd64.zip',
   },
 ]
 
-const WalletPage = () => {
+const WalletPage = ({ data }) => {
   const { i18n, t } = useTranslation('page.wallet')
   const [missingTranslations, setMissingTranslations] = useState(false)
 
@@ -204,16 +209,18 @@ const WalletPage = () => {
       <Container dataCy={'main'}>
         <div className="mx-auto max-w-[38rem] pt-6 md:max-w-none lg:pt-16">
           <div className="mx-auto max-w-[28rem] text-center md:max-w-[38rem] lg:max-w-[42rem]">
-            <GlitchTitle level="1" className="title-l md:title-xxl my-4">
-              <Trans t={t}>Get the Vega Wallet</Trans>
-            </GlitchTitle>
+            <h1 className="heading-xl mb-space-6">
+              <GlitchTitle color="purple">
+                <Trans t={t}>Get the Vega Wallet</Trans>
+              </GlitchTitle>
+            </h1>
           </div>
-          <LeadingLine className="mx-auto max-w-[56rem] text-center text-current">
+          <p className="body-xl mx-auto max-w-[56rem] text-center">
             <Trans t={t}>
               Download the Vega Wallet desktop app, to help you manage multiple
               wallets, multiple keys — and get access to the Vega network.
             </Trans>
-          </LeadingLine>
+          </p>
           <div className="lg:flex lg:items-center lg:justify-center lg:gap-x-space-5">
             <DownloadButton
               binaries={binaries}
@@ -235,7 +242,7 @@ const WalletPage = () => {
         </div>
       </Container>
 
-      <div className="relative pt-16 md:mt-12 md:pt-36">
+      <div className="relative mb-space-10 pt-space-8 md:mt-space-6 md:mb-space-11 md:pt-space-13 lg:mb-space-13">
         <MQMediumDown>
           <video
             className="mx-auto h-auto w-full max-w-[90%] md:hidden"
@@ -266,7 +273,7 @@ const WalletPage = () => {
       </div>
 
       <Container>
-        <PageSection>
+        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <div className="text-center">
             <h2 className="title-m">
               <Trans t={t}>With the wallet you can:</Trans>
@@ -451,22 +458,33 @@ const WalletPage = () => {
               voting on community proposals.
             </Trans>
           </p>
-        </PageSection>
+        </div>
 
-        <PageSection>
+        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
+          <h2 className="heading-xl mb-space-6 text-center md:mb-space-10">
+            <GlitchTitle>
+              <Trans t={t}>How-to use</Trans>
+            </GlitchTitle>
+          </h2>
+          <div className="flex justify-center">
+            <LinkWrapper to="https://www.youtube.com/watch?v=fFmLQeQUa1k">
+              <GatsbyImage
+                image={getImage(data.walletVideoPoster)}
+                alt=""
+                className="mx-auto mb-space-5 max-w-[43.75rem]"
+              />
+            </LinkWrapper>
+          </div>
+        </div>
+
+        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <WalletHowToSmall className="mb-8 md:hidden" />
           <div className="lg:gap-21 mx-auto grid max-w-[62rem] grid-cols-12 md:gap-12">
             <div className="col-span-12 md:col-span-4">
-              <h2 className="title-l md:title-xl mb-3 max-w-[17rem] md:max-w-none">
-                <Trans t={t}>How to use</Trans>
+              <h2 className="heading-xl  mb-3 max-w-[17rem] md:max-w-none">
+                <Trans t={t}>Step by step</Trans>
               </h2>
-              <p className="copy-xs">
-                <Trans t={t}>
-                  You can have multiple wallets within the Vega Wallet desktop
-                  app.
-                </Trans>
-              </p>
-              <p className="copy-xxs">
+              <p className="body-m">
                 <Trans t={t}>
                   To learn more about the Vega Wallet desktop app, including
                   full, step by step details on restoring wallets, updating the
@@ -475,8 +493,8 @@ const WalletPage = () => {
               </p>
             </div>
 
-            <div className="col-span-12 md:col-span-8 lg:pl-12">
-              <ol className="mt-6 list-none p-0 md:mt-0">
+            <div className="col-span-12 md:col-span-8 lg:pl-space-6">
+              <ol className="mt-space-6 list-none p-0 md:mt-0">
                 {howToText.map((text, idx) => {
                   return <ListItem idx={idx} key={idx} text={t(text)} />
                 })}
@@ -484,10 +502,10 @@ const WalletPage = () => {
             </div>
           </div>
           <WalletHowTo className="mt-5 hidden md:block" />
-        </PageSection>
+        </div>
       </Container>
 
-      <PageSection>
+      <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
         <div className="flex items-center justify-between">
           <div className="hidden w-[200px] md:block">
             <WalletLeft />
@@ -595,7 +613,7 @@ const WalletPage = () => {
             <WalletRight />
           </div>
         </div>
-      </PageSection>
+      </div>
     </Layout>
   )
 }
@@ -604,18 +622,22 @@ export default WalletPage
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(
-      filter: {
-        ns: { in: ["common", "component.navigation", "page.wallet"] }
-        language: { eq: $language }
-      }
-    ) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns
           data
           language
         }
+      }
+    }
+    walletVideoPoster: file(relativePath: { eq: "wallet-video-poster.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

@@ -45,9 +45,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to={routeThroughInterstitialPage(
-                      'https://console.fairground.wtf/'
-                    )}
+                    to="https://console.fairground.wtf/"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Trade</Trans>
@@ -55,7 +53,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/governance"
+                    to="https://governance.vega.xyz/"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Govern</Trans>
@@ -63,7 +61,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/staking"
+                    to="https://governance.vega.xyz/validators"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Stake</Trans>
@@ -223,7 +221,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/governance"
+                    to="https://governance.vega.xyz/"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Governance dApp</Trans>
@@ -378,6 +376,9 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+              <TextLink to="https://blog.vega.xyz/tagged/vega-incident-reports">
+                <Trans t={t}>Mainnet status and incidents</Trans>
+              </TextLink>
               <TextLink to="/bug-bounties">
                 <Trans t={t}>Report a security issue</Trans>
               </TextLink>

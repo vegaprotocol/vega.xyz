@@ -68,19 +68,7 @@ const KeyConceptsPage = () => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <div data-cy="main" className="mb-16">
-        <Container>
-          <div className="my-10">
-            <CalloutHero
-              title={t('The Vega mainnet is live, trading launch H1 2023')}
-              text={t(
-                'Token holders can participate in governance, stake and delegate.'
-              )}
-              buttonText={t('View the Roadmap')}
-              buttonLink="/#roadmap"
-            />
-          </div>
-        </Container>
+      <div data-cy="main" className="mb-16 pt-6 lg:pt-16">
         <div className="mx-auto max-w-[45rem] px-4 text-center md:px-0 xl:max-w-[50rem]">
           <h1 className="mb-6">
             <BoxTitle text={t('Key concepts')} />
@@ -109,7 +97,7 @@ const KeyConceptsPage = () => {
         <div className="relative z-30">
           <Sticky enabled={true}>
             <div className="bg-white dark:bg-black">
-              <div className="mx-auto overflow-y-hidden overflow-x-scroll whitespace-nowrap border-b border-vega-mid-grey px-6 md:flex md:justify-center md:gap-x-8 md:whitespace-normal md:px-0">
+              <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap border-b border-vega-mid-grey px-6 md:flex md:justify-center md:gap-x-8 md:whitespace-normal md:px-0">
                 <ScrollSpy
                   items={['good', 'better', 'mature']}
                   currentClassName="border-b-current"
