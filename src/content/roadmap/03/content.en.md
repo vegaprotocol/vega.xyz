@@ -5,5 +5,8 @@ title: Alpha Mainnet
 
 ## Alpha Mainnet network is live!
 
-- Expected launch of first markets: 22/05/23
-- <a class="underline hover:no-underline" target="_blank" href="https://vegaprotocol.notion.site/The-Road-to-Vega-Mainnet-Countdown-to-Trading-576bc2655b0742cd941d38569c456240">Follow the countdown to launch</a>
+- Launch of first market: 23/05/23
+- Cash settled futures now live
+- Fully decentralised pseudonymous trading
+- Leveraged trading with full cross-margining
+- Permissionless market creation
