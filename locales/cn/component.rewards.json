@@ -1,11 +1,13 @@
 {
   "Liquidity Provision": "",
   "Average total paid out per epoch": "",
-  "Distributed based on the proportion of the total liquidity and maker fees you have received, in this epoch per market.": "",
+  "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.": "",
   "Provide liquidity": "",
   "Market Creation": "",
   "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent": "",
   "Launch Console": "",
+  "Market Making": "",
+  "Distributed based on the proportion of the total maker fees you've received in this epoch.": "",
   "Trading": "",
-  "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": ""
+  "Distributed based on the proportion of total maker fees you've paid in this epoch.": ""
 }

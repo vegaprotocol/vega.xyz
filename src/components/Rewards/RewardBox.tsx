@@ -24,7 +24,7 @@ const RewardBox = ({
   const { t } = useTranslation('component.reward-fees')
 
   return (
-    <div className="flex flex-col justify-between border border-vega-border-muted p-4 [&:nth-child(1)_.reward-value]:bg-moshed [&:nth-child(2)_.reward-value]:bg-moshed2 [&:nth-child(3)_.reward-value]:bg-moshed3">
+    <div className="flex flex-col justify-between border border-vega-border-muted p-4 [&:nth-child(1)_.reward-value]:bg-moshed [&:nth-child(2)_.reward-value]:bg-moshed2 [&:nth-child(3)_.reward-value]:bg-moshed3 [&:nth-child(4)_.reward-value]:bg-moshed4">
       <div>
         <div className="title-s mb-6">{title}</div>
         <div

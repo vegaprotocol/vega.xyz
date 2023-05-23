@@ -18,8 +18,8 @@ const TradingRewards = () => {
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
               <Trans t={t}>
-                Distributed based on the proportion of the total maker fees
-                you've paid, in this epoch per market.
+                Distributed based on the proportion of total maker fees you've
+                paid in this epoch.
               </Trans>
             </div>
           }
