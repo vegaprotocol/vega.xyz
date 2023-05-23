@@ -29,8 +29,8 @@ const MarketCreationRewards = () => {
               </Trans>
             </div>
           }
-          buttonText={t('Launch Console')}
-          buttonLink={routeThroughInterstitialPage('https://vega.trading')}
+          buttonText={t('Create Markets')}
+          buttonLink="/market-creation/"
         />
       )}
     </>

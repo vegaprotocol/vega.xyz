@@ -22,8 +22,8 @@ const MarketMakingRewards = () => {
               </Trans>
             </div>
           }
-          buttonText={t('Provide liquidity')}
-          buttonLink="https://docs.vega.xyz/mainnet/concepts/liquidity/provision"
+          buttonText={t('Market Make')}
+          buttonLink="https://docs.vega.xyz/testnet/tutorials/building-a-bot/getting-started"
         />
       )}
     </>

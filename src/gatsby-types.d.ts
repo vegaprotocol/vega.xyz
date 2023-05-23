@@ -757,6 +757,7 @@ type FileFieldsEnum =
   | 'childJson.Contribute_to_the_source_code__and_get_building_with_our_APIs_'
   | 'childJson.Contributors'
   | 'childJson.Core_nodes'
+  | 'childJson.Create_Markets'
   | 'childJson.Create_a_cash_settled_futures_market_on_any_underlying__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers_'
   | 'childJson.Create_a_market'
   | 'childJson.Create_a_new_market'
@@ -975,6 +976,7 @@ type FileFieldsEnum =
   | 'childJson.Market'
   | 'childJson.Market_Creation'
   | 'childJson.Market_Creation_with_Vega'
+  | 'childJson.Market_Make'
   | 'childJson.Market_Making'
   | 'childJson.Market_creation'
   | 'childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
@@ -1606,6 +1608,7 @@ type FileFieldsEnum =
   | 'childrenJson.Contribute_to_the_source_code__and_get_building_with_our_APIs_'
   | 'childrenJson.Contributors'
   | 'childrenJson.Core_nodes'
+  | 'childrenJson.Create_Markets'
   | 'childrenJson.Create_a_cash_settled_futures_market_on_any_underlying__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers_'
   | 'childrenJson.Create_a_market'
   | 'childrenJson.Create_a_new_market'
@@ -1824,6 +1827,7 @@ type FileFieldsEnum =
   | 'childrenJson.Market'
   | 'childrenJson.Market_Creation'
   | 'childrenJson.Market_Creation_with_Vega'
+  | 'childrenJson.Market_Make'
   | 'childrenJson.Market_Making'
   | 'childrenJson.Market_creation'
   | 'childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
@@ -3151,6 +3155,7 @@ type Json = Node & {
   readonly Contribute_to_the_source_code__and_get_building_with_our_APIs_: Maybe<Scalars['String']>;
   readonly Contributors: Maybe<Scalars['String']>;
   readonly Core_nodes: Maybe<Scalars['String']>;
+  readonly Create_Markets: Maybe<Scalars['String']>;
   readonly Create_a_cash_settled_futures_market_on_any_underlying__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers_: Maybe<Scalars['String']>;
   readonly Create_a_market: Maybe<Scalars['String']>;
   readonly Create_a_new_market: Maybe<Scalars['String']>;
@@ -3369,6 +3374,7 @@ type Json = Node & {
   readonly Market: Maybe<Scalars['String']>;
   readonly Market_Creation: Maybe<Scalars['String']>;
   readonly Market_Creation_with_Vega: Maybe<Scalars['String']>;
+  readonly Market_Make: Maybe<Scalars['String']>;
   readonly Market_Making: Maybe<Scalars['String']>;
   readonly Market_creation: Maybe<Scalars['String']>;
   readonly Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: Maybe<Scalars['String']>;
@@ -3774,6 +3780,7 @@ type JsonFieldsEnum =
   | 'Contribute_to_the_source_code__and_get_building_with_our_APIs_'
   | 'Contributors'
   | 'Core_nodes'
+  | 'Create_Markets'
   | 'Create_a_cash_settled_futures_market_on_any_underlying__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers_'
   | 'Create_a_market'
   | 'Create_a_new_market'
@@ -3992,6 +3999,7 @@ type JsonFieldsEnum =
   | 'Market'
   | 'Market_Creation'
   | 'Market_Creation_with_Vega'
+  | 'Market_Make'
   | 'Market_Making'
   | 'Market_creation'
   | 'Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
@@ -4440,6 +4448,7 @@ type JsonFilterInput = {
   readonly Contribute_to_the_source_code__and_get_building_with_our_APIs_: InputMaybe<StringQueryOperatorInput>;
   readonly Contributors: InputMaybe<StringQueryOperatorInput>;
   readonly Core_nodes: InputMaybe<StringQueryOperatorInput>;
+  readonly Create_Markets: InputMaybe<StringQueryOperatorInput>;
   readonly Create_a_cash_settled_futures_market_on_any_underlying__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers_: InputMaybe<StringQueryOperatorInput>;
   readonly Create_a_market: InputMaybe<StringQueryOperatorInput>;
   readonly Create_a_new_market: InputMaybe<StringQueryOperatorInput>;
@@ -4658,6 +4667,7 @@ type JsonFilterInput = {
   readonly Market: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Creation: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Creation_with_Vega: InputMaybe<StringQueryOperatorInput>;
+  readonly Market_Make: InputMaybe<StringQueryOperatorInput>;
   readonly Market_Making: InputMaybe<StringQueryOperatorInput>;
   readonly Market_creation: InputMaybe<StringQueryOperatorInput>;
   readonly Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;
@@ -5485,6 +5495,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Contribute_to_the_source_code__and_get_building_with_our_APIs_'
   | 'frontmatter.featuredImage.childJson.Contributors'
   | 'frontmatter.featuredImage.childJson.Core_nodes'
+  | 'frontmatter.featuredImage.childJson.Create_Markets'
   | 'frontmatter.featuredImage.childJson.Create_a_cash_settled_futures_market_on_any_underlying__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers_'
   | 'frontmatter.featuredImage.childJson.Create_a_market'
   | 'frontmatter.featuredImage.childJson.Create_a_new_market'
@@ -5703,6 +5714,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Market'
   | 'frontmatter.featuredImage.childJson.Market_Creation'
   | 'frontmatter.featuredImage.childJson.Market_Creation_with_Vega'
+  | 'frontmatter.featuredImage.childJson.Market_Make'
   | 'frontmatter.featuredImage.childJson.Market_Making'
   | 'frontmatter.featuredImage.childJson.Market_creation'
   | 'frontmatter.featuredImage.childJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
@@ -6083,6 +6095,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Contribute_to_the_source_code__and_get_building_with_our_APIs_'
   | 'frontmatter.featuredImage.childrenJson.Contributors'
   | 'frontmatter.featuredImage.childrenJson.Core_nodes'
+  | 'frontmatter.featuredImage.childrenJson.Create_Markets'
   | 'frontmatter.featuredImage.childrenJson.Create_a_cash_settled_futures_market_on_any_underlying__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers_'
   | 'frontmatter.featuredImage.childrenJson.Create_a_market'
   | 'frontmatter.featuredImage.childrenJson.Create_a_new_market'
@@ -6301,6 +6314,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Market'
   | 'frontmatter.featuredImage.childrenJson.Market_Creation'
   | 'frontmatter.featuredImage.childrenJson.Market_Creation_with_Vega'
+  | 'frontmatter.featuredImage.childrenJson.Market_Make'
   | 'frontmatter.featuredImage.childrenJson.Market_Making'
   | 'frontmatter.featuredImage.childrenJson.Market_creation'
   | 'frontmatter.featuredImage.childrenJson.Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_'
@@ -10213,6 +10227,7 @@ type Query_jsonArgs = {
   Contribute_to_the_source_code__and_get_building_with_our_APIs_: InputMaybe<StringQueryOperatorInput>;
   Contributors: InputMaybe<StringQueryOperatorInput>;
   Core_nodes: InputMaybe<StringQueryOperatorInput>;
+  Create_Markets: InputMaybe<StringQueryOperatorInput>;
   Create_a_cash_settled_futures_market_on_any_underlying__Attract_liquidity_with_Vega_s_built_in_incentive_mechanism_that_matches_traders_and_market_makers_: InputMaybe<StringQueryOperatorInput>;
   Create_a_market: InputMaybe<StringQueryOperatorInput>;
   Create_a_new_market: InputMaybe<StringQueryOperatorInput>;
@@ -10431,6 +10446,7 @@ type Query_jsonArgs = {
   Market: InputMaybe<StringQueryOperatorInput>;
   Market_Creation: InputMaybe<StringQueryOperatorInput>;
   Market_Creation_with_Vega: InputMaybe<StringQueryOperatorInput>;
+  Market_Make: InputMaybe<StringQueryOperatorInput>;
   Market_Making: InputMaybe<StringQueryOperatorInput>;
   Market_creation: InputMaybe<StringQueryOperatorInput>;
   Market_curation_in_section_3_4_of_the_Vega__2_whitepaper__2_: InputMaybe<StringQueryOperatorInput>;

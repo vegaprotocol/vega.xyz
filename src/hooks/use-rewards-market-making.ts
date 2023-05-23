@@ -26,7 +26,7 @@ const useRewardsMarketMaking = () => {
         response.summaries.edges.forEach((summary) => {
           if (
             summary.node.rewardType ===
-            'ACCOUNT_TYPE_REWARD_MAKER_PAID_RECEIVED'
+            'ACCOUNT_TYPE_REWARD_MAKER_RECEIVED_FEES'
           ) {
             rewardsAmount += Number(summary.node.amount)
           }
