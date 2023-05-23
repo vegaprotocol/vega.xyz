@@ -1,5 +1,5 @@
 ---
-title: Mission DeFi
+title: Mission: DeFi
 location: Virtual
 date: 2023-04-28
 links:
