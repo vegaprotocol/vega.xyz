@@ -1,5 +1,5 @@
 ---
-title: Eden Block Genesis Stories - Taking DeFi forward with Vega Protocol
+title: Eden Block - Genesis Stories
 location: London
 date: 2022-10-14
 links:
