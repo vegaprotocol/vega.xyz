@@ -1069,9 +1069,9 @@ type FileFieldsEnum =
   | 'childJson.Tools_built_on_Vega'
   | 'childJson.Total_Staked'
   | 'childJson.Toward_a_new_era_of_finance'
-  | 'childJson.Trade'
   | 'childJson.Trading'
   | 'childJson.Translate'
+  | 'childJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'childJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
   | 'childJson.Tweets___Translations___Editorials___Infographics'
   | 'childJson.Twitch'
@@ -1846,9 +1846,9 @@ type FileFieldsEnum =
   | 'childrenJson.Tools_built_on_Vega'
   | 'childrenJson.Total_Staked'
   | 'childrenJson.Toward_a_new_era_of_finance'
-  | 'childrenJson.Trade'
   | 'childrenJson.Trading'
   | 'childrenJson.Translate'
+  | 'childrenJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'childrenJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
   | 'childrenJson.Tweets___Translations___Editorials___Infographics'
   | 'childrenJson.Twitch'
@@ -3319,9 +3319,9 @@ type Json = Node & {
   readonly Tools_built_on_Vega: Maybe<Scalars['String']>;
   readonly Total_Staked: Maybe<Scalars['String']>;
   readonly Toward_a_new_era_of_finance: Maybe<Scalars['String']>;
-  readonly Trade: Maybe<Scalars['String']>;
   readonly Trading: Maybe<Scalars['String']>;
   readonly Translate: Maybe<Scalars['String']>;
+  readonly Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_: Maybe<Scalars['String']>;
   readonly Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__: Maybe<Scalars['String']>;
   readonly Tweets___Translations___Editorials___Infographics: Maybe<Scalars['String']>;
   readonly Twitch: Maybe<Scalars['String']>;
@@ -3870,9 +3870,9 @@ type JsonFieldsEnum =
   | 'Tools_built_on_Vega'
   | 'Total_Staked'
   | 'Toward_a_new_era_of_finance'
-  | 'Trade'
   | 'Trading'
   | 'Translate'
+  | 'Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
   | 'Tweets___Translations___Editorials___Infographics'
   | 'Twitch'
@@ -4464,9 +4464,9 @@ type JsonFilterInput = {
   readonly Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
   readonly Total_Staked: InputMaybe<StringQueryOperatorInput>;
   readonly Toward_a_new_era_of_finance: InputMaybe<StringQueryOperatorInput>;
-  readonly Trade: InputMaybe<StringQueryOperatorInput>;
   readonly Trading: InputMaybe<StringQueryOperatorInput>;
   readonly Translate: InputMaybe<StringQueryOperatorInput>;
+  readonly Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_: InputMaybe<StringQueryOperatorInput>;
   readonly Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__: InputMaybe<StringQueryOperatorInput>;
   readonly Tweets___Translations___Editorials___Infographics: InputMaybe<StringQueryOperatorInput>;
   readonly Twitch: InputMaybe<StringQueryOperatorInput>;
@@ -5437,9 +5437,9 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Tools_built_on_Vega'
   | 'frontmatter.featuredImage.childJson.Total_Staked'
   | 'frontmatter.featuredImage.childJson.Toward_a_new_era_of_finance'
-  | 'frontmatter.featuredImage.childJson.Trade'
   | 'frontmatter.featuredImage.childJson.Trading'
   | 'frontmatter.featuredImage.childJson.Translate'
+  | 'frontmatter.featuredImage.childJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'frontmatter.featuredImage.childJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
   | 'frontmatter.featuredImage.childJson.Tweets___Translations___Editorials___Infographics'
   | 'frontmatter.featuredImage.childJson.Twitch'
@@ -5963,9 +5963,9 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Tools_built_on_Vega'
   | 'frontmatter.featuredImage.childrenJson.Total_Staked'
   | 'frontmatter.featuredImage.childrenJson.Toward_a_new_era_of_finance'
-  | 'frontmatter.featuredImage.childrenJson.Trade'
   | 'frontmatter.featuredImage.childrenJson.Trading'
   | 'frontmatter.featuredImage.childrenJson.Translate'
+  | 'frontmatter.featuredImage.childrenJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_'
   | 'frontmatter.featuredImage.childrenJson.Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__'
   | 'frontmatter.featuredImage.childrenJson.Tweets___Translations___Editorials___Infographics'
   | 'frontmatter.featuredImage.childrenJson.Twitch'
@@ -10021,9 +10021,9 @@ type Query_jsonArgs = {
   Tools_built_on_Vega: InputMaybe<StringQueryOperatorInput>;
   Total_Staked: InputMaybe<StringQueryOperatorInput>;
   Toward_a_new_era_of_finance: InputMaybe<StringQueryOperatorInput>;
-  Trade: InputMaybe<StringQueryOperatorInput>;
   Trading: InputMaybe<StringQueryOperatorInput>;
   Translate: InputMaybe<StringQueryOperatorInput>;
+  Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network_: InputMaybe<StringQueryOperatorInput>;
   Try_out_trading_cash_settled_futures_on_the_fully_decentralised_Vega_network__Testnet__: InputMaybe<StringQueryOperatorInput>;
   Tweets___Translations___Editorials___Infographics: InputMaybe<StringQueryOperatorInput>;
   Twitch: InputMaybe<StringQueryOperatorInput>;
