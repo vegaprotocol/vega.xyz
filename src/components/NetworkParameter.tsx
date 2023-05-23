@@ -5,6 +5,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next'
 import ParameterBox from './ParameterBox'
 import { addDecimalsFormatNumber } from '@vegaprotocol/utils'
 import { formatNumberWithSuffix } from '../utils/tools'
+import BigNumber from 'bignumber.js'
 
 export interface NetworkParameterProps {
   param: string
@@ -36,7 +37,7 @@ const NetworkParameter = ({
     if (formatForVega) {
       return formatVegaValue(value)
     } else if (expressPercentage) {
-      return Math.round(value * 100)
+      return new BigNumber(value).times(100).toString()
     } else if (prettyNumber) {
       return formatNumberWithSuffix(value)
     } else {
