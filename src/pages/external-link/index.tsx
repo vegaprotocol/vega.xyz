@@ -80,8 +80,10 @@ const ExternalLinkPage = () => {
   }, [seconds])
 
   const message = isIPFS
-    ? `We're about to redirect you to an application on IPFS`
-    : `We're about to redirect you to:`
+    ? t(
+        `The link you are following is an application on IPFS that is not hosted by Vega.`
+      )
+    : t(`The link you are following is not hosted by Vega.`)
   return (
     <div>
       {notFound ? (
@@ -100,7 +102,7 @@ const ExternalLinkPage = () => {
                   </GlitchTitle>
                 </h1>
                 <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
-                  <Trans t={t}>{message}</Trans>
+                  {message}
                 </p>
                 <p className="body-xl mx-auto mb-space-4 max-w-[40rem]">
                   <Trans t={t}>You will be redirected in </Trans> {seconds}...
