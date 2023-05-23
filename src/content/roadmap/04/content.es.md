@@ -7,6 +7,4 @@ title: Version 1 Mainnet
 
 - Temporary limits lifted through community governance
 - New innovations and improvements from feedback e.g., successor markets, governance transfers, stop orders and iceberg orders
-- The introduction of spot markets, perpetuals, liquidity SLAs, Ethereum oracles and margin segregation
-- A Vega referral program to incentivise participation and reward users
-- 
+- Introduction of spot markets, perpetuals, liquidity SLAs, Ethereum oracles and margin segregation
