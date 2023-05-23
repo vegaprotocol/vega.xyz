@@ -31,8 +31,6 @@ const useRewardsMarketCreation = () => {
           }
         })
 
-        console.log(rewardsAmount)
-
         setRewards(rewardsAmount)
         setLoading(false)
       } catch (error) {

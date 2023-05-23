@@ -10,6 +10,7 @@ import GlitchTitle from '../../components/UI/GlitchTitle'
 import TeamTile from '../../components/UI/TeamTile'
 import InfoTile from '../../components/UI/InfoTile'
 import Callout from '../../components/UI/Callout'
+import Link from '../../components/UI/Link'
 import ActionButton from '../../components/UI/ActionButton'
 import APIGraphic from '../../components/Svg/APIGraphic'
 import NumberedListItem from '../../components/UI/NumberedListItem'
@@ -67,15 +68,14 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
           <h2 className="heading-xl mb-space-5">
             <GlitchTitle color="purple">
               <Trans t={t}>
-                Market make and provide liquidity using our APIs
+                Market make and provide liquidity using the APIs
               </Trans>
             </GlitchTitle>
           </h2>
-          <div className="body-xl">
+          <div className="body-xl mx-auto max-w-[40rem]">
             <Trans t={t}>
-              On Vega, price takers pay a fee on every trade - 100% of which is
-              distributed between validators and token holders, market makers
-              and liquidity providers. The are no gas fees on Vega.
+              Anyone can become a market maker or liquidity provider on Vega by
+              integrating with its CEX-style APIs
             </Trans>
           </div>
         </div>
@@ -102,9 +102,19 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
           />
           <TeamTile
             title={t('Liquidity providers')}
-            body={t(
-              'Access liquidity provision fees on Vega, commit (and continue to support) a set bond amount to help keep a market liquid. The total liquidity needed on a market is determined by the protocol, and you specify the fee % you would like to receive. Active liquidity providers (starting with the cheapest first) then receive liquidity provider fees.'
-            )}
+            body={
+              <div>
+                {t(
+                  "Users willing to commit a set bond amount to help ensure a market's liquidity can earn liquidity provision fees. Fee % is set per market based on the commitments needed to keep it liquid."
+                )}{' '}
+                <Link
+                  className="text-vega-black underline hover:no-underline dark:text-vega-white"
+                  to="https://docs.vega.xyz/testnet/concepts/liquidity/provision"
+                >
+                  Learn more
+                </Link>
+              </div>
+            }
             image={getImage(data.iconLiquidityProvider)}
           />
         </div>
@@ -114,12 +124,12 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
             <Trans t={t}>Prerequisites</Trans>
           </h2>
 
-          {/* <p className="body-l light:text-vega-light-400 mb-space-6 text-center dark:text-vega-dark-400 ">
+          <p className="body-l light:text-vega-light-400 mb-space-6 text-center dark:text-vega-dark-400 ">
             <Trans t={t}>
-              Before you can start market making or providiing liquidity, you
-              need to meet certain criteria. Ideally, you will know how to:
+              Market making and liquidity provision is risky and for
+              sophisticated parties only. Users of this page should be able to:
             </Trans>
-          </p> */}
+          </p>
 
           <div className="mb-space-4 border-t md:mb-space-11 lg:mb-space-13">
             <NumberedListItem
@@ -170,12 +180,19 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
             <Trans t={t}>1. Get a Wallet</Trans>
           </h3>
 
-          <p className="body-xl mb-space-6">
+          <p className="body-xl mb-space-4">
             <Trans t={t}>
-              Use it to access and sign transactions and connect to any dApp on
-              Vega.
+              Download the CLI wallet for developer access to programmatically
+              sign transactions and access any dApps on the network.
             </Trans>
           </p>
+
+          <Button
+            className="mb-space-6"
+            to="https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet"
+          >
+            <Trans t={t}>Download CLI Wallet</Trans>
+          </Button>
 
           <Callout
             title={t('Advanced: Set up your own test network')}
@@ -208,7 +225,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
                 variant="secondary"
                 to="https://docs.vega.xyz/mainnet/category/api/rest/core/core-service"
               >
-                <Trans t={t}>View all core nodes</Trans>
+                <Trans t={t}>View all core node APIs</Trans>
               </Button>
             </div>
             <div>
@@ -219,9 +236,9 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
               <Button
                 className="mt-space-5"
                 variant="secondary"
-                to="https://docs.vega.xyz/mainnet/category/api/rest/data-v2/trading-data-service"
+                to="https://docs.vega.xyz/mainnet/api/rest/overview"
               >
-                <Trans t={t}>View all data nodes</Trans>
+                <Trans t={t}>View all data node APIs</Trans>
               </Button>
             </div>
             <div>

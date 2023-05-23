@@ -181,40 +181,28 @@ const IndexPage = ({ data }) => {
             <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
               <div className="grid md:grid-cols-2">
                 <div className="p-space-5">
-                  <h2 className="heading-m mb-space-4">Explore Vega's APIS</h2>
-                  <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-6">
+                  <h2 className="heading-m mb-space-4">Vega's APIS</h2>
+                  <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-3">
                     <Trans t={t}>
                       Vega's decentralised datanode architecture provides rich
                       CEX-like APIs and full historic price data for everyone!
                     </Trans>
                   </p>
                   <div>
-                    <div className="flex items-center gap-x-space-5">
+                    <div className="mb-space-6 flex items-center gap-x-space-5">
                       <div className="max-w-[4.6875rem]">
-                        <Link
-                          hideArrow
-                          to={'https://docs.vega.xyz/mainnet/api/overview'}
-                        >
-                          <LogoGRPC />
-                        </Link>
+                        <LogoGRPC />
                       </div>
                       <div className="max-w-[3.125rem]">
-                        <Link
-                          hideArrow
-                          to={'https://docs.vega.xyz/mainnet/api/overview'}
-                        >
-                          <LogoRestAPI />
-                        </Link>
+                        <LogoRestAPI />
                       </div>
                       <div className="max-w-[6.25rem]">
-                        <Link
-                          hideArrow
-                          to={'https://docs.vega.xyz/mainnet/api/overview'}
-                        >
-                          <LogoGraphQL />
-                        </Link>
+                        <LogoGraphQL />
                       </div>
                     </div>
+                    <Button to="/market-making-and-liquidity-provision">
+                      <Trans t={t}>Explore</Trans>
+                    </Button>
                   </div>
                 </div>
                 <div className="flex items-end justify-end">

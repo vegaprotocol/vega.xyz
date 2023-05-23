@@ -134,8 +134,6 @@ type Result = {
 export const useNetworkParams = <T extends NetworkParamsKey[]>(params?: T) => {
   const { data, loading, error } = useQuery(NETWORK_PARAMETERS_QUERY)
 
-  console.log(data)
-
   const paramsObj = useMemo(() => {
     if (!data?.networkParametersConnection.edges) return null
     return compact(data.networkParametersConnection.edges)
