@@ -15,11 +15,12 @@ const useRewardsMarketMaking = () => {
 
         const epoch = await epochResponse.json()
         const currentEpoch = epoch.statistics.epochSeq
-        const sevenEpochsAgo = currentEpoch - 7
+        const period = 1
+        const periodStartEpoch = currentEpoch - period
         let rewardsAmount = 0
 
         let rewardsResponse = await fetch(
-          `${process.env.GATSBY_VEGA_REST_API}/api/v2/rewards/epoch/summaries?filter.assetIds=${process.env.GATSBY_VEGA_ASSET_ID}&filter.fromEpoch=${sevenEpochsAgo}&filter.toEpoch=${currentEpoch}`
+          `${process.env.GATSBY_VEGA_REST_API}/api/v2/rewards/epoch/summaries?filter.assetIds=${process.env.GATSBY_VEGA_ASSET_ID}&filter.fromEpoch=${periodStartEpoch}&filter.toEpoch=${currentEpoch}`
         )
         const response = await rewardsResponse.json()
 
@@ -32,7 +33,7 @@ const useRewardsMarketMaking = () => {
           }
         })
 
-        rewardsAmount = rewardsAmount / 7
+        rewardsAmount = rewardsAmount / period
 
         setRewards(rewardsAmount)
         setLoading(false)
