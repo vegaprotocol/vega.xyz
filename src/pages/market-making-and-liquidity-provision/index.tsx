@@ -281,7 +281,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
             <InfoTile
               title={t('Getting started')}
               link={{
-                to: 'https://docs.vega.xyz/testnet/tutorials/building-a-bot/getting-started',
+                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/getting-started',
                 title: t('View'),
               }}
             >
@@ -296,7 +296,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
             <InfoTile
               title={t('Streaming data')}
               link={{
-                to: 'https://docs.vega.xyz/testnet/tutorials/building-a-bot/streaming-data',
+                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/streaming-data',
                 title: t('View'),
               }}
             >
@@ -309,7 +309,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
             <InfoTile
               title={t('Adding a liquidity commitment')}
               link={{
-                to: 'https://docs.vega.xyz/testnet/tutorials/building-a-bot/adding-a-liquidity-commitment',
+                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/adding-a-liquidity-commitment',
                 title: t('View'),
               }}
             >
@@ -322,7 +322,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
             <InfoTile
               title={t('Adding an external price feed')}
               link={{
-                to: 'https://docs.vega.xyz/testnet/tutorials/building-a-bot/adding-an-external-price',
+                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/adding-an-external-price',
                 title: t('View'),
               }}
             >
