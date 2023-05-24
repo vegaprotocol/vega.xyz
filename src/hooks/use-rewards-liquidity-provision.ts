@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react'
+import BigNumber from 'bignumber.js'
+
+BigNumber.config({
+  EXPONENTIAL_AT: 1e9,
+})
 
 const useRewardsLiquidityProvision = () => {
-  const [rewards, setRewards] = useState<null | number>(null)
+  const [rewards, setRewards] = useState<null | string>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
@@ -17,7 +22,7 @@ const useRewardsLiquidityProvision = () => {
         const currentEpoch = epoch.statistics.epochSeq
         const period = 1
         const periodStartEpoch = currentEpoch - period
-        let rewardsAmount = 0
+        let rewardsAmount = new BigNumber(0)
 
         let rewardsResponse = await fetch(
           `${process.env.GATSBY_VEGA_REST_API}/api/v2/rewards/epoch/summaries?filter.assetIds=${process.env.GATSBY_VEGA_ASSET_ID}&filter.fromEpoch=${periodStartEpoch}&filter.toEpoch=${currentEpoch}`
@@ -28,13 +33,14 @@ const useRewardsLiquidityProvision = () => {
           if (
             summary.node.rewardType === 'ACCOUNT_TYPE_REWARD_LP_RECEIVED_FEES'
           ) {
-            rewardsAmount += Number(summary.node.amount)
+            const reward = new BigNumber(summary.node.amount.toString())
+            rewardsAmount = rewardsAmount.plus(reward)
           }
         })
 
-        rewardsAmount = rewardsAmount / period
+        rewardsAmount = rewardsAmount.dividedBy(period.toString())
 
-        setRewards(rewardsAmount)
+        setRewards(rewardsAmount.toString())
         setLoading(false)
       } catch (error) {
         setError(error.message)
