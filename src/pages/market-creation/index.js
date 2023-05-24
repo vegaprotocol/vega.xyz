@@ -98,7 +98,7 @@ const MarketCreationPage = ({ data }) => {
         },
         {
           title: t('See what markets already exist'),
-          url: routeThroughInterstitialPage('https://vega.trading/#/markets'),
+          url: routeThroughInterstitialPage('https://vega.trading/#/markets/all'),
         },
       ],
       image: <Phase1 />,
@@ -232,7 +232,7 @@ const MarketCreationPage = ({ data }) => {
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
               link={routeThroughInterstitialPage(
-                'https://vega.trading/#/markets'
+                'https://vega.trading/#/markets/all'
               )}
               text={t('See what markets already exist')}
             />
