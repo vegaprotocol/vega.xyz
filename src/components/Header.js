@@ -7,7 +7,6 @@ import MobileMenu from '../components/Navigation/MobileMenu'
 import MobileMenuButton from '../components/Navigation/MobileMenuButton'
 import HeaderCta from '../components/HeaderCta'
 import LanguageToggle from '../components/LanguageToggle'
-import { routeThroughInterstitialPage } from '../utils/tools'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
@@ -53,7 +52,7 @@ const Header = ({ sticky }) => {
             <div className="flex items-center">
               {!menuIsOpen && (
                 <HeaderCta
-                  link={routeThroughInterstitialPage('https://vega.trading/')}
+                  link="https://console.vega.xyz/"
                   text={t('Launch Console')}
                   className="mr-3 hidden md:block lg:hidden"
                 />
@@ -69,18 +68,14 @@ const Header = ({ sticky }) => {
                   <>
                     <div className="hidden lg:block xl:hidden">
                       <HeaderCta
-                        link={routeThroughInterstitialPage(
-                          'https://vega.trading/'
-                        )}
+                        link="https://console.vega.xyz/"
                         text={t('Console')}
                         className="ml-3 hidden lg:block"
                       />
                     </div>
                     <div className="hidden xl:block">
                       <HeaderCta
-                        link={routeThroughInterstitialPage(
-                          'https://vega.trading/'
-                        )}
+                        link="https://console.vega.xyz/"
                         text={t('Launch Console')}
                         className="ml-3 hidden lg:block"
                       />

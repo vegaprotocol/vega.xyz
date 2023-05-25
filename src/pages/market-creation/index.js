@@ -21,7 +21,6 @@ import Phase5 from '../../components/Svg/MarketCreation/Process/Phase5'
 import Phase6 from '../../components/Svg/MarketCreation/Process/Phase6'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import Callout from '../../components/UI/Callout'
-import { routeThroughInterstitialPage } from '../../utils/tools'
 
 const MarketCreationPage = ({ data }) => {
   const { i18n, t } = useTranslation('page.market-creation')
@@ -98,7 +97,7 @@ const MarketCreationPage = ({ data }) => {
         },
         {
           title: t('See what markets already exist'),
-          url: routeThroughInterstitialPage('https://vega.trading/#/markets/all'),
+          url: 'https://console.vega.xyz/#/markets/all',
         },
       ],
       image: <Phase1 />,
@@ -231,9 +230,7 @@ const MarketCreationPage = ({ data }) => {
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
-              link={routeThroughInterstitialPage(
-                'https://vega.trading/#/markets/all'
-              )}
+              link="https://console.vega.xyz/"
               text={t('See what markets already exist')}
             />
           </div>

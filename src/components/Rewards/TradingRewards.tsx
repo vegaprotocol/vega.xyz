@@ -2,7 +2,6 @@ import React from 'react'
 import RewardBox from './RewardBox'
 import useRewardsTrading from '../../hooks/use-rewards-trading'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import { routeThroughInterstitialPage } from '../../utils/tools'
 
 const TradingRewards = () => {
   const { t } = useTranslation('component.rewards')
@@ -24,7 +23,7 @@ const TradingRewards = () => {
             </div>
           }
           buttonText={t('Launch Console')}
-          buttonLink={routeThroughInterstitialPage('https://vega.trading')}
+          buttonLink="https://console.vega.xyz/"
         />
       )}
     </>
