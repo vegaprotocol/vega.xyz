@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import RewardsValuePlaceholder from '../components/Svg/RewardsValuePlaceholder'
-import { routeThroughInterstitialPage } from '../utils/tools'
 import UIButton from './UI/Button'
 
 const formatVegaValue = (value) => {
@@ -132,7 +131,7 @@ const RewardFees = () => {
             </div>
           }
           buttonText={t('Launch console')}
-          buttonLink={routeThroughInterstitialPage('https://vega.trading/')}
+          buttonLink="https://console.vega.xyz/"
         />
         <RewardBox
           idx={1}

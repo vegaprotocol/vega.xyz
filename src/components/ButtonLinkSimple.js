@@ -17,8 +17,7 @@ const ButtonLinkSimple = ({ text, link, onClick, className }) => {
       </button>
     )
   } else {
-    const isExternal =
-      link.startsWith('http') || link.startsWith('/external-link')
+    const isExternal = link.startsWith('http')
     if (isExternal) {
       return (
         <a href={link} target="_blank" rel="noreferrer" className={buttonClass}>

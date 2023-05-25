@@ -10,8 +10,7 @@ const ButtonLink = ({
   hideArrowForExternal,
   className,
 }) => {
-  const isExternal =
-    link.startsWith('http') || link.startsWith('/external-link')
+  const isExternal = link.startsWith('http')
   const linkClass = `cursor-pointer md:max-w-none group button-link relative inline-block z-10 ${className}`
   let backgroundClass
   let borderClass

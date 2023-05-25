@@ -2,7 +2,6 @@ import React from 'react'
 import RewardBox from './RewardBox'
 import useRewardsMarketCreation from '../../hooks/use-rewards-market-creation'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import { routeThroughInterstitialPage } from '../../utils/tools'
 import NetworkParameter from '../NetworkParameter'
 
 const MarketCreationRewards = () => {

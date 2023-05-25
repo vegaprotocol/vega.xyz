@@ -3,8 +3,7 @@ import React from 'react'
 import LinkArrow from './Svg/LinkArrow'
 
 const TextLink = (props) => {
-  const isExternal =
-    props.to.startsWith('http') || props.to.includes('/external-link')
+  const isExternal = props.to.startsWith('http')
 
   const colourClass =
     props.colour === `blackwhite`
