@@ -181,7 +181,7 @@ const IndexPage = ({ data }) => {
                   <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-3">
                     <Trans t={t}>
                       Vega's decentralised datanode architecture provides rich
-                      CEX-like APIs and full historic price data for everyone!
+                      CEX-like APIs and full historic price data for everyone.
                     </Trans>
                   </p>
                   <div>
