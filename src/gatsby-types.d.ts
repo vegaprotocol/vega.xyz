@@ -796,6 +796,7 @@ type FileFieldsEnum =
   | 'childJson.Docs___Hackathons___Coding_support'
   | 'childJson.Documentation'
   | 'childJson.Download_CLI_Wallet'
+  | 'childJson.Download_Vega_Wallet__Mainnet_'
   | 'childJson.Download_desktop_app__Fairground_'
   | 'childJson.Download_desktop_app__Mainnet_'
   | 'childJson.Download_the_CLI_wallet_for_developer_access_to_programmatically_sign_transactions_and_access_any_dApps_on_the_network_'
@@ -1070,6 +1071,7 @@ type FileFieldsEnum =
   | 'childJson.Say_hello_on_Discord'
   | 'childJson.Scalable_DeFi_infrastructure'
   | 'childJson.Scope'
+  | 'childJson.Securely_connect_to_Vega_dapps_and_instantly_approve_and_reject_transactions_on_the_Vega_network'
   | 'childJson.Security_issues'
   | 'childJson.See_all_Tweets'
   | 'childJson.See_more'
@@ -1133,6 +1135,7 @@ type FileFieldsEnum =
   | 'childJson.Trading_Mode'
   | 'childJson.Translate'
   | 'childJson.Transparent_and_open_source_trading'
+  | 'childJson.Try_the_pre_release_Fairground__testnet__wallet'
   | 'childJson.Tutorials'
   | 'childJson.Tweets___Translations___Editorials___Infographics'
   | 'childJson.Twitch'
@@ -1647,6 +1650,7 @@ type FileFieldsEnum =
   | 'childrenJson.Docs___Hackathons___Coding_support'
   | 'childrenJson.Documentation'
   | 'childrenJson.Download_CLI_Wallet'
+  | 'childrenJson.Download_Vega_Wallet__Mainnet_'
   | 'childrenJson.Download_desktop_app__Fairground_'
   | 'childrenJson.Download_desktop_app__Mainnet_'
   | 'childrenJson.Download_the_CLI_wallet_for_developer_access_to_programmatically_sign_transactions_and_access_any_dApps_on_the_network_'
@@ -1921,6 +1925,7 @@ type FileFieldsEnum =
   | 'childrenJson.Say_hello_on_Discord'
   | 'childrenJson.Scalable_DeFi_infrastructure'
   | 'childrenJson.Scope'
+  | 'childrenJson.Securely_connect_to_Vega_dapps_and_instantly_approve_and_reject_transactions_on_the_Vega_network'
   | 'childrenJson.Security_issues'
   | 'childrenJson.See_all_Tweets'
   | 'childrenJson.See_more'
@@ -1984,6 +1989,7 @@ type FileFieldsEnum =
   | 'childrenJson.Trading_Mode'
   | 'childrenJson.Translate'
   | 'childrenJson.Transparent_and_open_source_trading'
+  | 'childrenJson.Try_the_pre_release_Fairground__testnet__wallet'
   | 'childrenJson.Tutorials'
   | 'childrenJson.Tweets___Translations___Editorials___Infographics'
   | 'childrenJson.Twitch'
@@ -3194,6 +3200,7 @@ type Json = Node & {
   readonly Docs___Hackathons___Coding_support: Maybe<Scalars['String']>;
   readonly Documentation: Maybe<Scalars['String']>;
   readonly Download_CLI_Wallet: Maybe<Scalars['String']>;
+  readonly Download_Vega_Wallet__Mainnet_: Maybe<Scalars['String']>;
   readonly Download_desktop_app__Fairground_: Maybe<Scalars['String']>;
   readonly Download_desktop_app__Mainnet_: Maybe<Scalars['String']>;
   readonly Download_the_CLI_wallet_for_developer_access_to_programmatically_sign_transactions_and_access_any_dApps_on_the_network_: Maybe<Scalars['String']>;
@@ -3468,6 +3475,7 @@ type Json = Node & {
   readonly Say_hello_on_Discord: Maybe<Scalars['String']>;
   readonly Scalable_DeFi_infrastructure: Maybe<Scalars['String']>;
   readonly Scope: Maybe<Scalars['String']>;
+  readonly Securely_connect_to_Vega_dapps_and_instantly_approve_and_reject_transactions_on_the_Vega_network: Maybe<Scalars['String']>;
   readonly Security_issues: Maybe<Scalars['String']>;
   readonly See_all_Tweets: Maybe<Scalars['String']>;
   readonly See_more: Maybe<Scalars['String']>;
@@ -3531,6 +3539,7 @@ type Json = Node & {
   readonly Trading_Mode: Maybe<Scalars['String']>;
   readonly Translate: Maybe<Scalars['String']>;
   readonly Transparent_and_open_source_trading: Maybe<Scalars['String']>;
+  readonly Try_the_pre_release_Fairground__testnet__wallet: Maybe<Scalars['String']>;
   readonly Tutorials: Maybe<Scalars['String']>;
   readonly Tweets___Translations___Editorials___Infographics: Maybe<Scalars['String']>;
   readonly Twitch: Maybe<Scalars['String']>;
@@ -3819,6 +3828,7 @@ type JsonFieldsEnum =
   | 'Docs___Hackathons___Coding_support'
   | 'Documentation'
   | 'Download_CLI_Wallet'
+  | 'Download_Vega_Wallet__Mainnet_'
   | 'Download_desktop_app__Fairground_'
   | 'Download_desktop_app__Mainnet_'
   | 'Download_the_CLI_wallet_for_developer_access_to_programmatically_sign_transactions_and_access_any_dApps_on_the_network_'
@@ -4093,6 +4103,7 @@ type JsonFieldsEnum =
   | 'Say_hello_on_Discord'
   | 'Scalable_DeFi_infrastructure'
   | 'Scope'
+  | 'Securely_connect_to_Vega_dapps_and_instantly_approve_and_reject_transactions_on_the_Vega_network'
   | 'Security_issues'
   | 'See_all_Tweets'
   | 'See_more'
@@ -4156,6 +4167,7 @@ type JsonFieldsEnum =
   | 'Trading_Mode'
   | 'Translate'
   | 'Transparent_and_open_source_trading'
+  | 'Try_the_pre_release_Fairground__testnet__wallet'
   | 'Tutorials'
   | 'Tweets___Translations___Editorials___Infographics'
   | 'Twitch'
@@ -4487,6 +4499,7 @@ type JsonFilterInput = {
   readonly Docs___Hackathons___Coding_support: InputMaybe<StringQueryOperatorInput>;
   readonly Documentation: InputMaybe<StringQueryOperatorInput>;
   readonly Download_CLI_Wallet: InputMaybe<StringQueryOperatorInput>;
+  readonly Download_Vega_Wallet__Mainnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Download_desktop_app__Fairground_: InputMaybe<StringQueryOperatorInput>;
   readonly Download_desktop_app__Mainnet_: InputMaybe<StringQueryOperatorInput>;
   readonly Download_the_CLI_wallet_for_developer_access_to_programmatically_sign_transactions_and_access_any_dApps_on_the_network_: InputMaybe<StringQueryOperatorInput>;
@@ -4761,6 +4774,7 @@ type JsonFilterInput = {
   readonly Say_hello_on_Discord: InputMaybe<StringQueryOperatorInput>;
   readonly Scalable_DeFi_infrastructure: InputMaybe<StringQueryOperatorInput>;
   readonly Scope: InputMaybe<StringQueryOperatorInput>;
+  readonly Securely_connect_to_Vega_dapps_and_instantly_approve_and_reject_transactions_on_the_Vega_network: InputMaybe<StringQueryOperatorInput>;
   readonly Security_issues: InputMaybe<StringQueryOperatorInput>;
   readonly See_all_Tweets: InputMaybe<StringQueryOperatorInput>;
   readonly See_more: InputMaybe<StringQueryOperatorInput>;
@@ -4824,6 +4838,7 @@ type JsonFilterInput = {
   readonly Trading_Mode: InputMaybe<StringQueryOperatorInput>;
   readonly Translate: InputMaybe<StringQueryOperatorInput>;
   readonly Transparent_and_open_source_trading: InputMaybe<StringQueryOperatorInput>;
+  readonly Try_the_pre_release_Fairground__testnet__wallet: InputMaybe<StringQueryOperatorInput>;
   readonly Tutorials: InputMaybe<StringQueryOperatorInput>;
   readonly Tweets___Translations___Editorials___Infographics: InputMaybe<StringQueryOperatorInput>;
   readonly Twitch: InputMaybe<StringQueryOperatorInput>;
@@ -5534,6 +5549,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Docs___Hackathons___Coding_support'
   | 'frontmatter.featuredImage.childJson.Documentation'
   | 'frontmatter.featuredImage.childJson.Download_CLI_Wallet'
+  | 'frontmatter.featuredImage.childJson.Download_Vega_Wallet__Mainnet_'
   | 'frontmatter.featuredImage.childJson.Download_desktop_app__Fairground_'
   | 'frontmatter.featuredImage.childJson.Download_desktop_app__Mainnet_'
   | 'frontmatter.featuredImage.childJson.Download_the_CLI_wallet_for_developer_access_to_programmatically_sign_transactions_and_access_any_dApps_on_the_network_'
@@ -5808,6 +5824,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Say_hello_on_Discord'
   | 'frontmatter.featuredImage.childJson.Scalable_DeFi_infrastructure'
   | 'frontmatter.featuredImage.childJson.Scope'
+  | 'frontmatter.featuredImage.childJson.Securely_connect_to_Vega_dapps_and_instantly_approve_and_reject_transactions_on_the_Vega_network'
   | 'frontmatter.featuredImage.childJson.Security_issues'
   | 'frontmatter.featuredImage.childJson.See_all_Tweets'
   | 'frontmatter.featuredImage.childJson.See_more'
@@ -5871,6 +5888,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childJson.Trading_Mode'
   | 'frontmatter.featuredImage.childJson.Translate'
   | 'frontmatter.featuredImage.childJson.Transparent_and_open_source_trading'
+  | 'frontmatter.featuredImage.childJson.Try_the_pre_release_Fairground__testnet__wallet'
   | 'frontmatter.featuredImage.childJson.Tutorials'
   | 'frontmatter.featuredImage.childJson.Tweets___Translations___Editorials___Infographics'
   | 'frontmatter.featuredImage.childJson.Twitch'
@@ -6134,6 +6152,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Docs___Hackathons___Coding_support'
   | 'frontmatter.featuredImage.childrenJson.Documentation'
   | 'frontmatter.featuredImage.childrenJson.Download_CLI_Wallet'
+  | 'frontmatter.featuredImage.childrenJson.Download_Vega_Wallet__Mainnet_'
   | 'frontmatter.featuredImage.childrenJson.Download_desktop_app__Fairground_'
   | 'frontmatter.featuredImage.childrenJson.Download_desktop_app__Mainnet_'
   | 'frontmatter.featuredImage.childrenJson.Download_the_CLI_wallet_for_developer_access_to_programmatically_sign_transactions_and_access_any_dApps_on_the_network_'
@@ -6408,6 +6427,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Say_hello_on_Discord'
   | 'frontmatter.featuredImage.childrenJson.Scalable_DeFi_infrastructure'
   | 'frontmatter.featuredImage.childrenJson.Scope'
+  | 'frontmatter.featuredImage.childrenJson.Securely_connect_to_Vega_dapps_and_instantly_approve_and_reject_transactions_on_the_Vega_network'
   | 'frontmatter.featuredImage.childrenJson.Security_issues'
   | 'frontmatter.featuredImage.childrenJson.See_all_Tweets'
   | 'frontmatter.featuredImage.childrenJson.See_more'
@@ -6471,6 +6491,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.featuredImage.childrenJson.Trading_Mode'
   | 'frontmatter.featuredImage.childrenJson.Translate'
   | 'frontmatter.featuredImage.childrenJson.Transparent_and_open_source_trading'
+  | 'frontmatter.featuredImage.childrenJson.Try_the_pre_release_Fairground__testnet__wallet'
   | 'frontmatter.featuredImage.childrenJson.Tutorials'
   | 'frontmatter.featuredImage.childrenJson.Tweets___Translations___Editorials___Infographics'
   | 'frontmatter.featuredImage.childrenJson.Twitch'
@@ -9162,31 +9183,19 @@ type MediumPostVirtualsTagsMetadata = {
 
 type MediumPostVirtualsTagsMetadataCoverImage = {
   readonly alt: Maybe<Scalars['String']>;
-  readonly backgroundSize: Maybe<Scalars['String']>;
-  readonly externalSrc: Maybe<Scalars['String']>;
-  readonly filter: Maybe<Scalars['String']>;
-  readonly focusPercentX: Maybe<Scalars['Int']>;
-  readonly focusPercentY: Maybe<Scalars['Int']>;
   readonly id: Maybe<Scalars['String']>;
   readonly isFeatured: Maybe<Scalars['Boolean']>;
   readonly originalHeight: Maybe<Scalars['Int']>;
   readonly originalWidth: Maybe<Scalars['Int']>;
-  readonly repairedAt: Maybe<Scalars['Int']>;
   readonly unsplashPhotoId: Maybe<Scalars['String']>;
 };
 
 type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   readonly alt: InputMaybe<StringQueryOperatorInput>;
-  readonly backgroundSize: InputMaybe<StringQueryOperatorInput>;
-  readonly externalSrc: InputMaybe<StringQueryOperatorInput>;
-  readonly filter: InputMaybe<StringQueryOperatorInput>;
-  readonly focusPercentX: InputMaybe<IntQueryOperatorInput>;
-  readonly focusPercentY: InputMaybe<IntQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly isFeatured: InputMaybe<BooleanQueryOperatorInput>;
   readonly originalHeight: InputMaybe<IntQueryOperatorInput>;
   readonly originalWidth: InputMaybe<IntQueryOperatorInput>;
-  readonly repairedAt: InputMaybe<IntQueryOperatorInput>;
   readonly unsplashPhotoId: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -10266,6 +10275,7 @@ type Query_jsonArgs = {
   Docs___Hackathons___Coding_support: InputMaybe<StringQueryOperatorInput>;
   Documentation: InputMaybe<StringQueryOperatorInput>;
   Download_CLI_Wallet: InputMaybe<StringQueryOperatorInput>;
+  Download_Vega_Wallet__Mainnet_: InputMaybe<StringQueryOperatorInput>;
   Download_desktop_app__Fairground_: InputMaybe<StringQueryOperatorInput>;
   Download_desktop_app__Mainnet_: InputMaybe<StringQueryOperatorInput>;
   Download_the_CLI_wallet_for_developer_access_to_programmatically_sign_transactions_and_access_any_dApps_on_the_network_: InputMaybe<StringQueryOperatorInput>;
@@ -10540,6 +10550,7 @@ type Query_jsonArgs = {
   Say_hello_on_Discord: InputMaybe<StringQueryOperatorInput>;
   Scalable_DeFi_infrastructure: InputMaybe<StringQueryOperatorInput>;
   Scope: InputMaybe<StringQueryOperatorInput>;
+  Securely_connect_to_Vega_dapps_and_instantly_approve_and_reject_transactions_on_the_Vega_network: InputMaybe<StringQueryOperatorInput>;
   Security_issues: InputMaybe<StringQueryOperatorInput>;
   See_all_Tweets: InputMaybe<StringQueryOperatorInput>;
   See_more: InputMaybe<StringQueryOperatorInput>;
@@ -10603,6 +10614,7 @@ type Query_jsonArgs = {
   Trading_Mode: InputMaybe<StringQueryOperatorInput>;
   Translate: InputMaybe<StringQueryOperatorInput>;
   Transparent_and_open_source_trading: InputMaybe<StringQueryOperatorInput>;
+  Try_the_pre_release_Fairground__testnet__wallet: InputMaybe<StringQueryOperatorInput>;
   Tutorials: InputMaybe<StringQueryOperatorInput>;
   Tweets___Translations___Editorials___Infographics: InputMaybe<StringQueryOperatorInput>;
   Twitch: InputMaybe<StringQueryOperatorInput>;
