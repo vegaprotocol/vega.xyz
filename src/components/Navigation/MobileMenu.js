@@ -5,7 +5,6 @@ import MobileMenuButton from './MobileMenuButton'
 import Container from '../../components/Container'
 import MobileNavigation from './MobileNavigation'
 import HeaderCta from '../../components/HeaderCta'
-import { routeThroughInterstitialPage } from '../../utils/tools'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const MobileMenu = ({ toggleMenu, isOpen }) => {
@@ -35,8 +34,8 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
         <MobileNavigation />
 
         <HeaderCta
-          link="https://console.fairground.wtf/"
-          text={t('Trade (Testnet)')}
+          link="https://console.vega.xyz/"
+          text={t('Launch console')}
           className="inline-block"
         />
       </Container>

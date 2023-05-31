@@ -1,5 +1,5 @@
 ---
-title: From TradFi to Vega Protocol
+title: WholesomeCrypto
 location: Virtual
 date: 2023-03-03
 links:

@@ -21,7 +21,6 @@ import Phase5 from '../../components/Svg/MarketCreation/Process/Phase5'
 import Phase6 from '../../components/Svg/MarketCreation/Process/Phase6'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import Callout from '../../components/UI/Callout'
-import { routeThroughInterstitialPage } from '../../utils/tools'
 
 const MarketCreationPage = ({ data }) => {
   const { i18n, t } = useTranslation('page.market-creation')
@@ -51,6 +50,7 @@ const MarketCreationPage = ({ data }) => {
             <NetworkParameter
               param="governance_proposal_market_minProposerBalance"
               suffix=" $VEGA"
+              formatForVega={true}
             />{' '}
             who has staked to a validator, can submit a new market proposal.
             Once submitted, head back to the forum to rally the community to
@@ -74,6 +74,7 @@ const MarketCreationPage = ({ data }) => {
             <NetworkParameter
               param="governance_proposal_market_minVoterBalance"
               suffix=" $VEGA"
+              formatForVega={true}
             />{' '}
             gets just one vote per proposal.
           </Trans>
@@ -95,8 +96,8 @@ const MarketCreationPage = ({ data }) => {
           url: 'https://community.vega.xyz/c/governance/market-proposals/28',
         },
         {
-          title: t('See some example markets (Testnet)'),
-          url: 'https://console.fairground.wtf/#/markets',
+          title: t('See what markets already exist'),
+          url: 'https://console.vega.xyz/#/markets/all',
         },
       ],
       image: <Phase1 />,
@@ -229,8 +230,8 @@ const MarketCreationPage = ({ data }) => {
 
             <BoxLinkSimple
               className="max-w-[20rem] text-left"
-              link="https://console.fairground.wtf/#/markets"
-              text={t('See what markets already exist (Testnet)')}
+              link="https://console.vega.xyz/"
+              text={t('See what markets already exist')}
             />
           </div>
         </div>

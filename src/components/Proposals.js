@@ -6,41 +6,45 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const allProposalsQuery = gql`
   query Proposals {
-    proposals {
-      id
-      reference
-      state
-      datetime
-      rejectionReason
-      errorDetails
-      terms {
-        closingDatetime
-        enactmentDatetime
-        change {
-          ... on NewMarket {
-            instrument {
-              name
-            }
-          }
-          ... on UpdateMarket {
-            marketId
-          }
-          ... on NewAsset {
-            __typename
-            symbol
-            source {
-              ... on BuiltinAsset {
-                maxFaucetAmountMint
+    proposalsConnection {
+      edges {
+        node {
+          id
+          reference
+          state
+          datetime
+          rejectionReason
+          errorDetails
+          terms {
+            closingDatetime
+            enactmentDatetime
+            change {
+              ... on NewMarket {
+                instrument {
+                  name
+                }
               }
-              ... on ERC20 {
-                contractAddress
+              ... on UpdateMarket {
+                marketId
               }
-            }
-          }
-          ... on UpdateNetworkParameter {
-            networkParameter {
-              key
-              value
+              ... on NewAsset {
+                __typename
+                symbol
+                source {
+                  ... on BuiltinAsset {
+                    maxFaucetAmountMint
+                  }
+                  ... on ERC20 {
+                    contractAddress
+                  }
+                }
+              }
+              ... on UpdateNetworkParameter {
+                networkParameter {
+                  key
+                  value
+                }
+              }
             }
           }
         }
@@ -51,41 +55,45 @@ const allProposalsQuery = gql`
 
 const proposalsQuery = gql`
   query Proposals($proposalState: ProposalState!) {
-    proposals(inState: $proposalState) {
-      id
-      reference
-      state
-      datetime
-      rejectionReason
-      errorDetails
-      terms {
-        closingDatetime
-        enactmentDatetime
-        change {
-          ... on NewMarket {
-            instrument {
-              name
-            }
-          }
-          ... on UpdateMarket {
-            marketId
-          }
-          ... on NewAsset {
-            __typename
-            symbol
-            source {
-              ... on BuiltinAsset {
-                maxFaucetAmountMint
+    proposalsConnection(inState: $proposalState) {
+      edges {
+        node {
+          id
+          reference
+          state
+          datetime
+          rejectionReason
+          errorDetails
+          terms {
+            closingDatetime
+            enactmentDatetime
+            change {
+              ... on NewMarket {
+                instrument {
+                  name
+                }
               }
-              ... on ERC20 {
-                contractAddress
+              ... on UpdateMarket {
+                marketId
               }
-            }
-          }
-          ... on UpdateNetworkParameter {
-            networkParameter {
-              key
-              value
+              ... on NewAsset {
+                __typename
+                symbol
+                source {
+                  ... on BuiltinAsset {
+                    maxFaucetAmountMint
+                  }
+                  ... on ERC20 {
+                    contractAddress
+                  }
+                }
+              }
+              ... on UpdateNetworkParameter {
+                networkParameter {
+                  key
+                  value
+                }
+              }
             }
           }
         }
@@ -142,7 +150,7 @@ const proposalsQuery = gql`
 
 const Proposals = () => {
   //const [proposalState, setProposalState] = useState("Enacted");
-  const [proposalState] = useState('Enacted')
+  const [proposalState] = useState('STATE_ENACTED')
   const { t } = useTranslation('component.proposals')
 
   const { data: anyProposals } = useQuery(allProposalsQuery)

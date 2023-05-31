@@ -1,5 +1,5 @@
 ---
-title: Shaking Up Financial Markets With Decentralized Derivatives
+title: Real Vision Crypto
 location: Virtual
 date: 2023-05-09
 links:

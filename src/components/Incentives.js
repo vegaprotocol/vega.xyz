@@ -63,7 +63,7 @@ const Incentives = ({ limit = 10, allowLoadMore = false }) => {
       setHasMore(result.length > pageSize)
     }
     fetchIncentives()
-  }, [])
+  }, [pageSize])
 
   useEffect(() => {
     if (incentives) {
@@ -77,7 +77,7 @@ const Incentives = ({ limit = 10, allowLoadMore = false }) => {
         setLoadMore(false)
       }
     }
-  }, [loadMore, hasMore, incentives, list])
+  }, [loadMore, hasMore, incentives, list, pageSize])
 
   useEffect(() => {
     if (incentives && list) {

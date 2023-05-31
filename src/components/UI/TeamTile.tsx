@@ -5,7 +5,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 export interface TeamTileProps {
   title: string
   image?: IGatsbyImageData
-  body?: string
+  body?: string | React.ReactNode
   children: React.ReactNode
 }
 
@@ -30,12 +30,12 @@ const TeamTile = ({ title, image, body, children }: TeamTileProps) => {
               }}
             />
           </div>
-          <div className="body-l mb-space-5 text-vega-light-400 dark:text-vega-dark-400">
+          <div className="body-l text-vega-light-400 dark:text-vega-dark-400">
             {body}
           </div>
         </div>
       </div>
-      <div>{children}</div>
+      {children && <div className="mt-space-5">{children}</div>}
     </div>
   )
 }
