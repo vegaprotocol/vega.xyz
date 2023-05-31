@@ -31,7 +31,7 @@ const Governance = () => {
             link="https://governance.vega.xyz/proposals"
           />
           <NavigationItem
-            text={t('Making a proposal')}
+            text={t('Make a proposal')}
             link="https://docs.vega.xyz/mainnet/tutorials/proposals"
           />
           <NavigationItem
