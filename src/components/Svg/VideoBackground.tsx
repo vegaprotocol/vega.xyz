@@ -1,13 +1,17 @@
-import React, { createRef, useEffect, useState } from "react";
-import Moshed from "../../video/moshed.mp4";
+import React, { createRef, useEffect, useState } from 'react'
+import Moshed from '../../video/moshed.mp4'
 
 export interface Params {
-  className?: string;
+  className?: string
+  circle?: boolean
 }
 
-const VideoBackground = ({ className }: Params) => {
-  const video = createRef<HTMLVideoElement>();
-  const [replaceVideoWithPoster, setReplaceVideoWithPoster] = useState(false);
+const VideoBackground = ({ className, circle = false }: Params) => {
+  const video = createRef<HTMLVideoElement>()
+  const [replaceVideoWithPoster, setReplaceVideoWithPoster] = useState(false)
+  const cssClass = `absolute left-0 top-0 h-full w-full object-cover ${
+    circle === true ? 'rounded-full' : ''
+  }`
 
   useEffect(() => {
     // fix for iOS 'low power mode', if error playing
@@ -17,19 +21,15 @@ const VideoBackground = ({ className }: Params) => {
         .play()
         .then(() => {})
         .catch((error) => {
-          setReplaceVideoWithPoster(true);
-        });
+          setReplaceVideoWithPoster(true)
+        })
     }
-  }, [video, replaceVideoWithPoster]);
+  }, [video, replaceVideoWithPoster])
 
   return (
     <div className={`absolute inset-px ${className}`}>
       {replaceVideoWithPoster ? (
-        <img
-          src="/poster-image.jpg"
-          alt=""
-          className="absolute left-0 top-0 w-full h-full object-cover"
-        />
+        <img src="/poster-image.jpg" alt="" className={cssClass} />
       ) : (
         <video
           ref={video}
@@ -37,14 +37,14 @@ const VideoBackground = ({ className }: Params) => {
           muted
           loop
           playsInline
-          className="absolute left-0 top-0 w-full h-full object-cover"
+          className={cssClass}
           poster="/poster-image.jpg"
         >
           <source src={Moshed} type="video/mp4" />
         </video>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default VideoBackground;
+export default VideoBackground

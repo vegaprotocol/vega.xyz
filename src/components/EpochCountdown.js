@@ -53,7 +53,7 @@ const EpochCountdown = () => {
     let interval
 
     async function fetchEpochs() {
-      let response = await fetch('https://api.vega.xyz/epochs')
+      let response = await fetch('https://api.vega.community/api/v2/epoch')
       response = await response.json()
       let { timeRemaining, epochLength } = formatResponse(response)
 

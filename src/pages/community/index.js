@@ -116,7 +116,7 @@ const CommunityPage = ({ data }) => {
           <ToolBox
             title={t('Medium')}
             text={t('Latest news on the Vega blog.')}
-            link="https://medium.com/@Vega_Protocol"
+            link="https://blog.vega.xyz"
             icon={getImage(data.iconMedium)}
           />
           <ToolBox
