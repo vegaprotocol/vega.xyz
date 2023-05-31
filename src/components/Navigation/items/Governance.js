@@ -28,7 +28,7 @@ const Governance = () => {
           />
           <NavigationItem
             text={t('Governance dapp with Vote')}
-            link="https://community.vega.xyz/c/governance/2"
+            link="https://governance.vega.xyz/proposals"
           />
           <NavigationItem
             text={t('Making a proposal')}
