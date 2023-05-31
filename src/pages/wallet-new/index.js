@@ -5,6 +5,8 @@ import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import Button from '../../components/UI/Button'
+import LinkWrapper from '../../components/UI/LinkWrapper'
+import TeamTile from '../../components/UI/TeamTile'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
@@ -26,17 +28,6 @@ const PlatformIcon = (platform) => {
     <div className="flex items-center">
       <PlatformIcon />
     </div>
-  )
-}
-
-const ListItem = ({ idx, text }) => {
-  return (
-    <li className="mb-4 flex text-vega-mid-grey dark:text-vega-grey">
-      <div className="title-s font-glitch-all relative top-1 w-12 shrink-0 text-black dark:text-white">
-        {idx + 1}.
-      </div>
-      <div className="copy-xs !mb-0">{text}</div>
-    </li>
   )
 }
 
@@ -213,7 +204,7 @@ const WalletPageNew = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="xl:items-top gap-x-space-6 pt-6 md:grid md:grid-cols-12 lg:pt-16">
+        <div className="xl:items-top mb-space-14 gap-x-space-6 pt-6 md:grid md:grid-cols-12 lg:pt-16">
           <div className="md:col-span-6 md:py-space-6 xl:py-space-10">
             <div className="mx-auto mb-space-6 max-w-[21rem] text-center md:mx-0 md:max-w-[30rem] md:text-left">
               <h1 className="heading-xl mb-space-3">
@@ -222,8 +213,10 @@ const WalletPageNew = ({ data }) => {
                 </GlitchTitle>
               </h1>
               <p className="body-xl mb-space-6">
-                Securely connect to Vega dapps and instantly approve and reject
-                transactions on the Vega network
+                <Trans t={t}>
+                  Securely connect to Vega dapps and instantly approve and
+                  reject transactions on the Vega network
+                </Trans>
               </p>
             </div>
             <div className="mx-auto text-center md:m-0 md:text-left">
@@ -238,7 +231,7 @@ const WalletPageNew = ({ data }) => {
               />
 
               <div class="heading-xxs !font-not-glitched mt-space-7 mb-space-4 text-vega-light-300 dark:text-vega-dark-300">
-                Want to test new features?
+                <Trans t={t}>Want to test new features?</Trans>
               </div>
               <DownloadButton
                 binaries={fairgroundBinaries}
@@ -253,16 +246,16 @@ const WalletPageNew = ({ data }) => {
                   variant="secondary"
                   to="https://github.com/vegaprotocol/vegawallet-desktop"
                 >
-                  Explore the wallet project on Github
+                  <Trans t={t}>Explore the wallet project on Github</Trans>
                 </Button>
               </div>
             </div>
           </div>
-          <div className="relative flex h-[460px] justify-center md:col-span-6 xl:justify-end">
+          <div className="relative flex hidden h-[460px] justify-center md:col-span-6 md:block xl:justify-end">
             <GatsbyImage
               image={getImage(data.walletScreenMedium)}
               alt=""
-              className="z-10 hidden md:block xl:absolute xl:right-0 xl:top-0 xl:mt-space-6 xl:mr-space-12"
+              className="z-10 xl:absolute xl:right-0 xl:top-0 xl:mt-space-6 xl:mr-space-12"
             />
             <div className="relative hidden xl:block">
               <div className="after:from-10% after:to-100% relative after:absolute after:right-0 after:top-0 after:bottom-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0">
@@ -280,6 +273,107 @@ const WalletPageNew = ({ data }) => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="my-space-10">
+          <div className="grid grid-cols-1 gap-y-space-10 md:grid-cols-2">
+            <div className="order-1">[PIC]</div>
+            <div className="order-2">
+              <div className="max-w-[32rem]">
+                <h2 className="heading-m mb-space-3 max-w-[28rem]">
+                  Your wallets, your keys
+                </h2>
+                <p className="body-xl">
+                  <Trans t={t}>
+                    Easily manage multiple Vega wallets and key pairs in one
+                    place.
+                  </Trans>
+                </p>
+              </div>
+            </div>
+
+            <div className="md:order-4">[PIC]</div>
+            <div className="md:order-3">
+              <div className="max-w-[32rem]">
+                <h2 className="heading-m mb-space-3 max-w-[28rem]">
+                  <Trans t={t}>Secure connections</Trans>
+                </h2>
+                <p className="body-xl">
+                  <Trans t={t}>
+                    Connect, manage permissions key by key and disconnect from
+                    Vega dapps securely.
+                  </Trans>
+                </p>
+              </div>
+            </div>
+
+            <div className="order-5">[PIC]</div>
+            <div className="order-6">
+              <div className="max-w-[32rem]">
+                <h2 className="heading-m mb-space-3 max-w-[28rem]">
+                  <Trans t={t}>Instantly approve and reject transactions</Trans>
+                </h2>
+                <p className="body-xl">
+                  <Trans t={t}>
+                    Quickly approve or reject transaction requests and keep
+                    track of their status on the network.
+                  </Trans>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="my-space-14 text-center">
+          <h2 className="heading-xl mb-space-9">
+            <GlitchTitle color="purple">
+              <Trans t={t}>How-to use</Trans>
+            </GlitchTitle>
+          </h2>
+          <LinkWrapper to="https://youtu.be/NNhs01_AtPQ">
+            <GatsbyImage
+              image={getImage(data.walletVideoPoster)}
+              alt=""
+              className="mx-auto mb-space-5 max-w-[43.75rem]"
+            />
+          </LinkWrapper>
+          <div className="mt-space-4">
+            <Button
+              variant="secondary"
+              className="text-vega-light-300 dark:text-vega-dark-300"
+              to="https://docs.vega.xyz/mainnet/tools/vega-wallet/desktop-app/latest/getting-started"
+            >
+              <Trans t={t}>
+                Read the guide to getting started with Vega wallet
+              </Trans>
+            </Button>
+          </div>
+        </div>
+        <div className="my-space-14 text-center">
+          <h2 className="heading-xl mb-space-9">
+            <GlitchTitle color="purple">
+              <Trans t={t}>Developers</Trans>
+            </GlitchTitle>
+          </h2>
+          <div className="grid grid-cols-1 gap-space-6 text-left md:grid-cols-2">
+            <TeamTile
+              title={t('Integrate')}
+              body={t('Connect your dapp using the Vega wallet API')}
+            >
+              <Button to="https://docs.vega.xyz/mainnet/tools/vega-wallet">
+                <Trans t={t}>Read the Docs</Trans>
+              </Button>
+            </TeamTile>
+            <TeamTile
+              title="Use the CLI Wallet"
+              body={t(
+                'Interact directly via command line (CLI), customise, isolate keys and build and send commands'
+              )}
+            >
+              <Button to="https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet">
+                <Trans t={t}>Get the CLI app</Trans>
+              </Button>
+            </TeamTile>
           </div>
         </div>
       </Container>
@@ -332,6 +426,15 @@ export const query = graphql`
           width: 620
           height: 460
           placeholder: NONE
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    walletVideoPoster: file(relativePath: { eq: "wallet-video-poster.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1400
+          placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
       }

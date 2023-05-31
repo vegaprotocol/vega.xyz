@@ -12,3 +12,4 @@ public
 !.yarn/versions
 # Local Netlify folder
 .netlify
+gatsby-types.d.ts
