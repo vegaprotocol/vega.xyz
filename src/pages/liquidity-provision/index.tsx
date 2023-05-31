@@ -284,6 +284,18 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
       suppressRowClickSelection
       domLayout="autoHeight"
       {...props}
+      gridOptions={{
+        onRowClicked: ({ data }: RowClickedEvent) => {
+          window.open(
+            liquidityDetailsConsoleLink(
+              data.node.data.market.id,
+              'https://console.vega.xyz'
+            ),
+            '_blank',
+            'noopener,noreferrer'
+          )
+        },
+      }}
     >
       {children}
     </AgGridReact>
@@ -353,3 +365,6 @@ export const getFeeLevels = (providers: any[]) => {
 
   return sortedProviders
 }
+
+const liquidityDetailsConsoleLink = (marketId: string, consoleLink: string) =>
+  `${consoleLink}/#/liquidity/${marketId}`
