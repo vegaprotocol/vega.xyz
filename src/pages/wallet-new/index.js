@@ -277,11 +277,22 @@ const WalletPageNew = ({ data }) => {
         </div>
 
         <div className="my-space-10">
-          <div className="grid grid-cols-1 gap-y-space-10 md:grid-cols-2">
-            <div className="order-1">[PIC]</div>
+          <div className="grid grid-cols-1 items-center gap-y-space-6 text-center md:grid-cols-2 md:gap-y-space-10 md:text-left">
+            <div className="order-1">
+              <GatsbyImage
+                image={getImage(data.walletYourKeys)}
+                alt=""
+                className="mx-auto hidden max-w-[30rem] dark:block"
+              />
+              <GatsbyImage
+                image={getImage(data.walletYourKeysLight)}
+                alt=""
+                className="mx-auto max-w-[30rem] dark:hidden"
+              />
+            </div>
             <div className="order-2">
-              <div className="max-w-[32rem]">
-                <h2 className="heading-m mb-space-3 max-w-[28rem]">
+              <div className="mx-auto mb-space-6 max-w-[32rem] md:mx-0 md:mb-0">
+                <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
                   Your wallets, your keys
                 </h2>
                 <p className="body-xl">
@@ -293,10 +304,21 @@ const WalletPageNew = ({ data }) => {
               </div>
             </div>
 
-            <div className="md:order-4">[PIC]</div>
+            <div className="md:order-4">
+              <GatsbyImage
+                image={getImage(data.walletSecureConnections)}
+                alt=""
+                className="mx-auto hidden max-w-[30rem] dark:block"
+              />
+              <GatsbyImage
+                image={getImage(data.walletSecureConnectionsLight)}
+                alt=""
+                className="mx-auto max-w-[30rem] dark:hidden"
+              />
+            </div>
             <div className="md:order-3">
-              <div className="max-w-[32rem]">
-                <h2 className="heading-m mb-space-3 max-w-[28rem]">
+              <div className="mx-auto mb-space-6 max-w-[32rem] md:mx-0 md:mb-0">
+                <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
                   <Trans t={t}>Secure connections</Trans>
                 </h2>
                 <p className="body-xl">
@@ -308,10 +330,21 @@ const WalletPageNew = ({ data }) => {
               </div>
             </div>
 
-            <div className="order-5">[PIC]</div>
+            <div className="order-5">
+              <GatsbyImage
+                image={getImage(data.walletInstantApproveReject)}
+                alt=""
+                className="mx-auto mb-space-5 hidden max-w-[30rem] dark:block"
+              />
+              <GatsbyImage
+                image={getImage(data.walletInstantApproveRejectLight)}
+                alt=""
+                className="mx-auto mb-space-5 max-w-[30rem] dark:hidden"
+              />
+            </div>
             <div className="order-6">
-              <div className="max-w-[32rem]">
-                <h2 className="heading-m mb-space-3 max-w-[28rem]">
+              <div className="mx-auto max-w-[32rem] md:mx-0">
+                <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
                   <Trans t={t}>Instantly approve and reject transactions</Trans>
                 </h2>
                 <p className="body-xl">
@@ -434,6 +467,76 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 1400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    walletYourKeys: file(relativePath: { eq: "wallet-your-keys.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 470
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    walletYourKeysLight: file(
+      relativePath: { eq: "wallet-your-keys-light.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 470
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    walletSecureConnections: file(
+      relativePath: { eq: "wallet-secure-connections.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 470
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    walletSecureConnectionsLight: file(
+      relativePath: { eq: "wallet-secure-connections-light.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 470
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    walletInstantApproveReject: file(
+      relativePath: { eq: "wallet-instant-approve-reject.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 470
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    walletInstantApproveRejectLight: file(
+      relativePath: { eq: "wallet-instant-approve-reject-light.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 470
+          layout: FULL_WIDTH
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
