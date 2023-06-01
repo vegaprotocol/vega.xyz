@@ -4,7 +4,6 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Seo from '../components/Seo'
-import { routeThroughInterstitialPage } from '../utils/tools'
 import TranslationsBanner from '../components/TranslationsBanner'
 import Ticker from '../components/Ticker'
 import GlitchTitle from '../components/UI/GlitchTitle'
@@ -87,10 +86,7 @@ const IndexPage = ({ data }) => {
                   </div>
 
                   <div className="mb-space-8 md:mb-space-7 xl:flex xl:items-center xl:gap-x-6">
-                    <Button
-                      variant="hero"
-                      to={routeThroughInterstitialPage('https://vega.trading')}
-                    >
+                    <Button variant="hero" to="https://console.vega.xyz/">
                       <Trans t={t}>Launch console</Trans>
                     </Button>
                     <div className="mt-space-4 flex items-center justify-center gap-x-6 md:justify-start xl:mt-0 xl:justify-center">
@@ -184,7 +180,7 @@ const IndexPage = ({ data }) => {
                   <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-3">
                     <Trans t={t}>
                       Vega's decentralised datanode architecture provides rich
-                      CEX-like APIs and full historic price data for everyone!
+                      CEX-like APIs and full historic price data for everyone.
                     </Trans>
                   </p>
                   <div>

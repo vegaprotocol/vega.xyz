@@ -11,7 +11,7 @@ const LinkWrapper = ({
   internalLinkWrapper,
   children,
 }) =>
-  link.startsWith('http') || link.includes('/external-link')
+  link.startsWith('http')
     ? externalLinkWrapper(children)
     : internalLinkWrapper(children)
 

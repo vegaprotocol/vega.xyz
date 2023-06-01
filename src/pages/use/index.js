@@ -11,7 +11,6 @@ import Fairground from '../../components/Fairground'
 import ToolBox from '../../components/ToolBox'
 import { getImage } from 'gatsby-plugin-image'
 import AddGraphic from '../../components/Svg/Use/Add/Add'
-import { routeThroughInterstitialPage } from '../../utils/tools'
 import { Link, Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const UsePage = ({ data }) => {
@@ -67,7 +66,7 @@ const UsePage = ({ data }) => {
       icon: data.consoleIcon,
       title: 'Console',
       author: 'Vega',
-      link: routeThroughInterstitialPage('https://vega.trading/'),
+      link: 'https://console.vega.xyz/',
       description: t(
         'A dApp for trading cash settled futures on the fully decentralised Vega network.'
       ),

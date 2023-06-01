@@ -8,7 +8,7 @@ export interface LinkWrapperProps {
 }
 
 const LinkWrapper = ({ to, children, className }: LinkWrapperProps) => {
-  const isExternal = to.startsWith('http') || to.startsWith('/external-link')
+  const isExternal = to.startsWith('http')
 
   if (isExternal) {
     return (

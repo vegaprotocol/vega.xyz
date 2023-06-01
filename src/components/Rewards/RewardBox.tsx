@@ -28,10 +28,12 @@ const RewardBox = ({
       <div>
         <div className="title-s mb-6">{title}</div>
         <div
-          className={`reward-value mb-2 bg-cover bg-clip-text text-[2.5rem] leading-none text-transparent`}
+          className={`reward-value mb-2 bg-cover bg-clip-text text-[2.3rem] leading-none text-transparent`}
         >
           <div>
-            {rewardValue === null || rewardValue === 0 ? (
+            {rewardValue === null ||
+            rewardValue === 0 ||
+            rewardValue === '0' ? (
               <RewardsValuePlaceholder />
             ) : (
               formatVegaValue(rewardValue)

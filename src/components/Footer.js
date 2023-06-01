@@ -6,7 +6,6 @@ import IconDiscord from '../components/Svg/IconDiscord'
 import IconGithub from '../components/Svg/IconGithub'
 import IconTelegram from '../components/Svg/IconTelegram'
 import IconTwitter from '../components/Svg/IconTwitter'
-import { routeThroughInterstitialPage } from '../utils/tools'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Footer = () => {
@@ -45,7 +44,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to={routeThroughInterstitialPage('https://vega.trading/')}
+                    to="https://console.vega.xyz/"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Launch Console</Trans>
