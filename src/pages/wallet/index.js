@@ -8,6 +8,9 @@ import Button from '../../components/UI/Button'
 import LinkWrapper from '../../components/UI/LinkWrapper'
 import TeamTile from '../../components/UI/TeamTile'
 import TranslationsBanner from '../../components/TranslationsBanner'
+import Sticky from 'react-stickynode'
+import ScrollSpy from 'react-scrollspy'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import DropdownArrow from '../../components/Svg/DropdownArrow'
@@ -65,11 +68,12 @@ const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
       : 'text-vega-light-400 dark:text-vega-dark-400'
 
   const showDownloadMenu = (state) => {
+    console.log('show')
     setDownloadDropdown(state)
   }
 
   return (
-    <div className={`relative mx-auto inline-block cursor-pointer`}>
+    <div className={`relative inline-block cursor-pointer`}>
       <div
         role="button"
         tabIndex={0}
@@ -93,7 +97,7 @@ const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
         <div>
           {downloadDropdown && (
             <div
-              className={`absolute top-[100%] left-0 right-0 z-20 border border-t-0 border-current ${dropdownVariantClasses}`}
+              className={`absolute top-[100%] left-0 right-0 z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
             >
               <ul className="py-3 px-2">
                 {binaries.map((binary, idx) => {
@@ -194,8 +198,23 @@ const WalletPageNew = ({ data }) => {
     setMissingTranslations(true)
   })
 
+  const sections = [
+    {
+      title: t('Overview'),
+      hash: 'overview',
+    },
+    {
+      title: t('How-to use'),
+      hash: 'how-to-use',
+    },
+    {
+      title: t('Developers'),
+      hash: 'developers',
+    },
+  ]
+
   return (
-    <Layout>
+    <Layout stickyHeader={false}>
       <Seo
         title={t('Vega Wallet')}
         description={t(
@@ -204,7 +223,7 @@ const WalletPageNew = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="xl:items-top mb-space-14 gap-x-space-6 pt-6 md:grid md:grid-cols-12 lg:pt-16">
+        <div className="xl:items-top mb-space-12 gap-x-space-6 pt-6 md:mb-space-10 md:grid md:grid-cols-12 lg:pt-16">
           <div className="md:col-span-6 md:py-space-6 xl:py-space-10">
             <div className="mx-auto mb-space-6 max-w-[21rem] text-center md:mx-0 md:max-w-[30rem] md:text-left">
               <h1 className="heading-xl mb-space-3">
@@ -230,7 +249,7 @@ const WalletPageNew = ({ data }) => {
                 title={t('Download Vega Wallet (Mainnet)')}
               />
 
-              <div class="heading-xxs !font-not-glitched mt-space-7 mb-space-4 text-vega-light-300 dark:text-vega-dark-300">
+              <div className="heading-xxs !font-not-glitched mt-space-7 mb-space-4 text-vega-light-300 dark:text-vega-dark-300">
                 <Trans t={t}>Want to test new features?</Trans>
               </div>
               <DownloadButton
@@ -251,7 +270,7 @@ const WalletPageNew = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="relative flex hidden h-[460px] justify-center md:col-span-6 md:block xl:justify-end">
+          <div className="relative hidden h-[460px] justify-center md:col-span-6 md:flex xl:justify-end">
             <GatsbyImage
               image={getImage(data.walletScreenMedium)}
               alt=""
@@ -275,23 +294,65 @@ const WalletPageNew = ({ data }) => {
             </div>
           </div>
         </div>
+      </Container>
 
-        <div className="my-space-10">
-          <div className="grid grid-cols-1 items-center gap-y-space-6 text-center md:grid-cols-2 md:gap-y-space-10 md:text-left">
+      <div className="relative z-30">
+        <Sticky enabled={true}>
+          <div className="bg-white dark:bg-black">
+            <div className="border-b border-vega-mid-grey">
+              <Container>
+                <div className="flex items-center justify-between">
+                  <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap md:mx-0 md:mt-space-3 md:flex md:whitespace-normal">
+                    <ScrollSpy
+                      items={sections.map((section) => {
+                        return section.hash
+                      })}
+                      currentClassName="border-b-current"
+                      offset={-120}
+                    >
+                      {sections.map((section, index) => (
+                        <AnchorLink
+                          key={index}
+                          className={`heading-s relative bottom-[-1px] mr-space-6 inline-block border-t-4 border-b-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current md:mr-space-8`}
+                          to={`/wallet/#${section.hash}`}
+                          title={t(section.title)}
+                          stripHash
+                        >
+                          {t(section.title)}
+                        </AnchorLink>
+                      ))}
+                    </ScrollSpy>
+                  </div>
+                  <div className="hidden lg:block">
+                    <DownloadButton
+                      binaries={binaries}
+                      title={t('Download Vega Wallet (Mainnet)')}
+                    />
+                  </div>
+                </div>
+              </Container>
+            </div>
+          </div>
+        </Sticky>
+      </div>
+
+      <Container>
+        <div className="my-space-12 md:my-space-14" id="overview">
+          <div className="grid grid-cols-1 items-center gap-y-space-6 text-center md:grid-cols-2 md:gap-y-space-10 md:gap-x-space-8 md:text-left">
             <div className="order-1">
               <GatsbyImage
                 image={getImage(data.walletYourKeys)}
                 alt=""
-                className="mx-auto hidden max-w-[30rem] dark:block"
+                className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
               />
               <GatsbyImage
                 image={getImage(data.walletYourKeysLight)}
                 alt=""
-                className="mx-auto max-w-[30rem] dark:hidden"
+                className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
               />
             </div>
             <div className="order-2">
-              <div className="mx-auto mb-space-6 max-w-[32rem] md:mx-0 md:mb-0">
+              <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
                 <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
                   Your wallets, your keys
                 </h2>
@@ -308,16 +369,16 @@ const WalletPageNew = ({ data }) => {
               <GatsbyImage
                 image={getImage(data.walletSecureConnections)}
                 alt=""
-                className="mx-auto hidden max-w-[30rem] dark:block"
+                className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
               />
               <GatsbyImage
                 image={getImage(data.walletSecureConnectionsLight)}
                 alt=""
-                className="mx-auto max-w-[30rem] dark:hidden"
+                className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
               />
             </div>
             <div className="md:order-3">
-              <div className="mx-auto mb-space-6 max-w-[32rem] md:mx-0 md:mb-0">
+              <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
                 <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
                   <Trans t={t}>Secure connections</Trans>
                 </h2>
@@ -334,12 +395,12 @@ const WalletPageNew = ({ data }) => {
               <GatsbyImage
                 image={getImage(data.walletInstantApproveReject)}
                 alt=""
-                className="mx-auto mb-space-5 hidden max-w-[30rem] dark:block"
+                className="mx-auto mb-space-5 hidden max-w-[25rem] dark:block md:max-w-[30rem]"
               />
               <GatsbyImage
                 image={getImage(data.walletInstantApproveRejectLight)}
                 alt=""
-                className="mx-auto mb-space-5 max-w-[30rem] dark:hidden"
+                className="mx-auto mb-space-5 max-w-[25rem] dark:hidden md:max-w-[30rem]"
               />
             </div>
             <div className="order-6">
@@ -357,7 +418,7 @@ const WalletPageNew = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="my-space-14 text-center">
+        <div className="my-space-12 text-center md:my-space-14" id="how-to-use">
           <h2 className="heading-xl mb-space-9">
             <GlitchTitle color="purple">
               <Trans t={t}>How-to use</Trans>
@@ -382,7 +443,7 @@ const WalletPageNew = ({ data }) => {
             </Button>
           </div>
         </div>
-        <div className="my-space-14 text-center">
+        <div className="my-space-12 text-center md:my-space-14" id="developers">
           <h2 className="heading-xl mb-space-9">
             <GlitchTitle color="purple">
               <Trans t={t}>Developers</Trans>

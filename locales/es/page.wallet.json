@@ -1,4 +1,7 @@
 {
+  "Overview": "",
+  "How-to use": "",
+  "Developers": "",
   "Vega Wallet": "",
   "Securely connect to Vega dapps and instantly approve and reject transactions on the Vega network": "",
   "Download Vega Wallet (Mainnet)": "",
@@ -10,9 +13,7 @@
   "Connect, manage permissions key by key and disconnect from Vega dapps securely.": "",
   "Instantly approve and reject transactions": "",
   "Quickly approve or reject transaction requests and keep track of their status on the network.": "",
-  "How-to use": "",
   "Read the guide to getting started with Vega wallet": "",
-  "Developers": "",
   "Integrate": "",
   "Connect your dapp using the Vega wallet API": "",
   "Read the Docs": "",
