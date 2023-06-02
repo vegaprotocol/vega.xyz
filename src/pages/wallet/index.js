@@ -242,7 +242,12 @@ const WalletPageNew = ({ data }) => {
               <GatsbyImage
                 image={getImage(data.walletScreenSmall)}
                 alt=""
-                className="mx-auto my-space-6 max-w-[18rem] md:hidden"
+                className="mx-auto my-space-6 hidden max-w-[18rem] dark:block md:hidden"
+              />
+              <GatsbyImage
+                image={getImage(data.walletScreenSmallWhite)}
+                alt=""
+                className="mx-auto my-space-6 max-w-[18rem] dark:hidden md:hidden"
               />
               <DownloadButton
                 binaries={binaries}
@@ -489,6 +494,17 @@ export const query = graphql`
       }
     }
     walletScreenSmall: file(relativePath: { eq: "wallet-screen-small.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 283
+          layout: FULL_WIDTH
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    walletScreenSmallWhite: file(
+      relativePath: { eq: "wallet-screen-small-white.png" }
+    ) {
       childImageSharp {
         gatsbyImageData(
           width: 283
