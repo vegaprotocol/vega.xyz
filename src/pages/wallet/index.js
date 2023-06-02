@@ -242,7 +242,7 @@ const WalletPageNew = ({ data }) => {
               <GatsbyImage
                 image={getImage(data.walletScreenSmall)}
                 alt=""
-                className="mx-auto my-space-6 hidden max-w-[18rem] dark:block md:hidden"
+                className="mx-auto my-space-6 hidden max-w-[18rem] dark:block md:hidden dark:md:hidden"
               />
               <GatsbyImage
                 image={getImage(data.walletScreenSmallWhite)}
