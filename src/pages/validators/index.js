@@ -37,10 +37,10 @@ const StandByValidatorsLimit = () => {
     <>
       {params && (
         <ParameterBox
-          value={
+          value={Math.floor(
             params.network_validators_ersatz_multipleOfTendermintValidators *
-            params.network_validators_multisig_numberOfSigners
-          }
+              params.network_validators_multisig_numberOfSigners
+          )}
           description={`This value is determined by the network parameter ‘network.validators.ersatz.multipleOfTendermintValidators’ multiplied by ‘network.validators.multisig.numberOfSigners’`}
         />
       )}
@@ -180,7 +180,9 @@ const ValidatorsPage = ({ data }) => {
                 and earn the greatest rewards from infrastructure fees paid on
                 every trade and transfer, with a portion distributed to stakers
                 and standby validators. The{' '}
-                <Link to="https://governance.vega.xyz/validators">validators list</Link>{' '}
+                <Link to="https://governance.vega.xyz/validators">
+                  validators list
+                </Link>{' '}
                 is refreshed every epoch{' '}
                 <NetworkParameter param="validators_epoch_length" />.
               </Trans>
