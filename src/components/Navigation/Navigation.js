@@ -4,7 +4,7 @@ import Community from './items/Community'
 import Governance from './items/Governance'
 import Develop from './items/Develop'
 import Learn from './items/Learn'
-import Markets from './items/Markets'
+// import Markets from './items/Markets'
 import Dropdown from './Dropdown'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
