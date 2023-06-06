@@ -88,7 +88,7 @@ const MarketsLiquidity = () => {
         <AsyncRenderer loading={loading} error={error} data={data}>
           <div className="title-m relative mb-3 w-full">Futures</div>
           <div
-            className="ag-theme-alpine relative w-full"
+            className="ag-theme-alpine relative w-full mb-16"
             style={{
               overflow: 'hidden',
             }}
