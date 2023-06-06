@@ -256,12 +256,12 @@ const WalletPageNew = ({ data }) => {
               />
 
               <div className="heading-xxs !font-not-glitched mt-space-7 mb-space-4 text-vega-light-300 dark:text-vega-dark-300">
-                <Trans t={t}>Want to test new features?</Trans>
+                <Trans t={t}>Want to test new features on Fairground?</Trans>
               </div>
               <DownloadButton
                 binaries={fairgroundBinaries}
                 variant="secondary"
-                title={t('Try the pre-release Fairground (testnet) wallet')}
+                title={t('Download Vega Wallet (Testnet)')}
               />
 
               <div className="mt-space-5">
