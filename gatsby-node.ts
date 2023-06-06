@@ -83,7 +83,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
+  if (stage === 'build-javascript') {
+    actions.setWebpackConfig({
+      devtool: false,
+    })
+  }
   actions.setWebpackConfig({
     module: {
       rules: [
