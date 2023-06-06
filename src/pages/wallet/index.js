@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import Container from '../../components/Container'
+import PlanetA from '../../components/Svg/Home/PlanetA'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import Button from '../../components/UI/Button'
 import LinkWrapper from '../../components/UI/LinkWrapper'
@@ -238,7 +239,7 @@ const WalletPageNew = ({ data }) => {
                 </Trans>
               </p>
             </div>
-            <div className="mx-auto text-center md:m-0 md:text-left">
+            <div className="relative mx-auto text-center md:m-0 md:text-left">
               <GatsbyImage
                 image={getImage(data.walletScreenSmall)}
                 alt=""
@@ -276,11 +277,12 @@ const WalletPageNew = ({ data }) => {
             </div>
           </div>
           <div className="relative hidden h-[460px] justify-center md:col-span-6 md:flex xl:justify-end">
-            <GatsbyImage
-              image={getImage(data.walletScreenMedium)}
-              alt=""
-              className="z-10 xl:absolute xl:right-0 xl:top-0 xl:mt-space-6 xl:mr-space-12"
-            />
+            <div className="z-10 xl:absolute xl:right-0 xl:top-0 xl:mt-space-6 xl:mr-space-12">
+              <div className="absolute bottom-20 left-0 hidden h-[135px] w-[150px] -translate-x-24 xl:block">
+                <PlanetA />
+              </div>
+              <GatsbyImage image={getImage(data.walletScreenMedium)} alt="" />
+            </div>
             <div className="relative hidden xl:block">
               <div className="after:from-10% after:to-100% relative after:absolute after:right-0 after:top-0 after:bottom-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0">
                 <div className="flex w-full justify-end overflow-hidden blur-[1px] md:h-[460px]">
