@@ -1,12 +1,12 @@
 {
-  "Use Vega": "",
-  "Provide Liquidity": "",
-  "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "",
-  "Market": "",
-  "Mark Price": "",
-  "Target Stake": "",
-  "Supplied Stake": "",
-  "Liquidity Fee": "",
-  "Volume (24h)": "",
-  "Trading Mode": ""
+  "Use Vega": "Vega 사용하기",
+  "Provide Liquidity": "유동성 공급하기",
+  "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "유동성 공급자는 네트워크에 유동성을 제공하는 대가로 거래 중에 지불한 수수료의 일부를 받습니다.",
+  "Market": "시장",
+  "Mark Price": "시장평균가",
+  "Target Stake": "목표 스테이킹",
+  "Supplied Stake": "공급 스테이킹",
+  "Liquidity Fee": "유동성 수수료",
+  "Volume (24h)": "거래량 (24h)",
+  "Trading Mode": "트레이딩 모드"
 }
