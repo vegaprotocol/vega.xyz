@@ -1,15 +1,14 @@
-import { Link } from "gatsby";
-import React from "react";
-import LinkArrow from "./Svg/LinkArrow";
+import { Link } from 'gatsby'
+import React from 'react'
+import LinkArrow from './Svg/LinkArrow'
 
 const TextLink = (props) => {
-  const isExternal = props.to.startsWith("http");
-  const colourClass =
-    props.colour === `blackwhite` ? `text-black dark:text-white` : "";
-  const underlineClass = props.underline
-    ? `underline hover:no-underline`
-    : `hover:underline`;
+  const isExternal = props.to.startsWith('http')
 
+  const colourClass =
+    props.colour === `blackwhite`
+      ? `text-black dark:text-white`
+      : 'text-black dark:text-white'
   if (isExternal) {
     return (
       <span className={`${props.className}`}>
@@ -17,25 +16,25 @@ const TextLink = (props) => {
           href={props.to}
           target="_blank"
           rel="noreferrer"
-          className={`underline-offset-1 ${colourClass} ${underlineClass}`}
+          className={`underline-offset-1 ${colourClass}`}
         >
           {props.children}
         </a>
         &nbsp;&nbsp;
-        {props.to.startsWith("http") && <LinkArrow className="inline" />}
+        <LinkArrow className="inline" />
         &nbsp;
       </span>
-    );
+    )
   } else {
     return (
       <Link
         to={props.to}
-        className={`underline-offset-1 ${props.className} ${colourClass} ${underlineClass}`}
+        className={`underline-offset-1 ${props.className} ${colourClass}`}
       >
         {props.children}
       </Link>
-    );
+    )
   }
-};
+}
 
-export default TextLink;
+export default TextLink

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "AlphaLyrae";
-  src: url("../fonts/AlphaLyrae-Medium.woff2");
+  font-family: 'AlphaLyrae';
+  src: url('../fonts/AlphaLyrae-Medium.woff2');
 }
 
 html {
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "AlphaLyrae", georgia, serif;
+  font-family: 'AlphaLyrae', georgia, serif;
   font-variant-ligatures: none;
 }
 
@@ -69,6 +69,40 @@ body {
   }
 }
 
+/* Customise Swiper for Markets components */
+
+@layer utilities {
+  .market-swiper .swiper-wrapper {
+    @apply pb-space-7;
+  }
+
+  .market-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    @apply bottom-0;
+  }
+
+  .market-swiper .swiper-pagination {
+    @apply text-right;
+  }
+
+  .market-swiper .swiper-pagination-bullet {
+    width: 15px;
+    height: 2px;
+    @apply rounded-none;
+    @apply bg-vega-dark-100;
+    @apply dark:bg-vega-light-100;
+  }
+
+  .market-swiper
+    .swiper-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet,
+  .market-swiper
+    .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    @apply m-0.5;
+  }
+}
+
 a {
   @apply transition-colors;
 }
@@ -88,14 +122,13 @@ a {
   }
 
   .font-glitch-all {
-    font-feature-settings: "ss01" on;
+    font-feature-settings: 'ss01' on;
   }
 
   .copy-xxs {
     /* 15px */
     @apply text-[0.9375rem];
     @apply leading-[1.4];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -103,7 +136,6 @@ a {
     /* 18px */
     @apply text-[1.125rem];
     @apply leading-[1.4];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -111,7 +143,6 @@ a {
     /* 24px */
     @apply text-[1.5rem];
     @apply leading-[1.4];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -127,7 +158,6 @@ a {
     /* 54px */
     @apply text-[3.375rem];
     @apply leading-[1.1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -135,7 +165,6 @@ a {
     /* 72px */
     @apply text-[4.5rem];
     @apply leading-[1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -143,7 +172,6 @@ a {
     /* 84px */
     @apply text-[5.25rem];
     @apply leading-[1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -151,7 +179,6 @@ a {
     /* 114px */
     @apply text-[7.125rem];
     @apply leading-[1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -159,7 +186,6 @@ a {
     /* 144px */
     @apply text-[9rem];
     @apply leading-[1];
-    @apply mb-4;
     font-variant-ligatures: none;
   }
 
@@ -247,15 +273,20 @@ a {
     transition: left 0.5s;
   }
 
-  *[class^="heading-"] {
+  *[class^='heading-'] {
     font-variant-ligatures: normal;
+  }
+
+  .heading-xxxs {
+    @apply text-[0.75rem];
+    @apply leading-[96%];
+    @apply uppercase;
   }
 
   .heading-xxs {
     @apply text-[0.9375rem];
     @apply leading-[96%];
     @apply uppercase;
-    @apply my-[2rem];
   }
 
   .heading-xs {
@@ -265,7 +296,6 @@ a {
     @apply md:leading-[136%];
     @apply lg:text-[1.5rem];
     @apply lg:leading-[115%];
-    @apply my-[2rem];
     font-variant-ligatures: none;
   }
 
@@ -274,7 +304,6 @@ a {
     @apply leading-[88%];
     @apply uppercase;
     @apply lg:text-[1.5rem];
-    @apply my-[2rem];
   }
 
   .heading-m {
@@ -284,18 +313,16 @@ a {
     @apply md:text-[2.25rem];
     @apply lg:text-[2.5rem];
     @apply 2xl:text-[2.75rem];
-    @apply my-[2rem];
   }
 
   .heading-l {
-    @apply text-[2.75rem];
+    @apply text-[2.5rem];
     @apply leading-[88%];
     @apply uppercase;
     @apply md:text-[3rem];
     @apply lg:text-[3.375rem];
     @apply 2xl:text-[4rem];
     @apply 2xl:leading-[82%];
-    @apply my-[2rem];
   }
 
   .heading-xl {
@@ -304,7 +331,6 @@ a {
     @apply uppercase;
     @apply md:text-[4.5rem];
     @apply 2xl:text-[5.875rem];
-    @apply my-[2rem];
   }
 
   .heading-xxl {
@@ -315,7 +341,6 @@ a {
     @apply lg:text-[6.375rem];
     @apply xl:text-[7.1875rem];
     @apply 2xl:text-[9rem];
-    @apply my-[2rem];
   }
 
   .body-s {

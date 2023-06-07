@@ -1,19 +1,47 @@
-import React from "react";
-import NavigationItem from "../Item";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import React from 'react'
+import NavigationItem from '../Item'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import NavigationHeading from '../Heading'
+import NavigationList from '../List'
 
 const Use = () => {
-  const { t } = useTranslation("component.navigation");
+  const { t } = useTranslation('component.navigation')
   return (
-    <ul>
-      <NavigationItem text={t("Use the network")} link="/use" />
-      <NavigationItem text={t("Get the Vega Wallet")} link="/wallet" />
-      <NavigationItem
-        text={t("Experiment on Fairground Testnet")}
-        link="https://fairground.wtf"
-      />
+    <ul className="gap-6 lg:grid lg:grid-cols-2">
+      <div>
+        <NavigationHeading>
+          <Trans t={t}>Infrastructure</Trans>
+        </NavigationHeading>
+        <NavigationList>
+          <NavigationItem text={t('Use the network')} link="/use" />
+          <NavigationItem text={t('Get the Vega Wallet')} link="/wallet" />
+          <NavigationItem
+            text={t('Validate and secure the network')}
+            link="/validators"
+          />
+        </NavigationList>
+      </div>
+      <div>
+        <NavigationHeading>
+          <Trans t={t}>Trading</Trans>
+        </NavigationHeading>
+        <NavigationList>
+          <NavigationItem
+            text={t('Experiment on Fairground Testnet')}
+            link="https://fairground.wtf"
+          />
+          {/* <NavigationItem
+          text={t('Liquidity Provision')}
+          link="/liquidity-provision"
+        /> */}
+          <NavigationItem
+            text={t('Market make and provide liquidity using our APIs')}
+            link="/market-making-and-liquidity-provision"
+          />
+        </NavigationList>
+      </div>
     </ul>
-  );
-};
+  )
+}
 
-export default Use;
+export default Use

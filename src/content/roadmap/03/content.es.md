@@ -1,10 +1,11 @@
 ---
-step_title: H2 2022
+step_title: 2023 H1
 title: Alpha Mainnet
 ---
 
-## Trade cash settled futures
+## Alpha Mainnet network is live!
 
-- Create permissionless markets
-- Buy and sell futures contracts on the Vega blockchain with community controlled limits
-- Test integrations with live projects and protocols
+- Cash settled futures now live
+- Fully decentralised pseudonymous trading
+- Leveraged trading with full cross-margining
+- Permissionless market creation

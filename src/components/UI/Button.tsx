@@ -11,7 +11,7 @@ export interface ButtonProps {
   colorMode?: string
 }
 
-const ButtonLink = ({
+const Button = ({
   variant = 'primary',
   width,
   to,
@@ -45,7 +45,7 @@ const ButtonLink = ({
 
   // secondary
   if (variant === 'secondary') {
-    buttonWrapperStyles = `inline-block relative ${buttonWrapperColorStyles}`
+    buttonWrapperStyles = `inline-block relative`
     buttonBaseStyles = `text-base underline hover:no-underline underline-offset-8`
   }
   // hero
@@ -82,4 +82,4 @@ const ButtonLink = ({
   )
 }
 
-export default ButtonLink
+export default Button

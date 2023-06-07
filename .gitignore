@@ -1,3 +1,4 @@
+.env
 .env.*
 node_modules/
 .cache/
@@ -11,3 +12,4 @@ public
 !.yarn/versions
 # Local Netlify folder
 .netlify
+gatsby-types.d.ts

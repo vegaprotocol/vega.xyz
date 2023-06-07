@@ -1,19 +1,19 @@
-import React from "react";
-import ButtonLink from "./ButtonLink";
-import SquareBullet from "./Svg/SquareBullet";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React from 'react'
+import ButtonLink from './ButtonLink'
+import SquareBullet from './Svg/SquareBullet'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Incentive = ({ title, type, status, reward, difficulty, link }) => {
-  const { t } = useTranslation("component.incentive");
+  const { t } = useTranslation('component.incentive')
   const statusColours = {
-    available: "text-vega-mint",
-    ended: "text-vega-pink",
-    inprogress: "text-vega-mint",
-    upcoming: "text-vega-mid-grey",
-  };
+    available: 'text-vega-mint',
+    ended: 'text-vega-pink',
+    inprogress: 'text-vega-mint',
+    upcoming: 'text-vega-mid-grey',
+  }
 
   const statusColour =
-    statusColours[status.toString().toLowerCase().replace(/\s/g, "")];
+    statusColours[status.toString().toLowerCase().replace(/\s/g, '')]
   // t('Available')
   // t('Ended')
   // t('Bounty')
@@ -21,21 +21,21 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
 
   return (
     <div
-      className="relative pb-6 pt-7 last:pb-0 border-t border-current"
+      className="relative border-t border-current pb-6 pt-7 last:pb-0"
       data-cy="incentive"
     >
-      <div className="text-[0.8125rem] absolute left-0 top-0 px-2 dark:text-black text-white bg-black dark:bg-white uppercase">
+      <div className="absolute left-0 top-0 bg-black px-2 text-[0.8125rem] uppercase text-white dark:bg-white dark:text-black">
         {t(type)}
       </div>
       <div className="grid grid-cols-12">
-        <div className="col-span-12 md:mb-3 md:col-span-6">
-          <div className="text-[1.375rem] leading-[1.3] mb-1 pr-6">{title}</div>
+        <div className="col-span-12 md:col-span-6 md:mb-3">
+          <div className="mb-1 pr-6 text-[1.375rem] leading-[1.3]">{title}</div>
           <span className={`text-[0.9375rem] ${statusColour}`}>
             <SquareBullet size="10" /> {t(status)}
           </span>
         </div>
         <div className="col-span-6 md:col-span-3">
-          <span className="text-[0.9375rem] tracking-[0.01rem] text-vega-mid-grey uppercase">
+          <span className="text-[0.9375rem] uppercase tracking-[0.01rem] text-vega-mid-grey">
             <Trans t={t}>Reward:</Trans>
           </span>
           <br />
@@ -53,13 +53,13 @@ const Incentive = ({ title, type, status, reward, difficulty, link }) => {
             <ButtonLink
               className="bg-vega-light-grey dark:bg-vega-box-grey"
               link={link.toString()}
-              text={t("View")}
+              text={t('View')}
             />
           )}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Incentive;
+export default Incentive
