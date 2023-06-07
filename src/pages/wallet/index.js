@@ -69,7 +69,6 @@ const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
       : 'text-vega-light-400 dark:text-vega-dark-400'
 
   const showDownloadMenu = (state) => {
-    console.log('show')
     setDownloadDropdown(state)
   }
 
