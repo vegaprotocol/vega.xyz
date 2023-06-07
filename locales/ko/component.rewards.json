@@ -1,0 +1,15 @@
+{
+  "Liquidity Provision": "유동성 공급",
+  "Average total paid out per epoch": "에폭별 총평균 지급량",
+  "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.": "이번 에폭에 받은 총 유동성 공급자 수수료 비율에 따라 분배됩니다.",
+  "Provide liquidity": "유동성 공급하기",
+  "Market Creation": "시장 생성",
+  "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent": "약 <2></2> USD 상당의 누적 볼륨에 도달하는 모든 시장 제안자에게 지급되는 보너스",
+  "Create Markets": "시장 생성하기",
+  "Market Making": "마켓 메이킹",
+  "Distributed based on the proportion of the total maker fees you've received in this epoch.": "이번 에폭에서 받은 총 메이커 수수료 비율에 따라 분배됩니다.",
+  "Market Make": "시장 조성하기",
+  "Trading": "트레이딩",
+  "Distributed based on the proportion of total maker fees you've paid in this epoch.": "이번 에폭에서 지불하신 총 메이커 수수료 비율에 따라 분배됩니다.",
+  "Launch Console": "콘솔 바로가기"
+}

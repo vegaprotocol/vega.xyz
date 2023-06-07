@@ -4,53 +4,35 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Seo from '../components/Seo'
-import Link from '../components/UI/Link'
-import { routeThroughInterstitialPage } from '../utils/tools'
 import TranslationsBanner from '../components/TranslationsBanner'
 import Ticker from '../components/Ticker'
 import GlitchTitle from '../components/UI/GlitchTitle'
+import Link from '../components/UI/Link'
 import LatestNews from '../components/LatestNews'
-import LeadingLine from '../components/LeadingLine'
 import Button from '../components/UI/Button'
-import LinkCta from '../components/LinkCta'
 import PageSection from '../components/PageSection'
+import BackerLogos from '../components/Home/BackerLogos'
 import Calendar from '../components/Calendar'
 import AsSeenOn from '../components/AsSeenOn'
 import BoxLinkSimple from '../components/BoxLinkSimple'
 import RoadMap from '../components/RoadMap'
 import Rip from '../components/Svg/Home/Rip/Responsive'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import UniverseLeft from '../components/Svg/Home/UniverseLeft/Responsive'
-import UniverseRight from '../components/Svg/Home/UniverseRight/Responsive'
-import UniverseBottom from '../components/Svg/Home/UniverseBottom/Responsive'
-import UniverseBottom2 from '../components/Svg/Home/UniverseBottom2'
-import UniverseTop from '../components/Svg/Home/UniverseTop'
+import PlanetA from '../components/Svg/Home/PlanetA'
+import PlanetB from '../components/Svg/Home/PlanetB'
+import Explore from '../components/Svg/Home/Explore'
+import Markets from '../components/Home/Markets'
+import LogoGRPC from '../components/Svg/LogoGRPC'
+import LogoGraphQL from '../components/Svg/LogoGraphQL'
+import LogoRestAPI from '../components/Svg/LogoRestAPI'
 import PermissionlessMarketCreationIcon from '../images/feature-icons/permissionless-market-creation.svg'
-import AntiFrontRunningProtectionIcon from '../images/feature-icons/anti-front-running-protection.svg'
+import NonCustodialIcon from '../images/feature-icons/non-custodial.svg'
 import PurposeBuiltBlockChainIcon from '../images/feature-icons/purpose-built.svg'
 import PseudononymousTradingIcon from '../images/feature-icons/pseudononymous-trading.svg'
 import HighCapitalEfficiencyIcon from '../images/feature-icons/high-capital-efficiency.svg'
 import NoGasFeesIcon from '../images/feature-icons/no-gas-fees.svg'
 import NativeLiquidityProvision from '../images/feature-icons/native-liquidity-provision.svg'
-import CrossChainSupportIcon from '../images/feature-icons/cross-chain-support.svg'
-
-const ToolBox = ({ title, description, icon, link }) => {
-  return (
-    <Link
-      to={link}
-      hideArrow
-      className="flex gap-4 rounded-3xl border border-vega-border-muted p-4 hover:-translate-y-2 md:p-5 lg:block lg:pb-8"
-    >
-      <div className="w-[4.75rem] shrink-0 lg:w-[5.9375rem]">
-        <GatsbyImage image={icon} alt={title} className="lg:mb-6 lg:w-auto " />
-      </div>
-      <div>
-        <div className="title-s mb-1 md:mb-3">{title}</div>
-        <p className="copy-xxs !mb-0 text-vega-text-muted">{description}</p>
-      </div>
-    </Link>
-  )
-}
+import RichCEXStyleIcon from '../images/feature-icons/rich-cex-style.svg'
 
 const FeatureBox = ({ title, description, icon }) => {
   return (
@@ -83,219 +65,287 @@ const IndexPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <main>
-        <div className="relative mt-6 md:mt-8">
-          <div className="mx-auto max-w-[18.75rem] md:hidden">
-            <UniverseTop />
-          </div>
-          <div className="absolute top-0 left-0 right-0">
-            <div className="mx-auto grid max-w-[100rem] grid-cols-12">
-              <div className="col-span-3">
-                <UniverseLeft />
-              </div>
-              <div className="col-span-6"></div>
-              <div className="col-span-3 pt-[50%]">
-                <UniverseRight />
-              </div>
-            </div>
-          </div>
+        <div data-cy="main">
+          <Container>
+            <div className="py-space-7 md:grid md:grid-cols-12 md:items-center md:gap-6">
+              <div className="text-center md:col-span-6 md:text-left">
+                <div className="md:pr-space-6 lg:pr-0">
+                  <div className="mx-auto mb-space-7 max-w-[20.9375rem] md:mx-0 md:max-w-[28.75rem]">
+                    <h1 className="mb-space-2 text-[2rem] leading-none md:text-[2.5rem] lg:text-[3rem]">
+                      <Trans t={t}>Uncompromisingly Decentralised.</Trans>
+                      <br />
+                      <span className="text-vega-dark-300">
+                        <Trans t={t}>The world's most advanced DEX.</Trans>
+                      </span>
+                    </h1>
+                    <div className="text-[1.125rem] leading-normal md:text-[1.5rem]">
+                      <Trans t={t}>
+                        Cash settled futures are now live on Vega's Alpha
+                        Mainnet.
+                      </Trans>
+                    </div>
+                  </div>
 
-          <div className="mx-auto max-w-[100rem] md:grid md:grid-cols-12">
-            <div className="hidden md:col-span-3 md:block"></div>
-            <div className="md:col-span-6">
-              <div className="mx-auto max-w-[25rem] pt-8 text-center md:max-w-[35rem] md:pt-20">
-                <div>
-                  <h1 className="title-l md:title-xxl mb-2 xl:text-[7.1875rem]">
-                    <GlitchTitle color="red">
-                      <Trans t={t}>Toward a new era of finance</Trans>
-                    </GlitchTitle>
-                  </h1>
-                  <LeadingLine className="!mb-0 text-current lg:text-[1.75rem]">
-                    <Trans t={t}>
-                      Decentralised infrastructure for the fair creation and
-                      trading of derivatives.
-                    </Trans>
-                  </LeadingLine>
+                  <div className="mb-space-8 md:mb-space-7 xl:flex xl:items-center xl:gap-x-6">
+                    <Button variant="hero" to="https://console.vega.xyz/">
+                      <Trans t={t}>Launch console</Trans>
+                    </Button>
+                    <div className="mt-space-4 flex items-center justify-center gap-x-6 md:justify-start xl:mt-0 xl:justify-center">
+                      <Button
+                        className="text-vega-dark-300"
+                        variant="secondary"
+                        to="/wallet"
+                      >
+                        <Trans t={t}>Vega Wallet</Trans>
+                      </Button>
+                      <Button
+                        className="text-vega-dark-300"
+                        variant="secondary"
+                        to="https://vega.xyz/discord"
+                      >
+                        Discord
+                      </Button>
+                      <Button
+                        className="text-vega-dark-300"
+                        variant="secondary"
+                        to="https://docs.vega.xyz/"
+                      >
+                        <Trans t={t}>Docs</Trans>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="lg:mt-space-16 mt-space-8 hidden md:block">
+                  <div className="heading-xxs !font-not-glitched mb-space-6 text-vega-dark-300">
+                    <Trans t={t}>Backed by:</Trans>
+                  </div>
+                  <BackerLogos />
+                </div>
+              </div>
+              <div className="md:col-span-6 xl:flex xl:justify-end">
+                <div className="relative">
+                  <div className="absolute top-0 left-0 hidden h-[180px] w-[200px] translate-y-20 -translate-x-10 md:block lg:-translate-x-20 2xl:-translate-x-32">
+                    <PlanetA />
+                  </div>
+                  <div className="absolute bottom-0 right-0 z-10 hidden h-[120px] w-[175px] translate-y-[5.625rem] md:block">
+                    <PlanetB />
+                  </div>
+                  <div className="after:from-10% after:to-100% relative after:absolute after:right-0 after:top-0 after:bottom-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
+                    <div className="w-full overflow-hidden md:h-[460px] 2xl:origin-right 2xl:scale-110">
+                      <GatsbyImage
+                        image={getImage(data.consoleDark)}
+                        alt=""
+                        className="hidden md:dark:block"
+                      />
+                      <GatsbyImage
+                        image={getImage(data.consoleLight)}
+                        alt=""
+                        className="hidden dark:hidden md:block"
+                      />
+                      <GatsbyImage
+                        image={getImage(data.consoleDarkSmall)}
+                        alt=""
+                        className="hidden dark:block md:hidden"
+                      />
+                      <GatsbyImage
+                        image={getImage(data.consoleLightSmall)}
+                        alt=""
+                        className="dark:hidden md:hidden"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="hidden md:col-span-3 md:block"></div>
-          </div>
-        </div>
-        <div className="mt-10 flex justify-end md:hidden">
-          <div className="w-full max-w-[27rem]">
-            <UniverseBottom2 />
-          </div>
-        </div>
-        <Container dataCy={'main'}>
-          <div className="relative mx-auto mb-10 -mt-[15%] max-w-[29rem] md:mt-0 lg:max-w-[50rem]">
-            <div className="grid gap-4 py-12 md:gap-8 lg:grid-cols-3">
-              <ToolBox
-                title="Console"
-                description={t(
-                  'Try out trading cash settled futures on the fully decentralised Vega network (Testnet).'
-                )}
-                icon={getImage(data.consoleIcon)}
-                link="https://console.fairground.wtf"
-              />
-              <ToolBox
-                title="Governance"
-                description={t(
-                  'Submit and vote on proposals to create and change markets, network parameters and assets.'
-                )}
-                icon={getImage(data.governanceIcon)}
-                link="https://governance.vega.xyz/proposals"
-              />
-              <ToolBox
-                title="Block Explorer"
-                description={t(
-                  'Explore real-time Vega blockchain information.'
-                )}
-                icon={getImage(data.blockExplorerIcon)}
-                link="https://explorer.vega.xyz/"
-              />
+
+            <div className="md:hidden">
+              <div className="heading-xxs !font-not-glitched mb-space-4 text-vega-dark-300">
+                <Trans t={t}>Backed by:</Trans>
+              </div>
+              <BackerLogos />
             </div>
 
-            <div className="text-center">
-              <LinkCta to="/use">Browse the dapps and tools</LinkCta>
+            <div className="mt-space-10 mb-0 md:my-space-12 lg:my-space-14">
+              <Markets />
             </div>
-          </div>
-        </Container>
-        <div className="mx-auto mb-20 hidden max-w-[38rem] md:block xl:max-w-[45rem]">
-          <UniverseBottom />
-        </div>
-        <div className="py-8 lg:py-16">
-          <Container>
-            <h2 className="title-l md:title-xl mb-4 max-w-[20rem] md:max-w-none md:text-center lg:mb-0 xl:text-[5.875rem]">
-              <GlitchTitle color="orange">
-                <Trans t={t}>Key features</Trans>
-              </GlitchTitle>
-            </h2>
-            <div className="py-8 lg:pt-16">
-              <div className="mb-12 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-12">
-                <FeatureBox
-                  title={t('Permissionless market creation')}
-                  description={t('Propose a market on any underlying.')}
-                  icon={PermissionlessMarketCreationIcon}
-                />
-                <FeatureBox
-                  title={t('Anti front running')}
-                  description={t(
-                    'Fair access to the order book, preventing miner extractable value (MEV).'
-                  )}
-                  icon={AntiFrontRunningProtectionIcon}
-                />
-                <FeatureBox
-                  title={t('Purpose-built blockchain')}
-                  description={t(
-                    'High performing smart contracts for sophisticated trading.'
-                  )}
-                  icon={PurposeBuiltBlockChainIcon}
-                />
-                <FeatureBox
-                  title={t('Pseudonymous trading')}
-                  description={t(
-                    'Keep control of your data, and protect your privacy.'
-                  )}
-                  icon={PseudononymousTradingIcon}
-                />
-                <FeatureBox
-                  title={t('High capital efficiency')}
-                  description={t(
-                    'Lower capital costs and evaluate risk live with cross margining.'
-                  )}
-                  icon={HighCapitalEfficiencyIcon}
-                />
-                <FeatureBox
-                  title={t('No gas fees on trading')}
-                  description={t(
-                    'Fees only on trades on a market in continuous trading.'
-                  )}
-                  icon={NoGasFeesIcon}
-                />
-                <FeatureBox
-                  title={t('Native liquidity provision')}
-                  description={t(
-                    'Built-in liquidity incentives for bustling markets.'
-                  )}
-                  icon={NativeLiquidityProvision}
-                />
-                <FeatureBox
-                  title={t('Cross-chain support')}
-                  description={t(
-                    'Choose the digital asset for collateral or settlements.'
-                  )}
-                  icon={CrossChainSupportIcon}
-                />
-              </div>
-              <div className="text-center">
-                <Button to="/key-concepts">
-                  <Trans t={t}>View all</Trans>
-                </Button>
+
+            <div className="mb-space-10 mt-space-6 md:my-space-12 lg:my-space-14">
+              <Ticker />
+            </div>
+
+            <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
+              <div className="grid md:grid-cols-2">
+                <div className="p-space-5">
+                  <h2 className="heading-m mb-space-4">Vega's APIS</h2>
+                  <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-3">
+                    <Trans t={t}>
+                      Vega's decentralised datanode architecture provides rich
+                      CEX-like APIs and full historic price data for everyone.
+                    </Trans>
+                  </p>
+                  <div>
+                    <div className="mb-space-6 flex items-center gap-x-space-5">
+                      <div className="max-w-[4.6875rem]">
+                        <LogoGRPC />
+                      </div>
+                      <div className="max-w-[3.125rem]">
+                        <LogoRestAPI />
+                      </div>
+                      <div className="max-w-[6.25rem]">
+                        <LogoGraphQL />
+                      </div>
+                    </div>
+                    <Button to="/market-making-and-liquidity-provision">
+                      <Trans t={t}>Explore</Trans>
+                    </Button>
+                  </div>
+                </div>
+                <div className="flex items-end justify-end">
+                  <div className="relative ml-space-3 mr-space-3 w-full max-w-[33.25rem]">
+                    <Explore />
+                  </div>
+                </div>
               </div>
             </div>
           </Container>
-        </div>
-        <Rip />
-        <div className="pt-16">
-          <Ticker />
-        </div>
 
-        <div className="pt-16 md:pt-32 lg:pt-40">
-          <div id="roadmap">
-            <div className="text-center">
-              <h2 className="heading-xl">
-                <GlitchTitle color="purple">
-                  <Trans t={t}>Roadmap</Trans>
+          <div className="pt-16 md:pt-32 lg:pt-40">
+            <Container>
+              <h2 className="title-l md:title-xl mb-4 max-w-[20rem] md:max-w-none md:text-center lg:mb-0 xl:text-[5.875rem]">
+                <GlitchTitle color="orange">
+                  <Trans t={t}>Key features</Trans>
                 </GlitchTitle>
               </h2>
-            </div>
-            <RoadMap data={data.roadmap} />
-          </div>
-        </div>
+              <div className="py-8 lg:pt-16">
+                <div className="mb-12 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-12">
+                  <FeatureBox
+                    title={t('Non-custodial and pseudonymous')}
+                    description={t('No third party has access to your funds.')}
+                    icon={NonCustodialIcon}
+                  />
+                  <FeatureBox
+                    title={t('Purpose built proof of stake blockchain')}
+                    description={t(
+                      'Fully decentralised high performance peer-to-network trading.'
+                    )}
+                    icon={PurposeBuiltBlockChainIcon}
+                  />
+                  <FeatureBox
+                    title={t('Low fees and no cost to place orders')}
+                    description={t(
+                      'Fees work like a CEX with no per-transaction gas for orders'
+                    )}
+                    icon={NoGasFeesIcon}
+                  />
+                  <FeatureBox
+                    title={t('Transparent and open source trading')}
+                    description={t(
+                      'All Vega source code and trading data are publicly available.'
+                    )}
+                    icon={PseudononymousTradingIcon}
+                  />
+                  <FeatureBox
+                    title={t('Capital efficient margin trading')}
+                    description={t(
+                      'Leveraged trading with full cross-margining.'
+                    )}
+                    icon={HighCapitalEfficiencyIcon}
+                  />
 
-        <Container hideXOverflow={true}>
-          <PageSection>
-            <LatestNews />
-          </PageSection>
+                  <FeatureBox
+                    title={t('Rich CEX-style order book and APIs')}
+                    description={t(
+                      'Fully decentralised limit order book (dCLOB) and historic data APIs.'
+                    )}
+                    icon={RichCEXStyleIcon}
+                  />
+                  <FeatureBox
+                    title={t('Decentralised liquidity incentivisation')}
+                    description={t(
+                      'Liquidity provision is fairly rewarded from fee revenue by the protocol.'
+                    )}
+                    icon={NativeLiquidityProvision}
+                  />
 
-          <PageSection>
-            <AsSeenOn />
-          </PageSection>
-
-          <PageSection>
-            <div className="lg:grid lg:grid-cols-12">
-              <div className="lg:col-span-4">
-                <div className="title-l mb-8 hyphens-auto">
-                  <Trans t={t}>Events</Trans>
+                  <FeatureBox
+                    title={t('Permissionless market creation')}
+                    description={t(
+                      'Create any market on any underlying with on-chain governance'
+                    )}
+                    icon={PermissionlessMarketCreationIcon}
+                  />
+                </div>
+                <div className="text-center">
+                  <Button to="/key-concepts">
+                    <Trans t={t}>View all</Trans>
+                  </Button>
                 </div>
               </div>
+            </Container>
+          </div>
+          <Rip />
 
-              <div className="lg:col-span-8">
-                <Calendar limit={3} />
+          <div className="pt-16 md:pt-32 lg:pt-40">
+            <div id="roadmap">
+              <div className="text-center">
+                <h2 className="heading-xl">
+                  <GlitchTitle color="purple">
+                    <Trans t={t}>Roadmap</Trans>
+                  </GlitchTitle>
+                </h2>
               </div>
+              <RoadMap data={data.roadmap} />
             </div>
-          </PageSection>
+          </div>
 
-          <PageSection>
-            <div className="text-center">
-              <h2 className="title-m md:title-l lg:title-xxl mb-4">
-                <GlitchTitle color="red">
-                  <Trans t={t}>Where next?</Trans>
-                </GlitchTitle>
-              </h2>
-            </div>
+          <Container hideXOverflow={true}>
+            <PageSection>
+              <LatestNews />
+            </PageSection>
 
-            <div className="mx-auto mt-12 grid max-w-[12rem] gap-6 md:max-w-[70rem] md:grid-cols-2 lg:grid-cols-4">
-              <BoxLinkSimple text={t('Use the network')} link="/use" />
-              <BoxLinkSimple text={t('Join the community')} link="/community" />
-              <BoxLinkSimple
-                text={t('Govern the network')}
-                link="/governance"
-              />
-              <BoxLinkSimple text={t('Develop on Vega')} link="/develop" />
-            </div>
-          </PageSection>
-        </Container>
+            <PageSection>
+              <AsSeenOn />
+            </PageSection>
+
+            <PageSection>
+              <div className="lg:grid lg:grid-cols-12">
+                <div className="lg:col-span-4">
+                  <div className="title-l mb-8 hyphens-auto">
+                    <Trans t={t}>Events</Trans>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-8">
+                  <Calendar limit={3} />
+                </div>
+              </div>
+            </PageSection>
+
+            <PageSection>
+              <div className="text-center">
+                <h2 className="title-m md:title-l lg:title-xxl mb-4">
+                  <GlitchTitle color="red">
+                    <Trans t={t}>Where next?</Trans>
+                  </GlitchTitle>
+                </h2>
+              </div>
+
+              <div className="mx-auto mt-12 grid max-w-[12rem] gap-6 md:max-w-[70rem] md:grid-cols-2 lg:grid-cols-4">
+                <BoxLinkSimple text={t('Use the network')} link="/use" />
+                <BoxLinkSimple
+                  text={t('Join the community')}
+                  link="/community"
+                />
+                <BoxLinkSimple
+                  text={t('Govern the network')}
+                  link="/governance"
+                />
+                <BoxLinkSimple text={t('Develop on Vega')} link="/develop" />
+              </div>
+            </PageSection>
+          </Container>
+        </div>
       </main>
     </Layout>
   )
@@ -337,34 +387,42 @@ export const query = graphql`
         }
       }
     }
-    consoleIcon: file(relativePath: { eq: "tool-icons/console-alt.png" }) {
+    consoleDarkSmall: file(relativePath: { eq: "console-dark.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 96
-          height: 96
-          placeholder: BLURRED
+          layout: FULL_WIDTH
+          placeholder: NONE
           formats: [AUTO, WEBP, AVIF]
         )
       }
     }
-    governanceIcon: file(relativePath: { eq: "tool-icons/governance.png" }) {
+    consoleLightSmall: file(relativePath: { eq: "console-light.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 96
-          height: 96
-          placeholder: BLURRED
+          layout: FULL_WIDTH
+          placeholder: NONE
           formats: [AUTO, WEBP, AVIF]
         )
       }
     }
-    blockExplorerIcon: file(
-      relativePath: { eq: "tool-icons/block-explorer.png" }
-    ) {
+    consoleDark: file(relativePath: { eq: "console-dark.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 96
-          height: 96
-          placeholder: BLURRED
+          layout: FIXED
+          width: 620
+          height: 460
+          placeholder: NONE
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    consoleLight: file(relativePath: { eq: "console-light.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FIXED
+          width: 620
+          height: 460
+          placeholder: NONE
           formats: [AUTO, WEBP, AVIF]
         )
       }

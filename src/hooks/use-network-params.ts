@@ -26,6 +26,8 @@ export const NETWORK_PARAMETER_QUERY = gql`
 
 export const NetworkParams = {
   blockchains_ethereumConfig: 'blockchains_ethereumConfig',
+  rewards_marketCreationQuantumMultiple:
+    'rewards_marketCreationQuantumMultiple',
   reward_asset: 'reward_asset',
   reward_staking_delegation_payoutDelay:
     'reward_staking_delegation_payoutDelay',

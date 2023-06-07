@@ -1,5 +1,5 @@
 ---
-title: MikoBits Blockchain and DeFi Podcast
+title: MikoBits Blockchain and DeFi Show
 location: Virtual
 date: 2023-04-25
 links:

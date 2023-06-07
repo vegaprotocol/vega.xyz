@@ -21,7 +21,7 @@ const Layout = ({ children, stickyHeader = true }) => {
               className={stickyHeader ? 'mt-[4.8125rem] lg:mt-[6.25rem]' : ''}
             >
               <div>
-                <SiteBanner>
+                {/* <SiteBanner>
                   Alpha Mainnet is live!{' '}
                   <Link
                     to="https://vegaprotocol.notion.site/The-Road-to-Vega-Mainnet-Countdown-to-Trading-576bc2655b0742cd941d38569c456240"
@@ -30,7 +30,7 @@ const Layout = ({ children, stickyHeader = true }) => {
                     <br className="md:hidden" />
                     Follow progress to first markets here
                   </Link>
-                </SiteBanner>
+                </SiteBanner> */}
                 {children}
               </div>
             </div>

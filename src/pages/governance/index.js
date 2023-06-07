@@ -53,6 +53,7 @@ const GovernancePage = ({ data }) => {
             type, for example{' '}
             <NetworkParameter
               param="governance_proposal_market_minProposerBalance"
+              formatForVega={true}
               suffix=" $VEGA"
             />{' '}
             for a new market proposal.
@@ -80,6 +81,7 @@ const GovernancePage = ({ data }) => {
             example{' '}
             <NetworkParameter
               param="governance_proposal_market_minVoterBalance"
+              formatForVega={true}
               suffix=" $VEGA"
             ></NetworkParameter>{' '}
             for a new market proposal. Each public key is eligible for one vote.
@@ -99,9 +101,17 @@ const GovernancePage = ({ data }) => {
             enacted (with the exception of free form proposals). The thresholds
             differ by proposal type, for example a new market proposal requires
             participation of{' '}
-            <NetworkParameter param="governance_proposal_market_requiredParticipation" />{' '}
+            <NetworkParameter
+              param="governance_proposal_market_requiredParticipation"
+              expressPercentage={true}
+              suffix="%"
+            />{' '}
             and a majority of{' '}
-            <NetworkParameter param="governance_proposal_market_requiredMajority" />
+            <NetworkParameter
+              param="governance_proposal_market_requiredMajority"
+              expressPercentage={true}
+              suffix="%"
+            />
             .
           </Trans>
         </p>

@@ -31,6 +31,7 @@ const theme = {
     moshed: "url('/moshed.jpg')",
     moshed2: "url('/moshed2.jpg')",
     moshed3: "url('/moshed3.jpg')",
+    moshed4: "url('/moshed4.jpg')",
   },
   opacity: {
     15: '.15',

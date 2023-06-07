@@ -15,7 +15,6 @@
     "./src/**/*",
     "./gatsby-node.ts",
     "./gatsby-config.ts",
-    "./plugins/**/*",
-    "./interstitial-allow.json"
+    "./plugins/**/*"
   ]
 }

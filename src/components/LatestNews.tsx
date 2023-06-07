@@ -91,13 +91,17 @@ const LatestNews = () => {
 
   useEffect(() => {
     async function fetchLatestTweet() {
-      let response = await fetch('/.netlify/functions/latest-tweet')
-      response = await response.json()
-      setTweet({
-        id: response.id,
-        text: response.tweet_text,
-        image: response.image,
-      })
+      try {
+        let response = await fetch('/.netlify/functions/latest-tweet')
+        response = await response.json()
+        setTweet({
+          id: response.id,
+          text: response.tweet_text,
+          image: response.image,
+        })
+      } catch (e) {
+        console.error('Error fetching latest tweet')
+      }
     }
     fetchLatestTweet()
   }, [])

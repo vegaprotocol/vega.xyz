@@ -19,7 +19,7 @@ const Button = ({
   className,
   colorMode = 'auto',
 }: ButtonProps) => {
-  const isExternal = to.startsWith('http') || to.startsWith('/external-link')
+  const isExternal = to.startsWith('http')
   let buttonWrapperStyles
   let buttonBaseStyles
   let buttonBgColorStyles
@@ -45,7 +45,7 @@ const Button = ({
 
   // secondary
   if (variant === 'secondary') {
-    buttonWrapperStyles = `inline-block relative ${buttonWrapperColorStyles}`
+    buttonWrapperStyles = `inline-block relative`
     buttonBaseStyles = `text-base underline hover:no-underline underline-offset-8`
   }
   // hero
