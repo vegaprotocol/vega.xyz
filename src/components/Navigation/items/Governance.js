@@ -23,12 +23,16 @@ const Governance = () => {
         </NavigationHeading>
         <NavigationList>
           <NavigationItem
-            text={t('Forum')}
+            text={t('Discuss proposals')}
             link="https://community.vega.xyz/c/governance/25"
           />
           <NavigationItem
-            text={t('Governance dApp')}
-            link="https://governance.vega.xyz/"
+            text={t('Vote')}
+            link="https://governance.vega.xyz/proposals"
+          />
+          <NavigationItem
+            text={t('Make a proposal')}
+            link="https://docs.vega.xyz/mainnet/tutorials/proposals"
           />
           <NavigationItem
             text={t('Governance documentation')}
