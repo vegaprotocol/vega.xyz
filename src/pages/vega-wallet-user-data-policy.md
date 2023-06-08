@@ -11,19 +11,19 @@ The Vega Wallet is a browser extension that can be used with a web browser. It i
 ## Information Retained by the Vega Wallet Locally
 
 Users can use the Vega Wallet to retain the following information:
-- **Financial and Payment information**: a record of the history of transactions in your Vega Wallet;
-- **User-Generated Content**: information about decentralized applications (dapps) that you are connecting to, while establishing that connection and a record of the domains/URLs of dapps that you connect to your Vega Wallet;
-- **Keys**: details of public and private keys;
-- **Names**:personalised descriptions that you apply to your Vega Wallet.
+1. **Financial and Payment information**: a record of the history of transactions in your Vega Wallet;
+2. **User-Generated Content**: information about decentralized applications (dapps) that you are connecting to, while establishing that connection and a record of the domains/URLs of dapps that you connect to your Vega Wallet;
+3. **Keys**: details of public and private keys;
+4. **Names**:personalised descriptions that you apply to your Vega Wallet.
 
 **This information is retained by you within the extension on your hardware. We do not collect, use or store it. We cannot access it.**
 
 ## Information We Do Not Collect
 
-- **Passwords**: your Vega Wallet will have its own password that you set;
-- **Third Parties**: information for any affiliate or related companies.  
-- **Device and Connection Information**: device-specific information when you install, access, or use the Vega Wallet including your IP address. 
-- **Status Information**: information about your online status, such as when you last used the Vega Wallet.
+1. **Passwords**: your Vega Wallet will have its own password that you set;
+2. **Third Parties**: information for any affiliate or related companies.  
+3. **Device and Connection Information**: device-specific information when you install, access, or use the Vega Wallet including your IP address. 
+4. **Status Information**: information about your online status, such as when you last used the Vega Wallet.
 
 ## Vega Blockchain
 
@@ -33,6 +33,6 @@ If you create and approve/sign transactions with the Vega Wallet, then those tra
 
 We do not associate cookies with your Vega Wallet software.
 
-##Contact Us
+## Contact Us
 
 If you have any questions about this User Data Policy, please do not hesitate to contact us at mailto:hi@vega.xyz
