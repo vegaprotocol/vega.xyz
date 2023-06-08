@@ -38,4 +38,4 @@ We do not associate cookies with your Vega Wallet software.
 If you have any questions about this User Data Policy, please do not hesitate to contact us at hi@vega.xyz
  
  \
-\
+ \
