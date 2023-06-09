@@ -1,33 +1,55 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, ReactNode, ReactElement } from 'react'
 
 interface TabsProps {
   defaultTab?: string | null
-  children: any
+  children: ReactNode
 }
 
 const Tabs = ({ defaultTab, children }: TabsProps) => {
-  const initialTab = defaultTab ? defaultTab : children[0].props.label
+  const childArray = React.Children.toArray(children)
+
+  let initialTab: string | null = defaultTab ? defaultTab : null
+
+  if (React.isValidElement(childArray[0])) {
+    const firstChild = childArray[0] as ReactElement
+    initialTab = firstChild.props.label
+  }
+
   const [activeTab, setActiveTab] = useState(initialTab)
   const handleActiveTab = useCallback((label) => setActiveTab(label), [])
 
-  const tabs = children.map((child) => (
-    <button
-      onClick={(e) => {
-        e.preventDefault()
-        handleActiveTab(child.props.label)
-      }}
-      className={`title-s inline-block border-b-2 px-3 py-5 text-left ${
-        child.props.label === activeTab
-          ? 'border-current'
-          : 'over:border-current border-transparent'
-      }`}
-      key={child.props.label}
-    >
-      <div dangerouslySetInnerHTML={{ __html: child.props.tabName }} />
-    </button>
-  ))
+  const tabs = childArray.map((child) => {
+    if (React.isValidElement(child)) {
+      const elementChild = child as ReactElement
+      return (
+        <button
+          onClick={(e) => {
+            e.preventDefault()
+            handleActiveTab(elementChild.props.label)
+          }}
+          className={`title-s inline-block border-b-2 px-3 py-5 text-left ${
+            elementChild.props.label === activeTab
+              ? 'border-current'
+              : 'over:border-current border-transparent'
+          }`}
+          key={elementChild.props.label}
+        >
+          <div
+            dangerouslySetInnerHTML={{ __html: elementChild.props.tabName }}
+          />
+        </button>
+      )
+    }
+    return null
+  })
 
-  const tabContent = children.filter((child) => child.props.label === activeTab)
+  const tabContent = childArray.filter((child) => {
+    if (React.isValidElement(child)) {
+      const elementChild = child as ReactElement
+      return elementChild.props.label === activeTab
+    }
+    return false
+  })
 
   return (
     <div>
