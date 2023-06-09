@@ -1,12 +1,12 @@
 {
-  "Use Vega": "",
-  "Provide Liquidity": "",
-  "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "",
-  "Market": "",
-  "Mark Price": "",
-  "Target Stake": "",
-  "Supplied Stake": "",
-  "Liquidity Fee": "",
-  "Volume (24h)": "",
-  "Trading Mode": ""
+  "Use Vega": "Используйте Vega",
+  "Provide Liquidity": "Обеспечить ликвидность",
+  "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "Поставщики ликвидности получают долю комиссионных, выплачиваемых в ходе торгов, в обмен на предоставление ликвидности в сети.",
+  "Market": "Рынок",
+  "Mark Price": "Цена маркировки",
+  "Target Stake": "Целевая ставка",
+  "Supplied Stake": "Прилагаемая ставка",
+  "Liquidity Fee": "Комиссия за ликвидность",
+  "Volume (24h)": "Объем (24 ч)",
+  "Trading Mode": "Режим торговли"
 }
