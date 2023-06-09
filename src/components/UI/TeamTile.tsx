@@ -11,7 +11,7 @@ export interface TeamTileProps {
 
 const TeamTile = ({ title, image, body, children }: TeamTileProps) => {
   return (
-    <div className="rounded-[1.875rem] border border-current border-vega-light-300 p-space-5 dark:border-vega-dark-300 lg:p-space-6">
+    <div className="flex flex-col justify-between rounded-[1.875rem] border border-current border-vega-light-300 p-space-5 dark:border-vega-dark-300 lg:p-space-6">
       <div className="md:flex md:flex-row md:justify-between md:gap-x-space-5">
         {image && (
           <GatsbyImage

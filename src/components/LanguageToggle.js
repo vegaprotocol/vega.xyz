@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { useI18next } from "gatsby-plugin-react-i18next";
+import React, { useState } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { useI18next } from 'gatsby-plugin-react-i18next'
 
 const LanguageToggle = () => {
-  const { languages, changeLanguage } = useI18next();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { languages, changeLanguage } = useI18next()
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   const switchLanguage = (lng) => {
-    changeLanguage(lng);
-    setIsDropdownOpen(false);
-  };
+    changeLanguage(lng)
+    setIsDropdownOpen(false)
+  }
 
-  const { site } = useStaticQuery(query);
+  const { site } = useStaticQuery(query)
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+    setIsDropdownOpen(!isDropdownOpen)
+  }
 
   return (
     <div className="relative ml-1">
       <button
-        className="uppercase text-[0.9375rem] p-2.5 flex items-center rounded-[100px] hover:bg-vega-light-grey dark:hover:bg-vega-off-black"
+        className="flex items-center rounded-[100px] p-2.5 text-[0.9375rem] uppercase hover:bg-vega-light-grey dark:hover:bg-vega-off-black"
         onClick={() => toggleDropdown()}
       >
         <svg
@@ -56,7 +56,7 @@ const LanguageToggle = () => {
           height="14"
           viewBox="0 0 13 14"
           fill="none"
-          className={`ml-2 ${isDropdownOpen ? "" : "rotate-180"}`}
+          className={`ml-2 ${isDropdownOpen ? '' : 'rotate-180'}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -74,16 +74,16 @@ const LanguageToggle = () => {
         </svg>
       </button>
       {isDropdownOpen && (
-        <ul className="flex flex-col gap-0.5 p-2 languages mt-3 absolute top-[100%] right-0 bg-vega-lightest-grey dark:bg-white rounded-[5px] text-black">
+        <ul className="languages absolute top-[100%] right-0 z-20 mt-3 flex flex-col gap-0.5 rounded-[5px] bg-vega-lightest-grey p-2 text-black dark:bg-white">
           {languages.map((lng) => (
             <li key={lng}>
               <button
                 href="#"
                 tabIndex={0}
-                className="text-left min-w-[8.125rem] inline-block px-3 py-1.5 rounded-[2px] hover:dark:bg-vega-lightest-grey hover:bg-white"
+                className="inline-block min-w-[8.125rem] rounded-[2px] px-3 py-1.5 text-left hover:bg-white hover:dark:bg-vega-lightest-grey"
                 onClick={(e) => {
-                  e.preventDefault();
-                  switchLanguage(lng);
+                  e.preventDefault()
+                  switchLanguage(lng)
                 }}
               >
                 {
@@ -96,10 +96,10 @@ const LanguageToggle = () => {
         </ul>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default LanguageToggle;
+export default LanguageToggle
 
 const query = graphql`
   query Languages {
@@ -112,4 +112,4 @@ const query = graphql`
       }
     }
   }
-`;
+`
