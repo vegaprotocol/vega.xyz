@@ -10,8 +10,7 @@ import LinkWrapper from '../../components/UI/LinkWrapper'
 import TeamTile from '../../components/UI/TeamTile'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Sticky from 'react-stickynode'
-import ScrollSpy from 'react-scrollspy'
-import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import ScrollSpy from 'react-ui-scrollspy'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import DropdownArrow from '../../components/Svg/DropdownArrow'
@@ -19,6 +18,7 @@ import IconPlatformMac from '../../components/Svg/IconPlatformMac'
 import IconPlatformWindows from '../../components/Svg/IconPlatformWindows'
 import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
 import IconGithub from '../../components/Svg/IconGithub'
+import './wallet.css'
 
 const platformIcons = {
   mac: IconPlatformMac,
@@ -309,25 +309,20 @@ const WalletPageNew = ({ data }) => {
               <Container>
                 <div className="flex items-center justify-between">
                   <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap md:mx-0 md:mt-space-3 md:flex md:whitespace-normal">
-                    <ScrollSpy
-                      items={sections.map((section) => {
-                        return section.hash
-                      })}
-                      currentClassName="border-b-current"
-                      offset={-120}
-                    >
-                      {sections.map((section, index) => (
-                        <AnchorLink
-                          key={index}
-                          className={`heading-s relative bottom-[-1px] mr-space-6 inline-block border-t-4 border-b-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current md:mr-space-8`}
-                          to={`/wallet/#${section.hash}`}
-                          title={t(section.title)}
-                          stripHash
+                    {sections.map((section, index) => (
+                      <a
+                        key={index}
+                        href={`#${section.hash}`}
+                        className="mr-space-6 inline-block md:mr-space-6"
+                      >
+                        <div
+                          data-to-scrollspy-id={section.hash}
+                          className="heading-s relative bottom-[-1px] inline-block border-t-4 border-b-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current"
                         >
                           {t(section.title)}
-                        </AnchorLink>
-                      ))}
-                    </ScrollSpy>
+                        </div>
+                      </a>
+                    ))}
                   </div>
                   <div className="hidden lg:block">
                     <DownloadButton
@@ -343,139 +338,149 @@ const WalletPageNew = ({ data }) => {
       </div>
 
       <Container>
-        <div className="my-space-12 md:my-space-14" id="overview">
-          <div className="grid grid-cols-1 items-center gap-y-space-6 text-center md:grid-cols-2 md:gap-y-space-10 md:gap-x-space-8 md:text-left">
-            <div className="order-1">
-              <GatsbyImage
-                image={getImage(data.walletYourKeys)}
-                alt=""
-                className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
-              />
-              <GatsbyImage
-                image={getImage(data.walletYourKeysLight)}
-                alt=""
-                className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
-              />
-            </div>
-            <div className="order-2">
-              <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
-                <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
-                  Your wallets, your keys
-                </h2>
-                <p className="body-xl">
-                  <Trans t={t}>
-                    Easily manage multiple Vega wallets and key pairs in one
-                    place.
-                  </Trans>
-                </p>
+        <ScrollSpy>
+          <div className="my-space-12 md:my-space-14" id="overview">
+            <div className="grid grid-cols-1 items-center gap-y-space-6 text-center md:grid-cols-2 md:gap-y-space-10 md:gap-x-space-8 md:text-left">
+              <div className="order-1">
+                <GatsbyImage
+                  image={getImage(data.walletYourKeys)}
+                  alt=""
+                  className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
+                />
+                <GatsbyImage
+                  image={getImage(data.walletYourKeysLight)}
+                  alt=""
+                  className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
+                />
               </div>
-            </div>
+              <div className="order-2">
+                <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
+                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
+                    Your wallets, your keys
+                  </h2>
+                  <p className="body-xl">
+                    <Trans t={t}>
+                      Easily manage multiple Vega wallets and key pairs in one
+                      place.
+                    </Trans>
+                  </p>
+                </div>
+              </div>
 
-            <div className="md:order-4">
-              <GatsbyImage
-                image={getImage(data.walletSecureConnections)}
-                alt=""
-                className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
-              />
-              <GatsbyImage
-                image={getImage(data.walletSecureConnectionsLight)}
-                alt=""
-                className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
-              />
-            </div>
-            <div className="md:order-3">
-              <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
-                <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
-                  <Trans t={t}>Secure connections</Trans>
-                </h2>
-                <p className="body-xl">
-                  <Trans t={t}>
-                    Connect, manage permissions key by key and disconnect from
-                    Vega dapps securely.
-                  </Trans>
-                </p>
+              <div className="md:order-4">
+                <GatsbyImage
+                  image={getImage(data.walletSecureConnections)}
+                  alt=""
+                  className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
+                />
+                <GatsbyImage
+                  image={getImage(data.walletSecureConnectionsLight)}
+                  alt=""
+                  className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
+                />
               </div>
-            </div>
+              <div className="md:order-3">
+                <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
+                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
+                    <Trans t={t}>Secure connections</Trans>
+                  </h2>
+                  <p className="body-xl">
+                    <Trans t={t}>
+                      Connect, manage permissions key by key and disconnect from
+                      Vega dapps securely.
+                    </Trans>
+                  </p>
+                </div>
+              </div>
 
-            <div className="order-5">
-              <GatsbyImage
-                image={getImage(data.walletInstantApproveReject)}
-                alt=""
-                className="mx-auto mb-space-5 hidden max-w-[25rem] dark:block md:max-w-[30rem]"
-              />
-              <GatsbyImage
-                image={getImage(data.walletInstantApproveRejectLight)}
-                alt=""
-                className="mx-auto mb-space-5 max-w-[25rem] dark:hidden md:max-w-[30rem]"
-              />
-            </div>
-            <div className="order-6">
-              <div className="mx-auto max-w-[32rem] md:mx-0">
-                <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
-                  <Trans t={t}>Instantly approve and reject transactions</Trans>
-                </h2>
-                <p className="body-xl">
-                  <Trans t={t}>
-                    Quickly approve or reject transaction requests and keep
-                    track of their status on the network.
-                  </Trans>
-                </p>
+              <div className="order-5">
+                <GatsbyImage
+                  image={getImage(data.walletInstantApproveReject)}
+                  alt=""
+                  className="mx-auto mb-space-5 hidden max-w-[25rem] dark:block md:max-w-[30rem]"
+                />
+                <GatsbyImage
+                  image={getImage(data.walletInstantApproveRejectLight)}
+                  alt=""
+                  className="mx-auto mb-space-5 max-w-[25rem] dark:hidden md:max-w-[30rem]"
+                />
+              </div>
+              <div className="order-6">
+                <div className="mx-auto max-w-[32rem] md:mx-0">
+                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
+                    <Trans t={t}>
+                      Instantly approve and reject transactions
+                    </Trans>
+                  </h2>
+                  <p className="body-xl">
+                    <Trans t={t}>
+                      Quickly approve or reject transaction requests and keep
+                      track of their status on the network.
+                    </Trans>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="my-space-12 text-center md:my-space-14" id="how-to-use">
-          <h2 className="heading-xl mb-space-9">
-            <GlitchTitle color="purple">
-              <Trans t={t}>How-to use</Trans>
-            </GlitchTitle>
-          </h2>
-          <LinkWrapper to="https://youtu.be/NNhs01_AtPQ">
-            <GatsbyImage
-              image={getImage(data.walletVideoPoster)}
-              alt=""
-              className="mx-auto mb-space-5 max-w-[43.75rem]"
-            />
-          </LinkWrapper>
-          <div className="mt-space-4">
-            <Button
-              variant="secondary"
-              className="text-vega-light-300 dark:text-vega-dark-300"
-              to="https://docs.vega.xyz/mainnet/tools/vega-wallet/desktop-app/latest/getting-started"
-            >
-              <Trans t={t}>
-                Read the guide to getting started with Vega wallet
-              </Trans>
-            </Button>
-          </div>
-        </div>
-        <div className="my-space-12 text-center md:my-space-14" id="developers">
-          <h2 className="heading-xl mb-space-9">
-            <GlitchTitle color="purple">
-              <Trans t={t}>Developers</Trans>
-            </GlitchTitle>
-          </h2>
-          <div className="grid grid-cols-1 gap-space-6 text-left md:grid-cols-2">
-            <TeamTile
-              title={t('Integrate')}
-              body={t('Connect your dapp using the Vega wallet API')}
-            >
-              <Button to="https://docs.vega.xyz/mainnet/tools/vega-wallet">
-                <Trans t={t}>Read the Docs</Trans>
+          <div
+            className="my-space-12 text-center md:my-space-14"
+            id="how-to-use"
+          >
+            <h2 className="heading-xl mb-space-9">
+              <GlitchTitle color="purple">
+                <Trans t={t}>How-to use</Trans>
+              </GlitchTitle>
+            </h2>
+            <LinkWrapper to="https://youtu.be/NNhs01_AtPQ">
+              <GatsbyImage
+                image={getImage(data.walletVideoPoster)}
+                alt=""
+                className="mx-auto mb-space-5 max-w-[43.75rem]"
+              />
+            </LinkWrapper>
+            <div className="mt-space-4">
+              <Button
+                variant="secondary"
+                className="text-vega-light-300 dark:text-vega-dark-300"
+                to="https://docs.vega.xyz/mainnet/tools/vega-wallet/desktop-app/latest/getting-started"
+              >
+                <Trans t={t}>
+                  Read the guide to getting started with Vega wallet
+                </Trans>
               </Button>
-            </TeamTile>
-            <TeamTile
-              title="Use the CLI Wallet"
-              body={t(
-                'Interact directly via command line (CLI), customise, isolate keys and build and send commands'
-              )}
-            >
-              <Button to="https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet">
-                <Trans t={t}>Get the CLI app</Trans>
-              </Button>
-            </TeamTile>
+            </div>
           </div>
-        </div>
+          <div
+            className="my-space-12 text-center md:my-space-14"
+            id="developers"
+          >
+            <h2 className="heading-xl mb-space-9">
+              <GlitchTitle color="purple">
+                <Trans t={t}>Developers</Trans>
+              </GlitchTitle>
+            </h2>
+            <div className="grid grid-cols-1 gap-space-6 text-left md:grid-cols-2">
+              <TeamTile
+                title={t('Integrate')}
+                body={t('Connect your dapp using the Vega wallet API')}
+              >
+                <Button to="https://docs.vega.xyz/mainnet/tools/vega-wallet">
+                  <Trans t={t}>Read the Docs</Trans>
+                </Button>
+              </TeamTile>
+              <TeamTile
+                title="Use the CLI Wallet"
+                body={t(
+                  'Interact directly via command line (CLI), customise, isolate keys and build and send commands'
+                )}
+              >
+                <Button to="https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet">
+                  <Trans t={t}>Get the CLI app</Trans>
+                </Button>
+              </TeamTile>
+            </div>
+          </div>
+        </ScrollSpy>
       </Container>
     </Layout>
   )

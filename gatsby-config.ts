@@ -43,13 +43,6 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-plugin-anchor-links`,
-      options: {
-        duration: 1500,
-        offset: -100,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify`,
     {
