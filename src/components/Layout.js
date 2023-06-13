@@ -2,8 +2,8 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Helmet } from 'react-helmet'
-import Link from '../components/UI/Link'
-import SiteBanner from '../components/SiteBanner'
+// import Link from '../components/UI/Link'
+// import SiteBanner from '../components/SiteBanner'
 
 const Layout = ({ children, stickyHeader = true }) => {
   return (

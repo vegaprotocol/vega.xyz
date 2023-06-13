@@ -399,7 +399,7 @@ const Ambassadors = ({ data }) => {
             <ActionButton to="https://docs.vega.xyz/">
               <Trans t={t}>Mainnet Docs</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.fairground.vega.xyz/">
+            <ActionButton to="https://docs.vega.xyz/testnet/concepts/new-to-vega">
               <Trans t={t}>Fairground Docs</Trans>
             </ActionButton>
             <ActionButton to="https://twitter.com/vegaprotocol">

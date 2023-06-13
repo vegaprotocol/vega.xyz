@@ -203,3 +203,5 @@ A cookie is a small file of letters and numbers that can be stored on your brows
 2. light/dark mode.
 
 We do not use cookies or local storage objects for any other purpose. You may erase the local storage objects by deleting your browser's history.
+<br>
+<br>
