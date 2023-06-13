@@ -208,7 +208,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
           <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
             <div>
               <h3 className="heading-m mb-space-3">
-                <Trans t={t}>2. Check out our APIs</Trans>
+                <Trans t={t}>2. Check out the APIs</Trans>
               </h3>
             </div>
             <APIGraphic className="w-full max-w-[16rem] self-end" />
@@ -267,7 +267,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
             </div>
 
             <Button to="https://docs.vega.xyz/mainnet/api/overview">
-              <Trans t={t}>Integrate with our APIs</Trans>
+              <Trans t={t}>Integrate with the APIs</Trans>
             </Button>
           </div>
         </div>
