@@ -3,11 +3,11 @@ step_title: 2024 H2
 title: Version 2 Mainnet
 ---
 
-## Protocol V2
+## Protocolo V2
 
-Features for V2 are subject to change, however, could include the following:
-- Create your own products, risk models and control other aspects of the protocol using WASM
-- Advanced products like options
-- Enhanced performance and security
-- Core protocol upgrades and simplifications
-- New bridges to other blockchains and/or L2s
+Las características de V2 están sujetas a cambios; sin embargo, podrían incluir lo siguiente:
+- Cree sus propios productos, modelos de riesgo y controle otros aspectos del protocolo utilizando WASM
+- Productos avanzados como opciones
+- Rendimiento y seguridad mejorados
+- Actualizaciones y simplificaciones del protocolo principal
+- Nuevos puentes a otras cadenas de bloques y/o L2
