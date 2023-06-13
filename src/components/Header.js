@@ -32,9 +32,9 @@ const Header = ({ sticky }) => {
   const { t } = useTranslation('common')
 
   return (
-    <div>
+    <div className="relative z-50">
       <header
-        className={`z-50 bg-white dark:bg-black ${
+        className={`bg-white dark:bg-black ${
           sticky ? 'fixed top-0 left-0 right-0' : ''
         }`}
         id="header"

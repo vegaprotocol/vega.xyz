@@ -228,7 +228,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
+                    to="https://docs.vega.xyz/mainnet/concepts/governance"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Governance docs</Trans>

@@ -36,7 +36,7 @@ const Governance = () => {
           />
           <NavigationItem
             text={t('Governance documentation')}
-            link="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
+            link="https://docs.vega.xyz/mainnet/concepts/governance"
           />
         </NavigationList>
       </div>

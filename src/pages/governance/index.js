@@ -235,7 +235,7 @@ const GovernancePage = ({ data }) => {
           <ToolBox
             icon={getImage(data.makeProposalIcon)}
             title={t('Submit a proposal')}
-            link="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
+            link="https://docs.vega.xyz/mainnet/concepts/governance"
             text={t(
               'Read the docs to create and submit a proposal using Vega APIs.'
             )}

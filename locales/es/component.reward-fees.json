@@ -1,12 +1,12 @@
 {
-  "Coming soon": "",
-  "Trading": "",
-  "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": "",
-  "Launch console": "",
-  "Liquidity Provision": "",
-  "Distributed based on the proportion of the total liquidity and maker fees you have received, in this epoch per market.": "",
-  "Provide liquidity": "",
-  "Market Creation": "",
-  "For markets that meet the threshold value in a month. The current threshold is 1 $VEGA": "",
-  "Create a market": ""
+  "Coming soon": "Próximamente",
+  "Trading": "Comercio",
+  "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": "Se distribuye en función de la proporción del total de comisiones de creador que hayas pagado, en esta época por mercado.",
+  "Launch console": "Iniciar consola",
+  "Liquidity Provision": "Provisión de liquidez",
+  "Distributed based on the proportion of the total liquidity and maker fees you have received, in this epoch per market.": "Se distribuye en función de la proporción del total de las comisiones de liquidez y de creador que haya recibido, en esta época por mercado.",
+  "Provide liquidity": "Proporcionar liquidez",
+  "Market Creation": "creación de mercados",
+  "For markets that meet the threshold value in a month. The current threshold is 1 $VEGA": "para los mercados que alcancen el valor umbral en un mes. El umbral actual es de 1 $VEGA",
+  "Create a market": "Crear un mercado"
 }
