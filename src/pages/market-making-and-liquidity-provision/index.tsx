@@ -259,7 +259,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
           <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
             <div className="mt-space-6 mb-space-6 mb-space-10 flex items-center gap-x-10">
               <div className="heading-s">
-                <Trans t={t}>Accessd via:</Trans>
+                <Trans t={t}>Accessed via:</Trans>
               </div>
               <GRPC />
               <REST />
