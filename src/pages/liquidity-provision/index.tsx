@@ -236,7 +236,9 @@ const MarketsLiquidity = () => {
                   )
                   return formattedVolume24h
                 }}
-                headerTooltip={t('The trade volume over the last 24h')}
+                headerTooltip={t(
+                  'The total number of contracts traded in the last 24 hours.'
+                )}
               />
               <AgGridColumn
                 headerName={t('Trading Mode')}
