@@ -5,6 +5,7 @@ import {
   HealthBar,
   Indicator,
   Intent,
+  TooltipCellComponent,
 } from '@vegaprotocol/ui-toolkit'
 import {
   addDecimalsFormatNumber,
@@ -88,7 +89,7 @@ const MarketsLiquidity = () => {
         <AsyncRenderer loading={loading} error={error} data={data}>
           <div className="title-m relative mb-3 w-full">Futures</div>
           <div
-            className="ag-theme-alpine relative w-full mb-16"
+            className="ag-theme-alpine relative mb-16 w-full"
             style={{
               overflow: 'hidden',
             }}
@@ -101,7 +102,9 @@ const MarketsLiquidity = () => {
                 unSortIcon: true,
                 cellClass: ['flex', 'flex-col', 'justify-center'],
                 minWidth: 120,
+                tooltipComponent: TooltipCellComponent,
               }}
+              tooltipShowDelay={500}
             >
               <AgGridColumn
                 headerName={t('Market')}
@@ -110,6 +113,7 @@ const MarketsLiquidity = () => {
                   const market = params.data.node.data.market
                   return <Description market={market} />
                 }}
+                headerTooltip={t('The market name, code and settlement asset')}
                 minWidth={200}
               />
               <AgGridColumn
@@ -124,6 +128,7 @@ const MarketsLiquidity = () => {
                   )
                   return formattedMarkPrice
                 }}
+                headerTooltip={t('Latest price for this market')}
               />
               <AgGridColumn
                 headerName={t('Target Stake')}
@@ -138,6 +143,9 @@ const MarketsLiquidity = () => {
                   )
                   return formattedTargetStake
                 }}
+                headerTooltip={t(
+                  'The ideal committed liquidity to operate the market.If total commitment currently below this level then LPs can set the fee level with new commitment.'
+                )}
               />
               <AgGridColumn
                 headerName={t('Supplied Stake')}
@@ -166,6 +174,9 @@ const MarketsLiquidity = () => {
                     </div>
                   )
                 }}
+                headerTooltip={t(
+                  'The amount of funds allocated to provide liquidity'
+                )}
               />
               <AgGridColumn
                 headerName={t('Liquidity Fee')}
@@ -180,6 +191,7 @@ const MarketsLiquidity = () => {
                   }
                   return null
                 }}
+                headerTooltip={t('Fee level for this market')}
               />
               <AgGridColumn
                 headerName={t('Volume (24h)')}
@@ -195,6 +207,7 @@ const MarketsLiquidity = () => {
                   )
                   return formattedVolume24h
                 }}
+                headerTooltip={t('The trade volume over the last 24h')}
               />
               <AgGridColumn
                 headerName={t('Trading Mode')}
@@ -234,6 +247,9 @@ const MarketsLiquidity = () => {
                     )
                   }
                 }}
+                headerTooltip={t(
+                  'The current market status - those below the target stake mark are most in need of liquidity'
+                )}
               />
             </Grid>
           </div>
