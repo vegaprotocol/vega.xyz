@@ -14,6 +14,6 @@
   "Fee level for this market": "",
   "Volume (24h)": "거래량 (24h)",
   "The trade volume over the last 24h": "",
-  "Trading Mode": "트레이딩 모드",
+  "Market Status": "트레이딩 모드",
   "The current market status - those below the target stake mark are most in need of liquidity": ""
 }

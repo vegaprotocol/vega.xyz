@@ -14,6 +14,6 @@
   "Fee level for this market": "",
   "Volume (24h)": "Объем (24 ч)",
   "The trade volume over the last 24h": "",
-  "Trading Mode": "Режим торговли",
+  "Market Status": "Режим торговли",
   "The current market status - those below the target stake mark are most in need of liquidity": ""
 }
