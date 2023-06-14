@@ -220,7 +220,9 @@ const MarketsLiquidity = () => {
                   }
                   return null
                 }}
-                headerTooltip={t('The fee percentage (per trade) charged by liquidity providers on this market')}
+                headerTooltip={t(
+                  'The fee percentage (per trade) charged by liquidity providers on this market'
+                )}
               />
               <AgGridColumn
                 headerName={t('Volume (24h)')}
@@ -229,7 +231,7 @@ const MarketsLiquidity = () => {
                     params.data.node.candlesConnection?.edges || []
                   )
                   const positionDecimals =
-                    params.data.node.data.market.positionDecimals
+                    params.data.node.data.market.positionDecimalPlaces
                   const formattedVolume24h = addDecimalsFormatNumber(
                     volume24h,
                     positionDecimals
