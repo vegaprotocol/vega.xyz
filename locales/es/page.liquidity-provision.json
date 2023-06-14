@@ -8,7 +8,7 @@
   "Mark Price": "Marcar Precio",
   "Latest price for this market": "",
   "Target Stake": "Objetivo Stake",
-  "The ideal committed liquidity to operate the market.If total commitment currently below this level then LPs can set the fee level with new commitment.": "",
+  "The ideal committed liquidity to operate the market, derived from the maximum open interest observed over a rolling time window. If the total commitment is currently below this level then LPs can set the fee level with a new commitment.": "",
   "Supplied Stake": "Stake suministrado",
   "The current amount of liquidity supplied for this market.": "",
   "Liquidity Fee": "Comisión de Liquidez",

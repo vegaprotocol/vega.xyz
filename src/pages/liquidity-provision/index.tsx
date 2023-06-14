@@ -79,7 +79,7 @@ const MarketsLiquidity = () => {
             <Trans t={t}>Provide Liquidity</Trans>
           </GlitchTitle>
         </div>
-        <div className="mx-auto max-w-[44rem]">
+        <div className="mx-auto max-w-[44rem] mb-3">
           <LeadingLine className="text-center">
             <Trans t={t}>
               Liquidity providers receive a share of fees paid during trading in
@@ -181,7 +181,7 @@ const MarketsLiquidity = () => {
                   return formattedTargetStake
                 }}
                 headerTooltip={t(
-                  'The ideal committed liquidity to operate the market.If total commitment currently below this level then LPs can set the fee level with new commitment.'
+                  'The ideal committed liquidity to operate the market, derived from the maximum open interest observed over a rolling time window. If the total commitment is currently below this level then LPs can set the fee level with a new commitment.'
                 )}
               />
               <AgGridColumn

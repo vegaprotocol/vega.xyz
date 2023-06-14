@@ -8,7 +8,7 @@
   "Mark Price": "시장평균가",
   "Latest price for this market": "",
   "Target Stake": "목표 스테이킹",
-  "The ideal committed liquidity to operate the market.If total commitment currently below this level then LPs can set the fee level with new commitment.": "",
+  "The ideal committed liquidity to operate the market, derived from the maximum open interest observed over a rolling time window. If the total commitment is currently below this level then LPs can set the fee level with a new commitment.": "",
   "Supplied Stake": "공급 스테이킹",
   "The current amount of liquidity supplied for this market.": "",
   "Liquidity Fee": "유동성 수수료",
