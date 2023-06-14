@@ -241,7 +241,7 @@ const MarketsLiquidity = () => {
                 )}
               />
               <AgGridColumn
-                headerName={t('Trading Mode')}
+                headerName={t('Market Status')}
                 field={'node.data.marketTradingMode'}
                 cellRenderer={(params) => {
                   const { data, loading, error } = useMarketLiquidityProviders(
