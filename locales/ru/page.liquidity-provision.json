@@ -2,6 +2,7 @@
   "Use Vega": "Используйте Vega",
   "Provide Liquidity": "Обеспечить ликвидность",
   "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "Поставщики ликвидности получают долю комиссионных, выплачиваемых в ходе торгов, в обмен на предоставление ликвидности в сети.",
+  "The data relating to markets on this page is obtained from nodes on the Vega Blockchain.": "",
   "Market": "Рынок",
   "The market name, code and settlement asset": "",
   "Mark Price": "Цена маркировки",
@@ -9,11 +10,11 @@
   "Target Stake": "Целевая ставка",
   "The ideal committed liquidity to operate the market.If total commitment currently below this level then LPs can set the fee level with new commitment.": "",
   "Supplied Stake": "Прилагаемая ставка",
-  "The amount of funds allocated to provide liquidity": "",
+  "The current amount of liquidity supplied for this market.": "",
   "Liquidity Fee": "Комиссия за ликвидность",
-  "Fee level for this market": "",
+  "The fee percentage (per trade) charged by liquidity providers on this market": "",
   "Volume (24h)": "Объем (24 ч)",
-  "The trade volume over the last 24h": "",
+  "The total number of contracts traded in the last 24 hours.": "",
   "Market Status": "Режим торговли",
-  "The current market status - those below the target stake mark are most in need of liquidity": ""
+  "The current market status - those below the black target stake line are at risk of entering liquidity auction": ""
 }

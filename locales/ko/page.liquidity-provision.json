@@ -2,6 +2,7 @@
   "Use Vega": "Vega 사용하기",
   "Provide Liquidity": "유동성 공급하기",
   "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "유동성 공급자는 네트워크에 유동성을 제공하는 대가로 거래 중에 지불한 수수료의 일부를 받습니다.",
+  "The data relating to markets on this page is obtained from nodes on the Vega Blockchain.": "",
   "Market": "시장",
   "The market name, code and settlement asset": "",
   "Mark Price": "시장평균가",
@@ -9,11 +10,11 @@
   "Target Stake": "목표 스테이킹",
   "The ideal committed liquidity to operate the market.If total commitment currently below this level then LPs can set the fee level with new commitment.": "",
   "Supplied Stake": "공급 스테이킹",
-  "The amount of funds allocated to provide liquidity": "",
+  "The current amount of liquidity supplied for this market.": "",
   "Liquidity Fee": "유동성 수수료",
-  "Fee level for this market": "",
+  "The fee percentage (per trade) charged by liquidity providers on this market": "",
   "Volume (24h)": "거래량 (24h)",
-  "The trade volume over the last 24h": "",
+  "The total number of contracts traded in the last 24 hours.": "",
   "Market Status": "트레이딩 모드",
-  "The current market status - those below the target stake mark are most in need of liquidity": ""
+  "The current market status - those below the black target stake line are at risk of entering liquidity auction": ""
 }

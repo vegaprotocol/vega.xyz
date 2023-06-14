@@ -2,6 +2,7 @@
   "Use Vega": "Use Vega",
   "Provide Liquidity": "Provide Liquidity",
   "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.",
+  "The data relating to markets on this page is obtained from nodes on the Vega Blockchain.": "",
   "Market": "Market",
   "The market name, code and settlement asset": "",
   "Mark Price": "Mark Price",
@@ -9,11 +10,11 @@
   "Target Stake": "Target Stake",
   "The ideal committed liquidity to operate the market.If total commitment currently below this level then LPs can set the fee level with new commitment.": "",
   "Supplied Stake": "Supplied Stake",
-  "The amount of funds allocated to provide liquidity": "",
+  "The current amount of liquidity supplied for this market.": "",
   "Liquidity Fee": "Liquidity Fee",
-  "Fee level for this market": "",
+  "The fee percentage (per trade) charged by liquidity providers on this market": "",
   "Volume (24h)": "Volume (24h)",
-  "The trade volume over the last 24h": "",
+  "The total number of contracts traded in the last 24 hours.": "",
   "Market Status": "Market Status",
-  "The current market status - those below the target stake mark are most in need of liquidity": ""
+  "The current market status - those below the black target stake line are at risk of entering liquidity auction": ""
 }
