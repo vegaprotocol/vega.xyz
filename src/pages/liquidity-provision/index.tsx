@@ -28,6 +28,7 @@ import React, {
   useEffect,
   useMemo,
   useRef,
+  useState,
 } from 'react'
 import BoxTitle from '../../components/BoxTitle'
 import Container from '../../components/Container'
@@ -43,9 +44,14 @@ import { getStatus } from '../../utils/vega/getStatus'
 import './liquidity-provision.css'
 import CalloutHero from '../../components/CalloutHero'
 import BigNumber from 'bignumber.js'
+import TranslationsBanner from '../../components/TranslationsBanner'
 
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
+  const [missingTranslations, setMissingTranslations] = useState(false)
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   const yesterday = useYesterday()
   const yTimestamp = useMemo(() => {
@@ -60,6 +66,7 @@ const MarketsLiquidity = () => {
   return (
     <Layout stickyHeader={false}>
       <Container dataCy={'main'}>
+        {missingTranslations && <TranslationsBanner />}
         <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
           <h1>
             <BoxTitle text={t('Use Vega')} />
