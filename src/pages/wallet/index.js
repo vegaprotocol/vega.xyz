@@ -127,7 +127,7 @@ const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
                         </a>
                       </li>
                     )
-                  }
+                  } else return null
                 })}
               </ul>
             </div>
@@ -237,6 +237,13 @@ const WalletPageNew = ({ data }) => {
                 <Trans t={t}>Want to test new features on Fairground?</Trans>
               </div>
               {loading && <div>Loading...</div>}
+              {error && (
+                <div>
+                  <Trans t={t}>
+                    Error fetching Fairground desktop wallet downloads
+                  </Trans>
+                </div>
+              )}
               {fairgroundDownloads && (
                 <DownloadButton
                   binaries={fairgroundDownloads}
