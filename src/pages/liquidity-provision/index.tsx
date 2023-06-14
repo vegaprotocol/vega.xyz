@@ -41,6 +41,7 @@ import { useMarkets } from '../../hooks/use-markets'
 import { calc24hVolume } from '../../utils/vega/24hVolume'
 import { getStatus } from '../../utils/vega/getStatus'
 import './liquidity-provision.css'
+import CalloutHero from '../../components/CalloutHero'
 
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
@@ -85,6 +86,34 @@ const MarketsLiquidity = () => {
           >
             Learn more about committing liquidity
           </Link>
+        </div>
+        <div className="my-8">
+          <CalloutHero
+            title={t(
+              'The data relating to markets on this page is obtained from nodes on the Vega Blockchain.'
+            )}
+            text={undefined}
+            buttonText={undefined}
+            buttonLink={undefined}
+          >
+            <div className="copy-xxs">
+              Gobalsky Labs Limited:
+              <ul className="list-inside list-disc">
+                <li>Provides its software under open source licences</li>
+                <li>
+                  Does not operate or run the Vega Blockchain or any other
+                  blockchain
+                </li>
+                <li>
+                  Does not create, generate or warrant the accuracy of the data
+                </li>
+                <li>
+                  Has no liability for any loss arising from the use of that
+                  data.
+                </li>
+              </ul>
+            </div>
+          </CalloutHero>
         </div>
         <AsyncRenderer loading={loading} error={error} data={data}>
           <div className="title-m relative mb-3 w-full">Futures</div>
