@@ -3,10 +3,17 @@
   "Provide Liquidity": "유동성 공급하기",
   "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "유동성 공급자는 네트워크에 유동성을 제공하는 대가로 거래 중에 지불한 수수료의 일부를 받습니다.",
   "Market": "시장",
+  "The market name, code and settlement asset": "",
   "Mark Price": "시장평균가",
+  "Latest price for this market": "",
   "Target Stake": "목표 스테이킹",
+  "The ideal committed liquidity to operate the market.If total commitment currently below this level then LPs can set the fee level with new commitment.": "",
   "Supplied Stake": "공급 스테이킹",
+  "The amount of funds allocated to provide liquidity": "",
   "Liquidity Fee": "유동성 수수료",
+  "Fee level for this market": "",
   "Volume (24h)": "거래량 (24h)",
-  "Trading Mode": "트레이딩 모드"
+  "The trade volume over the last 24h": "",
+  "Trading Mode": "트레이딩 모드",
+  "The current market status - those below the target stake mark are most in need of liquidity": ""
 }

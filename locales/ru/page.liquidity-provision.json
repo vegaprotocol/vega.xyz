@@ -3,10 +3,17 @@
   "Provide Liquidity": "Обеспечить ликвидность",
   "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "Поставщики ликвидности получают долю комиссионных, выплачиваемых в ходе торгов, в обмен на предоставление ликвидности в сети.",
   "Market": "Рынок",
+  "The market name, code and settlement asset": "",
   "Mark Price": "Цена маркировки",
+  "Latest price for this market": "",
   "Target Stake": "Целевая ставка",
+  "The ideal committed liquidity to operate the market.If total commitment currently below this level then LPs can set the fee level with new commitment.": "",
   "Supplied Stake": "Прилагаемая ставка",
+  "The amount of funds allocated to provide liquidity": "",
   "Liquidity Fee": "Комиссия за ликвидность",
+  "Fee level for this market": "",
   "Volume (24h)": "Объем (24 ч)",
-  "Trading Mode": "Режим торговли"
+  "The trade volume over the last 24h": "",
+  "Trading Mode": "Режим торговли",
+  "The current market status - those below the target stake mark are most in need of liquidity": ""
 }
