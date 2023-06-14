@@ -42,6 +42,7 @@ import { calc24hVolume } from '../../utils/vega/24hVolume'
 import { getStatus } from '../../utils/vega/getStatus'
 import './liquidity-provision.css'
 import CalloutHero from '../../components/CalloutHero'
+import BigNumber from 'bignumber.js'
 
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
@@ -216,7 +217,7 @@ const MarketsLiquidity = () => {
                   if (loading) return null
                   if (data) {
                     const liquidityFee = data.market.fees?.factors?.liquidityFee
-                    return `${liquidityFee}%`
+                    return percentageFormatter(liquidityFee)
                   }
                   return null
                 }}
@@ -413,6 +414,11 @@ export const getFeeLevels = (providers: any[]) => {
     .map((p) => ({ fee: p, commitmentAmount: lp[p] }))
 
   return sortedProviders
+}
+
+const percentageFormatter = (value) => {
+  if (!value) return '-'
+  return formatNumberPercentage(new BigNumber(value).times(100), 2) || '-'
 }
 
 const liquidityDetailsConsoleLink = (marketId: string, consoleLink: string) =>
