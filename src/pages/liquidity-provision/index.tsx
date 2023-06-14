@@ -204,7 +204,7 @@ const MarketsLiquidity = () => {
                   )
                 }}
                 headerTooltip={t(
-                  'The amount of funds allocated to provide liquidity'
+                  'The current amount of liquidity supplied for this market.'
                 )}
               />
               <AgGridColumn
@@ -220,7 +220,7 @@ const MarketsLiquidity = () => {
                   }
                   return null
                 }}
-                headerTooltip={t('Fee level for this market')}
+                headerTooltip={t('The fee percentage (per trade) charged by liquidity providers on this market')}
               />
               <AgGridColumn
                 headerName={t('Volume (24h)')}
@@ -279,7 +279,7 @@ const MarketsLiquidity = () => {
                   }
                 }}
                 headerTooltip={t(
-                  'The current market status - those below the target stake mark are most in need of liquidity'
+                  'The current market status - those below the black target stake line are at risk of entering liquidity auction'
                 )}
               />
             </Grid>
