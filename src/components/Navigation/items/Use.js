@@ -30,10 +30,10 @@ const Use = () => {
             text={t('Experiment on Fairground Testnet')}
             link="https://fairground.wtf"
           />
-          <NavigationItem
+          {/* <NavigationItem
           text={t('Liquidity Provision')}
           link="/liquidity-provision"
-        />
+        /> */}
           <NavigationItem
             text={t('Market make and provide liquidity using our APIs')}
             link="/market-making-and-liquidity-provision"
