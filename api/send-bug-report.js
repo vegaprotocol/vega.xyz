@@ -1,4 +1,4 @@
-exports.default = async (event) => {
+exports.default = async (req, res) => {
   require(`dotenv`).config({
     path: `.env.${process.env.NODE_ENV}`,
   });
@@ -7,7 +7,7 @@ exports.default = async (event) => {
   const openpgp = require("openpgp");
   const fs = require("fs");
 
-  let requestParams = JSON.parse(event.body);
+  let requestParams = JSON.parse(req.body);
   let message = requestParams.message;
   const emailAddress = process.env.BUG_SUBMISSION_EMAIL;
 
@@ -53,15 +53,9 @@ exports.default = async (event) => {
     .sendEmail(params)
     .promise()
     .then((data) => {
-      return {
-        statusCode: 200,
-        body: `Message sent`,
-      };
+      return res(200).send(`Message sent`)
     })
     .catch((error) => {
-      return {
-        statusCode: 500,
-        body: `Message could not be sent`,
-      };
+      return res(500).send(`Message could not be sent`)
     });
 };
