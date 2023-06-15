@@ -11,7 +11,12 @@ exports.default = async (req, res) => {
   let message = requestParams.message
   const emailAddress = process.env.BUG_SUBMISSION_EMAIL
 
-  const publicKeyArmored = fs.readFileSync(process.cwd(), 'vega-public-key.asc')
+  const publicKeyArmored = fs.readFileSync('./vega-public-key.asc', {
+    encoding: 'utf8',
+    flag: 'r',
+  })
+
+  console.dir(publicKeyArmored)
 
   AWS.config.update({
     accessKeyId: process.env.VEGA_AWS_ACCESS_KEY_ID,

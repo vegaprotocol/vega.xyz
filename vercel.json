@@ -2,7 +2,7 @@
   "functions": {
     "api/*.js": {
       "maxDuration": 10,
-      "includeFiles": "./vega-public-key.asc"
+      "includeFiles": "/vega-public-key.asc"
     }
   }
 }
