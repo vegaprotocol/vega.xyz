@@ -13,3 +13,4 @@ public
 # Local Netlify folder
 .netlify
 gatsby-types.d.ts
+.vercel

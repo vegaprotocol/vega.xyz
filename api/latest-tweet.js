@@ -51,8 +51,9 @@ exports.default = async (req, res) => {
       },
     }
   )
- 
-  res.status(200).set('Access-Control-Allow-Origin', '*').json({
+
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.status(200).json({
     id: data[0].id,
     tweet_text: data[0].text,
     image: data[0]?.attachments
