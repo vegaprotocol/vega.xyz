@@ -176,7 +176,9 @@ const IndexPage = ({ data }) => {
             <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
               <div className="grid md:grid-cols-2">
                 <div className="p-space-5">
-                  <h2 className="heading-m mb-space-4">Vega's APIS</h2>
+                  <h2 className="heading-m mb-space-4 max-w-[30rem]">
+                    <Trans t={t}>Programmatic trading on Vega</Trans>
+                  </h2>
                   <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-3">
                     <Trans t={t}>
                       Vega's decentralised datanode architecture provides rich
@@ -195,7 +197,7 @@ const IndexPage = ({ data }) => {
                         <LogoGraphQL />
                       </div>
                     </div>
-                    <Button to="/market-making-and-liquidity-provision">
+                    <Button to="/programmatic-trading">
                       <Trans t={t}>Explore</Trans>
                     </Button>
                   </div>

@@ -35,8 +35,8 @@ const Use = () => {
           link="/liquidity-provision"
         /> */}
           <NavigationItem
-            text={t('Market make and provide liquidity using our APIs')}
-            link="/market-making-and-liquidity-provision"
+            text={t('Programmatic trading')}
+            link="/programmatic-trading"
           />
         </NavigationList>
       </div>
