@@ -21,6 +21,7 @@ import PlanetA from '../components/Svg/Home/PlanetA'
 import PlanetB from '../components/Svg/Home/PlanetB'
 import Explore from '../components/Svg/Home/Explore'
 import Markets from '../components/Home/Markets'
+import LiquidityProvision from '../components/Home/LiquidityProvision'
 import LogoGRPC from '../components/Svg/LogoGRPC'
 import LogoGraphQL from '../components/Svg/LogoGraphQL'
 import LogoRestAPI from '../components/Svg/LogoRestAPI'
@@ -209,7 +210,13 @@ const IndexPage = ({ data }) => {
             </div>
           </Container>
 
-          <div className="pt-16 md:pt-32 lg:pt-40">
+          <div className="mt-space-10 mb-0 md:my-space-12 lg:my-space-14">
+            <Container>
+              <LiquidityProvision />
+            </Container>
+          </div>
+
+          <div className="mt-16 md:mt-32 lg:mt-40">
             <Container>
               <h2 className="title-l md:title-xl mb-4 max-w-[20rem] md:max-w-none md:text-center lg:mb-0 xl:text-[5.875rem]">
                 <GlitchTitle color="orange">
@@ -284,7 +291,6 @@ const IndexPage = ({ data }) => {
             </Container>
           </div>
           <Rip />
-
           <div className="pt-16 md:pt-32 lg:pt-40">
             <div id="roadmap">
               <div className="text-center">
@@ -297,7 +303,6 @@ const IndexPage = ({ data }) => {
               <RoadMap data={data.roadmap} />
             </div>
           </div>
-
           <Container hideXOverflow={true}>
             <PageSection>
               <LatestNews />
