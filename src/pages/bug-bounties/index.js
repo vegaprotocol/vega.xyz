@@ -10,7 +10,7 @@ import pgpKeyFile from "../../../vega-public-key.asc";
 import Loader from "../../components/Loader";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
-const isVercel = !!process.env.IS_VERCEL
+const isVercel = process.env.IS_VERCEL === 'true'
 
 const BugBountiesPage = ({ data }) => {
   const { t, i18n } = useTranslation("page.bug-bounties");
@@ -54,7 +54,7 @@ const BugBountiesPage = ({ data }) => {
     e.preventDefault();
 
     setIsSubmitting(true);
-    const functionPath = isVercel ? '/functions/send-bug-report' : '/.netlify/functions/send-bug-report' 
+    const functionPath = isVercel ? '/api/send-bug-report' : '/.netlify/functions/send-bug-report' 
 
     axios
       .post(functionPath, {

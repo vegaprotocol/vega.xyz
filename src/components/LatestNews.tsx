@@ -6,7 +6,7 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import { stringify } from 'querystring'
 import { getImage, getSrc } from 'gatsby-plugin-image'
 
-const isVercel = !!process.env.IS_VERCEL
+const isVercel = process.env.IS_VERCEL === 'true'
 
 const LatestNews = () => {
   const { t } = useTranslation('component.latest-news')
@@ -100,7 +100,7 @@ const LatestNews = () => {
   useEffect(() => {
     async function fetchLatestTweet() {
       try {
-       const functionPath = isVercel ? '/functions/latest-tweet' : '/.netlify/functions/latest-tweet' 
+       const functionPath = isVercel ? '/api/latest-tweet' : '/.netlify/functions/latest-tweet' 
         let response = await fetch(functionPath)
         response = await response.json()
         setTweet({
