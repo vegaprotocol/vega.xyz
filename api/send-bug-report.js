@@ -1,4 +1,4 @@
-exports.handler = async (event) => {
+exports.default = async (event) => {
   require(`dotenv`).config({
     path: `.env.${process.env.NODE_ENV}`,
   });
