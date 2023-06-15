@@ -53,9 +53,9 @@ exports.default = async (req, res) => {
     .sendEmail(params)
     .promise()
     .then((data) => {
-      return res(200).send(`Message sent`)
+      return res.status(200).send(`Message sent`)
     })
     .catch((error) => {
-      return res(500).send(`Message could not be sent`)
+      return res.status(500).send(`Message could not be sent`)
     });
 };
