@@ -1,6 +1,6 @@
 {
   "functions": {
-    "*.js": {
+    "api/*.js": {
       "maxDuration": 10,
       "includeFiles": "./vega-public-key.asc"
     }
