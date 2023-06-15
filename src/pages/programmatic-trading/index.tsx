@@ -13,7 +13,6 @@ import Callout from '../../components/UI/Callout'
 import Link from '../../components/UI/Link'
 import ActionButton from '../../components/UI/ActionButton'
 import APIGraphic from '../../components/Svg/APIGraphic'
-import NumberedListItem from '../../components/UI/NumberedListItem'
 import { getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import GRPC from '../../components/Svg/GRPC'
@@ -24,10 +23,8 @@ import DataNodes from '../../components/RestAPI/DataNodes'
 import VegaWallet from '../../components/RestAPI/VegaWallet'
 import NetworkParameter from '../../components/NetworkParameter'
 
-const MarketMakingAndLiquidityProvision = ({ data }) => {
-  const { t, i18n } = useTranslation(
-    'page.market-making-and-liquidity-provision'
-  )
+const ProgrammaticTrading = ({ data }) => {
+  const { t, i18n } = useTranslation('page.programmatic-trading')
   const [missingTranslations, setMissingTranslations] = useState(false)
 
   i18n.on('missingKey', (lng) => {
@@ -37,14 +34,14 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
   const MarketMakerText = () => {
     return (
       <Trans t={t}>
-        Place static or pegged order limit volume on the book, manage your
-        spread and position, and receive{' '}
+        Users who place static or pegged order limit volume on the book will
+        receive{' '}
         <NetworkParameter
           param="market_fee_factors_makerFee"
           expressPercentage
           suffix="%"
         ></NetworkParameter>{' '}
-        of the trade value when an incoming trade matches your order.
+        of the trade value when an incoming trade matches their order.
       </Trans>
     )
   }
@@ -67,32 +64,16 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
           </h1>
           <h2 className="heading-xl mb-space-5">
             <GlitchTitle color="purple">
-              <Trans t={t}>
-                Market make and provide liquidity using the APIs
-              </Trans>
+              <Trans t={t}>Programmatic trading on Vega</Trans>
             </GlitchTitle>
           </h2>
           <div className="body-xl mx-auto max-w-[40rem]">
             <Trans t={t}>
-              Anyone can become a market maker or liquidity provider on Vega by
-              integrating with its CEX-style APIs
+              Enabled through rich CEX-style APIs for deployment of market
+              making, liquidity provision, and directional trading strategies
             </Trans>
           </div>
         </div>
-
-        {/* <div className="mx-auto mb-space-8 max-w-[60rem] md:mb-space-10"> */}
-        {/* <h2 className="heading-l mb-space-6 text-center">
-            <Trans t={t}>How fees work</Trans>
-          </h2> */}
-
-        {/* <p className="body-xl text-center">
-            <Trans t={t}>
-              On Vega, price takers pay a fee on every trade - 100% of which is
-              distributed between validators and token holders, market makers
-              and liquidity providers. The are no gas fees on Vega.
-            </Trans>
-          </p> */}
-        {/* </div> */}
 
         <div className="mb-space-10 grid grid-cols-1 gap-space-4 md:mb-space-11 md:grid-cols-2 md:gap-space-7">
           <TeamTile
@@ -105,7 +86,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
             body={
               <div>
                 {t(
-                  "Users willing to commit a set bond amount to help ensure a market's liquidity can earn liquidity provision fees. Fee % is set per market based on the commitments needed to keep it liquid."
+                  "Users willing to commit a set bond amount to help ensure a market's liquidity additionally earn a liquidity provision fee set per market."
                 )}{' '}
                 <Link
                   className="text-vega-black underline hover:no-underline dark:text-vega-white"
@@ -119,65 +100,66 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
           />
         </div>
 
-        <div className="mb-space-10 max-w-[47.5rem] md:mx-auto md:mb-space-11 lg:mb-space-13">
-          <h2 className="heading-l mb-space-6 text-center">
-            <Trans t={t}>Prerequisites</Trans>
-          </h2>
+        <h2 className="heading-xl my-space-10 text-center md:my-space-11 lg:my-space-13">
+          <GlitchTitle color="purple">
+            <Trans t={t}>Starter kit</Trans>
+          </GlitchTitle>
+        </h2>
 
-          <p className="body-l light:text-vega-light-400 mb-space-6 text-center dark:text-vega-dark-400 ">
+        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
+          <h3 className="heading-m mb-space-4">
+            <Trans t={t}>1. Pre-requisites</Trans>
+          </h3>
+
+          <p className="body-l light:text-vega-light-400 mb-space-6 max-w-[38rem] dark:text-vega-dark-400 md:mb-space-8">
             <Trans t={t}>
               Market making and liquidity provision is risky and for
               sophisticated parties only. Users of this page should be able to:
             </Trans>
           </p>
 
-          <div className="mb-space-4 border-t md:mb-space-11 lg:mb-space-13">
-            <NumberedListItem
-              number="1"
-              text={t(
-                'Actively manage liquidity deployed to a limit order book'
-              )}
-            />
-            <NumberedListItem
-              number="2"
-              text={t(
-                'Understand how derivatives pricing works, specifically cash-settle futures'
-              )}
-            />
-            <NumberedListItem
-              number="3"
-              text={t(
-                'Code automated trading strategies and operate and monitor them 24/7'
-              )}
-            />
-            <NumberedListItem
-              number="4"
-              text={t(
-                'Understand the nuances of integrating with a blockchain, for example, you’re familiar with tools like Web3.js – used to interact with Ethereum'
-              )}
-            />
-            <NumberedListItem
-              number="5"
-              text={t(
-                'Manage inventory risk and build trading strategies that effectively manage exposure to maintain neutrality'
-              )}
-            />
-            <NumberedListItem
-              number="6"
-              text={t('Manage risk in a leveraged trading environment')}
-            />
+          <div className="prose-lg -mb-space-6 grid max-w-none grid-cols-1 gap-x-space-6 prose-p:mt-0 md:grid-cols-3 xl:gap-x-space-10">
+            <p>
+              <Trans t={t}>
+                1. Actively manage liquidity deployed to a limit order book
+              </Trans>
+            </p>
+            <p>
+              <Trans t={t}>
+                2. Understand how derivatives pricing works, specifically
+                cash-settle futures
+              </Trans>
+            </p>
+            <p>
+              <Trans t={t}>
+                3. Code automated trading strategies and operate and monitor
+                them 24/7
+              </Trans>
+            </p>
+            <p>
+              <Trans t={t}>
+                4. Understand the nuances of integrating with a blockchain, for
+                example, you’re familiar with tools like Web3.js – used to
+                interact with Ethereum
+              </Trans>
+            </p>
+            <p>
+              <Trans t={t}>
+                5. Manage inventory risk and build trading strategies that
+                effectively manage exposure to maintain neutrality
+              </Trans>
+            </p>
+            <p>
+              <Trans t={t}>
+                6. Manage risk in a leveraged trading environment
+              </Trans>
+            </p>
           </div>
         </div>
 
-        <h2 className="heading-xl mb-space-10 text-center md:mb-space-11 lg:mb-space-13">
-          <GlitchTitle color="purple">
-            <Trans t={t}>Get Started</Trans>
-          </GlitchTitle>
-        </h2>
-
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <h3 className="heading-m mb-space-4">
-            <Trans t={t}>1. Get a Wallet</Trans>
+            <Trans t={t}>2. Vega Wallet</Trans>
           </h3>
 
           <p className="body-xl mb-space-4">
@@ -208,7 +190,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
           <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
             <div>
               <h3 className="heading-m mb-space-3">
-                <Trans t={t}>2. Check out the APIs</Trans>
+                <Trans t={t}>3. Explore the APIs</Trans>
               </h3>
             </div>
             <APIGraphic className="w-full max-w-[16rem] self-end" />
@@ -274,7 +256,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
 
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <h3 className="heading-m mb-space-8">
-            <Trans t={t}>3. Follow a tutorial and get code snippets</Trans>
+            <Trans t={t}>4. Tutorials and code snippets</Trans>
           </h3>
 
           <div className="grid grid-cols-1 gap-space-4 md:grid-cols-4 md:gap-space-7">
@@ -360,7 +342,7 @@ const MarketMakingAndLiquidityProvision = ({ data }) => {
   )
 }
 
-export default MarketMakingAndLiquidityProvision
+export default ProgrammaticTrading
 
 export const query = graphql`
   query ($language: String!) {

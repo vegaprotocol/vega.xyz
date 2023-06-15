@@ -6,7 +6,7 @@ export interface TeamTileProps {
   title: string
   image?: IGatsbyImageData
   body?: string | React.ReactNode
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 const TeamTile = ({ title, image, body, children }: TeamTileProps) => {

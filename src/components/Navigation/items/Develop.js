@@ -30,6 +30,10 @@ const Develop = () => {
             text={t('API documentation')}
             link="https://docs.vega.xyz/mainnet/api/overview"
           />
+          <NavigationItem
+            text={t('Programmatic trading')}
+            link="/programmatic-trading"
+          />
         </NavigationList>
       </div>
       <div>
