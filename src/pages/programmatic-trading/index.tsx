@@ -49,9 +49,9 @@ const ProgrammaticTrading = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('APIs for market making and liquidity')}
+        title={t('Programmatic trading on Vega')}
         description={t(
-          'Getting down to brass tacks, here is everything you need to create markets and provide liquidity on Vega. There are certain prerequisites before you can fulfill either role. Learn about them here.'
+          'Programmatic trading on Vega is enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
@@ -111,47 +111,45 @@ const ProgrammaticTrading = ({ data }) => {
             <Trans t={t}>1. Pre-requisites</Trans>
           </h3>
 
-          <p className="body-l light:text-vega-light-400 mb-space-6 max-w-[38rem] dark:text-vega-dark-400 md:mb-space-8">
+          <p className="body-l mb-space-6 max-w-[38rem] md:mb-space-8">
             <Trans t={t}>
               Market making and liquidity provision is risky and for
               sophisticated parties only. Users of this page should be able to:
             </Trans>
           </p>
 
-          <div className="prose-lg -mb-space-6 grid max-w-none grid-cols-1 gap-x-space-6 prose-p:mt-0 md:grid-cols-3 xl:gap-x-space-10">
+          <div className="prose-lg -mb-space-6 grid max-w-none grid-cols-1 gap-x-space-6 prose-p:mt-0 prose-p:text-vega-light-400 dark:prose-p:text-vega-dark-400 md:grid-cols-3 md:gap-y-space-4 xl:gap-x-space-10">
             <p>
               <Trans t={t}>
-                1. Actively manage liquidity deployed to a limit order book
+                i. Actively manage liquidity deployed to a limit order book
               </Trans>
             </p>
             <p>
               <Trans t={t}>
-                2. Understand how derivatives pricing works, specifically
+                ii. Understand how derivatives pricing works, specifically
                 cash-settle futures
               </Trans>
             </p>
             <p>
               <Trans t={t}>
-                3. Code automated trading strategies and operate and monitor
+                iii. Code automated trading strategies and operate and monitor
                 them 24/7
               </Trans>
             </p>
             <p>
               <Trans t={t}>
-                4. Understand the nuances of integrating with a blockchain, for
-                example, you’re familiar with tools like Web3.js – used to
-                interact with Ethereum
+                iv. Understand the nuances of integrating with a blockchain
               </Trans>
             </p>
             <p>
               <Trans t={t}>
-                5. Manage inventory risk and build trading strategies that
-                effectively manage exposure to maintain neutrality
+                v. Manage inventory risk and build trading strategies that
+                manage exposure to maintain neutrality
               </Trans>
             </p>
             <p>
               <Trans t={t}>
-                6. Manage risk in a leveraged trading environment
+                vi. Manage risk effectively in a leveraged trading environment
               </Trans>
             </p>
           </div>
