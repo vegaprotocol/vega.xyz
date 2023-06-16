@@ -16,7 +16,7 @@ export interface NetworkParameterProps {
   prettyNumber?: boolean
 }
 
-const explorerUrl = 'https://explorer.vega.xyz/network-parameters'
+const explorerUrl = `${process.env.GATSBY_VEGA_EXPLORER_URL}network-parameters`
 
 const NetworkParameter = ({
   param,

@@ -3,8 +3,8 @@ step_title: 2022 H1
 title: Restricted Mainnet
 ---
 
-## Secure and govern the network
+## Asegure y gobierne la red
 
-- Validators run a decentralised network connected to the Ethereum mainnet
-- Create and vote on governance proposals
-- Stake and delegate tokens
+- Los validadores ejecutan una red descentralizada conectada a la red principal de Ethereum
+- Crear y votar propuestas de gobernanza
+- Stake y delega tokens

@@ -53,3 +53,7 @@
   background: #f0f0f0;
   cursor: pointer;
 }
+
+.ag-row-hover {
+  cursor: pointer;
+}
