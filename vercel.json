@@ -4,5 +4,39 @@
       "maxDuration": 10,
       "includeFiles": "vega-public-key.asc"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/3hQyGgZ"
+    },
+    {
+      "source": "/about",
+      "destination": "/key-concepts"
+    },
+    {
+      "source": "/background",
+      "destination": "/papers"
+    },
+    {
+      "source": "/who",
+      "destination": "/partners-backers"
+    },
+    {
+      "source": "/assets/vega-technical-overview.pdf",
+      "destination": "/papers/vega-technical-overview.pdf"
+    },
+    {
+      "source": "/assets/vega-protocol-whitepaper.pdf",
+      "destination": "/papers/vega-protocol-whitepaper.pdf"
+    },
+    {
+      "source": "/assets/Wendy_Grows_Up.pdf",
+      "destination": "/papers/Wendy_Grows_Up.pdf"
+    },
+    {
+      "source": "/buildersclubform",
+      "destination": "https://vegaprotocol.typeform.com/to/YgOgiGqF"
+    }
+  ]
 }
