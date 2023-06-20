@@ -4,6 +4,7 @@ exports.default = async (req, res) => {
   })
 
   const AWS = require('aws-sdk')
+  const path = require('path')
   const openpgp = require('openpgp')
   const fs = require('fs')
 
@@ -11,10 +12,13 @@ exports.default = async (req, res) => {
   let message = requestParams.message
   const emailAddress = process.env.BUG_SUBMISSION_EMAIL
 
-  const publicKeyArmored = fs.readFileSync('vega-public-key.asc', {
-    encoding: 'utf8',
-    flag: 'r',
-  })
+  const publicKeyArmored = fs.readFileSync(
+    path.join(process.cwd(), 'vega-public-key.asc'),
+    {
+      encoding: 'utf8',
+      flag: 'r',
+    }
+  )
 
   console.dir(publicKeyArmored)
 
