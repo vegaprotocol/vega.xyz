@@ -64,7 +64,7 @@ const MarketLpDocument = gql`
         trigger
         marketValueProxy
       }
-      liquidityProvisionsConnection {
+      liquidityProvisionsConnection(live: true) {
         edges {
           node {
             ...LiquidityProvisionFields
