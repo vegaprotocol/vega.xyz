@@ -1,6 +1,6 @@
 const Twitter = require('twitter-v2')
 
-exports.handler = async (event, context, callback) => {
+exports.default = async (req, res) => {
   const client = new Twitter({
     consumer_key: process.env.TWITTER_API_KEY,
     consumer_secret: process.env.TWITTER_API_SECRET,
@@ -52,20 +52,15 @@ exports.handler = async (event, context, callback) => {
     }
   )
 
-  callback(null, {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-    },
-    statusCode: 200,
-    body: JSON.stringify({
-      id: data[0].id,
-      tweet_text: data[0].text,
-      image: data[0]?.attachments
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.status(200).json({
+    id: data[0].id,
+    tweet_text: data[0].text,
+    image: data[0]?.attachments
+      ? includes?.media[0].url
         ? includes?.media[0].url
-          ? includes?.media[0].url
-          : includes?.media[0].preview_image_url
-        : null,
-      all_tweets: data,
-    }),
+        : includes?.media[0].preview_image_url
+      : null,
+    all_tweets: data,
   })
 }

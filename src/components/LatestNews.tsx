@@ -98,7 +98,8 @@ const LatestNews = () => {
   useEffect(() => {
     async function fetchLatestTweet() {
       try {
-        let response = await fetch('/.netlify/functions/latest-tweet')
+        const functionPath = '/api/latest-tweet'
+        let response = await fetch(functionPath)
         response = await response.json()
         setTweet({
           id: response.id,
