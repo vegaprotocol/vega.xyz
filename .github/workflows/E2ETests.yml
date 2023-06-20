@@ -20,7 +20,8 @@ jobs:
         id: previewUrl
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          max_timeout: 120
+          check_interval: 4
+          max_timeout: 180
 
       - name: Checkout
         uses: actions/checkout@v3
