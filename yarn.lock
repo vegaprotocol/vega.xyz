@@ -3731,10 +3731,10 @@
   resolved "https://registry.yarnpkg.com/@vegaprotocol/types/-/types-0.0.3.tgz#ef5fba91b4bfcf25e468157d9ca52b064a97f296"
   integrity sha512-+v6plfzQwbSkRH9xv+zi/1181UoznHwQmbZjTc+mvH4cw8fzjCR2q5OwnmGR3R7uuQS6hB4DDCB1gXw/qk7/pw==
 
-"@vegaprotocol/ui-toolkit@0.12.3":
-  version "0.12.3"
-  resolved "https://registry.yarnpkg.com/@vegaprotocol/ui-toolkit/-/ui-toolkit-0.12.3.tgz#fadd83ba3d29ae4b581ada984bbe82d5eee297d5"
-  integrity sha512-0SuaEAWHsw9yjqAlYNKo6nho8ZUZMVgHpzVQ7t68uglvTpOech0yuPP/ekqa2vrWflvfZRrgK1jQ5FXz0GBzVw==
+"@vegaprotocol/ui-toolkit@0.12.5":
+  version "0.12.5"
+  resolved "https://registry.yarnpkg.com/@vegaprotocol/ui-toolkit/-/ui-toolkit-0.12.5.tgz#a5ee0614b6ae3fa2bb15227e7c98d7499a597c7b"
+  integrity sha512-SFylzGqITxwR2J4OfYHK/iI2jX4bCLHWwwPZGV5AQjp1aZjf+tKFuwyb6FcO/TWTM3DcmaKBtdhDVdzOlYD+tg==
   dependencies:
     "@blueprintjs/icons" "^3.32.0"
     "@radix-ui/react-accordion" "^1.1.0"
@@ -3753,7 +3753,7 @@
     "@vegaprotocol/i18n" "0.0.3"
     "@vegaprotocol/react-helpers" "0.2.4"
     "@vegaprotocol/tailwindcss-config" "0.0.3"
-    "@vegaprotocol/utils" "0.0.4"
+    "@vegaprotocol/utils" "0.0.5"
     ag-grid-community "^27.0.1"
     bignumber.js "^9.0.2"
     classnames "^2.3.1"
@@ -3769,6 +3769,11 @@
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@vegaprotocol/utils/-/utils-0.0.4.tgz#8126cfdb9617b38e1ac18836065b523490d11b24"
   integrity sha512-GLiwE4B4aJH0t0P8kFSxMJL0Wz2aMypv9HIE7kvZvS1JgDHgwWRkZFi6PBg7tSTc5FTvp10afQVgsE+DqneJog==
+
+"@vegaprotocol/utils@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@vegaprotocol/utils/-/utils-0.0.5.tgz#29a4a9b04ca99d2896d5444c3817b4d877e2b218"
+  integrity sha512-6YQI64iLOJT9BnBXgqcR1gxzEqt7SOv6v9Hqc+0fCaGr8oxCOZT8pdga1YR5CGjHuDSIPI/wryNeXIfA2XvoRQ==
 
 "@vercel/webpack-asset-relocator-loader@^1.7.0":
   version "1.7.3"
