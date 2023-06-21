@@ -79,7 +79,7 @@ const MarketsLiquidity = () => {
             <Trans t={t}>Provide Liquidity</Trans>
           </GlitchTitle>
         </div>
-        <div className="mx-auto max-w-[44rem] mb-3">
+        <div className="mx-auto mb-3 max-w-[44rem]">
           <LeadingLine className="text-center">
             <Trans t={t}>
               Liquidity providers receive a share of fees paid during trading in
@@ -188,6 +188,7 @@ const MarketsLiquidity = () => {
                 headerName={t('Supplied Stake')}
                 cellRenderer={(params) => {
                   const suppliedStake = params.data.node.data.suppliedStake
+                  const targetStake = params.data.node.data.targetStake
                   const decimals =
                     params.data.node.data.market.tradableInstrument.instrument
                       .product.settlementAsset.decimals
@@ -196,8 +197,8 @@ const MarketsLiquidity = () => {
                     decimals
                   )
                   const percentageStaked = percentageLiquidity(
-                    params.data.node.data.suppliedStake,
-                    params.data.node.data.targetStake
+                    suppliedStake,
+                    targetStake
                   )
                   const status = params.data.node.data.marketTradingMode
                   const intent = intentForStatus(status)
@@ -301,8 +302,7 @@ const MarketsLiquidity = () => {
 }
 
 const percentageLiquidity = (suppliedStake, targetStake) => {
-  const roundedPercentage =
-    parseInt((suppliedStake / parseFloat(targetStake)).toFixed(0)) * 100
+  const roundedPercentage = (suppliedStake / targetStake) * 100
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
