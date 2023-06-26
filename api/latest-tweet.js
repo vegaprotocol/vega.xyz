@@ -1,12 +1,32 @@
 const Twitter = require('twitter-v2')
 
 exports.default = async (req, res) => {
+  const consumer_key = process.env.TWITTER_API_KEY,
+  const consumer_secret = process.env.TWITTER_API_SECRET,
+  const access_token_key = process.env.TWITTER_ACCESS_TOKEN,
+  const access_token_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET,
+  
+  if (!consumer_key) {
+    res.status(500).text('Twitter API consumer key is missing')
+  }
+  if (!consumer_secret) {
+    res.status(500).text('Twitter API consumer secret is missing')
+  }
+  if (!access_token_key) {
+    res.status(500).text('Twitter API access_token_key missing')
+  }
+  if (!access_token_secret) {
+    res.status(500).text('Twitter API access token secret is missing')
+  }
+
   const client = new Twitter({
     consumer_key: process.env.TWITTER_API_KEY,
     consumer_secret: process.env.TWITTER_API_SECRET,
     access_token_key: process.env.TWITTER_ACCESS_TOKEN,
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
   })
+
+  const { res } = await client.getCurrentUserV2Object()
 
   const { data, includes } = await client.get(
     `users/956831071982800896/tweets`,
