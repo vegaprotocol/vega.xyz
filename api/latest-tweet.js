@@ -1,11 +1,11 @@
 const Twitter = require('twitter-v2')
 
 exports.default = async (req, res) => {
-  const consumer_key = process.env.TWITTER_API_KEY,
-  const consumer_secret = process.env.TWITTER_API_SECRET,
-  const access_token_key = process.env.TWITTER_ACCESS_TOKEN,
-  const access_token_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET,
-  
+  const consumer_key = process.env.TWITTER_API_KEY
+  const consumer_secret = process.env.TWITTER_API_SECRET
+  const access_token_key = process.env.TWITTER_ACCESS_TOKEN
+  const access_token_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET
+
   if (!consumer_key) {
     res.status(500).text('Twitter API consumer key is missing')
   }
