@@ -5,6 +5,7 @@ import {
   HealthBar,
   Indicator,
   Intent,
+  TooltipCellComponent,
 } from '@vegaprotocol/ui-toolkit'
 import {
   addDecimalsFormatNumber,
@@ -27,6 +28,7 @@ import React, {
   useEffect,
   useMemo,
   useRef,
+  useState,
 } from 'react'
 import BoxTitle from '../../components/BoxTitle'
 import Container from '../../components/Container'
@@ -40,9 +42,16 @@ import { useMarkets } from '../../hooks/use-markets'
 import { calc24hVolume } from '../../utils/vega/24hVolume'
 import { getStatus } from '../../utils/vega/getStatus'
 import './liquidity-provision.css'
+import CalloutHero from '../../components/CalloutHero'
+import BigNumber from 'bignumber.js'
+import TranslationsBanner from '../../components/TranslationsBanner'
 
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
+  const [missingTranslations, setMissingTranslations] = useState(false)
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   const yesterday = useYesterday()
   const yTimestamp = useMemo(() => {
@@ -57,6 +66,7 @@ const MarketsLiquidity = () => {
   return (
     <Layout stickyHeader={false}>
       <Container dataCy={'main'}>
+        {missingTranslations && <TranslationsBanner />}
         <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
           <h1>
             <BoxTitle text={t('Use Vega')} />
@@ -69,7 +79,7 @@ const MarketsLiquidity = () => {
             <Trans t={t}>Provide Liquidity</Trans>
           </GlitchTitle>
         </div>
-        <div className="mx-auto max-w-[44rem]">
+        <div className="mx-auto mb-3 max-w-[44rem]">
           <LeadingLine className="text-center">
             <Trans t={t}>
               Liquidity providers receive a share of fees paid during trading in
@@ -85,10 +95,38 @@ const MarketsLiquidity = () => {
             Learn more about committing liquidity
           </Link>
         </div>
+        <div className="my-8">
+          <CalloutHero
+            title={t(
+              'The data relating to markets on this page is obtained from nodes on the Vega Blockchain.'
+            )}
+            text={undefined}
+            buttonText={undefined}
+            buttonLink={undefined}
+          >
+            <div className="copy-xxs">
+              Gobalsky Labs Limited:
+              <ul className="list-inside list-disc">
+                <li>Provides its software under open source licences</li>
+                <li>
+                  Does not operate or run the Vega Blockchain or any other
+                  blockchain
+                </li>
+                <li>
+                  Does not create, generate or warrant the accuracy of the data
+                </li>
+                <li>
+                  Has no liability for any loss arising from the use of that
+                  data.
+                </li>
+              </ul>
+            </div>
+          </CalloutHero>
+        </div>
         <AsyncRenderer loading={loading} error={error} data={data}>
           <div className="title-m relative mb-3 w-full">Futures</div>
           <div
-            className="ag-theme-alpine relative w-full"
+            className="ag-theme-alpine relative mb-16 w-full"
             style={{
               overflow: 'hidden',
             }}
@@ -101,7 +139,9 @@ const MarketsLiquidity = () => {
                 unSortIcon: true,
                 cellClass: ['flex', 'flex-col', 'justify-center'],
                 minWidth: 120,
+                tooltipComponent: TooltipCellComponent,
               }}
+              tooltipShowDelay={500}
             >
               <AgGridColumn
                 headerName={t('Market')}
@@ -110,6 +150,7 @@ const MarketsLiquidity = () => {
                   const market = params.data.node.data.market
                   return <Description market={market} />
                 }}
+                headerTooltip={t('The market name, code and settlement asset')}
                 minWidth={200}
               />
               <AgGridColumn
@@ -124,6 +165,7 @@ const MarketsLiquidity = () => {
                   )
                   return formattedMarkPrice
                 }}
+                headerTooltip={t('Latest price for this market')}
               />
               <AgGridColumn
                 headerName={t('Target Stake')}
@@ -138,11 +180,15 @@ const MarketsLiquidity = () => {
                   )
                   return formattedTargetStake
                 }}
+                headerTooltip={t(
+                  'The ideal committed liquidity to operate the market, derived from the maximum open interest observed over a rolling time window. If the total commitment is currently below this level then LPs can set the fee level with a new commitment.'
+                )}
               />
               <AgGridColumn
                 headerName={t('Supplied Stake')}
                 cellRenderer={(params) => {
                   const suppliedStake = params.data.node.data.suppliedStake
+                  const targetStake = params.data.node.data.targetStake
                   const decimals =
                     params.data.node.data.market.tradableInstrument.instrument
                       .product.settlementAsset.decimals
@@ -151,8 +197,8 @@ const MarketsLiquidity = () => {
                     decimals
                   )
                   const percentageStaked = percentageLiquidity(
-                    params.data.node.data.suppliedStake,
-                    params.data.node.data.targetStake
+                    suppliedStake,
+                    targetStake
                   )
                   const status = params.data.node.data.marketTradingMode
                   const intent = intentForStatus(status)
@@ -166,6 +212,9 @@ const MarketsLiquidity = () => {
                     </div>
                   )
                 }}
+                headerTooltip={t(
+                  'The current amount of liquidity supplied for this market.'
+                )}
               />
               <AgGridColumn
                 headerName={t('Liquidity Fee')}
@@ -176,10 +225,13 @@ const MarketsLiquidity = () => {
                   if (loading) return null
                   if (data) {
                     const liquidityFee = data.market.fees?.factors?.liquidityFee
-                    return `${liquidityFee}%`
+                    return percentageFormatter(liquidityFee)
                   }
                   return null
                 }}
+                headerTooltip={t(
+                  'The fee percentage (per trade) charged by liquidity providers on this market'
+                )}
               />
               <AgGridColumn
                 headerName={t('Volume (24h)')}
@@ -188,16 +240,19 @@ const MarketsLiquidity = () => {
                     params.data.node.candlesConnection?.edges || []
                   )
                   const positionDecimals =
-                    params.data.node.data.market.positionDecimals
+                    params.data.node.data.market.positionDecimalPlaces
                   const formattedVolume24h = addDecimalsFormatNumber(
                     volume24h,
                     positionDecimals
                   )
                   return formattedVolume24h
                 }}
+                headerTooltip={t(
+                  'The total number of contracts traded in the last 24 hours.'
+                )}
               />
               <AgGridColumn
-                headerName={t('Trading Mode')}
+                headerName={t('Market Status')}
                 field={'node.data.marketTradingMode'}
                 cellRenderer={(params) => {
                   const { data, loading, error } = useMarketLiquidityProviders(
@@ -234,6 +289,9 @@ const MarketsLiquidity = () => {
                     )
                   }
                 }}
+                headerTooltip={t(
+                  'The current market status - those below the black target stake line are at risk of entering liquidity auction'
+                )}
               />
             </Grid>
           </div>
@@ -244,8 +302,7 @@ const MarketsLiquidity = () => {
 }
 
 const percentageLiquidity = (suppliedStake, targetStake) => {
-  const roundedPercentage =
-    parseInt((suppliedStake / parseFloat(targetStake)).toFixed(0)) * 100
+  const roundedPercentage = (suppliedStake / targetStake) * 100
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
@@ -284,6 +341,18 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
       suppressRowClickSelection
       domLayout="autoHeight"
       {...props}
+      gridOptions={{
+        onRowClicked: ({ data }: RowClickedEvent) => {
+          window.open(
+            liquidityDetailsConsoleLink(
+              data.node.data.market.id,
+              'https://console.vega.xyz'
+            ),
+            '_blank',
+            'noopener,noreferrer'
+          )
+        },
+      }}
     >
       {children}
     </AgGridReact>
@@ -353,3 +422,11 @@ export const getFeeLevels = (providers: any[]) => {
 
   return sortedProviders
 }
+
+const percentageFormatter = (value) => {
+  if (!value) return '-'
+  return formatNumberPercentage(new BigNumber(value).times(100), 2) || '-'
+}
+
+const liquidityDetailsConsoleLink = (marketId: string, consoleLink: string) =>
+  `${consoleLink}/#/liquidity/${marketId}`

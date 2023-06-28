@@ -64,6 +64,7 @@
   "Getting started": "Getting started",
   "Tutorials": "Tutorials",
   "API documentation": "API documentation",
+  "Programmatic trading": "Programmatic trading",
   "Start": "Start",
   "Governance on Vega": "Governance on Vega",
   "Discuss proposals": "Discuss proposals",
@@ -77,6 +78,6 @@
   "Infrastructure": "Infrastructure",
   "Get the Vega Wallet": "Get the Vega Wallet",
   "Trading": "Trading",
-  "Market make and provide liquidity using our APIs": "Market make and provide liquidity using our APIs",
+  "Liquidity Provision": "",
   "Use Vega": "Use Vega"
 }

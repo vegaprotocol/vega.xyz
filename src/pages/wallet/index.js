@@ -20,6 +20,8 @@ import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
 import IconGithub from '../../components/Svg/IconGithub'
 import './wallet.css'
 
+import { useDesktopWalletFairgroundDownloads } from '../../hooks/use-desktop-wallet-fairground-downloads'
+
 const platformIcons = {
   mac: IconPlatformMac,
   windows: IconPlatformWindows,
@@ -101,29 +103,31 @@ const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
             >
               <ul className="py-3 px-2">
                 {binaries.map((binary, idx) => {
-                  return (
-                    <li className="my-1 cursor-pointer" key={idx}>
-                      <a
-                        href={binary.file}
-                        role="button"
-                        target="_blank"
-                        rel="noreferrer"
-                        data-file-download
-                        className={`flex w-full items-center ${dropdownItemVariantClasses}`}
-                        data-cy={'downloadLink'}
-                      >
-                        <div className={`${iconVariantClasses} px-3.5 py-2`}>
-                          {PlatformIcon(binary.icon)}
-                        </div>
-                        <div
-                          className={`body-xs ${dropdownItemTextVariantClasses} !mb-0 py-2`}
-                          data-cy={'downloadPlatform'}
+                  if (binary.file !== '') {
+                    return (
+                      <li className="my-1 cursor-pointer" key={idx}>
+                        <a
+                          href={binary.file}
+                          role="button"
+                          target="_blank"
+                          rel="noreferrer"
+                          data-file-download
+                          className={`flex w-full items-center ${dropdownItemVariantClasses}`}
+                          data-cy={'downloadLink'}
                         >
-                          {binary.platform}
-                        </div>
-                      </a>
-                    </li>
-                  )
+                          <div className={`${iconVariantClasses} px-3.5 py-2`}>
+                            {PlatformIcon(binary.icon)}
+                          </div>
+                          <div
+                            className={`body-xs ${dropdownItemTextVariantClasses} !mb-0 py-2`}
+                            data-cy={'downloadPlatform'}
+                          >
+                            {binary.platform}
+                          </div>
+                        </a>
+                      </li>
+                    )
+                  } else return null
                 })}
               </ul>
             </div>
@@ -138,12 +142,12 @@ const binaries = [
   {
     icon: 'windows',
     platform: 'Windows',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-amd64.exe',
   },
   {
     icon: 'windows',
     platform: 'Windows (ARM64)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-arm64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-arm64.exe',
   },
   {
     icon: 'mac',
@@ -159,34 +163,6 @@ const binaries = [
     icon: 'linux',
     platform: 'Linux',
     file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-linux-amd64.zip',
-  },
-]
-
-const fairgroundBinaries = [
-  {
-    icon: 'windows',
-    platform: 'Windows',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-windows-amd64.zip',
-  },
-  {
-    icon: 'windows',
-    platform: 'Windows (ARM64)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-windows-arm64.zip',
-  },
-  {
-    icon: 'mac',
-    platform: 'MacOS (Intel)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-macos-intel.zip',
-  },
-  {
-    icon: 'mac',
-    platform: 'MacOS (M1 / M2)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-macos-apple-silicon.zip',
-  },
-  {
-    icon: 'linux',
-    platform: 'Linux',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/download/v0.12.2/fairground-wallet-desktop-linux-amd64.zip',
   },
 ]
 
@@ -212,6 +188,9 @@ const WalletPageNew = ({ data }) => {
       hash: 'developers',
     },
   ]
+
+  const { fairgroundDownloads, loading, error } =
+    useDesktopWalletFairgroundDownloads()
 
   return (
     <Layout stickyHeader={false}>
@@ -257,11 +236,21 @@ const WalletPageNew = ({ data }) => {
               <div className="heading-xxs !font-not-glitched mt-space-7 mb-space-4 text-vega-light-300 dark:text-vega-dark-300">
                 <Trans t={t}>Want to test new features on Fairground?</Trans>
               </div>
-              <DownloadButton
-                binaries={fairgroundBinaries}
-                variant="secondary"
-                title={t('Download Vega Wallet (Testnet)')}
-              />
+              {loading && <div>Loading...</div>}
+              {error && (
+                <div>
+                  <Trans t={t}>
+                    Error fetching Fairground desktop wallet downloads
+                  </Trans>
+                </div>
+              )}
+              {fairgroundDownloads && (
+                <DownloadButton
+                  binaries={fairgroundDownloads}
+                  variant="secondary"
+                  title={t('Download Vega Wallet (Testnet)')}
+                />
+              )}
 
               <div className="mt-space-5">
                 <IconGithub />

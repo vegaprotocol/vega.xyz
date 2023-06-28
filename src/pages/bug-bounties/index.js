@@ -52,8 +52,10 @@ const BugBountiesPage = ({ data }) => {
     e.preventDefault();
 
     setIsSubmitting(true);
+    const functionPath = '/api/send-bug-report';
+
     axios
-      .post("/.netlify/functions/send-bug-report", {
+      .post(functionPath, {
         message,
       })
       .then((res) => {

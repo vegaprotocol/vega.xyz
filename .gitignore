@@ -11,5 +11,5 @@ public
 !.yarn/sdks
 !.yarn/versions
 # Local Netlify folder
-.netlify
 gatsby-types.d.ts
+.vercel
