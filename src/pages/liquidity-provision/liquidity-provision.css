@@ -17,18 +17,30 @@
 
 .ag-theme-alpine .ag-cell {
   display: flex;
-  color: #ffffff;
   line-height: 15px;
 }
 
+body.dark .ag-theme-alpine .ag-cell {
+  @apply text-vega-light-200;
+}
+
 .ag-theme-alpine .ag-header {
+  @apply text-vega-dark-100;
   border-top: 1px solid #404040;
   border-bottom: 1px solid #000000;
-  color: #8b8b8b;
-  background-color: #161616;
   font-size: 15px;
   line-height: 1em;
   text-transform: uppercase;
+}
+
+body.dark .ag-theme-alpine .ag-header {
+  @apply text-vega-dark-300;
+  @apply bg-vega-dark-100;
+}
+
+body.dark .ag-theme-alpine .ag-popup {
+  @apply text-vega-light-200;
+  @apply bg-vega-dark-100;
 }
 
 .ag-theme-alpine .ag-root-wrapper {
