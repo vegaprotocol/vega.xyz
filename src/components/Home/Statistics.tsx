@@ -71,7 +71,7 @@ const Statistics = () => {
               {totalVolume && (
                 <TickerCell
                   label={t('Total Volume')}
-                  value={formatNumberWithSuffix(totalVolume)}
+                  value={formatNumberWithSuffix(totalVolume, 1)}
                 />
               )}
             </SwiperSlide>
@@ -103,7 +103,7 @@ const Statistics = () => {
             {totalVolume && (
               <TickerCell
                 label={t('Total Volume')}
-                value={formatNumberWithSuffix(totalVolume)}
+                value={formatNumberWithSuffix(totalVolume, 1)}
               />
             )}
             {totalMarkets && (
