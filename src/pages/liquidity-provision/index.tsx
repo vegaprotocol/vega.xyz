@@ -45,6 +45,11 @@ import './liquidity-provision.css'
 import CalloutHero from '../../components/CalloutHero'
 import BigNumber from 'bignumber.js'
 import TranslationsBanner from '../../components/TranslationsBanner'
+import {
+  IDoesFilterPassParams,
+  IFilterComp,
+  RowClickedEvent,
+} from 'ag-grid-community'
 
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
@@ -352,6 +357,11 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
             'noopener,noreferrer'
           )
         },
+        isExternalFilterPresent: () => true,
+        doesExternalFilterPass: (node) => {
+          const state = node.data.node.data.marketState;
+          return validMarketStates.includes(state)
+        },
       }}
     >
       {children}
@@ -430,3 +440,11 @@ const percentageFormatter = (value) => {
 
 const liquidityDetailsConsoleLink = (marketId: string, consoleLink: string) =>
   `${consoleLink}/#/liquidity/${marketId}`
+
+const validMarketStates = [
+  'STATE_UNSPECIFIED',
+  'STATE_PROPOSED',
+  'STATE_PENDING',
+  'STATE_ACTIVE',
+  'STATE_SUSPENDED',
+]
