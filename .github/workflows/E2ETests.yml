@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         # run n copies of the current job in parallel
-        containers: [2]
+        containers: [1]
     steps:
       - name: Waiting for 200 from the Vercel Preview
         uses: patrickedqvist/wait-for-vercel-preview@v1.3.1
@@ -35,8 +35,6 @@ jobs:
         with:
           wait-on: ${{steps.previewUrl.outputs.url}}
           config: baseUrl="${{steps.previewUrl.outputs.url}}"
-          record: false
-          parallel: true
         env:
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
