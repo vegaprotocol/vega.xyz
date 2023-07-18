@@ -54,7 +54,7 @@ import {
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
   const [missingTranslations, setMissingTranslations] = useState(false)
-  i18n.on('missingKey', (lng) => {
+  i18n.on('missingKey', (_lng) => {
     setMissingTranslations(true)
   })
 
@@ -171,6 +171,18 @@ const MarketsLiquidity = () => {
                   return formattedMarkPrice
                 }}
                 headerTooltip={t('Latest price for this market')}
+                comparator={(valueA, valueB, nodeA, nodeB) => {
+                  const parsedA = toBigNum(
+                    valueA,
+                    nodeA.data.node.data.market.decimalPlaces
+                  )
+                  const parsedB = toBigNum(
+                    valueB,
+                    nodeB.data.node.data.market.decimalPlaces
+                  )
+
+                  return parsedA.minus(parsedB).toNumber()
+                }}
               />
               <AgGridColumn
                 headerName={t('Target Stake')}
@@ -188,6 +200,20 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The ideal committed liquidity to operate the market, derived from the maximum open interest observed over a rolling time window. If the total commitment is currently below this level then LPs can set the fee level with a new commitment.'
                 )}
+                comparator={(_valueA, _valueB, nodeA, nodeB) => {
+                  const parsedA = toBigNum(
+                    nodeA.data.node.data.targetStake,
+                    nodeA.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
+                  )
+                  const parsedB = toBigNum(
+                    nodeB.data.node.data.targetStake,
+                    nodeB.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
+                  )
+
+                  return parsedA.minus(parsedB).toNumber()
+                }}
               />
               <AgGridColumn
                 headerName={t('Supplied Stake')}
@@ -220,6 +246,18 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The current amount of liquidity supplied for this market.'
                 )}
+                comparator={(_valueA, _valueB, nodeA, nodeB) => {
+                  const stakedA = nodeA.data.node.data.suppliedStake
+                  if (!stakedA) return 0;
+                  const stakedB = nodeB.data.node.data.suppliedStake
+
+                  const targetA = nodeA.data.node.data.targetStake
+                  const targetB = nodeB.data.node.data.targetStake
+
+                  const percentageA = (stakedA / targetA) * 100
+                  const percentageB = (stakedB / targetB) * 100
+                  return percentageA - percentageB
+                }}
               />
               <AgGridColumn
                 headerName={t('Liquidity Fee')}
@@ -237,6 +275,7 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The fee percentage (per trade) charged by liquidity providers on this market'
                 )}
+                sortable={false}
               />
               <AgGridColumn
                 headerName={t('Volume (24h)')}
@@ -255,6 +294,21 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The total number of contracts traded in the last 24 hours.'
                 )}
+                comparator={(_valueA, _valueB, nodeA, nodeB) => {
+                  const volume24hA = calc24hVolume(
+                    nodeA.data.node.candlesConnection?.edges || []
+                  )
+                  const volume24hB = calc24hVolume(
+                    nodeB.data.node.candlesConnection?.edges || []
+                  )
+                  const positionDecimalsA =
+                    nodeA.data.node.data.market.positionDecimalPlaces
+                  const positionDecimalsB =
+                    nodeB.data.node.data.market.positionDecimalPlaces
+                  const parsedA = toBigNum(volume24hA, positionDecimalsA)
+                  const parsedB = toBigNum(volume24hB, positionDecimalsB)
+                  return parsedA.minus(parsedB).toNumber()
+                }}
               />
               <AgGridColumn
                 headerName={t('Market Status')}
@@ -297,6 +351,7 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The current market status - those below the black target stake line are at risk of entering liquidity auction'
                 )}
+                sortable={false}
               />
             </Grid>
           </div>
@@ -359,7 +414,7 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
         },
         isExternalFilterPresent: () => true,
         doesExternalFilterPass: (node) => {
-          const state = node.data.node.data.marketState;
+          const state = node.data.node.data.marketState
           return validMarketStates.includes(state)
         },
       }}
