@@ -45,11 +45,7 @@ import './liquidity-provision.css'
 import CalloutHero from '../../components/CalloutHero'
 import BigNumber from 'bignumber.js'
 import TranslationsBanner from '../../components/TranslationsBanner'
-import {
-  IDoesFilterPassParams,
-  IFilterComp,
-  RowClickedEvent,
-} from 'ag-grid-community'
+import { RowClickedEvent } from 'ag-grid-community'
 
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
@@ -263,15 +259,32 @@ const MarketsLiquidity = () => {
                   const parsedA = toBigNum(stakedA, decimalsA)
                   const parsedB = toBigNum(stakedB, decimalsB)
 
-                  const targetA = nodeA.data.node.data.targetStake
-                  const targetB = nodeB.data.node.data.targetStake
+                  const targetA = toBigNum(
+                    nodeA.data.node.data.targetStake,
+                    decimalsA
+                  )
+                  const targetB = toBigNum(
+                    nodeB.data.node.data.targetStake,
+                    decimalsB
+                  )
 
-                  if (targetA === '0' && targetB === '0') return 0
-                  if (targetA === '0') return -1
-                  if (targetB === '0') return 1
-                  const percentageA = (parsedA.toNumber() / targetA) * 100
-                  const percentageB = (parsedB.toNumber() / targetB) * 100
-                  return percentageA - percentageB
+                  if (targetA.isEqualTo(0) && targetB.isEqualTo(0)) return 0
+                  if (targetA.isEqualTo(0)) return -1
+                  if (targetB.isEqualTo(0)) return 1
+                  const percentageA = parsedA
+                    .dividedBy(targetA)
+                    .multipliedBy(100)
+                  const percentageB = parsedB
+                    .dividedBy(targetB)
+                    .multipliedBy(100)
+                  if (
+                    percentageA.isGreaterThanOrEqualTo(100) &&
+                    percentageB.isGreaterThanOrEqualTo(100)
+                  ) {
+                    return parsedA.minus(parsedB).toNumber()
+                  }
+
+                  return percentageA.minus(percentageB).toNumber()
                 }}
               />
               <AgGridColumn
