@@ -547,7 +547,6 @@ const liquidityDetailsConsoleLink = (marketId: string, consoleLink: string) =>
 
 const validMarketStates = [
   'STATE_UNSPECIFIED',
-  'STATE_PROPOSED',
   'STATE_PENDING',
   'STATE_ACTIVE',
   'STATE_SUSPENDED',
