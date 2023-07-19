@@ -20,6 +20,10 @@
   line-height: 15px;
 }
 
+.ag-header-cell-label .ag-header-icon.ag-sort-order {
+  display: none;
+}
+
 body.dark .ag-theme-alpine .ag-cell {
   @apply text-vega-light-200;
 }
