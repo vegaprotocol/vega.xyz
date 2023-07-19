@@ -248,14 +248,25 @@ const MarketsLiquidity = () => {
                 )}
                 comparator={(_valueA, _valueB, nodeA, nodeB) => {
                   const stakedA = nodeA.data.node.data.suppliedStake
-                  if (!stakedA) return 0;
+                  const decimalsA =
+                    nodeA.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
                   const stakedB = nodeB.data.node.data.suppliedStake
+                  const decimalsB =
+                    nodeB.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
+
+                  const parsedA = toBigNum(stakedA, decimalsA)
+                  const parsedB = toBigNum(stakedB, decimalsB)
 
                   const targetA = nodeA.data.node.data.targetStake
                   const targetB = nodeB.data.node.data.targetStake
 
-                  const percentageA = (stakedA / targetA) * 100
-                  const percentageB = (stakedB / targetB) * 100
+                  if (targetA === '0' && targetB === '0') return 0
+                  if (targetA === '0') return -1
+                  if (targetB === '0') return 1
+                  const percentageA = (parsedA.toNumber() / targetA) * 100
+                  const percentageB = (parsedB.toNumber() / targetB) * 100
                   return percentageA - percentageB
                 }}
               />
