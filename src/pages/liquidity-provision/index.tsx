@@ -149,6 +149,7 @@ const MarketsLiquidity = () => {
               tooltipShowDelay={500}
             >
               <AgGridColumn
+                colId="market"
                 headerName={t('Market')}
                 field={'node.data.market.tradableInstrument.instrument.name'}
                 cellRenderer={(params) => {
@@ -159,6 +160,7 @@ const MarketsLiquidity = () => {
                 minWidth={200}
               />
               <AgGridColumn
+                colId="markPrice"
                 headerName={t('Mark Price')}
                 field={'node.data.markPrice'}
                 cellRenderer={(params) => {
@@ -185,6 +187,7 @@ const MarketsLiquidity = () => {
                 }}
               />
               <AgGridColumn
+                colId="targetStake"
                 headerName={t('Target Stake')}
                 cellRenderer={(params) => {
                   const targetStake = params.data.node.data.targetStake
@@ -216,6 +219,7 @@ const MarketsLiquidity = () => {
                 }}
               />
               <AgGridColumn
+                colId="suppliedStake"
                 headerName={t('Supplied Stake')}
                 cellRenderer={(params) => {
                   const suppliedStake = params.data.node.data.suppliedStake
@@ -271,6 +275,7 @@ const MarketsLiquidity = () => {
                 }}
               />
               <AgGridColumn
+                colId="liquidityFee"
                 headerName={t('Liquidity Fee')}
                 cellRenderer={(params) => {
                   const { data, loading, error } = useMarketLiquidityProviders(
@@ -289,6 +294,7 @@ const MarketsLiquidity = () => {
                 sortable={false}
               />
               <AgGridColumn
+                colId="volume24h"
                 headerName={t('Volume (24h)')}
                 cellRenderer={(params) => {
                   const volume24h = calc24hVolume(
@@ -322,6 +328,7 @@ const MarketsLiquidity = () => {
                 }}
               />
               <AgGridColumn
+                colId="marketStatus"
                 headerName={t('Market Status')}
                 field={'node.data.marketTradingMode'}
                 cellRenderer={(params) => {
@@ -398,6 +405,22 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
     resizeGrid()
   }, [resizeGrid])
 
+  const handleOnFirstData = useCallback((params) => {
+    const defaultSortModel = [
+      {
+        colId: 'suppliedStake',
+        sort: 'asc',
+        sortIndex: 0,
+      },
+      {
+        colId: 'targetStake',
+        sort: 'desc',
+        sortIndex: 1,
+      },
+    ]
+    params.columnApi.applyColumnState({ state: defaultSortModel })
+  }, [])
+
   useEffect(() => {
     window.addEventListener('resize', resizeGrid)
     return () => window.removeEventListener('resize', resizeGrid)
@@ -409,8 +432,10 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
       ref={gridRef}
       onGridReady={handleOnGridReady}
       onGridColumnsChanged={resizeGrid}
+      onFirstDataRendered={handleOnFirstData}
       suppressRowClickSelection
       domLayout="autoHeight"
+      multiSortKey="ctrl"
       {...props}
       gridOptions={{
         onRowClicked: ({ data }: RowClickedEvent) => {
