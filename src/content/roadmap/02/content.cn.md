@@ -1,10 +1,10 @@
 ---
 step_title: 2022 H1
-title: Restricted Mainnet
+title: 有限主网
 ---
 
-## Secure and govern the network
+## 网络安全与治理
 
-- Validators run a decentralised network connected to the Ethereum mainnet
-- Create and vote on governance proposals
-- Stake and delegate tokens
+- 验证者运行连接到以太坊主网的去中心化网络
+- 创建并投票进行治理提案
+- 质押和委托代币

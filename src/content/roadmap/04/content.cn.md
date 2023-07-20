@@ -1,10 +1,10 @@
 ---
 step_title: 2023 H2
-title: Version 1 Mainnet
+title: 版本 1 主网
 ---
 
-## Final launch phase
+## 最终启动阶段
 
-- Temporary limits lifted through community governance
-- New innovations and improvements from feedback e.g., successor markets, governance transfers, stop orders and iceberg orders
-- Introduction of spot markets, perpetuals, liquidity SLAs, Ethereum oracles and margin segregation
+- 通过社区治理解除临时限制
+- 基于反馈的新创新和改进，例如继任市场、治理转移、止损单和冰山订单
+- 引入现货市场、永续合约、流动性服务水平协议、以太坊预言机和保证金隔离
