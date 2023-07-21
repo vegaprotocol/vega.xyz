@@ -1,5 +1,5 @@
 ---
-title: The impact of the long-awaited Ethereum Merge
+title: Ethereum Merge
 location: Virtual
 date: 2022-08-18
 links:
