@@ -1,6 +1,6 @@
 ---
-시기: 2021 상반기
-제목: 테스트넷 (Fairground)
+step_title: 2021 상반기
+title: 테스트넷 (Fairground)
 ---
 
 ## 조건 없는 놀이터
