@@ -138,31 +138,33 @@ const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
   )
 }
 
+
+// TODO: Replace tag/v0.12.3 -> latest once mainnet release catches up with fairground
 const binaries = [
   {
     icon: 'windows',
     platform: 'Windows',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-amd64.exe',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/tag/v0.12.3/download/vega-wallet-desktop-windows-amd64.exe',
   },
   {
     icon: 'windows',
     platform: 'Windows (ARM64)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-arm64.exe',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/tag/v0.12.3/download/vega-wallet-desktop-windows-arm64.exe',
   },
   {
     icon: 'mac',
     platform: 'MacOS (Intel)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-intel.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/tag/v0.12.3/download/vega-wallet-desktop-macos-intel.zip',
   },
   {
     icon: 'mac',
     platform: 'MacOS (M1 / M2)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-apple-silicon.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/tag/v0.12.3/download/vega-wallet-desktop-macos-apple-silicon.zip',
   },
   {
     icon: 'linux',
     platform: 'Linux',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-linux-amd64.zip',
+    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/tag/v0.12.3/download/vega-wallet-desktop-linux-amd64.zip',
   },
 ]
 
