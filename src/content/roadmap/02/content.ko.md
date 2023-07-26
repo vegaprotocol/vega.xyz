@@ -1,10 +1,10 @@
 ---
-step_title: 2022 H1
-title: Restricted Mainnet
+시기: 2022 상반기
+제목: 제한된 메인넷
 ---
 
-## Secure and govern the network
+## 네트워크 보안 및 거버넌스
 
-- Validators run a decentralised network connected to the Ethereum mainnet
-- Create and vote on governance proposals
-- Stake and delegate tokens
+- 밸리데이터 이더리움 메인넷에 연결된 탈중앙화 네트워크를 운영
+- 거버넌스 제안서 생성 및 투표
+- 토큰 스테이킹 및 위임
