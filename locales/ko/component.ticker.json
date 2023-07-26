@@ -1,6 +1,6 @@
 {
-  "Validators": "",
-  "Total Staked": "",
-  "Avg. Block Time": "",
-  "Current Epoch": ""
+  "Validators": "검증인",
+  "Total Staked": "총 스테이킹 물량",
+  "Avg. Block Time": "평균 블록시간",
+  "Current Epoch": "현재 Epoch"
 }
