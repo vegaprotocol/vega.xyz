@@ -1,11 +1,11 @@
 ---
-step_title: 2023 H1
-title: Alpha Mainnet
+시기: 2023 상반기
+제목: 알파 메인넷
 ---
 
-## Alpha Mainnet network is live!
+## 알파 메인넷 네트워크가 출시되었습니다!
 
-- Cash settled futures now live
-- Fully decentralised pseudonymous trading
-- Leveraged trading with full cross-margining
-- Permissionless market creation
+- 현금 결제 선물 출시
+- 완전 탈중앙화된 익명 거래
+- 완전한 교차 마진을 통한 레버리지 거래
+- 무허가 시장 생성
