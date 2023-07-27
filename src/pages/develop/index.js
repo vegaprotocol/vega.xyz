@@ -165,7 +165,7 @@ const DevelopPage = ({ data }) => {
             </h2>
 
             <div className="mx-auto mt-12 grid max-w-[12rem] gap-6 md:max-w-[52.5rem] md:grid-cols-3">
-              <ActionButton to="https://vega.xyz/discord/">
+              <ActionButton to="https://vega.xyz/discord">
                 <Trans t={t}>Say hello on Discord</Trans>
               </ActionButton>
               <ActionButton to="https://community.vega.xyz/">
