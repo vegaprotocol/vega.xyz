@@ -1,7 +1,7 @@
 {
-  "Latest Proposals": "",
-  "Loading...": "",
-  "Error fetching proposals...": "",
-  "No proposals found...": "",
-  "Explore all proposals": ""
+  "Latest Proposals": "최신 제안",
+  "Loading...": "로딩중...",
+  "Error fetching proposals...": "제안 로딩 실패",
+  "No proposals found...": "제안된 안건이 없습니다",
+  "Explore all proposals": "모든 제안 둘러보기"
 }

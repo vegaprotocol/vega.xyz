@@ -1,12 +1,12 @@
 ---
-step_title: 2021 H1
-title: Testnet (Fairground)
+step_title: 2021 상반기
+title: 테스트넷 (Fairground)
 ---
 
-## Play without consequences
+## 조건 없는 놀이터
 
-- Experiment with trading
-- Create permissionless markets
-- Create and vote on governance proposals
-- Start staking
-- Explore the blockchain
+- 거래 실험하기
+- 무허가 시장 만들기
+- 거버넌스 제안 생성 및 투표
+- 스테이킹 시작하기
+- 블록체인 살펴보기

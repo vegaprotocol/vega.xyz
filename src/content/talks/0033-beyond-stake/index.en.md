@@ -1,5 +1,5 @@
 ---
-title: "Beyond Stake: Implementing Diversity Policies on PoS"
+title: Devcon VI
 location: Bogota 
 date: 2022-10-11
 links:
