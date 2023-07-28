@@ -1,6 +1,5 @@
 ---
 step_title: 2023 H1
-title: Alpha Mainnet
 title: 알파 메인넷
 ---
 
