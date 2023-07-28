@@ -1,8 +1,8 @@
 {
-  "Latest News": "",
-  "{{minutes}} minute read": "",
-  "Read our blog": "",
-  "See all Tweets": "",
-  "Watch all Talks": "",
-  "Read all Insights": ""
+  "Latest News": "최신 뉴스",
+  "{{minutes}} minute read": "{{minutes}}분 소요",
+  "Read our blog": "블로그 바로가기",
+  "See all Tweets": "트위터 바로가기",
+  "Watch all Talks": "발표 모아보기",
+  "Read all Insights": "전체 인사이트글"
 }

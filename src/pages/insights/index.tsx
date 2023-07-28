@@ -84,7 +84,10 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { collection: { eq: "insights" } }
+      filter: {
+        collection: { eq: "insights" }
+        fields: { locale: { eq: $language } }
+      }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
