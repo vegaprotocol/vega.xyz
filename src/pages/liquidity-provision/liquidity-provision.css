@@ -24,7 +24,7 @@
   display: none;
 }
 
-body.dark .ag-theme-alpine .ag-cell {
+.dark .ag-theme-alpine .ag-cell {
   @apply text-vega-light-200;
 }
 
@@ -37,12 +37,12 @@ body.dark .ag-theme-alpine .ag-cell {
   text-transform: uppercase;
 }
 
-body.dark .ag-theme-alpine .ag-header {
+.dark .ag-theme-alpine .ag-header {
   @apply text-vega-dark-300;
   @apply bg-vega-dark-100;
 }
 
-body.dark .ag-theme-alpine .ag-popup {
+.dark .ag-theme-alpine .ag-popup {
   @apply text-vega-light-200;
   @apply bg-vega-dark-100;
 }
