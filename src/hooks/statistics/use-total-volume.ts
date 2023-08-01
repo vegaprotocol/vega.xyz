@@ -86,7 +86,7 @@ const useTotalVolume = () => {
     },
   ]
 
-  const coingeckoIds = assets.map((asset) => asset.coingeckoId).join(', ')
+  const coingeckoIds = assets.map((asset) => asset.coingeckoId).join(',')
 
   useEffect(() => {
     if (params !== null) {
