@@ -11,6 +11,8 @@ const useTotalVolume = () => {
       ? process.env.GATSBY_VERCEL_ENV
       : 'production'
 
+  console.log(process.env.GATSBY_VERCEL_ENV)
+
   const network = environment === 'production' ? 'mainnet' : 'testnet'
 
   const {
