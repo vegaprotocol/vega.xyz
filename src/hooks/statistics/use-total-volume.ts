@@ -6,10 +6,14 @@ const useTotalVolume = () => {
   const [totalVolume, setTotalVolume] = useState<null | string>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-  const environment = process.env.VERCEL_ENV
-    ? process.env.VERCEL_ENV
+  const environment = process.env.NEXT_PUBLIC_VERCEL_ENV
+    ? process.env.NEXT_PUBLIC_VERCEL_ENV
     : 'development'
+
+  console.log(process.env.NEXT_PUBLIC_VERCEL_ENV)
+
   const network = environment === 'development' ? 'testnet' : 'mainnet'
+
   const {
     params,
     loading: paramsLoading,
@@ -113,6 +117,9 @@ const useTotalVolume = () => {
           assets.map((asset) => {
             const assetIdValue = asset.vegaAssetId[network]
 
+            console.log(currentEpoch)
+            console.log(assetIdValue)
+
             if (assetIdValue) {
               // find relevant asset and rewardType in current epoch
               const results = epochs.summaries.edges.filter((summary) => {
@@ -123,6 +130,8 @@ const useTotalVolume = () => {
                   summary.node.assetId == assetIdValue
                 )
               })
+
+              console.log(results)
 
               if (results.length > 0) {
                 // include decimals
