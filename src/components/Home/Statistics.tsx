@@ -87,7 +87,7 @@ const Statistics = () => {
               {tvl && (
                 <TickerCell
                   label={t('TVL')}
-                  value={priceFormatter.format(Math.round(tvl))}
+                  value={`$${formatNumberWithSuffix(Math.round(tvl), 2)}`}
                 />
               )}
             </SwiperSlide>
@@ -113,7 +113,7 @@ const Statistics = () => {
             {tvl && (
               <TickerCell
                 label={t('TVL')}
-                value={`$${formatNumberWithSuffix(Math.round(tvl))}`}
+                value={`$${formatNumberWithSuffix(Math.round(tvl), 2)}`}
               />
             )}
             {blockTime && (

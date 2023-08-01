@@ -6,10 +6,13 @@ const useTotalVolume = () => {
   const [totalVolume, setTotalVolume] = useState<null | string>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-  const environment = process.env.VERCEL_ENV
-    ? process.env.VERCEL_ENV
-    : 'development'
-  const network = environment === 'development' ? 'testnet' : 'mainnet'
+  const environment =
+    process.env.GATSBY_VERCEL_ENV !== undefined
+      ? process.env.GATSBY_VERCEL_ENV
+      : 'production'
+
+  const network = environment === 'production' ? 'mainnet' : 'testnet'
+
   const {
     params,
     loading: paramsLoading,
@@ -86,7 +89,7 @@ const useTotalVolume = () => {
     },
   ]
 
-  const coingeckoIds = assets.map((asset) => asset.coingeckoId).join(', ')
+  const coingeckoIds = assets.map((asset) => asset.coingeckoId).join(',')
 
   useEffect(() => {
     if (params !== null) {
