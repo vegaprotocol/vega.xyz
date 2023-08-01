@@ -80,9 +80,9 @@ const Statistics = () => {
                 <TickerCell label={t('Total Markets')} value={totalMarkets} />
               )}
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               {users && <TickerCell label={t('Users')} value={users} />}
-            </SwiperSlide>
+            </SwiperSlide> */}
             <SwiperSlide>
               {tvl && (
                 <TickerCell
@@ -109,7 +109,7 @@ const Statistics = () => {
             {totalMarkets && (
               <TickerCell label={t('Total Markets')} value={totalMarkets} />
             )}
-            {users && <TickerCell label={t('Users')} value={users} />}
+            {/* {users && <TickerCell label={t('Users')} value={users} />} */}
             {tvl && (
               <TickerCell
                 label={t('TVL')}
