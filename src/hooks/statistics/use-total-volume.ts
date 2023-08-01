@@ -7,8 +7,8 @@ const useTotalVolume = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const environment =
-    process.env.PUBLIC_VERCEL_ENV !== undefined
-      ? process.env.PUBLIC_VERCEL_ENV
+    process.env.GATSBY_VERCEL_ENV !== undefined
+      ? process.env.GATSBY_VERCEL_ENV
       : 'production'
 
   const network = environment === 'production' ? 'mainnet' : 'testnet'
