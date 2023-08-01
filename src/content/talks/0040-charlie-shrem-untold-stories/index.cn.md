@@ -1,5 +1,5 @@
 ---
-title: 查理施雷姆秀
+title: Charlie Shrem秀
 location: 虚拟论坛
 date: 2023-04-27
 links:
