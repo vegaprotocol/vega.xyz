@@ -10,11 +10,13 @@ export const addLineBreakIfTwoWords = (str) => {
   }
 }
 
-export const formatNumberWithSuffix = (number) => {
-  if (number >= 1000000) {
-    return (number / 1000000).toFixed(1) + 'M'
+export const formatNumberWithSuffix = (number, decimals) => {
+  if (number >= 1000000000) {
+    return (number / 1000000000).toFixed(decimals ? decimals : 0) + 'B'
+  } else if (number >= 1000000) {
+    return (number / 1000000).toFixed(decimals ? decimals : 0) + 'M'
   } else if (number >= 1000) {
-    return (number / 1000).toFixed(1) + 'k'
+    return (number / 1000).toFixed(decimals ? decimals : 0) + 'k'
   } else {
     return number.toString()
   }

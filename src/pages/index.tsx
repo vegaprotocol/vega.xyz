@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Seo from '../components/Seo'
 import TranslationsBanner from '../components/TranslationsBanner'
-import Ticker from '../components/Ticker'
+import Statistics from '../components/Home/Statistics'
 import GlitchTitle from '../components/UI/GlitchTitle'
 import LatestNews from '../components/LatestNews'
 import Button from '../components/UI/Button'
@@ -171,7 +171,7 @@ const IndexPage = ({ data }) => {
             </div>
 
             <div className="mb-space-10 mt-space-6 md:my-space-12 lg:my-space-14">
-              <Ticker />
+              <Statistics />
             </div>
 
             <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
