@@ -30,6 +30,7 @@
     "@vegaprotocol/types": "0.0.3",
     "@vegaprotocol/ui-toolkit": "0.12.6",
     "@vegaprotocol/utils": "0.0.6",
+    "@vercel/kv": "^0.2.2",
     "ag-grid-community": "^27.0.1",
     "ag-grid-react": "^27.0.1",
     "autoprefixer": "^10.4.7",
