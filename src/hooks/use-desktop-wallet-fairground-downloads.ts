@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 
-export const useDesktopWalletFairgroundDownloads = () => {
+const ALLOW_PRERELEASE = true;
+
+export const useDesktopWalletFairgroundDownloads = (allowPrerelease = ALLOW_PRERELEASE) => {
   const [fairgroundDownloads, setFairgroundDownloads] = useState({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -43,7 +45,7 @@ export const useDesktopWalletFairgroundDownloads = () => {
 
         // get first release that is not a pre-release
         for (let release of releases) {
-          if (!release.prerelease) {
+          if (!release.prerelease || allowPrerelease) {
             for (let asset of release.assets) {
               if (
                 asset.name.includes('fairground-wallet-desktop-windows-amd64')

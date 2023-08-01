@@ -1,5 +1,5 @@
 ---
-title: Keynote Talk - Opening Ceremony at EthDenver 2022
+title: EthDenver 2022
 location: Denver
 date: 2022-02-17
 links:

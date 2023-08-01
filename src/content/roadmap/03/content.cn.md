@@ -1,11 +1,11 @@
 ---
 step_title: 2023 H1
-title: Alpha Mainnet
+title: Alpha 主网
 ---
 
-## Alpha Mainnet network is live!
+## Alpha 主网网络已上线！
 
-- Cash settled futures now live
-- Fully decentralised pseudonymous trading
-- Leveraged trading with full cross-margining
-- Permissionless market creation
+- 现已上线现金结算期货交易
+- 完全去中心化的匿名交易
+- 全部交叉保证金的杠杆交易
+- 无需许可的市场创建

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import MarketTile from '../MarketTile'
 import Button from '../UI/Button'
 import Pill from '../UI/Pill'
@@ -21,6 +22,7 @@ interface MarketDataEntry {
 }
 
 const Markets = () => {
+  const { t, i18n } = useTranslation('component.markets')
   const [activeTab, setActiveTab] = useState(0)
   const [marketsData, setMarketsData] = useState<MarketDataEntry[]>([])
   const [showMarketsDropdown, setShowMarketsDropdown] = useState(false)
@@ -116,7 +118,9 @@ const Markets = () => {
   return marketsData.length > 0 ? (
     <div>
       <div className="mb-space-5 grid grid-cols-2 md:flex md:items-center md:justify-between">
-        <h2 className="heading-m">Markets</h2>
+        <h2 className="heading-m">
+          <Trans t={t}>Markets</Trans>
+        </h2>
 
         <div className="!hidden items-center gap-x-space-3 md:flex">
           {marketsData.map((group, index) => (

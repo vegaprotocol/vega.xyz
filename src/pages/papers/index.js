@@ -72,7 +72,10 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { collection: { eq: "papers" } }
+      filter: {
+        collection: { eq: "papers" }
+        fields: { locale: { eq: $language } }
+      }
       sort: {
         fields: [frontmatter___category, frontmatter___position]
         order: ASC

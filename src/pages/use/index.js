@@ -146,7 +146,7 @@ const UsePage = ({ data }) => {
       icon: data.dataNodeIcon,
       title: 'Data Node',
       author: 'Vega',
-      link: 'https://github.com/vegaprotocol/data-node',
+      link: 'https://github.com/vegaprotocol/vega/tree/develop/datanode#data-node',
       description: t('Query the Vega network APIs to retrieve on chain data.'),
       categories: ['network'],
     },
@@ -307,7 +307,7 @@ const UsePage = ({ data }) => {
             <p className="copy-s prose text-vega-mid-grey">
               <Trans t={t}>
                 <a
-                  href="https://vega.xyz/discord/"
+                  href="https://vega.xyz/discord"
                   target="_blank"
                   rel="noreferrer"
                 >

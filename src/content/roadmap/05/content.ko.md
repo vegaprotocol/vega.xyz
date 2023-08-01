@@ -1,13 +1,13 @@
 ---
-step_title: 2024 H2
-title: Version 2 Mainnet
+step_title: 2024 하반기
+title: 메인넷 버젼 2
 ---
 
-## Protocol V2
+## 프로토콜 V2
 
-Features for V2 are subject to change, however, could include the following:
-- Create your own products, risk models and control other aspects of the protocol using WASM
-- Advanced products like options
-- Enhanced performance and security
-- Core protocol upgrades and simplifications
-- New bridges to other blockchains and/or L2s
+V2의 기능은 변경될 수 있지만 다음과 같은 기능이 포함될 수 있습니다:
+- 자체 상품, 위험 모델을 생성하고 WASM을 사용하여 프로토콜의 다른 측면을 제어합니다.
+- 옵션과 같은 고급 제품
+- 향상된 성능 및 보안
+- 핵심 프로토콜 업그레이드 및 단순화
+- 다른 블록체인 및/또는 L2에 대한 새로운 브리지

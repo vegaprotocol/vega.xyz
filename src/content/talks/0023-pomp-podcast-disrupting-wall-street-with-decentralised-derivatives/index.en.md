@@ -1,5 +1,5 @@
 ---
-title: "The Next Generation of Crypto Derivatives Platform is coming"
+title: Cryptonized
 location: Virtual
 date: 2022-09-28
 links:
