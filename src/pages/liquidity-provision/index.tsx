@@ -45,11 +45,12 @@ import './liquidity-provision.css'
 import CalloutHero from '../../components/CalloutHero'
 import BigNumber from 'bignumber.js'
 import TranslationsBanner from '../../components/TranslationsBanner'
+import { RowClickedEvent } from 'ag-grid-community'
 
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
   const [missingTranslations, setMissingTranslations] = useState(false)
-  i18n.on('missingKey', (lng) => {
+  i18n.on('missingKey', (_lng) => {
     setMissingTranslations(true)
   })
 
@@ -144,6 +145,7 @@ const MarketsLiquidity = () => {
               tooltipShowDelay={500}
             >
               <AgGridColumn
+                colId="market"
                 headerName={t('Market')}
                 field={'node.data.market.tradableInstrument.instrument.name'}
                 cellRenderer={(params) => {
@@ -154,6 +156,7 @@ const MarketsLiquidity = () => {
                 minWidth={200}
               />
               <AgGridColumn
+                colId="markPrice"
                 headerName={t('Mark Price')}
                 field={'node.data.markPrice'}
                 cellRenderer={(params) => {
@@ -166,8 +169,21 @@ const MarketsLiquidity = () => {
                   return formattedMarkPrice
                 }}
                 headerTooltip={t('Latest price for this market')}
+                comparator={(valueA, valueB, nodeA, nodeB) => {
+                  const parsedA = toBigNum(
+                    valueA,
+                    nodeA.data.node.data.market.decimalPlaces
+                  )
+                  const parsedB = toBigNum(
+                    valueB,
+                    nodeB.data.node.data.market.decimalPlaces
+                  )
+
+                  return parsedA.minus(parsedB).toNumber()
+                }}
               />
               <AgGridColumn
+                colId="targetStake"
                 headerName={t('Target Stake')}
                 cellRenderer={(params) => {
                   const targetStake = params.data.node.data.targetStake
@@ -183,8 +199,23 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The ideal committed liquidity to operate the market, derived from the maximum open interest observed over a rolling time window. If the total commitment is currently below this level then LPs can set the fee level with a new commitment.'
                 )}
+                comparator={(_valueA, _valueB, nodeA, nodeB) => {
+                  const parsedA = toBigNum(
+                    nodeA.data.node.data.targetStake,
+                    nodeA.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
+                  )
+                  const parsedB = toBigNum(
+                    nodeB.data.node.data.targetStake,
+                    nodeB.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
+                  )
+
+                  return parsedA.minus(parsedB).toNumber()
+                }}
               />
               <AgGridColumn
+                colId="suppliedStake"
                 headerName={t('Supplied Stake')}
                 cellRenderer={(params) => {
                   const suppliedStake = params.data.node.data.suppliedStake
@@ -215,8 +246,49 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The current amount of liquidity supplied for this market.'
                 )}
+                comparator={(_valueA, _valueB, nodeA, nodeB) => {
+                  const stakedA = nodeA.data.node.data.suppliedStake
+                  const decimalsA =
+                    nodeA.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
+                  const stakedB = nodeB.data.node.data.suppliedStake
+                  const decimalsB =
+                    nodeB.data.node.data.market.tradableInstrument.instrument
+                      .product.settlementAsset.decimals
+
+                  const parsedA = toBigNum(stakedA, decimalsA)
+                  const parsedB = toBigNum(stakedB, decimalsB)
+
+                  const targetA = toBigNum(
+                    nodeA.data.node.data.targetStake,
+                    decimalsA
+                  )
+                  const targetB = toBigNum(
+                    nodeB.data.node.data.targetStake,
+                    decimalsB
+                  )
+
+                  if (targetA.isEqualTo(0) && targetB.isEqualTo(0)) return 0
+                  if (targetA.isEqualTo(0)) return -1
+                  if (targetB.isEqualTo(0)) return 1
+                  const percentageA = parsedA
+                    .dividedBy(targetA)
+                    .multipliedBy(100)
+                  const percentageB = parsedB
+                    .dividedBy(targetB)
+                    .multipliedBy(100)
+                  if (
+                    percentageA.isGreaterThanOrEqualTo(100) &&
+                    percentageB.isGreaterThanOrEqualTo(100)
+                  ) {
+                    return parsedA.minus(parsedB).toNumber()
+                  }
+
+                  return percentageA.minus(percentageB).toNumber()
+                }}
               />
               <AgGridColumn
+                colId="liquidityFee"
                 headerName={t('Liquidity Fee')}
                 cellRenderer={(params) => {
                   const { data, loading, error } = useMarketLiquidityProviders(
@@ -232,8 +304,10 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The fee percentage (per trade) charged by liquidity providers on this market'
                 )}
+                sortable={false}
               />
               <AgGridColumn
+                colId="volume24h"
                 headerName={t('Volume (24h)')}
                 cellRenderer={(params) => {
                   const volume24h = calc24hVolume(
@@ -250,8 +324,24 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The total number of contracts traded in the last 24 hours.'
                 )}
+                comparator={(_valueA, _valueB, nodeA, nodeB) => {
+                  const volume24hA = calc24hVolume(
+                    nodeA.data.node.candlesConnection?.edges || []
+                  )
+                  const volume24hB = calc24hVolume(
+                    nodeB.data.node.candlesConnection?.edges || []
+                  )
+                  const positionDecimalsA =
+                    nodeA.data.node.data.market.positionDecimalPlaces
+                  const positionDecimalsB =
+                    nodeB.data.node.data.market.positionDecimalPlaces
+                  const parsedA = toBigNum(volume24hA, positionDecimalsA)
+                  const parsedB = toBigNum(volume24hB, positionDecimalsB)
+                  return parsedA.minus(parsedB).toNumber()
+                }}
               />
               <AgGridColumn
+                colId="marketStatus"
                 headerName={t('Market Status')}
                 field={'node.data.marketTradingMode'}
                 cellRenderer={(params) => {
@@ -292,6 +382,7 @@ const MarketsLiquidity = () => {
                 headerTooltip={t(
                   'The current market status - those below the black target stake line are at risk of entering liquidity auction'
                 )}
+                sortable={false}
               />
             </Grid>
           </div>
@@ -327,6 +418,22 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
     resizeGrid()
   }, [resizeGrid])
 
+  const handleOnFirstData = useCallback((params) => {
+    const defaultSortModel = [
+      {
+        colId: 'suppliedStake',
+        sort: 'asc',
+        sortIndex: 0,
+      },
+      {
+        colId: 'targetStake',
+        sort: 'desc',
+        sortIndex: 1,
+      },
+    ]
+    params.columnApi.applyColumnState({ state: defaultSortModel })
+  }, [])
+
   useEffect(() => {
     window.addEventListener('resize', resizeGrid)
     return () => window.removeEventListener('resize', resizeGrid)
@@ -338,8 +445,10 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
       ref={gridRef}
       onGridReady={handleOnGridReady}
       onGridColumnsChanged={resizeGrid}
+      onFirstDataRendered={handleOnFirstData}
       suppressRowClickSelection
       domLayout="autoHeight"
+      multiSortKey="ctrl"
       {...props}
       gridOptions={{
         onRowClicked: ({ data }: RowClickedEvent) => {
@@ -351,6 +460,11 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
             '_blank',
             'noopener,noreferrer'
           )
+        },
+        isExternalFilterPresent: () => true,
+        doesExternalFilterPass: (node) => {
+          const state = node.data.node.data.marketState
+          return validMarketStates.includes(state)
         },
       }}
     >
@@ -430,3 +544,10 @@ const percentageFormatter = (value) => {
 
 const liquidityDetailsConsoleLink = (marketId: string, consoleLink: string) =>
   `${consoleLink}/#/liquidity/${marketId}`
+
+const validMarketStates = [
+  'STATE_UNSPECIFIED',
+  'STATE_PENDING',
+  'STATE_ACTIVE',
+  'STATE_SUSPENDED',
+]

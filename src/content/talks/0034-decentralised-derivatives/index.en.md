@@ -1,5 +1,5 @@
 ---
-title: Decentralised Derivatives with Barney Mannerings
+title: Web3 Innovators
 location: Virtual
 date: 2022-08-17
 links:

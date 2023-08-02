@@ -3708,6 +3708,13 @@
   resolved "https://registry.yarnpkg.com/@vegaprotocol/announcements/-/announcements-0.0.1.tgz#b156c9b245e275a7e62a483b2a51658dbba1b282"
   integrity sha512-8p53XzIOd+wnHsAAe+39GhvtV/Gie5OepsChB3yfCzOZwPq9yn5HR2/NRGl/HotwV1UROpNf2AWNwNM/+IPwLg==
 
+"@upstash/redis@1.21.0":
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.21.0.tgz#a1096f096800032d65b5d819aa2c60af3011b9e8"
+  integrity sha512-c6M+cl0LOgGK/7Gp6ooMkIZ1IDAJs8zFR+REPkoSkAq38o7CWFX5FYwYEqGZ6wJpUGBuEOr/7hTmippXGgL25A==
+  dependencies:
+    isomorphic-fetch "^3.0.0"
+
 "@vegaprotocol/i18n@0.0.3":
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@vegaprotocol/i18n/-/i18n-0.0.3.tgz#36344549db815a720381b7fa4d155120bcc036c3"
@@ -3736,10 +3743,10 @@
   resolved "https://registry.yarnpkg.com/@vegaprotocol/types/-/types-0.0.3.tgz#ef5fba91b4bfcf25e468157d9ca52b064a97f296"
   integrity sha512-+v6plfzQwbSkRH9xv+zi/1181UoznHwQmbZjTc+mvH4cw8fzjCR2q5OwnmGR3R7uuQS6hB4DDCB1gXw/qk7/pw==
 
-"@vegaprotocol/ui-toolkit@0.12.5":
-  version "0.12.5"
-  resolved "https://registry.yarnpkg.com/@vegaprotocol/ui-toolkit/-/ui-toolkit-0.12.5.tgz#a5ee0614b6ae3fa2bb15227e7c98d7499a597c7b"
-  integrity sha512-SFylzGqITxwR2J4OfYHK/iI2jX4bCLHWwwPZGV5AQjp1aZjf+tKFuwyb6FcO/TWTM3DcmaKBtdhDVdzOlYD+tg==
+"@vegaprotocol/ui-toolkit@0.12.6":
+  version "0.12.6"
+  resolved "https://registry.yarnpkg.com/@vegaprotocol/ui-toolkit/-/ui-toolkit-0.12.6.tgz#6bbacef04c8dd5b4ff1892c606595fa9808a4dac"
+  integrity sha512-S7mwbG6s3hEEmc1MgSpU0zxPTX6ETuW9hQhASLrvRL4C6S9yFX0/gwK5K6j84EOgLCN1As4mpt6O8sab6ZALOA==
   dependencies:
     "@blueprintjs/icons" "^3.32.0"
     "@radix-ui/react-accordion" "^1.1.0"
@@ -3758,7 +3765,7 @@
     "@vegaprotocol/i18n" "0.0.3"
     "@vegaprotocol/react-helpers" "0.2.4"
     "@vegaprotocol/tailwindcss-config" "0.0.3"
-    "@vegaprotocol/utils" "0.0.5"
+    "@vegaprotocol/utils" "0.0.6"
     ag-grid-community "^27.0.1"
     bignumber.js "^9.0.2"
     classnames "^2.3.1"
@@ -3775,10 +3782,17 @@
   resolved "https://registry.yarnpkg.com/@vegaprotocol/utils/-/utils-0.0.4.tgz#8126cfdb9617b38e1ac18836065b523490d11b24"
   integrity sha512-GLiwE4B4aJH0t0P8kFSxMJL0Wz2aMypv9HIE7kvZvS1JgDHgwWRkZFi6PBg7tSTc5FTvp10afQVgsE+DqneJog==
 
-"@vegaprotocol/utils@0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@vegaprotocol/utils/-/utils-0.0.5.tgz#29a4a9b04ca99d2896d5444c3817b4d877e2b218"
-  integrity sha512-6YQI64iLOJT9BnBXgqcR1gxzEqt7SOv6v9Hqc+0fCaGr8oxCOZT8pdga1YR5CGjHuDSIPI/wryNeXIfA2XvoRQ==
+"@vegaprotocol/utils@0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@vegaprotocol/utils/-/utils-0.0.6.tgz#85c03ead0a46658f966a66b018c341de607d8953"
+  integrity sha512-neYOBebKguIym/0oIYPm6kTFmQia/o/TErZsObMRqmCAeF7GKBNvoDojdH85Y79V/PlRb0gsL2//YqjJl+bXgw==
+
+"@vercel/kv@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@vercel/kv/-/kv-0.2.2.tgz#4b01c2bfd0aad674598b4d89a38a9454fa945a15"
+  integrity sha512-mqnQOB6bkp4h5eObxfLNIlhlVqOGSH8cWOlC5pDVWTjX3zL8dETO1ZBl6M74HBmeBjbD5+J7wDJklRigY6UNKw==
+  dependencies:
+    "@upstash/redis" "1.21.0"
 
 "@vercel/webpack-asset-relocator-loader@^1.7.0":
   version "1.7.3"

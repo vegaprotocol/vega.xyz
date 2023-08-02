@@ -16,8 +16,11 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
     let locale = 'en'
 
     // extract locale from file extension
-    if (pathComponents[1]) {
-      locale = pathComponents[1].split('.').slice(-1).pop()
+    if (pathComponents[pathComponents.length - 1]) {
+      locale = pathComponents[pathComponents.length - 1]
+        .split('.')
+        .slice(-1)
+        .pop()
     }
 
     if (pathComponents.length > 0 && parseInt(pathComponents[0])) {

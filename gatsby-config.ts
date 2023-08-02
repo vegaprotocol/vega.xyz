@@ -23,6 +23,10 @@ const languages = [
     code: 'ko',
     localName: '한국인',
   },
+  {
+    code: 'vi',
+    localName: 'Tiếng Việt',
+  },
 ]
 
 module.exports = {

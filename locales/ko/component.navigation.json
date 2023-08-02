@@ -64,7 +64,7 @@
   "Getting started": "개발 시작하기",
   "Tutorials": "가이드",
   "API documentation": "API 문서",
-  "Programmatic trading": "",
+  "Programmatic trading": "알고리즘 트레이딩",
   "Start": "시작",
   "Governance on Vega": "베가 거버넌스",
   "Discuss proposals": "제안 논의",
@@ -78,6 +78,6 @@
   "Infrastructure": "인프라",
   "Get the Vega Wallet": "베가지갑 설치",
   "Trading": "트레이딩",
-  "Liquidity Provision": "",
+  "Liquidity Provision": "유동성 공급",
   "Use Vega": "베가 "
 }

@@ -1,5 +1,5 @@
 ---
-title: "‘Why invest?’ welcomes Vega founder Barney Mannerings"
+title: Why Invest? Podcast
 location: Virtual
 date: 2021-04-21
 links:
@@ -7,4 +7,4 @@ links:
     link: https://podcasts.apple.com/gb/podcast/barney-mannerings-founder-of-vega-protocol/id1531120274?i=1000517998210
 ---
 
-<a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a> dives into the concepts behind Vega, regulation, risk – and the future of centralised exchanges.
+<a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a> dives into the concepts behind Vega, regulation, risk – and the future of centralised exchanges on the Why Invest? podcast hosted by Doug Barnett. 

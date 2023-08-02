@@ -1,5 +1,5 @@
 ---
-title: "CfC St. Moritz: Why DeFi needs to stay true to its cypherpunk roots"
+title: "CfC St. Moritz 2022"
 location: Virtual
 date: 2022-01-13
 links:

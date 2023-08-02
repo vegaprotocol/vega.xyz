@@ -33,6 +33,7 @@ export const MarketsDataFieldsFragmentDoc = gql`
     trigger
     staticMidPrice
     marketTradingMode
+    marketState
     indicativeVolume
     indicativePrice
     bestStaticBidPrice
