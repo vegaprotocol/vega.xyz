@@ -4,6 +4,7 @@
   "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.": "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.",
   "Provide liquidity": "Provide liquidity",
   "Market Creation": "Market Creation",
+  "Cumulative total paid out in last 30 days": "",
   "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent": "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent",
   "Create Markets": "Create Markets",
   "Market Making": "Market Making",

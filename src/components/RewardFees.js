@@ -121,7 +121,7 @@ const RewardFees = () => {
           idx={0}
           title={t('Trading')}
           rewardValue={0}
-          rewardValueQualifier="Average total paid out per epoch"
+          rewardValueQualifier={t('Average total paid out per epoch')}
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
               <Trans t={t}>
@@ -137,7 +137,7 @@ const RewardFees = () => {
           idx={1}
           title={t('Liquidity Provision')}
           rewardValue={0}
-          rewardValueQualifier="Average total paid out per epoch"
+          rewardValueQualifier={t('Average total paid out per epoch')}
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
               <Trans t={t}>
@@ -153,7 +153,7 @@ const RewardFees = () => {
           idx={2}
           title={t('Market Creation')}
           rewardValue={0}
-          rewardValueQualifier="Average total paid out per epoch"
+          rewardValueQualifier={t('Average total paid out per epoch')}
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
               <Trans t={t}>

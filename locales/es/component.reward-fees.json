@@ -1,6 +1,7 @@
 {
   "Coming soon": "Próximamente",
   "Trading": "Comercio",
+  "Average total paid out per epoch": "",
   "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": "Se distribuye en función de la proporción del total de comisiones de creador que hayas pagado, en esta época por mercado.",
   "Launch console": "Iniciar consola",
   "Liquidity Provision": "Provisión de liquidez",

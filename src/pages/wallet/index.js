@@ -99,9 +99,9 @@ const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
         <div>
           {downloadDropdown && (
             <div
-              className={`absolute top-[100%] left-0 right-0 z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
+              className={`absolute left-0 right-0 top-[100%] z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
             >
-              <ul className="py-3 px-2">
+              <ul className="px-2 py-3">
                 {binaries.map((binary, idx) => {
                   if (binary.file !== '') {
                     return (
@@ -233,7 +233,7 @@ const WalletPageNew = ({ data }) => {
                 title={t('Download Vega Wallet (Mainnet)')}
               />
 
-              <div className="heading-xxs !font-not-glitched mt-space-7 mb-space-4 text-vega-light-300 dark:text-vega-dark-300">
+              <div className="heading-xxs !font-not-glitched mb-space-4 mt-space-7 text-vega-light-300 dark:text-vega-dark-300">
                 <Trans t={t}>Want to test new features on Fairground?</Trans>
               </div>
               {loading && <div>Loading...</div>}
@@ -265,14 +265,14 @@ const WalletPageNew = ({ data }) => {
             </div>
           </div>
           <div className="relative hidden h-[460px] justify-center md:col-span-6 md:flex xl:justify-end">
-            <div className="z-10 xl:absolute xl:right-0 xl:top-0 xl:mt-space-6 xl:mr-space-12">
+            <div className="z-10 xl:absolute xl:right-0 xl:top-0 xl:mr-space-12 xl:mt-space-6">
               <div className="absolute bottom-20 left-0 hidden h-[135px] w-[150px] -translate-x-24 xl:block">
                 <PlanetA />
               </div>
               <GatsbyImage image={getImage(data.walletScreenMedium)} alt="" />
             </div>
             <div className="relative hidden xl:block">
-              <div className="after:from-10% after:to-100% relative after:absolute after:right-0 after:top-0 after:bottom-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0">
+              <div className="relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:from-10% after:to-white/0 after:to-100% dark:after:from-black dark:after:to-black/0">
                 <div className="flex w-full justify-end overflow-hidden blur-[1px] md:h-[460px]">
                   <GatsbyImage
                     image={getImage(data.consoleDark)}
@@ -306,7 +306,7 @@ const WalletPageNew = ({ data }) => {
                       >
                         <div
                           data-to-scrollspy-id={section.hash}
-                          className="heading-s relative bottom-[-1px] inline-block border-t-4 border-b-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current"
+                          className="heading-s relative bottom-[-1px] inline-block border-b-4 border-t-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current"
                         >
                           {t(section.title)}
                         </div>
@@ -329,7 +329,7 @@ const WalletPageNew = ({ data }) => {
       <Container>
         <ScrollSpy>
           <div className="my-space-12 md:my-space-14" id="overview">
-            <div className="grid grid-cols-1 items-center gap-y-space-6 text-center md:grid-cols-2 md:gap-y-space-10 md:gap-x-space-8 md:text-left">
+            <div className="grid grid-cols-1 items-center gap-y-space-6 text-center md:grid-cols-2 md:gap-x-space-8 md:gap-y-space-10 md:text-left">
               <div className="order-1">
                 <GatsbyImage
                   image={getImage(data.walletYourKeys)}
@@ -345,7 +345,7 @@ const WalletPageNew = ({ data }) => {
               <div className="order-2">
                 <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
                   <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
-                    Your wallets, your keys
+                    <Trans t={t}>Your wallets, your keys</Trans>
                   </h2>
                   <p className="body-xl">
                     <Trans t={t}>

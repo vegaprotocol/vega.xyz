@@ -13,7 +13,7 @@ const TradingRewards = () => {
         <RewardBox
           title={t('Trading')}
           rewardValue={rewards}
-          rewardValueQualifier="Average total paid out per epoch"
+          rewardValueQualifier={t('Average total paid out per epoch')}
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
               <Trans t={t}>

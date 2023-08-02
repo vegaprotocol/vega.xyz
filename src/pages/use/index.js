@@ -53,7 +53,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.desktopWalletIcon,
-      title: 'Desktop Wallet',
+      title: t('Desktop Wallet'),
       author: 'Vega',
       link: '/wallet/',
       description: t(
@@ -64,7 +64,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.consoleIcon,
-      title: 'Console',
+      title: t('Console'),
       author: 'Vega',
       link: 'https://console.vega.xyz/',
       description: t(
@@ -75,7 +75,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.governanceIcon,
-      title: 'Governance',
+      title: t('Governance'),
       author: 'Vega',
       link: 'https://governance.vega.xyz/proposals',
       description: t('Review and vote on governance proposals.'),
@@ -84,7 +84,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.blockExplorerIcon,
-      title: 'Block Explorer',
+      title: t('Block Explorer'),
       author: 'Vega',
       link: 'https://explorer.vega.xyz/',
       description: t(
@@ -95,7 +95,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.stakingIcon,
-      title: 'Staking',
+      title: t('Staking'),
       author: 'Vega',
       link: 'https://governance.vega.xyz/validators',
       description: t('Stake $VEGA tokens and get rewarded.'),
@@ -104,7 +104,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.cliWalletIcon,
-      title: 'CLI Wallet',
+      title: t('CLI Wallet'),
       author: 'Vega',
       link: 'https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet',
       description: t(
@@ -124,7 +124,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.nodesGuruIcon,
-      title: 'Vega World',
+      title: t('Vega World'),
       author: 'Nodes Guru',
       link: 'https://stake.nodes.guru/vega/world',
       description: t(
@@ -135,7 +135,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.vestingIcon,
-      title: 'Vesting',
+      title: t('Vesting'),
       author: 'Vega',
       link: 'https://governance.vega.xyz/token/redeem',
       description: t('Redeem locked vega tokens.'),
@@ -144,7 +144,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.dataNodeIcon,
-      title: 'Data Node',
+      title: t('Data Node'),
       author: 'Vega',
       link: 'https://github.com/vegaprotocol/vega/tree/develop/datanode#data-node',
       description: t('Query the Vega network APIs to retrieve on chain data.'),
@@ -153,7 +153,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.vegaCapsuleIcon,
-      title: 'Vega Capsule',
+      title: t('Vega Capsule'),
       author: 'Vega',
       link: 'https://github.com/vegaprotocol/vegacapsule',
       description: t(
@@ -164,7 +164,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.vegaValidatorsIcon,
-      title: 'Vega Validators and Delegators',
+      title: t('Vega Validators and Delegators'),
       author: 'XPRV',
       link: 'https://xprv-0.github.io/',
       description: t('Validators performance scores in a given Epoch.'),

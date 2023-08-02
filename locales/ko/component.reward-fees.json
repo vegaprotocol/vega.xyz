@@ -1,6 +1,7 @@
 {
   "Coming soon": "Coming soon",
   "Trading": "트레이딩",
+  "Average total paid out per epoch": "",
   "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": "시장별로 해당 epoch에서 지불한 총 메이커 수수료의 비율에 따라 분배됩니다",
   "Launch console": "콘솔 바로가기",
   "Liquidity Provision": "유동성 공급",
