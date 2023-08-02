@@ -71,7 +71,7 @@ const NewsCard = ({
         )}
         {text && (
           <div
-            className="mb-2 text-base text-vega-grey"
+            className="mb-2 break-words text-base text-vega-grey"
             dangerouslySetInnerHTML={{ __html: text }}
           />
         )}
