@@ -52,7 +52,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const response = await graphql(`
-    query {
+    query AllMarkDownRemark {
       allMarkdownRemark {
         edges {
           node {
