@@ -24,7 +24,7 @@ const PapersPage = ({ data }) => {
         <div className="pb-space-10 pt-6">
           <div className="mb-6 md:mb-16">
             <div className="mb-3">
-              <BoxTitle text="Learn " />
+              <BoxTitle text={t('Learn')} />
             </div>
             <GlitchTitle
               level="1"
