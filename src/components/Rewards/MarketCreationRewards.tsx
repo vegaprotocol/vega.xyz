@@ -14,7 +14,7 @@ const MarketCreationRewards = () => {
         <RewardBox
           title={t('Market Creation')}
           rewardValue={rewards}
-          rewardValueQualifier="Cumulative total paid out in last 30 days"
+          rewardValueQualifier={t('Cumulative total paid out in last 30 days')}
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
               <Trans t={t}>

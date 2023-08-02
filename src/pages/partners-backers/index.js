@@ -3,8 +3,10 @@ import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import Seo from '../../components/Seo'
 import LinkArrow from '../../components/Svg/LinkArrow'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const PartnersBackersPage = () => {
+  const { t } = useTranslation('page.partners-backers')
   const partnerBackers = [
     {
       name: 'Pantera Capital',
@@ -73,7 +75,7 @@ const PartnersBackersPage = () => {
               className="title-xxs shrink-0  hover:underline"
               target="_blank"
             >
-              What they say
+              <Trans t={t}>What they say</Trans>
               <LinkArrow className="ml-3 inline-block" />
             </a>
           ) : null}
@@ -93,7 +95,7 @@ const PartnersBackersPage = () => {
           <div className="mb-16 grid grid-cols-12 gap-6 lg:mb-24">
             <div className="col-span-12 md:col-span-4 lg:col-span-6">
               <h1 className="title-m lg:title-xl md:sticky md:top-6 md:pb-16">
-                Partners and backers
+                <Trans t={t}>Partners and backers</Trans>
               </h1>
             </div>
             <div className="col-span-12 border-t border-current md:col-span-8 lg:col-span-6">

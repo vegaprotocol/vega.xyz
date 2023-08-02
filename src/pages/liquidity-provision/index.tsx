@@ -108,24 +108,37 @@ const MarketsLiquidity = () => {
             <div className="copy-xxs">
               Gobalsky Labs Limited:
               <ul className="list-inside list-disc">
-                <li>Provides its software under open source licences</li>
                 <li>
-                  Does not operate or run the Vega Blockchain or any other
-                  blockchain
+                  <Trans t={t}>
+                    Provides its software under open source licences
+                  </Trans>
                 </li>
                 <li>
-                  Does not create, generate or warrant the accuracy of the data
+                  <Trans t={t}>
+                    Does not operate or run the Vega Blockchain or any other
+                    blockchain
+                  </Trans>
                 </li>
                 <li>
-                  Has no liability for any loss arising from the use of that
-                  data.
+                  <Trans t={t}>
+                    Does not create, generate or warrant the accuracy of the
+                    data
+                  </Trans>
+                </li>
+                <li>
+                  <Trans t={t}>
+                    Has no liability for any loss arising from the use of that
+                    data.
+                  </Trans>
                 </li>
               </ul>
             </div>
           </CalloutHero>
         </div>
         <AsyncRenderer loading={loading} error={error} data={data}>
-          <div className="title-m relative mb-3 w-full">Futures</div>
+          <div className="title-m relative mb-3 w-full">
+            <Trans t={t}>Futures</Trans>
+          </div>
           <div
             className="ag-theme-alpine relative mb-16 w-full"
             style={{
@@ -397,8 +410,8 @@ const percentageLiquidity = (suppliedStake, targetStake) => {
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
-      ? '>100%'
-      : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
+    ? '>100%'
+    : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
   return display
 }
 

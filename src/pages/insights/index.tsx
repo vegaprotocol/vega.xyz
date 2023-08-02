@@ -42,7 +42,7 @@ const InsightsPage = ({ data }) => {
           <div className="grid md:grid-cols-12 md:gap-space-8">
             <div className="md:col-span-4">
               <h2 className="heading-l mb-space-6 md:mb-0">
-                Articles about vega from around the web
+                <Trans t={t}>Articles about vega from around the web</Trans>
               </h2>
             </div>
 

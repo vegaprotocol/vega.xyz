@@ -1,4 +1,15 @@
 {
+  "This value is determined by the network parameter ‘network.validators.ersatz.multipleOfTendermintValidators’ multiplied by ‘network.validators.tendermint.number’": "This value is determined by the network parameter ‘network.validators.ersatz.multipleOfTendermintValidators’ multiplied by ‘network.validators.tendermint.number’",
+  "Limit*": "Limit*",
+  "Reward multiplier**": "Reward multiplier**",
+  "Validator Score": "Validator Score",
+  "Candidate Validators": "Candidate Validators",
+  "Standby Validators": "Standby Validators",
+  "Consensus Validators": "Consensus Validators",
+  "Unlimited": "Unlimited",
+  "This value is always set to 1 for Consensus validators": "This value is always set to 1 for Consensus validators",
+  "Lowest": "Lowest",
+  "Highest": "Highest",
   "Validate and secure the network": "Validate and secure the network",
   "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator.": "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator.",
   "Use Vega": "Use Vega",
@@ -7,5 +18,6 @@
   "**Consensus validators secure the network and therefore earn rewards. Standby validators are ready to step up and fill open consensus validator slots and therefore are also rewarded by the protocol. However their share of rewards is penalised relative to consensus validators by a factor of <2></2>": "**Consensus validators secure the network and therefore earn rewards. Standby validators are ready to step up and fill open consensus validator slots and therefore are also rewarded by the protocol. However their share of rewards is penalised relative to consensus validators by a factor of <2></2>",
   "Become a Mainnet Validator": "Become a Mainnet Validator",
   "Any participant in the Vega network can become a validator. You'll need to set up a node and its infrastructure, submit a transaction on chain, self-stake <2></2> and attract token holders to stake (delegate) their tokens to you.": "Any participant in the Vega network can become a validator. You'll need to set up a node and its infrastructure, submit a transaction on chain, self-stake <2></2> and attract token holders to stake (delegate) their tokens to you.",
-  "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>.": "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>."
+  "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>.": "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>.",
+  "Become a Mainnet validator": ""
 }

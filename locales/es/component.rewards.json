@@ -4,6 +4,7 @@
   "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.": "Se distribuye en función de la proporción de las comisiones totales del proveedor de liquidez que haya recibido en esta época.",
   "Provide liquidity": "Proporcionar liquidez",
   "Market Creation": "Creación de mercados",
+  "Cumulative total paid out in last 30 days": "",
   "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent": "bonificación pagada al proponente de cualquier mercado que alcance un volumen acumulado de aproximadamente <2></2> USD equivalentes",
   "Create Markets": "Crear mercados",
   "Market Making": "Creadores de mercados",

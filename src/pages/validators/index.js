@@ -17,37 +17,6 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useNetworkParams } from '../../hooks/use-network-params'
 
-const Arrow = () => {
-  return (
-    <div className="max-w-[18.75rem]">
-      <StaticImage
-        src="../../images/page-validators-rewards-arrow.png"
-        alt=""
-        width={64}
-        height={18}
-      />
-    </div>
-  )
-}
-
-const StandByValidatorsLimit = () => {
-  const { params } = useNetworkParams()
-
-  return (
-    <>
-      {params && (
-        <ParameterBox
-          value={Math.floor(
-            params.network_validators_ersatz_multipleOfTendermintValidators *
-              params.network_validators_tendermint_number
-          )}
-          description={`This value is determined by the network parameter ‘network.validators.ersatz.multipleOfTendermintValidators’ multiplied by ‘network.validators.tendermint.number’`}
-        />
-      )}
-    </>
-  )
-}
-
 const ValidatorsPage = ({ data }) => {
   const { t, i18n } = useTranslation('page.validators')
   const [missingTranslations, setMissingTranslations] = useState(false)
@@ -57,12 +26,49 @@ const ValidatorsPage = ({ data }) => {
     setMissingTranslations(true)
   })
 
+  const Arrow = () => {
+    return (
+      <div className="max-w-[18.75rem]">
+        <StaticImage
+          src="../../images/page-validators-rewards-arrow.png"
+          alt=""
+          width={64}
+          height={18}
+        />
+      </div>
+    )
+  }
+
+  const StandByValidatorsLimit = () => {
+    const { params } = useNetworkParams()
+
+    return (
+      <>
+        {params && (
+          <ParameterBox
+            value={Math.floor(
+              params.network_validators_ersatz_multipleOfTendermintValidators *
+                params.network_validators_tendermint_number
+            )}
+            description={t(
+              `This value is determined by the network parameter ‘network.validators.ersatz.multipleOfTendermintValidators’ multiplied by ‘network.validators.tendermint.number’`
+            )}
+          />
+        )}
+      </>
+    )
+  }
+
   const tableData = {
-    headings: ['', 'Limit*', 'Reward multiplier**', 'Validator Score'],
+    headings: ['', t('Limit*'), t('Reward multiplier**'), t('Validator Score')],
     rows: [
-      ['Candidate Validators', 'Standby Validators', 'Consensus Validators'],
       [
-        'Unlimited',
+        t('Candidate Validators'),
+        t('Standby Validators'),
+        t('Consensus Validators'),
+      ],
+      [
+        t('Unlimited'),
         <StandByValidatorsLimit />,
         <NetworkParameter param="network_validators_tendermint_number" />,
       ],
@@ -75,10 +81,12 @@ const ValidatorsPage = ({ data }) => {
         <ParameterBox
           value="1"
           prefix="x "
-          description="This value is always set to 1 for Consensus validators"
+          description={t(
+            'This value is always set to 1 for Consensus validators'
+          )}
         />,
       ],
-      ['Lowest', <Arrow />, 'Highest'],
+      [t('Lowest'), <Arrow />, t('Highest')],
     ],
   }
 
@@ -115,7 +123,7 @@ const ValidatorsPage = ({ data }) => {
           <Trans t={t}>Validator rewards</Trans>
         </h2>
 
-        <div className="mt-10 mb-16">
+        <div className="mb-16 mt-10">
           {params && (
             <>
               <Table headings={tableData.headings} rows={tableData.rows} />
@@ -187,7 +195,7 @@ const ValidatorsPage = ({ data }) => {
             </p>
           </div>
           <Button to="https://docs.vega.xyz/mainnet/node-operators">
-            Become a Mainnet validator
+            <Trans t={t}>Become a Mainnet validator</Trans>
           </Button>
         </Callout>
       </Container>

@@ -4,6 +4,7 @@
   "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.": "Распределяется в зависимости от доли общей комиссии поставщика ликвидности, которую вы получили в эту эпоху.",
   "Provide liquidity": "Предоставление ликвидности",
   "Market Creation": "Создание рынка",
+  "Cumulative total paid out in last 30 days": "",
   "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent": "Бонус выплачивается участнику любого рынка, который достигает совокупного объема примерно <2></2> USD эквивалента",
   "Create Markets": "Создание рынков",
   "Market Making": "Формирование рынка",

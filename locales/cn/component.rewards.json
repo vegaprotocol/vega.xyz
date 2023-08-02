@@ -4,6 +4,7 @@
   "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.": "根据您在该时期收到的流动性提供者费用总额的比例进行分配",
   "Provide liquidity": "提供流动性",
   "Market Creation": "市场创建",
+  "Cumulative total paid out in last 30 days": "",
   "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent": "向累计交易量达到约<2></2>美元等值的任何市场的提议者支付的奖金",
   "Create Markets": "创建市场",
   "Market Making": "做市",
