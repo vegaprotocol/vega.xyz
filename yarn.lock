@@ -3794,6 +3794,11 @@
   resolved "https://registry.yarnpkg.com/@vegaprotocol/utils/-/utils-0.0.6.tgz#85c03ead0a46658f966a66b018c341de607d8953"
   integrity sha512-neYOBebKguIym/0oIYPm6kTFmQia/o/TErZsObMRqmCAeF7GKBNvoDojdH85Y79V/PlRb0gsL2//YqjJl+bXgw==
 
+"@vercel/analytics@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-1.0.1.tgz#38308a626c91866cb00a249c08bf65251e9b9d81"
+  integrity sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==
+
 "@vercel/gatsby-plugin-vercel-analytics@^1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@vercel/gatsby-plugin-vercel-analytics/-/gatsby-plugin-vercel-analytics-1.0.10.tgz#05109138b24880fcd81476c78580bb00bea09ed5"

@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Helmet } from 'react-helmet'
 import { AnnouncementBanner as Banner } from '@vegaprotocol/announcements'
+import { Analytics } from '@vercel/analytics/react'
 
 const Layout = ({ children, stickyHeader = true }) => {
   return (
@@ -31,6 +32,7 @@ const Layout = ({ children, stickyHeader = true }) => {
           <Footer />
         </div>
       </div>
+      <Analytics />
     </div>
   )
 }
