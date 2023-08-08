@@ -1234,6 +1234,13 @@
     core-js-pure "^3.25.1"
     regenerator-runtime "^0.13.10"
 
+"@babel/runtime@7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.1.tgz#b4116a6b6711d010b2dad3b7b6e43bf1b9954740"
+  integrity sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.17.2", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.9", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.20.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.20.0.tgz#824a9ef325ffde6f78056059db3168c08785e24a"
@@ -3703,17 +3710,17 @@
     "@typescript-eslint/types" "5.42.1"
     eslint-visitor-keys "^3.3.0"
 
-"@vegaprotocol/announcements@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@vegaprotocol/announcements/-/announcements-0.0.1.tgz#b156c9b245e275a7e62a483b2a51658dbba1b282"
-  integrity sha512-8p53XzIOd+wnHsAAe+39GhvtV/Gie5OepsChB3yfCzOZwPq9yn5HR2/NRGl/HotwV1UROpNf2AWNwNM/+IPwLg==
-
 "@upstash/redis@1.21.0":
   version "1.21.0"
   resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.21.0.tgz#a1096f096800032d65b5d819aa2c60af3011b9e8"
   integrity sha512-c6M+cl0LOgGK/7Gp6ooMkIZ1IDAJs8zFR+REPkoSkAq38o7CWFX5FYwYEqGZ6wJpUGBuEOr/7hTmippXGgL25A==
   dependencies:
     isomorphic-fetch "^3.0.0"
+
+"@vegaprotocol/announcements@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@vegaprotocol/announcements/-/announcements-0.0.1.tgz#b156c9b245e275a7e62a483b2a51658dbba1b282"
+  integrity sha512-8p53XzIOd+wnHsAAe+39GhvtV/Gie5OepsChB3yfCzOZwPq9yn5HR2/NRGl/HotwV1UROpNf2AWNwNM/+IPwLg==
 
 "@vegaprotocol/i18n@0.0.3":
   version "0.0.3"
@@ -3786,6 +3793,14 @@
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/@vegaprotocol/utils/-/utils-0.0.6.tgz#85c03ead0a46658f966a66b018c341de607d8953"
   integrity sha512-neYOBebKguIym/0oIYPm6kTFmQia/o/TErZsObMRqmCAeF7GKBNvoDojdH85Y79V/PlRb0gsL2//YqjJl+bXgw==
+
+"@vercel/gatsby-plugin-vercel-analytics@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@vercel/gatsby-plugin-vercel-analytics/-/gatsby-plugin-vercel-analytics-1.0.10.tgz#05109138b24880fcd81476c78580bb00bea09ed5"
+  integrity sha512-v329WHdtIce+y7oAmaWRvEx59Xfo0FxlQqK4BJG0u6VWYoKWPaflohDAiehIZf/YHCRVb59ZxnzmMOcm/LR8YQ==
+  dependencies:
+    "@babel/runtime" "7.12.1"
+    web-vitals "0.2.4"
 
 "@vercel/kv@^0.2.2":
   version "0.2.2"
@@ -12034,7 +12049,7 @@ regenerator-runtime@^0.13.10, regenerator-runtime@^0.13.7:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.10.tgz#ed07b19616bcbec5da6274ebc75ae95634bfc2ee"
   integrity sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==
 
-regenerator-runtime@^0.13.11:
+regenerator-runtime@^0.13.11, regenerator-runtime@^0.13.4:
   version "0.13.11"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
@@ -14452,6 +14467,11 @@ web-namespaces@^1.0.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
   integrity sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==
+
+web-vitals@0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-0.2.4.tgz#ec3df43c834a207fd7cdefd732b2987896e08511"
+  integrity sha512-6BjspCO9VriYy12z356nL6JBS0GYeEcA457YyRzD+dD6XYCQ75NKhcOHUMHentOE7OcVCIXXDvOm0jKFfQG2Gg==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
