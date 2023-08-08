@@ -162,6 +162,9 @@ module.exports = {
             : `Json`,
       },
     },
+    {
+      resolve: '@vercel/gatsby-plugin-vercel-analytics',
+    },
   ],
   graphqlTypegen: true,
 }
