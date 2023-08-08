@@ -9,17 +9,20 @@ import Firefox from '../../components/Svg/Firefox'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import Button from '../../components/UI/Button'
 import Link from '../../components/UI/Link'
+import DropdownArrow from '../../components/Svg/DropdownArrow'
 import LinkWrapper from '../../components/UI/LinkWrapper'
 import TeamTile from '../../components/UI/TeamTile'
 import TranslationsBanner from '../../components/TranslationsBanner'
-import Tooltip from '../../components/UI/Tooltip'
-import Tippy from '@tippyjs/react'
 import Sticky from 'react-stickynode'
 import ScrollSpy from 'react-ui-scrollspy'
+import IconPlatformMac from '../../components/Svg/IconPlatformMac'
+import IconPlatformWindows from '../../components/Svg/IconPlatformWindows'
+import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-
 import './wallet.css'
+
+import { useDesktopWalletFairgroundDownloads } from '../../hooks/use-desktop-wallet-fairground-downloads'
 
 const WalletPageNew = ({ data }) => {
   const { i18n, t } = useTranslation('page.wallet')
@@ -40,10 +43,160 @@ const WalletPageNew = ({ data }) => {
       hash: 'how-to-use',
     },
     {
+      title: t('Test on Fairground'),
+      hash: 'test-on-fairground',
+    },
+    {
       title: t('Developers'),
       hash: 'developers',
     },
   ]
+
+  const platformIcons = {
+    mac: IconPlatformMac,
+    windows: IconPlatformWindows,
+    linux: IconPlatformLinux,
+  }
+
+  const PlatformIcon = (platform) => {
+    const PlatformIcon = platformIcons[platform]
+    return (
+      <div className="flex items-center">
+        <PlatformIcon />
+      </div>
+    )
+  }
+
+  const binaries = [
+    {
+      icon: 'windows',
+      platform: 'Windows',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-amd64.exe',
+    },
+    {
+      icon: 'windows',
+      platform: 'Windows (ARM64)',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-arm64.exe',
+    },
+    {
+      icon: 'mac',
+      platform: 'MacOS (Intel)',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-intel.zip',
+    },
+    {
+      icon: 'mac',
+      platform: 'MacOS (M1 / M2)',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-apple-silicon.zip',
+    },
+    {
+      icon: 'linux',
+      platform: 'Linux',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-linux-amd64.zip',
+    },
+  ]
+
+  const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
+    const [downloadDropdown, setDownloadDropdown] = useState(false)
+
+    let dropDownContainerClasses =
+      variant === 'primary'
+        ? 'dark:border-white border-black'
+        : 'dark:border-white border-black'
+
+    let titleVariantClasses =
+      variant === 'primary'
+        ? 'uppercase dark:bg-white dark:text-black bg-black text-white'
+        : ''
+
+    let dropdownVariantClasses =
+      variant === 'primary'
+        ? 'dark:bg-white bg-black text-white dark:!border-white !border-black'
+        : 'text-black bg-white dark:bg-black dark:text-white'
+
+    let iconVariantClasses =
+      variant === 'primary'
+        ? 'dark:text-black text-white'
+        : 'dark:text-white text-black'
+
+    let dropdownItemVariantClasses =
+      variant === 'primary'
+        ? 'hover:bg-white hover:bg-opacity-10 dark:hover:bg-black dark:hover:bg-opacity-10'
+        : 'hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10'
+
+    let dropdownItemTextVariantClasses =
+      variant === 'primary'
+        ? 'dark:text-vega-light-400 text-vega-dark-400'
+        : 'text-vega-light-400 dark:text-vega-dark-400'
+
+    const showDownloadMenu = (state) => {
+      setDownloadDropdown(state)
+    }
+
+    return (
+      <div className={`relative inline-block cursor-pointer`}>
+        <div
+          role="button"
+          tabIndex={0}
+          className={`flex items-center border ${dropDownContainerClasses}`}
+          data-cy={title}
+          onFocus={() => showDownloadMenu(true)}
+          onBlur={(e) => {
+            if (!e.relatedTarget?.dataset?.fileDownload) {
+              showDownloadMenu(false)
+            }
+          }}
+        >
+          <div
+            className={`copy-xxs relative !mb-0 flex items-center py-3.5 pl-4 pr-6 ${titleVariantClasses}`}
+          >
+            <div className="mr-4">
+              <DropdownArrow />
+            </div>
+            {title}
+          </div>
+          <div>
+            {downloadDropdown && (
+              <div
+                className={`absolute left-0 right-0 top-[100%] z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
+              >
+                <ul className="px-2 py-3">
+                  {binaries.map((binary, idx) => {
+                    if (binary.file !== '') {
+                      return (
+                        <li className="my-1 cursor-pointer" key={idx}>
+                          <a
+                            href={binary.file}
+                            role="button"
+                            target="_blank"
+                            rel="noreferrer"
+                            data-file-download
+                            className={`flex w-full items-center ${dropdownItemVariantClasses}`}
+                            data-cy={'downloadLink'}
+                          >
+                            <div
+                              className={`${iconVariantClasses} px-3.5 py-2`}
+                            >
+                              {PlatformIcon(binary.icon)}
+                            </div>
+                            <div
+                              className={`body-xs ${dropdownItemTextVariantClasses} !mb-0 py-2`}
+                              data-cy={'downloadPlatform'}
+                            >
+                              {binary.platform}
+                            </div>
+                          </a>
+                        </li>
+                      )
+                    } else return null
+                  })}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   const getBrowser = () => {
     const userAgent = navigator.userAgent
@@ -76,12 +229,15 @@ const WalletPageNew = ({ data }) => {
     }
 
     return (
-      <div className={className ? className : ''}>
+      <div
+        className={className ? className : ''}
+        data-cy={`downloadLink${network}`}
+      >
         <Button variant={variant} to={link}>
           <div className="relative -top-[2px] mr-3 inline-block w-[1.5rem] align-middle">
             <Chrome />
           </div>
-          <Trans t={t}>Get the Vega Wallet</Trans> ({network})
+          <Trans t={t}>Get the Vega Wallet</Trans>
         </Button>
       </div>
     )
@@ -98,12 +254,15 @@ const WalletPageNew = ({ data }) => {
       link = 'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet/'
     }
     return (
-      <div className={className ? className : ''}>
+      <div
+        className={className ? className : ''}
+        data-cy={`downloadLink${network}`}
+      >
         <Button variant={variant} to={link}>
           <div className="relative -top-[2px] mr-3 inline-block w-[1.5rem] align-middle">
             <Firefox />
           </div>
-          <Trans t={t}>Get the Vega Wallet</Trans> ({network})
+          <Trans t={t}>Get the Vega Wallet</Trans>
         </Button>
       </div>
     )
@@ -112,6 +271,9 @@ const WalletPageNew = ({ data }) => {
   useEffect(() => {
     setUserAgent(getBrowser())
   }, [])
+
+  const { fairgroundDownloads, loading, error } =
+    useDesktopWalletFairgroundDownloads()
 
   return (
     <Layout stickyHeader={false}>
@@ -138,22 +300,44 @@ const WalletPageNew = ({ data }) => {
                   you're ready to connect
                 </Trans>
               </p>
-              {userAgent && userAgent === 'Chrome' && (
-                <div>
-                  <ChromeDownloadButton variant="hero" />
-                </div>
-              )}
-              {userAgent && userAgent === 'Firefox' && (
-                <div>
-                  <FirefoxDownloadButton variant="hero" />
-                </div>
-              )}
-              {userAgent && userAgent === 'Other' && (
-                <div>
-                  <ChromeDownloadButton variant="hero" className="mb-3" />
-                  <FirefoxDownloadButton variant="hero" />
-                </div>
-              )}
+              <div className="mb-space-6">
+                {userAgent && userAgent === 'Chrome' && (
+                  <div>
+                    <ChromeDownloadButton variant="hero" />
+                  </div>
+                )}
+                {userAgent && userAgent === 'Firefox' && (
+                  <div>
+                    <FirefoxDownloadButton variant="hero" />
+                  </div>
+                )}
+                {userAgent && userAgent === 'Other' && (
+                  <>
+                    <div>
+                      <ChromeDownloadButton variant="hero" className="mb-3" />
+                      <FirefoxDownloadButton variant="hero" />
+                    </div>
+                    <div className="prose mx-auto mt-space-4 max-w-[30rem] md:mx-0">
+                      <p>
+                        <Trans t={t}>
+                          Vega Wallet browser extension officially supports
+                          Chrome or Firefox. Check the list of{' '}
+                          <Link to="https://github.com/vegaprotocol/vegawallet-browser/issues/360">
+                            supported browsers
+                          </Link>{' '}
+                          for latest guidance.
+                        </Trans>
+                      </p>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              <DownloadButton
+                binaries={binaries}
+                variant="secondary"
+                title={t('DOWNLOAD THE VEGA DESKTOP WALLET')}
+              />
             </div>
             <div className="relative mx-auto text-center md:m-0 md:text-left">
               <GatsbyImage
@@ -166,41 +350,15 @@ const WalletPageNew = ({ data }) => {
                 alt=""
                 className="mx-auto my-space-6 max-w-[18rem] dark:hidden md:hidden"
               />
-              <div className="heading-xxs !font-not-glitched mb-space-5 mt-space-7 text-vega-light-300 dark:text-vega-dark-300">
-                <Trans t={t}>Want to test new features on Fairground?</Trans>
-              </div>
-              {userAgent && userAgent === 'Chrome' && (
-                <div>
-                  <ChromeDownloadButton network="Testnet" />
-                </div>
-              )}
-              {userAgent && userAgent === 'Firefox' && (
-                <div>
-                  <FirefoxDownloadButton network="Testnet" />
-                </div>
-              )}
-              {userAgent && userAgent === 'Other' && (
-                <div>
-                  <div className="mb-space-5">
-                    <ChromeDownloadButton network="Testnet" className="mb-3" />
-                    <FirefoxDownloadButton network="Testnet" />
-                  </div>
-                  <div className="prose mx-auto max-w-[30rem] md:mx-0">
-                    <p>
-                      <Trans t={t}>
-                        Vega Wallet browser extension officially supports Chrome
-                        or Firefox. Check the list of{' '}
-                        <Link to="https://github.com/vegaprotocol/vegawallet-browser/issues/360">
-                          supported browsers
-                        </Link>{' '}
-                        for latest guidance.
-                      </Trans>
-                    </p>
-                  </div>
-                </div>
-              )}
 
               <div className="mx-auto mt-space-8 flex max-w-[30rem] flex-wrap justify-center gap-x-8 gap-y-4 md:mx-0 md:justify-start">
+                <Button
+                  variant="secondary"
+                  to="#test-on-fairground"
+                  className="text-vega-light-300 dark:text-vega-dark-300"
+                >
+                  <Trans t={t}>Want to test on Fairground?</Trans>
+                </Button>
                 <Button
                   variant="secondary"
                   to="https://github.com/vegaprotocol/vegawallet-browser/issues/360"
@@ -208,42 +366,6 @@ const WalletPageNew = ({ data }) => {
                 >
                   <Trans t={t}>Supported browsers</Trans>
                 </Button>
-
-                <Tippy
-                  interactive={true}
-                  content={
-                    <div className="body-s font-not-glitched mt-2 text-left text-black dark:text-white">
-                      <Tooltip padding="wide">
-                        <div className="prose text-vega-dark-100 dark:text-vega-light-100">
-                          <p>
-                            <Trans t={t}>
-                              The Vega desktop wallet is now in maintenance mode
-                              and has been replaced by the browser extension.
-                            </Trans>
-                          </p>
-                          <p>
-                            <Trans t={t}>
-                              For advanced users who need multi wallet support
-                              or are working with our APIs,{' '}
-                              <Link to="https://github.com/vegaprotocol/vegawallet-browser">
-                                explore the Vega Wallet desktop app project on
-                                Github
-                              </Link>
-                              in order to install the latest release.
-                            </Trans>
-                          </p>
-                        </div>
-                      </Tooltip>
-                    </div>
-                  }
-                >
-                  <span className="text-base text-vega-light-300 underline underline-offset-8 hover:no-underline dark:text-vega-dark-300">
-                    <Trans t={t}>
-                      Looking for the desktop wallet software?
-                    </Trans>
-                  </span>
-                </Tippy>
-
                 <Button
                   variant="secondary"
                   to="https://github.com/vegaprotocol/vegawallet-browser"
@@ -421,6 +543,70 @@ const WalletPageNew = ({ data }) => {
                   Read the guide to getting started with Vega wallet
                 </Trans>
               </Button>
+            </div>
+          </div>
+          <div
+            className="my-space-12 text-center md:my-space-14"
+            id="test-on-fairground"
+          >
+            <h2 className="heading-xl mb-space-9">
+              <GlitchTitle color="purple">
+                <Trans t={t}>Test on Fairground</Trans>
+              </GlitchTitle>
+            </h2>
+            <div className="md:grid md:grid-cols-2 md:gap-x-8">
+              <div className="md:mb-space-0 mb-space-8 md:flex md:justify-end">
+                <div>
+                  <div className="heading-xxs !font-not-glitched mb-space-5 text-vega-light-300 dark:text-vega-dark-300">
+                    <Trans t={t}>Test with latest Browser Wallet</Trans>
+                  </div>
+                  {userAgent && userAgent === 'Chrome' && (
+                    <div>
+                      <ChromeDownloadButton network="Testnet" />
+                    </div>
+                  )}
+                  {userAgent && userAgent === 'Firefox' && (
+                    <div>
+                      <FirefoxDownloadButton network="Testnet" />
+                    </div>
+                  )}
+                  {userAgent && userAgent === 'Other' && (
+                    <div>
+                      <div className="mb-space-5">
+                        <ChromeDownloadButton
+                          network="Testnet"
+                          className="mb-3"
+                        />
+                        <FirefoxDownloadButton network="Testnet" />
+                      </div>
+                      <div className="prose mx-auto max-w-[30rem] md:mx-0">
+                        <p>
+                          <Trans t={t}>
+                            Vega Wallet browser extension officially supports
+                            Chrome or Firefox. Check the list of{' '}
+                            <Link to="https://github.com/vegaprotocol/vegawallet-browser/issues/360">
+                              supported browsers
+                            </Link>{' '}
+                            for latest guidance.
+                          </Trans>
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="md:flex md:justify-start">
+                <div>
+                  <div className="heading-xxs !font-not-glitched mb-space-5 text-vega-light-300 dark:text-vega-dark-300">
+                    <Trans t={t}>Test with legacy Desktop Wallet</Trans>
+                  </div>
+                  <DownloadButton
+                    binaries={fairgroundDownloads}
+                    variant="secondary"
+                    title={t('DOWNLOAD THE VEGA DESKTOP WALLET')}
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div
