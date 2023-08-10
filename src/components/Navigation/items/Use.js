@@ -19,6 +19,7 @@ const Use = () => {
             text={t('Validate and secure the network')}
             link="/validators"
           />
+          <NavigationItem text={t('Rewards')} link="/rewards" />
         </NavigationList>
       </div>
       <div>
