@@ -115,7 +115,7 @@ const DevelopPage = ({ data }) => {
                 </div>
               </div>
               <div className="mb-6 grid gap-6 md:grid-cols-2">
-                <div className="aspect-w-16 aspect-h-9">
+                <div className="aspect-h-9 aspect-w-16">
                   <a
                     href="https://www.youtube.com/watch?v=hpsHUCU5MwY"
                     target="_blank"
@@ -131,7 +131,7 @@ const DevelopPage = ({ data }) => {
                     />
                   </a>
                 </div>
-                <div className="aspect-w-16 aspect-h-9">
+                <div className="aspect-h-9 aspect-w-16">
                   <a
                     href="https://www.youtube.com/watch?v=rzOxpWrnv64"
                     target="_blank"
@@ -171,7 +171,7 @@ const DevelopPage = ({ data }) => {
               <ActionButton to="https://community.vega.xyz/">
                 <Trans t={t}>Explore the forum</Trans>
               </ActionButton>
-              <ActionButton to="/#roadmap">
+              <ActionButton to="https://github.com/orgs/vegaprotocol/projects/114/views/4">
                 <Trans t={t}>See the roadmap</Trans>
               </ActionButton>
             </div>
