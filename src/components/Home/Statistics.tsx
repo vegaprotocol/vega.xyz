@@ -3,6 +3,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFade, Autoplay } from 'swiper'
 import { MQMediumDown, MQLargeUp } from '../../utils/media-queries'
+import useDailyVolume from '../../hooks/statistics/use-daily-volume'
 import useTotalVolume from '../../hooks/statistics/use-total-volume'
 import useTotalMarkets from '../../hooks/statistics/use-total-markets'
 import useUsers from '../../hooks/statistics/use-users'
@@ -19,6 +20,11 @@ const Statistics = () => {
     loading: totalVolumeLoading,
     error: totalVolumeError,
   } = useTotalVolume()
+  const {
+    dailyVolume,
+    loading: dailyVolumeLoading,
+    error: dailyVolumeError,
+  } = useDailyVolume()
   const {
     totalMarkets,
     loading: totalMarketsLoading,
@@ -75,6 +81,14 @@ const Statistics = () => {
                 />
               )}
             </SwiperSlide>
+            {/* <SwiperSlide>
+              {dailyVolume && (
+                <TickerCell
+                  label={t('Daily Volume')}
+                  value={formatNumberWithSuffix(dailyVolume, 1)}
+                />
+              )}
+            </SwiperSlide> */}
             <SwiperSlide>
               {totalMarkets && (
                 <TickerCell label={t('Total Markets')} value={totalMarkets} />
@@ -106,6 +120,12 @@ const Statistics = () => {
                 value={formatNumberWithSuffix(totalVolume, 1)}
               />
             )}
+            {/* {dailyVolume && (
+              <TickerCell
+                label={t('Daily Volume')}
+                value={formatNumberWithSuffix(dailyVolume, 1)}
+              />
+            )} */}
             {totalMarkets && (
               <TickerCell label={t('Total Markets')} value={totalMarkets} />
             )}
