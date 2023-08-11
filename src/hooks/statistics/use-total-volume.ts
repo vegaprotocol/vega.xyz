@@ -123,7 +123,6 @@ const useTotalVolume = () => {
                   summary.node.assetId == assetIdValue
                 )
               })
-
               if (results.length > 0) {
                 let value = new BigNumber(0)
 
