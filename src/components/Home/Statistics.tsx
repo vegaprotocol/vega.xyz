@@ -117,7 +117,7 @@ const Statistics = () => {
             {totalVolume && (
               <TickerCell
                 label={t('Total Volume')}
-                value={formatNumberWithSuffix(totalVolume, 1)}
+                value={`$${formatNumberWithSuffix(totalVolume, 1)}`}
               />
             )}
             {/* {dailyVolume && (
