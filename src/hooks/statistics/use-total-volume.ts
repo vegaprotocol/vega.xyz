@@ -93,8 +93,7 @@ const useTotalVolume = () => {
 
   useEffect(() => {
     if (params !== null) {
-      const marketFeeFactorsInfrastructureFee =
-        params['market_fee_factors_infrastructureFee']
+      //const marketFeeFactorsInfrastructureFee = params['market_fee_factors_infrastructureFee']
 
       const fetchTotalVolume = async () => {
         setLoading(true)
@@ -128,18 +127,25 @@ const useTotalVolume = () => {
                 let value = new BigNumber(0)
 
                 results.map((result) => {
-                  value = value.plus(
-                    new BigNumber(result.node.amount).dividedBy(
-                      Math.pow(10, asset.decimals)
-                    )
+                  const number = new BigNumber(result.node.amount).dividedBy(
+                    Math.pow(10, asset.decimals)
                   )
+
+                  let val = new BigNumber(result.node.amount).dividedBy(
+                    Math.pow(10, asset.decimals)
+                  )
+
+                  // divide by infrastructure fee
+                  // this is hard-coded but will be replaced later with a new method
+                  if (result.node.epoch > 638) {
+                    val = val.dividedBy(0.0003)
+                  } else {
+                    val = val.dividedBy(0.0005)
+                  }
+
+                  value = value.plus(val)
                 })
 
-                // divide by infrastructure fee
-                value = value.dividedBy(marketFeeFactorsInfrastructureFee)
-
-                // multiply by usd price
-                value.multipliedBy(coinGeckoPrices[asset.coingeckoId].usd)
                 volume[assetIdValue] = value
               }
             }
