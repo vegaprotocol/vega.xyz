@@ -94,13 +94,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `roadmap`,
-        path: `${__dirname}/src/content/roadmap`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `talks`,
         path: `${__dirname}/src/content/talks`,
       },
@@ -161,6 +154,9 @@ module.exports = {
               object.collection.slice(1).toLowerCase()
             : `Json`,
       },
+    },
+    {
+      resolve: '@vercel/gatsby-plugin-vercel-analytics',
     },
   ],
   graphqlTypegen: true,

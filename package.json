@@ -31,6 +31,8 @@
     "@vegaprotocol/types": "0.0.3",
     "@vegaprotocol/ui-toolkit": "0.12.6",
     "@vegaprotocol/utils": "0.0.6",
+    "@vercel/analytics": "^1.0.1",
+    "@vercel/gatsby-plugin-vercel-analytics": "^1.0.10",
     "@vercel/kv": "^0.2.2",
     "ag-grid-community": "^27.0.1",
     "ag-grid-react": "^27.0.1",
