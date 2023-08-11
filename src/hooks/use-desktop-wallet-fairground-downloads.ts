@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 
-const ALLOW_PRERELEASE = true;
+const ALLOW_PRERELEASE = true
 
-export const useDesktopWalletFairgroundDownloads = (allowPrerelease = ALLOW_PRERELEASE) => {
+export const useDesktopWalletFairgroundDownloads = (
+  allowPrerelease = ALLOW_PRERELEASE
+) => {
   const [fairgroundDownloads, setFairgroundDownloads] = useState({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
