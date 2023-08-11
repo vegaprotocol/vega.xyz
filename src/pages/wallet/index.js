@@ -1,174 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import PlanetA from '../../components/Svg/Home/PlanetA'
+import Chrome from '../../components/Svg/Chrome'
+import Firefox from '../../components/Svg/Firefox'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import Button from '../../components/UI/Button'
+import Link from '../../components/UI/Link'
+import DropdownArrow from '../../components/Svg/DropdownArrow'
 import LinkWrapper from '../../components/UI/LinkWrapper'
 import TeamTile from '../../components/UI/TeamTile'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Sticky from 'react-stickynode'
 import ScrollSpy from 'react-ui-scrollspy'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import DropdownArrow from '../../components/Svg/DropdownArrow'
 import IconPlatformMac from '../../components/Svg/IconPlatformMac'
 import IconPlatformWindows from '../../components/Svg/IconPlatformWindows'
 import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
-import IconGithub from '../../components/Svg/IconGithub'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import './wallet.css'
 
 import { useDesktopWalletFairgroundDownloads } from '../../hooks/use-desktop-wallet-fairground-downloads'
 
-const platformIcons = {
-  mac: IconPlatformMac,
-  windows: IconPlatformWindows,
-  linux: IconPlatformLinux,
-}
-
-const PlatformIcon = (platform) => {
-  const PlatformIcon = platformIcons[platform]
-  return (
-    <div className="flex items-center">
-      <PlatformIcon />
-    </div>
-  )
-}
-
-const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
-  const [downloadDropdown, setDownloadDropdown] = useState(false)
-
-  let dropDownContainerClasses =
-    variant === 'primary'
-      ? 'dark:border-white border-black'
-      : 'dark:border-white border-black'
-
-  let titleVariantClasses =
-    variant === 'primary'
-      ? 'uppercase dark:bg-white dark:text-black bg-black text-white'
-      : ''
-
-  let dropdownVariantClasses =
-    variant === 'primary'
-      ? 'dark:bg-white bg-black text-white dark:!border-white !border-black'
-      : 'text-black bg-white dark:bg-black dark:text-white'
-
-  let iconVariantClasses =
-    variant === 'primary'
-      ? 'dark:text-black text-white'
-      : 'dark:text-white text-black'
-
-  let dropdownItemVariantClasses =
-    variant === 'primary'
-      ? 'hover:bg-white hover:bg-opacity-10 dark:hover:bg-black dark:hover:bg-opacity-10'
-      : 'hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10'
-
-  let dropdownItemTextVariantClasses =
-    variant === 'primary'
-      ? 'dark:text-vega-light-400 text-vega-dark-400'
-      : 'text-vega-light-400 dark:text-vega-dark-400'
-
-  const showDownloadMenu = (state) => {
-    setDownloadDropdown(state)
-  }
-
-  return (
-    <div className={`relative inline-block cursor-pointer`}>
-      <div
-        role="button"
-        tabIndex={0}
-        className={`flex items-center border ${dropDownContainerClasses}`}
-        data-cy={title}
-        onFocus={() => showDownloadMenu(true)}
-        onBlur={(e) => {
-          if (!e.relatedTarget?.dataset?.fileDownload) {
-            showDownloadMenu(false)
-          }
-        }}
-      >
-        <div
-          className={`copy-xxs relative !mb-0 flex items-center py-3 pl-4 pr-6 ${titleVariantClasses}`}
-        >
-          <div className="mr-4">
-            <DropdownArrow />
-          </div>
-          {title}
-        </div>
-        <div>
-          {downloadDropdown && (
-            <div
-              className={`absolute left-0 right-0 top-[100%] z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
-            >
-              <ul className="px-2 py-3">
-                {binaries.map((binary, idx) => {
-                  if (binary.file !== '') {
-                    return (
-                      <li className="my-1 cursor-pointer" key={idx}>
-                        <a
-                          href={binary.file}
-                          role="button"
-                          target="_blank"
-                          rel="noreferrer"
-                          data-file-download
-                          className={`flex w-full items-center ${dropdownItemVariantClasses}`}
-                          data-cy={'downloadLink'}
-                        >
-                          <div className={`${iconVariantClasses} px-3.5 py-2`}>
-                            {PlatformIcon(binary.icon)}
-                          </div>
-                          <div
-                            className={`body-xs ${dropdownItemTextVariantClasses} !mb-0 py-2`}
-                            data-cy={'downloadPlatform'}
-                          >
-                            {binary.platform}
-                          </div>
-                        </a>
-                      </li>
-                    )
-                  } else return null
-                })}
-              </ul>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-const binaries = [
-  {
-    icon: 'windows',
-    platform: 'Windows',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-amd64.exe',
-  },
-  {
-    icon: 'windows',
-    platform: 'Windows (ARM64)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-arm64.exe',
-  },
-  {
-    icon: 'mac',
-    platform: 'MacOS (Intel)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-intel.zip',
-  },
-  {
-    icon: 'mac',
-    platform: 'MacOS (M1 / M2)',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-apple-silicon.zip',
-  },
-  {
-    icon: 'linux',
-    platform: 'Linux',
-    file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-linux-amd64.zip',
-  },
-]
-
 const WalletPageNew = ({ data }) => {
   const { i18n, t } = useTranslation('page.wallet')
   const [missingTranslations, setMissingTranslations] = useState(false)
+  const [userAgent, setUserAgent] = useState(false)
 
   i18n.on('missingKey', (lng) => {
     setMissingTranslations(true)
@@ -184,10 +43,235 @@ const WalletPageNew = ({ data }) => {
       hash: 'how-to-use',
     },
     {
+      title: t('Test on Fairground'),
+      hash: 'test-on-fairground',
+    },
+    {
       title: t('Developers'),
       hash: 'developers',
     },
   ]
+
+  const platformIcons = {
+    mac: IconPlatformMac,
+    windows: IconPlatformWindows,
+    linux: IconPlatformLinux,
+  }
+
+  const PlatformIcon = (platform) => {
+    const PlatformIcon = platformIcons[platform]
+    return (
+      <div className="flex items-center">
+        <PlatformIcon />
+      </div>
+    )
+  }
+
+  const binaries = [
+    {
+      icon: 'windows',
+      platform: 'Windows',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-amd64.exe',
+    },
+    {
+      icon: 'windows',
+      platform: 'Windows (ARM64)',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-windows-arm64.exe',
+    },
+    {
+      icon: 'mac',
+      platform: 'MacOS (Intel)',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-intel.zip',
+    },
+    {
+      icon: 'mac',
+      platform: 'MacOS (M1 / M2)',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-macos-apple-silicon.zip',
+    },
+    {
+      icon: 'linux',
+      platform: 'Linux',
+      file: 'https://github.com/vegaprotocol/vegawallet-desktop/releases/latest/download/vega-wallet-desktop-linux-amd64.zip',
+    },
+  ]
+
+  const DownloadButton = ({ binaries, title, variant = 'primary' }) => {
+    const [downloadDropdown, setDownloadDropdown] = useState(false)
+
+    let dropDownContainerClasses =
+      variant === 'primary'
+        ? 'dark:border-white border-black'
+        : 'dark:border-white border-black'
+
+    let titleVariantClasses =
+      variant === 'primary'
+        ? 'uppercase dark:bg-white dark:text-black bg-black text-white'
+        : ''
+
+    let dropdownVariantClasses =
+      variant === 'primary'
+        ? 'dark:bg-white bg-black text-white dark:!border-white !border-black'
+        : 'text-black bg-white dark:bg-black dark:text-white'
+
+    let iconVariantClasses =
+      variant === 'primary'
+        ? 'dark:text-black text-white'
+        : 'dark:text-white text-black'
+
+    let dropdownItemVariantClasses =
+      variant === 'primary'
+        ? 'hover:bg-white hover:bg-opacity-10 dark:hover:bg-black dark:hover:bg-opacity-10'
+        : 'hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10'
+
+    let dropdownItemTextVariantClasses =
+      variant === 'primary'
+        ? 'dark:text-vega-light-400 text-vega-dark-400'
+        : 'text-vega-light-400 dark:text-vega-dark-400'
+
+    const showDownloadMenu = (state) => {
+      setDownloadDropdown(state)
+    }
+
+    return (
+      <div className={`relative inline-block cursor-pointer`}>
+        <div
+          role="button"
+          tabIndex={0}
+          className={`flex items-center border ${dropDownContainerClasses}`}
+          data-cy={title}
+          onFocus={() => showDownloadMenu(true)}
+          onBlur={(e) => {
+            if (!e.relatedTarget?.dataset?.fileDownload) {
+              showDownloadMenu(false)
+            }
+          }}
+        >
+          <div
+            className={`copy-xxs relative !mb-0 flex items-center py-3.5 pl-4 pr-6 ${titleVariantClasses}`}
+          >
+            <div className="mr-4">
+              <DropdownArrow />
+            </div>
+            {title}
+          </div>
+          <div>
+            {downloadDropdown && (
+              <div
+                className={`top-[100%] absolute left-0 right-0 z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
+              >
+                <ul className="px-2 py-3">
+                  {binaries.map((binary, idx) => {
+                    if (binary.file !== '') {
+                      return (
+                        <li className="my-1 cursor-pointer" key={idx}>
+                          <a
+                            href={binary.file}
+                            role="button"
+                            target="_blank"
+                            rel="noreferrer"
+                            data-file-download
+                            className={`flex w-full items-center ${dropdownItemVariantClasses}`}
+                            data-cy={'downloadLink'}
+                          >
+                            <div
+                              className={`${iconVariantClasses} px-3.5 py-2`}
+                            >
+                              {PlatformIcon(binary.icon)}
+                            </div>
+                            <div
+                              className={`body-xs ${dropdownItemTextVariantClasses} !mb-0 py-2`}
+                              data-cy={'downloadPlatform'}
+                            >
+                              {binary.platform}
+                            </div>
+                          </a>
+                        </li>
+                      )
+                    } else return null
+                  })}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  const getBrowser = () => {
+    const userAgent = navigator.userAgent
+
+    if (
+      userAgent.includes('Chrome') &&
+      !userAgent.includes('Edg') &&
+      !userAgent.includes('OPR')
+    ) {
+      return 'Chrome'
+    }
+
+    if (userAgent.includes('Firefox')) {
+      return 'Firefox'
+    }
+
+    return 'Other'
+  }
+
+  const ChromeDownloadButton = ({
+    variant = 'primary',
+    network = 'Alpha',
+    className,
+  }) => {
+    let link = 'https://www.google.com/'
+
+    if (network === 'Testnet') {
+      link =
+        'https://chrome.google.com/webstore/detail/vega-wallet/nmmjkiafpmphlikhefgjbblebfgclikn'
+    }
+
+    return (
+      <div
+        className={className ? className : ''}
+        data-cy={`downloadLink${network}`}
+      >
+        <Button variant={variant} to={link}>
+          <div className="w-[1.5rem] relative -top-[2px] mr-3 inline-block align-middle">
+            <Chrome />
+          </div>
+          <Trans t={t}>Get the Vega Wallet</Trans>
+        </Button>
+      </div>
+    )
+  }
+
+  const FirefoxDownloadButton = ({
+    variant = 'primary',
+    network = 'Alpha',
+    className,
+  }) => {
+    let link =
+      'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-mainnet/'
+
+    if (network === 'Testnet') {
+      link = 'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet/'
+    }
+    return (
+      <div
+        className={className ? className : ''}
+        data-cy={`downloadLink${network}`}
+      >
+        <Button variant={variant} to={link}>
+          <div className="w-[1.5rem] relative -top-[2px] mr-3 inline-block align-middle">
+            <Firefox />
+          </div>
+          <Trans t={t}>Get the Vega Wallet</Trans>
+        </Button>
+      </div>
+    )
+  }
+
+  useEffect(() => {
+    setUserAgent(getBrowser())
+  }, [])
 
   const { fairgroundDownloads, loading, error } =
     useDesktopWalletFairgroundDownloads()
@@ -197,14 +281,14 @@ const WalletPageNew = ({ data }) => {
       <Seo
         title={t('Vega Wallet')}
         description={t(
-          'Securely connect to Vega dapps and instantly approve and reject transactions on the Vega network'
+          "Connect to Vega dapps securely, deposit funds and approve or reject transactions with the Vega wallet. Download, set up and you're ready to connect"
         )}
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="xl:items-top mb-space-12 gap-x-space-6 pt-6 md:mb-space-10 md:grid md:grid-cols-12 lg:pt-16">
-          <div className="md:col-span-6 md:py-space-6 xl:py-space-10">
-            <div className="mx-auto mb-space-6 max-w-[21rem] text-center md:mx-0 md:max-w-[30rem] md:text-left">
+        <div className="xl:items-top mb-space-6 items-center gap-x-space-6 pt-6 md:mb-space-10 md:grid md:grid-cols-12 lg:pt-16">
+          <div className="pb-space-10 md:col-span-6 md:py-space-6">
+            <div className="max-w-[21rem] md:max-w-[30rem] mx-auto mb-space-8 text-center md:mx-0 md:text-left">
               <h1 className="heading-xl mb-space-3">
                 <GlitchTitle color="purple">
                   <Trans t={t}>Vega Wallet</Trans>
@@ -212,68 +296,97 @@ const WalletPageNew = ({ data }) => {
               </h1>
               <p className="body-xl mb-space-6">
                 <Trans t={t}>
-                  Securely connect to Vega dapps and instantly approve and
-                  reject transactions on the Vega network
+                  Connect to Vega dapps securely, deposit funds and approve or
+                  reject transactions with the Vega wallet. Download, set up and
+                  you're ready to connect
                 </Trans>
               </p>
+              <div className="mb-space-6">
+                {userAgent && userAgent === 'Chrome' && (
+                  <div>
+                    <ChromeDownloadButton variant="hero" />
+                  </div>
+                )}
+                {userAgent && userAgent === 'Firefox' && (
+                  <div>
+                    <FirefoxDownloadButton variant="hero" />
+                  </div>
+                )}
+                {userAgent && userAgent === 'Other' && (
+                  <>
+                    <div>
+                      <ChromeDownloadButton variant="hero" className="mb-3" />
+                      <FirefoxDownloadButton variant="hero" />
+                    </div>
+                    <div className="max-w-[30rem] prose mx-auto mt-space-4 md:mx-0">
+                      <p>
+                        <Trans t={t}>
+                          Vega Wallet browser extension officially supports
+                          Chrome or Firefox. Check the list of{' '}
+                          <Link to="https://github.com/vegaprotocol/vegawallet-browser/issues/360">
+                            supported browsers
+                          </Link>{' '}
+                          for latest guidance.
+                        </Trans>
+                      </p>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              <DownloadButton
+                binaries={binaries}
+                variant="secondary"
+                title={t('DOWNLOAD THE VEGA DESKTOP WALLET')}
+              />
             </div>
             <div className="relative mx-auto text-center md:m-0 md:text-left">
               <GatsbyImage
                 image={getImage(data.walletScreenSmall)}
                 alt=""
-                className="mx-auto my-space-6 hidden max-w-[18rem] dark:block md:hidden dark:md:hidden"
+                className="max-w-[18rem] mx-auto my-space-6 hidden dark:block md:hidden dark:md:hidden"
               />
               <GatsbyImage
                 image={getImage(data.walletScreenSmallWhite)}
                 alt=""
-                className="mx-auto my-space-6 max-w-[18rem] dark:hidden md:hidden"
-              />
-              <DownloadButton
-                binaries={binaries}
-                title={t('Download Vega Wallet (Mainnet)')}
+                className="max-w-[18rem] mx-auto my-space-6 dark:hidden md:hidden"
               />
 
-              <div className="heading-xxs !font-not-glitched mb-space-4 mt-space-7 text-vega-light-300 dark:text-vega-dark-300">
-                <Trans t={t}>Want to test new features on Fairground?</Trans>
-              </div>
-              {loading && <div>Loading...</div>}
-              {error && (
-                <div>
-                  <Trans t={t}>
-                    Error fetching Fairground desktop wallet downloads
-                  </Trans>
-                </div>
-              )}
-              {fairgroundDownloads && (
-                <DownloadButton
-                  binaries={fairgroundDownloads}
-                  variant="secondary"
-                  title={t('Download Vega Wallet (Testnet)')}
-                />
-              )}
-
-              <div className="mt-space-5">
-                <IconGithub />
+              <div className="max-w-[30rem] mx-auto mt-space-8 flex flex-wrap justify-center gap-x-8 gap-y-4 md:mx-0 md:justify-start">
                 <Button
-                  className="ml-2"
                   variant="secondary"
-                  to="https://github.com/vegaprotocol/vegawallet-desktop"
+                  to="#test-on-fairground"
+                  className="text-vega-light-300 dark:text-vega-dark-300"
                 >
-                  <Trans t={t}>Explore the wallet project on Github</Trans>
+                  <Trans t={t}>Want to test on Fairground?</Trans>
+                </Button>
+                <Button
+                  variant="secondary"
+                  to="https://github.com/vegaprotocol/vegawallet-browser/issues/360"
+                  className="text-vega-light-300 dark:text-vega-dark-300"
+                >
+                  <Trans t={t}>Supported browsers</Trans>
+                </Button>
+                <Button
+                  variant="secondary"
+                  to="https://github.com/vegaprotocol/vegawallet-browser"
+                  className="text-vega-light-300 dark:text-vega-dark-300"
+                >
+                  Github project
                 </Button>
               </div>
             </div>
           </div>
-          <div className="relative hidden h-[460px] justify-center md:col-span-6 md:flex xl:justify-end">
+          <div className="h-[460px] relative hidden justify-center md:col-span-6 md:flex xl:justify-end">
             <div className="z-10 xl:absolute xl:right-0 xl:top-0 xl:mr-space-12 xl:mt-space-6">
-              <div className="absolute bottom-20 left-0 hidden h-[135px] w-[150px] -translate-x-24 xl:block">
+              <div className="h-[135px] w-[150px] absolute bottom-20 left-0 hidden -translate-x-24 xl:block">
                 <PlanetA />
               </div>
               <GatsbyImage image={getImage(data.walletScreenMedium)} alt="" />
             </div>
             <div className="relative hidden xl:block">
-              <div className="relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:from-10% after:to-white/0 after:to-100% dark:after:from-black dark:after:to-black/0">
-                <div className="flex w-full justify-end overflow-hidden blur-[1px] md:h-[460px]">
+              <div className="after:w-[7.375rem] after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0">
+                <div className="blur-[1px] md:h-[460px] flex w-full justify-end overflow-hidden">
                   <GatsbyImage
                     image={getImage(data.consoleDark)}
                     alt=""
@@ -306,18 +419,12 @@ const WalletPageNew = ({ data }) => {
                       >
                         <div
                           data-to-scrollspy-id={section.hash}
-                          className="heading-s relative bottom-[-1px] inline-block border-b-4 border-t-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current"
+                          className="heading-s bottom-[-1px] relative inline-block border-b-4 border-t-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current"
                         >
                           {t(section.title)}
                         </div>
                       </a>
                     ))}
-                  </div>
-                  <div className="hidden lg:block">
-                    <DownloadButton
-                      binaries={binaries}
-                      title={t('Download Vega Wallet (Mainnet)')}
-                    />
                   </div>
                 </div>
               </Container>
@@ -334,17 +441,17 @@ const WalletPageNew = ({ data }) => {
                 <GatsbyImage
                   image={getImage(data.walletYourKeys)}
                   alt=""
-                  className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
+                  className="max-w-[25rem] md:max-w-[30rem] mx-auto hidden dark:block"
                 />
                 <GatsbyImage
                   image={getImage(data.walletYourKeysLight)}
                   alt=""
-                  className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
+                  className="max-w-[25rem] md:max-w-[30rem] mx-auto dark:hidden"
                 />
               </div>
               <div className="order-2">
-                <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
-                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
+                <div className="max-w-[32rem] mx-auto mb-space-8 md:mx-0 md:mb-0">
+                  <h2 className="heading-m max-w-[28rem] mx-auto mb-space-3 md:mx-0">
                     <Trans t={t}>Your wallets, your keys</Trans>
                   </h2>
                   <p className="body-xl">
@@ -360,17 +467,17 @@ const WalletPageNew = ({ data }) => {
                 <GatsbyImage
                   image={getImage(data.walletSecureConnections)}
                   alt=""
-                  className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
+                  className="max-w-[25rem] md:max-w-[30rem] mx-auto hidden dark:block"
                 />
                 <GatsbyImage
                   image={getImage(data.walletSecureConnectionsLight)}
                   alt=""
-                  className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
+                  className="max-w-[25rem] md:max-w-[30rem] mx-auto dark:hidden"
                 />
               </div>
               <div className="md:order-3">
-                <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
-                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
+                <div className="max-w-[32rem] mx-auto mb-space-8 md:mx-0 md:mb-0">
+                  <h2 className="heading-m max-w-[28rem] mx-auto mb-space-3 md:mx-0">
                     <Trans t={t}>Secure connections</Trans>
                   </h2>
                   <p className="body-xl">
@@ -386,17 +493,17 @@ const WalletPageNew = ({ data }) => {
                 <GatsbyImage
                   image={getImage(data.walletInstantApproveReject)}
                   alt=""
-                  className="mx-auto mb-space-5 hidden max-w-[25rem] dark:block md:max-w-[30rem]"
+                  className="max-w-[25rem] md:max-w-[30rem] mx-auto mb-space-5 hidden dark:block"
                 />
                 <GatsbyImage
                   image={getImage(data.walletInstantApproveRejectLight)}
                   alt=""
-                  className="mx-auto mb-space-5 max-w-[25rem] dark:hidden md:max-w-[30rem]"
+                  className="max-w-[25rem] md:max-w-[30rem] mx-auto mb-space-5 dark:hidden"
                 />
               </div>
               <div className="order-6">
-                <div className="mx-auto max-w-[32rem] md:mx-0">
-                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
+                <div className="max-w-[32rem] mx-auto md:mx-0">
+                  <h2 className="heading-m max-w-[28rem] mx-auto mb-space-3 md:mx-0">
                     <Trans t={t}>
                       Instantly approve and reject transactions
                     </Trans>
@@ -424,7 +531,7 @@ const WalletPageNew = ({ data }) => {
               <GatsbyImage
                 image={getImage(data.walletVideoPoster)}
                 alt=""
-                className="mx-auto mb-space-5 max-w-[43.75rem]"
+                className="max-w-[43.75rem] mx-auto mb-space-5"
               />
             </LinkWrapper>
             <div className="mt-space-4">
@@ -437,6 +544,70 @@ const WalletPageNew = ({ data }) => {
                   Read the guide to getting started with Vega wallet
                 </Trans>
               </Button>
+            </div>
+          </div>
+          <div
+            className="my-space-12 text-center md:my-space-14"
+            id="test-on-fairground"
+          >
+            <h2 className="heading-xl mb-space-9">
+              <GlitchTitle color="purple">
+                <Trans t={t}>Test on Fairground</Trans>
+              </GlitchTitle>
+            </h2>
+            <div className="md:grid md:grid-cols-2 md:gap-x-8">
+              <div className="md:mb-space-0 mb-space-8 md:flex md:justify-end">
+                <div>
+                  <div className="heading-xxs !font-not-glitched mb-space-5 text-vega-light-300 dark:text-vega-dark-300">
+                    <Trans t={t}>Test with latest Browser Wallet</Trans>
+                  </div>
+                  {userAgent && userAgent === 'Chrome' && (
+                    <div>
+                      <ChromeDownloadButton network="Testnet" />
+                    </div>
+                  )}
+                  {userAgent && userAgent === 'Firefox' && (
+                    <div>
+                      <FirefoxDownloadButton network="Testnet" />
+                    </div>
+                  )}
+                  {userAgent && userAgent === 'Other' && (
+                    <div>
+                      <div className="mb-space-5">
+                        <ChromeDownloadButton
+                          network="Testnet"
+                          className="mb-3"
+                        />
+                        <FirefoxDownloadButton network="Testnet" />
+                      </div>
+                      <div className="max-w-[30rem] prose mx-auto md:mx-0">
+                        <p>
+                          <Trans t={t}>
+                            Vega Wallet browser extension officially supports
+                            Chrome or Firefox. Check the list of{' '}
+                            <Link to="https://github.com/vegaprotocol/vegawallet-browser/issues/360">
+                              supported browsers
+                            </Link>{' '}
+                            for latest guidance.
+                          </Trans>
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="md:flex md:justify-start">
+                <div>
+                  <div className="heading-xxs !font-not-glitched mb-space-5 text-vega-light-300 dark:text-vega-dark-300">
+                    <Trans t={t}>Test with legacy Desktop Wallet</Trans>
+                  </div>
+                  <DownloadButton
+                    binaries={fairgroundDownloads}
+                    variant="secondary"
+                    title={t('DOWNLOAD THE VEGA DESKTOP WALLET')}
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div

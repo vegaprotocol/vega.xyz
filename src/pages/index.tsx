@@ -14,7 +14,6 @@ import BackerLogos from '../components/Home/BackerLogos'
 import Calendar from '../components/Calendar'
 import AsSeenOn from '../components/AsSeenOn'
 import BoxLinkSimple from '../components/BoxLinkSimple'
-import RoadMap from '../components/RoadMap'
 import Rip from '../components/Svg/Home/Rip/Responsive'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import PlanetA from '../components/Svg/Home/PlanetA'
@@ -131,7 +130,7 @@ const IndexPage = ({ data }) => {
                   <div className="absolute bottom-0 right-0 z-10 hidden h-[120px] w-[175px] translate-y-[5.625rem] md:block">
                     <PlanetB />
                   </div>
-                  <div className="relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:from-10% after:to-white/0 after:to-100% dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
+                  <div className="after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
                     <div className="w-full overflow-hidden md:h-[460px] 2xl:origin-right 2xl:scale-110">
                       <GatsbyImage
                         image={getImage(data.consoleDark)}
@@ -293,18 +292,6 @@ const IndexPage = ({ data }) => {
             </Container>
           </div>
           <Rip />
-          <div className="pt-16 md:pt-32 lg:pt-40">
-            <div id="roadmap">
-              <div className="text-center">
-                <h2 className="heading-xl">
-                  <GlitchTitle color="purple">
-                    <Trans t={t}>Roadmap</Trans>
-                  </GlitchTitle>
-                </h2>
-              </div>
-              <RoadMap data={data.roadmap} />
-            </div>
-          </div>
           <Container hideXOverflow={true}>
             <PageSection>
               <LatestNews
@@ -372,28 +359,6 @@ export const query = graphql`
           ns
           data
           language
-        }
-      }
-    }
-    roadmap: allMarkdownRemark(
-      filter: {
-        collection: { eq: "roadmap" }
-        fields: { locale: { eq: $language } }
-      }
-      sort: { fields: [fields___order], order: ASC }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            step_title
-            title
-          }
-          fields {
-            locale
-            order
-            slug
-          }
-          html
         }
       }
     }

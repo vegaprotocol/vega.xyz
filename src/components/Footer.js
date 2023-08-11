@@ -12,9 +12,9 @@ const Footer = () => {
   const { t } = useTranslation('component.navigation')
   return (
     <footer>
-      <div className="border-y border-current pt-8 pb-12">
+      <div className="border-y border-current pb-12 pt-8">
         <Container>
-          <div className="grid grid-cols-2 gap-y-8 gap-x-6 md:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
             <div>
               <div className="mb-3 text-[0.9375rem] uppercase">
                 <SquareBullet size="11" />
@@ -72,6 +72,14 @@ const Footer = () => {
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Block Explorer</Trans>
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://github.com/orgs/vegaprotocol/projects/114/views/4"
+                    className="block py-1.5 leading-[1.3]"
+                  >
+                    <Trans t={t}>Roadmap</Trans>
                   </TextLink>
                 </li>
               </ul>
@@ -339,7 +347,7 @@ const Footer = () => {
       </div>
       <div className="py-5">
         <Container>
-          <div className="flex flex-wrap gap-y-2 gap-x-12 md:justify-between">
+          <div className="flex flex-wrap gap-x-12 gap-y-2 md:justify-between">
             <div className="flex items-center gap-x-4">
               <div className="mr-3 text-[0.9375rem] uppercase">
                 <SquareBullet size="11" />
