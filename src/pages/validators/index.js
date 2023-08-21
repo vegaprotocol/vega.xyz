@@ -159,7 +159,7 @@ const ValidatorsPage = ({ data }) => {
 
         <Callout>
           <h2 className="body-xl mb-4">
-            <Trans t={t}>Become a Mainnet Validator</Trans>
+            <Trans t={t}>Become a Mainnet validator</Trans>
           </h2>
           <div className="body-l prose mb-6 max-w-none prose-a:text-black dark:prose-a:text-white">
             <p>
