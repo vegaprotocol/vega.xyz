@@ -16,6 +16,7 @@ import Calendar from '../components/Calendar'
 import AsSeenOn from '../components/AsSeenOn'
 import BoxLinkSimple from '../components/BoxLinkSimple'
 import Rip from '../components/Svg/Home/Rip/Responsive'
+import Audits from '../components/Home/Audits'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import PlanetA from '../components/Svg/Home/PlanetA'
 import PlanetB from '../components/Svg/Home/PlanetB'
@@ -264,6 +265,7 @@ const IndexPage = ({ data }) => {
           </Container>
 
           <Rip />
+          <Audits />
 
           <Container>
             <GeorestrictedContext.Consumer>

@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import NewsCard from './NewsCard'
 import Button from './UI/Button'
-import { graphql, useStaticQuery } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import { stringify } from 'querystring'
-import { getImage, getSrc } from 'gatsby-plugin-image'
+import { getSrc } from 'gatsby-plugin-image'
 
 const LatestNews = ({ blogPosts, talks, articles }) => {
   const { t } = useTranslation('component.latest-news')
