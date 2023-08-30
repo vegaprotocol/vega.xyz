@@ -13,7 +13,7 @@ import { getImage } from 'gatsby-plugin-image'
 import AddGraphic from '../../components/Svg/Use/Add/Add'
 import { Link, Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
-const UsePage = ({ data }) => {
+const AppsAndToolsPage = ({ data }) => {
   const { t, i18n } = useTranslation('page.use')
   const [missingTranslations, setMissingTranslations] = useState(false)
   const tabs = useRef(null)
@@ -328,7 +328,7 @@ const UsePage = ({ data }) => {
   )
 }
 
-export default UsePage
+export default AppsAndToolsPage
 
 export const query = graphql`
   query ($language: String!) {

@@ -1,20 +1,17 @@
-import React from "react";
-import Container from "../Container";
+import React from 'react'
+import MainItem from './MainItem'
 
 const Dropdown = (props) => {
   return (
-    <li className="group">
-      <div className="transition-colors inline-block px-3 xl:px-6 py-3 hover:text-vega-mid-grey cursor-default group-hover:underline underline-offset-8">
-        {props.title}
-      </div>
-
-      <div
-        className={`hidden group-hover:block absolute left-0 right-0 px-4 w-full md:px-8 top-[4.65rem] pt-16 pb-12 dark:bg-black bg-white border-b border-[#525252]`}
-      >
-        <Container>{props.children}</Container>
+    <li className="group relative">
+      <MainItem text={props.title} link={props.link} />
+      <div className={`absolute left-0 top-0 hidden group-hover:block`}>
+        <div className="relative top-[3.75rem] w-[320px] rounded-2xl border border-vega-light-200 bg-white bg-vega-light-100 px-space-6 pt-space-5 pb-space-1 dark:border-vega-dark-200 dark:bg-vega-dark-100 dark:bg-black">
+          {props.children}
+        </div>
       </div>
     </li>
-  );
-};
+  )
+}
 
-export default Dropdown;
+export default Dropdown

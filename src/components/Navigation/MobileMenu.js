@@ -35,7 +35,7 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
 
         <HeaderCta
           link="https://console.vega.xyz/"
-          text={t('Launch console')}
+          text={t('Launch App')}
           className="inline-block"
         />
       </Container>

@@ -53,7 +53,7 @@ const Header = ({ sticky }) => {
               {!menuIsOpen && (
                 <HeaderCta
                   link="https://console.vega.xyz/"
-                  text={t('Launch Console')}
+                  text={t('Launch App')}
                   className="mr-3 hidden md:block lg:hidden"
                 />
               )}
@@ -65,22 +65,11 @@ const Header = ({ sticky }) => {
                 <LanguageToggle />
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
                 {!menuIsOpen && (
-                  <>
-                    <div className="hidden lg:block xl:hidden">
-                      <HeaderCta
-                        link="https://console.vega.xyz/"
-                        text={t('Console')}
-                        className="ml-3 hidden lg:block"
-                      />
-                    </div>
-                    <div className="hidden xl:block">
-                      <HeaderCta
-                        link="https://console.vega.xyz/"
-                        text={t('Launch Console')}
-                        className="ml-3 hidden lg:block"
-                      />
-                    </div>
-                  </>
+                  <HeaderCta
+                    link="https://console.vega.xyz/"
+                    text={t('Launch App')}
+                    className="ml-3 hidden lg:block"
+                  />
                 )}
               </div>
             </div>
