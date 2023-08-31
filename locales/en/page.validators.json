@@ -7,6 +7,7 @@
   "Standby Validators": "Standby Validators",
   "Consensus Validators": "Consensus Validators",
   "Unlimited": "Unlimited",
+  "None": "None",
   "This value is always set to 1 for Consensus validators": "This value is always set to 1 for Consensus validators",
   "Lowest": "Lowest",
   "Highest": "Highest",

@@ -7,6 +7,7 @@
   "Standby Validators": "대기 밸리데이터",
   "Consensus Validators": "합의 밸리데이터",
   "Unlimited": "무제한",
+  "None": "",
   "This value is always set to 1 for Consensus validators": "합의 밸리데이터의 경우 이 값은 항상 1로 설정됩니다.",
   "Lowest": "최저",
   "Highest": "최고",
