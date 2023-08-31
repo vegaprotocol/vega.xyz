@@ -1,8 +1,8 @@
 {
-  "Latest News": "",
-  "{{minutes}} minute read": "",
-  "Read our blog": "",
-  "See all Tweets": "",
-  "Watch all Talks": "",
-  "Read all Insights": ""
+  "Latest News": "Tin tức mới nhất ",
+  "{{minutes}} minute read": "thời gian đọc{{phút}}",
+  "Read our blog": "Đọc thêm Blog của chúng tôi",
+  "See all Tweets": "Xem tất cả bài Tweet",
+  "Watch all Talks": "Xem tất cả các buổi AMA",
+  "Read all Insights": "Đọc cascbafi viết trên Insight"
 }
