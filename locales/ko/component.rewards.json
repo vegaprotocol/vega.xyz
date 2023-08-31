@@ -4,7 +4,7 @@
   "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.": "이번 에폭에 받은 총 유동성 공급자 수수료 비율에 따라 분배됩니다.",
   "Provide liquidity": "유동성 공급하기",
   "Market Creation": "시장 생성",
-  "Cumulative total paid out in last 30 days": "",
+  "Cumulative total paid out in last 30 days": "지난 30일간 지급된 누적 총액",
   "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent": "약 <2></2> USD 상당의 누적 볼륨에 도달하는 모든 시장 제안자에게 지급되는 보너스",
   "Create Markets": "시장 생성하기",
   "Market Making": "마켓 메이킹",

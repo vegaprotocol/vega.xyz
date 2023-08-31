@@ -14,7 +14,6 @@ import BackerLogos from '../components/Home/BackerLogos'
 import Calendar from '../components/Calendar'
 import AsSeenOn from '../components/AsSeenOn'
 import BoxLinkSimple from '../components/BoxLinkSimple'
-import RoadMap from '../components/RoadMap'
 import Rip from '../components/Svg/Home/Rip/Responsive'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import PlanetA from '../components/Svg/Home/PlanetA'
@@ -125,13 +124,13 @@ const IndexPage = ({ data }) => {
               </div>
               <div className="md:col-span-6 xl:flex xl:justify-end">
                 <div className="relative">
-                  <div className="absolute top-0 left-0 hidden h-[180px] w-[200px] translate-y-20 -translate-x-10 md:block lg:-translate-x-20 2xl:-translate-x-32">
+                  <div className="absolute left-0 top-0 hidden h-[180px] w-[200px] -translate-x-10 translate-y-20 md:block lg:-translate-x-20 2xl:-translate-x-32">
                     <PlanetA />
                   </div>
                   <div className="absolute bottom-0 right-0 z-10 hidden h-[120px] w-[175px] translate-y-[5.625rem] md:block">
                     <PlanetB />
                   </div>
-                  <div className="after:from-10% after:to-100% relative after:absolute after:right-0 after:top-0 after:bottom-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
+                  <div className="after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
                     <div className="w-full overflow-hidden md:h-[460px] 2xl:origin-right 2xl:scale-110">
                       <GatsbyImage
                         image={getImage(data.consoleDark)}
@@ -166,7 +165,7 @@ const IndexPage = ({ data }) => {
               <BackerLogos />
             </div>
 
-            <div className="mt-space-10 mb-0 md:my-space-12 lg:my-space-14">
+            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
               <Markets />
             </div>
 
@@ -212,7 +211,7 @@ const IndexPage = ({ data }) => {
             </div>
           </Container>
 
-          <div className="mt-space-10 mb-0 md:my-space-12 lg:my-space-14">
+          <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
             <Container>
               <LiquidityProvision />
             </Container>
@@ -293,21 +292,13 @@ const IndexPage = ({ data }) => {
             </Container>
           </div>
           <Rip />
-          <div className="pt-16 md:pt-32 lg:pt-40">
-            <div id="roadmap">
-              <div className="text-center">
-                <h2 className="heading-xl">
-                  <GlitchTitle color="purple">
-                    <Trans t={t}>Roadmap</Trans>
-                  </GlitchTitle>
-                </h2>
-              </div>
-              <RoadMap data={data.roadmap} />
-            </div>
-          </div>
           <Container hideXOverflow={true}>
             <PageSection>
-              <LatestNews />
+              <LatestNews
+                blogPosts={data.blogPosts}
+                talks={data.talks}
+                insights={data.insights}
+              />
             </PageSection>
 
             <PageSection>
@@ -371,25 +362,89 @@ export const query = graphql`
         }
       }
     }
-    roadmap: allMarkdownRemark(
-      filter: {
-        collection: { eq: "roadmap" }
-        fields: { locale: { eq: $language } }
-      }
-      sort: { fields: [fields___order], order: ASC }
+    blogPosts: allMediumPost(
+      limit: 1
+      sort: { fields: [firstPublishedAt], order: DESC }
     ) {
       edges {
         node {
+          id
+          title
+          uniqueSlug
+          firstPublishedAt(formatString: "ll")
+          virtuals {
+            subtitle
+            readingTime
+            previewImage {
+              imageId
+            }
+          }
+          author {
+            name
+          }
+        }
+      }
+    }
+    talks: allMarkdownRemark(
+      limit: 1
+      filter: {
+        collection: { eq: "talks" }
+        fields: { locale: { eq: $language } }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
           frontmatter {
-            step_title
             title
+            date(formatString: "ll")
+            location
+            links {
+              title
+              link
+            }
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, width: 640)
+              }
+            }
           }
           fields {
+            slug
             locale
-            order
+          }
+        }
+      }
+    }
+    insights: allMarkdownRemark(
+      limit: 1
+      filter: {
+        collection: { eq: "insights" }
+        fields: { locale: { eq: $language } }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            date(formatString: "ll")
+            location
+            links {
+              title
+              url
+            }
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, width: 640)
+              }
+            }
+          }
+          fields {
             slug
           }
-          html
         }
       }
     }

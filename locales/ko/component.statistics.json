@@ -1,6 +1,6 @@
 {
-  "Total Volume": "",
-  "Total Markets": "",
-  "TVL": "",
+  "Total Volume": "총 거래량",
+  "Total Markets": "전체 시장",
+  "TVL": "총 예치금액",
   "Avg. Block Time": "평균 블록시간"
 }

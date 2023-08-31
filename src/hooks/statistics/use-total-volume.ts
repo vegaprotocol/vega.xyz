@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import BigNumber from 'bignumber.js'
-import { useNetworkParams } from '../../hooks/use-network-params'
+import { useNetworkParams } from '../use-network-params'
 
 const useTotalVolume = () => {
   const [totalVolume, setTotalVolume] = useState<null | string>(null)
@@ -93,8 +93,7 @@ const useTotalVolume = () => {
 
   useEffect(() => {
     if (params !== null) {
-      const marketFeeFactorsInfrastructureFee =
-        params['market_fee_factors_infrastructureFee']
+      //const marketFeeFactorsInfrastructureFee = params['market_fee_factors_infrastructureFee']
 
       const fetchTotalVolume = async () => {
         setLoading(true)
@@ -104,7 +103,6 @@ const useTotalVolume = () => {
             `${process.env.GATSBY_VEGA_REST_API}/api/v2/rewards/epoch/summaries`
           )
           const epochs = await epochResponse.json()
-          const currentEpoch = epochs.summaries.edges[0].node.epoch
 
           let coinGeckoPrice = await fetch(
             `https://api.coingecko.com/api/v3/simple/price?ids=${coingeckoIds}&vs_currencies=usd&include_last_updated_at=true`
@@ -120,24 +118,34 @@ const useTotalVolume = () => {
               // find relevant asset and rewardType in current epoch
               const results = epochs.summaries.edges.filter((summary) => {
                 return (
-                  summary.node.epoch === currentEpoch &&
                   summary.node.rewardType ===
                     'ACCOUNT_TYPE_FEES_INFRASTRUCTURE' &&
                   summary.node.assetId == assetIdValue
                 )
               })
-
               if (results.length > 0) {
-                // include decimals
-                let value = new BigNumber(results[0].node.amount).dividedBy(
-                  Math.pow(10, asset.decimals)
-                )
+                let value = new BigNumber(0)
 
-                // divide by infrastructure fee
-                value = value.dividedBy(marketFeeFactorsInfrastructureFee)
+                results.map((result) => {
+                  const number = new BigNumber(result.node.amount).dividedBy(
+                    Math.pow(10, asset.decimals)
+                  )
 
-                // multiply by usd price
-                value.multipliedBy(coinGeckoPrices[asset.coingeckoId].usd)
+                  let val = new BigNumber(result.node.amount).dividedBy(
+                    Math.pow(10, asset.decimals)
+                  )
+
+                  // divide by infrastructure fee
+                  // this is hard-coded but will be replaced later with a new method
+                  if (result.node.epoch > 638) {
+                    val = val.dividedBy(0.0003)
+                  } else {
+                    val = val.dividedBy(0.0005)
+                  }
+
+                  value = value.plus(val)
+                })
+
                 volume[assetIdValue] = value
               }
             }

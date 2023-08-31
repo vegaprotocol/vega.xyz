@@ -75,10 +75,10 @@ const AmbassadorLeaderboardPage = () => {
           <Tabs defaultTab={activeLeaderboard} key={activeLeaderboard}>
             <Tab
               label="contentCollective"
-              tabName={addLineBreakIfTwoWords('Content Collective')}
+              tabName={addLineBreakIfTwoWords(t('Content Collective'))}
             >
               <Tabs defaultTab={activeGroup} key={activeGroup}>
-                <Tab label="allTime" tabName="All time">
+                <Tab label="allTime" tabName={t('All time')}>
                   {ccAllTimeLoading && (
                     <div>
                       <Trans t={t}>Loading...</Trans>
@@ -98,7 +98,7 @@ const AmbassadorLeaderboardPage = () => {
               tabName={addLineBreakIfTwoWords('Multilingual League')}
             >
               <Tabs defaultTab={activeGroup} key={activeGroup}>
-                <Tab label="allTime" tabName="All time">
+                <Tab label="allTime" tabName={t('All time')}>
                   {mllAllTimeLoading && (
                     <div>
                       <Trans t={t}>Loading...</Trans>

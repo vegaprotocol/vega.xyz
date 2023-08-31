@@ -272,7 +272,7 @@ const WalletPageNew = ({ data }) => {
               <GatsbyImage image={getImage(data.walletScreenMedium)} alt="" />
             </div>
             <div className="relative hidden xl:block">
-              <div className="relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:from-10% after:to-white/0 after:to-100% dark:after:from-black dark:after:to-black/0">
+              <div className="after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0">
                 <div className="flex w-full justify-end overflow-hidden blur-[1px] md:h-[460px]">
                   <GatsbyImage
                     image={getImage(data.consoleDark)}
