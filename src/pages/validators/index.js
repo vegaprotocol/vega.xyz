@@ -73,7 +73,7 @@ const ValidatorsPage = ({ data }) => {
         <NetworkParameter param="network_validators_tendermint_number" />,
       ],
       [
-        'None',
+        t('None'),
         <NetworkParameter
           param="network_validators_ersatz_rewardFactor"
           prefix="x "
