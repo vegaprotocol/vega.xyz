@@ -1,13 +1,13 @@
 {
-  "Coming soon": "",
-  "Trading": "",
-  "Average total paid out per epoch": "",
-  "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": "",
-  "Launch console": "",
-  "Liquidity Provision": "",
-  "Distributed based on the proportion of the total liquidity and maker fees you have received, in this epoch per market.": "",
-  "Provide liquidity": "",
-  "Market Creation": "",
-  "For markets that meet the threshold value in a month. The current threshold is 1 $VEGA": "",
-  "Create a market": ""
+  "Coming soon": "Sắp ra mắt",
+  "Trading": "Giao dịch",
+  "Average total paid out per epoch": "Tổng số tiền thanh toán trung bình mỗi chu kỳ",
+  "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": "Được phân phối dựa trên tỷ lệ của tổng phí nhà sản xuất mà bạn đã trả, trong thời điểm này trên mỗi thị trường.",
+  "Launch console": "Mở bảng điều khiển",
+  "Liquidity Provision": "Cung cấp thanh khoản",
+  "Distributed based on the proportion of the total liquidity and maker fees you have received, in this epoch per market.": "Được phân phối dựa trên tỷ lệ của tổng thanh khoản và phí nhà sản xuất mà bạn đã nhận được, trong giai đoạn này trên mỗi thị trường",
+  "Provide liquidity": "Cung cấp thanh khoản",
+  "Market Creation": "Tạo lập thị trường",
+  "For markets that meet the threshold value in a month. The current threshold is 1 $VEGA": "Dành cho những thị trường đáp ứng giá trị ngưỡng trong một tháng. Ngưỡng hiện tại là 1 $VEGA",
+  "Create a market": "Tạo ra một thị trường"
 }
