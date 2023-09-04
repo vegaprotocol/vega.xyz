@@ -6,93 +6,8 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import { stringify } from 'querystring'
 import { getImage, getSrc } from 'gatsby-plugin-image'
 
-const LatestNews = () => {
+const LatestNews = ({ blogPosts, talks, insights }) => {
   const { t } = useTranslation('component.latest-news')
-  const latestPosts = useStaticQuery(graphql`
-    query {
-      blogPosts: allMediumPost(
-        limit: 1
-        sort: { fields: [firstPublishedAt], order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            title
-            uniqueSlug
-            firstPublishedAt(formatString: "ll")
-            virtuals {
-              subtitle
-              readingTime
-              previewImage {
-                imageId
-              }
-            }
-            author {
-              name
-            }
-          }
-        }
-      }
-      talks: allMarkdownRemark(
-        limit: 1
-        filter: { collection: { eq: "talks" } }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              title
-              date(formatString: "ll")
-              location
-              links {
-                title
-                link
-              }
-              featuredImage {
-                childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED, width: 640)
-                }
-              }
-            }
-            fields {
-              slug
-              locale
-            }
-          }
-        }
-      }
-      insights: allMarkdownRemark(
-        limit: 1
-        filter: { collection: { eq: "insights" } }
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              title
-              date(formatString: "ll")
-              location
-              links {
-                title
-                url
-              }
-              featuredImage {
-                childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED, width: 640)
-                }
-              }
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
-
   const [tweet, setTweet] = useState(null)
 
   useEffect(() => {
@@ -121,26 +36,28 @@ const LatestNews = () => {
         </h2>
       </div>
       <div className="mx-auto grid max-w-[26.25rem] grid-cols-1 gap-12 md:max-w-none md:grid-cols-2 lg:grid-cols-4">
-        <div className="flex h-full flex-col justify-between">
-          <NewsCard
-            title={latestPosts.blogPosts.edges[0].node.title}
-            text={latestPosts.blogPosts.edges[0].node.virtuals.subtitle}
-            link={`https://blog.vega.xyz/${latestPosts.blogPosts.edges[0].node.uniqueSlug}`}
-            date={latestPosts.blogPosts.edges[0].node.firstPublishedAt}
-            extra={t('{{minutes}} minute read', {
-              minutes: Math.ceil(
-                latestPosts.blogPosts.edges[0].node.virtuals.readingTime
-              ),
-            })}
-            image={`https://cdn-images-1.medium.com/${latestPosts.blogPosts.edges[0].node.virtuals.previewImage.imageId}`}
-            className="mb-space-5"
-          />
-          <div>
-            <Button to="https://blog.vega.xyz">
-              <Trans t={t}>Read our blog</Trans>
-            </Button>
+        {blogPosts.edges.length > 0 && (
+          <div className="flex h-full flex-col justify-between">
+            <NewsCard
+              title={blogPosts.edges[0].node.title}
+              text={blogPosts.edges[0].node.virtuals.subtitle}
+              link={`https://blog.vega.xyz/${blogPosts.edges[0].node.uniqueSlug}`}
+              date={blogPosts.edges[0].node.firstPublishedAt}
+              extra={t('{{minutes}} minute read', {
+                minutes: Math.ceil(
+                  blogPosts.edges[0].node.virtuals.readingTime
+                ),
+              })}
+              image={`https://cdn-images-1.medium.com/${blogPosts.edges[0].node.virtuals.previewImage.imageId}`}
+              className="mb-space-5"
+            />
+            <div>
+              <Button to="https://blog.vega.xyz">
+                <Trans t={t}>Read our blog</Trans>
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
 
         {tweet ? (
           <div className="flex h-full flex-col justify-between">
@@ -161,57 +78,57 @@ const LatestNews = () => {
           <div>Loading</div>
         )}
 
-        <div className="flex h-full flex-col justify-between">
-          <NewsCard
-            title={latestPosts.talks.edges[0].node.frontmatter.title}
-            text={`${latestPosts.talks.edges[0].node.html
-              .replace(/(<([^>]+)>)/gi, '')
-              .split(' ')
-              .splice(0, 25)
-              .join(' ')}...`}
-            image={
-              latestPosts.talks.edges[0].node.frontmatter.featuredImage
-                ? getSrc(
-                    latestPosts.talks.edges[0].node.frontmatter.featuredImage
-                  )
-                : undefined
-            }
-            date={latestPosts.talks.edges[0].node.frontmatter.date}
-            link={`/talks#talk${latestPosts.talks.edges[0].node.fields.slug}`}
-            className="mb-space-5"
-          />
-          <div>
-            <Button to="/talks">
-              <Trans t={t}>Watch all Talks</Trans>
-            </Button>
+        {talks.edges.length > 0 && (
+          <div className="flex h-full flex-col justify-between">
+            <NewsCard
+              title={talks.edges[0].node.frontmatter.title}
+              text={`${talks.edges[0].node.html
+                .replace(/(<([^>]+)>)/gi, '')
+                .split(' ')
+                .splice(0, 25)
+                .join(' ')}...`}
+              image={
+                talks.edges[0].node.frontmatter.featuredImage
+                  ? getSrc(talks.edges[0].node.frontmatter.featuredImage)
+                  : undefined
+              }
+              date={talks.edges[0].node.frontmatter.date}
+              link={`/talks#talk${talks.edges[0].node.fields.slug}`}
+              className="mb-space-5"
+            />
+            <div>
+              <Button to="/talks">
+                <Trans t={t}>Watch all Talks</Trans>
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
 
-        <div className="flex h-full flex-col justify-between">
-          <NewsCard
-            title={latestPosts.insights.edges[0].node.frontmatter.title}
-            text={`${latestPosts.insights.edges[0].node.html
-              .replace(/(<([^>]+)>)/gi, '')
-              .split(' ')
-              .splice(0, 25)
-              .join(' ')}...`}
-            link={latestPosts.insights.edges[0].node.frontmatter.links[0].url}
-            image={
-              latestPosts.insights.edges[0].node.frontmatter.featuredImage
-                ? getSrc(
-                    latestPosts.insights.edges[0].node.frontmatter.featuredImage
-                  )
-                : undefined
-            }
-            date={latestPosts.insights.edges[0].node.frontmatter.date}
-            className="mb-space-5"
-          />
-          <div>
-            <Button to="/insights">
-              <Trans t={t}>Read all Insights</Trans>
-            </Button>
+        {insights.edges.length > 0 && (
+          <div className="flex h-full flex-col justify-between">
+            <NewsCard
+              title={insights.edges[0].node.frontmatter.title}
+              text={`${insights.edges[0].node.html
+                .replace(/(<([^>]+)>)/gi, '')
+                .split(' ')
+                .splice(0, 25)
+                .join(' ')}...`}
+              link={insights.edges[0].node.frontmatter.links[0].url}
+              image={
+                insights.edges[0].node.frontmatter.featuredImage
+                  ? getSrc(insights.edges[0].node.frontmatter.featuredImage)
+                  : undefined
+              }
+              date={insights.edges[0].node.frontmatter.date}
+              className="mb-space-5"
+            />
+            <div>
+              <Button to="/insights">
+                <Trans t={t}>Read all Insights</Trans>
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )

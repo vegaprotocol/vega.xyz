@@ -130,7 +130,7 @@ const IndexPage = ({ data }) => {
                   <div className="absolute bottom-0 right-0 z-10 hidden h-[120px] w-[175px] translate-y-[5.625rem] md:block">
                     <PlanetB />
                   </div>
-                  <div className="relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:from-10% after:to-white/0 after:to-100% dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
+                  <div className="after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
                     <div className="w-full overflow-hidden md:h-[460px] 2xl:origin-right 2xl:scale-110">
                       <GatsbyImage
                         image={getImage(data.consoleDark)}
@@ -294,7 +294,11 @@ const IndexPage = ({ data }) => {
           <Rip />
           <Container hideXOverflow={true}>
             <PageSection>
-              <LatestNews />
+              <LatestNews
+                blogPosts={data.blogPosts}
+                talks={data.talks}
+                insights={data.insights}
+              />
             </PageSection>
 
             <PageSection>
@@ -355,6 +359,92 @@ export const query = graphql`
           ns
           data
           language
+        }
+      }
+    }
+    blogPosts: allMediumPost(
+      limit: 1
+      sort: { fields: [firstPublishedAt], order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          title
+          uniqueSlug
+          firstPublishedAt(formatString: "ll")
+          virtuals {
+            subtitle
+            readingTime
+            previewImage {
+              imageId
+            }
+          }
+          author {
+            name
+          }
+        }
+      }
+    }
+    talks: allMarkdownRemark(
+      limit: 1
+      filter: {
+        collection: { eq: "talks" }
+        fields: { locale: { eq: $language } }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            date(formatString: "ll")
+            location
+            links {
+              title
+              link
+            }
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, width: 640)
+              }
+            }
+          }
+          fields {
+            slug
+            locale
+          }
+        }
+      }
+    }
+    insights: allMarkdownRemark(
+      limit: 1
+      filter: {
+        collection: { eq: "insights" }
+        fields: { locale: { eq: $language } }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            date(formatString: "ll")
+            location
+            links {
+              title
+              url
+            }
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, width: 640)
+              }
+            }
+          }
+          fields {
+            slug
+          }
         }
       }
     }
