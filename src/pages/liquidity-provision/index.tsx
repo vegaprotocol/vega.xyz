@@ -1,17 +1,3 @@
-import { useYesterday } from '@vegaprotocol/react-helpers'
-import * as Schema from '@vegaprotocol/types'
-import {
-  AsyncRenderer,
-  HealthBar,
-  Indicator,
-  Intent,
-  TooltipCellComponent,
-} from '@vegaprotocol/ui-toolkit'
-import {
-  addDecimalsFormatNumber,
-  formatNumberPercentage,
-  toBigNum,
-} from '@vegaprotocol/utils'
 import 'ag-grid-community/dist/styles/ag-grid.css'
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css'
 import type {
@@ -34,19 +20,29 @@ import BoxTitle from '../../components/BoxTitle'
 import Seo from '../../components/Seo'
 import Container from '../../components/Container'
 import GlitchTitle from '../../components/GlitchTitle'
+import { HealthBar } from '../../components/HealthBar'
+import { Indicator } from '../../components/IntentInidcator'
 import Layout from '../../components/Layout'
 import LeadingLine from '../../components/LeadingLine'
 import Link from '../../components/UI/Link'
 import { Description } from '../../components/VegaMarkets/Description'
 import { useMarketLiquidityProviders } from '../../hooks/use-market-liquidity'
 import { useMarkets, validMarketStates } from '../../hooks/use-markets'
+import { useYesterday } from '../../hooks/use-yesterday'
 import { calc24hVolume } from '../../utils/vega/24hVolume'
 import { getStatus } from '../../utils/vega/getStatus'
+import { Intent } from '../../utils/vega/Intent'
+import {
+  addDecimalsFormatNumber,
+  formatNumberPercentage,
+  toBigNum,
+} from '../../utils/vega/number'
+import * as Schema from '../../utils/vega/types'
 import './liquidity-provision.css'
 import CalloutHero from '../../components/CalloutHero'
 import BigNumber from 'bignumber.js'
 import TranslationsBanner from '../../components/TranslationsBanner'
-import { RowClickedEvent } from 'ag-grid-community'
+import { ITooltipParams, RowClickedEvent } from 'ag-grid-community'
 
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
@@ -139,7 +135,7 @@ const MarketsLiquidity = () => {
             </div>
           </CalloutHero>
         </div>
-        <AsyncRenderer loading={loading} error={error} data={data}>
+        <div>
           <div className="title-m relative mb-3 w-full">
             <Trans t={t}>Futures</Trans>
           </div>
@@ -250,6 +246,7 @@ const MarketsLiquidity = () => {
                   )
                   const status = params.data.node.data.marketTradingMode
                   const intent = intentForStatus(status)
+                  console.log('intentForStatus: ', intent)
                   return (
                     <div>
                       <Indicator variant={intent} />
@@ -382,6 +379,7 @@ const MarketsLiquidity = () => {
                       tradingMode,
                       auctionTrigger
                     )
+                    const intent = intentForStatus(tradingMode)
                     return (
                       <div>
                         {tradingModeLabel}
@@ -390,7 +388,7 @@ const MarketsLiquidity = () => {
                           target={targetStake}
                           decimals={settlementAssetDecimals}
                           levels={feeLevels}
-                          intent={intentForStatus(tradingMode)}
+                          intent={intent}
                         />
                       </div>
                     )
@@ -403,7 +401,7 @@ const MarketsLiquidity = () => {
               />
             </Grid>
           </div>
-        </AsyncRenderer>
+        </div>
       </Container>
     </Layout>
   )
@@ -414,8 +412,8 @@ const percentageLiquidity = (suppliedStake, targetStake) => {
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
-    ? '>100%'
-    : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
+      ? '>100%'
+      : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
   return display
 }
 
@@ -561,3 +559,13 @@ const percentageFormatter = (value) => {
 
 const liquidityDetailsConsoleLink = (marketId: string, consoleLink: string) =>
   `${consoleLink}/#/liquidity/${marketId}`
+
+const tooltipContentClasses =
+  'max-w-sm bg-vega-light-100 dark:bg-vega-dark-100 border border-vega-light-200 dark:border-vega-dark-200 px-2 py-1 z-20 rounded text-xs text-black dark:text-white break-word'
+const TooltipCellComponent = (props: ITooltipParams) => {
+  return (
+    <div className={tooltipContentClasses} role="tooltip">
+      {props.value}
+    </div>
+  )
+}

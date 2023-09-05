@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js'
-import { addDecimalsFormatNumber } from '@vegaprotocol/utils'
+import { addDecimalsFormatNumber } from '../vega/number'
 
 export const calc24hVolume = (candles) => {
   return candles
