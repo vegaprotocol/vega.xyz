@@ -7,6 +7,7 @@
   "Standby Validators": "Standby Validators",
   "Consensus Validators": "Consensus Validators",
   "Unlimited": "Unlimited",
+  "None": "None",
   "This value is always set to 1 for Consensus validators": "This value is always set to 1 for Consensus validators",
   "Lowest": "Lowest",
   "Highest": "Highest",
@@ -16,7 +17,7 @@
   "Validator rewards": "Validator rewards",
   "* The no. of Consensus Validators is expected to increase through governance, further decentralising the protocol over time, with the no. of Standby Validators increasing as a multiple of the number of Consensus Validators, currently configured to <2></2>.": "* The no. of Consensus Validators is expected to increase through governance, further decentralising the protocol over time, with the no. of Standby Validators increasing as a multiple of the number of Consensus Validators, currently configured to <2></2>.",
   "**Consensus validators secure the network and therefore earn rewards. Standby validators are ready to step up and fill open consensus validator slots and therefore are also rewarded by the protocol. However their share of rewards is penalised relative to consensus validators by a factor of <2></2>": "**Consensus validators secure the network and therefore earn rewards. Standby validators are ready to step up and fill open consensus validator slots and therefore are also rewarded by the protocol. However their share of rewards is penalised relative to consensus validators by a factor of <2></2>",
+  "Become a Mainnet validator": "Become a Mainnet validator",
   "Any participant in the Vega network can become a validator. You'll need to set up a node and its infrastructure, submit a transaction on chain, self-stake <2></2> and attract token holders to stake (delegate) their tokens to you.": "Any participant in the Vega network can become a validator. You'll need to set up a node and its infrastructure, submit a transaction on chain, self-stake <2></2> and attract token holders to stake (delegate) their tokens to you.",
-  "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>.": "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>.",
-  "Become a Mainnet validator": "Become a Mainnet validator"
+  "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>.": "Those with the highest <2>validator scores</2> (a measure of performance and stake) become consensus validators and earn the greatest rewards from infrastructure fees paid on every trade and transfer, with a portion distributed to stakers and standby validators. The <6>validators list</6> is refreshed every epoch <10></10>."
 }

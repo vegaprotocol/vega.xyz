@@ -1,7 +1,7 @@
 {
   "Coming soon": "Скоро будет доступно",
   "Trading": "Трейдинг",
-  "Average total paid out per epoch": "Средняя сумма выплат за эпоху",
+  "Average total paid out per epoch": "Среднее количество выплат за период",
   "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": "Распределяется в соответствии с долей от общего количества оплаченных вами сборов мейкеров, в данную эпоху за рынок.",
   "Launch console": "Консоль запуска",
   "Liquidity Provision": "Резерв ликвидности",
