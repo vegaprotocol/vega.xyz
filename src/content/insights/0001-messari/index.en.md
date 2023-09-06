@@ -1,5 +1,5 @@
 ---
-title: 'Vega Protocol: An Appchain for Trading Derivatives'
+title: 'Vega Protocol:  An Appchain for Trading Derivatives'
 date: 2022-05-02
 links:
   - title: Read more
