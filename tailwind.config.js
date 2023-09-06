@@ -106,7 +106,7 @@ const theme = {
         },
         a: {
           '&:hover': {
-            color: '#FF077F !important',
+            textDecoration: 'none',
           },
         },
         li: {

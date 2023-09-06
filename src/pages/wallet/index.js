@@ -10,11 +10,12 @@ import GlitchTitle from '../../components/UI/GlitchTitle'
 import Button from '../../components/UI/Button'
 import Link from '../../components/UI/Link'
 import DropdownArrow from '../../components/Svg/DropdownArrow'
-import LinkWrapper from '../../components/UI/LinkWrapper'
 import TeamTile from '../../components/UI/TeamTile'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Sticky from 'react-stickynode'
 import ScrollSpy from 'react-ui-scrollspy'
+import Tooltip from '../../components/UI/Tooltip'
+import Tippy from '@tippyjs/react'
 import IconPlatformMac from '../../components/Svg/IconPlatformMac'
 import IconPlatformWindows from '../../components/Svg/IconPlatformWindows'
 import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
@@ -37,10 +38,6 @@ const WalletPageNew = ({ data }) => {
     {
       title: t('Overview'),
       hash: 'overview',
-    },
-    {
-      title: t('How-to use'),
-      hash: 'how-to-use',
     },
     {
       title: t('Test on Fairground'),
@@ -157,7 +154,7 @@ const WalletPageNew = ({ data }) => {
           <div>
             {downloadDropdown && (
               <div
-                className={`top-[100%] absolute left-0 right-0 z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
+                className={`absolute top-[100%] left-0 right-0 z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
               >
                 <ul className="px-2 py-3">
                   {binaries.map((binary, idx) => {
@@ -221,7 +218,8 @@ const WalletPageNew = ({ data }) => {
     network = 'Alpha',
     className,
   }) => {
-    let link = 'https://www.google.com/'
+    let link =
+      'https://chrome.google.com/webstore/detail/vega-wallet-mainnet/codfcglpplgmmlokgilfkpcjnmkbfiel'
 
     if (network === 'Testnet') {
       link =
@@ -234,10 +232,14 @@ const WalletPageNew = ({ data }) => {
         data-cy={`downloadLink${network}`}
       >
         <Button variant={variant} to={link}>
-          <div className="w-[1.5rem] relative -top-[2px] mr-3 inline-block align-middle">
+          <div className="relative -top-[2px] mr-3 inline-block w-[1.5rem] align-middle">
             <Chrome />
           </div>
-          <Trans t={t}>Get the Vega Wallet</Trans>
+          {network === 'Testnet' ? (
+            <Trans t={t}>Get the Fairground Vega Wallet</Trans>
+          ) : (
+            <Trans t={t}>Get the Vega Wallet</Trans>
+          )}
         </Button>
       </div>
     )
@@ -252,7 +254,8 @@ const WalletPageNew = ({ data }) => {
       'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-mainnet/'
 
     if (network === 'Testnet') {
-      link = 'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet/'
+      link =
+        'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-fairground/'
     }
     return (
       <div
@@ -260,7 +263,7 @@ const WalletPageNew = ({ data }) => {
         data-cy={`downloadLink${network}`}
       >
         <Button variant={variant} to={link}>
-          <div className="w-[1.5rem] relative -top-[2px] mr-3 inline-block align-middle">
+          <div className="relative -top-[2px] mr-3 inline-block w-[1.5rem] align-middle">
             <Firefox />
           </div>
           <Trans t={t}>Get the Vega Wallet</Trans>
@@ -288,7 +291,7 @@ const WalletPageNew = ({ data }) => {
       <Container dataCy={'main'}>
         <div className="xl:items-top mb-space-6 items-center gap-x-space-6 pt-6 md:mb-space-10 md:grid md:grid-cols-12 lg:pt-16">
           <div className="pb-space-10 md:col-span-6 md:py-space-6">
-            <div className="max-w-[21rem] md:max-w-[30rem] mx-auto mb-space-8 text-center md:mx-0 md:text-left">
+            <div className="mx-auto mb-space-8 max-w-[21rem] text-center md:mx-0 md:max-w-[30rem] md:text-left">
               <h1 className="heading-xl mb-space-3">
                 <GlitchTitle color="purple">
                   <Trans t={t}>Vega Wallet</Trans>
@@ -318,7 +321,7 @@ const WalletPageNew = ({ data }) => {
                       <ChromeDownloadButton variant="hero" className="mb-3" />
                       <FirefoxDownloadButton variant="hero" />
                     </div>
-                    <div className="max-w-[30rem] prose mx-auto mt-space-4 md:mx-0">
+                    <div className="prose mx-auto mt-space-4 max-w-[30rem] md:mx-0">
                       <p>
                         <Trans t={t}>
                           Vega Wallet browser extension officially supports
@@ -344,15 +347,15 @@ const WalletPageNew = ({ data }) => {
               <GatsbyImage
                 image={getImage(data.walletScreenSmall)}
                 alt=""
-                className="max-w-[18rem] mx-auto my-space-6 hidden dark:block md:hidden dark:md:hidden"
+                className="mx-auto my-space-6 hidden max-w-[18rem] dark:block md:hidden dark:md:hidden"
               />
               <GatsbyImage
                 image={getImage(data.walletScreenSmallWhite)}
                 alt=""
-                className="max-w-[18rem] mx-auto my-space-6 dark:hidden md:hidden"
+                className="mx-auto my-space-6 max-w-[18rem] dark:hidden md:hidden"
               />
 
-              <div className="max-w-[30rem] mx-auto mt-space-8 flex flex-wrap justify-center gap-x-8 gap-y-4 md:mx-0 md:justify-start">
+              <div className="mx-auto mt-space-8 flex max-w-[30rem] flex-wrap justify-center gap-x-8 gap-y-4 md:mx-0 md:justify-start">
                 <Button
                   variant="secondary"
                   to="#test-on-fairground"
@@ -360,33 +363,35 @@ const WalletPageNew = ({ data }) => {
                 >
                   <Trans t={t}>Want to test on Fairground?</Trans>
                 </Button>
-                <Button
-                  variant="secondary"
-                  to="https://github.com/vegaprotocol/vegawallet-browser/issues/360"
-                  className="text-vega-light-300 dark:text-vega-dark-300"
+
+                <Tippy
+                  content={
+                    <Tooltip>
+                      <div class="prose p-space-3">
+                        <p>
+                          Chrome and Firefox with more browsers coming soon.
+                        </p>
+                      </div>
+                    </Tooltip>
+                  }
                 >
-                  <Trans t={t}>Supported browsers</Trans>
-                </Button>
-                <Button
-                  variant="secondary"
-                  to="https://github.com/vegaprotocol/vegawallet-browser"
-                  className="text-vega-light-300 dark:text-vega-dark-300"
-                >
-                  Github project
-                </Button>
+                  <div className="text-vega-light-300 underline underline-offset-8 dark:text-vega-dark-300">
+                    Supported browsers
+                  </div>
+                </Tippy>
               </div>
             </div>
           </div>
-          <div className="h-[460px] relative hidden justify-center md:col-span-6 md:flex xl:justify-end">
+          <div className="relative hidden h-[460px] justify-center md:col-span-6 md:flex xl:justify-end">
             <div className="z-10 xl:absolute xl:right-0 xl:top-0 xl:mr-space-12 xl:mt-space-6">
-              <div className="h-[135px] w-[150px] absolute bottom-20 left-0 hidden -translate-x-24 xl:block">
+              <div className="absolute bottom-20 left-0 hidden h-[135px] w-[150px] -translate-x-24 xl:block">
                 <PlanetA />
               </div>
               <GatsbyImage image={getImage(data.walletScreenMedium)} alt="" />
             </div>
             <div className="relative hidden xl:block">
-              <div className="after:w-[7.375rem] after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0">
-                <div className="blur-[1px] md:h-[460px] flex w-full justify-end overflow-hidden">
+              <div className="after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0">
+                <div className="flex w-full justify-end overflow-hidden blur-[1px] md:h-[460px]">
                   <GatsbyImage
                     image={getImage(data.consoleDark)}
                     alt=""
@@ -419,7 +424,7 @@ const WalletPageNew = ({ data }) => {
                       >
                         <div
                           data-to-scrollspy-id={section.hash}
-                          className="heading-s bottom-[-1px] relative inline-block border-b-4 border-t-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current"
+                          className="heading-s relative bottom-[-1px] inline-block border-b-4 border-t-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current"
                         >
                           {t(section.title)}
                         </div>
@@ -441,23 +446,24 @@ const WalletPageNew = ({ data }) => {
                 <GatsbyImage
                   image={getImage(data.walletYourKeys)}
                   alt=""
-                  className="max-w-[25rem] md:max-w-[30rem] mx-auto hidden dark:block"
+                  className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
                 />
                 <GatsbyImage
                   image={getImage(data.walletYourKeysLight)}
                   alt=""
-                  className="max-w-[25rem] md:max-w-[30rem] mx-auto dark:hidden"
+                  className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
                 />
               </div>
               <div className="order-2">
-                <div className="max-w-[32rem] mx-auto mb-space-8 md:mx-0 md:mb-0">
-                  <h2 className="heading-m max-w-[28rem] mx-auto mb-space-3 md:mx-0">
+                <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
+                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
                     <Trans t={t}>Your wallets, your keys</Trans>
                   </h2>
                   <p className="body-xl">
                     <Trans t={t}>
-                      Easily manage multiple Vega wallets and key pairs in one
-                      place.
+                      Easily manage multiple key pairs in one place with the
+                      Vega Wallet extension, or for full multi-wallet
+                      functionality download the Vega Desktop Wallet.
                     </Trans>
                   </p>
                 </div>
@@ -467,17 +473,17 @@ const WalletPageNew = ({ data }) => {
                 <GatsbyImage
                   image={getImage(data.walletSecureConnections)}
                   alt=""
-                  className="max-w-[25rem] md:max-w-[30rem] mx-auto hidden dark:block"
+                  className="mx-auto hidden max-w-[25rem] dark:block md:max-w-[30rem]"
                 />
                 <GatsbyImage
                   image={getImage(data.walletSecureConnectionsLight)}
                   alt=""
-                  className="max-w-[25rem] md:max-w-[30rem] mx-auto dark:hidden"
+                  className="mx-auto max-w-[25rem] dark:hidden md:max-w-[30rem]"
                 />
               </div>
               <div className="md:order-3">
-                <div className="max-w-[32rem] mx-auto mb-space-8 md:mx-0 md:mb-0">
-                  <h2 className="heading-m max-w-[28rem] mx-auto mb-space-3 md:mx-0">
+                <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
+                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
                     <Trans t={t}>Secure connections</Trans>
                   </h2>
                   <p className="body-xl">
@@ -493,17 +499,17 @@ const WalletPageNew = ({ data }) => {
                 <GatsbyImage
                   image={getImage(data.walletInstantApproveReject)}
                   alt=""
-                  className="max-w-[25rem] md:max-w-[30rem] mx-auto mb-space-5 hidden dark:block"
+                  className="mx-auto mb-space-5 hidden max-w-[25rem] dark:block md:max-w-[30rem]"
                 />
                 <GatsbyImage
                   image={getImage(data.walletInstantApproveRejectLight)}
                   alt=""
-                  className="max-w-[25rem] md:max-w-[30rem] mx-auto mb-space-5 dark:hidden"
+                  className="mx-auto mb-space-5 max-w-[25rem] dark:hidden md:max-w-[30rem]"
                 />
               </div>
               <div className="order-6">
-                <div className="max-w-[32rem] mx-auto md:mx-0">
-                  <h2 className="heading-m max-w-[28rem] mx-auto mb-space-3 md:mx-0">
+                <div className="mx-auto max-w-[32rem] md:mx-0">
+                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
                     <Trans t={t}>
                       Instantly approve and reject transactions
                     </Trans>
@@ -520,34 +526,6 @@ const WalletPageNew = ({ data }) => {
           </div>
           <div
             className="my-space-12 text-center md:my-space-14"
-            id="how-to-use"
-          >
-            <h2 className="heading-xl mb-space-9">
-              <GlitchTitle color="purple">
-                <Trans t={t}>How-to use</Trans>
-              </GlitchTitle>
-            </h2>
-            <LinkWrapper to="https://youtu.be/NNhs01_AtPQ">
-              <GatsbyImage
-                image={getImage(data.walletVideoPoster)}
-                alt=""
-                className="max-w-[43.75rem] mx-auto mb-space-5"
-              />
-            </LinkWrapper>
-            <div className="mt-space-4">
-              <Button
-                variant="secondary"
-                className="text-vega-light-300 dark:text-vega-dark-300"
-                to="https://docs.vega.xyz/mainnet/tools/vega-wallet/desktop-app/latest/getting-started"
-              >
-                <Trans t={t}>
-                  Read the guide to getting started with Vega wallet
-                </Trans>
-              </Button>
-            </div>
-          </div>
-          <div
-            className="my-space-12 text-center md:my-space-14"
             id="test-on-fairground"
           >
             <h2 className="heading-xl mb-space-9">
@@ -555,12 +533,21 @@ const WalletPageNew = ({ data }) => {
                 <Trans t={t}>Test on Fairground</Trans>
               </GlitchTitle>
             </h2>
+            <div class="prose mx-auto">
+              <p className="body-xl mb-space-6 md:mb-space-8">
+                <Trans t={t}>
+                  Head over to{' '}
+                  <a href="https://fairground.wtf/" target="_blank">
+                    Fairground
+                  </a>
+                  , Vega's testnet, and help test the latest software to earn
+                  rewards.
+                </Trans>
+              </p>
+            </div>
             <div className="md:grid md:grid-cols-2 md:gap-x-8">
-              <div className="md:mb-space-0 mb-space-8 md:flex md:justify-end">
+              <div className="md:mb-space-0 mb-space-6 md:flex md:justify-end">
                 <div>
-                  <div className="heading-xxs !font-not-glitched mb-space-5 text-vega-light-300 dark:text-vega-dark-300">
-                    <Trans t={t}>Test with latest Browser Wallet</Trans>
-                  </div>
                   {userAgent && userAgent === 'Chrome' && (
                     <div>
                       <ChromeDownloadButton network="Testnet" />
@@ -580,7 +567,7 @@ const WalletPageNew = ({ data }) => {
                         />
                         <FirefoxDownloadButton network="Testnet" />
                       </div>
-                      <div className="max-w-[30rem] prose mx-auto md:mx-0">
+                      <div className="prose mx-auto max-w-[30rem] md:mx-0">
                         <p>
                           <Trans t={t}>
                             Vega Wallet browser extension officially supports
@@ -598,13 +585,10 @@ const WalletPageNew = ({ data }) => {
               </div>
               <div className="md:flex md:justify-start">
                 <div>
-                  <div className="heading-xxs !font-not-glitched mb-space-5 text-vega-light-300 dark:text-vega-dark-300">
-                    <Trans t={t}>Test with legacy Desktop Wallet</Trans>
-                  </div>
                   <DownloadButton
                     binaries={fairgroundDownloads}
                     variant="secondary"
-                    title={t('DOWNLOAD THE VEGA DESKTOP WALLET')}
+                    title={t('DOWNLOAD THE FAIRGROUND VEGA DESKTOP WALLET')}
                   />
                 </div>
               </div>
@@ -624,7 +608,7 @@ const WalletPageNew = ({ data }) => {
                 title={t('Integrate')}
                 body={t('Connect your dapp using the Vega wallet API')}
               >
-                <Button to="https://docs.vega.xyz/mainnet/tools/vega-wallet">
+                <Button to="https://docs.vega.xyz/mainnet/category/api/wallet-api">
                   <Trans t={t}>Read the Docs</Trans>
                 </Button>
               </TeamTile>

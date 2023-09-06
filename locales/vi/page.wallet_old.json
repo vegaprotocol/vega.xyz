@@ -7,5 +7,11 @@
   "Securely connect to Vega dapps and instantly approve and reject transactions on the Vega network": "Kết nối an toàn với các ứng dụng dapp bằng Ví Vega,  bạn có thể phê duyệt và từ chối ngay lập tức các giao dịch trên mạng Vega",
   "Error fetching Fairground desktop wallet downloads": "Lỗi tải xuống ví Vega cho desktop trên mạng thửu nghiệm Fairground",
   "Download Vega Wallet (Testnet)": "Tải xuống Ví Vega (mạng testnet)",
-  "Explore the wallet project on Github": "Khám phá dự án ví trên Github"
+  "Explore the wallet project on Github": "Khám phá dự án ví trên Github",
+  "How-to use": "Hướng dẫn sử dụng",
+  "Supported browsers": "Các trình duyệt web hỗ trợ",
+  "Easily manage multiple Vega wallets and key pairs in one place.": "Dễ dàng quản lý nhiều ví Vega và cặp khóa ở một nơi.",
+  "Read the guide to getting started with Vega wallet": "Xem thêm hướng dẫn để bắt đầu với ví Vega",
+  "Test with latest Browser Wallet": "Kiểm tra với Ví Vega trên trình duyệt mới nhất",
+  "Test with legacy Desktop Wallet": "Thử nghiệm với Ví Vega Desktop cũ"
 }

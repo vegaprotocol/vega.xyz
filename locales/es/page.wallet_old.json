@@ -4,5 +4,11 @@
   "Want to test new features on Fairground?": "¿Quieres probar nuevas funciones en Fairground?",
   "Error fetching Fairground desktop wallet downloads": "Error al obtener descargas de la billetera de escritorio Fairground",
   "Download Vega Wallet (Testnet)": "Descargar Vega Wallet (Testnet)",
-  "Explore the wallet project on Github": "Explora el proyecto de billetera en Github"
+  "Explore the wallet project on Github": "Explora el proyecto de billetera en Github",
+  "How-to use": "Cómo utilizar",
+  "Supported browsers": "Navegadores compatibles",
+  "Easily manage multiple Vega wallets and key pairs in one place.": "Administre fácilmente múltiples billeteras Vega y pares de claves en un solo lugar.",
+  "Read the guide to getting started with Vega wallet": "Lea la guía para comenzar con la billetera Vega",
+  "Test with latest Browser Wallet": "Pruebe con la última billetera del navegador",
+  "Test with legacy Desktop Wallet": "Pruebe con Desktop Wallet heredado"
 }
