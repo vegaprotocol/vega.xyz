@@ -8,6 +8,7 @@ import Tag from '../../components/UI/Tag'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import NewsListItem from '../../components/UI/NewsListItem'
+import Talk from '../../components/Talk'
 
 const InsightsPage = ({ data }) => {
   const { i18n, t } = useTranslation('page.insights')
@@ -47,22 +48,30 @@ const InsightsPage = ({ data }) => {
             </div>
 
             <div className="md:col-span-8">
-              {data.allMarkdownRemark.edges.map((insight, idx) => (
-                <NewsListItem
-                  key={idx}
-                  title={insight.node.frontmatter.title}
-                  date={insight.node.frontmatter.date}
-                  location={insight.node.frontmatter.location}
-                  image={
-                    insight.node.frontmatter.featuredImage?.childImageSharp
-                      ?.gatsbyImageData
-                  }
-                  links={insight.node.frontmatter.links}
-                >
-                  <div
-                    dangerouslySetInnerHTML={{ __html: insight.node.html }}
-                  />
-                </NewsListItem>
+              {data.allMarkdownRemark.edges.map((content, idx) => (
+                <div>
+                  {content.node.collection === 'talks' ? (
+                    <div>
+                      <Talk key={idx} talk={content.node} />
+                    </div>
+                  ) : (
+                    <NewsListItem
+                      key={idx}
+                      title={content.node.frontmatter.title}
+                      date={content.node.frontmatter.date}
+                      location={content.node.frontmatter.location}
+                      image={
+                        content.node.frontmatter.featuredImage?.childImageSharp
+                          ?.gatsbyImageData
+                      }
+                      links={content.node.frontmatter.links}
+                    >
+                      <div
+                        dangerouslySetInnerHTML={{ __html: content.node.html }}
+                      />
+                    </NewsListItem>
+                  )}
+                </div>
               ))}
             </div>
           </div>
@@ -85,7 +94,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       filter: {
-        collection: { eq: "insights" }
+        collection: { in: ["insights", "talks"] }
         fields: { locale: { eq: $language } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
@@ -93,12 +102,14 @@ export const query = graphql`
       edges {
         node {
           html
+          collection
           frontmatter {
             title
             date(formatString: "ll")
             location
             links {
               title
+              link
               url
             }
             featuredImage {

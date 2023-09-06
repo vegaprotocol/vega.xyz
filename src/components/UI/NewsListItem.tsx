@@ -1,8 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 import { Link } from 'gatsby-plugin-react-i18next'
 import SquareBullet from '../Svg/SquareBullet'
 import Button from './Button'
 import { GatsbyImage, IGatsbyImageData, getImage } from 'gatsby-plugin-image'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 export interface Link {
   url: string
@@ -26,13 +27,19 @@ const NewsList = ({
   location,
   links,
 }: NewsListItemProps) => {
+  const { i18n, t } = useTranslation('component.news-item')
+
   return (
-    <div className="0 mb-space-6 border-b border-vega-light-200 pb-space-6 dark:border-vega-dark-200 md:mb-space-7 md:pb-space-7 lg:mb-space-8 lg:pb-space-8">
+    <div className="mb-space-6 border-b border-vega-light-200 pb-space-6 dark:border-vega-dark-200 md:mb-space-6 md:pb-space-6">
       {image && <GatsbyImage image={image} alt="" className="mb-space-7" />}
       <div className="heading-xs !m-0 !mb-space-2">{title}</div>
       <div className="mb-space-4 flex gap-x-space-4">
+        <div className="inline-block">
+          <SquareBullet size="10" />
+          <Trans t={t}>Insight</Trans>
+        </div>
         {location && (
-          <div className="">
+          <div>
             <SquareBullet size={6} /> {location}
           </div>
         )}
