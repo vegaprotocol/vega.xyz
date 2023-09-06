@@ -1,34 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import useSound from 'use-sound';
-import GlitchSound from "../../audio/glitch.wav";
-import DroneSound from "../../audio/drone.wav";
+import React, { useState, useEffect } from 'react'
+import useSound from 'use-sound'
+import GlitchSound from '../../audio/glitch.wav'
+import DroneSound from '../../audio/drone.wav'
 
 const useAudio = () => {
-  const [audio] = useState(new Audio(GlitchSound));
-  const [playing, setPlaying] = useState(false);
+  const [audio] = useState(new Audio(GlitchSound))
+  const [playing, setPlaying] = useState(false)
 
   const togglePlayback = () => {
-    console.log('jerhkjehr')
-    setPlaying(!playing);
+    setPlaying(!playing)
   }
 
   useEffect(() => {
     if (playing) {
-      audio.play();
+      audio.play()
+    } else {
+      audio.pause()
     }
-    else {
-      audio.pause();
-    }
-  }, [playing]);
+  }, [playing])
 
   useEffect(() => {
-    audio.addEventListener('ended', () => setPlaying(false));
+    audio.addEventListener('ended', () => setPlaying(false))
     return () => {
-      audio.removeEventListener('ended', () => setPlaying(false));
-    };
-  }, []);
+      audio.removeEventListener('ended', () => setPlaying(false))
+    }
+  }, [])
 
-  return [playing, togglePlayback];
-};
+  return [playing, togglePlayback]
+}
 
-export default useAudio;
+export default useAudio

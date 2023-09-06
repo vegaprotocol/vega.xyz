@@ -1,0 +1,16 @@
+{
+  "Liquidity Provision": "Резерв ликвидности",
+  "Average total paid out per epoch": "Средняя общая сумма выплат за эпоху",
+  "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.": "Распределяется в зависимости от доли общей комиссии поставщика ликвидности, которую вы получили в эту эпоху.",
+  "Provide liquidity": "Предоставление ликвидности",
+  "Market Creation": "Создание рынка",
+  "Cumulative total paid out in last 30 days": "Общая сумма выплат за последние 30 дней",
+  "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent": "Бонус выплачивается участнику любого рынка, который достигает совокупного объема примерно <2></2> USD эквивалента",
+  "Create Markets": "Создание рынков",
+  "Market Making": "Формирование рынка",
+  "Distributed based on the proportion of the total maker fees you've received in this epoch.": "Распределяется в соответствии с долей от общего количества гонораров мейкеров, полученных вами в эту эпоху.",
+  "Market Make": "Рыночная марка",
+  "Trading": "Трейдинг",
+  "Distributed based on the proportion of total maker fees you've paid in this epoch.": "Распределяется в зависимости от доли общей платы за услуги создателя, которую вы заплатили в эту эпоху.",
+  "Launch Console": "Консоль запуска"
+}

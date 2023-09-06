@@ -1,8 +1,8 @@
 {
-  "Latest News": "",
-  "{{minutes}} minute read": "",
-  "Read our blog": "",
-  "See all Tweets": "",
-  "Watch all Talks": "",
-  "Read all Insights": ""
+  "Latest News": "Последние новости",
+  "{{minutes}} minute read": "{{минуты}} время прочтения",
+  "Read our blog": "Читайте наш блог",
+  "See all Tweets": "Посмотреть все твиты",
+  "Watch all Talks": "Смотреть все беседы",
+  "Read all Insights": "Читать все статьи"
 }

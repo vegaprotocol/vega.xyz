@@ -1,8 +1,9 @@
 {
   "Coming soon": "Coming soon",
   "Trading": "Trading",
+  "Average total paid out per epoch": "Average total paid out per epoch",
   "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.",
-  "Trade": "Trade",
+  "Launch console": "Launch console",
   "Liquidity Provision": "Liquidity Provision",
   "Distributed based on the proportion of the total liquidity and maker fees you have received, in this epoch per market.": "Distributed based on the proportion of the total liquidity and maker fees you have received, in this epoch per market.",
   "Provide liquidity": "Provide liquidity",

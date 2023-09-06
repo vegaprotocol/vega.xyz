@@ -6,16 +6,15 @@ import IconDiscord from '../components/Svg/IconDiscord'
 import IconGithub from '../components/Svg/IconGithub'
 import IconTelegram from '../components/Svg/IconTelegram'
 import IconTwitter from '../components/Svg/IconTwitter'
-import { routeThroughInterstitialPage } from '../utils/tools'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Footer = () => {
   const { t } = useTranslation('component.navigation')
   return (
     <footer>
-      <div className="border-y border-current pt-8 pb-12">
+      <div className="border-y border-current pb-12 pt-8">
         <Container>
-          <div className="grid grid-cols-2 gap-y-8 gap-x-6 md:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
             <div>
               <div className="mb-3 text-[0.9375rem] uppercase">
                 <SquareBullet size="11" />
@@ -45,15 +44,15 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://console.fairground.wtf/"
+                    to="https://console.vega.xyz/"
                     className="block py-1.5 leading-[1.3]"
                   >
-                    <Trans t={t}>Trade</Trans>
+                    <Trans t={t}>Launch Console</Trans>
                   </TextLink>
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/governance"
+                    to="https://governance.vega.xyz/"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Govern</Trans>
@@ -61,7 +60,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/staking"
+                    to="https://governance.vega.xyz/validators"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Stake</Trans>
@@ -73,6 +72,14 @@ const Footer = () => {
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Block Explorer</Trans>
+                  </TextLink>
+                </li>
+                <li>
+                  <TextLink
+                    to="https://github.com/orgs/vegaprotocol/projects/114/views/4"
+                    className="block py-1.5 leading-[1.3]"
+                  >
+                    <Trans t={t}>Roadmap</Trans>
                   </TextLink>
                 </li>
               </ul>
@@ -221,7 +228,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://token.vega.xyz/governance"
+                    to="https://governance.vega.xyz/"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Governance dApp</Trans>
@@ -229,7 +236,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://docs.vega.xyz/mainnet/concepts/vega-protocol"
+                    to="https://docs.vega.xyz/mainnet/concepts/governance"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Governance docs</Trans>
@@ -340,7 +347,7 @@ const Footer = () => {
       </div>
       <div className="py-5">
         <Container>
-          <div className="flex flex-wrap gap-y-2 gap-x-12 md:justify-between">
+          <div className="flex flex-wrap gap-x-12 gap-y-2 md:justify-between">
             <div className="flex items-center gap-x-4">
               <div className="mr-3 text-[0.9375rem] uppercase">
                 <SquareBullet size="11" />

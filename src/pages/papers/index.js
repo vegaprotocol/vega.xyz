@@ -1,30 +1,30 @@
-import React from "react";
-import Layout from "../../components/Layout";
-import Container from "../../components/Container";
-import { graphql } from "gatsby";
-import Seo from "../../components/Seo";
-import BoxTitle from "../../components/BoxTitle";
-import GlitchTitle from "../../components/GlitchTitle";
-import Paper from "../../components/Paper";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React from 'react'
+import Layout from '../../components/Layout'
+import Container from '../../components/Container'
+import { graphql } from 'gatsby'
+import Seo from '../../components/Seo'
+import BoxTitle from '../../components/BoxTitle'
+import GlitchTitle from '../../components/GlitchTitle'
+import Paper from '../../components/Paper'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const PapersPage = ({ data }) => {
-  const { t } = useTranslation("page.talks");
+  const { t } = useTranslation('page.talks')
   // t("How it works");
   // t("Implementations");
   return (
     <Layout>
       <Seo
-        title={t("Papers & Research")}
+        title={t('Papers & Research')}
         description={t(
-          "Check out the technical, economic and mathematical detail - and innovative thinking behind Vega."
+          'Check out the technical, economic and mathematical detail - and innovative thinking behind Vega.'
         )}
       />
-      <Container dataCy={"main"}>
-        <div className="pt-6 lg:pt-16">
+      <Container dataCy={'main'}>
+        <div className="pb-space-10 pt-6">
           <div className="mb-6 md:mb-16">
             <div className="mb-3">
-              <BoxTitle text="Learn " />
+              <BoxTitle text={t('Learn')} />
             </div>
             <GlitchTitle
               level="1"
@@ -36,16 +36,16 @@ const PapersPage = ({ data }) => {
 
           {data.allMarkdownRemark.group.map((group, idx) => (
             <div key={idx}>
-              <div className="grid grid-cols-12">
+              <div className="mb-space-10 grid grid-cols-12 md:mb-0">
                 <div className="col-span-12 md:col-span-4">
-                  <div className="title-m md:title-s xl:title-m md:pr-12 mb-12 md:mb-0 md:sticky md:top-6 md:pb-16">
+                  <div className="title-m md:title-s xl:title-m mb-12 md:sticky md:top-6 md:mb-0 md:pb-16 md:pr-12">
                     {t(group.fieldValue)}
                   </div>
                 </div>
                 <div className="col-span-12 md:col-span-8">
                   <ol>
                     {group.edges.map((edge, idx) => {
-                      return <Paper paper={edge.node} key={idx} />;
+                      return <Paper paper={edge.node} key={idx} />
                     })}
                   </ol>
                 </div>
@@ -55,10 +55,10 @@ const PapersPage = ({ data }) => {
         </div>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default PapersPage;
+export default PapersPage
 
 export const query = graphql`
   query ($language: String!) {
@@ -72,7 +72,10 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { collection: { eq: "papers" } }
+      filter: {
+        collection: { eq: "papers" }
+        fields: { locale: { eq: $language } }
+      }
       sort: {
         fields: [frontmatter___category, frontmatter___position]
         order: ASC
@@ -101,4 +104,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

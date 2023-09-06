@@ -14,6 +14,11 @@ const Calendar = ({ limit = -1, filter = false }) => {
       )
       response = await response.json()
 
+      if (response.notion_data === null) {
+        setEvents([])
+        return false
+      }
+
       // the following logic will probably be made redundant when the calendar API feed is updated
 
       const extractData = (elem) => {
@@ -32,6 +37,11 @@ const Calendar = ({ limit = -1, filter = false }) => {
             // create date objects
             .values.map((date) => new Date(date)),
         }
+      }
+
+      if (response.notion_data === null) {
+        setEvents([])
+        return false
       }
 
       // extract relevant data

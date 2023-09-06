@@ -10,12 +10,14 @@ export interface LinkProps {
 }
 
 const Link = ({ to, children, hideArrow = false, className }: LinkProps) => {
-  const isExternal = to.startsWith('http') || to.startsWith('/external-link')
+  const isExternal = to.startsWith('http')
 
   return (
     <LinkWrapper to={to} className={className}>
       {children}
-      {isExternal && !hideArrow && <LinkArrow className="ml-2 inline-block" />}
+      {isExternal && !hideArrow && (
+        <LinkArrow className="ml-2 mr-2 inline-block" />
+      )}
     </LinkWrapper>
   )
 }

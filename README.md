@@ -1,12 +1,10 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/300c8347-d327-4192-a819-b49a684e06df/deploy-status)](https://app.netlify.com/sites/vega/deploys)
-
 # Vega.xyz website
 
 Welcome to the repo for the new [vega.xyz](https://vega.xyz) website.
 
 ## Tech stack
 
-[Node.js](https://nodejs.org/) | [Yarn](https://yarnpkg.com/) | [Gatsby](https://www.gatsbyjs.com/) | [React](https://reactjs.org/) | [Tailwind](https://tailwindcss.com/) | [Netlify](https://www.netlify.com/)
+[Node.js](https://nodejs.org/) | [Yarn](https://yarnpkg.com/) | [Gatsby](https://www.gatsbyjs.com/) | [React](https://reactjs.org/) | [Tailwind](https://tailwindcss.com/)
 
 ## Development
 
@@ -17,7 +15,7 @@ gatsby develop
 
 ## Deployment
 
-Netlify is configured for continuous deployment.
+Vercel is configured for continuous deployment.
 
 ---
 
@@ -55,6 +53,7 @@ Markdown files should be duplicated across every language even if they are not y
 There is a Vega+ Ambassador responsible for coordinating community efforts to create each language version of the website:
 
 - Español (es): Angel | aikapenelope on GitHub | angeldeln111#7758 on [Discord](https://vega.xyz/discord)
+- 한국인 (ko): Hansel | hank-data on Github | 0xGomm on [Discord](https://vega.xyz/discord)
 - Pусский (ru): To be confirmed
 - 简体中文 (cn): To be confirmed
 

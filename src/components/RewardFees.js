@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import RewardsValuePlaceholder from '../components/Svg/RewardsValuePlaceholder'
-import { routeThroughInterstitialPage } from '../utils/tools'
 import UIButton from './UI/Button'
 
 const formatVegaValue = (value) => {
@@ -121,8 +120,8 @@ const RewardFees = () => {
         <RewardBox
           idx={0}
           title={t('Trading')}
-          rewardValue={rewardValues.makerPaidFeeReward}
-          rewardValueQualifier="Average total paid out per epoch"
+          rewardValue={0}
+          rewardValueQualifier={t('Average total paid out per epoch')}
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
               <Trans t={t}>
@@ -131,14 +130,14 @@ const RewardFees = () => {
               </Trans>
             </div>
           }
-          buttonText={t('Trade')}
-          buttonLink="https://console.fairground.wtf/"
+          buttonText={t('Launch console')}
+          buttonLink="https://console.vega.xyz/"
         />
         <RewardBox
           idx={1}
           title={t('Liquidity Provision')}
-          rewardValue={rewardValues.lpFeeReward}
-          rewardValueQualifier="Average total paid out per epoch"
+          rewardValue={0}
+          rewardValueQualifier={t('Average total paid out per epoch')}
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
               <Trans t={t}>
@@ -148,13 +147,13 @@ const RewardFees = () => {
             </div>
           }
           buttonText={t('Provide liquidity')}
-          buttonLink="https://docs.vega.xyz/testnet/tutorials/committing-liquidity"
+          buttonLink="https://docs.vega.xyz/mainnet/concepts/liquidity/provision"
         />
         <RewardBox
           idx={2}
           title={t('Market Creation')}
-          rewardValue={rewardValues.marketProposerReward}
-          rewardValueQualifier="Average total paid out per epoch"
+          rewardValue={0}
+          rewardValueQualifier={t('Average total paid out per epoch')}
           description={
             <div className="text-[0.875rem] text-vega-mid-grey">
               <Trans t={t}>

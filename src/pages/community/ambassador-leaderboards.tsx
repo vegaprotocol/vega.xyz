@@ -42,27 +42,11 @@ const AmbassadorLeaderboardPage = () => {
   })
 
   const {
-    loading: ccAllLast30DaysLoading,
-    data: ccAllLast30DaysData,
-    error: ccAllLast30DaysError,
-  } = useLeaderboard({
-    url: AmbassadorLeaderboards.contentCollective30Days,
-  })
-
-  const {
     loading: mllAllTimeLoading,
     data: mllAllTimeData,
     error: mllAllTimeError,
   } = useLeaderboard({
     url: AmbassadorLeaderboards.multilingualLeagueAllTime,
-  })
-
-  const {
-    loading: mllLast30DaysLoading,
-    data: mllLast30DaysData,
-    error: mllLast30DaysError,
-  } = useLeaderboard({
-    url: AmbassadorLeaderboards.multilingualLeague30Days,
   })
 
   return (
@@ -107,21 +91,6 @@ const AmbassadorLeaderboardPage = () => {
                     </div>
                   )}
                 </Tab>
-                <Tab label="thirtyDays" tabName="30 days">
-                  {ccAllLast30DaysLoading && (
-                    <div>
-                      <Trans t={t}>Loading...</Trans>
-                    </div>
-                  )}
-                  {ccAllLast30DaysData && (
-                    <Leaderboard data={ccAllLast30DaysData} />
-                  )}
-                  {ccAllLast30DaysError && (
-                    <div>
-                      <Trans t={t}>Error retrieving leaderboard...</Trans>
-                    </div>
-                  )}
-                </Tab>
               </Tabs>
             </Tab>
             <Tab
@@ -137,21 +106,6 @@ const AmbassadorLeaderboardPage = () => {
                   )}
                   {mllAllTimeData && <Leaderboard data={mllAllTimeData} />}
                   {mllAllTimeError && (
-                    <div>
-                      <Trans t={t}>Error retrieving leaderboard...</Trans>
-                    </div>
-                  )}
-                </Tab>
-                <Tab label="thirtyDays" tabName="30 days">
-                  {mllLast30DaysLoading && (
-                    <div>
-                      <Trans t={t}>Loading...</Trans>
-                    </div>
-                  )}
-                  {mllLast30DaysData && (
-                    <Leaderboard data={mllLast30DaysData} />
-                  )}
-                  {mllLast30DaysError && (
                     <div>
                       <Trans t={t}>Error retrieving leaderboard...</Trans>
                     </div>

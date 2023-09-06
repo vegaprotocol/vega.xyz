@@ -3,7 +3,7 @@ title: "QA Developer"
 description: "We are building a blockchain-based derivatives exchange and are looking for an experienced QA developer to join us."
 start_date: "Immediate"
 location: "Remote (between UTC-8 and UTC+1)"
-contract_type: "Permanent or long-term contract"
+contract_type: "Permanent or long-term contract (outside IR35)"
 ---
 
 We are building a blockchain-based derivatives exchange and are looking for an experienced QA developer to join us.
@@ -15,7 +15,7 @@ Immediate
 Remote (between UTC-8 and UTC+1)
 
 **Type:**
-Permanent or long-term contract
+Permanent or long-term contract (outside IR35)
 
 ## About you
 

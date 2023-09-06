@@ -1,5 +1,5 @@
 ---
-title: "DeFi Download: Getting serious about DeFi derivatives"
+title: "DeFi Download Podcast"
 location: Virtual
 date: 2022-01-29
 links:

@@ -116,7 +116,7 @@ const CommunityPage = ({ data }) => {
           <ToolBox
             title={t('Medium')}
             text={t('Latest news on the Vega blog.')}
-            link="https://medium.com/@Vega_Protocol"
+            link="https://blog.vega.xyz"
             icon={getImage(data.iconMedium)}
           />
           <ToolBox
@@ -158,7 +158,7 @@ const CommunityPage = ({ data }) => {
             text={t(
               'For developers, coders, hackers, dreamers who want to create software on top of Vega.'
             )}
-            link="https://vega.xyz/discord/"
+            link="https://vega.xyz/discord"
             icon={getImage(data.iconBuildersClub)}
           />
           <ToolBox

@@ -1,0 +1,16 @@
+{
+  "Liquidity Provision": "Liquidity Provision",
+  "Average total paid out per epoch": "Average total paid out per epoch",
+  "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.": "Distributed based on the proportion of total liquidity provider fees you've received in this epoch.",
+  "Provide liquidity": "Provide liquidity",
+  "Market Creation": "Market Creation",
+  "Cumulative total paid out in last 30 days": "Cumulative total paid out in last 30 days",
+  "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent": "Bonus paid to the proposer of any market that reaches a cumulative volume of approx <2></2> USD equivalent",
+  "Create Markets": "Create Markets",
+  "Market Making": "Market Making",
+  "Distributed based on the proportion of the total maker fees you've received in this epoch.": "Distributed based on the proportion of the total maker fees you've received in this epoch.",
+  "Market Make": "Market Make",
+  "Trading": "Trading",
+  "Distributed based on the proportion of total maker fees you've paid in this epoch.": "Distributed based on the proportion of total maker fees you've paid in this epoch.",
+  "Launch Console": "Launch Console"
+}

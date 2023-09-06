@@ -5,13 +5,13 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 export interface TeamTileProps {
   title: string
   image?: IGatsbyImageData
-  body?: string
-  children: React.ReactNode
+  body?: string | React.ReactNode
+  children?: React.ReactNode
 }
 
 const TeamTile = ({ title, image, body, children }: TeamTileProps) => {
   return (
-    <div className="rounded-[1.875rem] border border-current border-vega-light-300 p-space-5 dark:border-vega-dark-300 lg:p-space-6">
+    <div className="flex flex-col justify-between rounded-[1.875rem] border border-current border-vega-light-300 p-space-5 dark:border-vega-dark-300 lg:p-space-6">
       <div className="md:flex md:flex-row md:justify-between md:gap-x-space-5">
         {image && (
           <GatsbyImage
@@ -30,12 +30,12 @@ const TeamTile = ({ title, image, body, children }: TeamTileProps) => {
               }}
             />
           </div>
-          <div className="body-l mb-space-5 text-vega-light-400 dark:text-vega-dark-400">
+          <div className="body-l text-vega-light-400 dark:text-vega-dark-400">
             {body}
           </div>
         </div>
       </div>
-      <div>{children}</div>
+      {children && <div className="mt-space-5">{children}</div>}
     </div>
   )
 }

@@ -1,7 +1,6 @@
 name: End-to-end tests
 on:
   pull_request:
- # workflow_dispatch:
 
 jobs:
   cypress-run:
@@ -14,37 +13,29 @@ jobs:
       fail-fast: false
       matrix:
         # run n copies of the current job in parallel
-        containers: [2]
+        containers: [1]
     steps:
-      - name: Wait for build to succeed
-        uses: fountainhead/action-wait-for-check@v1.1.0
-        id: wait-for-build
+      - name: Waiting for 200 from the Vercel Preview
+        uses: patrickedqvist/wait-for-vercel-preview@v1.3.1
+        id: previewUrl
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          checkName: Pages changed
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
-      
-    
+          check_interval: 4
+          max_timeout: 180
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
           repository: 'vegaprotocol/vega-website-cypress-tests'
-             
+
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          wait-on: "https://deploy-preview-${{github.event.pull_request.number}}--vega.netlify.app"
-          config: baseUrl="https://deploy-preview-${{github.event.pull_request.number}}--vega.netlify.app"
-          record: true
-          parallel: true
+          wait-on: ${{steps.previewUrl.outputs.url}}
+          config: baseUrl="${{steps.previewUrl.outputs.url}}"
         env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-     # - name: Print Cypress Cloud URL
-       # run: |
-       #   echo Cypress finished with: ${{ steps.cypress.outcome }}
-        #  echo See results at ${{ steps.cypress.outputs.dashboardUrl }}

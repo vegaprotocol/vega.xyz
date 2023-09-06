@@ -16,8 +16,11 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
     let locale = 'en'
 
     // extract locale from file extension
-    if (pathComponents[1]) {
-      locale = pathComponents[1].split('.').slice(-1).pop()
+    if (pathComponents[pathComponents.length - 1]) {
+      locale = pathComponents[pathComponents.length - 1]
+        .split('.')
+        .slice(-1)
+        .pop()
     }
 
     if (pathComponents.length > 0 && parseInt(pathComponents[0])) {
@@ -52,7 +55,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const response = await graphql(`
-    query {
+    query AllMarkDownRemark {
       allMarkdownRemark {
         edges {
           node {
@@ -83,40 +86,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
-exports.sourceNodes = async ({
-  actions,
-  createNodeId,
-  createContentDigest,
-}) => {
-  const incentivesData = await fetch(
-    `https://notion-data-service.ops.vega.xyz/query?id=aa64c6a0-0e0d-460d-ad44-ceacc6cd5957`
-  )
-  const incentivesResultData = await incentivesData.json()
-  incentivesResultData.notion_data.forEach((incentive) => {
-    const node = {
-      name: incentive.properties.find((o) => o.name === 'Name').values,
-      type: incentive.properties.find((o) => o.name === 'Type').values,
-      status: incentive.properties.find((o) => o.name === 'Status').values,
-      reward: incentive.properties.find((o) => o.name === 'Reward').values,
-      end_date: incentive.properties.find((o) => o.name === 'End Date').values,
-      start_date: incentive.properties.find((o) => o.name === 'Start Date')
-        .values,
-      link: incentive.properties.find((o) => o.name === 'Link').values,
-      tags: incentive.properties.find((o) => o.name === 'Tags').values,
-
-      id: createNodeId(`incentive-${incentive.id}`),
-      parent: null,
-      children: [],
-      internal: {
-        type: `Incentives`,
-        contentDigest: createContentDigest(incentive),
-      },
-    }
-    actions.createNode(node)
-  })
-}
-
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
+  if (stage === 'build-javascript') {
+    actions.setWebpackConfig({
+      devtool: false,
+    })
+  }
   actions.setWebpackConfig({
     module: {
       rules: [

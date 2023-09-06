@@ -1,8 +1,11 @@
 import React from 'react'
 import { useNetworkParams } from '../hooks/use-network-params'
 import { SnakeToCamel } from '../utils/tools'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import ParameterBox from './ParameterBox'
+import { addDecimalsFormatNumber } from '@vegaprotocol/utils'
+import { formatNumberWithSuffix } from '../utils/tools'
+import BigNumber from 'bignumber.js'
 
 export interface NetworkParameterProps {
   param: string
@@ -10,9 +13,10 @@ export interface NetworkParameterProps {
   suffix?: string
   formatForVega?: boolean
   expressPercentage?: boolean
+  prettyNumber?: boolean
 }
 
-const explorerUrl = 'https://explorer.vega.xyz/network-parameters'
+const explorerUrl = `${process.env.GATSBY_VEGA_EXPLORER_URL}network-parameters`
 
 const NetworkParameter = ({
   param,
@@ -20,19 +24,22 @@ const NetworkParameter = ({
   suffix,
   formatForVega = false,
   expressPercentage = false,
+  prettyNumber = false,
 }: NetworkParameterProps) => {
   const { params, loading, error } = useNetworkParams()
   const { t } = useTranslation('component.network-parameter')
 
   const formatVegaValue = (value) => {
-    return (value / 1000000000000000000).toFixed(2)
+    return addDecimalsFormatNumber(value, 18)
   }
 
   const formatValue = (value) => {
     if (formatForVega) {
       return formatVegaValue(value)
     } else if (expressPercentage) {
-      return value * 100
+      return new BigNumber(value).times(100).toString()
+    } else if (prettyNumber) {
+      return formatNumberWithSuffix(value)
     } else {
       return value
     }

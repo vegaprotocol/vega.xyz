@@ -5,14 +5,12 @@ import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import GlitchTitle from '../../components/GlitchTitle'
-import CalloutHero from '../../components/CalloutHero'
 import Callout from '../../components/UI/Callout'
 import BoxTitle from '../../components/BoxTitle'
 import Fairground from '../../components/Fairground'
 import ToolBox from '../../components/ToolBox'
 import { getImage } from 'gatsby-plugin-image'
 import AddGraphic from '../../components/Svg/Use/Add/Add'
-import { routeThroughInterstitialPage } from '../../utils/tools'
 import { Link, Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const UsePage = ({ data }) => {
@@ -55,7 +53,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.desktopWalletIcon,
-      title: 'Desktop Wallet',
+      title: t('Desktop Wallet'),
       author: 'Vega',
       link: '/wallet/',
       description: t(
@@ -66,27 +64,27 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.consoleIcon,
-      title: 'Console',
+      title: t('Console'),
       author: 'Vega',
-      link: 'https://console.fairground.wtf/',
+      link: 'https://console.vega.xyz/',
       description: t(
-        'A dApp for trading cash settled futures on the fully decentralised Vega network (Testnet).'
+        'A dApp for trading cash settled futures on the fully decentralised Vega network.'
       ),
       categories: ['trading'],
     },
     {
       collection: 'tools',
       icon: data.governanceIcon,
-      title: 'Governance',
+      title: t('Governance'),
       author: 'Vega',
-      link: 'https://token.vega.xyz/governance',
+      link: 'https://governance.vega.xyz/proposals',
       description: t('Review and vote on governance proposals.'),
       categories: ['governance'],
     },
     {
       collection: 'tools',
       icon: data.blockExplorerIcon,
-      title: 'Block Explorer',
+      title: t('Block Explorer'),
       author: 'Vega',
       link: 'https://explorer.vega.xyz/',
       description: t(
@@ -97,16 +95,16 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.stakingIcon,
-      title: 'Staking',
+      title: t('Staking'),
       author: 'Vega',
-      link: 'https://token.vega.xyz/staking',
+      link: 'https://governance.vega.xyz/validators',
       description: t('Stake $VEGA tokens and get rewarded.'),
       categories: ['governance', 'staking'],
     },
     {
       collection: 'tools',
       icon: data.cliWalletIcon,
-      title: 'CLI Wallet',
+      title: t('CLI Wallet'),
       author: 'Vega',
       link: 'https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet',
       description: t(
@@ -116,35 +114,46 @@ const UsePage = ({ data }) => {
     },
     {
       collection: 'tools',
+      icon: data.guidesIcon,
+      title: t('Guides'),
+      author: 'Vega Community',
+      link: 'https://docs.vega.xyz/mainnet/tutorials/community-created',
+      description: '',
+      categories: [],
+    },
+    {
+      collection: 'tools',
       icon: data.nodesGuruIcon,
-      title: 'Vega World',
+      title: t('Vega World'),
       author: 'Nodes Guru',
-      link: 'https://nodes.guru/vega',
-      description: 'Who the validators are and reward history, stake history.',
+      link: 'https://stake.nodes.guru/vega/world',
+      description: t(
+        'Data around validators, staking and rewards past and present.'
+      ),
       categories: ['staking'],
     },
     {
       collection: 'tools',
       icon: data.vestingIcon,
-      title: 'Vesting',
+      title: t('Vesting'),
       author: 'Vega',
-      link: 'https://token.vega.xyz/vesting',
+      link: 'https://governance.vega.xyz/token/redeem',
       description: t('Redeem locked vega tokens.'),
       categories: [],
     },
     {
       collection: 'tools',
       icon: data.dataNodeIcon,
-      title: 'Data Node',
+      title: t('Data Node'),
       author: 'Vega',
-      link: 'https://github.com/vegaprotocol/data-node',
+      link: 'https://github.com/vegaprotocol/vega/tree/develop/datanode#data-node',
       description: t('Query the Vega network APIs to retrieve on chain data.'),
       categories: ['network'],
     },
     {
       collection: 'tools',
       icon: data.vegaCapsuleIcon,
-      title: 'Vega Capsule',
+      title: t('Vega Capsule'),
       author: 'Vega',
       link: 'https://github.com/vegaprotocol/vegacapsule',
       description: t(
@@ -155,7 +164,7 @@ const UsePage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.vegaValidatorsIcon,
-      title: 'Vega Validators and Delegators',
+      title: t('Vega Validators and Delegators'),
       author: 'XPRV',
       link: 'https://xprv-0.github.io/',
       description: t('Validators performance scores in a given Epoch.'),
@@ -172,19 +181,6 @@ const UsePage = ({ data }) => {
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-
-      <div className="pt-space-5">
-        <Container>
-          <CalloutHero
-            title={t('The Vega mainnet is live, trading launch H1 2023')}
-            text={t(
-              'Token holders can participate in governance, stake and delegate.'
-            )}
-            buttonText={t('View the Roadmap')}
-            buttonLink="/#roadmap"
-          />
-        </Container>
-      </div>
       <Container dataCy={'main'}>
         <div className="mb-8 pt-6 text-center md:mb-12 md:pt-16">
           <div className="mx-auto max-w-[61rem] text-center">
@@ -311,7 +307,7 @@ const UsePage = ({ data }) => {
             <p className="copy-s prose text-vega-mid-grey">
               <Trans t={t}>
                 <a
-                  href="https://vega.xyz/discord/"
+                  href="https://vega.xyz/discord"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -430,6 +426,16 @@ export const query = graphql`
       }
     }
     dataNodeIcon: file(relativePath: { eq: "tool-icons/data-node.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          height: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    guidesIcon: file(relativePath: { eq: "tool-icons/guides.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 96

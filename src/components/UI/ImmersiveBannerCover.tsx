@@ -25,7 +25,6 @@ const ImmersiveBannerCover = ({
   backgroundImage,
   image,
 }: ImmersiveBannerCoverProps) => {
-  console.log(backgroundImage?.images?.fallback?.src)
   return (
     <div
       className="w-full rounded-[1.875rem] bg-cover"

@@ -23,6 +23,10 @@ const languages = [
     code: 'ko',
     localName: '한국인',
   },
+  {
+    code: 'vi',
+    localName: 'Tiếng Việt',
+  },
 ]
 
 module.exports = {
@@ -43,15 +47,7 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-plugin-anchor-links`,
-      options: {
-        duration: 1500,
-        offset: -100,
-      },
-    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -93,13 +89,6 @@ module.exports = {
       options: {
         name: `papers`,
         path: `${__dirname}/src/content/papers`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `roadmap`,
-        path: `${__dirname}/src/content/roadmap`,
       },
     },
     {
@@ -165,6 +154,9 @@ module.exports = {
               object.collection.slice(1).toLowerCase()
             : `Json`,
       },
+    },
+    {
+      resolve: '@vercel/gatsby-plugin-vercel-analytics',
     },
   ],
   graphqlTypegen: true,

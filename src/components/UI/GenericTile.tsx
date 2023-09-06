@@ -11,7 +11,7 @@ export interface Link {
 export interface GenericTileProps {
   title: string
   image?: IGatsbyImageData
-  description?: string
+  children: React.ReactNode
   subline?: string
   link?: Link
 }
@@ -19,18 +19,18 @@ export interface GenericTileProps {
 const GenericTile = ({
   title,
   image,
-  description,
   subline,
   link,
+  children,
 }: GenericTileProps) => {
   return (
     <div className="mb-space-4 flex flex-col justify-between border p-space-5">
       <div>
         {image && <GatsbyImage image={image} alt="" className="mb-space-5" />}
         <div className="heading-s mb-space-4">{title}</div>
-        {description && (
+        {children && (
           <div className="body-l text-vega-light-400 dark:text-vega-dark-400">
-            {description}
+            {children}
           </div>
         )}
         {subline && (

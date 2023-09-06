@@ -22,6 +22,18 @@ const Develop = () => {
             text={t('Documentation')}
             link="https://docs.vega.xyz"
           />
+          <NavigationItem
+            text={t('Tutorials')}
+            link="https://docs.vega.xyz/mainnet/tutorials"
+          />
+          <NavigationItem
+            text={t('API documentation')}
+            link="https://docs.vega.xyz/mainnet/api/overview"
+          />
+          <NavigationItem
+            text={t('Programmatic trading')}
+            link="/programmatic-trading"
+          />
         </NavigationList>
       </div>
       <div>
@@ -46,7 +58,6 @@ const Develop = () => {
           <Trans t={t}>Get rewarded</Trans>
         </NavigationHeading>
         <NavigationList>
-          <NavigationItem text={t('Rewards')} link="/rewards" />
           <NavigationItem
             text={t('Fairground incentives')}
             link="https://fairground.wtf/"

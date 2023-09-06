@@ -2,8 +2,8 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Helmet } from 'react-helmet'
-import Link from '../components/UI/Link'
-import SiteBanner from '../components/SiteBanner'
+import { AnnouncementBanner as Banner } from '@vegaprotocol/announcements'
+import { Analytics } from '@vercel/analytics/react'
 
 const Layout = ({ children, stickyHeader = true }) => {
   return (
@@ -21,16 +21,10 @@ const Layout = ({ children, stickyHeader = true }) => {
               className={stickyHeader ? 'mt-[4.8125rem] lg:mt-[6.25rem]' : ''}
             >
               <div>
-                <SiteBanner>
-                  The Mainnet Sims are live!{' '}
-                  <Link
-                    to="https://fairground.wtf/"
-                    className="font-bold underline hover:no-underline"
-                  >
-                    <br className="md:hidden" />
-                    Come help stress test the network
-                  </Link>
-                </SiteBanner>
+                <Banner
+                  app="wallet"
+                  configUrl={process.env.GATSBY_ANNOUNCEMENTS_CONFIG_URL}
+                />
                 {children}
               </div>
             </div>
@@ -38,6 +32,7 @@ const Layout = ({ children, stickyHeader = true }) => {
           <Footer />
         </div>
       </div>
+      <Analytics />
     </div>
   )
 }

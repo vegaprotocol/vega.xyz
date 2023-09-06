@@ -1,13 +1,14 @@
-import { Link } from "gatsby";
-import React from "react";
-import LinkArrow from "./Svg/LinkArrow";
+import { Link } from 'gatsby'
+import React from 'react'
+import LinkArrow from './Svg/LinkArrow'
 
 const TextLink = (props) => {
-  const isExternal = props.to.startsWith("http");
+  const isExternal = props.to.startsWith('http')
+
   const colourClass =
     props.colour === `blackwhite`
       ? `text-black dark:text-white`
-      : "text-black dark:text-white";
+      : 'text-black dark:text-white'
   if (isExternal) {
     return (
       <span className={`${props.className}`}>
@@ -20,10 +21,10 @@ const TextLink = (props) => {
           {props.children}
         </a>
         &nbsp;&nbsp;
-        {props.to.startsWith("http") && <LinkArrow className="inline" />}
+        <LinkArrow className="inline" />
         &nbsp;
       </span>
-    );
+    )
   } else {
     return (
       <Link
@@ -32,8 +33,8 @@ const TextLink = (props) => {
       >
         {props.children}
       </Link>
-    );
+    )
   }
-};
+}
 
-export default TextLink;
+export default TextLink
