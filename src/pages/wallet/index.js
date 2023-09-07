@@ -276,8 +276,7 @@ const WalletPageNew = ({ data }) => {
     setUserAgent(getBrowser())
   }, [])
 
-  const { fairgroundDownloads, loading, error } =
-    useDesktopWalletFairgroundDownloads()
+  const { fairgroundDownloads } = useDesktopWalletFairgroundDownloads()
 
   return (
     <Layout stickyHeader={false}>
@@ -537,10 +536,14 @@ const WalletPageNew = ({ data }) => {
               <p className="body-xl mb-space-6 md:mb-space-8">
                 <Trans t={t}>
                   Head over to{' '}
-                  <a href="https://fairground.wtf/" target="_blank">
+                  <a
+                    href="https://fairground.wtf/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Fairground
                   </a>
-                  , Vega's testnet, and help test the latest software to earn
+                  , Vega's testnet, and participate in incentives to earn
                   rewards.
                 </Trans>
               </p>
