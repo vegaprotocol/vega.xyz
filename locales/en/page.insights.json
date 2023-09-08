@@ -1,5 +1,8 @@
 {
-  "Insights": "Insights",
-  "Articles about vega from around the web": "Articles about vega from around the web",
+  "Previous Page": "Previous Page",
+  "Page {{currentPage}} of {{numPages}}": "Page {{currentPage}} of {{numPages}}",
+  "Next Page": "Next Page",
+  "Insights & Talks": "Insights & Talks",
+  "Articles and talks about vega": "Articles and talks about vega",
   "Latest news": "Latest news"
 }

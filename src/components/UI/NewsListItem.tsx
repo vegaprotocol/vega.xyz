@@ -31,37 +31,45 @@ const NewsList = ({
 
   return (
     <div className="mb-space-6 border-b border-vega-light-200 pb-space-6 dark:border-vega-dark-200 md:mb-space-6 md:pb-space-6">
-      {image && <GatsbyImage image={image} alt="" className="mb-space-7" />}
-      <div className="heading-xs !m-0 !mb-space-2">{title}</div>
-      <div className="mb-space-4 flex gap-x-space-4">
-        <div className="inline-block">
-          <SquareBullet size="10" />
-          <Trans t={t}>Insight</Trans>
-        </div>
-        {location && (
-          <div>
-            <SquareBullet size={6} /> {location}
+      <div className="grid grid-cols-12 gap-x-space-6">
+        <div className="col-span-12 md:col-span-6">
+          <div className="heading-xs !m-0 !mb-space-2">{title}</div>
+          <div className="mb-space-4 flex gap-x-space-4">
+            <div className="inline-block">
+              <SquareBullet size="10" />
+              <Trans t={t}>Insight</Trans>
+            </div>
+            {location && (
+              <div>
+                <SquareBullet size={6} /> {location}
+              </div>
+            )}
+            {date && (
+              <div className="text-vega-light-300 dark:text-vega-dark-300">
+                <SquareBullet size={6} />
+                {date}
+              </div>
+            )}
           </div>
-        )}
-        {date && (
-          <div className="text-vega-light-300 dark:text-vega-dark-300">
-            <SquareBullet size={6} />
-            {date}
+          <div className="mb-space-4 text-vega-light-400 dark:text-vega-dark-400">
+            {children}
           </div>
-        )}
-      </div>
-      <div className="mb-space-4 text-vega-light-400 dark:text-vega-dark-400">
-        {children}
-      </div>
 
-      {links &&
-        links.map((link, idx) => (
-          <div key={idx} className="mb-space-3 last:mb-0">
-            <Button to={link.url} variant="secondary">
-              {link.title}
-            </Button>
-          </div>
-        ))}
+          {links &&
+            links.map((link, idx) => (
+              <div key={idx} className="mb-space-3 last:mb-0">
+                <Button to={link.url} variant="secondary">
+                  {link.title}
+                </Button>
+              </div>
+            ))}
+        </div>
+        <div className="col-span-12 mt-space-6 md:col-span-6 md:mt-0">
+          {image && (
+            <GatsbyImage image={image} alt="" className="max-w-[20rem]" />
+          )}
+        </div>
+      </div>
     </div>
   )
 }

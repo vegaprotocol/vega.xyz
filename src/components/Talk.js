@@ -4,7 +4,7 @@ import SquareBullet from './Svg/SquareBullet'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Talk = ({ talk }) => {
-  const { i18n, t } = useTranslation('component.talk')
+  const { t } = useTranslation('component.talk')
 
   return (
     <div

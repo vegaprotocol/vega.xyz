@@ -2,6 +2,7 @@ const path = require(`path`)
 const fetch = require(`node-fetch`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const spawn = require('cross-spawn')
+import languages from './languages.js'
 
 module.exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -83,6 +84,61 @@ module.exports.createPages = async ({ graphql, actions }) => {
         },
       })
     }
+  })
+
+  const result = await graphql(`
+    query {
+      allMarkdownRemark(
+        filter: { collection: { in: ["insights", "talks"] } }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        group(field: fields___locale) {
+          fieldValue
+          totalCount
+        }
+      }
+    }
+  `)
+
+  const postsPerPage = 10
+
+  languages.forEach((language) => {
+    const group = result.data.allMarkdownRemark.group.find(
+      (g) => g.fieldValue === language.code
+    )
+    const totalCount = group ? group.totalCount : 0
+    const numPages = Math.ceil(totalCount / postsPerPage)
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      if (language.code === 'en') {
+        createPage({
+          path: i === 0 ? `/insights` : `/insights/${i + 1}`,
+          component: path.resolve('./src/templates/insights.tsx'),
+          context: {
+            language: 'en',
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages,
+            currentPage: i + 1,
+          },
+        })
+      } else {
+        createPage({
+          path:
+            i === 0
+              ? `/${language.code}/insights`
+              : `/${language.code}/insights/${i + 1}`,
+          component: path.resolve('./src/templates/insights.tsx'),
+          context: {
+            language: language.code,
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages,
+            currentPage: i + 1,
+          },
+        })
+      }
+    })
   })
 }
 

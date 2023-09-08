@@ -1,28 +1,64 @@
 import React, { useState } from 'react'
-import { graphql } from 'gatsby'
-import Seo from '../../components/Seo'
-import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
-import Container from '../../components/Container'
-import Tag from '../../components/UI/Tag'
-import GlitchTitle from '../../components/UI/GlitchTitle'
+import { graphql, Link } from 'gatsby'
+import Seo from '../components/Seo'
+import Layout from '../components/Layout'
+import TranslationsBanner from '../components/TranslationsBanner'
+import Container from '../components/Container'
+import Tag from '../components/UI/Tag'
+import GlitchTitle from '../components/UI/GlitchTitle'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import NewsListItem from '../../components/UI/NewsListItem'
-import Talk from '../../components/Talk'
+import NewsListItem from '../components/UI/NewsListItem'
+import Talk from '../components/Talk'
 
-const InsightsPage = ({ data }) => {
+const InsightsPage = ({ data, pageContext }) => {
   const { i18n, t } = useTranslation('page.insights')
   const [missingTranslations, setMissingTranslations] = useState(false)
+  const { currentPage, numPages } = pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage =
+    currentPage - 1 === 1 ? '/insights' : `/insights/${currentPage - 1}`
+  const nextPage = `/insights/${currentPage + 1}`
 
   i18n.on('missingKey', (lng) => {
     setMissingTranslations(true)
   })
 
+  const Pagination = () => {
+    return (
+      <div className="body-l flex justify-between">
+        {!isFirst ? (
+          <Link to={prevPage} rel="prev">
+            ← <Trans t={t}>Previous Page</Trans>
+          </Link>
+        ) : (
+          <div className="opacity-50">
+            ← <Trans t={t}>Previous Page</Trans>
+          </div>
+        )}
+        <p className="body-l">
+          <Trans t={t} values={{ currentPage, numPages }}>
+            Page {{ currentPage }} of {{ numPages }}
+          </Trans>
+        </p>
+        {!isLast ? (
+          <Link to={nextPage} rel="next">
+            <Trans t={t}>Next Page</Trans> →
+          </Link>
+        ) : (
+          <div className="opacity-50">
+            <Trans t={t}>Next Page</Trans> →
+          </div>
+        )}
+      </div>
+    )
+  }
+
   return (
     <Layout>
       <Seo
-        title={t('Insights')}
-        description={t('Articles about vega from around the web')}
+        title={t('Insights & Talks')}
+        description={t('Articles and talks about vega')}
       />
       {missingTranslations && <TranslationsBanner />}
       <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
@@ -33,27 +69,23 @@ const InsightsPage = ({ data }) => {
                 <Trans t={t}>Latest news</Trans>
               </Tag>
             </h1>
-            <h2 className="heading-xxl">
+            <h2 className="heading-xl mb-space-2">
               <GlitchTitle color="red">
-                <Trans t={t}>Insights</Trans>
+                <Trans t={t}>Insights & Talks</Trans>
               </GlitchTitle>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-12 md:gap-space-8">
-            <div className="md:col-span-4">
-              <h2 className="heading-l mb-space-6 md:mb-0">
-                <Trans t={t}>Articles about vega from around the web</Trans>
-              </h2>
-            </div>
+          <div className="pb-space-6">
+            <Pagination />
+          </div>
 
-            <div className="md:col-span-8">
+          <div className="grid border-t border-vega-light-200 pt-space-6 dark:border-vega-dark-200 md:grid-cols-12 md:gap-space-8">
+            <div className="md:col-span-12">
               {data.allMarkdownRemark.edges.map((content, idx) => (
-                <div>
+                <div key={idx}>
                   {content.node.collection === 'talks' ? (
-                    <div>
-                      <Talk key={idx} talk={content.node} />
-                    </div>
+                    <Talk key={idx} talk={content.node} />
                   ) : (
                     <NewsListItem
                       key={idx}
@@ -73,6 +105,9 @@ const InsightsPage = ({ data }) => {
                   )}
                 </div>
               ))}
+              <div className="pb-space-10">
+                <Pagination />
+              </div>
             </div>
           </div>
         </Container>
@@ -82,7 +117,7 @@ const InsightsPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query ($language: String!) {
+  query ($language: String!, $skip: Int!, $limit: Int!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
@@ -98,6 +133,8 @@ export const query = graphql`
         fields: { locale: { eq: $language } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {

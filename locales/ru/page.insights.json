@@ -1,5 +1,8 @@
 {
-  "Insights": "Инсайты",
-  "Articles about vega from around the web": "Статьи о Vega со всего мира",
+  "Previous Page": "",
+  "Page {{currentPage}} of {{numPages}}": "",
+  "Next Page": "",
+  "Insights & Talks": "",
+  "Articles and talks about vega": "",
   "Latest news": "Последние новости"
 }
