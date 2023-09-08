@@ -64,12 +64,7 @@ const InsightsPage = ({ data, pageContext }) => {
       <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
         <Container>
           <div className="mb-space-8 md:mb-space-10 lg:mb-space-11">
-            <h1 className="mb-space-4">
-              <Tag>
-                <Trans t={t}>Latest news</Trans>
-              </Tag>
-            </h1>
-            <h2 className="heading-xl mb-space-2">
+            <h2 className="heading-xl mb-space-2 mt-space-4">
               <GlitchTitle color="red">
                 <Trans t={t}>Insights & Talks</Trans>
               </GlitchTitle>

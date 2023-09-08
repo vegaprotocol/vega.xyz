@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "predevelop": "node createMissingLanguageFiles.js",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
