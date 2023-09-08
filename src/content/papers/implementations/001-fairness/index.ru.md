@@ -1,9 +1,9 @@
 ---
-title: 'Wendy, the Good Little Fairness Widget'
-description: 'Current blockchains either provide explicit ways to front run or leave transaction ordering to the full discretion of the miners. In this paper Klaus Kursawe proposes a new definition of fairness in terms of transaction ordering on blockchains using local time.'
+title: 'Венди, маленький добрый виджет справедливости'
+description: 'Существующие блокчейны либо предоставляют явные способы опережения, либо оставляют упорядочивание транзакций на полное усмотрение майнеров. В данной статье Клаус Курсаве предлагает новое определение справедливости с точки зрения упорядочивания транзакций в блокчейне с использованием местного времени.'
 links:
-  - title: View on IACR EPrint
+  - title: Потсморите на IACR EPrint
     link: https://eprint.iacr.org/2020/885
 position: 1
-category: Implementations
+category: Реализация
 ---

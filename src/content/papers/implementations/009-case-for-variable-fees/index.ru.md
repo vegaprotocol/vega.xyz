@@ -1,9 +1,9 @@
 ---
-title: 'The Case for Variable Fees in Constant Product Markets: An Agent Based Simulation'
-description: Dr David Siska co-authored paper on how the relationship between the fee in a constant product market (CPM) and the volatility of the swapped pair on other liquid exchanges influences the losses / gains of the liquidity providers.
+title: 'Причины введения переменных комиссионных на рынках постоянных продуктов: Агентское моделирование'
+description: 'Доктор Дэвид Сиска в соавторстве написал статью о том, как соотношение между комиссией на рынке постоянных продуктов (CPM) и волатильностью свопируемой пары на других ликвидных биржах влияет на убытки/прибыли поставщиков ликвидности.'
 links:
-  - title: View on SSRN
+  - title: Посмотреть в SSRN
     link: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4065088
 position: 7
-category: Implementations
+category: Реализация
 ---

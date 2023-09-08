@@ -1,9 +1,9 @@
 ---
-title: 'Vega Protocol Investment Thesis'
+title: 'Vega Protocol Инвестиционные тезисы'
 date: 2022-02-23
 links:
-  - title: Read more
+  - title: Узнайте больше
     url: https://www.edenblock.com/post/vega-protocol-investment-thesis
 ---
 
-From the outset, the founding team had two 2 guiding principles: 1) a decentralised derivatives platform to scale billions in daily notional transaction volume. 2) it should be fair for all...
+С самого начала у команды основателей было два основных принципа: 1) децентрализованная платформа для работы с деривативами, способная масштабировать миллиардные объемы ежедневных условных сделок. 2) она должна быть справедливой для всех...

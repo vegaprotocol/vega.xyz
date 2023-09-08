@@ -1,10 +1,10 @@
 ---
-title: The Block
+title: Блок
 date: 2023-05-23
 links:
-  - title: Read more
+  - title: Узнайте больше
     url: https://www.theblock.co/post/231875/vega-protocol-blockchain-markets
 featuredImage: 'the-block.webp'
 ---
 
-Layer 1 blockchain Vega Protocol activates on-chain futures after mainnet rollout
+Блокчейн первого уровня Vega Protocol активирует он-чейн фьючерсы после развертывания основной сети

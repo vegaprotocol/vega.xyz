@@ -1,9 +1,9 @@
 ---
-title: 'The Space Race For Open Markets: Vega'
+title: 'Космическая гонка за открытыми рынками: Vega'
 date: 2021-06-01
 links:
-  - title: Read more
+  - title: Узнайте больше
     url: https://www.arringtoncapital.com/blog/the-space-race-for-open-markets-vega/
 ---
 
-Vega is an evolution in the history of markets. It’s a multi-verse of markets, dragging humanity out of an adversarial war of all and leading us to a new space race for open liquidity...
+Vega - это эволюция в истории рынков. Это мультиверс рынков, вытягивающий человечество из враждебной войны всех против всех и ведущий нас в новую космическую гонку за открытой ликвидностью...

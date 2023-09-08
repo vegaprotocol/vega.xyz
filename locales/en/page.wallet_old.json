@@ -1,11 +1,15 @@
 {
-  "Test on Fairground": "Test on Fairground",
-  "Get the Vega Wallet": "Get the Vega Wallet",
-  "Connect to Vega dapps securely, deposit funds and approve or reject transactions with the Vega wallet. Download, set up and you're ready to connect": "Connect to Vega dapps securely, deposit funds and approve or reject transactions with the Vega wallet. Download, set up and you're ready to connect",
-  "Vega Wallet browser extension officially supports Chrome or Firefox. Check the list of <2>supported browsers</2> for latest guidance.": "Vega Wallet browser extension officially supports Chrome or Firefox. Check the list of <2>supported browsers</2> for latest guidance.",
-  "DOWNLOAD THE VEGA DESKTOP WALLET": "DOWNLOAD THE VEGA DESKTOP WALLET",
-  "Want to test on Fairground?": "Want to test on Fairground?",
+  "Securely connect to Vega dapps and instantly approve and reject transactions on the Vega network": "Securely connect to Vega dapps and instantly approve and reject transactions on the Vega network",
+  "Download Vega Wallet (Mainnet)": "Download Vega Wallet (Mainnet)",
+  "Want to test new features on Fairground?": "Want to test new features on Fairground?",
+  "Error fetching Fairground desktop wallet downloads": "Error fetching Fairground desktop wallet downloads",
+  "Download Vega Wallet (Testnet)": "Download Vega Wallet (Testnet)",
+  "Explore the wallet project on Github": "Explore the wallet project on Github",
+  "How-to use": "How-to use",
   "Supported browsers": "Supported browsers",
+  "Easily manage multiple Vega wallets and key pairs in one place.": "Easily manage multiple Vega wallets and key pairs in one place.",
+  "Read the guide to getting started with Vega wallet": "Read the guide to getting started with Vega wallet",
   "Test with latest Browser Wallet": "Test with latest Browser Wallet",
-  "Test with legacy Desktop Wallet": "Test with legacy Desktop Wallet"
+  "Test with legacy Desktop Wallet": "Test with legacy Desktop Wallet",
+  "Head over to <2>Fairground</2>, Vega's testnet, and help test the latest software to earn rewards.": "Head over to <2>Fairground</2>, Vega's testnet, and help test the latest software to earn rewards."
 }

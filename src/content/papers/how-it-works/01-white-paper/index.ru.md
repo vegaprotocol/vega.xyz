@@ -1,9 +1,9 @@
 ---
-title: Protocol whitepaper
-description: This whitepaper describes the protocol and explores how traders, market makers, and node operators interact to collectively run high performance, fully decentralised markets in a deterministic way without the need for human intervention.
+title: Белая книга протокола
+description: В данном документе описывается протокол и рассматривается взаимодействие трейдеров, маркет-мейкеров и операторов узлов для коллективного управления высокопроизводительными, полностью децентрализованными рынками в детерминированном режиме без необходимости вмешательства человека.
 links:
-  - title: View PDF
+  - title: Посмотреть PDF
     link: /papers/vega-protocol-whitepaper.pdf
 position: 1
-category: How it works
+category: Как это работает
 ---

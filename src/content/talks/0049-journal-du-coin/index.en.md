@@ -7,5 +7,5 @@ links:
     link: https://www.youtube.com/watch?v=hPJU3sA54ho&t=3s
 ---
 
-Vega Founder <a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a>, talks with Gregory Guittard and discusses the appchain model, the oracles and the governance ecosystem of Vega, the future of CEXs versus DEXs
+Vega Founder <a href="https://twitter.com/barnabee" target="_blank">Barney Mannerings</a>, talks with Gregory Guittard and discusses the appchain model, oracles and the governance ecosystem of Vega and the future of CEXs versus DEXs
 
