@@ -1,7 +1,10 @@
 {
   "Previous Page": "",
-  "Page {{currentPage}} of {{numPages}}": "",
+  "Previous": "",
+  "{{firstItem}} - {{lastItem}} of {{totalItems}}": "",
   "Next Page": "",
+  "Next": "",
   "Insights & Talks": "",
-  "Articles and talks about vega": ""
+  "Articles and talks about vega": "",
+  "Insights & talks.": ""
 }

@@ -2,5 +2,6 @@
   "Insights": "",
   "Articles about vega from around the web": "",
   "Page {currentPage} of {numPages}": "",
-  "Latest news": ""
+  "Latest news": "",
+  "Page {{currentPage}} of {{numPages}}": ""
 }

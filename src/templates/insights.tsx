@@ -16,6 +16,9 @@ const InsightsPage = ({ data, pageContext }) => {
   const { currentPage, numPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
+  const firstItem = currentPage * 10 - 9
+  const totalItems = data.allMarkdownRemark.totalCount
+  const lastItem = isLast ? totalItems : firstItem + 9
   const prevPage =
     currentPage - 1 === 1 ? '/insights' : `/insights/${currentPage - 1}`
   const nextPage = `/insights/${currentPage + 1}`
@@ -28,26 +31,50 @@ const InsightsPage = ({ data, pageContext }) => {
     return (
       <div className="body-l flex justify-between">
         {!isFirst ? (
-          <Link to={prevPage} rel="prev">
-            ← <Trans t={t}>Previous Page</Trans>
-          </Link>
+          <>
+            <div className="hidden md:block">
+              <Link to={prevPage} rel="prev">
+                ← <Trans t={t}>Previous Page</Trans>
+              </Link>
+            </div>
+            <div className="md:hidden">
+              <Link to={prevPage} rel="prev">
+                ← <Trans t={t}>Previous</Trans>
+              </Link>
+            </div>
+          </>
         ) : (
-          <div className="opacity-50">
-            ← <Trans t={t}>Previous Page</Trans>
-          </div>
+          <>
+            <div className="hidden opacity-50 md:block">
+              ← <Trans t={t}>Previous Page</Trans>
+            </div>
+            <div className="opacity-50 md:hidden">
+              ← <Trans t={t}>Previous</Trans>
+            </div>
+          </>
         )}
         <p className="body-l">
-          <Trans t={t} values={{ currentPage, numPages }}>
-            Page {{ currentPage }} of {{ numPages }}
+          <Trans t={t} values={{ currentPage, numPages, lastItem }}>
+            {{ firstItem }} - {{ lastItem }} of {{ totalItems }}
           </Trans>
         </p>
         {!isLast ? (
           <Link to={nextPage} rel="next">
-            <Trans t={t}>Next Page</Trans> →
+            <div className="hidden md:block">
+              <Trans t={t}>Next Page</Trans> →
+            </div>
+            <div className="md:hidden">
+              <Trans t={t}>Next</Trans> →
+            </div>
           </Link>
         ) : (
           <div className="opacity-50">
-            <Trans t={t}>Next Page</Trans> →
+            <div className="hidden md:block">
+              <Trans t={t}>Next Page</Trans> →
+            </div>
+            <div className="md:hidden">
+              <Trans t={t}>Next</Trans> →
+            </div>
           </div>
         )}
       </div>
@@ -63,12 +90,14 @@ const InsightsPage = ({ data, pageContext }) => {
       {missingTranslations && <TranslationsBanner />}
       <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
         <Container>
-          <div className="mb-space-8 md:mb-space-10 lg:mb-space-11">
-            <h2 className="heading-xl mb-space-2 mt-space-4">
-              <GlitchTitle color="red">
-                <Trans t={t}>Insights & Talks</Trans>
-              </GlitchTitle>
+          <div className="mb-space-8 text-center md:mb-space-10 lg:mb-space-11">
+            <h2 className="mb-space-4 text-[3rem] leading-none">
+              <Trans t={t}>Insights & talks.</Trans>
             </h2>
+            <p className="body-l mx-auto max-w-[25rem] text-vega-light-300 dark:text-vega-dark-300">
+              Articles about Vega and recordings of past talks, events and
+              podcasts
+            </p>
           </div>
 
           <div className="pb-space-6">
@@ -131,6 +160,7 @@ export const query = graphql`
       limit: $limit
       skip: $skip
     ) {
+      totalCount
       edges {
         node {
           html

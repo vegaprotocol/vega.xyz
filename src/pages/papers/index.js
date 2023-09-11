@@ -9,7 +9,7 @@ import Paper from '../../components/Paper'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const PapersPage = ({ data }) => {
-  const { t } = useTranslation('page.talks')
+  const { t } = useTranslation('page.papers')
   // t("How it works");
   // t("Implementations");
   return (

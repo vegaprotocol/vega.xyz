@@ -2,5 +2,6 @@
   "Insights": "Perspectivas",
   "Articles about vega from around the web": "Artículos sobre Vega en Internet",
   "Page {currentPage} of {numPages}": "",
-  "Latest news": "Últimas noticias"
+  "Latest news": "Últimas noticias",
+  "Page {{currentPage}} of {{numPages}}": ""
 }
