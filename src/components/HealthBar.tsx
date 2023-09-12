@@ -219,6 +219,8 @@ export const HealthBar = ({
   const showRemainder = committedNumber < rangeLimit || levels.length === 0
   const showOverflow = !showRemainder && lastVisibleLevel < levels.length - 1
 
+  console.log('triggerRatio', triggerRatio)
+
   return (
     <div className="w-full">
       <div
