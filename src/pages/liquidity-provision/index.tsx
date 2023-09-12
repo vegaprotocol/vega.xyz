@@ -31,6 +31,7 @@ import React, {
   useState,
 } from 'react'
 import BoxTitle from '../../components/BoxTitle'
+import Seo from '../../components/Seo'
 import Container from '../../components/Container'
 import GlitchTitle from '../../components/GlitchTitle'
 import Layout from '../../components/Layout'
@@ -66,18 +67,21 @@ const MarketsLiquidity = () => {
 
   return (
     <Layout stickyHeader={false}>
+      <Seo
+        title={t('Liquidity Provision')}
+        description={t(
+          'Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.'
+        )}
+      />
       <Container dataCy={'main'}>
         {missingTranslations && <TranslationsBanner />}
         <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
-          <h1>
-            <BoxTitle text={t('Use Vega')} />
-          </h1>
           <GlitchTitle
             level="1"
             color="red"
             className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
           >
-            <Trans t={t}>Provide Liquidity</Trans>
+            <Trans t={t}>Liquidity Provision</Trans>
           </GlitchTitle>
         </div>
         <div className="mx-auto mb-3 max-w-[44rem]">

@@ -1,6 +1,5 @@
 {
-  "Use Vega": "Vega 사용하기",
-  "Provide Liquidity": "유동성 공급하기",
+  "Liquidity Provision": "",
   "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "유동성 공급자는 네트워크에 유동성을 제공하는 대가로 거래 중에 지불한 수수료의 일부를 받습니다.",
   "The data relating to markets on this page is obtained from nodes on the Vega Blockchain.": "이 페이지의 시장 관련 데이터는 베가 블록체인의 노드에서 가져온 것입니다.",
   "Provides its software under open source licences": "",

@@ -187,23 +187,20 @@ const GovernancePage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Governance')}
+        title={t('Governance Home')}
         description={t(
           'Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
-          <h1>
-            <BoxTitle text={t('Governance')} />
-          </h1>
+        <div className="mx-auto max-w-[61rem] pt-space-5 text-center md:pt-space-6 lg:pt-space-10">
           <GlitchTitle
-            level="2"
+            level="1"
             color="red"
             className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
           >
-            <Trans t={t}>Govern the network</Trans>
+            <Trans t={t}>Governance</Trans>
           </GlitchTitle>
         </div>
         <div className="mx-auto max-w-[44rem]">

@@ -4,7 +4,6 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
-import Tag from '../../components/UI/Tag'
 import Button from '../../components/UI/Button'
 import Wormhole from '../../components/Svg/Wormhole'
 import Incentives from '../../components/Incentives'
@@ -27,22 +26,21 @@ const DevelopPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Develop with Vega')}
+        title={t('Developers')}
         description={t(
           'Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
+      <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-10">
         <Container hideXOverflow={true}>
           <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
             <div className="md:grid md:grid-cols-12">
               <div className="relative z-10 col-span-8 col-start-1 row-span-full lg:pb-[8vw]">
-                <h1>
-                  <Tag>Develop</Tag>
-                </h1>
                 <div className="title-m md:title-l lg:title-xxl mb-4 mt-4 max-w-[38.75rem]">
-                  <Trans t={t}>Develop on Vega</Trans>
+                  <h1>
+                    <Trans t={t}>Developers</Trans>
+                  </h1>
                 </div>
                 <LeadingLine className="max-w-[30rem] text-current">
                   <Trans t={t}>

@@ -33,12 +33,9 @@ const CommunityPage = ({ data }) => {
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="pt-6 lg:pt-16">
-          <h1>
-            <BoxTitle text={t('Community')} />
+          <h1 className="title-m font-glitched md:title-xl mb-4 mt-4 max-w-[48rem] md:mb-6">
+            <Trans t={t}>Community</Trans>
           </h1>
-          <h2 className="title-m font-glitched md:title-l mb-4 mt-4 max-w-[48rem] md:mb-6">
-            <Trans t={t}>Join the Vega community</Trans>
-          </h2>
 
           <div className="max-w-[48rem]">
             <LeadingLine className="!mb-14">

@@ -1,6 +1,5 @@
 {
-  "Use Vega": "使用VEGA",
-  "Provide Liquidity": "提供流动性”",
+  "Liquidity Provision": "",
   "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "流动性提供者在交易期间收取一定比例的费用，以换取在网络上提供流动性",
   "The data relating to markets on this page is obtained from nodes on the Vega Blockchain.": "此页面上与市场相关的数据是从 Vega 区块链上的节点获得的",
   "Provides its software under open source licences": "",

@@ -93,22 +93,17 @@ const ValidatorsPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Validate and secure the network')}
+        title={t('Validators')}
         description={t(
           "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator."
         )}
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mb-space-8 max-w-[60rem] pt-space-5 md:pt-space-6 lg:pt-space-7">
-          <h1 className="mb-space-4">
-            <Tag>
-              <Trans t={t}>Use Vega</Trans>
-            </Tag>
+        <div className="mb-space-8 max-w-[60rem] pt-space-5 md:pt-space-6 lg:pt-space-10">
+          <h1 className="heading-xl mb-space-8">
+            <Trans t={t}>Validators</Trans>
           </h1>
-          <h2 className="heading-l mb-space-8">
-            <Trans t={t}>Validate and secure the network</Trans>
-          </h2>
           <div className="body-xl">
             <Trans t={t}>
               Vega is a delegated proof of stake network with a finite number of

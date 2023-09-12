@@ -61,7 +61,7 @@ const KeyConceptsPage = () => {
   return (
     <Layout stickyHeader={false}>
       <Seo
-        title={t('Key Vega Concepts')}
+        title={t('Key Concepts')}
         description={t(
           'Explore how Vega bridges traditional finance and DeFi to create a bespoke trading alternative.'
         )}
@@ -69,18 +69,15 @@ const KeyConceptsPage = () => {
       {missingTranslations && <TranslationsBanner />}
       <div
         data-cy="main"
-        className="mb-16 pt-6 lg:pt-16"
+        className="mb-16 pt-space-6 lg:pt-space-10"
         id="keyConceptsScroll"
       >
         <div className="mx-auto max-w-[45rem] px-4 text-center md:px-0 xl:max-w-[50rem]">
-          <h1 className="mb-6">
-            <BoxTitle text={t('Key concepts')} />
-          </h1>
           <GlitchTitle
-            level="2"
-            className="title-m md:title-l xl:title-xl mb-6 px-3"
+            level="1"
+            className="title-m md:title-l xl:title-xxl mb-6 px-3"
           >
-            <Trans t={t}>What makes Vega different</Trans>
+            <Trans t={t}>Key Concepts</Trans>
           </GlitchTitle>
 
           <LeadingLine className="text-current">

@@ -71,11 +71,8 @@ const RewardsPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mb-space-8 pt-space-5 md:flex md:justify-between md:pt-space-6 lg:pt-space-7">
+        <div className="mb-space-8 pt-space-5 md:flex md:justify-between md:pt-space-6 lg:pt-space-10">
           <div>
-            <Tag className="mb-space-4">
-              <Trans t={t}>Develop</Trans>
-            </Tag>
             <h1 className="heading-l mb-space-8">
               <Trans t={t}>Rewards</Trans>
             </h1>

@@ -15,17 +15,14 @@ const PapersPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Papers & Research')}
+        title={t('Papers')}
         description={t(
           'Check out the technical, economic and mathematical detail - and innovative thinking behind Vega.'
         )}
       />
       <Container dataCy={'main'}>
-        <div className="pb-space-10 pt-6">
+        <div className="pb-space-10 pt-space-6 lg:pt-space-10">
           <div className="mb-6 md:mb-16">
-            <div className="mb-3">
-              <BoxTitle text={t('Learn')} />
-            </div>
             <GlitchTitle
               level="1"
               className="title-l md:title-xxl lg:title-xxxl mb-16"

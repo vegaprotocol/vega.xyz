@@ -281,7 +281,7 @@ const WalletPageNew = ({ data }) => {
   return (
     <Layout stickyHeader={false}>
       <Seo
-        title={t('Vega Wallet')}
+        title={t('Wallet')}
         description={t(
           "Connect to Vega dapps securely, deposit funds and approve or reject transactions with the Vega wallet. Download, set up and you're ready to connect"
         )}
@@ -293,7 +293,7 @@ const WalletPageNew = ({ data }) => {
             <div className="mx-auto mb-space-8 max-w-[21rem] text-center md:mx-0 md:max-w-[30rem] md:text-left">
               <h1 className="heading-xl mb-space-3">
                 <GlitchTitle color="purple">
-                  <Trans t={t}>Vega Wallet</Trans>
+                  <Trans t={t}>Wallet</Trans>
                 </GlitchTitle>
               </h1>
               <p className="body-xl mb-space-6">

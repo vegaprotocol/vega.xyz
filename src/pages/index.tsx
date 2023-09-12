@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Blockchain derivatives')}
+        title={t('Vega Protocol - Perpetuals and Futures DEX')}
         description={t(
           "Discover Web3's native derivatives trading platform that is helping DeFi mature."
         )}

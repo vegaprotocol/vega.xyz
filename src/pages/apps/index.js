@@ -175,7 +175,7 @@ const AppsAndToolsPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Use the network')}
+        title={t('Apps and Tools')}
         description={t(
           'Use the network to get tokens, start staking, configure the network, or trade. And help fuel the DeFi economy.'
         )}
@@ -184,15 +184,12 @@ const AppsAndToolsPage = ({ data }) => {
       <Container dataCy={'main'}>
         <div className="mb-8 pt-6 text-center md:mb-12 md:pt-16">
           <div className="mx-auto max-w-[61rem] text-center">
-            <h1>
-              <BoxTitle text={t('Use Vega')} />
-            </h1>
             <GlitchTitle
-              level="2"
+              level="1"
               color="red"
               className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
             >
-              <Trans t={t}>Tools built on Vega</Trans>
+              <Trans t={t}>Apps and Tools</Trans>
             </GlitchTitle>
           </div>
         </div>
