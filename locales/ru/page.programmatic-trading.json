@@ -2,7 +2,6 @@
   "Users who place static or pegged order limit volume on the book will receive <2></2> of the trade value when an incoming trade matches their order.": "Пользователи, размещающие в книге статические или привязанные к лимитному объему ордера, получают <2></2> от стоимости сделки, когда входящая сделка совпадает с их ордером.",
   "Programmatic Trading": "",
   "Programmatic trading on Vega is enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies.": "Программная торговля на Vega осуществляется с помощью богатых API в стиле CEX для развертывания стратегий создания рынка, предоставления ликвидности и направленной торговли.",
-  "Programmatic trading": "",
   "Enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies": "Использование богатых API в стиле CEX для развертывания стратегий создания рынка, обеспечения ликвидности и направленной торговли",
   "Market makers": "Маркет-мейкеры",
   "Liquidity providers": "Поставщики ликвидности",

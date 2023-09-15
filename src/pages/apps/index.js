@@ -191,6 +191,14 @@ const AppsAndToolsPage = ({ data }) => {
             >
               <Trans t={t}>Apps and Tools</Trans>
             </GlitchTitle>
+            <p className="body-l text-vega-light-300 dark:text-vega-dark-300">
+              <Trans t={t}>
+                Anyone can build tools on Vega, this page provides easy access
+                to all tools built and registered with the project team. Project
+                team owned tools that cover the key functions of the network are
+                marked as "Made by Vega".
+              </Trans>
+            </p>
           </div>
         </div>
         <div className="mx-auto max-w-[90rem] md:px-6 lg:px-8">

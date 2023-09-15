@@ -1,11 +1,11 @@
-import React from "react";
-import ButtonLink from "./ButtonLink";
-import BlogPost from "./BlogPost";
-import { graphql, useStaticQuery } from "gatsby";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React from 'react'
+import ButtonLink from './ButtonLink'
+import BlogPost from './BlogPost'
+import { graphql, useStaticQuery } from 'gatsby'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const BlogPosts = () => {
-  const { t } = useTranslation("component.blog-posts");
+  const { t } = useTranslation('component.blog-posts')
   const latestPosts = useStaticQuery(graphql`
     query {
       allMediumPost(
@@ -32,15 +32,15 @@ const BlogPosts = () => {
         }
       }
     }
-  `);
+  `)
   return (
     <div className="mb-14">
-      <div className="flex items-end justify-between mb-8">
-        <h2 className="title-m max-w-[15rem] md:title-l md:max-w-[26rem]">
+      <div className="mb-8 flex items-end justify-between">
+        <h2 className="title-m md:title-l max-w-[15rem] md:max-w-[26rem]">
           <Trans t={t}>Blog posts</Trans>
         </h2>
         <div className="hidden md:block">
-          <ButtonLink link="https://blog.vega.xyz" text={t("View all posts")} />
+          <ButtonLink link="https://blog.vega.xyz" text={t('View all posts')} />
         </div>
       </div>
 
@@ -50,10 +50,10 @@ const BlogPosts = () => {
         ))}
       </div>
       <div className="mt-8 md:hidden">
-        <ButtonLink link="https://blog.vega.xyz" text={t("View all posts")} />
+        <ButtonLink link="https://blog.vega.xyz" text={t('View all posts')} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BlogPosts;
+export default BlogPosts
