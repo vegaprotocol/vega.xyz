@@ -96,8 +96,10 @@ const Calendar = ({ limit = -1, filter = false }) => {
               <CalendarEvent key={idx} event={event} />
             ))}
           </div>
-          {limit && (
-            <ButtonLink link="/community/events" text={t('See more')} />
+          {limit > -1 && events.length > limit && (
+            <div className="mt-space-6">
+              <ButtonLink link="/community/events" text={t('See more')} />
+            </div>
           )}
         </div>
       )}

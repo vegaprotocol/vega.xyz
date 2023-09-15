@@ -1,12 +1,10 @@
 import React from 'react'
-import Layout from '../../components/Layout'
-import Container from '../../components/Container'
-import Seo from '../../components/Seo'
-import LinkArrow from '../../components/Svg/LinkArrow'
+import LinkArrow from './Svg/LinkArrow'
+import Container from './Container'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
-const PartnersBackersPage = () => {
-  const { t } = useTranslation('page.partners-backers')
+const PartnerBackers = () => {
+  const { t } = useTranslation('component.partners-backers')
   const partnerBackers = [
     {
       name: 'Pantera Capital',
@@ -85,29 +83,23 @@ const PartnersBackersPage = () => {
   }
 
   return (
-    <Layout>
-      <Seo
-        title="Partners & Backers"
-        description="Vega is a community and passion project for all our supporters. Explore the organisations fuelling and supporting this endeavour."
-      />
-      <Container dataCy={'main'}>
-        <div className="mb-12 pt-6 md:mb-24 lg:pt-16">
-          <div className="mb-16 grid grid-cols-12 gap-6 lg:mb-24">
-            <div className="col-span-12 md:col-span-4 lg:col-span-6">
-              <h1 className="title-m lg:title-xl md:sticky md:top-6 md:pb-16">
-                <Trans t={t}>Partners and backers</Trans>
-              </h1>
-            </div>
-            <div className="col-span-12 border-t border-current md:col-span-8 lg:col-span-6">
-              {partnerBackers.map((backer, idx) => {
-                return <Row key={idx} member={backer} />
-              })}
-            </div>
+    <Container>
+      <div className="mb-12 pt-6 md:mb-24 lg:pt-16">
+        <div className="mb-16 grid grid-cols-12 gap-6 lg:mb-24">
+          <div className="col-span-12 md:col-span-4 lg:col-span-6">
+            <h1 className="title-m lg:title-xl md:pb-16">
+              <Trans t={t}>Partners and backers</Trans>
+            </h1>
+          </div>
+          <div className="col-span-12 border-t border-current md:col-span-8 lg:col-span-6">
+            {partnerBackers.map((backer, idx) => {
+              return <Row key={idx} member={backer} />
+            })}
           </div>
         </div>
-      </Container>
-    </Layout>
+      </div>
+    </Container>
   )
 }
 
-export default PartnersBackersPage
+export default PartnerBackers
