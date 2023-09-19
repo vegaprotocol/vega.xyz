@@ -96,7 +96,7 @@ const AuctionTarget = ({
       >
         <div
           className={classNames(
-            'health-target group-hover:scale-y-108 dashed-background w-0.5 group-hover:scale-x-150',
+            'health-target group-hover:scale-y-108 w-0.5 dashed-background group-hover:scale-x-150',
             {
               'h-6': !isLarge,
               'h-12': isLarge,
@@ -263,7 +263,7 @@ export const HealthBar = ({
               <Tooltip
                 description={
                   <div className="text-vega-dark-100 dark:text-vega-light-200">
-                    t( 'Providers greater than 2x target stake not shown' )
+                    {t('Providers greater than 2x target stake not shown')}
                   </div>
                 }
               >
