@@ -1,3 +1,10 @@
 {
-  "Govern the network": "Gobernar la red"
+  "Govern the network": "Gobernar la red",
+  "Vote to exercise your influence": "Vota para ejercer tu influencia",
+  "Decisions on the Vega network are on-chain, with tokenholders creating proposals that other tokenholders vote to approve or reject. This is how the protocol powers the creation of decentralised financial products.": "Las decisiones en la red Vega están en cadena, con tokenholders creando propuestas que otros tokenholders votan para aprobar o rechazar. Así potencia el protocolo la creación de productos financieros descentralizados.",
+  "Discuss proposals": "Debatir las propuestas",
+  "And store in an Ethereum wallet. You can purchase VEGA using Ethereum (ETH) on decentralized exchanges.": "Y guárdelo en una billetera Ethereum. Puede comprar VEGA usando Ethereum (ETH) en intercambios descentralizados.",
+  "Governance tools": "Herramientas de gobernanza",
+  "Propose a futures market on any underlying.": "Proponer un mercado de futuros sobre cualquier subyacente.",
+  "Create a new market": "Crear un nuevo mercado"
 }
