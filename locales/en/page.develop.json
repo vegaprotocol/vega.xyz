@@ -1,17 +1,13 @@
 {
   "Developers": "Developers",
-  "Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi.": "Get access to the Vega APIs, contribute to the source code, earn bounties and be rewarded for building the future of DeFi.",
-  "Contribute to our open source repositories on GitHub or create software using Vega — and earn rewards.": "Contribute to our open source repositories on GitHub or create software using Vega — and earn rewards.",
-  "Explore the docs": "Explore the docs",
-  "Get the code": "Get the code",
+  "Explore Vega's technical documentation, build integrations via APIs, or contribute to our open source repositories on Github": "Explore Vega's technical documentation, build integrations via APIs, or contribute to our open source repositories on Github",
+  "Getting Started": "Getting Started",
+  "Documentation": "Documentation",
+  "Programmatic Trading": "Programmatic Trading",
+  "Report a security issue": "Report a security issue",
+  "Careers": "Careers",
+  "Discord": "Discord",
   "Join the builders club": "Join the builders club",
   "Get support building on top of the Vega protocol and access exclusive builder club bounties.": "Get support building on top of the Vega protocol and access exclusive builder club bounties.",
-  "Apply now": "Apply now",
-  "See whats's going on": "See whats's going on",
-  "Featured tutorials": "Featured tutorials",
-  "Video tutorials": "Video tutorials",
-  "Where next?": "Where next?",
-  "Say hello on Discord": "Say hello on Discord",
-  "Explore the forum": "Explore the forum",
-  "See the roadmap": "See the roadmap"
+  "Find out more": "Find out more"
 }
