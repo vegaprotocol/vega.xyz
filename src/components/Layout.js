@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Helmet } from 'react-helmet'
-// import { AnnouncementBanner as Banner } from '@vegaprotocol/announcements'
+import { AnnouncementBanner as Banner } from '../components/AnnouncementRemote'
 import { Analytics } from '@vercel/analytics/react'
 
 const Layout = ({ children, stickyHeader = true }) => {
@@ -21,10 +21,10 @@ const Layout = ({ children, stickyHeader = true }) => {
               className={stickyHeader ? 'mt-[4.8125rem] lg:mt-[6.25rem]' : ''}
             >
               <div>
-                {/* <Banner
+                <Banner
                   app="wallet"
                   configUrl={process.env.GATSBY_ANNOUNCEMENTS_CONFIG_URL}
-                /> */}
+                />
                 {children}
               </div>
             </div>
