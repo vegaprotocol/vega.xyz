@@ -246,7 +246,6 @@ const MarketsLiquidity = () => {
                   )
                   const status = params.data.node.data.marketTradingMode
                   const intent = intentForStatus(status)
-                  console.log('intentForStatus: ', intent)
                   return (
                     <div>
                       <Indicator variant={intent} />
@@ -359,22 +358,29 @@ const MarketsLiquidity = () => {
                 headerName={t('Market Status')}
                 field={'node.data.marketTradingMode'}
                 cellRenderer={(params) => {
-                  const { data, loading, error } = useMarketLiquidityProviders(
+                  const {
+                    data: marketWithLiquidityData,
+                    loading,
+                    error,
+                  } = useMarketLiquidityProviders(
                     params.data.node.data.market.id
                   )
 
                   if (loading) return null
-                  if (data) {
+                  if (marketWithLiquidityData) {
                     const targetStake = params.data.node.data.targetStake
                     const settlementAssetDecimals =
-                      data.market.tradableInstrument.instrument.product
-                        .settlementAsset.decimals
+                      marketWithLiquidityData.market.tradableInstrument
+                        .instrument.product.settlementAsset.decimals
                     const feeLevels = getFeeLevels(
-                      data.market?.liquidityProvisionsConnection?.edges || []
+                      marketWithLiquidityData.market
+                        ?.liquidityProvisionsConnection?.edges || []
                     )
 
                     const tradingMode = params.data.node.data.marketTradingMode
-                    const auctionTrigger = params.data.node.data.auctionTrigger
+                    const auctionTrigger =
+                      marketWithLiquidityData.market
+                        .liquidityMonitoringParameters.triggeringRatio
                     const tradingModeLabel = getStatus(
                       tradingMode,
                       auctionTrigger
@@ -389,6 +395,7 @@ const MarketsLiquidity = () => {
                           decimals={settlementAssetDecimals}
                           levels={feeLevels}
                           intent={intent}
+                          triggerRatio={auctionTrigger}
                         />
                       </div>
                     )
@@ -412,8 +419,8 @@ const percentageLiquidity = (suppliedStake, targetStake) => {
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
-      ? '>100%'
-      : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
+    ? '>100%'
+    : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
   return display
 }
 

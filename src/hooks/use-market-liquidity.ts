@@ -71,6 +71,9 @@ const MarketLpDocument = gql`
           }
         }
       }
+      liquidityMonitoringParameters {
+        triggeringRatio
+      }
     }
   }
   ${LiquidityProvisionFieldsFragmentDoc}

@@ -19,6 +19,5 @@ export const Indicator = ({
       'w-3 h-3': size === 'lg',
     }
   )
-  console.log('classnames', names)
   return <div className={names} data-testid="indicator" />
 }
