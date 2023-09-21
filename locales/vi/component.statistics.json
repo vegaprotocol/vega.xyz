@@ -1,6 +1,6 @@
 {
-  "Total Volume": "",
-  "Total Markets": "",
-  "TVL": "",
-  "Avg. Block Time": ""
+  "Total Volume": "Tổng khối lượng giao dịch",
+  "Total Markets": ""Tổng khối lượng thị trường giao dịch,
+  "TVL": "TVl",
+  "Avg. Block Time": "Block-time trung bình"
 }
