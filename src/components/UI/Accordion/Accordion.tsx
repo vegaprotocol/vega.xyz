@@ -21,7 +21,7 @@ const Accordion = ({ data }: AccordionProps) => {
   }
 
   return (
-    <div className="mx-auto max-w-[48rem] border-t border-vega-light-200 dark:border-vega-dark-200">
+    <div className="border-t border-vega-light-200 dark:border-vega-dark-200">
       {data.map((item, idx) => (
         <div
           key={idx}
