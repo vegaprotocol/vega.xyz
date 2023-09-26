@@ -392,6 +392,13 @@ const MarketsLiquidity = () => {
                         : suppliedStake <= targetStake * auctionTrigger
                         ? Intent.Danger
                         : Intent.Warning
+                    const statusBasedIntent = intentForStatus(tradingMode)
+                    console.log('intent:', {
+                      suppliedStake,
+                      auctionTrigger,
+                      intent,
+                      statusBasedIntent,
+                    })
                     return (
                       <div>
                         {tradingModeLabel}
