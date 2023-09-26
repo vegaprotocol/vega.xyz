@@ -161,7 +161,6 @@ const Level = ({
         }}
       >
         <div
-          // className="relative h-[inherit] w-full group-hover:scale-y-150 bg-vega-green-550 dark:bg-vega-pink-550"
           className={classNames(
             'relative h-[inherit] w-full group-hover:scale-y-150',
             getIntentBackground(intent)
@@ -218,8 +217,6 @@ export const HealthBar = ({
   const isLarge = size === 'large'
   const showRemainder = committedNumber < rangeLimit || levels.length === 0
   const showOverflow = !showRemainder && lastVisibleLevel < levels.length - 1
-
-  console.log('triggerRatio', triggerRatio)
 
   return (
     <div className="w-full">

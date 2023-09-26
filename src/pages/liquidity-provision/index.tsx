@@ -385,7 +385,13 @@ const MarketsLiquidity = () => {
                       tradingMode,
                       auctionTrigger
                     )
-                    const intent = intentForStatus(tradingMode)
+                    const suppliedStake = params.data.node.data.suppliedStake
+                    const intent =
+                      suppliedStake >= targetStake
+                        ? Intent.Success
+                        : suppliedStake <= targetStake * auctionTrigger
+                        ? Intent.Danger
+                        : Intent.Warning
                     return (
                       <div>
                         {tradingModeLabel}
