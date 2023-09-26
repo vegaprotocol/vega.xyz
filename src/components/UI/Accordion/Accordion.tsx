@@ -44,8 +44,8 @@ const Accordion = ({ data }: AccordionProps) => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M14 8.52997H2V7.46997H14V8.52997Z"
                     fill="white"
                   />

@@ -35,10 +35,10 @@ const FaqsPage = ({ data }) => {
         data-cy={'main'}
         className="relative pt-space-5 md:pt-space-6 lg:pt-space-9"
       >
-        <div className="absolute left-0 top-1/4 hidden w-[15rem] xl:block">
+        <div className="absolute top-20 left-0 hidden w-[15rem] xl:block">
           <UniverseLeft />
         </div>
-        <div className="absolute right-0 bottom-1/4 hidden w-[15rem] xl:block ">
+        <div className="absolute bottom-20 right-0 hidden w-[15rem] xl:block ">
           <UniverseRight />
         </div>
         <Container>
@@ -106,7 +106,7 @@ export const query = graphql`
         collection: { in: ["faqs"] }
         fields: { locale: { eq: $language } }
       }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [fields___slug], order: ASC }
     ) {
       totalCount
       edges {

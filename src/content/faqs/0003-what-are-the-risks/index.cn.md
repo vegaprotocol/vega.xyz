@@ -1,5 +1,5 @@
 ---
-title: What is Alpha Mainnet?
+title: What are the risks of using Alpha Mainnet?
 ---
 
 Alpha Mainnet is the first mainnet release of Vega Protocol with trading enabled.
