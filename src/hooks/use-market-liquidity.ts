@@ -46,6 +46,13 @@ const MarketLpDocument = gql`
                 decimals
               }
             }
+            ... on Perpetual {
+              settlementAsset {
+                id
+                symbol
+                decimals
+              }
+            }
           }
         }
       }
