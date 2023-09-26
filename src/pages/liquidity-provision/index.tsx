@@ -231,30 +231,48 @@ const MarketsLiquidity = () => {
                 colId="suppliedStake"
                 headerName={t('Supplied Stake')}
                 cellRenderer={(params) => {
-                  const suppliedStake = params.data.node.data.suppliedStake
-                  const targetStake = params.data.node.data.targetStake
-                  const decimals =
-                    params.data.node.data.market.tradableInstrument.instrument
-                      .product.settlementAsset.decimals
-                  const formattedSuppliedStake = addDecimalsFormatNumber(
-                    suppliedStake,
-                    decimals
+                  const {
+                    data: marketWithLiquidityData,
+                    loading,
+                    error,
+                  } = useMarketLiquidityProviders(
+                    params.data.node.data.market.id
                   )
-                  const percentageStaked = percentageLiquidity(
-                    suppliedStake,
-                    targetStake
-                  )
-                  const status = params.data.node.data.marketTradingMode
-                  const intent = intentForStatus(status)
-                  return (
-                    <div>
-                      <Indicator variant={intent} />
-                      {formattedSuppliedStake} <br />
-                      <div
-                        style={{ color: '#8B8B8B' }}
-                      >{`(${percentageStaked})`}</div>
-                    </div>
-                  )
+
+                  if (loading) return null
+                  if (marketWithLiquidityData) {
+                    const suppliedStake = params.data.node.data.suppliedStake
+                    const targetStake = params.data.node.data.targetStake
+                    const decimals =
+                      params.data.node.data.market.tradableInstrument.instrument
+                        .product.settlementAsset.decimals
+                    const formattedSuppliedStake = addDecimalsFormatNumber(
+                      suppliedStake,
+                      decimals
+                    )
+                    const percentageStaked = percentageLiquidity(
+                      suppliedStake,
+                      targetStake
+                    )
+                    const auctionTrigger =
+                      marketWithLiquidityData.market
+                        .liquidityMonitoringParameters.triggeringRatio
+
+                    const intentForLiquidity = intentForProvisionedLiquidity(
+                      targetStake,
+                      suppliedStake,
+                      auctionTrigger
+                    )
+                    return (
+                      <div>
+                        <Indicator variant={intentForLiquidity} />
+                        {formattedSuppliedStake} <br />
+                        <div
+                          style={{ color: '#8B8B8B' }}
+                        >{`(${percentageStaked})`}</div>
+                      </div>
+                    )
+                  }
                 }}
                 headerTooltip={t(
                   'The current amount of liquidity supplied for this market.'
@@ -386,12 +404,11 @@ const MarketsLiquidity = () => {
                       auctionTrigger
                     )
                     const suppliedStake = params.data.node.data.suppliedStake
-                    const intent =
-                      suppliedStake >= targetStake
-                        ? Intent.Success
-                        : suppliedStake <= targetStake * auctionTrigger
-                        ? Intent.Danger
-                        : Intent.Warning
+                    const intent = intentForProvisionedLiquidity(
+                      targetStake,
+                      suppliedStake,
+                      auctionTrigger
+                    )
                     const statusBasedIntent = intentForStatus(tradingMode)
                     console.log('intent:', {
                       suppliedStake,
@@ -545,6 +562,18 @@ const marketTradingModeIntent = {
 
 export const intentForStatus = (status: Schema.MarketTradingMode) => {
   return marketTradingModeIntent[status]
+}
+
+const intentForProvisionedLiquidity = (
+  targetStake,
+  suppliedStake,
+  auctionTrigger
+) => {
+  return suppliedStake >= targetStake
+    ? Intent.Success
+    : suppliedStake <= targetStake * auctionTrigger
+    ? Intent.Danger
+    : Intent.Warning
 }
 
 export const getFeeLevels = (providers: any[]) => {
