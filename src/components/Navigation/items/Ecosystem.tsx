@@ -9,7 +9,7 @@ const Ecosystem = () => {
     <NavigationList>
       <NavigationItem text={t('Apps & Tools')} link="/apps" />
       <NavigationItem text={t('Wallet')} link="/wallet" />
-      <NavigationItem text={t('Developers')} link="/develop" />
+      <NavigationItem text={t('Developers')} link="/developers" />
       <NavigationItem
         text={t('Programmatic Trading')}
         link="/programmatic-trading"

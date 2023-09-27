@@ -338,7 +338,7 @@ const IndexPage = ({ data }) => {
                   text={t('Govern the network')}
                   link="/governance"
                 />
-                <BoxLinkSimple text={t('Develop on Vega')} link="/develop" />
+                <BoxLinkSimple text={t('Develop on Vega')} link="/developers" />
               </div>
             </PageSection>
           </Container>

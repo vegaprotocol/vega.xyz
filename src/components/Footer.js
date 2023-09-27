@@ -252,7 +252,7 @@ const Footer = () => {
               <ul>
                 <li>
                   <TextLink
-                    to="/develop/"
+                    to="/developers/"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Get started</Trans>

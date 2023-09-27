@@ -1,102 +1,102 @@
-import React, { useState, useRef } from "react";
-import { graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import Seo from "../../components/Seo";
-import TranslationsBanner from "../../components/TranslationsBanner";
-import Container from "../../components/Container";
-import Callout from "../../components/Callout";
-import axios from "axios";
-import pgpKeyFile from "../../../vega-public-key.asc";
-import Loader from "../../components/Loader";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React, { useState, useRef } from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
+import TranslationsBanner from '../../components/TranslationsBanner'
+import Container from '../../components/Container'
+import Callout from '../../components/Callout'
+import axios from 'axios'
+import pgpKeyFile from '../../../vega-public-key.asc'
+import Loader from '../../components/Loader'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const BugBountiesPage = ({ data }) => {
-  const { t, i18n } = useTranslation("page.bug-bounties");
-  const [missingTranslations, setMissingTranslations] = useState(false);
-  const [message, setMessage] = useState("");
-  const [confirmDialog, setConfirmDialog] = useState(false);
-  const [formError, setFormError] = useState({ error: true, message: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [confirmationMessage, setConfirmationMessage] = useState("");
-  const form = useRef();
+  const { t, i18n } = useTranslation('page.bug-bounties')
+  const [missingTranslations, setMissingTranslations] = useState(false)
+  const [message, setMessage] = useState('')
+  const [confirmDialog, setConfirmDialog] = useState(false)
+  const [formError, setFormError] = useState({ error: true, message: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [confirmationMessage, setConfirmationMessage] = useState('')
+  const form = useRef()
 
-  i18n.on("missingKey", (lng) => {
-    setMissingTranslations(true);
-  });
+  i18n.on('missingKey', (lng) => {
+    setMissingTranslations(true)
+  })
 
   const checkForm = () => {
     if (confirmationMessage) {
-      setConfirmationMessage("");
+      setConfirmationMessage('')
     }
-    if (form.current.value === "") {
+    if (form.current.value === '') {
       setFormError({
         error: true,
-        message: "You cannot send an empty submission",
-      });
+        message: 'You cannot send an empty submission',
+      })
     } else {
-      setFormError({ error: false, message: "" });
+      setFormError({ error: false, message: '' })
     }
-    return false;
-  };
+    return false
+  }
 
   const confirmSubmit = () => {
     if (formError.error) {
-      checkForm();
-      return false;
+      checkForm()
+      return false
     } else {
-      setConfirmDialog(true);
+      setConfirmDialog(true)
     }
-  };
+  }
 
   const send = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    setIsSubmitting(true);
-    const functionPath = '/api/send-bug-report';
+    setIsSubmitting(true)
+    const functionPath = '/api/send-bug-report'
 
     axios
       .post(functionPath, {
         message,
       })
       .then((res) => {
-        setIsSubmitting(false);
-        setConfirmDialog(false);
-        setFormError({ error: false, message: "" });
-        form.current.value = "";
+        setIsSubmitting(false)
+        setConfirmDialog(false)
+        setFormError({ error: false, message: '' })
+        form.current.value = ''
         setConfirmationMessage(
-          t("Your message was successfully encrypted and delivered.")
-        );
+          t('Your message was successfully encrypted and delivered.')
+        )
       })
       .catch((error) => {
-        setIsSubmitting(false);
-        setConfirmDialog(false);
+        setIsSubmitting(false)
+        setConfirmDialog(false)
         setFormError({
           error: false,
-          message: t("Sorry, your submission failed, please try again later."),
-        });
-      });
-  };
+          message: t('Sorry, your submission failed, please try again later.'),
+        })
+      })
+  }
 
   return (
     <Layout>
       <Seo
-        title={t("Bug bounties")}
+        title={t('Bug bounties')}
         description={t(
-          "Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network."
+          'Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
       <Container>
         <div>
-          <div className="border-t border-current">
-            <div className="md:grid md:grid-cols-12 pt-4">
-              <div className="md:col-span-5 lg:col-span-4 md:pr-12">
+          <div className="mt-space-5 border-t border-current md:mt-space-6 lg:mt-space-10">
+            <div className="pt-4 md:grid md:grid-cols-12">
+              <div className="md:col-span-5 md:pr-12 lg:col-span-4">
                 <h1 className="title-l mb-6 max-w-[25rem]">
                   <Trans t={t}>Bug bounties</Trans>
                 </h1>
               </div>
               <div className="md:col-span-7 lg:col-span-8">
-                <div className="prose dark:prose-invert max-w-none prose-headings:border-0 mb-16">
+                <div className="prose mb-16 max-w-none prose-headings:border-0 dark:prose-invert">
                   <h2>
                     <Trans t={t}>
                       Found a software security issue? Report it to us and earn
@@ -207,7 +207,7 @@ const BugBountiesPage = ({ data }) => {
                       systems, so we cannot help you if you do so in any way
                       that upsets them. For testing your discoveries, using a
                       separate protocol instance that you can run for yourselves
-                      is advised. The best way to do this is via the{" "}
+                      is advised. The best way to do this is via the{' '}
                       <a
                         href="https://docs.vega.xyz/mainnet/tools#vega-capsule"
                         target="_blank"
@@ -238,24 +238,29 @@ const BugBountiesPage = ({ data }) => {
                     <textarea
                       ref={form}
                       required
-                      className="font-not-glitched mb-6 w-full bg-vega-box-grey p-3 focus:outline-vega-pink border border-white/20 focus:border-white/20" data-cy={'bugBountyForm'}
+                      className="font-not-glitched mb-6 w-full border border-white/20 bg-vega-box-grey p-3 focus:border-white/20 focus:outline-vega-pink"
+                      data-cy={'bugBountyForm'}
                       rows="15"
                       onChange={(e) => {
-                        setMessage(e.target.value);
-                        checkForm();
+                        setMessage(e.target.value)
+                        checkForm()
                       }}
                     />
-                    {formError.message !== "" && (
+                    {formError.message !== '' && (
                       <div className="text-vega-pink">{formError.message}</div>
                     )}
-                    {confirmationMessage !== "" && (
-                      <div className="text-vega-mint" data-cy={'confirmationMsg'}>
+                    {confirmationMessage !== '' && (
+                      <div
+                        className="text-vega-mint"
+                        data-cy={'confirmationMsg'}
+                      >
                         {confirmationMessage}
                       </div>
                     )}
                     <br />
                     <button
-                      className="inline-block px-8 py-3 leading-1 text-[0.9375rem] tracking-[0.01rem] border border-current text-current uppercase" data-cy={'sendMsgBtn'}
+                      className="leading-1 inline-block border border-current px-8 py-3 text-[0.9375rem] uppercase tracking-[0.01rem] text-current"
+                      data-cy={'sendMsgBtn'}
                       type="button"
                       onClick={(e) => confirmSubmit()}
                     >
@@ -265,8 +270,11 @@ const BugBountiesPage = ({ data }) => {
                 </div>
 
                 {confirmDialog && (
-                  <div className="fixed bg-vega-box-grey/80 top-0 left-0 right-0 bottom-0 grid place-items-center">
-                    <div className="bg-black w-full min-w-[17.5rem] max-w-[30rem]" data-cy={'submitDialog'}>
+                  <div className="fixed top-0 left-0 right-0 bottom-0 grid place-items-center bg-vega-box-grey/80">
+                    <div
+                      className="w-full min-w-[17.5rem] max-w-[30rem] bg-black"
+                      data-cy={'submitDialog'}
+                    >
                       <div className="p-6">
                         <div className="title-s">
                           <Trans t={t}>Submit bug report</Trans>
@@ -281,9 +289,10 @@ const BugBountiesPage = ({ data }) => {
                         </p>
                       </div>
 
-                      <div className="flex items-center justify-end mt-6 px-6 py-3">
+                      <div className="mt-6 flex items-center justify-end px-6 py-3">
                         <button
-                          className="ml-6 uppercase cursor-pointer" data-cy={'cancelSubmitDiaglog'}
+                          className="ml-6 cursor-pointer uppercase"
+                          data-cy={'cancelSubmitDiaglog'}
                           onClick={(e) => setConfirmDialog(false)}
                         >
                           <Trans t={t}>Cancel</Trans>
@@ -292,7 +301,8 @@ const BugBountiesPage = ({ data }) => {
                           <Loader className="ml-3" />
                         ) : (
                           <button
-                            className="ml-6 uppercase cursor-pointer" data-cy={'confirmSubmitDialog'}
+                            className="ml-6 cursor-pointer uppercase"
+                            data-cy={'confirmSubmitDialog'}
                             onClick={(e) => send(e)}
                           >
                             <Trans t={t}>Submit</Trans>
@@ -304,9 +314,9 @@ const BugBountiesPage = ({ data }) => {
                 )}
 
                 <Callout
-                  title={t("PGP Key")}
+                  title={t('PGP Key')}
                   text={t(
-                    "This is the PGP key that can be used to securely submit security issues to the project team. Please note that this is the only usage of the key; especially, this key will never be used to issue signatures that are in any way meaningful or binding. We also may change the key at any time, so please make sure to check here for the current version."
+                    'This is the PGP key that can be used to securely submit security issues to the project team. Please note that this is the only usage of the key; especially, this key will never be used to issue signatures that are in any way meaningful or binding. We also may change the key at any time, so please make sure to check here for the current version.'
                   )}
                 >
                   {/* prettier-ignore */}
@@ -322,10 +332,10 @@ const BugBountiesPage = ({ data }) => {
         </div>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default BugBountiesPage;
+export default BugBountiesPage
 
 export const query = graphql`
   query ($language: String!) {
@@ -340,4 +350,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

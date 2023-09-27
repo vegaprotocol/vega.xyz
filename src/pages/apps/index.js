@@ -317,7 +317,7 @@ const AppsAndToolsPage = ({ data }) => {
                 >
                   Chat to us on Discord
                 </a>{' '}
-                and <Link to="/develop">start building</Link>.
+                and <Link to="/developers">start building</Link>.
               </Trans>
             </p>
           </div>
