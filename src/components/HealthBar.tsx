@@ -16,7 +16,6 @@ const Remainder = () => (
 )
 
 const getIntentBackground = (intent?: Intent) => {
-  console.log('background intent:', intent)
   return {
     'bg-neutral-200 dark:bg-neutral-800': intent === undefined,
     'bg-black dark:bg-white': intent === Intent.None,
@@ -108,7 +107,7 @@ const AuctionTarget = ({
       >
         <div
           className={classNames(
-            'health-target group-hover:scale-y-108 dashed-background w-0.5 group-hover:scale-x-150',
+            'health-target group-hover:scale-y-108 w-0.5 dashed-background group-hover:scale-x-150',
             {
               'h-6': !isLarge,
               'h-12': isLarge,
