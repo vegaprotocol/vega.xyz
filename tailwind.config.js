@@ -2,6 +2,12 @@ const vegaCustomClasses = require('./tailwind/vega-custom-classes.js')
 const _ = require('lodash')
 
 const theme = {
+  listStyleType: {
+    none: 'none',
+    disc: 'disc',
+    decimal: 'decimal',
+    square: 'square',
+  },
   spacing: {
     'space-1': '0.25rem',
     'space-2': '0.5rem',
@@ -313,13 +319,7 @@ module.exports = {
     './tailwind/index.js',
   ],
   theme: {
-    listStyleType: {
-      none: 'none',
-      disc: 'disc',
-      decimal: 'decimal',
-      square: 'square',
-    },
-    extend: _.merge(theme),
+    extend: theme,
   },
   plugins: [
     vegaCustomClasses,

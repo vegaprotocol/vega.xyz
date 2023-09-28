@@ -7,17 +7,6 @@ export enum Intent {
   Success,
 }
 
-export const getIntentBorder = (intent = Intent.None) => {
-  return {
-    border: true,
-    'border-danger': intent === Intent.Danger,
-    'border-warning': intent === Intent.Warning,
-    'border-neutral-500': intent === Intent.None,
-    'border-vega-blue-300': intent === Intent.Primary,
-    'border-vega-green': intent === Intent.Success,
-  }
-}
-
 export const getIntentBackground = (intent?: Intent) => {
   return {
     'bg-neutral-200 dark:bg-neutral-800': intent === undefined,

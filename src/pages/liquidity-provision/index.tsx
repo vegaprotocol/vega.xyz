@@ -80,7 +80,7 @@ const MarketsLiquidity = () => {
             <Trans t={t}>Liquidity Provision</Trans>
           </GlitchTitle>
         </div>
-        <div className="mx-auto mb-3 max-w-[44rem]">
+        <div className="mx-auto mb-3 max-w-[44rem] bg-vega-pink-550">
           <LeadingLine className="text-center">
             <Trans t={t}>
               Liquidity providers receive a share of fees paid during trading in
@@ -259,9 +259,9 @@ const MarketsLiquidity = () => {
                         .liquidityMonitoringParameters.triggeringRatio
 
                     const intentForLiquidity = intentForProvisionedLiquidity(
-                      targetStake,
-                      suppliedStake,
-                      auctionTrigger
+                      parseFloat(targetStake),
+                      parseFloat(suppliedStake),
+                      parseFloat(auctionTrigger)
                     )
                     return (
                       <div>
@@ -405,17 +405,10 @@ const MarketsLiquidity = () => {
                     )
                     const suppliedStake = params.data.node.data.suppliedStake
                     const intent = intentForProvisionedLiquidity(
-                      targetStake,
-                      suppliedStake,
-                      auctionTrigger
+                      parseFloat(targetStake),
+                      parseFloat(suppliedStake),
+                      parseFloat(auctionTrigger)
                     )
-                    const statusBasedIntent = intentForStatus(tradingMode)
-                    console.log('intent:', {
-                      suppliedStake,
-                      auctionTrigger,
-                      intent,
-                      statusBasedIntent,
-                    })
                     return (
                       <div>
                         {tradingModeLabel}
@@ -569,11 +562,17 @@ const intentForProvisionedLiquidity = (
   suppliedStake,
   auctionTrigger
 ) => {
-  return suppliedStake >= targetStake
-    ? Intent.Success
-    : suppliedStake <= targetStake * auctionTrigger
-    ? Intent.Danger
-    : Intent.Warning
+  if (suppliedStake >= targetStake) {
+    return Intent.Success
+  }
+  if (suppliedStake <= targetStake) {
+    if (suppliedStake <= auctionTrigger * targetStake) {
+      {
+        return Intent.Danger
+      }
+    } else return Intent.Warning
+  }
+  return Intent.Primary
 }
 
 export const getFeeLevels = (providers: any[]) => {

@@ -3,7 +3,7 @@ import React from 'react'
 import { BigNumber } from 'bignumber.js'
 import classNames from 'classnames'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
-import { getIntentBackground, Intent } from '../utils/vega/Intent'
+import { Intent } from '../utils/vega/Intent'
 import {
   addDecimalsFormatNumber,
   formatNumberPercentage,
@@ -15,6 +15,18 @@ const Remainder = () => (
   <div className="bg-greys-light-200 relative h-[inherit] flex-1" />
 )
 
+const getIntentBackground = (intent?: Intent) => {
+  console.log('background intent:', intent)
+  return {
+    'bg-neutral-200 dark:bg-neutral-800': intent === undefined,
+    'bg-black dark:bg-white': intent === Intent.None,
+    'bg-vega-blue-300 dark:bg-vega-blue-650': intent === Intent.Primary,
+    'bg-danger': intent === Intent.Danger,
+    'bg-warning': intent === Intent.Warning,
+    // contrast issues with light mode
+    'bg-vega-green-550 dark:bg-vega-green': intent === Intent.Success,
+  }
+}
 const Target = ({
   target,
   decimals,
@@ -96,7 +108,7 @@ const AuctionTarget = ({
       >
         <div
           className={classNames(
-            'health-target group-hover:scale-y-108 w-0.5 dashed-background group-hover:scale-x-150',
+            'health-target group-hover:scale-y-108 dashed-background w-0.5 group-hover:scale-x-150',
             {
               'h-6': !isLarge,
               'h-12': isLarge,
