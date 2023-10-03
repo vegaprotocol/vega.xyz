@@ -87,3 +87,10 @@ export function useMarkets(since: string) {
 
   return { data, loading, error }
 }
+
+export const validMarketStates = [
+  'STATE_UNSPECIFIED',
+  'STATE_PENDING',
+  'STATE_ACTIVE',
+  'STATE_SUSPENDED',
+]
