@@ -1,6 +1,5 @@
 {
-  "Use Vega": "Используйте Vega",
-  "Provide Liquidity": "Обеспечить ликвидность",
+  "Liquidity Provision": "",
   "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "Поставщики ликвидности получают долю комиссионных, выплачиваемых в ходе торгов, в обмен на предоставление ликвидности в сети.",
   "The data relating to markets on this page is obtained from nodes on the Vega Blockchain.": "Данные, касающиеся рынков на этой странице, получены из узлов на Vega Blockchain.",
   "Provides its software under open source licences": "Предоставляет лицензионное программное обеспечение с открытым исходным кодом",

@@ -1,33 +1,8 @@
+import languages from './languages.js'
+
 require(`dotenv`).config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-
-const languages = [
-  {
-    code: 'en',
-    localName: 'English',
-  },
-  {
-    code: 'es',
-    localName: 'Español',
-  },
-  {
-    code: 'ru',
-    localName: 'Pусский',
-  },
-  {
-    code: 'cn',
-    localName: '简体中文',
-  },
-  {
-    code: 'ko',
-    localName: '한국인',
-  },
-  {
-    code: 'vi',
-    localName: 'Tiếng Việt',
-  },
-]
 
 module.exports = {
   siteMetadata: {
@@ -103,6 +78,13 @@ module.exports = {
       options: {
         name: `insights`,
         path: `${__dirname}/src/content/insights`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `faqs`,
+        path: `${__dirname}/src/content/faqs`,
       },
     },
     {

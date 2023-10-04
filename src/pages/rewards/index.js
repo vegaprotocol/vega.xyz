@@ -7,7 +7,6 @@ import Container from '../../components/Container'
 import EpochCountdown from '../../components/EpochCountdown'
 // import Stars from '../../components/Svg/Stars'
 import Button from '../../components/UI/Button'
-import Tag from '../../components/UI/Tag'
 import Link from '../../components/UI/Link'
 import GenericTile from '../../components/UI/GenericTile'
 import { getImage } from 'gatsby-plugin-image'
@@ -71,11 +70,8 @@ const RewardsPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mb-space-8 pt-space-5 md:flex md:justify-between md:pt-space-6 lg:pt-space-7">
+        <div className="mb-space-8 pt-space-5 md:flex md:justify-between md:pt-space-6 lg:pt-space-10">
           <div>
-            <Tag className="mb-space-4">
-              <Trans t={t}>Develop</Trans>
-            </Tag>
             <h1 className="heading-l mb-space-8">
               <Trans t={t}>Rewards</Trans>
             </h1>

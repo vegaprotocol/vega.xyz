@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Blockchain derivatives')}
+        title={t('Vega Protocol - Perpetuals and Futures DEX')}
         description={t(
           "Discover Web3's native derivatives trading platform that is helping DeFi mature."
         )}
@@ -329,7 +329,7 @@ const IndexPage = ({ data }) => {
               </div>
 
               <div className="mx-auto mt-12 grid max-w-[12rem] gap-6 md:max-w-[70rem] md:grid-cols-2 lg:grid-cols-4">
-                <BoxLinkSimple text={t('Use the network')} link="/use" />
+                <BoxLinkSimple text={t('Use the network')} link="/apps" />
                 <BoxLinkSimple
                   text={t('Join the community')}
                   link="/community"
@@ -338,7 +338,7 @@ const IndexPage = ({ data }) => {
                   text={t('Govern the network')}
                   link="/governance"
                 />
-                <BoxLinkSimple text={t('Develop on Vega')} link="/develop" />
+                <BoxLinkSimple text={t('Develop on Vega')} link="/developers" />
               </div>
             </PageSection>
           </Container>

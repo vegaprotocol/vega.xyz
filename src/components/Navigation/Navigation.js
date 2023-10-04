@@ -1,11 +1,10 @@
 import React from 'react'
-import Use from './items/Use'
 import Community from './items/Community'
 import Governance from './items/Governance'
-import Develop from './items/Develop'
-import Learn from './items/Learn'
-// import Markets from './items/Markets'
+import About from './items/About'
+import Ecosystem from './items/Ecosystem'
 import Dropdown from './Dropdown'
+import MainItem from './MainItem'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Navigation = () => {
@@ -13,20 +12,18 @@ const Navigation = () => {
   return (
     <nav>
       <ul className="text-lg tracking-wide lg:flex">
-        <Dropdown title={t('Use Vega')}>
-          <Use />
+        <Dropdown title={t('About')} link="/key-concepts/">
+          <About />
         </Dropdown>
-        <Dropdown title={t('Community')}>
-          <Community />
-        </Dropdown>
-        <Dropdown title={t('Governance')}>
+        <MainItem link="https://docs.vega.xyz/" text={t('Docs')} />
+        <Dropdown title={t('Governance')} link="/governance/">
           <Governance />
         </Dropdown>
-        <Dropdown title={t('Develop')}>
-          <Develop />
+        <Dropdown title={t('Community')} link="/community/">
+          <Community />
         </Dropdown>
-        <Dropdown title={t('Learn')}>
-          <Learn />
+        <Dropdown title={t('Ecosystem')} link="/apps/">
+          <Ecosystem />
         </Dropdown>
       </ul>
     </nav>

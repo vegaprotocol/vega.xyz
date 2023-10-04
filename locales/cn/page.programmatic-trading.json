@@ -1,8 +1,7 @@
 {
   "Users who place static or pegged order limit volume on the book will receive <2></2> of the trade value when an incoming trade matches their order.": "当传入交易与其订单匹配时，在账本上设置静态或挂钩订单限制量的用户将收到 <2></2> 的交易价值",
-  "Programmatic trading on Vega": "Vega 上的程序化交易",
+  "Programmatic Trading": "",
   "Programmatic trading on Vega is enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies.": "Vega 上的程序化交易是通过丰富的 CEX 风格的 API 实现的，用于部署做市、流动性提供和定向交易策略",
-  "Use Vega": "使用VEG",
   "Enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies": "通过丰富的 CEX 式 API 实现做市、流动性提供和定向交易策略的部署",
   "Market makers": "做市商",
   "Liquidity providers": "流动性提供者",

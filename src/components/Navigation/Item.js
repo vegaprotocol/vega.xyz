@@ -1,32 +1,32 @@
-import React from "react";
-import { Link } from "gatsby-plugin-react-i18next";
-import LinkArrow from "../Svg/LinkArrow";
+import React from 'react'
+import { Link } from 'gatsby-plugin-react-i18next'
+import LinkArrow from '../Svg/LinkArrow'
 
 const NavigationItem = ({ text, link }) => {
   return (
     <li>
-      {link.startsWith("http") ? (
+      {link.startsWith('http') ? (
         <a
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="transition-colors inline-block py-0.5 hover:text-vega-mid-grey cursor-pointer"
+          className="inline-block w-full cursor-pointer py-2.5 leading-none text-vega-light-300 transition-colors hover:text-black dark:text-vega-dark-300 dark:hover:text-white"
         >
           {text}
-          <LinkArrow className="inline ml-2 relative -top-px" />
+          <LinkArrow className="relative -top-px ml-2 inline" />
         </a>
       ) : (
         <div>
           <Link
             to={link}
-            className="transition-colors inline-block py-0.5 hover:text-vega-mid-grey cursor-pointer"
+            className="block inline-block w-full cursor-pointer py-2.5 leading-none text-vega-dark-300 transition-colors hover:text-black dark:hover:text-white"
           >
             {text}
           </Link>
         </div>
       )}
     </li>
-  );
-};
+  )
+}
 
-export default NavigationItem;
+export default NavigationItem

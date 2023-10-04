@@ -1,8 +1,7 @@
 {
   "Users who place static or pegged order limit volume on the book will receive <2></2> of the trade value when an incoming trade matches their order.": "호가창에 지정가 또는 고정가 주문한도를 설정한 사용자는 들어오는 거래가 주문과 일치할 때 거래 금액의 <2></2>를 받게 됩니다.",
-  "Programmatic trading on Vega": "베가 알고리즘 트레이딩",
+  "Programmatic Trading": "",
   "Programmatic trading on Vega is enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies.": "베가의 알고리즘 트레이딩은 마켓 메이킹, 유동성 공급, 방향성 트레이딩 전략 배포를 위한 풍부한 CEX 스타일 API를 통해 가능합니다.",
-  "Use Vega": "Vega 사용",
   "Enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies": "마켓 메이킹, 유동성 공급, 방향성 트레이딩 전략 배포를 위한 풍부한 CEX 스타일 API를 통해 사용 가능",
   "Market makers": "마켓 메이커",
   "Liquidity providers": "유동성 공급자",

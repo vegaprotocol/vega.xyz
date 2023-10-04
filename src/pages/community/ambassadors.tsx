@@ -5,7 +5,6 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import GlitchTitle from '../../components/UI/GlitchTitle'
-import Tag from '../../components/UI/Tag'
 import TeamTile from '../../components/UI/TeamTile'
 import Button from '../../components/UI/Button'
 import NumberedListItem from '../../components/UI/NumberedListItem'
@@ -53,27 +52,19 @@ const Ambassadors = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Be a Vega+ Ambassador')}
+        title={t('Ambassadors')}
         description={t(
           'Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
-      <div data-cy="main" className="pt-space-5 md:pt-space-6 lg:pt-space-7">
+      <div data-cy="main" className="pt-space-5 md:pt-space-6 lg:pt-space-10">
         <Container>
           <div className="mx-auto mb-space-10 max-w-[21.25rem] text-center md:max-w-[40rem] lg:max-w-[80rem]">
-            <Tag className="mb-space-4">
-              <Trans t={t}>Contribute</Trans>
-            </Tag>
             <h1>
-              <div className="heading-xxl mb-space-5 hidden md:block">
+              <div className="heading-l lg:heading-xxl mb-space-5">
                 <GlitchTitle color="purple">
-                  <Trans t={t}>Be a Vega+ Ambassador</Trans>
-                </GlitchTitle>
-              </div>
-              <div className="heading-l mb-space-3 md:hidden">
-                <GlitchTitle color="purple">
-                  <Trans t={t}>Be a Vega+ Ambassador</Trans>
+                  <Trans t={t}>Ambassadors</Trans>
                 </GlitchTitle>
               </div>
             </h1>

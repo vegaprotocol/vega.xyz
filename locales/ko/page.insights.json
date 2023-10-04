@@ -1,5 +1,10 @@
 {
-  "Insights": "인사이트",
-  "Articles about vega from around the web": "Vega에 대한 기사",
-  "Latest news": "최신 뉴스"
+  "Previous Page": "",
+  "Previous": "",
+  "{{firstItem}} - {{lastItem}} of {{totalItems}}": "",
+  "Next Page": "",
+  "Next": "",
+  "Insights & Talks": "",
+  "Articles and talks about vega": "",
+  "Insights & talks.": ""
 }

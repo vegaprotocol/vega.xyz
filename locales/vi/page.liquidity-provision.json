@@ -1,6 +1,5 @@
 {
-  "Use Vega": "Sử dụng Vega",
-  "Provide Liquidity": "Cung cấp thanh khoản",
+  "Liquidity Provision": "",
   "Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.": "Các nhà cung cấp thanh khoản nhận được một phần phí được trả trong quá trình giao dịch để đổi lấy việc cung cấp thanh khoản trên mạng.",
   "The data relating to markets on this page is obtained from nodes on the Vega Blockchain.": "Dữ liệu liên quan đến thị trường trên trang này được lấy từ các nút trên Chuỗi khối Vega.",
   "Provides its software under open source licences": "Cung cấp phần mềm của nó theo giấy phép nguồn mở",

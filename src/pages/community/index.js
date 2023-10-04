@@ -5,13 +5,13 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import ButtonLink from '../../components/ButtonLink'
-import BoxTitle from '../../components/BoxTitle'
+import Calendar from '../../components/Calendar'
 import Fairground from '../../components/Fairground'
 import LeadingLine from '../../components/LeadingLine'
-import Callout from '../../components/UI/Callout'
 import { getImage } from 'gatsby-plugin-image'
 import CommunityResponsive from '../../components/Svg/Community/Hero/Responsive'
 import ToolBox from '../../components/ToolBox'
+import PartnerBackers from '../../components/PartnerBackers'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const CommunityPage = ({ data }) => {
@@ -33,12 +33,9 @@ const CommunityPage = ({ data }) => {
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="pt-6 lg:pt-16">
-          <h1>
-            <BoxTitle text={t('Community')} />
+          <h1 className="title-m font-glitched md:title-xl mb-4 mt-4 max-w-[48rem] md:mb-6">
+            <Trans t={t}>Community</Trans>
           </h1>
-          <h2 className="title-m font-glitched md:title-l mb-4 mt-4 max-w-[48rem] md:mb-6">
-            <Trans t={t}>Join the Vega community</Trans>
-          </h2>
 
           <div className="max-w-[48rem]">
             <LeadingLine className="!mb-14">
@@ -129,18 +126,14 @@ const CommunityPage = ({ data }) => {
           />
         </div>
 
-        <Callout
-          title={t('Upcoming events')}
-          subtitle={t(
-            'Livestreams, conferences, research office hours and community calls'
-          )}
-          linkText={t('Events and meetups')}
-          link="/community/events"
-          image={getImage(data.eventsGraphic)}
-          className="mb-space-10"
-        />
+        <div class="my-space-10 xl:my-space-14">
+          <h2 className="title-m font-glitched md:title-l mb-space-10">
+            <Trans t={t}>Upcoming events + meetups</Trans>
+          </h2>
+          <Calendar limit={5} />
+        </div>
 
-        <h2 className="title-m font-glitched md:title-l mb-14">
+        <h2 className="title-m font-glitched md:title-l mb-space-10">
           <Trans t={t}>Contribute and get rewarded</Trans>
         </h2>
 
@@ -190,16 +183,10 @@ const CommunityPage = ({ data }) => {
             icon={getImage(data.iconDocs)}
           />
         </div>
-
-        <Callout
-          title={t('Incentives')}
-          subtitle={t('Get rewarded for your efforts testing the network')}
-          linkText={t('Earn rewards')}
-          link="https://fairground.wtf/"
-          image={getImage(data.incentivesGraphic)}
-          className="mb-space-10"
-        />
       </Container>
+
+      <PartnerBackers />
+
       <Fairground />
     </Layout>
   )

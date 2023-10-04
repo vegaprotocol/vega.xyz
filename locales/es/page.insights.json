@@ -1,5 +1,10 @@
 {
-  "Insights": "Perspectivas",
-  "Articles about vega from around the web": "Artículos sobre Vega en Internet",
-  "Latest news": "Últimas noticias"
+  "Previous Page": "",
+  "Previous": "",
+  "{{firstItem}} - {{lastItem}} of {{totalItems}}": "",
+  "Next Page": "",
+  "Next": "",
+  "Insights & Talks": "",
+  "Articles and talks about vega": "",
+  "Insights & talks.": ""
 }

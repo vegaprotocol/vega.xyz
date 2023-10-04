@@ -1,0 +1,40 @@
+import React from 'react'
+
+const Security = (props) => {
+  return (
+    <svg
+      width="91"
+      height="91"
+      viewBox="0 0 91 91"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="0.65"
+        y="0.65"
+        width="89.7"
+        height="89.7"
+        rx="11.35"
+        stroke="white"
+        strokeWidth="1.3"
+      />
+      <path d="M53 68H23V71H53V68Z" fill="white" />
+      <path d="M20 23.14V68.14H23V23.14H20Z" fill="white" />
+      <path
+        d="M56 50V71H59V77H62V71H65V77H68V71H71V50H56ZM59 59V56H62V59H59ZM68 59H65V56H68V59Z"
+        fill="white"
+      />
+      <path d="M59 20H23V23H59V20Z" fill="white" />
+      <path d="M59 29H23V32H59V29Z" fill="white" />
+      <path d="M27.5 24.5H24.5V27.5H27.5V24.5Z" fill="white" />
+      <path d="M32 24.5H29V27.5H32V24.5Z" fill="white" />
+      <path d="M32 24.5H29V27.5H32V24.5Z" fill="white" />
+      <path d="M36.5 24.5H33.5V27.5H36.5V24.5Z" fill="white" />
+      <path d="M39.5 39.5V54.5H42.5V39.5H39.5Z" fill="white" />
+      <path d="M42.5 57.5H39.5V60.5H42.5V57.5Z" fill="white" />
+      <path d="M59 23V47H62V23H59Z" fill="white" />
+    </svg>
+  )
+}
+
+export default Security

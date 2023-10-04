@@ -1,5 +1,10 @@
 {
-  "Insights": "Thông tin chi tiết",
-  "Articles about vega from around the web": "Các bài viết về vega từ khắp nơi trên Internet",
-  "Latest news": "Các tin tức mới nhất"
+  "Previous Page": "",
+  "Previous": "",
+  "{{firstItem}} - {{lastItem}} of {{totalItems}}": "",
+  "Next Page": "",
+  "Next": "",
+  "Insights & Talks": "",
+  "Articles and talks about vega": "",
+  "Insights & talks.": ""
 }

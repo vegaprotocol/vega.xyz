@@ -4,7 +4,6 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Seo from '../../components/Seo'
-import Tag from '../../components/UI/Tag'
 import Button from '../../components/UI/Button'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import TeamTile from '../../components/UI/TeamTile'
@@ -49,24 +48,19 @@ const ProgrammaticTrading = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Programmatic trading on Vega')}
+        title={t('Programmatic Trading')}
         description={t(
           'Programmatic trading on Vega is enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mx-auto mb-space-10 max-w-[60rem] pt-space-5 text-center md:mb-space-11 md:pt-space-6 lg:pt-space-7">
-          <h1 className="mb-space-4 ">
-            <Tag>
-              <Trans t={t}>Use Vega</Trans>
-            </Tag>
-          </h1>
-          <h2 className="heading-xl mb-space-5">
+        <div className="mx-auto mb-space-10 max-w-[60rem] pt-space-5 text-center md:mb-space-11 md:pt-space-6 lg:pt-space-10">
+          <h1 className="heading-xl mb-space-5">
             <GlitchTitle color="purple">
-              <Trans t={t}>Programmatic trading on Vega</Trans>
+              <Trans t={t}>Programmatic Trading</Trans>
             </GlitchTitle>
-          </h2>
+          </h1>
           <div className="body-xl mx-auto max-w-[40rem]">
             <Trans t={t}>
               Enabled through rich CEX-style APIs for deployment of market

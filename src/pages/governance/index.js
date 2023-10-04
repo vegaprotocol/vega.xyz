@@ -6,7 +6,6 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import GovernanceResponsive from '../../components/Svg/Governance/Hero/Responsive'
-import BoxTitle from '../../components/BoxTitle'
 import ToolBox from '../../components/ToolBox'
 import ButtonLink from '../../components/ButtonLink'
 import GlitchTitle from '../../components/GlitchTitle'
@@ -22,7 +21,6 @@ import Phase4 from '../../components/Svg/Governance/Process/Phase4'
 import Phase5 from '../../components/Svg/Governance/Process/Phase5'
 import Proposals from '../../components/Proposals'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import Callout from '../../components/UI/Callout'
 
 const GovernancePage = ({ data }) => {
   const { i18n, t } = useTranslation('page.governance')
@@ -115,6 +113,13 @@ const GovernancePage = ({ data }) => {
             .
           </Trans>
         </p>
+        <p>
+          <Trans t={t}>
+            If the proposal was creating a new market, once enacted it will
+            remain in opening auction until it has attracted enough liquidity to
+            start trading.
+          </Trans>
+        </p>
       </>
     )
   }
@@ -166,7 +171,7 @@ const GovernancePage = ({ data }) => {
     },
     {
       phase: t('Phase 4'),
-      title: t('Vote to exercise your influence'),
+      title: t('Vote'),
       component: <Phase4Text />,
       links: [
         {
@@ -187,32 +192,29 @@ const GovernancePage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Governance')}
+        title={t('Governance Home')}
         description={t(
           'Governance allows the Vega network to arrive at on-chain decisions, where tokenholders can create proposals that other tokenholders can vote to approve or reject.'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
-          <h1>
-            <BoxTitle text={t('Governance')} />
-          </h1>
+        <div className="mx-auto max-w-[61rem] pt-space-5 text-center md:pt-space-6 lg:pt-space-10">
           <GlitchTitle
-            level="2"
+            level="1"
             color="red"
             className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
           >
-            <Trans t={t}>Govern the network</Trans>
+            <Trans t={t}>Governance</Trans>
           </GlitchTitle>
         </div>
         <div className="mx-auto max-w-[44rem]">
           <LeadingLine className="text-center">
             <Trans t={t}>
-              Decisions on the Vega network are on-chain, with tokenholders
-              creating proposals that other tokenholders vote to approve or
-              reject. This is how the protocol powers the creation of
-              decentralised financial products.
+              Vega is uncompromisingly decentralised, with all network
+              governance taking place on-chain. Read on to find out how to
+              propose new markets, create settlement assets, and configure the
+              network
             </Trans>
           </LeadingLine>
         </div>
@@ -225,12 +227,19 @@ const GovernancePage = ({ data }) => {
         >
           <ToolBox
             icon={getImage(data.forumIcon)}
-            title={t('Discuss proposals')}
+            title={t('Forums')}
             link="https://community.vega.xyz/c/governance/25"
             text={t(
               'Read initial proposals and get involved in the discussion before the proposal goes to vote.'
             )}
             type="Tool"
+          />
+          <ToolBox
+            icon={getImage(data.tokenInterfaceIcon)}
+            title={t('Stake & Vote')}
+            link="https://governance.vega.xyz/proposals"
+            text={t('Review and vote on governance proposals.')}
+            type="DAPP"
           />
           <ToolBox
             icon={getImage(data.makeProposalIcon)}
@@ -240,13 +249,6 @@ const GovernancePage = ({ data }) => {
               'Read the docs to create and submit a proposal using Vega APIs.'
             )}
             type="DOCS"
-          />
-          <ToolBox
-            icon={getImage(data.tokenInterfaceIcon)}
-            title={t('Vote on proposals')}
-            link="https://governance.vega.xyz/proposals"
-            text={t('Review and vote on governance proposals.')}
-            type="DAPP"
           />
         </div>
 
@@ -271,8 +273,7 @@ const GovernancePage = ({ data }) => {
               <div className="lg:prose-lg">
                 <p className="copy-xxs lg:copy-xs">
                   <Trans t={t}>
-                    And store in an Ethereum wallet. You can purchase VEGA using
-                    Ethereum (ETH) on decentralized exchanges.
+                    You can purchase VEGA on various exchanges.
                   </Trans>
                 </p>
               </div>
@@ -312,8 +313,8 @@ const GovernancePage = ({ data }) => {
                 </p>
               </div>
               <ButtonLink
-                link="/governance/#governanceTools"
-                text={t('Governance tools')}
+                link="https://governance.vega.xyz/"
+                text={t('Governance App')}
               />
             </div>
           </div>
@@ -332,14 +333,6 @@ const GovernancePage = ({ data }) => {
               transNamespace="page.governance"
             />
           </div>
-
-          <Callout
-            title={t('Propose a futures market on any underlying.')}
-            image={getImage(data.marketMakingImage)}
-            linkText={t('Create a new market')}
-            link="/market-creation"
-            className="mb-space-8 md:mb-space-11"
-          />
         </div>
         <div className="mb-space-8 md:mb-space-10">
           <Proposals />

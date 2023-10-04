@@ -1,5 +1,10 @@
 {
-  "Insights": "见解",
-  "Articles about vega from around the web": "来自网络的有关vega 的文章",
-  "Latest news": "最近消息"
+  "Previous Page": "",
+  "Previous": "",
+  "{{firstItem}} - {{lastItem}} of {{totalItems}}": "",
+  "Next Page": "",
+  "Next": "",
+  "Insights & Talks": "",
+  "Articles and talks about vega": "",
+  "Insights & talks.": ""
 }

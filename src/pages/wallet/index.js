@@ -281,7 +281,7 @@ const WalletPageNew = ({ data }) => {
   return (
     <Layout stickyHeader={false}>
       <Seo
-        title={t('Vega Wallet')}
+        title={t('Wallet')}
         description={t(
           "Connect to Vega dapps securely, deposit funds and approve or reject transactions with the Vega wallet. Download, set up and you're ready to connect"
         )}

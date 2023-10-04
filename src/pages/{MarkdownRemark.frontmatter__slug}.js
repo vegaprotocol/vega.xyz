@@ -1,27 +1,27 @@
-import React from "react";
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
-import Container from "../components/Container";
+import React from 'react'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
+import Container from '../components/Container'
 
-import { graphql } from "gatsby";
+import { graphql } from 'gatsby'
 export default function Template({ data }) {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
   return (
     <Layout>
       <Seo title={frontmatter.title} description={frontmatter.description} />
       <Container>
         <div>
-          <div className="border-t border-current">
-            <div className="md:grid md:grid-cols-12 pt-4">
-              <div className="md:col-span-5 lg:col-span-4 md:pr-12">
+          <div className="mt-space-5 border-t border-current md:mt-space-6 lg:mt-space-10">
+            <div className="pt-4 md:grid md:grid-cols-12">
+              <div className="md:col-span-5 md:pr-12 lg:col-span-4">
                 <h1 className="title-l mb-6 max-w-[25rem]">
                   {frontmatter.title}
                 </h1>
               </div>
               <div className="md:col-span-7 lg:col-span-8">
                 <div
-                  className="prose dark:prose-invert max-w-none prose-headings:border-0"
+                  className="prose max-w-none prose-headings:border-0 dark:prose-invert"
                   dangerouslySetInnerHTML={{ __html: html }}
                 ></div>
               </div>
@@ -30,7 +30,7 @@ export default function Template({ data }) {
         </div>
       </Container>
     </Layout>
-  );
+  )
 }
 export const pageQuery = graphql`
   query ($id: String!) {
@@ -43,4 +43,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

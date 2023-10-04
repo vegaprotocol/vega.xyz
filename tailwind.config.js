@@ -52,10 +52,10 @@ const theme = {
     'vega-purple': '#633DFF',
     'vega-text-muted': '#BFCCD6',
     'vega-border-muted': '#696969',
-    'vega-dark-100': '#161616',
-    'vega-dark-200': '#404040',
-    'vega-dark-300': '#8b8b8b',
-    'vega-dark-400': '#C0C0C0',
+    'vega-dark-100': '#17191E',
+    'vega-dark-200': '#3E4045',
+    'vega-dark-300': '#868A94',
+    'vega-dark-400': '#BFC1C7',
     'vega-light-100': '#F0F0F0',
     'vega-light-200': '#D2D2D2',
     'vega-light-300': '#A7A7A7',
@@ -67,38 +67,8 @@ const theme = {
   typography: (theme) => ({
     DEFAULT: {
       css: {
-        '--tw-prose-body': theme('colors.vega-mid-grey'),
-        '--tw-prose-headings': theme('colors.vega-mid-grey'),
-        '--tw-prose-lead': theme('colors.vega-mid-grey'),
-        '--tw-prose-links': theme('colors.vega-mid-grey'),
-        '--tw-prose-bold': theme('colors.vega-mid-grey'),
-        '--tw-prose-counters': theme('colors.vega-mid-grey'),
-        '--tw-prose-bullets': theme('colors.vega-mid-grey'),
-        '--tw-prose-hr': theme('colors.vega-mid-grey'),
-        '--tw-prose-quotes': theme('colors.vega-mid-grey'),
-        '--tw-prose-quote-borders': theme('colors.vega-mid-grey'),
-        '--tw-prose-captions': theme('colors.vega-mid-grey'),
-        '--tw-prose-code': theme('colors.vega-mid-grey'),
-        '--tw-prose-pre-code': theme('colors.vega-mid-grey'),
-        '--tw-prose-pre-bg': theme('colors.vega-mid-grey'),
-        '--tw-prose-th-borders': theme('colors.vega-mid-grey'),
-        '--tw-prose-td-borders': theme('colors.vega-mid-grey'),
-        '--tw-prose-invert-body': theme('colors.vega-grey'),
-        '--tw-prose-invert-headings': theme('colors.vega-grey'),
-        '--tw-prose-invert-lead': theme('colors.vega-grey'),
-        '--tw-prose-invert-links': theme('colors.vega-grey'),
-        '--tw-prose-invert-bold': theme('colors.vega-grey'),
-        '--tw-prose-invert-counters': theme('colors.vega-grey'),
-        '--tw-prose-invert-bullets': theme('colors.vega-grey'),
-        '--tw-prose-invert-hr': theme('colors.vega-grey'),
-        '--tw-prose-invert-quotes': theme('colors.vega-grey'),
-        '--tw-prose-invert-quote-borders': theme('colors.vega-grey'),
-        '--tw-prose-invert-captions': theme('colors.vega-grey'),
-        '--tw-prose-invert-code': theme('colors.vega-grey'),
-        '--tw-prose-invert-pre-code': theme('colors.vega-grey'),
-        '--tw-prose-invert-pre-bg': theme('colors.vega-grey'),
-        '--tw-prose-invert-th-borders': theme('colors.vega-grey'),
-        '--tw-prose-invert-td-borders': theme('colors.vega-grey'),
+        color: theme('colors.vega-light-300'),
+        '--tw-prose-links': theme('colors.vega-light-300'),
         lineHeight: '1.4',
 
         p: {
@@ -112,16 +82,27 @@ const theme = {
         li: {
           lineHeight: '1.4',
         },
-        h2: {
-          textTransform: 'uppercase',
-          borderTop: 'solid 1px currentColor',
-          paddingTop: '0.4rem',
-          marginTop: '2rem',
-          marginBottom: '0.75rem',
-          lineHeight: '1',
-        },
-        '--tw-prose-bullets': theme('colors.vega-black'),
+        ...['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].reduce((obj, heading) => {
+          obj[heading] = {
+            color: theme('colors.vega-light-300'),
+          }
+          return obj
+        }, {}),
+        '--tw-prose-bullets': theme('colors.vega-light-300'),
         '--tw-prose-invert-bullets': theme('colors.vega-white'),
+      },
+    },
+    dark: {
+      css: {
+        color: theme('colors.vega-dark-300'),
+        ...['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].reduce((obj, heading) => {
+          obj[heading] = {
+            color: theme('colors.vega-dark-300'),
+          }
+          return obj
+        }, {}),
+        '--tw-prose-bullets': theme('colors.vega-dark-300'),
+        '--tw-prose-links': theme('colors.vega-dark-300'),
       },
     },
   }),
