@@ -88,7 +88,7 @@ const theme = {
           }
           return obj
         }, {}),
-        '--tw-prose-bullets': theme('colors.vega-black'),
+        '--tw-prose-bullets': theme('colors.vega-light-300'),
         '--tw-prose-invert-bullets': theme('colors.vega-white'),
       },
     },
@@ -101,6 +101,7 @@ const theme = {
           }
           return obj
         }, {}),
+        '--tw-prose-bullets': theme('colors.vega-dark-300'),
         '--tw-prose-links': theme('colors.vega-dark-300'),
       },
     },
