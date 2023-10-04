@@ -2,13 +2,17 @@ import React from 'react'
 import TextLink from '../components/TextLink'
 import Container from '../components/Container'
 import SquareBullet from '../components/Svg/SquareBullet'
+import IconDiscord from '../components/Svg/IconDiscord'
+import IconGithub from '../components/Svg/IconGithub'
+import IconTelegram from '../components/Svg/IconTelegram'
+import IconTwitter from '../components/Svg/IconTwitter'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Footer = () => {
   const { t } = useTranslation('component.navigation')
   return (
     <footer>
-      <div className="border-t border-current pb-12 pt-8">
+      <div className="border-y border-current pb-12 pt-8">
         <Container>
           <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-6">
             <div>
@@ -374,6 +378,63 @@ const Footer = () => {
                   </TextLink>
                 </li>
               </ul>
+            </div>
+          </div>
+        </Container>
+      </div>
+      <div className="py-5">
+        <Container>
+          <div className="flex flex-wrap gap-x-12 gap-y-2 md:justify-between">
+            <div className="flex items-center gap-x-4">
+              <div className="mr-3 text-[0.9375rem] uppercase">
+                <SquareBullet size="11" />
+                <Trans t={t}>Connect</Trans>
+              </div>
+              <a
+                href="https://twitter.com/vegaprotocol"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <IconTwitter />
+              </a>
+              <a
+                href="https://vega.xyz/discord"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <IconDiscord />
+              </a>
+              <a
+                href="https://github.com/vegaprotocol"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <IconGithub />
+              </a>
+              <a
+                href="https://t.me/vegacommunity/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <IconTelegram />
+              </a>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+              <TextLink to="https://blog.vega.xyz/tagged/vega-incident-reports">
+                <Trans t={t}>Mainnet status and incidents</Trans>
+              </TextLink>
+              <TextLink to="/bug-bounties">
+                <Trans t={t}>Report a security issue</Trans>
+              </TextLink>
+              <TextLink to="https://github.com/vegaprotocol/brand">
+                <Trans t={t}>Brand assets</Trans>
+              </TextLink>
+              <TextLink to="https://github.com/vegaprotocol/">
+                <Trans t={t}>Contribute to Vega</Trans>
+              </TextLink>
+              <TextLink to="/privacy/">
+                <Trans t={t}>Privacy & Cookie Policy</Trans>
+              </TextLink>
             </div>
           </div>
         </Container>
