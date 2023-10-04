@@ -31,6 +31,10 @@ export const MarketsDataFieldsFragmentDoc = gql`
       marketTimestamps {
         open
       }
+      liquiditySLAParameters {
+        priceRange
+        commitmentMinTimeFraction
+      }
       decimalPlaces
       positionDecimalPlaces
     }
