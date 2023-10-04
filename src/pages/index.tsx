@@ -212,9 +212,7 @@ const IndexPage = ({ data }) => {
           </Container>
 
           <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
-            <Container>
-              <LiquidityProvision />
-            </Container>
+            <Container>{/* <LiquidityProvision /> */}</Container>
           </div>
 
           <div className="mt-16 md:mt-32 lg:mt-40">
