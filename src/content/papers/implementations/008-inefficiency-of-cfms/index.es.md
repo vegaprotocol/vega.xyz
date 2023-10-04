@@ -1,9 +1,9 @@
 ---
-title: 'Inefficiency of CFMs: hedging perspective and agent-based simulations'
-description: Co-authored by Dr David Siska, this paper explores whether the fee income from trades on the CFM is sufficient for the liquidity providers to hedge away the exposure to market risk.
+title: 'Ineficiencia de los CFM: perspectiva de cobertura y simulaciones basadas en agentes'
+description: En coautoría del Dr. David Siska, este artículo explora si los ingresos por comisiones de las operaciones en el CFM son suficientes para que los proveedores de liquidez cubran la exposición al riesgo de mercado.
 links:
-  - title: View on Arxiv
+  - title: Ver en Arxiv
     link: https://arxiv.org/abs/2302.04345
 position: 6
-category: Implementations
+category: Implementaciones
 ---

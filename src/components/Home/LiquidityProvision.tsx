@@ -3,7 +3,7 @@ import { useYesterday } from '@vegaprotocol/react-helpers'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import LiquidtyTile from '../LiquidityTile'
 import Button from '../UI/Button'
-import { useMarkets } from '../../hooks/use-markets'
+import { useMarkets, validMarketStates } from '../../hooks/use-markets'
 
 const LiquidityProvision = () => {
   const { t } = useTranslation('component.liquidity-provision')
@@ -14,7 +14,11 @@ const LiquidityProvision = () => {
   }, [yesterday])
   const { data, loading, error } = useMarkets(yTimestamp)
 
-  const markets = data?.marketsConnection?.edges.slice(0, 4) || []
+  const filteredMarkets = data?.marketsConnection?.edges.filter((market) => {
+    const marketState = market.node.data.marketState
+    return validMarketStates.includes(marketState)
+  })
+  const displayedMarkets = filteredMarkets?.slice(0, 4) || []
 
   return (
     <div>
@@ -31,9 +35,9 @@ const LiquidityProvision = () => {
         </Button>
       </div>
 
-      {markets && (
+      {displayedMarkets.length > 0 && (
         <div className="grid grid-cols-1 gap-space-4 md:grid-cols-2 md:gap-space-4 lg:grid-cols-4 lg:gap-space-4 xl:gap-space-6">
-          {markets.map((market, index) => (
+          {displayedMarkets.map((market, index) => (
             <LiquidtyTile marketId={market.node.data.market.id} key={index} />
           ))}
         </div>

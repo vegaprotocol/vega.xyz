@@ -39,7 +39,7 @@ import LeadingLine from '../../components/LeadingLine'
 import Link from '../../components/UI/Link'
 import { Description } from '../../components/VegaMarkets/Description'
 import { useMarketLiquidityProviders } from '../../hooks/use-market-liquidity'
-import { useMarkets } from '../../hooks/use-markets'
+import { useMarkets, validMarketStates } from '../../hooks/use-markets'
 import { calc24hVolume } from '../../utils/vega/24hVolume'
 import { getStatus } from '../../utils/vega/getStatus'
 import './liquidity-provision.css'
@@ -561,10 +561,3 @@ const percentageFormatter = (value) => {
 
 const liquidityDetailsConsoleLink = (marketId: string, consoleLink: string) =>
   `${consoleLink}/#/liquidity/${marketId}`
-
-const validMarketStates = [
-  'STATE_UNSPECIFIED',
-  'STATE_PENDING',
-  'STATE_ACTIVE',
-  'STATE_SUSPENDED',
-]

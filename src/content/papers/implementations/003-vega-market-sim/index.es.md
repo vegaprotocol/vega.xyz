@@ -1,9 +1,9 @@
 ---
-title: 'Vega Market Sim: A Protocol Analysis, Parameter Optimisation and Exploration Tool'
-description: Tom McLean and David Siska discuss the Vega Market Simulations and their uses for exploring the behaviour of the protocol itself, alongside the advantages of agent based modelling and simulations in DeFi in general.
+title: 'Vega Market Sim: Una herramienta de exploración, optimización de parámetros y análisis de protocolos'
+description: Tom McLean y David Siska analizan las simulaciones de Vega Market y sus usos para explorar el comportamiento del protocolo en sí, junto con las ventajas del modelado basado en agentes y las simulaciones en DeFi en general.
 links:
-  - title: View PDF
+  - title: Ver PDF
     link: /papers/vega-market-sim.pdf
 position: 3
-category: Implementations
+category: Implementaciones
 ---

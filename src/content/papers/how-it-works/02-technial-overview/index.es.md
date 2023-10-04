@@ -1,9 +1,9 @@
 ---
-title: Technical overview
-description: This three-page document describes the architecture and trading core components of the Vega framework, from an engineering perspective.
+title: Resumen técnico
+description: Este documento de tres páginas describe la arquitectura y los componentes centrales comerciales del marco Vega, desde una perspectiva de ingeniería.
 links:
-  - title: View PDF
+  - title: Ver PDF
     link: /papers/vega-technical-overview.pdf
 position: 2
-category: How it works
+category: Cómo funciona
 ---

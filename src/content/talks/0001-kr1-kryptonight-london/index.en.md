@@ -1,5 +1,5 @@
 ---
-title: KR1's 크립투나잇 런던
+title: KR1's Cryptonight London
 location: London
 date: 2019-02-26
 links:

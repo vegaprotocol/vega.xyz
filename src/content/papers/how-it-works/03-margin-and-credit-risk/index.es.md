@@ -1,9 +1,9 @@
 ---
-title: Margins and Credit Risk on Vega
-description: This whitepaper, written by Dr David Siska, provides an initial summary of certain technical and business essentials underlying the Vega Protocol.
+title: Márgenes y riesgo crediticio en Vega
+description: Este documento técnico, escrito por el Dr. David Siska, proporciona un resumen inicial de ciertos elementos técnicos y comerciales esenciales que subyacen al Protocolo Vega.
 links:
-  - title: View PDF
+  - title: Ver PDF
     link: /papers/margins-and-credit-risk.pdf
 position: 3
-category: How it works
+category: Cómo funciona
 ---
