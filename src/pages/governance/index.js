@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
 import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
@@ -283,17 +283,21 @@ const GovernancePage = ({ data }) => {
             </div>
             <div className="relative border-b-2 border-current p-12 md:border-b-0 md:border-r-2 md:p-6 lg:p-12">
               <div className="title-s mb-6">
-                <Trans t={t}>Get a Vega Wallet</Trans>
+                <Trans t={t}>Stake VEGA</Trans>
               </div>
               <div className="mb-6 lg:prose-lg">
                 <p className="copy-xxs lg:copy-xs">
                   <Trans t={t}>
-                    A Vega wallet is used to access and sign transactions and
-                    connect to any dApp running on Vega.
+                    Stake your VEGA tokens on the governance site to be eligible
+                    to vote, note you will need to get a{' '}
+                    <Link to="/wallet">wallet</Link> to do this
                   </Trans>
                 </p>
               </div>
-              <ButtonLink link="/wallet" text={t('Get a Vega Wallet')} />
+              <ButtonLink
+                link="https://governance.vega.xyz/token/associate"
+                text={t('Stake VEGA')}
+              />
               <div className="absolute left-1/2 -bottom-5 -translate-x-1/2 bg-white p-3 dark:bg-black md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg]">
                 <Arrow />
               </div>
