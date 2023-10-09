@@ -8,8 +8,8 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import NewsListItem from '../components/UI/NewsListItem'
 import Talk from '../components/Talk'
 
-const InsightsPage = ({ data, pageContext }) => {
-  const { i18n, t } = useTranslation('page.insights')
+const ArticlesPage = ({ data, pageContext }) => {
+  const { i18n, t } = useTranslation('page.articles')
   const [missingTranslations, setMissingTranslations] = useState(false)
   const { currentPage, numPages } = pageContext
   const isFirst = currentPage === 1
@@ -18,8 +18,8 @@ const InsightsPage = ({ data, pageContext }) => {
   const totalItems = data.allMarkdownRemark.totalCount
   const lastItem = isLast ? totalItems : firstItem + 9
   const prevPage =
-    currentPage - 1 === 1 ? '/insights' : `/insights/${currentPage - 1}`
-  const nextPage = `/insights/${currentPage + 1}`
+    currentPage - 1 === 1 ? '/articles' : `/articles/${currentPage - 1}`
+  const nextPage = `/articles/${currentPage + 1}`
 
   i18n.on('missingKey', (lng) => {
     setMissingTranslations(true)
@@ -82,15 +82,15 @@ const InsightsPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <Seo
-        title={t('Insights & Talks')}
-        description={t('Articles and talks about vega')}
+        title={t('Articles & Talks')}
+        description={t('Articles and talks about Vega')}
       />
       {missingTranslations && <TranslationsBanner />}
       <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
         <Container>
           <div className="mb-space-8 text-center md:mb-space-10 lg:mb-space-11">
             <h2 className="mb-space-4 text-[3rem] leading-none">
-              <Trans t={t}>Insights & talks.</Trans>
+              <Trans t={t}>Articles & talks.</Trans>
             </h2>
             <p className="body-l mx-auto max-w-[25rem] text-vega-light-300 dark:text-vega-dark-300">
               Articles about Vega and recordings of past talks, events and
@@ -151,7 +151,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       filter: {
-        collection: { in: ["insights", "talks"] }
+        collection: { in: ["articles", "talks"] }
         fields: { locale: { eq: $language } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
@@ -187,4 +187,4 @@ export const query = graphql`
   }
 `
 
-export default InsightsPage
+export default ArticlesPage

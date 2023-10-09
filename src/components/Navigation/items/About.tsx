@@ -11,7 +11,7 @@ const About = () => {
       <NavigationItem text={t('Papers')} link="/papers/" />
       <NavigationItem text={t('FAQs')} link="/faqs" />
       <NavigationItem text={t('Rewards')} link="/rewards" />
-      <NavigationItem text={t('Insights & Talks')} link="/insights/" />
+      <NavigationItem text={t('Articles & Talks')} link="/articles/" />
       <NavigationItem text={t('Blog')} link="https://blog.vega.xyz" />
     </NavigationList>
   )

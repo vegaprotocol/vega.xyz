@@ -297,7 +297,7 @@ const IndexPage = ({ data }) => {
               <LatestNews
                 blogPosts={data.blogPosts}
                 talks={data.talks}
-                insights={data.insights}
+                articles={data.articles}
               />
             </PageSection>
 
@@ -417,10 +417,10 @@ export const query = graphql`
         }
       }
     }
-    insights: allMarkdownRemark(
+    articles: allMarkdownRemark(
       limit: 1
       filter: {
-        collection: { eq: "insights" }
+        collection: { eq: "articles" }
         fields: { locale: { eq: $language } }
       }
       sort: { fields: [frontmatter___date], order: DESC }

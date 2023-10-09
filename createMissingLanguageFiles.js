@@ -4,7 +4,7 @@ const path = require('path')
 const languages = require('./languages.js')
 
 const contentDirectories = [
-  { path: 'src/content/insights', isPapers: false },
+  { path: 'src/content/articles', isPapers: false },
   { path: 'src/content/faqs', isPapers: false },
   { path: 'src/content/papers', isPapers: true },
 ]

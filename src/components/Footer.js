@@ -36,10 +36,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="/insights/"
+                    to="/articles/"
                     className="block py-1.5 leading-[1.3]"
                   >
-                    <Trans t={t}>Insights</Trans>
+                    <Trans t={t}>Articles</Trans>
                   </TextLink>
                 </li>
                 <li>

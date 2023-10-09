@@ -148,7 +148,7 @@ const RewardsPage = ({ data }) => {
           </GenericTile>
           <GenericTile
             image={getImage(data.iconSecurity)}
-            title={t('Security issues')}
+            title={t('Security Issues')}
             link={{
               to: '/bug-bounties',
               title: t('Report a security issue'),
@@ -161,7 +161,7 @@ const RewardsPage = ({ data }) => {
           </GenericTile>
           <GenericTile
             image={getImage(data.iconFairground)}
-            title={t('Fairground incentives')}
+            title={t('Fairground Incentives')}
             link={{
               to: 'https://fairground.wtf/',
               title: t('Fairground'),
