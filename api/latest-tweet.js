@@ -58,17 +58,21 @@ exports.default = async (req, res) => {
       }
     )
 
+    const tweetMediaKey = data[0]?.attachments?.media_keys[0]
+
+    const associatedMedia = tweetMediaKey
+      ? includes?.media.find((media) => media.media_key === tweetMediaKey)
+      : null
+
     tweetData = {
       id: data[0].id,
       tweet_text: data[0].text,
-      image: data[0]?.attachments
-        ? includes?.media[0].url
-          ? includes?.media[0].url
-          : includes?.media[0].preview_image_url
+      image: associatedMedia
+        ? associatedMedia.url || associatedMedia.preview_image_url
         : null,
       all_tweets: data,
     }
-    await kv.set('latest-tweet', tweetData, { expirationTtl: 60 * 60 })
+    await kv.set('latest-tweet', tweetData, { ex: 60 * 60 })
   }
 
   res.setHeader('Access-Control-Allow-Origin', '*')
