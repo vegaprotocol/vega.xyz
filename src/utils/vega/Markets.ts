@@ -103,6 +103,19 @@ export const processMarketData = (marketData) => {
             sparkLineValues: sparkLineValues(candles),
             openTimestamp: openTimestamp,
           }
+        } else {
+          return {
+            name: marketName,
+            volume: 0,
+            formattedVolume: addDecimalsFormatNumber(0, positionDecimalPlaces),
+            lastPrice: addDecimalsFormatNumber(
+              markPrice.toString(),
+              decimalPlaces
+            ),
+            priceChange: priceChange24h.toFixed(2) + '%',
+            sparkLineValues: sparkLineValues(candles),
+            openTimestamp: openTimestamp,
+          }
         }
       }
     })
