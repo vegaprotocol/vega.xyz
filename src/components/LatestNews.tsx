@@ -30,11 +30,6 @@ const LatestNews = ({ blogPosts, talks, articles }) => {
 
   return (
     <div>
-      <div className="title-l lg:title-xl mb-12 text-center">
-        <h2>
-          <Trans t={t}>Latest News</Trans>
-        </h2>
-      </div>
       <div className="mx-auto grid max-w-[26.25rem] grid-cols-1 gap-12 md:max-w-none md:grid-cols-2 lg:grid-cols-4">
         {blogPosts.edges.length > 0 && (
           <div className="flex h-full flex-col justify-between">

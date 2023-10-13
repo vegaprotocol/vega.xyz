@@ -8,9 +8,6 @@
   "Vega Wallet": "Vega Wallet",
   "Docs": "Docs",
   "Backed by:": "Backed by:",
-  "Programmatic trading on Vega": "Programmatic trading on Vega",
-  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.",
-  "Explore": "Explore",
   "Key features": "Key features",
   "Non-custodial and pseudonymous": "Non-custodial and pseudonymous",
   "No third party has access to your funds.": "No third party has access to your funds.",
@@ -29,10 +26,13 @@
   "Permissionless market creation": "Permissionless market creation",
   "Create any market on any underlying with on-chain governance": "Create any market on any underlying with on-chain governance",
   "View all": "View all",
+  "Programmatic trading on Vega": "Programmatic trading on Vega",
+  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.",
+  "Explore": "Explore",
   "Events": "Events",
   "Where next?": "Where next?",
-  "Use the network": "Use the network",
-  "Join the community": "Join the community",
-  "Govern the network": "Govern the network",
-  "Develop on Vega": "Develop on Vega"
+  "Learn about Vega": "Learn about Vega",
+  "Read the docs": "Read the docs",
+  "Launch Console": "Launch Console",
+  "Staking & Governance": "Staking & Governance"
 }

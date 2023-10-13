@@ -8,9 +8,6 @@
   "Vega Wallet": "Ví Vega",
   "Docs": "Tài liệu",
   "Backed by:": "Được hỗ trợ tư vấn bơi",
-  "Programmatic trading on Vega": "Giao dịch có lập trình trên Vega",
-  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Kiến trúc nút dữ liệu phi tập trung của Vega cung cấp các API phong phú giống như CEX và dữ liệu giá lịch sử đầy đủ cho mọi người",
-  "Explore": "Khám phá",
   "Key features": "Các tính năng chính",
   "Non-custodial and pseudonymous": "Không ",
   "No third party has access to your funds.": "",
@@ -29,10 +26,13 @@
   "Permissionless market creation": "",
   "Create any market on any underlying with on-chain governance": "",
   "View all": "",
+  "Programmatic trading on Vega": "Giao dịch có lập trình trên Vega",
+  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Kiến trúc nút dữ liệu phi tập trung của Vega cung cấp các API phong phú giống như CEX và dữ liệu giá lịch sử đầy đủ cho mọi người",
+  "Explore": "Khám phá",
   "Events": "",
   "Where next?": "",
-  "Use the network": "",
-  "Join the community": "",
-  "Govern the network": "",
-  "Develop on Vega": ""
+  "Learn about Vega": "",
+  "Read the docs": "",
+  "Launch Console": "",
+  "Staking & Governance": ""
 }

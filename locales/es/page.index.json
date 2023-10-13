@@ -8,9 +8,6 @@
   "Vega Wallet": "Monedero Vega",
   "Docs": "Documentos",
   "Backed by:": "Respaldado por:",
-  "Programmatic trading on Vega": "Comercio programático en Vega",
-  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "La arquitectura descentralizada del datanode de Vega proporciona APIs ricas similares a las de CEX y datos históricos completos de precios para todo el mundo.",
-  "Explore": "Explorar",
   "Key features": "Características principales",
   "Non-custodial and pseudonymous": "Sin custodia y seudónimo",
   "No third party has access to your funds.": "Ningún tercero tiene acceso a sus fondos.",
@@ -29,10 +26,13 @@
   "Permissionless market creation": "Creación de mercados sin permiso",
   "Create any market on any underlying with on-chain governance": "Cree cualquier mercado en cualquier subyacente con gobernanza en cadena",
   "View all": "Ver todo",
+  "Programmatic trading on Vega": "Comercio programático en Vega",
+  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "La arquitectura descentralizada del datanode de Vega proporciona APIs ricas similares a las de CEX y datos históricos completos de precios para todo el mundo.",
+  "Explore": "Explorar",
   "Events": "Eventos",
   "Where next?": "Que sigue?",
-  "Use the network": "Usa la red",
-  "Join the community": "Unete a la communidad",
-  "Govern the network": "Gobernar la red",
-  "Develop on Vega": "Desarrollar en Vega"
+  "Learn about Vega": "",
+  "Read the docs": "",
+  "Launch Console": "",
+  "Staking & Governance": ""
 }

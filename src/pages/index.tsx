@@ -157,7 +157,6 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
             </div>
-
             <div className="md:hidden">
               <div className="heading-xxs !font-not-glitched mb-space-4 text-vega-dark-300">
                 <Trans t={t}>Backed by:</Trans>
@@ -173,53 +172,16 @@ const IndexPage = ({ data }) => {
               <Statistics />
             </div>
 
-            <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
-              <div className="grid md:grid-cols-2">
-                <div className="p-space-5">
-                  <h2 className="heading-m mb-space-4 max-w-[30rem]">
-                    <Trans t={t}>Programmatic trading on Vega</Trans>
-                  </h2>
-                  <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-3">
-                    <Trans t={t}>
-                      Vega's decentralised datanode architecture provides rich
-                      CEX-like APIs and full historic price data for everyone.
-                    </Trans>
-                  </p>
-                  <div>
-                    <div className="mb-space-6 flex items-center gap-x-space-5">
-                      <div className="max-w-[4.6875rem]">
-                        <LogoGRPC />
-                      </div>
-                      <div className="max-w-[3.125rem]">
-                        <LogoRestAPI />
-                      </div>
-                      <div className="max-w-[6.25rem]">
-                        <LogoGraphQL />
-                      </div>
-                    </div>
-                    <Button to="/programmatic-trading">
-                      <Trans t={t}>Explore</Trans>
-                    </Button>
-                  </div>
-                </div>
-                <div className="flex items-end justify-end">
-                  <div className="relative ml-space-3 mr-space-3 w-full max-w-[33.25rem]">
-                    <Explore />
-                  </div>
-                </div>
-              </div>
+            <div className="mb-space-10 mt-space-6 md:my-space-12 lg:my-space-14">
+              <LatestNews
+                blogPosts={data.blogPosts}
+                talks={data.talks}
+                articles={data.articles}
+              />
             </div>
-          </Container>
 
-          <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
-            <Container>
-              <LiquidityProvision />
-            </Container>
-          </div>
-
-          <div className="mt-16 md:mt-32 lg:mt-40">
-            <Container>
-              <h2 className="title-l md:title-xl mb-4 max-w-[20rem] md:max-w-none md:text-center lg:mb-0 xl:text-[5.875rem]">
+            <div className="mt-16 md:mt-32 lg:mt-40">
+              <h2 className="title-l lg:title-xl mb-12 text-center">
                 <GlitchTitle color="orange">
                   <Trans t={t}>Key features</Trans>
                 </GlitchTitle>
@@ -289,21 +251,54 @@ const IndexPage = ({ data }) => {
                   </Button>
                 </div>
               </div>
-            </Container>
-          </div>
-          <Rip />
-          <Container hideXOverflow={true}>
-            <PageSection>
-              <LatestNews
-                blogPosts={data.blogPosts}
-                talks={data.talks}
-                articles={data.articles}
-              />
-            </PageSection>
+            </div>
+          </Container>
 
-            <PageSection>
-              <AsSeenOn />
-            </PageSection>
+          <Rip />
+
+          <Container>
+            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+              <Container>
+                <LiquidityProvision />
+              </Container>
+            </div>
+
+            <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
+              <div className="grid md:grid-cols-2">
+                <div className="p-space-5">
+                  <h2 className="heading-m mb-space-4 max-w-[30rem]">
+                    <Trans t={t}>Programmatic trading on Vega</Trans>
+                  </h2>
+                  <p className="body-l dark:text-vega-grey-300 mb-space-3 text-vega-light-300 md:mb-space-3">
+                    <Trans t={t}>
+                      Vega's decentralised datanode architecture provides rich
+                      CEX-like APIs and full historic price data for everyone.
+                    </Trans>
+                  </p>
+                  <div>
+                    <div className="mb-space-6 flex items-center gap-x-space-5">
+                      <div className="max-w-[4.6875rem]">
+                        <LogoGRPC />
+                      </div>
+                      <div className="max-w-[3.125rem]">
+                        <LogoRestAPI />
+                      </div>
+                      <div className="max-w-[6.25rem]">
+                        <LogoGraphQL />
+                      </div>
+                    </div>
+                    <Button to="/programmatic-trading">
+                      <Trans t={t}>Explore</Trans>
+                    </Button>
+                  </div>
+                </div>
+                <div className="flex items-end justify-end">
+                  <div className="relative ml-space-3 mr-space-3 w-full max-w-[33.25rem]">
+                    <Explore />
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <PageSection>
               <div className="lg:grid lg:grid-cols-12">
@@ -319,28 +314,36 @@ const IndexPage = ({ data }) => {
               </div>
             </PageSection>
 
-            <PageSection>
-              <div className="text-center">
-                <h2 className="title-m md:title-l lg:title-xxl mb-4">
-                  <GlitchTitle color="red">
-                    <Trans t={t}>Where next?</Trans>
-                  </GlitchTitle>
-                </h2>
-              </div>
+            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+              <AsSeenOn />
+            </div>
 
-              <div className="mx-auto mt-12 grid max-w-[12rem] gap-6 md:max-w-[70rem] md:grid-cols-2 lg:grid-cols-4">
-                <BoxLinkSimple text={t('Use the network')} link="/apps" />
+            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+              <h2 className="title-l lg:title-xl mb-space-10 text-center text-center md:mb-space-10">
+                <GlitchTitle color="red">
+                  <Trans t={t}>Where next?</Trans>
+                </GlitchTitle>
+              </h2>
+              x
+              <div className="mx-auto grid max-w-[12rem] gap-6 md:max-w-[70rem] md:grid-cols-2 lg:grid-cols-4">
                 <BoxLinkSimple
-                  text={t('Join the community')}
-                  link="/community"
+                  text={t('Learn about Vega')}
+                  link="/key-concepts"
                 />
                 <BoxLinkSimple
-                  text={t('Govern the network')}
+                  text={t('Read the docs')}
+                  link="https://docs.vega.xyz/"
+                />
+                <BoxLinkSimple
+                  text={t('Launch Console')}
+                  link="https://console.vega.xyz/"
+                />
+                <BoxLinkSimple
+                  text={t('Staking & Governance')}
                   link="/governance"
                 />
-                <BoxLinkSimple text={t('Develop on Vega')} link="/developers" />
               </div>
-            </PageSection>
+            </div>
           </Container>
         </div>
       </main>

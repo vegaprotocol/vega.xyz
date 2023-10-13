@@ -7,11 +7,9 @@ const AsSeenOn = () => {
 
   return (
     <div>
-      <div className="title-m lg:title-l mb-12 text-center">
-        <h2>
-          <Trans t={t}>As seen on</Trans>
-        </h2>
-      </div>
+      <h2 className="title-l lg:title-xl mb-space-10 text-center text-center md:mb-space-10">
+        <Trans t={t}>As seen on</Trans>
+      </h2>
       <div className="mx-auto grid max-w-[26.25rem] grid-cols-1 gap-12 md:max-w-none md:grid-cols-3">
         <a
           href="https://www.coindesk.com/video/crypto-derivatives-protocol-vegas-mainnet-goes-live-for-futures-options-trading/"
