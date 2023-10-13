@@ -1,6 +1,6 @@
 {
-  "Total Volume": "",
-  "Total Markets": "",
-  "TVL": "",
-  "Avg. Block Time": ""
+  "Total Volume": "总交易量",
+  "Total Markets": "总市场",
+  "TVL": "TVL",
+  "Avg. Block Time": "平均出块时间"
 }

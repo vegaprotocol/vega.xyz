@@ -1,10 +1,10 @@
 {
-  "Previous Page": "",
-  "Previous": "",
+  "Previous Page": "上一页",
+  "Previous": "以前的",
   "{{firstItem}} - {{lastItem}} of {{totalItems}}": "",
-  "Next Page": "",
-  "Next": "",
-  "Insights & Talks": "",
-  "Articles and talks about vega": "",
-  "Insights & talks.": ""
+  "Next Page": "下一页",
+  "Next": "下一个",
+  "Insights & Talks": "见解与谈话",
+  "Articles and talks about vega": "关于VEGA的文章和谈话",
+  "Insights & talks.": "见解与谈话"
 }
