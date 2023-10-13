@@ -6,7 +6,7 @@
   "All time": "时时",
   "Loading...": "加载",
   "Error retrieving leaderboard...": "检索排行榜时出错...",
-  "Ambassadors": "",
+  "Ambassadors": "大使",
   "Knowledgeable in cryptocurrencies, DeFi and DAOs? We want you to be a driving force of the Vega community.": "了解加密货币、DeFi 和 DAO？我们希望您成为Vega社区的推动力量",
   "Join a team": "加入团队",
   "Content collective": "内容集合",
@@ -40,11 +40,11 @@
   "Join the community": "加入社区",
   "Discord": "Discord频道",
   "Telegram": "电报",
-  "Github": "",
+  "Github": "Github",
   "Mainnet Docs": "主网文档”",
   "Fairground Docs": "测试网Fairground文档",
   "Twitter": "推特",
   "Forum": "论坛",
-  "YouTube": "",
-  "Twitch": ""
+  "YouTube": "YouTube",
+  "Twitch": "Twitch"
 }
