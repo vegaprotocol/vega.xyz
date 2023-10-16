@@ -324,7 +324,7 @@ const IndexPage = ({ data }) => {
                   <Trans t={t}>Where next?</Trans>
                 </GlitchTitle>
               </h2>
-              x
+
               <div className="mx-auto grid max-w-[12rem] gap-6 md:max-w-[70rem] md:grid-cols-2 lg:grid-cols-4">
                 <BoxLinkSimple
                   text={t('Learn about Vega')}
