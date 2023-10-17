@@ -11,9 +11,19 @@ exports.default = async (req, res) => {
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
   })
 
-  let tweetData = await kv.get('latest-tweet')
+  let cachedData = await kv.get('latest-tweet-cache')
+  let isCacheExpired = true
 
-  if (!tweetData) {
+  if (cachedData) {
+    const currentTime = Date.now()
+    const ONE_HOUR_IN_MS = 60 * 60 * 1000
+
+    if (currentTime - cachedData.timestamp < ONE_HOUR_IN_MS) {
+      isCacheExpired = false
+    }
+  }
+
+  if (!cachedData || isCacheExpired) {
     const { data, includes } = await client.get(
       `users/956831071982800896/tweets`,
       {
@@ -64,7 +74,7 @@ exports.default = async (req, res) => {
       ? includes?.media.find((media) => media.media_key === tweetMediaKey)
       : null
 
-    tweetData = {
+    const tweetData = {
       id: data[0].id,
       tweet_text: data[0].text,
       image: associatedMedia
@@ -72,9 +82,15 @@ exports.default = async (req, res) => {
         : null,
       all_tweets: data,
     }
-    await kv.set('latest-tweet', tweetData, { ex: 60 * 60 })
-  }
+    await kv.set('latest-tweet-cache', {
+      tweetData,
+      timestamp: Date.now(),
+    })
 
-  res.setHeader('Access-Control-Allow-Origin', '*')
-  res.status(200).json(tweetData)
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.status(200).json(tweetData)
+  } else {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.status(200).json(cachedData.tweetData)
+  }
 }
