@@ -338,24 +338,35 @@ const MarketsLiquidity = () => {
                 sortable={false}
               />
               <AgGridColumn
-                colId="liquiditySLA"
-                headerName={t('Liquidity SLA')}
+                colId="liquiditySLATime"
+                headerName={t('SLA: Time on Book')}
                 headerTooltip={t(
-                  'The minimum percentage of time and volume liquidity is expected to have available for this market'
+                  'The minimum percentage of market time on book liquidity providers are expected to be available for this market'
                 )}
-                minWidth={185}
                 cellRenderer={(params) => {
-                  const { commitmentMinTimeFraction, priceRange } =
+                  const { commitmentMinTimeFraction } =
                     params.data.node.data.market.liquiditySLAParameters
 
                   const timePercentage = commitmentMinTimeFraction * 100
+                  return <>{timePercentage}%</>
+                }}
+              />
+              <AgGridColumn
+                colId="liquiditySLAVolume"
+                headerName={t('SLA: Volume')}
+                headerTooltip={t(
+                  'The minimum amount of volume liquidity providers are expected to have available for this market'
+                )}
+                cellRenderer={(params) => {
+                  const { priceRange } =
+                    params.data.node.data.market.liquiditySLAParameters
+
                   const pricePercentage = priceRange * 100
                   return (
-                    <div>
-                      Volume within {pricePercentage}% of midprice
-                      <br />
-                      Minimum {timePercentage}% time on book
-                    </div>
+                    <>
+                      {pricePercentage}%
+                      <span className="text-vega-mid-grey"> of midprice</span>
+                    </>
                   )
                 }}
               />
