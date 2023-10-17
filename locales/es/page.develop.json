@@ -1,14 +1,14 @@
 {
   "Developers": "",
-  "Explore Vega's technical documentation, build integrations via APIs, or contribute to our open source repositories on Github": "",
-  "Getting Started": "",
-  "Github": "",
-  "Documentation": "",
-  "Programmtic Trading": "",
-  "Report a security issue": "",
-  "Careers": "",
-  "Discord": "",
+  "Explore Vega's technical documentation, build integrations via APIs, or contribute to our open source repositories on Github": "Desarrolladores",
+  "Getting Started": "Empezando",
+  "Github": "Github",
+  "Documentation": "Documentación",
+  "Programmtic Trading": "Comercio programático",
+  "Report a security issue": "Informar de un problema de seguridad",
+  "Careers": "Carreras",
+  "Discord": "Discord",
   "Join the builders club": "Únete al club de constructores",
   "Get support building on top of the Vega protocol and access exclusive builder club bounties.": "Consigue ayuda para construir sobre el protocolo Vega y accede a recompensas exclusivas del club de constructores.",
-  "Find out more": ""
+  "Find out more": "Saber más"
 }

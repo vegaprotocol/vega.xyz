@@ -1,14 +1,14 @@
 {
-  "Developers": "",
-  "Explore Vega's technical documentation, build integrations via APIs, or contribute to our open source repositories on Github": "",
-  "Getting Started": "",
-  "Github": "",
-  "Documentation": "",
-  "Programmtic Trading": "",
-  "Report a security issue": "",
-  "Careers": "",
-  "Discord": "",
+  "Developers": "Lập trình viên",
+  "Explore Vega's technical documentation, build integrations via APIs, or contribute to our open source repositories on Github": "Khám phá tài liệu kỹ thuật của Vega, xây dựng tích hợp thông qua API hoặc đóng góp cho kho lưu trữ nguồn mở của chúng tôi trên Github",
+  "Getting Started": "Bắt đầu",
+  "Github": "Github",
+  "Documentation": "Tài liệu",
+  "Programmtic Trading": "Giao dịch theo chương trình",
+  "Report a security issue": "Báo cáo vấn đề bảo mật",
+  "Careers": "Sự nghiệp",
+  "Discord": "Discord",
   "Join the builders club": "Tham gia câu lạc bộ nhà phát triển",
   "Get support building on top of the Vega protocol and access exclusive builder club bounties.": "Tham gia hỗ trợ xây dựng dựa trên giao thức Vega và nhân tiền thưởng của câu lạc bộ xây dựng độc quyền.",
-  "Find out more": ""
+  "Find out more": "Tìm hiểu thêm thông tin"
 }
