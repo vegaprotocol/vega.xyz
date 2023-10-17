@@ -338,6 +338,28 @@ const MarketsLiquidity = () => {
                 sortable={false}
               />
               <AgGridColumn
+                colId="liquiditySLA"
+                headerName={t('Liquidity SLA')}
+                headerTooltip={t(
+                  'The minimum percentage of time and volume liquidity is expected to have available for this market'
+                )}
+                minWidth={185}
+                cellRenderer={(params) => {
+                  const { commitmentMinTimeFraction, priceRange } =
+                    params.data.node.data.market.liquiditySLAParameters
+
+                  const timePercentage = commitmentMinTimeFraction * 100
+                  const pricePercentage = priceRange * 100
+                  return (
+                    <div>
+                      Volume within {pricePercentage}% of midprice
+                      <br />
+                      Minimum {timePercentage}% time on book
+                    </div>
+                  )
+                }}
+              />
+              <AgGridColumn
                 colId="volume24h"
                 headerName={t('Volume (24h)')}
                 cellRenderer={(params) => {
