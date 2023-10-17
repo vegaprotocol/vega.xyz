@@ -3,7 +3,7 @@ title: "Liquidez 2020: Cómo crear y lanzar un mercado de futuros BTC/USD en Veg
 location: Virtual
 date: 2020-11-18
 links:
-  - title:Mire la charla de Tamlyn en Dystopian Labs Liquidity 2020.
+  - title: Mire la charla de Tamlyn en Dystopian Labs Liquidity 2020.
     link: https://www.crowdcast.io/e/liquidity2020summit/53
 ---
 
