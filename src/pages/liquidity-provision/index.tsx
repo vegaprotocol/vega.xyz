@@ -339,7 +339,7 @@ const MarketsLiquidity = () => {
               />
               <AgGridColumn
                 colId="liquiditySLATime"
-                headerName={t('SLA: Time on Book')}
+                headerName={t('Min time on book')}
                 headerTooltip={t(
                   'The minimum percentage of market time on book liquidity providers are expected to be available for this market'
                 )}
@@ -353,7 +353,7 @@ const MarketsLiquidity = () => {
               />
               <AgGridColumn
                 colId="liquiditySLAVolume"
-                headerName={t('SLA: Volume')}
+                headerName={t('Liquidity price range')}
                 headerTooltip={t(
                   'The minimum amount of volume liquidity providers are expected to have available for this market'
                 )}
