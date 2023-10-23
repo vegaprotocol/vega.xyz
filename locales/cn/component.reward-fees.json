@@ -1,7 +1,7 @@
 {
   "Coming soon": "即将推出",
   "Trading": "交易",
-  "Average total paid out per epoch": "",
+  "Average total paid out per epoch": "每个纪元的平均支付总额",
   "Distributed based on the proportion of the total maker fees you've paid, in this epoch per market.": "根据您在该时期每个市场支付的总做市商费用的比例进行分配",
   "Launch console": "启动控制台",
   "Liquidity Provision": "流动性供应",
