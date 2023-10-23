@@ -173,6 +173,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       featuredImage: File @fileByRelativePath
       start_date: Date @dateformat
       contract_type: String
+      slug: String
     }
   `
   createTypes(typeDefs)
