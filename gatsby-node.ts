@@ -171,6 +171,8 @@ exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type MarkdownRemarkFrontmatter {
       featuredImage: File @fileByRelativePath
+      start_date: Date @dateformat
+      contract_type: String
     }
   `
   createTypes(typeDefs)
