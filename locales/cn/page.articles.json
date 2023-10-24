@@ -1,9 +1,9 @@
 {
-  "Previous Page": "",
-  "Previous": "",
+  "Previous Page": "上一页",
+  "Previous": "以前的",
   "{{firstItem}} - {{lastItem}} of {{totalItems}}": "",
-  "Next Page": "",
-  "Next": "",
+  "Next Page": "下一页",
+  "Next": "下一个",
   "Articles & Talks": "",
   "Articles and talks about Vega": "",
   "Articles & talks.": ""
