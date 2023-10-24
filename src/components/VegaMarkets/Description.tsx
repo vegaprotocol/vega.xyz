@@ -19,7 +19,7 @@ export const Description = ({ market }: { market: any }) => {
           <br />
         </div>
         <div>
-          <div className="w-fit rounded-lg bg-vega-dark-200 p-1">
+          <div className="w-fit rounded-lg bg-vega-light-200 p-1 dark:bg-vega-dark-200">
             {marketType}
           </div>
         </div>
