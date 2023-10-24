@@ -6,6 +6,7 @@ import type {
   AgReactUiProps,
 } from 'ag-grid-react'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react'
+import classNames from 'classnames'
 import { graphql } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import React, {
@@ -151,12 +152,14 @@ const MarketsLiquidity = () => {
           </CalloutHero>
         </div>
         <div>
-          <div className="title-m relative mb-3 w-full">
-            <Trans t={t}>Futures</Trans>
-          </div>
-          <div className="flex gap-4 text-lg">
+          <div className="mb-2 flex w-full gap-4 text-lg">
             <button
-              className=""
+              className={classNames('rounded p-2', {
+                'text-vega-dark-600 dark:text-vega-light-600 bg-vega-light-200 dark:bg-vega-dark-200':
+                  selectedProductType === undefined,
+                'text-vega-light-300 dark:text-vega-dark-300':
+                  selectedProductType !== undefined,
+              })}
               onClick={() => {
                 setSelectedProductType(undefined)
                 localSelectedProductType = undefined
@@ -165,7 +168,12 @@ const MarketsLiquidity = () => {
               All
             </button>
             <button
-              className=""
+              className={classNames('rounded p-2', {
+                'text-vega-dark-600 dark:text-vega-light-600 bg-vega-light-200 dark:bg-vega-dark-200':
+                  selectedProductType === 'Future',
+                'text-vega-light-300 dark:text-vega-dark-300':
+                  selectedProductType !== 'Future',
+              })}
               onClick={() => {
                 setSelectedProductType('Future')
                 localSelectedProductType = 'Future'
@@ -174,7 +182,12 @@ const MarketsLiquidity = () => {
               Futures
             </button>
             <button
-              className=""
+              className={classNames('rounded p-2', {
+                'text-vega-dark-600 dark:text-vega-light-600 bg-vega-light-200 dark:bg-vega-dark-200':
+                  selectedProductType === 'Perpetual',
+                'text-vega-light-300 dark:text-vega-dark-300':
+                  selectedProductType !== 'Perpetual',
+              })}
               onClick={() => {
                 setSelectedProductType('Perpetual')
                 localSelectedProductType = 'Perpetual'
