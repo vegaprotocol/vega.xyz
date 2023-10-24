@@ -44,6 +44,16 @@ import BigNumber from 'bignumber.js'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import { ITooltipParams, RowClickedEvent } from 'ag-grid-community'
 
+/*
+We're using a global variable here to store the selected product type, because
+ag-grid doesn't update the doesExternalFilterPass function on any state change.
+By externalising the state, we can force the check to always happen on an up-to-
+date value.
+We set this value alongside setState() for selectedProductType and have an empty
+useEffect reading selectedProductType to force a rerender when the value changes.
+*/
+let localSelectedProductType
+
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
   const [missingTranslations, setMissingTranslations] = useState(false)
@@ -56,6 +66,11 @@ const MarketsLiquidity = () => {
     return new Date(yesterday).toISOString()
   }, [yesterday])
   const { data, loading, error } = useMarkets(yTimestamp)
+  const [selectedProductType, setSelectedProductType] = useState<
+    string | undefined
+  >(undefined)
+
+  useEffect(() => { }, [selectedProductType])
 
   if (loading) return <div>hi ho</div>
   if (error) return <div>Error loading markets</div>
@@ -138,6 +153,35 @@ const MarketsLiquidity = () => {
         <div>
           <div className="title-m relative mb-3 w-full">
             <Trans t={t}>Futures</Trans>
+          </div>
+          <div className="flex gap-4 text-lg">
+            <button
+              className=""
+              onClick={() => {
+                setSelectedProductType(undefined)
+                localSelectedProductType = undefined
+              }}
+            >
+              All
+            </button>
+            <button
+              className=""
+              onClick={() => {
+                setSelectedProductType('Future')
+                localSelectedProductType = 'Future'
+              }}
+            >
+              Futures
+            </button>
+            <button
+              className=""
+              onClick={() => {
+                setSelectedProductType('Perpetual')
+                localSelectedProductType = 'Perpetual'
+              }}
+            >
+              Perpetuals
+            </button>
           </div>
           <div
             className="ag-theme-alpine relative mb-16 w-full"
@@ -475,8 +519,8 @@ const percentageLiquidity = (suppliedStake, targetStake) => {
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
-    ? '>100%'
-    : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
+      ? '>100%'
+      : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
   return display
 }
 
@@ -542,7 +586,15 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
         isExternalFilterPresent: () => true,
         doesExternalFilterPass: (node) => {
           const state = node.data.node.data.marketState
-          return validMarketStates.includes(state)
+          const productType =
+            node.data.node.data.market.tradableInstrument.instrument.product
+              .__typename
+
+          const isSelectedProductType =
+            !localSelectedProductType ||
+            localSelectedProductType === productType
+
+          return validMarketStates.includes(state) && isSelectedProductType
         },
       }}
     >
