@@ -89,7 +89,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
     query {
       allMarkdownRemark(
-        filter: { collection: { in: ["insights", "talks"] } }
+        filter: { collection: { in: ["articles", "talks"] } }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
         group(field: fields___locale) {
@@ -112,8 +112,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
     Array.from({ length: numPages }).forEach((_, i) => {
       if (language.code === 'en') {
         createPage({
-          path: i === 0 ? `/insights` : `/insights/${i + 1}`,
-          component: path.resolve('./src/templates/insights.tsx'),
+          path: i === 0 ? `/articles` : `/articles/${i + 1}`,
+          component: path.resolve('./src/templates/articles.tsx'),
           context: {
             language: 'en',
             limit: postsPerPage,
@@ -126,9 +126,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
         createPage({
           path:
             i === 0
-              ? `/${language.code}/insights`
-              : `/${language.code}/insights/${i + 1}`,
-          component: path.resolve('./src/templates/insights.tsx'),
+              ? `/${language.code}/articles`
+              : `/${language.code}/articles/${i + 1}`,
+          component: path.resolve('./src/templates/articles.tsx'),
           context: {
             language: language.code,
             limit: postsPerPage,

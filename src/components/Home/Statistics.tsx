@@ -9,6 +9,7 @@ import useTotalMarkets from '../../hooks/statistics/use-total-markets'
 import useUsers from '../../hooks/statistics/use-users'
 import useTvl from '../../hooks/statistics/use-tvl'
 import useBlockTime from '../../hooks/statistics/use-block-time'
+import useStakedTotal from '../../hooks/statistics/use-staked-total'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import { formatNumberWithSuffix } from '../../utils/tools'
@@ -30,6 +31,11 @@ const Statistics = () => {
     loading: totalMarketsLoading,
     error: totalMarketsError,
   } = useTotalMarkets()
+  const {
+    stakedTotal,
+    loading: stakedTotalLoading,
+    error: stakedTotalError,
+  } = useStakedTotal()
   const { users, loading: usersLoading, error: usersError } = useUsers()
   const { tvl, loading: tvlLoading, error: tvlError } = useTvl()
   const {
@@ -94,6 +100,14 @@ const Statistics = () => {
                 <TickerCell label={t('Total Markets')} value={totalMarkets} />
               )}
             </SwiperSlide>
+            <SwiperSlide>
+              {stakedTotal && (
+                <TickerCell
+                  label={t('Total Staked')}
+                  value={`$${formatNumberWithSuffix(stakedTotal, 1)}`}
+                />
+              )}
+            </SwiperSlide>
             {/* <SwiperSlide>
               {users && <TickerCell label={t('Users')} value={users} />}
             </SwiperSlide> */}
@@ -130,6 +144,12 @@ const Statistics = () => {
               <TickerCell label={t('Total Markets')} value={totalMarkets} />
             )}
             {/* {users && <TickerCell label={t('Users')} value={users} />} */}
+            {stakedTotal && (
+              <TickerCell
+                label={t('Total Staked')}
+                value={`$${formatNumberWithSuffix(stakedTotal, 1)}`}
+              />
+            )}
             {tvl && (
               <TickerCell
                 label={t('TVL')}

@@ -15,6 +15,10 @@
       "destination": "/key-concepts"
     },
     {
+      "source": "/insights",
+      "destination": "/articles"
+    },
+    {
       "source": "/background",
       "destination": "/papers"
     },

@@ -27,7 +27,7 @@ const CommunityPage = ({ data }) => {
       <Seo
         title={t('Community')}
         description={t(
-          'Join the Vega community, where a fair finance future is being co-created - starting with derivatives.'
+          'Learn, Test, Govern - where do you fit in the Vega Ecosystem?'
         )}
       />
       {missingTranslations && <TranslationsBanner />}
@@ -40,7 +40,7 @@ const CommunityPage = ({ data }) => {
           <div className="max-w-[48rem]">
             <LeadingLine className="!mb-14">
               <Trans t={t}>
-                Earn rewards for contributing to the future of finance.
+                Learn, Test, Govern - where do you fit in the Vega Ecosystem?
               </Trans>
             </LeadingLine>
 

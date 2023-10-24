@@ -6,5 +6,7 @@
   "And store in an Ethereum wallet. You can purchase VEGA using Ethereum (ETH) on decentralized exchanges.": "并存储在以太坊钱包中。您可以在去中心化交易所使用以太坊 (ETH) 购买 VEGA",
   "Governance tools": "治理工具",
   "Propose a futures market on any underlying.": "提议建立任何标的物的期货市场",
-  "Create a new market": "创造新市场"
+  "Create a new market": "创造新市场",
+  "Get a Vega Wallet": "获取 Vega 钱包",
+  "A Vega wallet is used to access and sign transactions and connect to any dApp running on Vega.": "Vega 钱包用于访问和签署交易，并连接到在 Vega 上运行的任何 dApp"
 }

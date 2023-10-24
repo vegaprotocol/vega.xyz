@@ -6,7 +6,7 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import { stringify } from 'querystring'
 import { getImage, getSrc } from 'gatsby-plugin-image'
 
-const LatestNews = ({ blogPosts, talks, insights }) => {
+const LatestNews = ({ blogPosts, talks, articles }) => {
   const { t } = useTranslation('component.latest-news')
   const [tweet, setTweet] = useState(null)
 
@@ -30,11 +30,6 @@ const LatestNews = ({ blogPosts, talks, insights }) => {
 
   return (
     <div>
-      <div className="title-l lg:title-xl mb-12 text-center">
-        <h2>
-          <Trans t={t}>Latest News</Trans>
-        </h2>
-      </div>
       <div className="mx-auto grid max-w-[26.25rem] grid-cols-1 gap-12 md:max-w-none md:grid-cols-2 lg:grid-cols-4">
         {blogPosts.edges.length > 0 && (
           <div className="flex h-full flex-col justify-between">
@@ -104,27 +99,28 @@ const LatestNews = ({ blogPosts, talks, insights }) => {
           </div>
         )}
 
-        {insights.edges.length > 0 && (
+        {articles.edges.length > 0 && (
           <div className="flex h-full flex-col justify-between">
             <NewsCard
-              title={insights.edges[0].node.frontmatter.title}
-              text={`${insights.edges[0].node.html
+              title={articles.edges[0].node.frontmatter.title}
+              text={`${articles.edges[0].node.html
                 .replace(/(<([^>]+)>)/gi, '')
                 .split(' ')
                 .splice(0, 25)
                 .join(' ')}...`}
-              link={insights.edges[0].node.frontmatter.links[0].url}
+              link={articles.edges[0].node.frontmatter.links[0].url}
               image={
-                insights.edges[0].node.frontmatter.featuredImage
-                  ? getSrc(insights.edges[0].node.frontmatter.featuredImage)
+                articles.edges[0].node.frontmatter.featuredImage
+                  ? getSrc(articles.edges[0].node.frontmatter.featuredImage)
                   : undefined
               }
-              date={insights.edges[0].node.frontmatter.date}
+              articles
+              date={articles.edges[0].node.frontmatter.date}
               className="mb-space-5"
             />
             <div>
-              <Button to="/insights">
-                <Trans t={t}>Read all Insights</Trans>
+              <Button to="/articles">
+                <Trans t={t}>Read all Articles</Trans>
               </Button>
             </div>
           </div>

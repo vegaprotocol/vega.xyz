@@ -8,9 +8,6 @@
   "Vega Wallet": "Vega钱包",
   "Docs": "文件",
   "Backed by:": "受支持：",
-  "Programmatic trading on Vega": "Vega 上的程序化交易",
-  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Vega 的去中心化数据节点架构为每个人提供了丰富的类似 CEX 的 API 和完整的历史价格数据",
-  "Explore": "探索",
   "Key features": "主要特征",
   "Non-custodial and pseudonymous": "非托管和匿名",
   "No third party has access to your funds.": "没有第三方可以访问您的资金",
@@ -29,10 +26,13 @@
   "Permissionless market creation": "无需许可的市场创建",
   "Create any market on any underlying with on-chain governance": "通过链上治理在任何基础上创建任何市场",
   "View all": "查看全部",
+  "Programmatic trading on Vega": "Vega 上的程序化交易",
+  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Vega 的去中心化数据节点架构为每个人提供了丰富的类似 CEX 的 API 和完整的历史价格数据",
+  "Explore": "探索",
   "Events": "事件",
   "Where next?": "接下来",
-  "Use the network": "使用网络",
-  "Join the community": "加入社区",
-  "Govern the network": "治理网络",
-  "Develop on Vega": "在Vega上开发"
+  "Learn about Vega": "",
+  "Read the docs": "",
+  "Launch Console": "",
+  "Staking & Governance": ""
 }

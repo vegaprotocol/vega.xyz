@@ -6,5 +6,7 @@
   "And store in an Ethereum wallet. You can purchase VEGA using Ethereum (ETH) on decentralized exchanges.": "Y guárdelo en una billetera Ethereum. Puede comprar VEGA usando Ethereum (ETH) en intercambios descentralizados.",
   "Governance tools": "Herramientas de gobernanza",
   "Propose a futures market on any underlying.": "Proponer un mercado de futuros sobre cualquier subyacente.",
-  "Create a new market": "Crear un nuevo mercado"
+  "Create a new market": "Crear un nuevo mercado",
+  "Get a Vega Wallet": "Obtenga una billetera Vega",
+  "A Vega wallet is used to access and sign transactions and connect to any dApp running on Vega.": "Una billetera Vega se usa para acceder y firmar transacciones y conectarse a cualquier dApp que se ejecute en Vega."
 }

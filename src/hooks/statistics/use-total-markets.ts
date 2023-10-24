@@ -13,9 +13,11 @@ const useTotalMarkets = () => {
           `${process.env.GATSBY_VEGA_REST_API}/api/v2/markets`
         )
         const markets = await epochResponse.json()
-
         const totalMarkets = markets.markets.edges.filter((market) => {
-          return market.node.state === 'STATE_ACTIVE'
+          return (
+            market.node.state === 'STATE_ACTIVE' ||
+            market.node.state === 'STATE_SUSPENDED'
+          )
         }).length
 
         setTotalMarkets(totalMarkets)

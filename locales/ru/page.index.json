@@ -8,9 +8,6 @@
   "Vega Wallet": "Кошелек Vega",
   "Docs": "Документация",
   "Backed by:": "При поддержке:",
-  "Programmatic trading on Vega": "",
-  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Децентрализованная архитектура датанод Vega предоставляет богатые API, подобные CEX, и полные исторические данные о ценах для всех.",
-  "Explore": "Исследуйте ",
   "Key features": "Основные характеристики",
   "Non-custodial and pseudonymous": "Не находящиеся под стражей и псевдонимные",
   "No third party has access to your funds.": "Ни одна третья сторона не имеет доступа к вашим средствам.",
@@ -29,10 +26,13 @@
   "Permissionless market creation": "Создание рынка без границ",
   "Create any market on any underlying with on-chain governance": "Создание любого рынка на любой основе с управлением на цепочке",
   "View all": "Смотреть все",
+  "Programmatic trading on Vega": "",
+  "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Децентрализованная архитектура датанод Vega предоставляет богатые API, подобные CEX, и полные исторические данные о ценах для всех.",
+  "Explore": "Исследуйте ",
   "Events": "Эвенты",
   "Where next?": "Что дальше?",
-  "Use the network": "Используйте сеть",
-  "Join the community": "Присоединяйтесь к сообществу",
-  "Govern the network": "Управление сетью",
-  "Develop on Vega": "Развиваться на Vega"
+  "Learn about Vega": "",
+  "Read the docs": "",
+  "Launch Console": "",
+  "Staking & Governance": ""
 }

@@ -6,5 +6,7 @@
   "And store in an Ethereum wallet. You can purchase VEGA using Ethereum (ETH) on decentralized exchanges.": "И хранить в кошельке Ethereum. Приобрести VEGA с помощью Ethereum (ETH) можно на децентрализованных биржах.",
   "Governance tools": "Инструменты управления",
   "Propose a futures market on any underlying.": "Предложите фьючерсный рынок на любой базовый актив.",
-  "Create a new market": "Создать новый рынок"
+  "Create a new market": "Создать новый рынок",
+  "Get a Vega Wallet": "Скачайте кошелек Vega",
+  "A Vega wallet is used to access and sign transactions and connect to any dApp running on Vega.": "Кошелек Vega используется для доступа и подписания транзакций, а также для подключения к любому dApp, работающему на Vega."
 }
