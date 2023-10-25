@@ -88,11 +88,11 @@ const LatestNews = ({ blogPosts, talks, articles }) => {
                   : undefined
               }
               date={talks.edges[0].node.frontmatter.date}
-              link={`/talks#talk${talks.edges[0].node.fields.slug}`}
+              link={`/articles#talk${talks.edges[0].node.fields.slug}`}
               className="mb-space-5"
             />
             <div>
-              <Button to="/talks">
+              <Button to="articles">
                 <Trans t={t}>Watch all Talks</Trans>
               </Button>
             </div>
