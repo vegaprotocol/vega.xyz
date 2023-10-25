@@ -82,6 +82,10 @@ const MarketLpDocument = gql`
         triggeringRatio
       }
     }
+    networkParameter(key: "market.liquidity.stakeToCcyVolume") {
+      key
+      value
+    }
   }
   ${LiquidityProvisionFieldsFragmentDoc}
 `

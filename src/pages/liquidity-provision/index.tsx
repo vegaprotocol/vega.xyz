@@ -480,9 +480,13 @@ const MarketsLiquidity = () => {
                     const settlementAssetDecimals =
                       marketWithLiquidityData.market.tradableInstrument
                         .instrument.product.settlementAsset.decimals
+
+                    const networkStakeToCcyVolume =
+                      marketWithLiquidityData.networkParameter?.value || 1
                     const feeLevels = getFeeLevels(
                       marketWithLiquidityData.market
-                        ?.liquidityProvisionsConnection?.edges || []
+                        ?.liquidityProvisionsConnection?.edges || [],
+                      networkStakeToCcyVolume
                     )
 
                     const tradingMode = params.data.node.data.marketTradingMode
@@ -673,19 +677,32 @@ const intentForProvisionedLiquidity = (
   return Intent.Primary
 }
 
-export const getFeeLevels = (providers: any[]) => {
+export const getFeeLevels = (
+  providers: any[],
+  networkStakeToCcyVolume: number
+) => {
   const parsedProviders = providers.map((p) => {
     const node = p?.node || {}
     return node
   })
   const lp = parsedProviders.reduce(
     (total: { [x: string]: number }, current) => {
-      const { fee = '0', commitmentAmount = '0' } = current
+      const {
+        fee = '0',
+        commitmentAmount = '0',
+        party: {
+          accountsConnection: { edges },
+        },
+      } = current
+      const bondAccountBalance =
+        parseInt(edges[0]?.node?.balance, 10) * networkStakeToCcyVolume
       const ca = parseInt(commitmentAmount, 10)
 
       return {
         ...total,
-        [fee]: total[fee] ? total[fee] + ca : ca,
+        [fee]: total[fee]
+          ? total[fee] + bondAccountBalance
+          : bondAccountBalance,
       }
     },
     {}
@@ -693,8 +710,9 @@ export const getFeeLevels = (providers: any[]) => {
 
   const sortedProviders = Object.keys(lp)
     .sort()
-    .map((p) => ({ fee: p, commitmentAmount: lp[p] }))
-
+    .map((p) => {
+      return { fee: p, commitmentAmount: lp[p] }
+    })
   return sortedProviders
 }
 
