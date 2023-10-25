@@ -7,7 +7,7 @@
   },
   "redirects": [
     {
-      "source": "/:path((?!restricted|assets).*)",
+      "source": "/:path((?!restricted|static)[^.]*)",
       "has": [
         {
           "type": "header",
@@ -15,11 +15,17 @@
           "value": "US"
         }
       ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
+        }
+      ],
       "permanent": false,
       "destination": "/restricted"
     },
     {
-      "source": "/:path((?!restricted|assets).*)",
+      "source": "/:path((?!restricted|static)[^.]*)",
       "has": [
         {
           "type": "header",
@@ -27,11 +33,17 @@
           "value": "CU"
         }
       ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
+        }
+      ],
       "permanent": false,
       "destination": "/restricted"
     },
     {
-      "source": "/:path((?!restricted|assets).*)",
+      "source": "/:path((?!restricted|static)[^.]*)",
       "has": [
         {
           "type": "header",
@@ -39,11 +51,17 @@
           "value": "KP"
         }
       ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
+        }
+      ],
       "permanent": false,
       "destination": "/restricted"
     },
     {
-      "source": "/:path((?!restricted|assets).*)",
+      "source": "/:path((?!restricted|static)[^.]*)",
       "has": [
         {
           "type": "header",
@@ -51,16 +69,28 @@
           "value": "IR"
         }
       ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
+        }
+      ],
       "permanent": false,
       "destination": "/restricted"
     },
     {
-      "source": "/:path((?!restricted).*)",
+      "source": "/:path((?!restricted|static)[^.]*)",
       "has": [
         {
           "type": "header",
           "key": "x-vercel-ip-country",
           "value": "SY"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
         }
       ],
       "permanent": false,

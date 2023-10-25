@@ -6,14 +6,9 @@ jobs:
   cypress-run:
     runs-on: ubuntu-20.04
     strategy:
-      # when one test fails, DO NOT cancel the other
-      # containers, because this will kill Cypress processes
-      # leaving Cypress Cloud hanging ...
-      # https://github.com/cypress-io/github-action/issues/48
-      fail-fast: false
       matrix:
         # run n copies of the current job in parallel
-        node: [16.18]
+        node: [18]
     steps:
       - name: Waiting for 200 from the Vercel Preview
         uses: patrickedqvist/wait-for-vercel-preview@v1.3.1
@@ -31,7 +26,7 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v6
         with:
           wait-on: ${{steps.previewUrl.outputs.url}}
           config: baseUrl="${{steps.previewUrl.outputs.url}}"
@@ -39,3 +34,10 @@ jobs:
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Upload failure screenshots'
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          path: cypress/screenshots/
+          retention-days: 2
