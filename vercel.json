@@ -7,6 +7,66 @@
   },
   "redirects": [
     {
+      "source": "/:path((?!restricted|assets).*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "US"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
+      "source": "/:path((?!restricted|assets).*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "CU"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
+      "source": "/:path((?!restricted|assets).*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "KP"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
+      "source": "/:path((?!restricted|assets).*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "IR"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
+      "source": "/:path((?!restricted).*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "SY"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
       "source": "/discord",
       "destination": "https://discord.gg/3hQyGgZ"
     },
