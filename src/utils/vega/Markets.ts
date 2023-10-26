@@ -63,7 +63,7 @@ export const sortMarketsByTopLosers = (processedMarketData, limit = 4) => {
 }
 
 export const processMarketData = (marketData) => {
-  const result = marketData.marketsConnection.edges
+  const result = marketData
     .map((edge) => {
       const marketName =
         edge.node.data.market.tradableInstrument.instrument.name
@@ -71,6 +71,7 @@ export const processMarketData = (marketData) => {
       const positionDecimalPlaces = edge.node.data.market.positionDecimalPlaces
       const decimalPlaces = edge.node.data.market.decimalPlaces
       const openTimestamp = edge.node.data.market.marketTimestamps.open
+      const marketState = edge.node.data.marketState
 
       if (!markPrice.isZero()) {
         const candles = edge.node.candlesConnection?.edges
@@ -90,6 +91,7 @@ export const processMarketData = (marketData) => {
 
           return {
             name: marketName,
+            marketState: marketState,
             volume: volume24h,
             formattedVolume: addDecimalsFormatNumber(
               volume24h.toString(),
@@ -106,6 +108,7 @@ export const processMarketData = (marketData) => {
         } else {
           return {
             name: marketName,
+            marketState: marketState,
             volume: 0,
             formattedVolume: addDecimalsFormatNumber(0, positionDecimalPlaces),
             lastPrice: addDecimalsFormatNumber(
