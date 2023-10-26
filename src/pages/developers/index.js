@@ -79,7 +79,7 @@ const DevelopPage = ({ data }) => {
                 link="https://docs.vega.xyz/"
               />
               <Box
-                title={t('Programmtic Trading')}
+                title={t('Programmatic Trading')}
                 icon={<IconProgrammaticTrading />}
                 link="/programmatic-trading"
               />

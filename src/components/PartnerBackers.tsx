@@ -38,7 +38,7 @@ const PartnerBackers = () => {
     },
     {
       name: 'Monday Capital',
-      link: 'https://www.monday.capital/blog/2019/10/5/vega-our-latest-investment',
+      link: 'https://www.monday.capital/blockchain-startups/2019/10/5/vega-our-latest-investment',
     },
     { name: 'RSK Ecosystem Fund', link: '' },
     { name: 'Zenith Ventures', link: '' },

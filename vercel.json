@@ -7,6 +7,96 @@
   },
   "redirects": [
     {
+      "source": "/:path((?!restricted|static)[^.]*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "US"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
+      "source": "/:path((?!restricted|static)[^.]*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "CU"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
+      "source": "/:path((?!restricted|static)[^.]*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "KP"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
+      "source": "/:path((?!restricted|static)[^.]*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "IR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
+      "source": "/:path((?!restricted|static)[^.]*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "SY"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "skip-geo-redirect"
+        }
+      ],
+      "permanent": false,
+      "destination": "/restricted"
+    },
+    {
       "source": "/discord",
       "destination": "https://discord.gg/3hQyGgZ"
     },
