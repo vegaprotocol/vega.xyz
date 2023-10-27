@@ -11,7 +11,7 @@
   "This value is always set to 1 for Consensus validators": "Este valor siempre se establece en 1 para los validadores de consenso",
   "Lowest": "Más bajo",
   "Highest": "Mas alto",
-  "Validators": "",
+  "Validators": "Validadores",
   "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator.": "Vega es una red de prueba de participación delegada con un número finito de validadores, recompensados por asegurar la red. Los validadores de consenso ejecutan un nodo que valida los bloques que contienen las transacciones de la red y los titulares de tokens Vega nominan validadores a través de la participación, delegando su VEGA a su validador elegido.",
   "Validator rewards": "Recompensas del validador",
   "* The no. of Consensus Validators is expected to increase through governance, further decentralising the protocol over time, with the no. of Standby Validators increasing as a multiple of the number of Consensus Validators, currently configured to <2></2>.": "* El no. de Validadores de Consenso se espera que aumente a través de la gobernanza, descentralizando aún más el protocolo con el tiempo, con el no. de validadores en espera que aumentan como un múltiplo del número de validadores de consenso, actualmente configurados en <2></2>.",
