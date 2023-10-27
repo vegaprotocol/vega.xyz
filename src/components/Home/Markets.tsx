@@ -44,9 +44,18 @@ const Markets = () => {
     setShowMarketsDropdown(false)
   }
 
+  const validMarketStates = ['STATE_ACTIVE', 'STATE_SUSPENDED']
+
   useEffect(() => {
     if (!loading && !error && data) {
-      const processedMarketData = processMarketData(data)
+      const filteredMarkets = data?.marketsConnection?.edges.filter(
+        (market) => {
+          const marketState = market.node.data.marketState
+          return validMarketStates.includes(marketState)
+        }
+      )
+      const displayedMarkets = filteredMarkets?.slice(0, 4) || []
+      const processedMarketData = processMarketData(displayedMarkets)
       const sortedByTopVolume = sortMarketsByTopVolume(processedMarketData)
       const sortedByTopGainers = sortMarketsByTopGainers(processedMarketData)
       const sortedByTopLosers = sortMarketsByTopLosers(processedMarketData)

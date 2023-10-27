@@ -5,6 +5,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const MarketTile = ({
   name,
+  marketState,
   volume,
   formattedVolume,
   lastPrice,
@@ -21,7 +22,7 @@ const MarketTile = ({
         </div> */}
         <div>
           <div className="leading-none">{name}</div>
-          {volume !== 0 ? (
+          {marketState !== 'STATE_SUSPENDED' ? (
             <div className="text-vega-light-300 dark:text-vega-dark-300">
               Vol {formattedVolume}
             </div>
