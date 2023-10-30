@@ -96,13 +96,28 @@ const useTotalVolume = () => {
       //const marketFeeFactorsInfrastructureFee = params['market_fee_factors_infrastructureFee']
 
       const fetchTotalVolume = async () => {
-        setLoading(true)
-        try {
-          // get current epoch
-          let epochResponse = await fetch(
+        let allSummaries: SummaryEdge[] = []
+
+        const fetchAllPages = async (afterCursor = null) => {
+          const url = new URL(
             `${process.env.GATSBY_VEGA_REST_API}/api/v2/rewards/epoch/summaries`
           )
-          const epochs = await epochResponse.json()
+
+          if (afterCursor) {
+            url.searchParams.append('pagination.after', afterCursor)
+          }
+
+          const response = await fetch(url.toString())
+          const data = await response.json()
+          allSummaries = allSummaries.concat(data.summaries.edges)
+
+          if (data.summaries.pageInfo.hasNextPage) {
+            await fetchAllPages(data.summaries.pageInfo.endCursor)
+          }
+        }
+
+        try {
+          await fetchAllPages()
 
           let coinGeckoPrice = await fetch(
             `https://api.coingecko.com/api/v3/simple/price?ids=${coingeckoIds}&vs_currencies=usd&include_last_updated_at=true`
@@ -116,7 +131,7 @@ const useTotalVolume = () => {
 
             if (assetIdValue) {
               // find relevant asset and rewardType in current epoch
-              const results = epochs.summaries.edges.filter((summary) => {
+              const results = allSummaries.filter((summary) => {
                 return (
                   summary.node.rewardType ===
                     'ACCOUNT_TYPE_FEES_INFRASTRUCTURE' &&
@@ -173,3 +188,14 @@ const useTotalVolume = () => {
 }
 
 export default useTotalVolume
+
+type SummaryNode = {
+  rewardType: string
+  assetId: string
+  amount: string
+  epoch: number
+}
+
+type SummaryEdge = {
+  node: SummaryNode
+}
