@@ -96,7 +96,7 @@ const MarketsLiquidity = () => {
             <Trans t={t}>Liquidity Provision</Trans>
           </GlitchTitle>
         </div>
-        <div className="mx-auto mb-3 max-w-[44rem] bg-vega-pink-550">
+        <div className="mx-auto mb-3 max-w-[44rem]">
           <LeadingLine className="text-center">
             <Trans t={t}>
               Liquidity providers receive a share of fees paid during trading in
