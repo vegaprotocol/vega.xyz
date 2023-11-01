@@ -46,6 +46,13 @@ const MarketLpDocument = gql`
                 decimals
               }
             }
+            ... on Perpetual {
+              settlementAsset {
+                id
+                symbol
+                decimals
+              }
+            }
           }
         }
       }
@@ -71,6 +78,13 @@ const MarketLpDocument = gql`
           }
         }
       }
+      liquidityMonitoringParameters {
+        triggeringRatio
+      }
+    }
+    networkParameter(key: "market.liquidity.stakeToCcyVolume") {
+      key
+      value
     }
   }
   ${LiquidityProvisionFieldsFragmentDoc}

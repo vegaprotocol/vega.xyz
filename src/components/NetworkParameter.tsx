@@ -3,7 +3,7 @@ import { useNetworkParams } from '../hooks/use-network-params'
 import { SnakeToCamel } from '../utils/tools'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import ParameterBox from './ParameterBox'
-import { addDecimalsFormatNumber } from '@vegaprotocol/utils'
+import { addDecimalsFormatNumber } from '../utils/vega/number'
 import { formatNumberWithSuffix } from '../utils/tools'
 import BigNumber from 'bignumber.js'
 
