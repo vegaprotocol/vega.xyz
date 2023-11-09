@@ -7,7 +7,6 @@ import Container from '../../components/Container'
 import ImmersiveBannerCover from '../../components/UI/ImmersiveBannerCover'
 import Developers from '../../components/Svg/Developers'
 import IconGithub from '../../components/Svg/OutlineIcons/Github'
-import IconCareers from '../../components/Svg/OutlineIcons/Careers'
 import IconDocumentation from '../../components/Svg/OutlineIcons/Documentation'
 import IconProgrammaticTrading from '../../components/Svg/OutlineIcons/ProgrammaticTrading'
 import IconDiscord from '../../components/Svg/OutlineIcons/Discord'
@@ -87,11 +86,6 @@ const DevelopPage = ({ data }) => {
                 title={t('Report a security issue')}
                 icon={<IconSecurity />}
                 link="/bug-bounties"
-              />
-              <Box
-                title={t('Careers')}
-                icon={<IconCareers />}
-                link="/careers"
               />
               <Box
                 title={t('Discord')}
