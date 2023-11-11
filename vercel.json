@@ -17,6 +17,11 @@
       ],
       "missing": [
         {
+            "type": "header",
+            "key": "user-agent",
+            "value": "Googlebot.*"
+        },
+        {
           "type": "cookie",
           "key": "skip-geo-redirect"
         }
