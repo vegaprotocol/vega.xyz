@@ -54,46 +54,79 @@ const Markets = () => {
           return validMarketStates.includes(marketState)
         }
       )
-      const displayedMarkets = filteredMarkets?.slice(0, 4) || []
-      const processedMarketData = processMarketData(displayedMarkets)
-      const sortedByTopVolume = sortMarketsByTopVolume(processedMarketData)
-      const sortedByTopGainers = sortMarketsByTopGainers(processedMarketData)
-      const sortedByTopLosers = sortMarketsByTopLosers(processedMarketData)
-      const sortedByNewest = sortMarketsByNewest(processedMarketData)
+
+      const allProcessedMarketData =
+        sortMarketsByTopVolume(processMarketData(filteredMarkets))?.slice(
+          0,
+          4
+        ) || []
+
+      const futuresProcessedMarketData =
+        sortMarketsByTopVolume(
+          processMarketData(filteredMarkets, 'Future')
+        )?.slice(0, 4) || []
+
+      console.log(futuresProcessedMarketData)
+
+      const perpetualsProcessedMarketData =
+        sortMarketsByTopVolume(
+          processMarketData(filteredMarkets, 'Perpetual')
+        )?.slice(0, 4) || []
 
       const tabs = [
         {
-          title: 'Top Volume',
-          markets: sortedByTopVolume.map((market) => (
+          title: 'All',
+          markets: allProcessedMarketData.map((market) => (
             <MarketTile {...market} />
           )),
         },
         {
-          title: 'Top Gainers',
-          markets: sortedByTopGainers.map((market) => (
+          title: 'FUTR',
+          markets: futuresProcessedMarketData.map((market) => (
             <MarketTile {...market} />
           )),
         },
         {
-          title: 'Top Losers',
-          markets: sortedByTopLosers.map((market) => (
+          title: 'PERP',
+          markets: perpetualsProcessedMarketData.map((market) => (
             <MarketTile {...market} />
           )),
-        },
-        {
-          title: 'New Markets',
-          markets: sortedByNewest.map((market) => <MarketTile {...market} />),
         },
       ]
 
-      if (
-        [
-          sortedByTopVolume,
-          sortedByTopGainers,
-          sortedByTopLosers,
-          sortedByNewest,
-        ].some((array) => array.length > 0)
-      ) {
+      // const displayedMarkets = filteredMarkets?.slice(0, 4) || []
+      // const processedMarketData = processMarketData(displayedMarkets)
+      // const sortedByTopVolume = sortMarketsByTopVolume(processedMarketData)
+      // const sortedByTopGainers = sortMarketsByTopGainers(processedMarketData)
+      // const sortedByTopLosers = sortMarketsByTopLosers(processedMarketData)
+      // const sortedByNewest = sortMarketsByNewest(processedMarketData)
+
+      // const tabs = [
+      //   {
+      //     title: 'Top Volume',
+      //     markets: sortedByTopVolume.map((market) => (
+      //       <MarketTile {...market} />
+      //     )),
+      //   },
+      //   {
+      //     title: 'Top Gainers',
+      //     markets: sortedByTopGainers.map((market) => (
+      //       <MarketTile {...market} />
+      //     )),
+      //   },
+      //   {
+      //     title: 'Top Losers',
+      //     markets: sortedByTopLosers.map((market) => (
+      //       <MarketTile {...market} />
+      //     )),
+      //   },
+      //   {
+      //     title: 'New Markets',
+      //     markets: sortedByNewest.map((market) => <MarketTile {...market} />),
+      //   },
+      // ]
+
+      if ([allProcessedMarketData].some((array) => array.length > 0)) {
         setMarketsData(tabs)
       } else {
         setMarketsData([])
@@ -131,7 +164,7 @@ const Markets = () => {
           <Trans t={t}>Markets</Trans>
         </h2>
 
-        <div className="!hidden items-center gap-x-space-3 md:flex">
+        <div className="items-center gap-x-space-3 md:flex">
           {marketsData.map((group, index) => (
             <button key={index} onClick={() => setActiveTab(index)}>
               <Pill active={index === activeTab}>{group.title}</Pill>
