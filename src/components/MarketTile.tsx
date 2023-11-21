@@ -32,7 +32,6 @@ const MarketTile = ({
               </Pill>
             )}
           </div>
-
           {marketState !== 'STATE_SUSPENDED' ? (
             <div className="text-vega-light-300 dark:text-vega-dark-300">
               Vol {formattedVolume}

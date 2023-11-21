@@ -138,6 +138,7 @@ export const processMarketData = (marketData, marketType = 'All') => {
           return {
             name: marketName,
             marketState: marketState,
+            marketType: marketType,
             volume: 0,
             formattedVolume: addDecimalsFormatNumber(0, positionDecimalPlaces),
             lastPrice: addDecimalsFormatNumber(
