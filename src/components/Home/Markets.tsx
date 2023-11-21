@@ -66,8 +66,6 @@ const Markets = () => {
           processMarketData(filteredMarkets, 'Future')
         )?.slice(0, 4) || []
 
-      console.log(futuresProcessedMarketData)
-
       const perpetualsProcessedMarketData =
         sortMarketsByTopVolume(
           processMarketData(filteredMarkets, 'Perpetual')

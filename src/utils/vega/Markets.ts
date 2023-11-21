@@ -1,6 +1,19 @@
 import BigNumber from 'bignumber.js'
 import { addDecimalsFormatNumber } from '../vega/number'
 
+export const marketTypeToShortName = (marketType: string) => {
+  switch (marketType) {
+    case 'Future':
+      return 'FUTR'
+    case 'Perpetual':
+      return 'PERP'
+    case 'Spot':
+      return 'SPOT'
+    default:
+      return marketType
+  }
+}
+
 export const calc24hVolume = (candles) => {
   return candles
     .reduce((acc, c) => {
@@ -85,6 +98,8 @@ export const processMarketData = (marketData, marketType = 'All') => {
       const decimalPlaces = edge.node.data.market.decimalPlaces
       const openTimestamp = edge.node.data.market.marketTimestamps.open
       const marketState = edge.node.data.marketState
+      const marketType =
+        edge.node.data.market.tradableInstrument.instrument.product.__typename
 
       if (!markPrice.isZero()) {
         const candles = edge.node.candlesConnection?.edges
@@ -105,6 +120,7 @@ export const processMarketData = (marketData, marketType = 'All') => {
           return {
             name: marketName,
             marketState: marketState,
+            marketType: marketType,
             volume: volume24h,
             formattedVolume: addDecimalsFormatNumber(
               volume24h.toString(),

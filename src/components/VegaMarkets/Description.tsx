@@ -1,17 +1,5 @@
 import React from 'react'
-
-const marketTypeToShortName = (marketType: string) => {
-  switch (marketType) {
-    case 'Future':
-      return 'FUTR'
-    case 'Perpetual':
-      return 'PERP'
-    case 'Spot':
-      return 'SPOT'
-    default:
-      return marketType
-  }
-}
+import { marketTypeToShortName } from '../../utils/vega/Markets'
 
 export const Description = ({ market }: { market: any }) => {
   const marketName = market.tradableInstrument.instrument.name

@@ -257,7 +257,7 @@ const IndexPage = ({ data }) => {
           <Rip />
 
           <Container>
-            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+            <div className="my-space-10 md:my-space-12 lg:my-space-14">
               <Container>
                 <LiquidityProvision />
               </Container>
@@ -318,7 +318,7 @@ const IndexPage = ({ data }) => {
               <AsSeenOn />
             </div>
 
-            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+            <div className="my-space-10 md:my-space-12 lg:my-space-14">
               <h2 className="title-l lg:title-xl mb-space-10 text-center text-center md:mb-space-10">
                 <GlitchTitle color="red">
                   <Trans t={t}>Where next?</Trans>
