@@ -157,12 +157,12 @@ const Markets = () => {
 
   return marketsData.length > 0 ? (
     <div>
-      <div className="mb-space-5 grid grid-cols-2 md:flex md:items-center md:justify-between">
+      <div className="mb-space-5 flex flex grid grid-cols-2 flex-wrap items-center justify-between gap-x-6 gap-y-3">
         <h2 className="heading-m">
           <Trans t={t}>Markets</Trans>
         </h2>
 
-        <div className="items-center gap-x-space-3 md:flex">
+        <div className="flex items-center justify-end gap-x-space-3">
           {marketsData.map((group, index) => (
             <button key={index} onClick={() => setActiveTab(index)}>
               <Pill active={index === activeTab}>{group.title}</Pill>
