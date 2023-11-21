@@ -24,7 +24,7 @@ const MarketTile = ({
           <MarketBadge />
         </div> */}
         <div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-x-5">
             <div className="leading-none">{name}</div>
             {marketType && (
               <Pill active={true} inverse={true}>
