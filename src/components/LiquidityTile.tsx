@@ -1,15 +1,16 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
-import * as Schema from '@vegaprotocol/types'
 import { useMarketLiquidityProviders } from '../hooks/use-market-liquidity'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import {
   addDecimalsFormatNumber,
   formatNumberPercentage,
   toBigNum,
-} from '@vegaprotocol/utils'
+} from '../utils/vega/number'
 import { getStatus } from '../utils/vega/getStatus'
-import { HealthBar, Intent } from '@vegaprotocol/ui-toolkit'
+import { Intent } from '../utils/vega/Intent'
+import * as Schema from '../utils/vega/types'
+import { HealthBar } from '../components/HealthBar'
 
 const percentageLiquidity = (suppliedStake, targetStake) => {
   const roundedPercentage =
@@ -17,8 +18,8 @@ const percentageLiquidity = (suppliedStake, targetStake) => {
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
-    ? '100%'
-    : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
+      ? '100%'
+      : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
   return display
 }
 

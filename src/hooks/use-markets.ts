@@ -18,11 +18,22 @@ export const MarketsDataFieldsFragmentDoc = gql`
                 decimals
               }
             }
+            ... on Perpetual {
+              settlementAsset {
+                id
+                symbol
+                decimals
+              }
+            }
           }
         }
       }
       marketTimestamps {
         open
+      }
+      liquiditySLAParameters {
+        priceRange
+        commitmentMinTimeFraction
       }
       decimalPlaces
       positionDecimalPlaces

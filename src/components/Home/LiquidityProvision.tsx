@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
-import { useYesterday } from '@vegaprotocol/react-helpers'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import LiquidtyTile from '../LiquidityTile'
 import Button from '../UI/Button'
 import { useMarkets, validMarketStates } from '../../hooks/use-markets'
+import { useYesterday } from '../../hooks/use-yesterday'
 
 const LiquidityProvision = () => {
   const { t } = useTranslation('component.liquidity-provision')

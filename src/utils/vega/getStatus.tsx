@@ -1,7 +1,10 @@
-import * as Schema from '@vegaprotocol/types'
+import * as Schema from './types'
 
-export const getStatus = (tradingMode?: Schema.MarketTradingMode, trigger: Schema.AuctionTrigger) => {
-  if (!tradingMode) return '';
+export const getStatus = (
+  tradingMode: Schema.MarketTradingMode,
+  trigger: Schema.AuctionTrigger
+) => {
+  if (!tradingMode) return ''
   if (
     tradingMode === Schema.MarketTradingMode.TRADING_MODE_MONITORING_AUCTION
   ) {
@@ -9,8 +12,8 @@ export const getStatus = (tradingMode?: Schema.MarketTradingMode, trigger: Schem
       trigger &&
       trigger !== Schema.AuctionTrigger.AUCTION_TRIGGER_UNSPECIFIED
     ) {
-      return `${Schema.MarketTradingModeMapping[tradingMode]} - ${Schema.AuctionTriggerMapping[trigger]}`;
+      return `${Schema.MarketTradingModeMapping[tradingMode]} - ${Schema.AuctionTriggerMapping[trigger]}`
     }
   }
-  return Schema.MarketTradingModeMapping[tradingMode];
-};
+  return Schema.MarketTradingModeMapping[tradingMode]
+}

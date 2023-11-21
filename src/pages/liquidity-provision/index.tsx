@@ -1,17 +1,3 @@
-import { useYesterday } from '@vegaprotocol/react-helpers'
-import * as Schema from '@vegaprotocol/types'
-import {
-  AsyncRenderer,
-  HealthBar,
-  Indicator,
-  Intent,
-  TooltipCellComponent,
-} from '@vegaprotocol/ui-toolkit'
-import {
-  addDecimalsFormatNumber,
-  formatNumberPercentage,
-  toBigNum,
-} from '@vegaprotocol/utils'
 import 'ag-grid-community/dist/styles/ag-grid.css'
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css'
 import type {
@@ -20,6 +6,7 @@ import type {
   AgReactUiProps,
 } from 'ag-grid-react'
 import { AgGridColumn, AgGridReact } from 'ag-grid-react'
+import classNames from 'classnames'
 import { graphql } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import React, {
@@ -34,19 +21,39 @@ import BoxTitle from '../../components/BoxTitle'
 import Seo from '../../components/Seo'
 import Container from '../../components/Container'
 import GlitchTitle from '../../components/GlitchTitle'
+import { HealthBar } from '../../components/HealthBar'
+import { Indicator } from '../../components/IntentInidcator'
 import Layout from '../../components/Layout'
 import LeadingLine from '../../components/LeadingLine'
 import Link from '../../components/UI/Link'
 import { Description } from '../../components/VegaMarkets/Description'
 import { useMarketLiquidityProviders } from '../../hooks/use-market-liquidity'
 import { useMarkets, validMarketStates } from '../../hooks/use-markets'
+import { useYesterday } from '../../hooks/use-yesterday'
 import { calc24hVolume } from '../../utils/vega/24hVolume'
 import { getStatus } from '../../utils/vega/getStatus'
+import { Intent } from '../../utils/vega/Intent'
+import {
+  addDecimalsFormatNumber,
+  formatNumberPercentage,
+  toBigNum,
+} from '../../utils/vega/number'
+import * as Schema from '../../utils/vega/types'
 import './liquidity-provision.css'
 import CalloutHero from '../../components/CalloutHero'
 import BigNumber from 'bignumber.js'
 import TranslationsBanner from '../../components/TranslationsBanner'
-import { RowClickedEvent } from 'ag-grid-community'
+import { ITooltipParams, RowClickedEvent } from 'ag-grid-community'
+
+/*
+We're using a global variable here to store the selected product type, because
+ag-grid doesn't update the doesExternalFilterPass function on any state change.
+By externalising the state, we can force the check to always happen on an up-to-
+date value.
+We set this value alongside setState() for selectedProductType and have an empty
+useEffect reading selectedProductType to force a rerender when the value changes.
+*/
+let localSelectedProductType
 
 const MarketsLiquidity = () => {
   const { i18n, t } = useTranslation('page.liquidity-provision')
@@ -60,6 +67,11 @@ const MarketsLiquidity = () => {
     return new Date(yesterday).toISOString()
   }, [yesterday])
   const { data, loading, error } = useMarkets(yTimestamp)
+  const [selectedProductType, setSelectedProductType] = useState<
+    string | undefined
+  >(undefined)
+
+  useEffect(() => { }, [selectedProductType])
 
   if (loading) return <div>hi ho</div>
   if (error) return <div>Error loading markets</div>
@@ -139,9 +151,50 @@ const MarketsLiquidity = () => {
             </div>
           </CalloutHero>
         </div>
-        <AsyncRenderer loading={loading} error={error} data={data}>
-          <div className="title-m relative mb-3 w-full">
-            <Trans t={t}>Futures</Trans>
+        <div>
+          <div className="mb-2 flex w-full gap-4 text-lg">
+            <button
+              className={classNames('rounded p-2', {
+                'text-vega-dark-600 dark:text-vega-light-600 bg-vega-light-200 dark:bg-vega-dark-200':
+                  selectedProductType === undefined,
+                'text-vega-light-300 dark:text-vega-dark-300':
+                  selectedProductType !== undefined,
+              })}
+              onClick={() => {
+                setSelectedProductType(undefined)
+                localSelectedProductType = undefined
+              }}
+            >
+              All
+            </button>
+            <button
+              className={classNames('rounded p-2', {
+                'text-vega-dark-600 dark:text-vega-light-600 bg-vega-light-200 dark:bg-vega-dark-200':
+                  selectedProductType === 'Future',
+                'text-vega-light-300 dark:text-vega-dark-300':
+                  selectedProductType !== 'Future',
+              })}
+              onClick={() => {
+                setSelectedProductType('Future')
+                localSelectedProductType = 'Future'
+              }}
+            >
+              Futures
+            </button>
+            <button
+              className={classNames('rounded p-2', {
+                'text-vega-dark-600 dark:text-vega-light-600 bg-vega-light-200 dark:bg-vega-dark-200':
+                  selectedProductType === 'Perpetual',
+                'text-vega-light-300 dark:text-vega-dark-300':
+                  selectedProductType !== 'Perpetual',
+              })}
+              onClick={() => {
+                setSelectedProductType('Perpetual')
+                localSelectedProductType = 'Perpetual'
+              }}
+            >
+              Perpetuals
+            </button>
           </div>
           <div
             className="ag-theme-alpine relative mb-16 w-full"
@@ -235,30 +288,48 @@ const MarketsLiquidity = () => {
                 colId="suppliedStake"
                 headerName={t('Supplied Stake')}
                 cellRenderer={(params) => {
-                  const suppliedStake = params.data.node.data.suppliedStake
-                  const targetStake = params.data.node.data.targetStake
-                  const decimals =
-                    params.data.node.data.market.tradableInstrument.instrument
-                      .product.settlementAsset.decimals
-                  const formattedSuppliedStake = addDecimalsFormatNumber(
-                    suppliedStake,
-                    decimals
+                  const {
+                    data: marketWithLiquidityData,
+                    loading,
+                    error,
+                  } = useMarketLiquidityProviders(
+                    params.data.node.data.market.id
                   )
-                  const percentageStaked = percentageLiquidity(
-                    suppliedStake,
-                    targetStake
-                  )
-                  const status = params.data.node.data.marketTradingMode
-                  const intent = intentForStatus(status)
-                  return (
-                    <div>
-                      <Indicator variant={intent} />
-                      {formattedSuppliedStake} <br />
-                      <div
-                        style={{ color: '#8B8B8B' }}
-                      >{`(${percentageStaked})`}</div>
-                    </div>
-                  )
+
+                  if (loading) return null
+                  if (marketWithLiquidityData) {
+                    const suppliedStake = params.data.node.data.suppliedStake
+                    const targetStake = params.data.node.data.targetStake
+                    const decimals =
+                      params.data.node.data.market.tradableInstrument.instrument
+                        .product.settlementAsset.decimals
+                    const formattedSuppliedStake = addDecimalsFormatNumber(
+                      suppliedStake,
+                      decimals
+                    )
+                    const percentageStaked = percentageLiquidity(
+                      suppliedStake,
+                      targetStake
+                    )
+                    const auctionTrigger =
+                      marketWithLiquidityData.market
+                        .liquidityMonitoringParameters.triggeringRatio
+
+                    const intentForLiquidity = intentForProvisionedLiquidity(
+                      parseFloat(targetStake),
+                      parseFloat(suppliedStake),
+                      parseFloat(auctionTrigger)
+                    )
+                    return (
+                      <div>
+                        <Indicator variant={intentForLiquidity} />
+                        {formattedSuppliedStake} <br />
+                        <div
+                          style={{ color: '#8B8B8B' }}
+                        >{`(${percentageStaked})`}</div>
+                      </div>
+                    )
+                  }
                 }}
                 headerTooltip={t(
                   'The current amount of liquidity supplied for this market.'
@@ -324,6 +395,39 @@ const MarketsLiquidity = () => {
                 sortable={false}
               />
               <AgGridColumn
+                colId="liquiditySLATime"
+                headerName={t('Min time on book')}
+                headerTooltip={t(
+                  'The minimum percentage of market time on book liquidity providers are expected to be available for this market'
+                )}
+                cellRenderer={(params) => {
+                  const { commitmentMinTimeFraction } =
+                    params.data.node.data.market.liquiditySLAParameters
+
+                  const timePercentage = commitmentMinTimeFraction * 100
+                  return <>{timePercentage}%</>
+                }}
+              />
+              <AgGridColumn
+                colId="liquiditySLAVolume"
+                headerName={t('Liquidity price range')}
+                headerTooltip={t(
+                  'The minimum amount of volume liquidity providers are expected to have available for this market'
+                )}
+                cellRenderer={(params) => {
+                  const { priceRange } =
+                    params.data.node.data.market.liquiditySLAParameters
+
+                  const pricePercentage = priceRange * 100
+                  return (
+                    <>
+                      {pricePercentage}%
+                      <span className="text-vega-mid-grey"> of midprice</span>
+                    </>
+                  )
+                }}
+              />
+              <AgGridColumn
                 colId="volume24h"
                 headerName={t('Volume (24h)')}
                 cellRenderer={(params) => {
@@ -362,25 +466,42 @@ const MarketsLiquidity = () => {
                 headerName={t('Market Status')}
                 field={'node.data.marketTradingMode'}
                 cellRenderer={(params) => {
-                  const { data, loading, error } = useMarketLiquidityProviders(
+                  const {
+                    data: marketWithLiquidityData,
+                    loading,
+                    error,
+                  } = useMarketLiquidityProviders(
                     params.data.node.data.market.id
                   )
 
                   if (loading) return null
-                  if (data) {
+                  if (marketWithLiquidityData) {
                     const targetStake = params.data.node.data.targetStake
                     const settlementAssetDecimals =
-                      data.market.tradableInstrument.instrument.product
-                        .settlementAsset.decimals
+                      marketWithLiquidityData.market.tradableInstrument
+                        .instrument.product.settlementAsset.decimals
+
+                    const networkStakeToCcyVolume =
+                      marketWithLiquidityData.networkParameter?.value || 1
                     const feeLevels = getFeeLevels(
-                      data.market?.liquidityProvisionsConnection?.edges || []
+                      marketWithLiquidityData.market
+                        ?.liquidityProvisionsConnection?.edges || [],
+                      networkStakeToCcyVolume
                     )
 
                     const tradingMode = params.data.node.data.marketTradingMode
-                    const auctionTrigger = params.data.node.data.auctionTrigger
+                    const auctionTrigger =
+                      marketWithLiquidityData.market
+                        .liquidityMonitoringParameters.triggeringRatio
                     const tradingModeLabel = getStatus(
                       tradingMode,
                       auctionTrigger
+                    )
+                    const suppliedStake = params.data.node.data.suppliedStake
+                    const intent = intentForProvisionedLiquidity(
+                      parseFloat(targetStake),
+                      parseFloat(suppliedStake),
+                      parseFloat(auctionTrigger)
                     )
                     return (
                       <div>
@@ -390,7 +511,8 @@ const MarketsLiquidity = () => {
                           target={targetStake}
                           decimals={settlementAssetDecimals}
                           levels={feeLevels}
-                          intent={intentForStatus(tradingMode)}
+                          intent={intent}
+                          triggerRatio={auctionTrigger}
                         />
                       </div>
                     )
@@ -403,7 +525,7 @@ const MarketsLiquidity = () => {
               />
             </Grid>
           </div>
-        </AsyncRenderer>
+        </div>
       </Container>
     </Layout>
   )
@@ -414,8 +536,8 @@ const percentageLiquidity = (suppliedStake, targetStake) => {
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
-    ? '>100%'
-    : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
+      ? '>100%'
+      : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
   return display
 }
 
@@ -481,7 +603,15 @@ const Grid = ({ isRowClickable, children, ...props }: GridProps) => {
         isExternalFilterPresent: () => true,
         doesExternalFilterPass: (node) => {
           const state = node.data.node.data.marketState
-          return validMarketStates.includes(state)
+          const productType =
+            node.data.node.data.market.tradableInstrument.instrument.product
+              .__typename
+
+          const isSelectedProductType =
+            !localSelectedProductType ||
+            localSelectedProductType === productType
+
+          return validMarketStates.includes(state) && isSelectedProductType
         },
       }}
     >
@@ -529,19 +659,50 @@ export const intentForStatus = (status: Schema.MarketTradingMode) => {
   return marketTradingModeIntent[status]
 }
 
-export const getFeeLevels = (providers: any[]) => {
+const intentForProvisionedLiquidity = (
+  targetStake,
+  suppliedStake,
+  auctionTrigger
+) => {
+  if (suppliedStake >= targetStake) {
+    return Intent.Success
+  }
+  if (suppliedStake <= targetStake) {
+    if (suppliedStake <= auctionTrigger * targetStake) {
+      {
+        return Intent.Danger
+      }
+    } else return Intent.Warning
+  }
+  return Intent.Primary
+}
+
+export const getFeeLevels = (
+  providers: any[],
+  networkStakeToCcyVolume: number
+) => {
   const parsedProviders = providers.map((p) => {
     const node = p?.node || {}
     return node
   })
   const lp = parsedProviders.reduce(
     (total: { [x: string]: number }, current) => {
-      const { fee = '0', commitmentAmount = '0' } = current
+      const {
+        fee = '0',
+        commitmentAmount = '0',
+        party: {
+          accountsConnection: { edges },
+        },
+      } = current
+      const bondAccountBalance =
+        parseInt(edges[0]?.node?.balance, 10) * networkStakeToCcyVolume
       const ca = parseInt(commitmentAmount, 10)
 
       return {
         ...total,
-        [fee]: total[fee] ? total[fee] + ca : ca,
+        [fee]: total[fee]
+          ? total[fee] + bondAccountBalance
+          : bondAccountBalance,
       }
     },
     {}
@@ -549,8 +710,9 @@ export const getFeeLevels = (providers: any[]) => {
 
   const sortedProviders = Object.keys(lp)
     .sort()
-    .map((p) => ({ fee: p, commitmentAmount: lp[p] }))
-
+    .map((p) => {
+      return { fee: p, commitmentAmount: lp[p] }
+    })
   return sortedProviders
 }
 
@@ -561,3 +723,13 @@ const percentageFormatter = (value) => {
 
 const liquidityDetailsConsoleLink = (marketId: string, consoleLink: string) =>
   `${consoleLink}/#/liquidity/${marketId}`
+
+const tooltipContentClasses =
+  'max-w-sm bg-vega-light-100 dark:bg-vega-dark-100 border border-vega-light-200 dark:border-vega-dark-200 px-2 py-1 z-20 rounded text-xs text-black dark:text-white break-word'
+const TooltipCellComponent = (props: ITooltipParams) => {
+  return (
+    <div className={tooltipContentClasses} role="tooltip">
+      {props.value}
+    </div>
+  )
+}
