@@ -12,7 +12,9 @@ const Layout = ({ children, stickyHeader = true }) => {
         htmlAttributes={{
           lang: 'en',
         }}
-      />
+      >
+        <body className="georestricted" />
+      </Helmet>
       <div className="max-w-full bg-white selection:bg-vega-yellow dark:bg-black dark:text-white dark:selection:bg-vega-pink">
         <div className="flex min-h-screen flex-col">
           <div className="grow">

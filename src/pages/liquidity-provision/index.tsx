@@ -71,7 +71,7 @@ const MarketsLiquidity = () => {
     string | undefined
   >(undefined)
 
-  useEffect(() => { }, [selectedProductType])
+  useEffect(() => {}, [selectedProductType])
 
   if (loading) return <div>hi ho</div>
   if (error) return <div>Error loading markets</div>
@@ -85,7 +85,7 @@ const MarketsLiquidity = () => {
           'Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.'
         )}
       />
-      <Container dataCy={'main'}>
+      <Container dataCy={'main'} id="liquidity-provision-page">
         {missingTranslations && <TranslationsBanner />}
         <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
           <GlitchTitle
@@ -112,7 +112,7 @@ const MarketsLiquidity = () => {
             Learn more about committing liquidity
           </Link>
         </div>
-        <div className="my-8">
+        <div className="liquidity-provision-page-section my-8">
           <CalloutHero
             title={t(
               'The data relating to markets on this page is obtained from nodes on the Vega Blockchain.'
@@ -151,7 +151,7 @@ const MarketsLiquidity = () => {
             </div>
           </CalloutHero>
         </div>
-        <div>
+        <div className="liquidity-provision-page-section">
           <div className="mb-2 flex w-full gap-4 text-lg">
             <button
               className={classNames('rounded p-2', {
@@ -536,8 +536,8 @@ const percentageLiquidity = (suppliedStake, targetStake) => {
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
-      ? '>100%'
-      : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
+    ? '>100%'
+    : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
   return display
 }
 

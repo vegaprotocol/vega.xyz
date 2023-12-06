@@ -9,6 +9,7 @@ import HeaderCta from '../components/HeaderCta'
 import LanguageToggle from '../components/LanguageToggle'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import { GeorestrictedProvider } from '../context/georestricted'
 
 const Header = ({ sticky }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -35,7 +36,7 @@ const Header = ({ sticky }) => {
     <div className="relative z-50">
       <header
         className={`bg-white dark:bg-black ${
-          sticky ? 'fixed top-0 left-0 right-0' : ''
+          sticky ? 'fixed left-0 right-0 top-0' : ''
         }`}
         id="header"
       >
@@ -51,11 +52,15 @@ const Header = ({ sticky }) => {
 
             <div className="flex items-center">
               {!menuIsOpen && (
-                <HeaderCta
-                  link="https://console.vega.xyz/"
-                  text={t('Launch App')}
-                  className="mr-3 hidden md:block lg:hidden"
-                />
+                <GeorestrictedProvider>
+                  {() => (
+                    <HeaderCta
+                      link="https://console.vega.xyz/"
+                      text={t('Launch App')}
+                      className="mr-3 hidden md:block lg:hidden"
+                    />
+                  )}
+                </GeorestrictedProvider>
               )}
 
               <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
@@ -65,11 +70,15 @@ const Header = ({ sticky }) => {
                 <LanguageToggle />
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
                 {!menuIsOpen && (
-                  <HeaderCta
-                    link="https://console.vega.xyz/"
-                    text={t('Launch App')}
-                    className="ml-3 hidden lg:block"
-                  />
+                  <GeorestrictedProvider>
+                    {() => (
+                      <HeaderCta
+                        link="https://console.vega.xyz/"
+                        text={t('Launch App')}
+                        className="ml-3 hidden lg:block"
+                      />
+                    )}
+                  </GeorestrictedProvider>
                 )}
               </div>
             </div>
