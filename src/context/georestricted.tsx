@@ -33,7 +33,7 @@ export const GeorestrictedProvider = ({ children }) => {
         isGeorestricted,
       }}
     >
-      {isGeorestricted ? children : null}
+      {children}
     </GeorestrictedContext.Provider>
   )
 }

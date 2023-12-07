@@ -2,7 +2,7 @@ import React from 'react'
 import NavigationItem from '../Item'
 import NavigationList from '../List'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
-import { GeorestrictedProvider } from '../../../context/georestricted'
+import { GeorestrictedContext } from '../../../context/georestricted'
 
 const Ecosystem = () => {
   const { t } = useTranslation('component.navigation')
@@ -16,15 +16,21 @@ const Ecosystem = () => {
         text={t('Programmatic Trading')}
         link="/programmatic-trading"
       />
-      <GeorestrictedProvider>
-        {() => (
-          <NavigationItem
-            id="liquidity-provision"
-            text={t('Liquidity Provision')}
-            link="/liquidity-provision"
-          />
-        )}
-      </GeorestrictedProvider>
+      <GeorestrictedContext.Consumer>
+        {({ isGeorestricted }) => {
+          if (isGeorestricted) {
+            return null
+          }
+
+          return (
+            <NavigationItem
+              id="liquidity-provision"
+              text={t('Liquidity Provision')}
+              link="/liquidity-provision"
+            />
+          )
+        }}
+      </GeorestrictedContext.Consumer>
       <NavigationItem text={t('Validators')} link="/validators" />
     </NavigationList>
   )

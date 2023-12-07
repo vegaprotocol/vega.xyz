@@ -1,4 +1,5 @@
 const React = require('react')
+const RootElement = require('./src/components/RootElement')
 
 exports.onRenderBody = function ({ setPreBodyComponents }) {
   setPreBodyComponents([
@@ -45,4 +46,8 @@ void function() {
       },
     }),
   ])
+}
+
+exports.wrapRootElement = ({ element }) => {
+  return <RootElement>{element}</RootElement>
 }

@@ -9,7 +9,7 @@ import HeaderCta from '../components/HeaderCta'
 import LanguageToggle from '../components/LanguageToggle'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import { GeorestrictedProvider } from '../context/georestricted'
+import { GeorestrictedContext } from '../context/georestricted'
 
 const Header = ({ sticky }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -52,15 +52,21 @@ const Header = ({ sticky }) => {
 
             <div className="flex items-center">
               {!menuIsOpen && (
-                <GeorestrictedProvider>
-                  {() => (
-                    <HeaderCta
-                      link="https://console.vega.xyz/"
-                      text={t('Launch App')}
-                      className="mr-3 hidden md:block lg:hidden"
-                    />
-                  )}
-                </GeorestrictedProvider>
+                <GeorestrictedContext.Consumer>
+                  {({ isGeorestricted }) => {
+                    if (isGeorestricted) {
+                      return null
+                    }
+
+                    return (
+                      <HeaderCta
+                        link="https://console.vega.xyz/"
+                        text={t('Launch App')}
+                        className="mr-3 hidden md:block lg:hidden"
+                      />
+                    )
+                  }}
+                </GeorestrictedContext.Consumer>
               )}
 
               <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
@@ -70,15 +76,21 @@ const Header = ({ sticky }) => {
                 <LanguageToggle />
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
                 {!menuIsOpen && (
-                  <GeorestrictedProvider>
-                    {() => (
-                      <HeaderCta
-                        link="https://console.vega.xyz/"
-                        text={t('Launch App')}
-                        className="ml-3 hidden lg:block"
-                      />
-                    )}
-                  </GeorestrictedProvider>
+                  <GeorestrictedContext.Consumer>
+                    {({ isGeorestricted }) => {
+                      if (isGeorestricted) {
+                        return null
+                      }
+
+                      return (
+                        <HeaderCta
+                          link="https://console.vega.xyz/"
+                          text={t('Launch App')}
+                          className="ml-3 hidden lg:block"
+                        />
+                      )
+                    }}
+                  </GeorestrictedContext.Consumer>
                 )}
               </div>
             </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import { GeorestrictedProvider } from '../context/georestricted'
+import { GeorestrictedContext } from '../context/georestricted'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Seo from '../components/Seo'
@@ -87,13 +87,19 @@ const IndexPage = ({ data }) => {
                   </div>
 
                   <div className="mb-space-8 md:mb-space-7 xl:flex xl:items-center xl:gap-x-6">
-                    <GeorestrictedProvider>
-                      {() => (
-                        <Button variant="hero" to="https://console.vega.xyz/">
-                          <Trans t={t}>Launch console</Trans>
-                        </Button>
-                      )}
-                    </GeorestrictedProvider>
+                    <GeorestrictedContext.Consumer>
+                      {({ isGeorestricted }) => {
+                        if (isGeorestricted) {
+                          return null
+                        }
+
+                        return (
+                          <Button variant="hero" to="https://console.vega.xyz/">
+                            <Trans t={t}>Launch console</Trans>
+                          </Button>
+                        )
+                      }}
+                    </GeorestrictedContext.Consumer>
                     <div className="mt-space-4 flex items-center justify-center gap-x-6 md:justify-start xl:mt-0 xl:justify-center">
                       <Button
                         className="text-vega-dark-300"
@@ -263,19 +269,21 @@ const IndexPage = ({ data }) => {
             <LiquidityProvision />
           </div>
           <Container>
-<<<<<<< HEAD
-=======
-            <GeorestrictedProvider>
-              {() => (
-                <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
-                  <Container>
-                    <LiquidityProvision />
-                  </Container>
-                </div>
-              )}
-            </GeorestrictedProvider>
+            <GeorestrictedContext.Consumer>
+              {({ isGeorestricted }) => {
+                if (isGeorestricted) {
+                  return null
+                }
 
->>>>>>> cf8553b8 (fix: add georestriction component and api and unblock at root)
+                return (
+                  <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+                    <Container>
+                      <LiquidityProvision />
+                    </Container>
+                  </div>
+                )
+              }}
+            </GeorestrictedContext.Consumer>
             <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
               <div className="grid md:grid-cols-2">
                 <div className="p-space-5">
