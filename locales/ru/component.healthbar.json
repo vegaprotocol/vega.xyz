@@ -1,6 +1,6 @@
 {
-  "Target stake": "",
-  "Auction Trigger stake": "",
-  "Fee": "",
-  "Providers greater than 2x target stake not shown": ""
+  "Target stake": "Целевая ставка",
+  "Auction Trigger stake": "Плавающая триггер ставка",
+  "Fee": "Газ",
+  "Providers greater than 2x target stake not shown": "Не показаны поставщики, чья целевая ставка превышает 2x целевую"
 }
