@@ -10,9 +10,9 @@
   "Events and meetups": "Мероприятия и встречи",
   "Start": "Начало",
   "Governance on Vega": "Управление в Vega",
-  "Discuss proposals": "",
-  "Vote": "",
-  "Make a proposal": "",
+  "Discuss proposals": "Обсудить предложения",
+  "Vote": "Голосование",
+  "Make a proposal": "Сделайте предложение",
   "Governance documentation": "Документация по управлению",
   "Build": "Построить",
   "Getting started": "Начните сейчас",
@@ -51,8 +51,8 @@
   "Whitepaper": "Белая бумага",
   "Technical overview": "Технический обзор",
   "Talks": "Беседы",
-  "Home": "",
-  "Gitub": "",
+  "Home": "Дом",
+  "Gitub": "Gitub",
   "Insights": "Инсайты",
-  "Insights & Talks": ""
+  "Insights & Talks": "Инсайты и беседы"
 }
