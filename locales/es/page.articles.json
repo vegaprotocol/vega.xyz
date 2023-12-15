@@ -1,10 +1,10 @@
 {
-  "Previous Page": "",
-  "Previous": "",
-  "{{firstItem}} - {{lastItem}} of {{totalItems}}": "",
-  "Next Page": "",
-  "Next": "",
-  "Articles & Talks": "",
-  "Articles and talks about Vega": "",
-  "Articles & talks.": ""
+  "Previous Page": "Pagina anterior",
+  "Previous": "Previo",
+  "{{firstItem}} - {{lastItem}} of {{totalItems}}": "{{firstItem}} - {{lastItem}} of {{totalItems}}",
+  "Next Page": "Siguiente página",
+  "Next": "Próximo",
+  "Articles & Talks": "Artículos y charlas",
+  "Articles and talks about Vega": "Artículos y charlas sobre Vega.",
+  "Articles & talks.": "Artículos y charlas."
 }

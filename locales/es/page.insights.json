@@ -1,10 +1,10 @@
 {
-  "Previous Page": "",
-  "Previous": "",
-  "{{firstItem}} - {{lastItem}} of {{totalItems}}": "",
-  "Next Page": "",
-  "Next": "",
-  "Insights & Talks": "",
-  "Articles and talks about vega": "",
-  "Insights & talks.": ""
+  "Previous Page": "Pagina anterior",
+  "Previous": "Previo",
+  "{{firstItem}} - {{lastItem}} of {{totalItems}}": "{{firstItem}} - {{lastItem}} of {{totalItems}}",
+  "Next Page": "Siguiente página",
+  "Next": "Próximo",
+  "Insights & Talks": "Perspectivas y charlas",
+  "Articles and talks about vega": "Artículos y charlas sobre vega.",
+  "Insights & talks.": "Perspectivas y charlas"
 }
