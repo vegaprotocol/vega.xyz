@@ -1,6 +1,19 @@
 import BigNumber from 'bignumber.js'
 import { addDecimalsFormatNumber } from '../vega/number'
 
+export const marketTypeToShortName = (marketType: string) => {
+  switch (marketType) {
+    case 'Future':
+      return 'FUTR'
+    case 'Perpetual':
+      return 'PERP'
+    case 'Spot':
+      return 'SPOT'
+    default:
+      return marketType
+  }
+}
+
 export const calc24hVolume = (candles) => {
   return candles
     .reduce((acc, c) => {
@@ -20,9 +33,12 @@ export const sortMarketsByTopVolume = (processedMarketData, limit = 4) => {
   return processedMarketData
     .slice()
     .sort((a, b) => {
-      const volumeA = new BigNumber(a['volume'])
-      const volumeB = new BigNumber(b['volume'])
-
+      const volumeA = new BigNumber(
+        a['formattedVolume'].replace(/[^0-9.]/g, '')
+      )
+      const volumeB = new BigNumber(
+        b['formattedVolume'].replace(/[^0-9.]/g, '')
+      )
       return volumeB.minus(volumeA).toNumber()
     })
     .slice(0, limit)
@@ -62,8 +78,18 @@ export const sortMarketsByTopLosers = (processedMarketData, limit = 4) => {
     .slice(0, limit)
 }
 
-export const processMarketData = (marketData) => {
-  const result = marketData
+export const processMarketData = (marketData, marketType = 'All') => {
+  let filteredResults = marketData
+
+  if (marketType !== 'All') {
+    filteredResults = marketData.filter(
+      (item) =>
+        item.node.data.market.tradableInstrument.instrument.product
+          .__typename === marketType
+    )
+  }
+
+  const result = filteredResults
     .map((edge) => {
       const marketName =
         edge.node.data.market.tradableInstrument.instrument.name
@@ -72,6 +98,8 @@ export const processMarketData = (marketData) => {
       const decimalPlaces = edge.node.data.market.decimalPlaces
       const openTimestamp = edge.node.data.market.marketTimestamps.open
       const marketState = edge.node.data.marketState
+      const marketType =
+        edge.node.data.market.tradableInstrument.instrument.product.__typename
 
       if (!markPrice.isZero()) {
         const candles = edge.node.candlesConnection?.edges
@@ -92,6 +120,7 @@ export const processMarketData = (marketData) => {
           return {
             name: marketName,
             marketState: marketState,
+            marketType: marketType,
             volume: volume24h,
             formattedVolume: addDecimalsFormatNumber(
               volume24h.toString(),
@@ -109,6 +138,7 @@ export const processMarketData = (marketData) => {
           return {
             name: marketName,
             marketState: marketState,
+            marketType: marketType,
             volume: 0,
             formattedVolume: addDecimalsFormatNumber(0, positionDecimalPlaces),
             lastPrice: addDecimalsFormatNumber(

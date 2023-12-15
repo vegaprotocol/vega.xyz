@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={t('Vega Protocol - Futures DEX')}
+        title={t('Vega Protocol - Futures & Perpetuals DEX')}
         description={t(
           "Discover Web3's native derivatives trading platform that is helping DeFi mature."
         )}
@@ -79,8 +79,8 @@ const IndexPage = ({ data }) => {
                     </h1>
                     <div className="text-[1.125rem] leading-normal md:text-[1.5rem]">
                       <Trans t={t}>
-                        Cash settled futures are now live on Vega's Alpha
-                        Mainnet.
+                        Cash settled futures and perpetuals are now live on
+                        Vega's Alpha Mainnet
                       </Trans>
                     </div>
                   </div>
@@ -257,7 +257,7 @@ const IndexPage = ({ data }) => {
           <Rip />
 
           <Container>
-            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+            <div className="my-space-10 md:my-space-12 lg:my-space-14">
               <Container>
                 <LiquidityProvision />
               </Container>
@@ -318,7 +318,7 @@ const IndexPage = ({ data }) => {
               <AsSeenOn />
             </div>
 
-            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+            <div className="my-space-10 md:my-space-12 lg:my-space-14">
               <h2 className="title-l lg:title-xl mb-space-10 text-center text-center md:mb-space-10">
                 <GlitchTitle color="red">
                   <Trans t={t}>Where next?</Trans>

@@ -2,6 +2,8 @@ import React from 'react'
 // import MarketBadge from './Svg/MarketBadge'
 import { Sparklines, SparklinesLine } from 'react-sparklines'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
+import Pill from './UI/Pill'
+import { marketTypeToShortName } from '../utils/vega/Markets'
 
 const MarketTile = ({
   name,
@@ -11,17 +13,25 @@ const MarketTile = ({
   lastPrice,
   priceChange,
   sparkLineValues,
+  marketType,
 }) => {
   const gain = parseFloat(priceChange.replace('%', '')) > 0
   const { t } = useTranslation('component.market-tile')
   return (
     <div className="flex h-full flex-col justify-between rounded-lg bg-vega-light-100 p-space-4 dark:bg-vega-dark-100">
-      <div className="mb-space-6 flex items-center gap-x-space-5">
+      <div className="mb-space-6 gap-x-space-5">
         {/* <div>
           <MarketBadge />
         </div> */}
         <div>
-          <div className="leading-none">{name}</div>
+          <div className="flex items-center justify-between gap-x-5">
+            <div className="leading-none">{name}</div>
+            {marketType && (
+              <Pill active={true} inverse={true}>
+                {marketTypeToShortName(marketType)}
+              </Pill>
+            )}
+          </div>
           {marketState !== 'STATE_SUSPENDED' ? (
             <div className="text-vega-light-300 dark:text-vega-dark-300">
               Vol {formattedVolume}

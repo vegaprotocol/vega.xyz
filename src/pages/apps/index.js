@@ -67,7 +67,7 @@ const AppsAndToolsPage = ({ data }) => {
       author: 'Vega',
       link: 'https://console.vega.xyz/',
       description: t(
-        'A dApp for trading cash settled futures on the fully decentralised Vega network.'
+        'A dApp for trading cash settled futures and perps on the fully decentralised Vega network.'
       ),
       categories: ['trading'],
     },
