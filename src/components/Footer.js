@@ -153,14 +153,6 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="/careers"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Careers</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
                     to="/community/contributors"
                     className="block py-1.5 leading-[1.3]"
                   >
@@ -229,14 +221,6 @@ const Footer = () => {
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>API Documentation</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="/careers"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Careers</Trans>
                   </TextLink>
                 </li>
                 <li>
