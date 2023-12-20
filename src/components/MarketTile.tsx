@@ -18,7 +18,7 @@ const MarketTile = ({
   const gain = parseFloat(priceChange.replace('%', '')) > 0
   const { t } = useTranslation('component.market-tile')
   return (
-    <div className="flex h-full flex-col justify-between rounded-lg bg-vega-light-100 p-space-4 dark:bg-vega-dark-100">
+    <div className="flex h-full h-full flex-col justify-between rounded-lg bg-vega-light-100 p-space-4 dark:bg-vega-dark-100">
       <div className="mb-space-6 gap-x-space-5">
         {/* <div>
           <MarketBadge />

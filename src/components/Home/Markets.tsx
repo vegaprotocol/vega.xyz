@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination } from 'swiper'
+import SwiperCore, { Pagination } from 'swiper'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import MarketTile from '../MarketTile'
 import Button from '../UI/Button'
+import Container from '../Container'
 import Pill from '../UI/Pill'
 import 'swiper/swiper-bundle.css'
 import { useMarkets } from '../../hooks/use-markets'
@@ -157,69 +158,73 @@ const Markets = () => {
 
   return marketsData.length > 0 ? (
     <div>
-      <div className="mb-space-5 flex flex grid grid-cols-2 flex-wrap items-center justify-between gap-x-6 gap-y-3">
-        <h2 className="heading-m">
-          <Trans t={t}>Markets</Trans>
-        </h2>
+      <Container>
+        <div className="mb-space-5 flex flex grid grid-cols-2 flex-wrap items-center justify-between gap-x-6 gap-y-3">
+          <h2 className="heading-m">
+            <Trans t={t}>Markets</Trans>
+          </h2>
 
-        <div className="flex items-center justify-end gap-x-space-3">
-          {marketsData.map((group, index) => (
-            <button key={index} onClick={() => setActiveTab(index)}>
-              <Pill active={index === activeTab}>{group.title}</Pill>
-            </button>
-          ))}
-        </div>
+          <div className="flex items-center justify-end gap-x-space-3">
+            {marketsData.map((group, index) => (
+              <button key={index} onClick={() => setActiveTab(index)}>
+                <Pill active={index === activeTab}>{group.title}</Pill>
+              </button>
+            ))}
+          </div>
 
-        <div className="relative z-10 hidden md:hidden">
-          <div className="absolute right-0 top-0 rounded-md border border-vega-light-200 bg-white py-space-1 dark:border-vega-dark-200 dark:bg-black">
-            <div
-              role="button"
-              tabIndex={0}
-              className="font-not-glitched heading-xxxs touch-action-manipulation flex items-center justify-between gap-x-space-2 px-space-4 py-space-2"
-              onClick={() => setShowMarketsDropdown(true)}
-              onTouchStart={() => setShowMarketsDropdown(true)}
-              onFocus={() => setShowMarketsDropdown(true)}
-              onBlur={(e) => {
-                if (!(e.relatedTarget as HTMLElement)?.dataset?.changeMarket) {
-                  setShowMarketsDropdown(false)
-                }
-              }}
-            >
-              <div>{marketsData[activeTab].title}</div>
-              <svg
-                width="14"
-                height="8"
-                viewBox="0 0 14 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="relative -top-px"
+          <div className="relative z-10 hidden md:hidden">
+            <div className="absolute right-0 top-0 rounded-md border border-vega-light-200 bg-white py-space-1 dark:border-vega-dark-200 dark:bg-black">
+              <div
+                role="button"
+                tabIndex={0}
+                className="font-not-glitched heading-xxxs touch-action-manipulation flex items-center justify-between gap-x-space-2 px-space-4 py-space-2"
+                onClick={() => setShowMarketsDropdown(true)}
+                onTouchStart={() => setShowMarketsDropdown(true)}
+                onFocus={() => setShowMarketsDropdown(true)}
+                onBlur={(e) => {
+                  if (
+                    !(e.relatedTarget as HTMLElement)?.dataset?.changeMarket
+                  ) {
+                    setShowMarketsDropdown(false)
+                  }
+                }}
               >
-                <path
-                  d="M0.619141 1.62L1.37914 0.869995L6.99914 6.5L12.6191 0.869995L13.3791 1.62L6.99914 8L0.619141 1.62Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            {showMarketsDropdown && (
-              <div className="relative">
-                {marketsData.map((group, index) => (
-                  <button
-                    role="button"
-                    className="font-not-glitched heading-xxxs touch-action-manipulation block w-full cursor-pointer px-space-4 py-space-2 text-left hover:dark:bg-vega-dark-100 dark:hover:bg-vega-dark-100"
-                    key={index}
-                    aria-label="Change market"
-                    onClick={() => changeTab(index)}
-                    onTouchStart={() => changeTab(index)}
-                    data-change-market
-                  >
-                    <div>{marketsData[index].title}</div>
-                  </button>
-                ))}
+                <div>{marketsData[activeTab].title}</div>
+                <svg
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="relative -top-px"
+                >
+                  <path
+                    d="M0.619141 1.62L1.37914 0.869995L6.99914 6.5L12.6191 0.869995L13.3791 1.62L6.99914 8L0.619141 1.62Z"
+                    fill="white"
+                  />
+                </svg>
               </div>
-            )}
+              {showMarketsDropdown && (
+                <div className="relative">
+                  {marketsData.map((group, index) => (
+                    <button
+                      role="button"
+                      className="font-not-glitched heading-xxxs touch-action-manipulation block w-full cursor-pointer px-space-4 py-space-2 text-left hover:dark:bg-vega-dark-100 dark:hover:bg-vega-dark-100"
+                      key={index}
+                      aria-label="Change market"
+                      onClick={() => changeTab(index)}
+                      onTouchStart={() => changeTab(index)}
+                      data-change-market
+                    >
+                      <div>{marketsData[index].title}</div>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      </Container>
 
       <div>
         {marketsData.map((group, index) => (
@@ -234,6 +239,7 @@ const Markets = () => {
                   spaceBetween={15}
                   pagination={{ clickable: true }}
                   className="market-swiper"
+                  slidesOffsetBefore={15}
                 >
                   {group.markets.map((market, index) => (
                     <SwiperSlide key={index}>{market}</SwiperSlide>
@@ -241,23 +247,27 @@ const Markets = () => {
                 </Swiper>
               </>
             ) : (
-              <div className="mb-space-5 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                {group.markets.map((market, index) => (
-                  <div key={index}>{market}</div>
-                ))}
-              </div>
+              <Container>
+                <div className="mb-space-5 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                  {group.markets.map((market, index) => (
+                    <div key={index}>{market}</div>
+                  ))}
+                </div>
+              </Container>
             )}
           </div>
         ))}
       </div>
 
-      <Button
-        to="https://console.vega.xyz/#/markets/all"
-        className="-translate-y-space-5 text-vega-dark-300 md:translate-y-0"
-        variant="secondary"
-      >
-        View all
-      </Button>
+      <Container>
+        <Button
+          to="https://console.vega.xyz/#/markets/all"
+          className="relative z-10 -translate-y-space-5 text-vega-dark-300 md:translate-y-0"
+          variant="secondary"
+        >
+          View all
+        </Button>
+      </Container>
     </div>
   ) : (
     <></>
