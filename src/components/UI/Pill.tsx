@@ -15,7 +15,6 @@ const lightActiveVariant = 'bg-vega-dark-100 text-vega-dark-400'
 const darkActiveVariant = 'dark:bg-vega-light-100 dark:text-vega-light-400'
 
 const Pill = ({ active = false, children, inverse = false }: Props) => {
-  console.log(inverse)
   const getClassVariants = () => {
     if (inverse) {
       return active

@@ -163,11 +163,13 @@ const IndexPage = ({ data }) => {
               </div>
               <BackerLogos />
             </div>
+          </Container>
 
-            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
-              <Markets />
-            </div>
+          <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+            <Markets />
+          </div>
 
+          <Container>
             <div className="mb-space-10 mt-space-6 md:my-space-12 lg:my-space-14">
               <Statistics />
             </div>
@@ -256,13 +258,10 @@ const IndexPage = ({ data }) => {
 
           <Rip />
 
+          <div className="my-space-10 md:my-space-12 lg:my-space-14">
+            <LiquidityProvision />
+          </div>
           <Container>
-            <div className="my-space-10 md:my-space-12 lg:my-space-14">
-              <Container>
-                <LiquidityProvision />
-              </Container>
-            </div>
-
             <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
               <div className="grid md:grid-cols-2">
                 <div className="p-space-5">

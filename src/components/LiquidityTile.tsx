@@ -11,6 +11,8 @@ import { getStatus } from '../utils/vega/getStatus'
 import { Intent } from '../utils/vega/Intent'
 import * as Schema from '../utils/vega/types'
 import { HealthBar } from '../components/HealthBar'
+import Pill from '../components/UI/Pill'
+import { marketTypeToShortName } from '../utils/vega/Markets'
 
 const percentageLiquidity = (suppliedStake, targetStake) => {
   const roundedPercentage =
@@ -18,8 +20,8 @@ const percentageLiquidity = (suppliedStake, targetStake) => {
   const display = Number.isNaN(roundedPercentage)
     ? 'N/A'
     : roundedPercentage > 100
-      ? '100%'
-      : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
+    ? '100%'
+    : formatNumberPercentage(toBigNum(roundedPercentage, 0), 0)
   return display
 }
 
@@ -98,13 +100,24 @@ const LiquidtyTile = ({ marketId }: { marketId: string }) => {
     const tradingMode = data.market.data.marketTradingMode
     const auctionTrigger = data.auctionTrigger
     const tradingModeLabel = getStatus(tradingMode, auctionTrigger)
+    const marketType =
+      data.market.tradableInstrument.instrument.product.__typename
 
     return (
-      <div className="flex flex-col justify-between rounded-xl border border-vega-light-200 p-space-5 dark:border-vega-dark-200">
+      <div className="flex h-full flex-col justify-between gap-y-4 rounded-xl border border-vega-light-200 p-space-5 dark:border-vega-dark-200">
         <div>
-          <div className="leading-tight">{name}</div>
-          <div className="mb-space-4 flex flex-wrap gap-x-space-4 text-base leading-tight text-vega-light-300 dark:text-vega-dark-300">
-            <div>{code}</div> <div>{settlementAsset}</div>
+          <div className="mb-space-3 flex">
+            {marketType && (
+              <Pill active={true} inverse={true}>
+                {marketTypeToShortName(marketType)}
+              </Pill>
+            )}
+          </div>
+          <div>
+            <div className="leading-tight">{name}</div>
+            <div className="mb-space-4 flex flex-wrap gap-x-space-4 text-base leading-tight text-vega-light-300 dark:text-vega-dark-300">
+              <div>{code}</div> <div>{settlementAsset}</div>
+            </div>
           </div>
         </div>
 

@@ -81,7 +81,7 @@ body {
   }
 
   .market-swiper .swiper-pagination {
-    @apply text-right;
+    @apply right-space-3 !left-auto w-1/2 text-right;
   }
 
   .market-swiper .swiper-pagination-bullet {
