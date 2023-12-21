@@ -31,7 +31,7 @@ const Layout = ({ children, stickyHeader = true }) => {
                     return false
                   }
 
-                  // If
+                  // If we're not georestricted, don't show the banner
                   if (!isGeorestricted) {
                     return null
                   }
