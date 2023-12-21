@@ -33,6 +33,7 @@ import HighCapitalEfficiencyIcon from '../images/feature-icons/high-capital-effi
 import NoGasFeesIcon from '../images/feature-icons/no-gas-fees.svg'
 import NativeLiquidityProvision from '../images/feature-icons/native-liquidity-provision.svg'
 import RichCEXStyleIcon from '../images/feature-icons/rich-cex-style.svg'
+import { AnnouncementBanner } from '../components/AnnouncementRemote'
 
 const FeatureBox = ({ title, description, icon }) => {
   return (
