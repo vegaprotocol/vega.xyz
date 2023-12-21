@@ -25,14 +25,14 @@ const Layout = ({ children, stickyHeader = true }) => {
             >
               <GeorestrictedContext.Consumer>
                 {({ isGeorestricted }) => {
-                  if (!isGeorestricted) {
-                    return null
-                  }
-
                   // Prevents a server side render so that non-restricted locations do not
                   // get a flash of a banner
                   if (typeof window === 'undefined') {
                     return false
+                  }
+
+                  if (!isGeorestricted) {
+                    return null
                   }
 
                   return (
