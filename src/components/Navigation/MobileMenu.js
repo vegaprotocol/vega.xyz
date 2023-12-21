@@ -6,12 +6,13 @@ import Container from '../../components/Container'
 import MobileNavigation from './MobileNavigation'
 import HeaderCta from '../../components/HeaderCta'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { GeorestrictedContext } from '../../context/georestricted'
 
 const MobileMenu = ({ toggleMenu, isOpen }) => {
   const { t } = useTranslation('common')
   return (
     <div
-      className={`fixed top-0 bottom-0 left-0 right-0 overflow-y-scroll bg-white pb-12 dark:bg-black ${
+      className={`fixed bottom-0 left-0 right-0 top-0 overflow-y-scroll bg-white pb-12 dark:bg-black ${
         isOpen ? 'fixed' : 'hidden'
       }`}
       id="mobileMenu"
@@ -33,11 +34,21 @@ const MobileMenu = ({ toggleMenu, isOpen }) => {
         </div>
         <MobileNavigation />
 
-        <HeaderCta
-          link="https://console.vega.xyz/"
-          text={t('Launch App')}
-          className="inline-block"
-        />
+        <GeorestrictedContext.Consumer>
+          {({ isGeorestricted }) => {
+            if (isGeorestricted) {
+              return null
+            }
+
+            return (
+              <HeaderCta
+                link="https://console.vega.xyz/"
+                text={t('Launch App')}
+                className="inline-block"
+              />
+            )
+          }}
+        </GeorestrictedContext.Consumer>
       </Container>
     </div>
   )

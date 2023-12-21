@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { GeorestrictedContext } from '../context/georestricted'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Seo from '../components/Seo'
@@ -32,6 +33,7 @@ import HighCapitalEfficiencyIcon from '../images/feature-icons/high-capital-effi
 import NoGasFeesIcon from '../images/feature-icons/no-gas-fees.svg'
 import NativeLiquidityProvision from '../images/feature-icons/native-liquidity-provision.svg'
 import RichCEXStyleIcon from '../images/feature-icons/rich-cex-style.svg'
+import { AnnouncementBanner } from '../components/AnnouncementRemote'
 
 const FeatureBox = ({ title, description, icon }) => {
   return (
@@ -86,9 +88,18 @@ const IndexPage = ({ data }) => {
                   </div>
 
                   <div className="mb-space-8 md:mb-space-7 xl:flex xl:items-center xl:gap-x-6">
-                    <Button variant="hero" to="https://console.vega.xyz/">
-                      <Trans t={t}>Launch console</Trans>
-                    </Button>
+                    <GeorestrictedContext.Consumer>
+                      {({ isGeorestricted }) => {
+                        if (isGeorestricted) {
+                          return null
+                        }
+                        return (
+                          <Button variant="hero" to="https://console.vega.xyz/">
+                            <Trans t={t}>Launch console</Trans>
+                          </Button>
+                        )
+                      }}
+                    </GeorestrictedContext.Consumer>
                     <div className="mt-space-4 flex items-center justify-center gap-x-6 md:justify-start xl:mt-0 xl:justify-center">
                       <Button
                         className="text-vega-dark-300"
@@ -130,7 +141,7 @@ const IndexPage = ({ data }) => {
                   <div className="absolute bottom-0 right-0 z-10 hidden h-[120px] w-[175px] translate-y-[5.625rem] md:block">
                     <PlanetB />
                   </div>
-                  <div className="after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
+                  <div className="relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:from-10% after:to-white/0 after:to-100% dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
                     <div className="w-full overflow-hidden md:h-[460px] 2xl:origin-right 2xl:scale-110">
                       <GatsbyImage
                         image={getImage(data.consoleDark)}
@@ -164,10 +175,6 @@ const IndexPage = ({ data }) => {
               <BackerLogos />
             </div>
           </Container>
-
-          <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
-            <Markets />
-          </div>
 
           <Container>
             <div className="mb-space-10 mt-space-6 md:my-space-12 lg:my-space-14">
@@ -262,6 +269,21 @@ const IndexPage = ({ data }) => {
             <LiquidityProvision />
           </div>
           <Container>
+            <GeorestrictedContext.Consumer>
+              {({ isGeorestricted }) => {
+                if (isGeorestricted) {
+                  return null
+                }
+
+                return (
+                  <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
+                    <Container>
+                      <LiquidityProvision />
+                    </Container>
+                  </div>
+                )
+              }}
+            </GeorestrictedContext.Consumer>
             <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
               <div className="grid md:grid-cols-2">
                 <div className="p-space-5">

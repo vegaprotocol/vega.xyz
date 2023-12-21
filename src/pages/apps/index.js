@@ -63,6 +63,7 @@ const AppsAndToolsPage = ({ data }) => {
     {
       collection: 'tools',
       icon: data.consoleIcon,
+      className: 'restricted-link',
       title: t('Console'),
       author: 'Vega',
       link: 'https://console.vega.xyz/',
@@ -289,7 +290,9 @@ const AppsAndToolsPage = ({ data }) => {
             <div
               className={`${tool.categories.join(
                 ' '
-              )} mx-auto w-full max-w-[26rem] md:max-w-none`}
+              )} mx-auto w-full max-w-[26rem] md:max-w-none ${
+                tool.className || ''
+              }`}
               key={idx}
             >
               <ToolBox

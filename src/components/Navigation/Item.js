@@ -2,9 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby-plugin-react-i18next'
 import LinkArrow from '../Svg/LinkArrow'
 
-const NavigationItem = ({ text, link }) => {
+const NavigationItem = ({ text, link, id = '' }) => {
+  let props = {}
+  if (id !== '') {
+    props.id = id
+  }
+
   return (
-    <li>
+    <li {...props}>
       {link.startsWith('http') ? (
         <a
           href={link}

@@ -1,6 +1,7 @@
-const React = require('react')
+import React from 'react'
+import RootElement from './src/components/RootElement'
 
-exports.onRenderBody = function ({ setPreBodyComponents }) {
+export const onRenderBody = function ({ setPreBodyComponents }) {
   setPreBodyComponents([
     React.createElement('script', {
       key: 'gatsby-plugin-dark-mode',
@@ -45,4 +46,8 @@ void function() {
       },
     }),
   ])
+}
+
+export const wrapRootElement = ({ element }) => {
+  return <RootElement>{element}</RootElement>
 }
