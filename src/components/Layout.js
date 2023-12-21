@@ -36,24 +36,27 @@ const Layout = ({ children, stickyHeader = true }) => {
                   }
 
                   return (
-                    <Banner>
-                      <div className="mx-auto max-w-2xl overflow-hidden text-sm leading-tight md:max-w-3xl">
-                        <p>
-                          This website provides information only about the open
-                          source Vega Protocol and related software. The
-                          software, when deployed and used by third parties,
-                          involves a decentralised exchange (DEX), a
-                          peer-to-peer marketplace where users can trade
-                          derivatives settled in cryptoassets without the need
-                          for an intermediary or custodian.
-                        </p>
-                        <p className="mt-3">
-                          If you intend to interact with a DEX, you should check
-                          that you are comfortable with the associated risks and
-                          that doing so is permitted within your jurisdiction
-                        </p>
-                      </div>
-                    </Banner>
+                    <React.Suspense>
+                      <Banner>
+                        <div className="mx-auto max-w-2xl overflow-hidden text-sm leading-tight md:max-w-3xl">
+                          <p>
+                            This website provides information only about the
+                            open source Vega Protocol and related software. The
+                            software, when deployed and used by third parties,
+                            involves a decentralised exchange (DEX), a
+                            peer-to-peer marketplace where users can trade
+                            derivatives settled in cryptoassets without the need
+                            for an intermediary or custodian.
+                          </p>
+                          <p className="mt-3">
+                            If you intend to interact with a DEX, you should
+                            check that you are comfortable with the associated
+                            risks and that doing so is permitted within your
+                            jurisdiction
+                          </p>
+                        </div>
+                      </Banner>
+                    </React.Suspense>
                   )
                 }}
               </GeorestrictedContext.Consumer>
