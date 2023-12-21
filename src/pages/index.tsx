@@ -94,6 +94,12 @@ const IndexPage = ({ data }) => {
                           return null
                         }
 
+                        // Prevents a server side render so that non-restricted locations do not
+                        // get a flash of a banner
+                        if (typeof window === 'undefined') {
+                          return false
+                        }
+
                         return (
                           <Button variant="hero" to="https://console.vega.xyz/">
                             <Trans t={t}>Launch console</Trans>
