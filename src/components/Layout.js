@@ -29,6 +29,12 @@ const Layout = ({ children, stickyHeader = true }) => {
                     return null
                   }
 
+                  // Prevents a server side render so that non-restricted locations do not
+                  // get a flash of a banner
+                  if (typeof window === 'undefined') {
+                    return false
+                  }
+
                   return (
                     <Banner>
                       <div className="mx-auto max-w-2xl overflow-hidden text-sm leading-tight md:max-w-3xl">
