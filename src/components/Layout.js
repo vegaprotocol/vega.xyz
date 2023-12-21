@@ -24,14 +24,21 @@ const Layout = ({ children, stickyHeader = true }) => {
               className={stickyHeader ? 'mt-[4.8125rem] lg:mt-[6.25rem]' : ''}
             >
               <GeorestrictedContext.Consumer>
-                {({ isGeorestricted }) => {
+                {({ isGeorestricted, hasGeolocated }) => {
                   // Prevents a server side render so that non-restricted locations do not
                   // get a flash of a banner
                   if (typeof window === 'undefined') {
                     return false
                   }
 
+                  // If
                   if (!isGeorestricted) {
+                    return null
+                  }
+
+                  // Special case for this banner - only render if we have checked and the
+                  // user is restricted
+                  if (!hasGeolocated) {
                     return null
                   }
 
