@@ -265,9 +265,6 @@ const IndexPage = ({ data }) => {
 
           <Rip />
 
-          <div className="my-space-10 md:my-space-12 lg:my-space-14">
-            <LiquidityProvision />
-          </div>
           <Container>
             <GeorestrictedContext.Consumer>
               {({ isGeorestricted }) => {
