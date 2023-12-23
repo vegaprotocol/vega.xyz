@@ -1,6 +1,6 @@
 {
-  "Target stake": "",
-  "Auction Trigger stake": "",
-  "Fee": "",
-  "Providers greater than 2x target stake not shown": ""
+  "Target stake": "Objetivo stake",
+  "Auction Trigger stake": "Participación desencadenante de la subasta",
+  "Fee": "Tarifa",
+  "Providers greater than 2x target stake not shown": "No se muestran los proveedores que superan el doble del stake objetivo"
 }
