@@ -135,22 +135,22 @@ const Footer = () => {
                 <Trans t={t}>Community</Trans>
               </div>
               <ul>
-                <li>
+                {/* <li>
                   <TextLink
                     to="/community/ambassadors"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Ambassador Program</Trans>
                   </TextLink>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <TextLink
                     to="/builders-club"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Builders Club</Trans>
                   </TextLink>
-                </li>
+                </li> */}
                 <li>
                   <TextLink
                     to="/community/contributors"

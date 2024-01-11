@@ -8,8 +8,8 @@ const Community = () => {
   return (
     <NavigationList>
       <NavigationItem text={t('Community Home')} link="/community/" />
-      <NavigationItem text={t('Ambassadors')} link="/community/ambassadors" />
-      <NavigationItem text={t('Builders Club')} link="/builders-club" />
+      {/* <NavigationItem text={t('Ambassadors')} link="/community/ambassadors" /> */}
+      {/* <NavigationItem text={t('Builders Club')} link="/builders-club" /> */}
       <NavigationItem text={t('Fairground')} link="https://fairground.wtf/" />
       <NavigationItem
         text={t('Discord')}

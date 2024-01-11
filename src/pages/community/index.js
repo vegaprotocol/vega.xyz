@@ -134,34 +134,34 @@ const CommunityPage = ({ data }) => {
         </div>
 
         <h2 className="title-m font-glitched md:title-l mb-space-10">
-          <Trans t={t}>Contribute and get rewarded</Trans>
+          <Trans t={t}>Contribute</Trans>
         </h2>
 
         <div className="mb-16 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-8">
-          <ToolBox
+          {/* <ToolBox
             title={t('Ambassador program')}
             text={t(
               "Leading community members share what we're building with those that need to hear it — and get rewarded."
             )}
             link="/community/ambassadors/"
             icon={getImage(data.iconAmbassador)}
-          />
-          <ToolBox
+          /> */}
+          {/* <ToolBox
             title={t('Builders Club')}
             text={t(
               'For developers, coders, hackers, dreamers who want to create software on top of Vega.'
             )}
             link="https://vega.xyz/discord"
             icon={getImage(data.iconBuildersClub)}
-          />
-          <ToolBox
+          /> */}
+          {/* <ToolBox
             title={t('Translate')}
             text={t(
               'For the talented multi-linguists who want to support the project with translations.'
             )}
             link="https://github.com/vegaprotocol/vega.xyz#internationalisation"
             icon={getImage(data.iconTranslation)}
-          />
+          /> */}
           <ToolBox
             title={t('Feedback')}
             text={t('Feedback and feature requests')}
