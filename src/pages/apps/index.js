@@ -13,7 +13,7 @@ import AddGraphic from '../../components/Svg/Use/Add/Add'
 import { Link, Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const AppsAndToolsPage = ({ data }) => {
-  const { t, i18n } = useTranslation('page.use')
+  const { t, i18n } = useTranslation('page.apps')
   const [missingTranslations, setMissingTranslations] = useState(false)
   const tabs = useRef(null)
   const [filter, setFilter] = useState(null)
@@ -51,6 +51,17 @@ const AppsAndToolsPage = ({ data }) => {
   const tools = [
     {
       collection: 'tools',
+      icon: data.walletIcon,
+      title: t('Vega Wallet'),
+      author: 'Vega',
+      link: '/wallet/',
+      description: t(
+        'Connect to Vega dApps and sign transactions from your browser on the Vega network.'
+      ),
+      categories: ['wallets', 'governance', 'staking', 'trading'],
+    },
+    {
+      collection: 'tools',
       icon: data.desktopWalletIcon,
       title: t('Desktop Wallet'),
       author: 'Vega',
@@ -59,6 +70,17 @@ const AppsAndToolsPage = ({ data }) => {
         'An easy to use Desktop Wallet app. Manage multiple wallets, multiple keys — and get access to the Vega network.'
       ),
       categories: ['wallets', 'governance', 'staking', 'trading'],
+    },
+    {
+      collection: 'tools',
+      icon: data.cliWalletIcon,
+      title: t('CLI Wallet'),
+      author: 'Vega',
+      link: 'https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet',
+      description: t(
+        'Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.'
+      ),
+      categories: ['wallets'],
     },
     {
       collection: 'tools',
@@ -100,17 +122,6 @@ const AppsAndToolsPage = ({ data }) => {
       link: 'https://governance.vega.xyz/validators',
       description: t('Stake $VEGA tokens and get rewarded.'),
       categories: ['governance', 'staking'],
-    },
-    {
-      collection: 'tools',
-      icon: data.cliWalletIcon,
-      title: t('CLI Wallet'),
-      author: 'Vega',
-      link: 'https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet',
-      description: t(
-        'Non-visual, command line wallet app with the ability to customise key details, isolate keys and build & send commands.'
-      ),
-      categories: ['wallets'],
     },
     {
       collection: 'tools',
@@ -346,6 +357,16 @@ export const query = graphql`
           data
           language
         }
+      }
+    }
+    walletIcon: file(relativePath: { eq: "tool-icons/wallet.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 96
+          height: 96
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
     desktopWalletIcon: file(
