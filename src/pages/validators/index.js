@@ -5,6 +5,7 @@ import Container from '../../components/Container'
 import Seo from '../../components/Seo'
 import { graphql } from 'gatsby'
 import Callout from '../../components/Callout'
+import PageHeader from '../../components/UI/PageHeader'
 import Button from '../../components/UI/Button'
 import Link from '../../components/UI/Link'
 import NetworkParameter from '../../components/NetworkParameter'
@@ -99,21 +100,15 @@ const ValidatorsPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mb-space-8 max-w-[60rem] pt-space-5 md:pt-space-6 lg:pt-space-10">
-          <h1 className="heading-xl mb-space-8">
-            <Trans t={t}>Validators</Trans>
-          </h1>
-          <div className="body-xl">
-            <Trans t={t}>
-              Vega is a delegated proof of stake network with a finite number of
-              validators, rewarded for securing the network. Consensus
-              validators run a node validating the blocks containing the
-              network's transactions and Vega token holders nominate validators
-              through staking - delegating their VEGA to their chosen validator.
-            </Trans>
-          </div>
+        <div className="mx-auto mb-space-8 pt-space-5 text-center md:pt-space-6 lg:pt-space-10">
+          <PageHeader
+            title={t('Validators')}
+            description={t(
+              "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator."
+            )}
+          />
         </div>
-        <h2 className="heading-s">
+        <h2 className="text-[2rem] leading-none">
           <Trans t={t}>Validator rewards</Trans>
         </h2>
 
