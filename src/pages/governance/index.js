@@ -8,7 +8,7 @@ import Container from '../../components/Container'
 import GovernanceResponsive from '../../components/Svg/Governance/Hero/Responsive'
 import ToolBox from '../../components/ToolBox'
 import ButtonLink from '../../components/ButtonLink'
-import GlitchTitle from '../../components/GlitchTitle'
+import PageHeader from '../../components/UI/PageHeader'
 import LeadingLine from '../../components/LeadingLine'
 import NetworkParameter from '../../components/NetworkParameter'
 import Accordion from '../../components/Accordion/Accordion'
@@ -201,23 +201,12 @@ const GovernancePage = ({ data }) => {
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="mx-auto max-w-[61rem] pt-space-5 text-center md:pt-space-6 lg:pt-space-10">
-          <GlitchTitle
-            level="1"
-            color="red"
-            className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
-          >
-            <Trans t={t}>Governance</Trans>
-          </GlitchTitle>
-        </div>
-        <div className="mx-auto max-w-[44rem]">
-          <LeadingLine className="text-center">
-            <Trans t={t}>
-              Vega is uncompromisingly decentralised, with all network
-              governance taking place on-chain. Read on to find out how to
-              propose new markets, create settlement assets, and configure the
-              network
-            </Trans>
-          </LeadingLine>
+          <PageHeader
+            title={t('Governance')}
+            description={t(
+              'Vega is uncompromisingly decentralised, with all network governance taking place on-chain. Read on to find out how to propose new markets, create settlement assets, and configure the network'
+            )}
+          />
         </div>
       </Container>
 
