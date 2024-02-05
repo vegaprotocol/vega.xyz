@@ -4,7 +4,7 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import TranslationsBanner from '../../components/TranslationsBanner'
-import GlitchTitle from '../../components/GlitchTitle'
+import PageHeader from '../../components/UI/PageHeader'
 import Callout from '../../components/UI/Callout'
 import Fairground from '../../components/Fairground'
 import ToolBox from '../../components/ToolBox'
@@ -195,21 +195,12 @@ const AppsAndToolsPage = ({ data }) => {
       <Container dataCy={'main'}>
         <div className="mb-8 pt-6 text-center md:mb-12 md:pt-16">
           <div className="mx-auto max-w-[61rem] text-center">
-            <GlitchTitle
-              level="1"
-              color="red"
-              className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
-            >
-              <Trans t={t}>Apps and Tools</Trans>
-            </GlitchTitle>
-            <p className="body-l text-vega-light-300 dark:text-vega-dark-300">
-              <Trans t={t}>
-                Anyone can build tools on Vega, this page provides easy access
-                to all tools built and registered with the project team. Project
-                team owned tools that cover the key functions of the network are
-                marked as "Made by Vega".
-              </Trans>
-            </p>
+            <PageHeader
+              title={t('Apps and Tools')}
+              description={t(
+                'Anyone can build tools on Vega, this page provides easy access to all tools built and registered with the project team. Project team owned tools that cover the key functions of the network are marked as "Made by Vega".'
+              )}
+            />
           </div>
         </div>
         <div className="mx-auto max-w-[90rem] md:px-6 lg:px-8">
