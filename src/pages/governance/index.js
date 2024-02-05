@@ -247,7 +247,7 @@ const GovernancePage = ({ data }) => {
         </div>
 
         <div className="mb-space-8 md:mb-space-10">
-          <h2 className="title-m md:title-l lg:title-xl mb-12 px-1 text-center">
+          <h2 className="mb-12 px-1 text-center text-[2rem] md:text-[2.5rem]">
             <Trans t={t}>Get started voting</Trans>
           </h2>
 
@@ -316,7 +316,7 @@ const GovernancePage = ({ data }) => {
 
         <div className="mb-space-8 md:mb-space-10">
           <div>
-            <h2 className="title-m md:title-l mx-auto mb-6 max-w-[30rem] md:max-w-none">
+            <h2 className="mx-auto mb-space-8 max-w-[30rem] text-center text-[2rem] md:max-w-none md:text-[2.5rem]">
               <Trans t={t}>Governance lifecycle</Trans>
             </h2>
           </div>
