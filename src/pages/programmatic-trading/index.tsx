@@ -8,6 +8,7 @@ import Button from '../../components/UI/Button'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import TeamTile from '../../components/UI/TeamTile'
 import InfoTile from '../../components/UI/InfoTile'
+import PageHeader from '../../components/UI/PageHeader'
 import Callout from '../../components/UI/Callout'
 import Link from '../../components/UI/Link'
 import ActionButton from '../../components/UI/ActionButton'
@@ -56,17 +57,12 @@ const ProgrammaticTrading = ({ data }) => {
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="mx-auto mb-space-10 max-w-[60rem] pt-space-5 text-center md:mb-space-11 md:pt-space-6 lg:pt-space-10">
-          <h1 className="heading-xl mb-space-5">
-            <GlitchTitle color="purple">
-              <Trans t={t}>Programmatic Trading</Trans>
-            </GlitchTitle>
-          </h1>
-          <div className="body-xl mx-auto max-w-[40rem]">
-            <Trans t={t}>
-              Enabled through rich CEX-style APIs for deployment of market
-              making, liquidity provision, and directional trading strategies
-            </Trans>
-          </div>
+          <PageHeader
+            title={t('Programmatic Trading')}
+            description={t(
+              'Enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies'
+            )}
+          />
         </div>
 
         <div className="mb-space-10 grid grid-cols-1 gap-space-4 md:mb-space-11 md:grid-cols-2 md:gap-space-7">
@@ -94,14 +90,12 @@ const ProgrammaticTrading = ({ data }) => {
           />
         </div>
 
-        <h2 className="heading-xl my-space-10 text-center md:my-space-11 lg:my-space-13">
-          <GlitchTitle color="purple">
-            <Trans t={t}>Starter kit</Trans>
-          </GlitchTitle>
+        <h2 className="mt-space-10 mb-space-6 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
+          <Trans t={t}>Starter kit</Trans>
         </h2>
 
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-          <h3 className="heading-m mb-space-4">
+          <h3 className="mb-space-4 text-[2rem] leading-none">
             <Trans t={t}>1. Pre-requisites</Trans>
           </h3>
 
@@ -112,45 +106,57 @@ const ProgrammaticTrading = ({ data }) => {
             </Trans>
           </p>
 
-          <div className="prose-lg -mb-space-6 grid max-w-none grid-cols-1 gap-x-space-6 prose-p:mt-0 prose-p:text-vega-light-400 dark:prose-p:text-vega-dark-400 md:grid-cols-3 md:gap-y-space-4 xl:gap-x-space-10">
-            <p>
-              <Trans t={t}>
-                i. Actively manage liquidity deployed to a limit order book
-              </Trans>
-            </p>
-            <p>
-              <Trans t={t}>
-                ii. Understand how derivatives pricing works, specifically
-                cash-settle futures
-              </Trans>
-            </p>
-            <p>
-              <Trans t={t}>
-                iii. Code automated trading strategies and operate and monitor
-                them 24/7
-              </Trans>
-            </p>
-            <p>
-              <Trans t={t}>
-                iv. Understand the nuances of integrating with a blockchain
-              </Trans>
-            </p>
-            <p>
-              <Trans t={t}>
-                v. Manage inventory risk and build trading strategies that
-                manage exposure to maintain neutrality
-              </Trans>
-            </p>
-            <p>
-              <Trans t={t}>
-                vi. Manage risk effectively in a leveraged trading environment
-              </Trans>
-            </p>
+          <div className="prose-lg -mb-space-6 grid max-w-none grid-cols-1 gap-space-6 prose-p:mt-0 prose-p:text-vega-light-400 dark:prose-p:text-vega-dark-400 md:grid-cols-3 md:gap-space-4 xl:gap-space-6">
+            <div className="rounded-xl bg-vega-light-100 p-space-5 dark:bg-vega-dark-100">
+              <p className="text-[1.125rem]">
+                <Trans t={t}>
+                  i. Actively manage liquidity deployed to a limit order book
+                </Trans>
+              </p>
+            </div>
+            <div className="rounded-xl bg-vega-light-100 p-space-5 dark:bg-vega-dark-100">
+              <p className="text-[1.125rem]">
+                <Trans t={t}>
+                  ii. Understand how derivatives pricing works, specifically
+                  cash-settle futures
+                </Trans>
+              </p>
+            </div>
+            <div className="rounded-xl bg-vega-light-100 p-space-5 dark:bg-vega-dark-100">
+              <p className="text-[1.125rem]">
+                <Trans t={t}>
+                  iii. Code automated trading strategies and operate and monitor
+                  them 24/7
+                </Trans>
+              </p>
+            </div>
+            <div className="rounded-xl bg-vega-light-100 p-space-5 dark:bg-vega-dark-100">
+              <p className="text-[1.125rem]">
+                <Trans t={t}>
+                  iv. Understand the nuances of integrating with a blockchain
+                </Trans>
+              </p>
+            </div>
+            <div className="rounded-xl bg-vega-light-100 p-space-5 dark:bg-vega-dark-100">
+              <p className="text-[1.125rem]">
+                <Trans t={t}>
+                  v. Manage inventory risk and build trading strategies that
+                  manage exposure to maintain neutrality
+                </Trans>
+              </p>
+            </div>
+            <div className="rounded-xl bg-vega-light-100 p-space-5 dark:bg-vega-dark-100">
+              <p className="text-[1.125rem]">
+                <Trans t={t}>
+                  vi. Manage risk effectively in a leveraged trading environment
+                </Trans>
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-          <h3 className="heading-m mb-space-4">
+          <h3 className="mb-space-4 text-[2rem] leading-none">
             <Trans t={t}>2. Vega Wallet</Trans>
           </h3>
 
@@ -181,7 +187,7 @@ const ProgrammaticTrading = ({ data }) => {
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
             <div>
-              <h3 className="heading-m mb-space-3">
+              <h3 className="mb-space-4 text-[2rem] leading-none">
                 <Trans t={t}>3. Explore the APIs</Trans>
               </h3>
             </div>
@@ -247,11 +253,11 @@ const ProgrammaticTrading = ({ data }) => {
         </div>
 
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-          <h3 className="heading-m mb-space-8">
+          <h3 className="mb-space-6 text-[2rem] leading-none">
             <Trans t={t}>4. Tutorials and code snippets</Trans>
           </h3>
 
-          <div className="grid grid-cols-1 gap-space-4 md:grid-cols-4 md:gap-space-7">
+          <div className="grid grid-cols-1 gap-space-4 md:grid-cols-4 lg:gap-space-7">
             <InfoTile
               title={t('Getting started')}
               link={{
@@ -259,7 +265,7 @@ const ProgrammaticTrading = ({ data }) => {
                 title: t('View'),
               }}
             >
-              <div className="prose mb-space-4">
+              <div className="prose mb-space-4 text-[1.125rem]">
                 <p>
                   <Trans t={t}>
                     Start development of a bot to trade on Vega
@@ -274,7 +280,7 @@ const ProgrammaticTrading = ({ data }) => {
                 title: t('View'),
               }}
             >
-              <div className="prose mb-space-4">
+              <div className="prose mb-space-4 text-[1.125rem]">
                 <p>
                   <Trans t={t}>Enhance the bot with a data stream</Trans>
                 </p>
@@ -287,7 +293,7 @@ const ProgrammaticTrading = ({ data }) => {
                 title: t('View'),
               }}
             >
-              <div className="prose mb-space-4">
+              <div className="prose mb-space-4 text-[1.125rem]">
                 <p>
                   <Trans t={t}>Add a liquidity commitment to the bot</Trans>
                 </p>
@@ -300,7 +306,7 @@ const ProgrammaticTrading = ({ data }) => {
                 title: t('View'),
               }}
             >
-              <div className="prose mb-space-4">
+              <div className="prose mb-space-4 text-[1.125rem]">
                 <p>
                   <Trans t={t}>Add an external price feed to the bot</Trans>
                 </p>
@@ -310,7 +316,7 @@ const ProgrammaticTrading = ({ data }) => {
         </div>
 
         <div className="mb-space-10 md:mb-space-11 md:grid-cols-2 lg:mb-space-14">
-          <h2 className="heading-l mb-space-6 text-center md:mb-space-8 lg:mb-space-10">
+          <h2 className="mt-space-10 mb-space-6 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
             <Trans t={t}>Key Resources</Trans>
           </h2>
 
