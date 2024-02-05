@@ -7,6 +7,7 @@ import PlanetA from '../../components/Svg/Home/PlanetA'
 import Chrome from '../../components/Svg/Chrome'
 import Firefox from '../../components/Svg/Firefox'
 import GlitchTitle from '../../components/UI/GlitchTitle'
+import PageHeader from '../../components/UI/PageHeader'
 import Button from '../../components/UI/Button'
 import Link from '../../components/UI/Link'
 import DropdownArrow from '../../components/Svg/DropdownArrow'
@@ -291,19 +292,13 @@ const WalletPageNew = ({ data }) => {
         <div className="xl:items-top mb-space-6 items-center gap-x-space-6 pt-6 md:mb-space-10 md:grid md:grid-cols-12 lg:pt-16">
           <div className="pb-space-10 md:col-span-6 md:py-space-6">
             <div className="mx-auto mb-space-8 max-w-[21rem] text-center md:mx-0 md:max-w-[30rem] md:text-left">
-              <h1 className="heading-xl mb-space-3">
-                <GlitchTitle color="purple">
-                  <Trans t={t}>Vega Wallet</Trans>
-                </GlitchTitle>
-              </h1>
-              <p className="body-xl mb-space-6">
-                <Trans t={t}>
-                  Connect to Vega dapps securely, deposit funds and approve or
-                  reject transactions with the Vega wallet. Download, set up and
-                  you're ready to connect
-                </Trans>
-              </p>
-              <div className="mb-space-6">
+              <PageHeader
+                title={t('Vega Wallet')}
+                description={t(
+                  "Connect to Vega dapps securely, deposit funds and approve or reject transactions with the Vega wallet. Download, set up and you're ready to connect"
+                )}
+              />
+              <div className="mb-space-6 mt-space-6">
                 {userAgent && userAgent === 'Chrome' && (
                   <div>
                     <ChromeDownloadButton variant="hero" />
