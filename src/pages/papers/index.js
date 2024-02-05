@@ -3,7 +3,7 @@ import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import { graphql } from 'gatsby'
 import Seo from '../../components/Seo'
-import GlitchTitle from '../../components/GlitchTitle'
+import PageHeader from '../../components/UI/PageHeader'
 import Paper from '../../components/Paper'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
@@ -21,20 +21,15 @@ const PapersPage = ({ data }) => {
       />
       <Container dataCy={'main'}>
         <div className="pb-space-10 pt-space-6 lg:pt-space-10">
-          <div className="mb-6 md:mb-16">
-            <GlitchTitle
-              level="1"
-              className="title-l md:title-xxl lg:title-xxxl mb-16"
-            >
-              <Trans t={t}>Papers</Trans>
-            </GlitchTitle>
+          <div className="mb-space-8 md:mb-space-10">
+            <PageHeader title={t('Papers')} />
           </div>
 
           {data.allMarkdownRemark.group.map((group, idx) => (
             <div key={idx}>
               <div className="mb-space-10 grid grid-cols-12 md:mb-0">
                 <div className="col-span-12 md:col-span-4">
-                  <div className="title-m md:title-s xl:title-m mb-12 md:sticky md:top-6 md:mb-0 md:pb-16 md:pr-12">
+                  <div className="mb-space-6 text-[2rem] leading-none md:sticky md:top-6 md:mb-0 md:pb-16 md:pr-12 md:text-[2.5rem]">
                     {t(group.fieldValue)}
                   </div>
                 </div>
