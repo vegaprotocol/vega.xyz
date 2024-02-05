@@ -9,6 +9,7 @@ import Firefox from '../../components/Svg/Firefox'
 import GlitchTitle from '../../components/UI/GlitchTitle'
 import PageHeader from '../../components/UI/PageHeader'
 import Button from '../../components/UI/Button'
+import SectionScrollButton from '../../components/UI/SectionScrollButton/SectionScrollButton'
 import Link from '../../components/UI/Link'
 import DropdownArrow from '../../components/Svg/DropdownArrow'
 import TeamTile from '../../components/UI/TeamTile'
@@ -408,23 +409,20 @@ const WalletPageNew = ({ data }) => {
           <div className="bg-white dark:bg-black">
             <div className="border-b border-vega-mid-grey">
               <Container>
-                <div className="flex items-center justify-between">
-                  <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap md:mx-0 md:mt-space-3 md:flex md:whitespace-normal">
-                    {sections.map((section, index) => (
-                      <a
-                        key={index}
-                        href={`#${section.hash}`}
-                        className="mr-space-6 inline-block md:mr-space-6"
-                      >
-                        <div
-                          data-to-scrollspy-id={section.hash}
-                          className="heading-s relative bottom-[-1px] inline-block border-b-4 border-t-4 border-transparent py-space-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current"
-                        >
+                <div className="mx-auto flex justify-center gap-x-space-4 overflow-x-auto overflow-y-hidden whitespace-nowrap py-space-4 md:mx-0 md:flex md:whitespace-normal md:py-space-6">
+                  {sections.map((section, index) => (
+                    <a
+                      key={index}
+                      href={`#${section.hash}`}
+                      className="inline-block"
+                    >
+                      <div data-to-scrollspy-id={section.hash} className="">
+                        <SectionScrollButton>
                           {t(section.title)}
-                        </div>
-                      </a>
-                    ))}
-                  </div>
+                        </SectionScrollButton>
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </Container>
             </div>
@@ -450,7 +448,7 @@ const WalletPageNew = ({ data }) => {
               </div>
               <div className="order-2">
                 <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
-                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
+                  <h2 className="mx-auto mb-space-3 max-w-[28rem] text-[2rem] leading-none md:mx-0 md:text-[2.5rem]">
                     <Trans t={t}>Your wallets, your keys</Trans>
                   </h2>
                   <p className="body-xl">
@@ -477,7 +475,7 @@ const WalletPageNew = ({ data }) => {
               </div>
               <div className="md:order-3">
                 <div className="mx-auto mb-space-8 max-w-[32rem] md:mx-0 md:mb-0">
-                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
+                  <h2 className="mx-auto mb-space-3 max-w-[28rem] text-[2rem] leading-none md:mx-0  md:text-[2.5rem]">
                     <Trans t={t}>Secure connections</Trans>
                   </h2>
                   <p className="body-xl">
@@ -503,7 +501,7 @@ const WalletPageNew = ({ data }) => {
               </div>
               <div className="order-6">
                 <div className="mx-auto max-w-[32rem] md:mx-0">
-                  <h2 className="heading-m mx-auto mb-space-3 max-w-[28rem] md:mx-0">
+                  <h2 className="mx-auto mb-space-3 max-w-[28rem] text-[2rem] leading-none md:mx-0  md:text-[2.5rem]">
                     <Trans t={t}>
                       Instantly approve and reject transactions
                     </Trans>
@@ -522,10 +520,8 @@ const WalletPageNew = ({ data }) => {
             className="my-space-12 text-center md:my-space-14"
             id="test-on-fairground"
           >
-            <h2 className="heading-xl mb-space-9">
-              <GlitchTitle color="purple">
-                <Trans t={t}>Test on Fairground</Trans>
-              </GlitchTitle>
+            <h2 className="mb-space-4 text-[2.5rem] leading-none md:text-[3.5rem]">
+              <Trans t={t}>Test on Fairground</Trans>
             </h2>
             <div class="prose mx-auto">
               <p className="body-xl mb-space-6 md:mb-space-8">
@@ -596,10 +592,8 @@ const WalletPageNew = ({ data }) => {
             className="my-space-12 text-center md:my-space-14"
             id="developers"
           >
-            <h2 className="heading-xl mb-space-9">
-              <GlitchTitle color="purple">
-                <Trans t={t}>Developers</Trans>
-              </GlitchTitle>
+            <h2 className="mb-space-6 text-[2.5rem] leading-none md:mb-space-8 md:text-[3.5rem]">
+              <Trans t={t}>Developers</Trans>
             </h2>
             <div className="grid grid-cols-1 gap-space-6 text-left md:grid-cols-2">
               <TeamTile

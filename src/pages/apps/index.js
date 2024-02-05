@@ -209,7 +209,9 @@ const AppsAndToolsPage = ({ data }) => {
             <button
               tabIndex={0}
               onClick={() => changeFilter(null)}
-              className={`inline-block ${filter === null ? 'active' : ''}`}
+              className={`inline-block ${
+                filter === null ? 'active-section-scroll-button' : ''
+              }`}
             >
               <SectionScrollButton>
                 <Trans t={t}>All</Trans>
@@ -218,7 +220,9 @@ const AppsAndToolsPage = ({ data }) => {
             <button
               tabIndex={0}
               onClick={() => changeFilter('wallets')}
-              className={`inline-block ${filter === 'wallets' ? 'active' : ''}`}
+              className={`inline-block ${
+                filter === 'wallets' ? 'active-section-scroll-button' : ''
+              }`}
             >
               <SectionScrollButton>
                 <Trans t={t}>Wallets</Trans>
@@ -228,7 +232,7 @@ const AppsAndToolsPage = ({ data }) => {
               tabIndex={0}
               onClick={() => changeFilter('governance')}
               className={`inline-block ${
-                filter === 'governance' ? 'active' : ''
+                filter === 'governance' ? 'active-section-scroll-button' : ''
               }`}
             >
               <SectionScrollButton>
@@ -238,7 +242,9 @@ const AppsAndToolsPage = ({ data }) => {
             <button
               tabIndex={0}
               onClick={() => changeFilter('staking')}
-              className={`inline-block ${filter === 'staking' ? 'active' : ''}`}
+              className={`inline-block ${
+                filter === 'staking' ? 'active-section-scroll-button' : ''
+              }`}
             >
               <SectionScrollButton>
                 <Trans t={t}>Staking</Trans>
@@ -247,7 +253,9 @@ const AppsAndToolsPage = ({ data }) => {
             <button
               tabIndex={0}
               onClick={() => changeFilter('trading')}
-              className={`inline-block ${filter === 'trading' ? 'active' : ''}`}
+              className={`inline-block ${
+                filter === 'trading' ? 'active-section-scroll-button' : ''
+              }`}
             >
               <SectionScrollButton>
                 <Trans t={t}>Trading</Trans>
@@ -256,7 +264,9 @@ const AppsAndToolsPage = ({ data }) => {
             <button
               tabIndex={0}
               onClick={() => changeFilter('network')}
-              className={`inline-block ${filter === 'network' ? 'active' : ''}`}
+              className={`inline-block ${
+                filter === 'network' ? 'active-section-scroll-button' : ''
+              }`}
             >
               <SectionScrollButton>
                 <Trans t={t}>Network</Trans>
