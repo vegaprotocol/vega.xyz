@@ -1,0 +1,3 @@
+.active-scroll-spy .section-scroll-button {
+  @apply border-black bg-transparent hover:bg-transparent hover:text-inherit dark:border-white;
+}
