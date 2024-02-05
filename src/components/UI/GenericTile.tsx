@@ -27,7 +27,7 @@ const GenericTile = ({
     <div className="mb-space-4 flex flex-col justify-between border p-space-5">
       <div>
         {image && <GatsbyImage image={image} alt="" className="mb-space-5" />}
-        <div className="heading-s mb-space-4">{title}</div>
+        <div className="mb-space-3 text-[1.5rem] leading-[1.2]">{title}</div>
         {children && (
           <div className="body-l text-vega-light-400 dark:text-vega-dark-400">
             {children}

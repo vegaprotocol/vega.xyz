@@ -130,7 +130,7 @@ const RewardsPage = ({ data }) => {
           </div>
         </div>
 
-        <h2 className="heading-l mb-space-9 max-w-[48rem]">
+        <h2 className="mb-space-6 max-w-[48rem] text-[2.5rem] leading-none md:mb-space-9 md:text-[3.5rem]">
           <Trans t={t}>Incentives and Bounties</Trans>
         </h2>
         <div className="mb-space-10 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-8">

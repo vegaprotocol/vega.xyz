@@ -26,7 +26,7 @@ const RewardBox = ({
   return (
     <div className="flex flex-col justify-between border border-vega-border-muted p-4 [&:nth-child(1)_.reward-value]:bg-moshed [&:nth-child(2)_.reward-value]:bg-moshed2 [&:nth-child(3)_.reward-value]:bg-moshed3 [&:nth-child(4)_.reward-value]:bg-moshed4">
       <div>
-        <div className="title-s mb-6">{title}</div>
+        <div className="mb-6 text-[1.5rem] leading-none">{title}</div>
         <div
           className={`reward-value mb-2 bg-cover bg-clip-text text-[2.3rem] leading-none text-transparent`}
         >
