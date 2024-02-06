@@ -84,7 +84,7 @@ const PartnerBackers = () => {
 
   return (
     <Container>
-      <div className="mb-12 pt-6 md:mb-24 lg:pt-16" id="partner-backers">
+      <div className="mb-12 pt-6 md:mb-24 lg:pt-16" id="partners-backers">
         <div className="mb-16 grid grid-cols-12 gap-6 lg:mb-24">
           <div className="col-span-12 md:col-span-4 lg:col-span-6">
             <h2 className="text-[2rem] leading-none md:pb-16">
