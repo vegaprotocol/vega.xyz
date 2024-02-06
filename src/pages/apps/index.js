@@ -194,7 +194,7 @@ const AppsAndToolsPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mb-8 pt-6 text-center md:mb-12 md:pt-16">
+        <div className="mb-space-10 pt-6 text-center md:mb-12 md:pt-16">
           <div className="mx-auto max-w-[61rem] text-center">
             <PageHeader
               title={t('Apps and Tools')}
@@ -286,7 +286,7 @@ const AppsAndToolsPage = ({ data }) => {
           />
         )}
         <div
-          className="grid grid-cols-1 gap-4 py-16 md:mb-12 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10"
+          className="grid grid-cols-1 gap-4 py-space-8 md:mb-12 md:grid-cols-2 md:gap-6 md:py-space-10 lg:grid-cols-3 lg:gap-10"
           ref={tabs}
         >
           {tools.map((tool, idx) => (
