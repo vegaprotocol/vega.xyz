@@ -408,23 +408,21 @@ const WalletPageNew = ({ data }) => {
         <Sticky enabled={true}>
           <div className="bg-white dark:bg-black">
             <div className="border-b border-vega-mid-grey">
-              <Container>
-                <div className="mx-auto flex justify-center gap-x-space-4 overflow-x-auto overflow-y-hidden whitespace-nowrap py-space-4 md:mx-0 md:flex md:whitespace-normal md:py-space-6">
-                  {sections.map((section, index) => (
-                    <a
-                      key={index}
-                      href={`#${section.hash}`}
-                      className="inline-block"
-                    >
-                      <div data-to-scrollspy-id={section.hash} className="">
-                        <SectionScrollButton>
-                          {t(section.title)}
-                        </SectionScrollButton>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </Container>
+              <div className="mx-auto flex gap-x-space-4 overflow-x-auto overflow-y-hidden whitespace-nowrap px-space-4 py-space-4 md:mx-0 md:flex md:justify-center md:whitespace-normal md:py-space-6">
+                {sections.map((section, index) => (
+                  <a
+                    key={index}
+                    href={`#${section.hash}`}
+                    className="inline-block"
+                  >
+                    <div data-to-scrollspy-id={section.hash} className="">
+                      <SectionScrollButton>
+                        {t(section.title)}
+                      </SectionScrollButton>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </Sticky>
