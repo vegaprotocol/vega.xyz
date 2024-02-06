@@ -4,9 +4,9 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
-import BoxTitle from '../../components/BoxTitle'
 import Calendar from '../../components/Calendar'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import PageHeader from '../../components/UI/PageHeader'
 
 const Events = ({ data }) => {
   const { i18n, t } = useTranslation('page.community')
@@ -27,10 +27,7 @@ const Events = ({ data }) => {
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="mb-14 pt-6 lg:pt-16">
-          <BoxTitle text={t('Community')} />
-          <h1 className="title-m font-glitched md:title-l mt-4">
-            <Trans t={t}>Upcoming events + meetups</Trans>
-          </h1>
+          <PageHeader title={t('Upcoming events + meetups')} />
         </div>
         <div className="mb-space-8 md:mb-space-10">
           <Calendar />

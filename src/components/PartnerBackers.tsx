@@ -87,9 +87,9 @@ const PartnerBackers = () => {
       <div className="mb-12 pt-6 md:mb-24 lg:pt-16" id="partner-backers">
         <div className="mb-16 grid grid-cols-12 gap-6 lg:mb-24">
           <div className="col-span-12 md:col-span-4 lg:col-span-6">
-            <h1 className="title-m lg:title-xl md:pb-16">
+            <h2 className="text-[2rem] leading-none md:pb-16">
               <Trans t={t}>Partners and backers</Trans>
-            </h1>
+            </h2>
           </div>
           <div className="col-span-12 border-t border-current md:col-span-8 lg:col-span-6">
             {partnerBackers.map((backer, idx) => {

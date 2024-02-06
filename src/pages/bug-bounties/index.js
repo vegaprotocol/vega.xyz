@@ -87,11 +87,11 @@ const BugBountiesPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container>
-        <div>
-          <div className="mt-space-5 border-t border-current md:mt-space-6 lg:mt-space-10">
+        <div className="pt-space-5 md:pt-space-6 lg:pt-space-10">
+          <div className=" border-t border-current">
             <div className="pt-4 md:grid md:grid-cols-12">
               <div className="md:col-span-5 md:pr-12 lg:col-span-4">
-                <h1 className="title-l mb-6 max-w-[25rem]">
+                <h1 className="mb-6 max-w-[25rem] text-[2.5rem] leading-none">
                   <Trans t={t}>Bug bounties</Trans>
                 </h1>
               </div>

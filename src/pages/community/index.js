@@ -124,13 +124,13 @@ const CommunityPage = ({ data }) => {
         </div>
 
         <div class="my-space-10 xl:my-space-14">
-          <h2 className="title-m font-glitched md:title-l mb-space-10">
+          <h2 className="mb-space-6 text-[2.5rem] leading-none md:mb-space-10 md:text-[3rem]">
             <Trans t={t}>Upcoming events + meetups</Trans>
           </h2>
           <Calendar limit={5} />
         </div>
 
-        <h2 className="title-m font-glitched md:title-l mb-space-10">
+        <h2 className="mb-space-6 text-[2.5rem] md:mb-space-10 md:text-[3rem]">
           <Trans t={t}>Contribute</Trans>
         </h2>
 

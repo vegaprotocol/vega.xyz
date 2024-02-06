@@ -12,7 +12,7 @@ const PageHeader = ({ title, description }: LinkProps) => {
         {title}
       </h1>
       {description && (
-        <p className="body-l mx-auto max-w-[25rem] text-vega-light-300 dark:text-vega-dark-300 md:max-w-[33.75rem]">
+        <p className="body-xl mx-auto max-w-[25rem] text-vega-light-300 dark:text-vega-dark-300 md:max-w-[42rem]">
           {description}
         </p>
       )}
