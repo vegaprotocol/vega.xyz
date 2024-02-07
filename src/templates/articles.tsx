@@ -93,7 +93,7 @@ const ArticlesPage = ({ data, pageContext }) => {
         <Container>
           <div className="mb-space-8 text-center md:mb-space-10 lg:mb-space-11">
             <PageHeader
-              title={t('Articles & talks.')}
+              title={t('Articles & Talks')}
               description={t(
                 'Articles about Vega and recordings of past talks, events and podcasts'
               )}
