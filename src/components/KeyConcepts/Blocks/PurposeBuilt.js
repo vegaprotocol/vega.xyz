@@ -1,22 +1,22 @@
-import React from "react";
-import TextLink from "../../TextLink";
-import PurposeBuiltTableDiagram from "../Diagrams/PurposeBuiltTable/Diagram";
-import Container from "../../Container";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import React from 'react'
+import TextLink from '../../TextLink'
+import PurposeBuiltTableDiagram from '../Diagrams/PurposeBuiltTable/Diagram'
+import Container from '../../Container'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const PurposeBuiltBlock = () => {
-  const { t } = useTranslation("page.key-concepts");
+  const { t } = useTranslation('page.key-concepts')
   return (
     <Container>
       <div className="pt-20 md:pt-32">
-        <div className="md:px-12 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-0 mb-12">
+        <div className="mb-12 md:px-12 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-0">
           <div className="lg:col-span-6">
-            <h2 className="title-m md:title-l max-w-[30rem] md:max-w-none mb-3 md:mb-6">
+            <h2 className="mb-3 max-w-[30rem] text-[2rem] leading-none md:mb-6 md:max-w-none md:text-[2.5rem]">
               <Trans t={t}>Purpose built bespoke blockchain</Trans>
             </h2>
           </div>
           <div className="lg:col-span-6">
-            <div className="prose dark:prose-invert max-w-none">
+            <div className="prose max-w-none dark:prose-invert">
               <p className="md:text-lg">
                 <Trans t={t}>
                   Ethereum and other blockchains suffer slow performance since
@@ -36,7 +36,7 @@ const PurposeBuiltBlock = () => {
               <p>
                 <Trans t={t}>
                   The importance of a purpose built blockchain for trading on
-                  the Vega blog{" "}
+                  the Vega blog{' '}
                   <TextLink
                     to="https://blog.vega.xyz/innovating-in-decentralised-financial-markets-e7ed1fc9eca1"
                     colour="grey"
@@ -52,6 +52,6 @@ const PurposeBuiltBlock = () => {
         <PurposeBuiltTableDiagram />
       </div>
     </Container>
-  );
-};
-export default PurposeBuiltBlock;
+  )
+}
+export default PurposeBuiltBlock

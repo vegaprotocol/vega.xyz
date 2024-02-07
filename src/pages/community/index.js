@@ -7,7 +7,7 @@ import Container from '../../components/Container'
 import ButtonLink from '../../components/ButtonLink'
 import Calendar from '../../components/Calendar'
 import Fairground from '../../components/Fairground'
-import LeadingLine from '../../components/LeadingLine'
+import PageHeader from '../../components/UI/PageHeader'
 import { getImage } from 'gatsby-plugin-image'
 import CommunityResponsive from '../../components/Svg/Community/Hero/Responsive'
 import ToolBox from '../../components/ToolBox'
@@ -32,26 +32,23 @@ const CommunityPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="pt-6 lg:pt-16">
-          <h1 className="title-m font-glitched md:title-xl mb-4 mt-4 max-w-[48rem] md:mb-6">
-            <Trans t={t}>Community</Trans>
-          </h1>
-
-          <div className="max-w-[48rem]">
-            <LeadingLine className="!mb-14">
-              <Trans t={t}>
-                Learn, Test, Govern - where do you fit in the Vega Ecosystem?
-              </Trans>
-            </LeadingLine>
-
+        <div className="pt-6 lg:pt-10">
+          <div className="mx-auto max-w-[61rem] pt-space-5 text-center">
+            <PageHeader
+              title={t('Community')}
+              description={t(
+                'Learn, Test, Govern - where do you fit in the Vega Ecosystem?'
+              )}
+            />
             <ButtonLink
               text={t('Join us on Discord')}
               link="https://vega.xyz/discord"
+              className="mt-space-6"
             ></ButtonLink>
           </div>
         </div>
       </Container>
-      <div className="relative mb-10 md:-top-6">
+      <div className="relative mt-space-10 mb-10 md:-top-6">
         <CommunityResponsive />
       </div>
       <Container>
@@ -127,13 +124,13 @@ const CommunityPage = ({ data }) => {
         </div>
 
         <div class="my-space-10 xl:my-space-14">
-          <h2 className="title-m font-glitched md:title-l mb-space-10">
+          <h2 className="mb-space-6 text-[2.5rem] leading-none md:mb-space-10 md:text-[3rem]">
             <Trans t={t}>Upcoming events + meetups</Trans>
           </h2>
           <Calendar limit={5} />
         </div>
 
-        <h2 className="title-m font-glitched md:title-l mb-space-10">
+        <h2 className="mb-space-6 text-[2.5rem] md:mb-space-10 md:text-[3rem]">
           <Trans t={t}>Contribute</Trans>
         </h2>
 

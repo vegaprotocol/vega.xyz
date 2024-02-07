@@ -4,8 +4,9 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import TranslationsBanner from '../../components/TranslationsBanner'
-import GlitchTitle from '../../components/GlitchTitle'
+import PageHeader from '../../components/UI/PageHeader'
 import Callout from '../../components/UI/Callout'
+import SectionScrollButton from '../../components/UI/SectionScrollButton/SectionScrollButton'
 import Fairground from '../../components/Fairground'
 import ToolBox from '../../components/ToolBox'
 import { getImage } from 'gatsby-plugin-image'
@@ -193,92 +194,83 @@ const AppsAndToolsPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mb-8 pt-6 text-center md:mb-12 md:pt-16">
+        <div className="mb-space-10 pt-6 text-center md:mb-12 md:pt-16">
           <div className="mx-auto max-w-[61rem] text-center">
-            <GlitchTitle
-              level="1"
-              color="red"
-              className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
-            >
-              <Trans t={t}>Apps and Tools</Trans>
-            </GlitchTitle>
-            <p className="body-l text-vega-light-300 dark:text-vega-dark-300">
-              <Trans t={t}>
-                Anyone can build tools on Vega, this page provides easy access
-                to all tools built and registered with the project team. Project
-                team owned tools that cover the key functions of the network are
-                marked as "Made by Vega".
-              </Trans>
-            </p>
+            <PageHeader
+              title={t('Apps and Tools')}
+              description={t(
+                'Anyone can build tools on Vega, this page provides easy access to all tools built and registered with the project team. Project team owned tools that cover the key functions of the network are marked as "Made by Vega".'
+              )}
+            />
           </div>
         </div>
         <div className="mx-auto max-w-[90rem] md:px-6 lg:px-8">
-          <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap border-b border-vega-mid-grey px-6 text-center md:flex md:justify-center md:gap-x-8 md:whitespace-normal">
+          <div className="mx-auto flex gap-x-4 overflow-x-auto overflow-y-hidden whitespace-nowrap px-6 text-center md:justify-center md:whitespace-normal">
             <button
               tabIndex={0}
               onClick={() => changeFilter(null)}
-              className={`title-s inline-block border-b-2 px-3 py-5 ${
-                filter === null
-                  ? 'border-current'
-                  : 'border-transparent hover:border-current'
+              className={`inline-block ${
+                filter === null ? 'active-section-scroll-button' : ''
               }`}
             >
-              <Trans t={t}>All</Trans>
+              <SectionScrollButton>
+                <Trans t={t}>All</Trans>
+              </SectionScrollButton>
             </button>
             <button
               tabIndex={0}
               onClick={() => changeFilter('wallets')}
-              className={`title-s inline-block border-b-2 px-3 py-5 ${
-                filter === 'wallets'
-                  ? 'border-current'
-                  : 'over:border-current border-transparent'
+              className={`inline-block ${
+                filter === 'wallets' ? 'active-section-scroll-button' : ''
               }`}
             >
-              <Trans t={t}>Wallets</Trans>
+              <SectionScrollButton>
+                <Trans t={t}>Wallets</Trans>
+              </SectionScrollButton>
             </button>
             <button
               tabIndex={0}
               onClick={() => changeFilter('governance')}
-              className={`title-s inline-block border-b-2 px-3 py-5 ${
-                filter === 'governance'
-                  ? 'border-current'
-                  : 'border-transparent hover:border-current'
+              className={`inline-block ${
+                filter === 'governance' ? 'active-section-scroll-button' : ''
               }`}
             >
-              <Trans t={t}>Governance</Trans>
+              <SectionScrollButton>
+                <Trans t={t}>Governance</Trans>
+              </SectionScrollButton>
             </button>
             <button
               tabIndex={0}
               onClick={() => changeFilter('staking')}
-              className={`title-s inline-block border-b-2 px-3 py-5 ${
-                filter === 'staking'
-                  ? 'border-current'
-                  : 'border-transparent hover:border-current'
+              className={`inline-block ${
+                filter === 'staking' ? 'active-section-scroll-button' : ''
               }`}
             >
-              <Trans t={t}>Staking</Trans>
+              <SectionScrollButton>
+                <Trans t={t}>Staking</Trans>
+              </SectionScrollButton>
             </button>
             <button
               tabIndex={0}
               onClick={() => changeFilter('trading')}
-              className={`title-s inline-block border-b-2 px-3 py-5 ${
-                filter === 'trading'
-                  ? 'border-current'
-                  : 'border-transparent hover:border-current'
+              className={`inline-block ${
+                filter === 'trading' ? 'active-section-scroll-button' : ''
               }`}
             >
-              <Trans t={t}>Trading</Trans>
+              <SectionScrollButton>
+                <Trans t={t}>Trading</Trans>
+              </SectionScrollButton>
             </button>
             <button
               tabIndex={0}
               onClick={() => changeFilter('network')}
-              className={`title-s inline-block border-b-2 px-3 py-5 ${
-                filter === 'network'
-                  ? 'border-current'
-                  : 'border-transparent hover:border-current'
+              className={`inline-block ${
+                filter === 'network' ? 'active-section-scroll-button' : ''
               }`}
             >
-              <Trans t={t}>Network</Trans>
+              <SectionScrollButton>
+                <Trans t={t}>Network</Trans>
+              </SectionScrollButton>
             </button>
           </div>
         </div>
@@ -294,7 +286,7 @@ const AppsAndToolsPage = ({ data }) => {
           />
         )}
         <div
-          className="grid grid-cols-1 gap-4 py-16 md:mb-12 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10"
+          className="grid grid-cols-1 gap-4 py-space-8 md:mb-12 md:grid-cols-2 md:gap-6 md:py-space-10 lg:grid-cols-3 lg:gap-10"
           ref={tabs}
         >
           {tools.map((tool, idx) => (
@@ -319,7 +311,7 @@ const AppsAndToolsPage = ({ data }) => {
         </div>
         <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
           <div>
-            <p className="title-m mb-3">
+            <p className="mb-space-2 text-[2rem] leading-none">
               <Trans t={t}>Want to add something to this list?</Trans>
             </p>
             <p className="copy-s prose text-vega-mid-grey">

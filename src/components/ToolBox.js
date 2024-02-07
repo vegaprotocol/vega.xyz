@@ -41,7 +41,7 @@ const ToolBox = ({ icon, title, link, text, author, categories }) => {
       <div className="relative flex h-full flex-col justify-between border border-current bg-white p-6 group-hover:-translate-y-2 dark:bg-black">
         <div>
           <GatsbyImage image={icon} alt={title} className="mb-5" />
-          <div className="title-s block">
+          <div className="block text-[1.5rem]">
             {title}
             {isExternal && (
               <span className="relative top-[2px] ml-2 inline-block align-top">

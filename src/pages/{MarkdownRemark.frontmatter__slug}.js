@@ -11,11 +11,11 @@ export default function Template({ data }) {
     <Layout>
       <Seo title={frontmatter.title} description={frontmatter.description} />
       <Container>
-        <div>
-          <div className="mt-space-5 border-t border-current md:mt-space-6 lg:mt-space-10">
+        <div className="pt-space-5 md:mt-space-6 lg:mt-space-10">
+          <div className="border-t border-current">
             <div className="pt-4 md:grid md:grid-cols-12">
               <div className="md:col-span-5 md:pr-12 lg:col-span-4">
-                <h1 className="title-l mb-6 max-w-[25rem]">
+                <h1 className="mb-6 max-w-[25rem] text-[2.5rem] leading-none">
                   {frontmatter.title}
                 </h1>
               </div>

@@ -5,6 +5,7 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import EpochCountdown from '../../components/EpochCountdown'
+import PageHeader from '../../components/UI/PageHeader'
 // import Stars from '../../components/Svg/Stars'
 import Button from '../../components/UI/Button'
 import Link from '../../components/UI/Link'
@@ -70,28 +71,28 @@ const RewardsPage = ({ data }) => {
       />
       {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
-        <div className="mb-space-8 pt-space-5 md:flex md:justify-between md:pt-space-6 lg:pt-space-10">
-          <div>
-            <h1 className="heading-l mb-space-8">
-              <Trans t={t}>Rewards</Trans>
-            </h1>
-            <div className="body-xl max-w-[50rem]">
-              <Trans t={t}>
-                Rewards on Vega are designed to allow any Vega network
-                participant to incentivise user behaviour and are paid at the
-                end of each epoch.
-              </Trans>
-            </div>
-          </div>
-          <div className="shrink-0">
-            <Button
-              variant="secondary"
-              to="https://governance.vega.xyz/rewards"
-              className="mt-space-2 md:mt-0"
-            >
-              <Trans t={t}>Rewards I've earned</Trans>
-            </Button>
-          </div>
+        <div className="mx-auto mb-space-6 mb-space-10 max-w-[45rem] px-4 pt-space-6 text-center md:px-0 lg:pt-space-10 xl:max-w-[50rem]">
+          <PageHeader
+            title={t('Rewards')}
+            description={
+              <>
+                <p className="mb-space-4">
+                  <Trans t={t}>
+                    Rewards on Vega are designed to allow any Vega network
+                    participant to incentivise user behaviour and are paid at
+                    the end of each epoch.
+                  </Trans>
+                </p>
+                <Button
+                  variant="secondary"
+                  to="https://governance.vega.xyz/rewards"
+                  className="mt-space-2 uppercase text-black dark:text-white md:mt-0"
+                >
+                  <Trans t={t}>Rewards I've earned</Trans>
+                </Button>
+              </>
+            }
+          />
         </div>
 
         <div className="my-space-6">
@@ -129,7 +130,7 @@ const RewardsPage = ({ data }) => {
           </div>
         </div>
 
-        <h2 className="heading-l mb-space-9 max-w-[48rem]">
+        <h2 className="mb-space-6 max-w-[48rem] text-[2.5rem] leading-none md:mb-space-9 md:text-[3.5rem]">
           <Trans t={t}>Incentives and Bounties</Trans>
         </h2>
         <div className="mb-space-10 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-8">

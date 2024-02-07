@@ -7,6 +7,7 @@ import Container from '../components/Container'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import NewsListItem from '../components/UI/NewsListItem'
 import Talk from '../components/Talk'
+import PageHeader from '../components/UI/PageHeader'
 
 const ArticlesPage = ({ data, pageContext }) => {
   const { i18n, t } = useTranslation('page.articles')
@@ -83,19 +84,20 @@ const ArticlesPage = ({ data, pageContext }) => {
     <Layout>
       <Seo
         title={t('Articles & Talks')}
-        description={t('Articles and talks about Vega')}
+        description={t(
+          'Articles about Vega and recordings of past talks, events and podcasts'
+        )}
       />
       {missingTranslations && <TranslationsBanner />}
       <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
         <Container>
           <div className="mb-space-8 text-center md:mb-space-10 lg:mb-space-11">
-            <h2 className="mb-space-4 text-[3rem] leading-none">
-              <Trans t={t}>Articles & talks.</Trans>
-            </h2>
-            <p className="body-l mx-auto max-w-[25rem] text-vega-light-300 dark:text-vega-dark-300">
-              Articles about Vega and recordings of past talks, events and
-              podcasts
-            </p>
+            <PageHeader
+              title={t('Articles & Talks')}
+              description={t(
+                'Articles about Vega and recordings of past talks, events and podcasts'
+              )}
+            />
           </div>
 
           <div className="pb-space-6">

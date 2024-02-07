@@ -23,7 +23,7 @@ const TeamTile = ({ title, image, body, children }: TeamTileProps) => {
           />
         )}
         <div>
-          <div className="heading-m mb-space-4 max-w-[25rem] md:order-1">
+          <div className="mb-space-3 max-w-[25rem] text-[2rem] leading-none md:order-1">
             <div
               dangerouslySetInnerHTML={{
                 __html: addLineBreakIfTwoWords(title),

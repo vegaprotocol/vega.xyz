@@ -24,12 +24,12 @@ const InfoTile = ({
   children,
 }: GenericTileProps) => {
   return (
-    <div className="flex flex-col justify-between rounded-[1.875rem] border p-space-5">
+    <div className="flex flex-col justify-between rounded-[1.875rem] bg-vega-light-100 p-space-5 dark:bg-vega-dark-100">
       <div>
         {image && <GatsbyImage image={image} alt="" className="mb-space-5" />}
-        <div className="heading-s mb-space-4">{title}</div>
+        <div className="mb-space-4 text-[1.5rem] leading-[1.2]">{title}</div>
         {children && (
-          <div className="body-l text-vega-light-400 dark:text-vega-dark-400">
+          <div className="text-[1.125rem] text-vega-light-400 dark:text-vega-dark-400">
             {children}
           </div>
         )}
@@ -41,7 +41,7 @@ const InfoTile = ({
       </div>
       {link && (
         <div>
-          <Button to={link.to} className="mt-space-2">
+          <Button variant="secondary" to={link.to} className="mt-space-2">
             {link.title}
           </Button>
         </div>

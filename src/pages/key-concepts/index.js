@@ -5,8 +5,8 @@ import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Seo from '../../components/Seo'
 import Sticky from 'react-stickynode'
-import GlitchTitle from '../../components/GlitchTitle'
-import LeadingLine from '../../components/LeadingLine'
+import SectionScrollButton from '../../components/UI/SectionScrollButton/SectionScrollButton'
+import PageHeader from '../../components/UI/PageHeader'
 import ScrollSpy from 'react-ui-scrollspy'
 import PurposeBuiltBlock from '../../components/KeyConcepts/Blocks/PurposeBuilt'
 import TextLink from '../../components/TextLink'
@@ -71,24 +71,17 @@ const KeyConceptsPage = () => {
         className="mb-16 pt-space-6 lg:pt-space-10"
         id="keyConceptsScroll"
       >
-        <div className="mx-auto max-w-[45rem] px-4 text-center md:px-0 xl:max-w-[50rem]">
-          <GlitchTitle
-            level="1"
-            className="title-m md:title-l xl:title-xxl mb-6 px-3"
-          >
-            <Trans t={t}>Key Concepts</Trans>
-          </GlitchTitle>
-
-          <LeadingLine className="text-current">
-            <Trans t={t}>
-              Explore the features that enable you to trade and create
-              derivatives on a fully decentralised network.
-            </Trans>
-          </LeadingLine>
+        <div className="mx-auto mb-space-6 max-w-[45rem] px-4 text-center md:px-0 xl:max-w-[50rem]">
+          <PageHeader
+            title={t('Key Concepts')}
+            description={t(
+              'Explore the features that enable you to trade and create derivatives on a fully decentralised network.'
+            )}
+          />
         </div>
         <Container>
           <div className="relative mx-auto mt-4 max-w-[26.25rem] pt-[10.5rem] text-center after:absolute after:top-0 after:left-1/2 after:h-[8rem] after:w-px after:bg-black after:content-[''] dark:after:bg-white">
-            <h2 className="title-m mb-6">
+            <h2 className="mb-space-3 text-[2rem]">
               <Trans t={t}>Vega is designed to:</Trans>
             </h2>
           </div>
@@ -96,14 +89,13 @@ const KeyConceptsPage = () => {
         <div className="relative z-30">
           <Sticky enabled={true}>
             <div className="bg-white dark:bg-black">
-              <div className="mx-auto overflow-x-auto overflow-y-hidden whitespace-nowrap border-b border-vega-mid-grey px-6 md:flex md:justify-center md:gap-x-8 md:whitespace-normal md:px-0">
+              <div className="mx-auto flex gap-x-5 overflow-x-auto overflow-y-hidden whitespace-nowrap border-b border-vega-mid-grey px-6 py-space-4 md:justify-center md:whitespace-normal md:px-0">
                 {sections.map((section, index) => (
-                  <a key={index} href={`#${section.hash}`} className="">
-                    <div
-                      data-to-scrollspy-id={section.hash}
-                      className="title-s relative bottom-[-1px] inline-block border-t-4 border-b-4 border-transparent py-2 px-4 text-center text-lg leading-7 last:mr-0 hover:border-b-current md:w-[13rem]"
-                    >
-                      {t(section.title)}
+                  <a key={index} href={`#${section.hash}`}>
+                    <div data-to-scrollspy-id={section.hash}>
+                      <SectionScrollButton>
+                        {t(section.title)}
+                      </SectionScrollButton>
                     </div>
                   </a>
                 ))}

@@ -17,7 +17,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import BoxTitle from '../../components/BoxTitle'
+import PageHeader from '../../components/UI/PageHeader'
 import Seo from '../../components/Seo'
 import Container from '../../components/Container'
 import GlitchTitle from '../../components/GlitchTitle'
@@ -89,21 +89,12 @@ const MarketsLiquidity = () => {
       <Container dataCy={'main'} id="liquidity-provision-page">
         {missingTranslations && <TranslationsBanner />}
         <div className="mx-auto max-w-[61rem] pt-6 text-center lg:pt-24">
-          <GlitchTitle
-            level="1"
-            color="red"
-            className="title-m md:title-l lg:title-xl mb-4 mt-4 text-center md:mb-6"
-          >
-            <Trans t={t}>Liquidity Provision</Trans>
-          </GlitchTitle>
-        </div>
-        <div className="mx-auto mb-3 max-w-[44rem]">
-          <LeadingLine className="text-center">
-            <Trans t={t}>
-              Liquidity providers receive a share of fees paid during trading in
-              exchange for providing liquidity on the network.
-            </Trans>
-          </LeadingLine>
+          <PageHeader
+            title={t('Liquidity Provision')}
+            description={t(
+              'Liquidity providers receive a share of fees paid during trading in exchange for providing liquidity on the network.'
+            )}
+          />
         </div>
 
         <GeorestrictedContext.Consumer>

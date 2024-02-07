@@ -4,6 +4,7 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
+import PageHeader from '../../components/UI/PageHeader'
 import Accordion from '../../components/UI/Accordion/Accordion'
 import UniverseLeft from '../../components/Svg/UniverseLeft'
 import UniverseRight from '../../components/Svg/UniverseRight'
@@ -43,14 +44,12 @@ const FaqsPage = ({ data }) => {
         </div>
         <Container>
           <div className="mb-space-8 text-center md:mb-space-10 lg:mb-space-11">
-            <h2 className="mb-space-4 text-[3.5rem] leading-none">
-              <Trans t={t}>FAQs</Trans>
-            </h2>
-            <p className="body-l mx-auto max-w-[45rem] text-vega-light-300 dark:text-vega-dark-300">
-              <Trans t={t}>
-                Answering the most common community questions on Alpha Mainnet.
-              </Trans>
-            </p>
+            <PageHeader
+              title={t('FAQs')}
+              description={t(
+                'Answering the most common community questions on Alpha Mainnet.'
+              )}
+            />
           </div>
           <div className="mx-auto max-w-[48rem] pb-space-14">
             <Accordion data={accordionData} />
