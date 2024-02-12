@@ -14,7 +14,14 @@ const Audits = () => {
             <Trans t={t}>Audits</Trans>
           </h2>
         </div>
-        <p className="body-xl mb-space-6 text-center md:mb-space-10"></p>
+        <p className="body-xl mb-space-6 text-center md:mb-space-10">
+          <Trans t={t}>
+            Vega protocol is still in alpha and changing rapidly. As a result
+            not all the code is currently audited, but where possible top
+            quality auditors have been already been engaged to review the more
+            stable parts of the protocol.
+          </Trans>
+        </p>
         <div className="mx-auto grid max-w-[30rem] gap-x-space-6 gap-y-space-8 md:max-w-[75rem] md:grid-cols-3">
           <div>
             <StaticImage
