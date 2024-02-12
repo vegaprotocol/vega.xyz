@@ -4,7 +4,6 @@ import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
-import ImmersiveBannerCover from '../../components/UI/ImmersiveBannerCover'
 import Developers from '../../components/Svg/Developers'
 import IconGithub from '../../components/Svg/OutlineIcons/Github'
 import IconDocumentation from '../../components/Svg/OutlineIcons/Documentation'
@@ -13,12 +12,11 @@ import IconDiscord from '../../components/Svg/OutlineIcons/Discord'
 import IconSecurity from '../../components/Svg/OutlineIcons/Security'
 import LinkWrapper from '../../components/UI/LinkWrapper'
 
-import { getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
-const Box = ({ title, icon, link }) => {
+const Box = ({ title, icon, link, className }) => {
   return (
-    <LinkWrapper to={link}>
+    <LinkWrapper to={link} className={`col-span-6 lg:col-span-1 ${className}`}>
       <div className="flex h-full flex-col items-center justify-center rounded-xl bg-vega-light-100 p-space-5 hover:bg-vega-light-200 dark:bg-vega-dark-100 hover:dark:bg-vega-dark-200">
         {icon}
         <div className="body-s mt-space-4 text-center uppercase leading-none">
@@ -52,7 +50,7 @@ const DevelopPage = ({ data }) => {
             <h1 className="mb-space-2 text-[56px]">
               <Trans t={t}>Developers</Trans>
             </h1>
-            <div className="body-xl mx-auto max-w-[25rem] text-vega-light-300 text-current dark:text-vega-dark-300 lg:max-w-[34rem]">
+            <div className="body-xl mx-auto max-w-[25rem] text-current text-vega-light-300 dark:text-vega-dark-300 lg:max-w-[34rem]">
               <Trans t={t}>
                 Explore Vega's technical documentation, build integrations via
                 APIs, or contribute to our open source repositories on Github
@@ -66,7 +64,7 @@ const DevelopPage = ({ data }) => {
             <h2 className="mb-space-7 text-center text-[40px]">
               <Trans t={t}>Getting Started</Trans>
             </h2>
-            <div className="mx-auto mb-space-9 grid max-w-[72rem] grid-cols-2 gap-space-5 md:mb-space-14 md:grid-cols-3 lg:grid-cols-6">
+            <div className="md:grid-cols-auto mx-auto mb-space-9 grid max-w-[72rem] grid-cols-12 gap-space-5 md:mb-space-14 lg:grid-cols-5">
               <Box
                 title={t('Github')}
                 icon={<IconGithub />}
@@ -88,25 +86,12 @@ const DevelopPage = ({ data }) => {
                 link="/bug-bounties"
               />
               <Box
+                className="col-start-4"
                 title={t('Discord')}
                 icon={<IconDiscord />}
                 link="https://vega.xyz/discord"
               />
             </div>
-          </div>
-          <div className="mx-auto mb-space-10 max-w-[72.5rem] md:mb-space-11 lg:mb-space-13">
-            <ImmersiveBannerCover
-              title={t('Join the builders club')}
-              text={t(
-                'Get support building on top of the Vega protocol and access exclusive builder club bounties.'
-              )}
-              backgroundImage={getImage(data.bannerBg)}
-              image={getImage(data.buildersClubVegaBond)}
-              link1={{
-                to: '/builders-club',
-                text: t('Find out more'),
-              }}
-            />
           </div>
         </Container>
       </div>

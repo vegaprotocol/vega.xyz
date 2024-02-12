@@ -48,7 +48,6 @@
   "Articles & Talks": "",
   "Fairground": "Fairground",
   "Developers": "Nhà phát triển",
-  "Liquidity Provision": "Cung cấp thanh khoản",
   "Governance Home": "Trang chủ quản trị",
   "Governance Forums": "Forum quản trị",
   "Stake & Vote": "Đầu tư (stake) và Bỏ phiếu (Vote)",
@@ -58,5 +57,6 @@
   "Validate and secure the network": "Xác thực và bảo mật mạng",
   "Trading": "Giao dịch",
   "Experiment on Fairground Testnet": "Thử nghiệm trên Fairground Testnet",
+  "Liquidity Provision": "Cung cấp thanh khoản",
   "Programmatic trading": "Giao dịch có lập trình"
 }

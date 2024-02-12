@@ -48,7 +48,6 @@
   "Articles & Talks": "",
   "Fairground": "测试网Fairground",
   "Developers": "开发人员",
-  "Liquidity Provision": "流动性激励",
   "Governance Home": "治理之家",
   "Governance Forums": "治理论坛",
   "Stake & Vote": "质押和投票",
@@ -58,5 +57,6 @@
   "Validate and secure the network": "验证并保护网络安全",
   "Trading": "交易",
   "Experiment on Fairground Testnet": "Fairground 测试网实验",
+  "Liquidity Provision": "流动性激励",
   "Programmatic trading": "程序化交易"
 }

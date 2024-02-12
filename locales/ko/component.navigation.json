@@ -48,7 +48,6 @@
   "Articles & Talks": "",
   "Fairground": "",
   "Developers": "",
-  "Liquidity Provision": "유동성 공급",
   "Governance Home": "",
   "Governance Forums": "",
   "Stake & Vote": "",
@@ -58,5 +57,6 @@
   "Validate and secure the network": "네트워크 검증 및 안정화",
   "Trading": "트레이딩",
   "Experiment on Fairground Testnet": "Fairground 테스트넷에서 실험하기",
+  "Liquidity Provision": "유동성 공급",
   "Programmatic trading": "알고리즘 트레이딩"
 }
