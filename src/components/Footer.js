@@ -217,14 +217,6 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="/liquidity-provision"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Liquidity Providion</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
                     to="/programmatic-trading"
                     className="block py-1.5 leading-[1.3]"
                   >
