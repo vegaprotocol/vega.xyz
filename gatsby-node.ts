@@ -1,5 +1,4 @@
 const path = require(`path`)
-const fetch = require(`node-fetch`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const spawn = require('cross-spawn')
 import languages from './languages.js'

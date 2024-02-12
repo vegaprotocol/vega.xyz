@@ -9,7 +9,6 @@ import GovernanceResponsive from '../../components/Svg/Governance/Hero/Responsiv
 import ToolBox from '../../components/ToolBox'
 import ButtonLink from '../../components/ButtonLink'
 import PageHeader from '../../components/UI/PageHeader'
-import LeadingLine from '../../components/LeadingLine'
 import NetworkParameter from '../../components/NetworkParameter'
 import Accordion from '../../components/Accordion/Accordion'
 import Arrow from '../../components/Svg/Arrow'
@@ -212,7 +211,7 @@ const GovernancePage = ({ data }) => {
 
       <Container>
         <div
-          className="mx-auto mt-10 mb-space-10 grid max-w-[75rem] grid-cols-1 gap-5 md:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10"
+          className="mx-auto mb-space-10 mt-10 grid max-w-[75rem] grid-cols-1 gap-5 md:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10"
           id="governanceTools"
         >
           <ToolBox
@@ -267,7 +266,7 @@ const GovernancePage = ({ data }) => {
                   </Trans>
                 </p>
               </div>
-              <div className="absolute left-1/2 -bottom-5 -translate-x-1/2 bg-white p-3 dark:bg-black md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg]">
+              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white p-3 dark:bg-black md:bottom-auto md:left-auto md:right-0 md:top-9 md:translate-x-1/2 md:rotate-[270deg]">
                 <Arrow />
               </div>
             </div>
@@ -288,7 +287,7 @@ const GovernancePage = ({ data }) => {
                 link="https://governance.vega.xyz/token/associate"
                 text={t('Stake VEGA')}
               />
-              <div className="absolute left-1/2 -bottom-5 -translate-x-1/2 bg-white p-3 dark:bg-black md:top-9 md:right-0 md:bottom-auto md:left-auto md:translate-x-1/2 md:rotate-[270deg]">
+              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white p-3 dark:bg-black md:bottom-auto md:left-auto md:right-0 md:top-9 md:translate-x-1/2 md:rotate-[270deg]">
                 <Arrow />
               </div>
             </div>

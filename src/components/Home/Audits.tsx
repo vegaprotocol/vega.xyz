@@ -7,7 +7,7 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 const Audits = () => {
   const { t } = useTranslation('component.audits')
   return (
-    <div className="pt-space-14 pb-space-8">
+    <div className="pb-space-8 pt-space-14">
       <Container>
         <div className="title-l lg:title-xl mb-6 text-center">
           <h2>
@@ -15,9 +15,14 @@ const Audits = () => {
           </h2>
         </div>
         <p className="body-xl mb-space-6 text-center md:mb-space-10">
-          <Trans t={t}>The Vega codebase has been audited by the best</Trans>
+          <Trans t={t}>
+            Vega protocol is still in alpha and changing rapidly. As a result
+            not all the code is currently audited, but where possible top
+            quality auditors have been already been engaged to review the more
+            stable parts of the protocol.
+          </Trans>
         </p>
-        <div className="mx-auto grid max-w-[30rem] gap-y-space-8 gap-x-space-6 md:max-w-[75rem] md:grid-cols-3">
+        <div className="mx-auto grid max-w-[30rem] gap-x-space-6 gap-y-space-8 md:max-w-[75rem] md:grid-cols-3">
           <div>
             <StaticImage
               src="../../images/audits/solidified.jpg"
@@ -48,7 +53,7 @@ const Audits = () => {
             <p className="body-l mb-space-5">
               <Trans t={t}>
                 FYEO delivers Web3 security audits, threat monitoring,
-                AI-powered anti-phising, and decentralized identity management.
+                AI-powered anti-phishing, and decentralized identity management.
               </Trans>
             </p>
             <Button to="https://github.com/vegaprotocol/MultisigControl/blob/develop/audit/2022-05-23_MultiSigControl_Decentralised_Limits_v2-0.pdf.pdf">
