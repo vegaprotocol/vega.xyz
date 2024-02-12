@@ -48,7 +48,6 @@
   "Articles & Talks": "",
   "Fairground": "Fairground",
   "Developers": "Developers",
-  "Liquidity Provision": "Liquidity Provision",
   "Governance Home": "Governance Home",
   "Governance Forums": "Governance Forums",
   "Stake & Vote": "Stake & Vote",
@@ -58,5 +57,6 @@
   "Validate and secure the network": "Validate and secure the network",
   "Trading": "Trading",
   "Experiment on Fairground Testnet": "Experiment on Fairground Testnet",
+  "Liquidity Provision": "Liquidity Provision",
   "Programmatic trading": "Programmatic trading"
 }

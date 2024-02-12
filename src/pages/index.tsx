@@ -21,8 +21,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import PlanetA from '../components/Svg/Home/PlanetA'
 import PlanetB from '../components/Svg/Home/PlanetB'
 import Explore from '../components/Svg/Home/Explore'
-import Markets from '../components/Home/Markets'
-import LiquidityProvision from '../components/Home/LiquidityProvision'
 import LogoGRPC from '../components/Svg/LogoGRPC'
 import LogoGraphQL from '../components/Svg/LogoGraphQL'
 import LogoRestAPI from '../components/Svg/LogoRestAPI'
@@ -34,7 +32,7 @@ import HighCapitalEfficiencyIcon from '../images/feature-icons/high-capital-effi
 import NoGasFeesIcon from '../images/feature-icons/no-gas-fees.svg'
 import NativeLiquidityProvision from '../images/feature-icons/native-liquidity-provision.svg'
 import RichCEXStyleIcon from '../images/feature-icons/rich-cex-style.svg'
-import { AnnouncementBanner } from '../components/AnnouncementRemote'
+// import { AnnouncementBanner } from '../components/AnnouncementRemote'
 
 const FeatureBox = ({ title, description, icon }) => {
   return (
@@ -268,21 +266,6 @@ const IndexPage = ({ data }) => {
           <Audits />
 
           <Container>
-            <GeorestrictedContext.Consumer>
-              {({ isGeorestricted }) => {
-                if (isGeorestricted) {
-                  return null
-                }
-
-                return (
-                  <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
-                    <Container>
-                      <LiquidityProvision />
-                    </Container>
-                  </div>
-                )
-              }}
-            </GeorestrictedContext.Consumer>
             <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
               <div className="grid md:grid-cols-2">
                 <div className="p-space-5">

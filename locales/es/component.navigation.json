@@ -48,7 +48,6 @@
   "Articles & Talks": "",
   "Fairground": "Recinto ferial",
   "Developers": "Desarrolladores",
-  "Liquidity Provision": "Provisión de Liquidez",
   "Governance Home": "Página de inicio de Gobernanza",
   "Governance Forums": "Foros de Gobernanza",
   "Stake & Vote": "Participar y votar",
@@ -58,5 +57,6 @@
   "Validate and secure the network": "Valide y proteja la red",
   "Trading": "Comerciar",
   "Experiment on Fairground Testnet": "Experimenta en la red de prueba Fairground",
+  "Liquidity Provision": "Provisión de Liquidez",
   "Programmatic trading": "Comercio programático"
 }
