@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Seo from '../../components/Seo'
 import PageHeader from '../../components/UI/PageHeader'
 import Paper from '../../components/Paper'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const PapersPage = ({ data }) => {
   const { t } = useTranslation('page.papers')

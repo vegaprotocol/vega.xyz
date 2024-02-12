@@ -1,3 +1,4 @@
+/*
 import React from "react";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
@@ -68,3 +69,4 @@ const Jobs = (props) => {
 };
 
 export default Jobs;
+*/

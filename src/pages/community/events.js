@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Calendar from '../../components/Calendar'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 import PageHeader from '../../components/UI/PageHeader'
 
 const Events = ({ data }) => {

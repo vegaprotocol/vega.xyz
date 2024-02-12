@@ -6,7 +6,6 @@ import Container from '../../components/Container'
 import PlanetA from '../../components/Svg/Home/PlanetA'
 import Chrome from '../../components/Svg/Chrome'
 import Firefox from '../../components/Svg/Firefox'
-import GlitchTitle from '../../components/UI/GlitchTitle'
 import PageHeader from '../../components/UI/PageHeader'
 import Button from '../../components/UI/Button'
 import SectionScrollButton from '../../components/UI/SectionScrollButton/SectionScrollButton'
@@ -156,7 +155,7 @@ const WalletPageNew = ({ data }) => {
           <div>
             {downloadDropdown && (
               <div
-                className={`absolute top-[100%] left-0 right-0 z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
+                className={`absolute left-0 right-0 top-[100%] z-40 border border-t-0 border-current ${dropdownVariantClasses}`}
               >
                 <ul className="px-2 py-3">
                   {binaries.map((binary, idx) => {
@@ -385,7 +384,7 @@ const WalletPageNew = ({ data }) => {
               <GatsbyImage image={getImage(data.walletScreenMedium)} alt="" />
             </div>
             <div className="relative hidden xl:block">
-              <div className="after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0">
+              <div className="relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:from-10% after:to-white/0 after:to-100% dark:after:from-black dark:after:to-black/0">
                 <div className="flex w-full justify-end overflow-hidden blur-[1px] md:h-[460px]">
                   <GatsbyImage
                     image={getImage(data.consoleDark)}
