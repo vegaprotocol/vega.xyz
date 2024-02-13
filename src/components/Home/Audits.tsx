@@ -18,6 +18,7 @@ const Audits = () => {
           <Trans t={t}>
             Vega protocol is still in alpha and changing rapidly.
           </Trans>
+          &nbsp;
           <Trans t={t}>
             As a result not all the code is currently audited, but where
             possible top quality auditors have been already been engaged to
