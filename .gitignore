@@ -13,3 +13,6 @@ public
 # Local Netlify folder
 gatsby-types.d.ts
 .vercel
+# Old translation strings
+locals/**/*_old.json
+
