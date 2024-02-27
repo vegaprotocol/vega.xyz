@@ -8,7 +8,7 @@ const Ecosystem = () => {
 
   return (
     <NavigationList>
-      <NavigationItem text={t('Apps & Tools')} link="/apps" />
+      <NavigationItem text={t('Ecosystem Home')} link="/ecosystem" />
       <NavigationItem text={t('Wallet')} link="/wallet" />
       <NavigationItem text={t('Developers')} link="/developers" />
       <NavigationItem

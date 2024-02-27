@@ -26,7 +26,7 @@ const Callout = ({
         className ? className : ''
       }`}
     >
-      <div className="p-6">
+      <div className="w-full p-6">
         <div className="body-xl">{title}</div>
         {subtitle && (
           <div className="body-l text-vega-light-300 dark:text-vega-dark-300">

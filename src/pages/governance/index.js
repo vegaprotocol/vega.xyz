@@ -366,9 +366,7 @@ export const query = graphql`
         )
       }
     }
-    tokenInterfaceIcon: file(
-      relativePath: { eq: "tool-icons/governance.png" }
-    ) {
+    tokenInterfaceIcon: file(relativePath: { eq: "ecosystem/governance.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 96
