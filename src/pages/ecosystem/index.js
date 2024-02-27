@@ -51,7 +51,14 @@ const EcosystemPage = ({ data }) => {
   // t('build')
   // t('analytics')
 
-  const ecoData = useEcosystemData(t)
+  const ecosystemData = useEcosystemData(t)
+  // keep the first 3 wallets at the top
+  const wallets = ecosystemData.slice(0, 3)
+  // alphabetically sort the rest
+  const sortedEcosystemData = ecosystemData.slice(3).sort((a, b) => {
+    return a.title.localeCompare(b.title)
+  })
+  const ecosystemItems = wallets.concat(sortedEcosystemData)
 
   return (
     <Layout>
@@ -156,7 +163,7 @@ const EcosystemPage = ({ data }) => {
         </div>
         {filter === 'integrations' && (
           <Callout
-            className="mt-space-8"
+            className="mt-space-8 text-center"
             subtitle={t(
               'Integrations do not necessarily imply any official partnership or relationship between Vega Protocol and the integration listed'
             )}
@@ -166,7 +173,7 @@ const EcosystemPage = ({ data }) => {
           className="grid grid-cols-1 gap-4 py-space-8 md:mb-12 md:grid-cols-2 md:gap-6 md:py-space-10 lg:grid-cols-3 lg:gap-10"
           ref={tabs}
         >
-          {ecoData.map((tool, idx) => (
+          {ecosystemItems.map((tool, idx) => (
             <div
               className={`${tool.categories.join(
                 ' '
