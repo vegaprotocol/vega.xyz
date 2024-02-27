@@ -421,7 +421,9 @@ export const useEcosystemData = (t) => {
       title: t('Data Node'),
       author: 'Vega',
       link: 'https://github.com/vegaprotocol/vega/tree/develop/datanode#data-node',
-      description: t('Query the Vega network APIs to retrieve on chain data.'),
+      description: t(
+        'Learn how to set up your own data node to support application building on Vega.'
+      ),
       categories: ['build'],
     },
     {
@@ -430,7 +432,7 @@ export const useEcosystemData = (t) => {
       author: 'Vega',
       link: 'https://github.com/vegaprotocol/vegacapsule',
       description: t(
-        'Learn how to set up your own data node to support application building on Vega.'
+        'Use Vega Capsule to create an instance of the Vega network on your computer to experiment with using the protocol.'
       ),
       categories: ['build'],
     },
