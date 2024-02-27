@@ -294,7 +294,7 @@ export const useEcosystemData = (t) => {
       description: t(
         'Vega supports bridging of any ERC20 token onto the network, so long as that token has been proposed and approved via on-chain governance. The protocol can also source oracle data from any Ethereum RPC.'
       ),
-      categories: ['integration'],
+      categories: ['integrations'],
     },
     {
       icon: data.hummingbotLogo,
