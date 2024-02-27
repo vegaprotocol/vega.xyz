@@ -22,7 +22,7 @@ const Navigation = () => {
         <Dropdown title={t('Community')} link="/community/">
           <Community />
         </Dropdown>
-        <Dropdown title={t('Ecosystem')} link="/apps/">
+        <Dropdown title={t('Ecosystem')} link="/ecosystem/">
           <Ecosystem />
         </Dropdown>
       </ul>
