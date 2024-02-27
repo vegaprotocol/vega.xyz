@@ -116,7 +116,7 @@ export const useEcosystemData = (t) => {
       duneLogo: file(relativePath: { eq: "ecosystem/dune.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 210
+            width: 96
             height: 96
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -126,7 +126,7 @@ export const useEcosystemData = (t) => {
       ethereumLogo: file(relativePath: { eq: "ecosystem/ethereum.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 75
+            width: 96
             height: 96
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -146,7 +146,7 @@ export const useEcosystemData = (t) => {
       chainlinkLogo: file(relativePath: { eq: "ecosystem/chainlink.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 210
+            width: 96
             height: 96
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -168,7 +168,7 @@ export const useEcosystemData = (t) => {
       ) {
         childImageSharp {
           gatsbyImageData(
-            width: 210
+            width: 96
             height: 96
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -178,7 +178,7 @@ export const useEcosystemData = (t) => {
       metamaskLogo: file(relativePath: { eq: "ecosystem/metamask.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 210
+            width: 96
             height: 96
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -198,7 +198,7 @@ export const useEcosystemData = (t) => {
       gnosisLogo: file(relativePath: { eq: "ecosystem/gnosis.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 245
+            width: 96
             height: 96
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -208,7 +208,7 @@ export const useEcosystemData = (t) => {
       defiLlamaLogo: file(relativePath: { eq: "ecosystem/defilama.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 210
+            width: 96
             height: 96
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -218,7 +218,7 @@ export const useEcosystemData = (t) => {
       arbitrumLogo: file(relativePath: { eq: "ecosystem/arbitrum.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 120
+            width: 96
             height: 96
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]

@@ -41,6 +41,14 @@
     {
       "source": "/buildersclubform",
       "destination": "https://vegaprotocol.typeform.com/to/YgOgiGqF"
+    },
+    {
+      "source": "/apps",
+      "destination": "/ecosystem"
+    },
+    {
+      "source": "/apps/",
+      "destination": "/ecosystem"
     }
   ]
 }
