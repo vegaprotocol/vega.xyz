@@ -7,7 +7,7 @@ export const useEcosystemData = (t) => {
 
   const data = useStaticQuery(graphql`
     query EcosystemQuery {
-      walletIcon: file(relativePath: { eq: "tool-icons/wallet.png" }) {
+      walletIcon: file(relativePath: { eq: "ecosystem/wallet.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 96
@@ -18,7 +18,7 @@ export const useEcosystemData = (t) => {
         }
       }
       desktopWalletIcon: file(
-        relativePath: { eq: "tool-icons/desktop-wallet.png" }
+        relativePath: { eq: "ecosystem/desktop-wallet.png" }
       ) {
         childImageSharp {
           gatsbyImageData(
@@ -29,7 +29,7 @@ export const useEcosystemData = (t) => {
           )
         }
       }
-      consoleIcon: file(relativePath: { eq: "tool-icons/console.png" }) {
+      consoleIcon: file(relativePath: { eq: "ecosystem/console.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 96
@@ -39,7 +39,7 @@ export const useEcosystemData = (t) => {
           )
         }
       }
-      governanceIcon: file(relativePath: { eq: "tool-icons/governance.png" }) {
+      governanceIcon: file(relativePath: { eq: "ecosystem/governance.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 96
@@ -50,7 +50,7 @@ export const useEcosystemData = (t) => {
         }
       }
       blockExplorerIcon: file(
-        relativePath: { eq: "tool-icons/block-explorer.png" }
+        relativePath: { eq: "ecosystem/block-explorer.png" }
       ) {
         childImageSharp {
           gatsbyImageData(
@@ -61,7 +61,7 @@ export const useEcosystemData = (t) => {
           )
         }
       }
-      cliWalletIcon: file(relativePath: { eq: "tool-icons/cli-wallet.png" }) {
+      cliWalletIcon: file(relativePath: { eq: "ecosystem/cli-wallet.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 96
@@ -71,7 +71,7 @@ export const useEcosystemData = (t) => {
           )
         }
       }
-      nodesGuruIcon: file(relativePath: { eq: "tool-icons/nodes-guru.png" }) {
+      nodesGuruIcon: file(relativePath: { eq: "ecosystem/nodes-guru.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 96
@@ -81,7 +81,7 @@ export const useEcosystemData = (t) => {
           )
         }
       }
-      dataNodeIcon: file(relativePath: { eq: "tool-icons/data-node.png" }) {
+      dataNodeIcon: file(relativePath: { eq: "ecosystem/data-node.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 96
@@ -91,7 +91,7 @@ export const useEcosystemData = (t) => {
           )
         }
       }
-      guidesIcon: file(relativePath: { eq: "tool-icons/guides.png" }) {
+      guidesIcon: file(relativePath: { eq: "ecosystem/guides.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 96
@@ -102,7 +102,7 @@ export const useEcosystemData = (t) => {
         }
       }
       vegaCapsuleIcon: file(
-        relativePath: { eq: "tool-icons/vega-capsule.png" }
+        relativePath: { eq: "ecosystem/vega-capsule.png" }
       ) {
         childImageSharp {
           gatsbyImageData(
@@ -219,6 +219,16 @@ export const useEcosystemData = (t) => {
         childImageSharp {
           gatsbyImageData(
             width: 120
+            height: 96
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+      vegaDocsIcon: file(relativePath: { eq: "ecosystem/docs.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 96
             height: 96
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
@@ -425,7 +435,7 @@ export const useEcosystemData = (t) => {
       categories: ['build'],
     },
     {
-      icon: data.vegaCapsuleIcon,
+      icon: data.vegaDocsIcon,
       title: t('Docs'),
       author: 'Vega',
       link: 'https://docs.vega.xyz/',
