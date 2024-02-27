@@ -317,7 +317,7 @@ export const useEcosystemData = (t) => {
     {
       icon: data.uniswapLogo,
       title: t('Uniswap'),
-      link: 'https://app.uniswap.org/',
+      link: 'https://github.com/jeremyletang/uniswap_price_source',
       description: t(
         'The Vega network can source prices from any Uniswap pool by using this community created smart contract during market creation.'
       ),
