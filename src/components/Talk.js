@@ -17,7 +17,8 @@ const Talk = ({ talk, image }) => {
         <div className="col-span-12 md:col-span-6">
           <div>
             <div className="copy-s mb-2 w-full">
-              {talk.frontmatter?.links[0]?.link ? (
+              {talk.frontmatter?.links?.length > 0 &&
+              talk.frontmatter.links[0]?.link ? (
                 <Link to={talk.frontmatter.links[0].link} hideArrow={true}>
                   {talk.frontmatter.title}
                 </Link>
@@ -62,7 +63,8 @@ const Talk = ({ talk, image }) => {
         </div>
         <div className="col-span-12 mt-space-6 md:col-span-6 md:mt-0">
           {image &&
-            (talk.frontmatter?.links[0]?.link ? (
+            (talk.frontmatter?.links?.length > 0 &&
+            talk.frontmatter.links[0]?.link ? (
               <Link to={talk.frontmatter.links[0].link} hideArrow={true}>
                 <GatsbyImage image={image} alt="" className="max-w-[20rem]" />
               </Link>
