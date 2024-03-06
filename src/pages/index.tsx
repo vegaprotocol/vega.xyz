@@ -396,6 +396,7 @@ export const query = graphql`
       filter: {
         collection: { eq: "talks" }
         fields: { locale: { eq: $language } }
+        frontmatter: { featured: { eq: true } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -406,6 +407,7 @@ export const query = graphql`
             title
             date(formatString: "ll")
             location
+            featured
             links {
               title
               link
@@ -428,6 +430,7 @@ export const query = graphql`
       filter: {
         collection: { eq: "articles" }
         fields: { locale: { eq: $language } }
+        frontmatter: { featured: { eq: true } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -438,6 +441,7 @@ export const query = graphql`
             title
             date(formatString: "ll")
             location
+            featured
             links {
               title
               url
