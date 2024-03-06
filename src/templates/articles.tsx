@@ -109,7 +109,14 @@ const ArticlesPage = ({ data, pageContext }) => {
               {data.allMarkdownRemark.edges.map((content, idx) => (
                 <div key={idx}>
                   {content.node.collection === 'talks' ? (
-                    <Talk key={idx} talk={content.node} />
+                    <Talk
+                      key={idx}
+                      talk={content.node}
+                      image={
+                        content.node.frontmatter.featuredImage?.childImageSharp
+                          ?.gatsbyImageData
+                      }
+                    />
                   ) : (
                     <NewsListItem
                       key={idx}
