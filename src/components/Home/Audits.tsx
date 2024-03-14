@@ -7,7 +7,7 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 const Audits = () => {
   const { t } = useTranslation('component.audits')
   return (
-    <div className="pb-space-8 pt-space-14">
+    <div className="pt-space-14">
       <Container>
         <div className="title-l lg:title-xl mb-6 text-center">
           <h2>

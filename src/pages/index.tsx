@@ -266,7 +266,7 @@ const IndexPage = ({ data }) => {
           <Audits />
 
           <Container>
-            <div className="rounded-xl border border-vega-light-200 dark:border-vega-dark-200">
+            <div className="mt-space-10 rounded-xl border border-vega-light-200 dark:border-vega-dark-200 md:mt-space-12 lg:mt-space-14">
               <div className="grid md:grid-cols-2">
                 <div className="p-space-5">
                   <h2 className="heading-m mb-space-4 max-w-[30rem]">
@@ -396,6 +396,7 @@ export const query = graphql`
       filter: {
         collection: { eq: "talks" }
         fields: { locale: { eq: $language } }
+        frontmatter: { featured: { eq: true } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -406,6 +407,7 @@ export const query = graphql`
             title
             date(formatString: "ll")
             location
+            featured
             links {
               title
               link
@@ -428,6 +430,7 @@ export const query = graphql`
       filter: {
         collection: { eq: "articles" }
         fields: { locale: { eq: $language } }
+        frontmatter: { featured: { eq: true } }
       }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -438,6 +441,7 @@ export const query = graphql`
             title
             date(formatString: "ll")
             location
+            featured
             links {
               title
               url

@@ -117,8 +117,8 @@ const LatestNews = ({ blogPosts, talks, articles }) => {
               className="mb-space-5"
             />
             <div>
-              <Button to="/articles">
-                <Trans t={t}>Read all Articles</Trans>
+              <Button to={articles.edges[0].node.frontmatter.links[0].url}>
+                {articles.edges[0].node.frontmatter.links[0].title}
               </Button>
             </div>
           </div>
