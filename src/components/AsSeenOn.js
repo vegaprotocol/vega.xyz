@@ -32,13 +32,13 @@ const AsSeenOn = () => {
           </h3>
         </a>
         <a
-          href="https://www.nasdaq.com/articles/how-to-build-through-the-bear"
+          href="https://www.theblock.co/post/282182/vega-creates-derivatives-market-for-crypto-points-starting-with-eigenlayer"
           rel="noreferrer"
           target="_blank"
         >
           <StaticImage
             className="mb-4"
-            src="../images/as-seen-on-nasdaq.png"
+            src="../images/as-seen-on-the-block.png"
             alt=""
             placeholder="none"
             layout="constrained"
@@ -46,7 +46,7 @@ const AsSeenOn = () => {
             height={368}
           />
           <h3 className="font-glitched text-[1.3125rem] leading-[1.15]">
-            How to build through the bear
+            Futures Markets for Points
           </h3>
         </a>
         <a
