@@ -1,4 +1,4 @@
-const BLOCKED_COUNTRIES = ['US', 'CU', 'KP', 'IR', 'SY']
+const BLOCKED_COUNTRIES = ['US', 'CU', 'KP', 'IR', 'SY', 'GB']
 
 function getCountry(req) {
   return req.headers['x-vercel-ip-country']
