@@ -44,7 +44,7 @@ const NewsCard = ({
       >
         {image ? (
           <div
-            className="aspect-h-9 aspect-w-16 mb-4 border border-white bg-cover bg-center"
+            className="aspect-h-9 aspect-w-16 mb-4 rounded-md border border-black/30 bg-cover bg-center dark:border-white/30"
             style={{
               backgroundImage: `url(${image})`,
             }}
