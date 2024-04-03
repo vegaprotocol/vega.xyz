@@ -68,7 +68,9 @@ const LatestNews = ({ blogPosts, talks, articles }) => {
             </div>
           </div>
         ) : (
-          <div>Loading</div>
+          <div className="flex items-center justify-center">
+            <div>Loading...</div>
+          </div>
         )}
 
         {talks.edges.length > 0 && (
