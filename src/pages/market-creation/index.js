@@ -27,7 +27,7 @@ const MarketCreationPage = ({ data }) => {
   const [missingTranslations, setMissingTranslations] = useState(false)
 
   i18n.on('missingKey', (lng) => {
-    setMissingTranslations(true)
+    i18n.language !== 'en' && setMissingTranslations(true)
   })
 
   const Phase3Text = () => {
