@@ -55,14 +55,6 @@ const Footer = () => {
                     <Trans t={t}>Vega Papers</Trans>
                   </TextLink>
                 </li>
-                <li>
-                  <TextLink
-                    to="/privacy/"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Privacy & Cookie Policy</Trans>
-                  </TextLink>
-                </li>
               </ul>
             </div>
             <div>
