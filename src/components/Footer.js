@@ -135,14 +135,14 @@ const Footer = () => {
                     <Trans t={t}>Contributors</Trans>
                   </TextLink>
                 </li>
-                <li>
+                {/* <li>
                   <TextLink
                     to="/community/events"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Events & Meetups</Trans>
                   </TextLink>
-                </li>
+                </li> */}
                 <li>
                   <TextLink
                     to="https://fairground.wtf/"

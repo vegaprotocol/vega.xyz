@@ -48,7 +48,7 @@ const CommunityPage = ({ data }) => {
           </div>
         </div>
       </Container>
-      <div className="relative mt-space-10 mb-10 md:-top-6">
+      <div className="relative mb-10 mt-space-10 md:-top-6">
         <CommunityResponsive />
       </div>
       <Container>
@@ -123,12 +123,12 @@ const CommunityPage = ({ data }) => {
           />
         </div>
 
-        <div class="my-space-10 xl:my-space-14">
+        {/* <div class="my-space-10 xl:my-space-14">
           <h2 className="mb-space-6 text-[2.5rem] leading-none md:mb-space-10 md:text-[3rem]">
             <Trans t={t}>Upcoming events + meetups</Trans>
           </h2>
           <Calendar limit={5} />
-        </div>
+        </div> */}
 
         <h2 className="mb-space-6 text-[2.5rem] md:mb-space-10 md:text-[3rem]">
           <Trans t={t}>Contribute</Trans>

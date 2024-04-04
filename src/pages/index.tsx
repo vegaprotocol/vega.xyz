@@ -303,7 +303,7 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
 
-            <PageSection>
+            {/* <PageSection>
               <div className="lg:grid lg:grid-cols-12">
                 <div className="lg:col-span-4">
                   <div className="title-l mb-8 hyphens-auto">
@@ -315,7 +315,7 @@ const IndexPage = ({ data }) => {
                   <Calendar limit={3} />
                 </div>
               </div>
-            </PageSection>
+            </PageSection> */}
 
             <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
               <AsSeenOn />
