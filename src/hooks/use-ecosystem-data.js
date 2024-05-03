@@ -235,6 +235,16 @@ export const useEcosystemData = (t) => {
           )
         }
       }
+      umaIcon: file(relativePath: { eq: "ecosystem/uma.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 96
+            height: 96
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
     }
   `)
 
@@ -445,6 +455,15 @@ export const useEcosystemData = (t) => {
         'Explore the official Vega Protocol documentation to learn about the network'
       ),
       categories: ['build'],
+    },
+    {
+      icon: data.umaIcon,
+      title: 'UMA',
+      link: 'https://uma.xyz/',
+      description: t(
+        'UMA’s Optimistic Oracle can be used to secure and settle markets on Vega for unique DeFi uses cases like Points Markets and Pre-launch market cap futures'
+      ),
+      categories: ['integrations'],
     },
   ]
 
