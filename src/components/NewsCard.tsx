@@ -44,7 +44,7 @@ const NewsCard = ({
       >
         {image ? (
           <div
-            className="aspect-w-16 aspect-h-9 mb-4 bg-cover bg-center"
+            className="aspect-h-9 aspect-w-16 mb-4 rounded-md border border-black/30 bg-cover bg-center dark:border-white/30"
             style={{
               backgroundImage: `url(${image})`,
             }}
@@ -79,7 +79,7 @@ const NewsCard = ({
           {date} {extra && <>&bull; {extra}</>}
         </div>
         {category && (
-          <div className="mt-3 inline-block bg-vega-border-grey py-0.5 px-2 text-[0.75rem] uppercase text-white dark:bg-white/10 dark:text-vega-grey">
+          <div className="mt-3 inline-block bg-vega-border-grey px-2 py-0.5 text-[0.75rem] uppercase text-white dark:bg-white/10 dark:text-vega-grey">
             {category}
           </div>
         )}
