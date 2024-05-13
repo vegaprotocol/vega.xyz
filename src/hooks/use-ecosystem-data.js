@@ -303,7 +303,7 @@ export const useEcosystemData = (t) => {
       description: t(
         'Run pre-built automated strategies or compose your own with Hummingbot on Vega.'
       ),
-      categories: ['build'],
+      categories: ['build', 'integrations'],
     },
     {
       icon: data.chainlinkLogo,
