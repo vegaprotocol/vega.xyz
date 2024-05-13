@@ -1,5 +1,5 @@
 {
-  "Contributors": "",
+  "Contributors": "Contributors",
   "Events": "Events",
   "Upcoming community events, meet-ups, research office hours and community calls.": "Upcoming community events, meet-ups, research office hours and community calls.",
   "Upcoming events + meetups": "Upcoming events + meetups",
@@ -12,7 +12,6 @@
   "Discuss governance and governance proposals on Vega Networks.": "Discuss governance and governance proposals on Vega Networks.",
   "Telegram": "Telegram",
   "Official Telegram Group for Vega Protocol.": "Official Telegram Group for Vega Protocol.",
-  "Twitter": "Twitter",
   "Substack": "Substack",
   "Roll up! Roll up! Vega's bi-weekly highlights newsletter.": "Roll up! Roll up! Vega's bi-weekly highlights newsletter.",
   "YouTube": "YouTube",
@@ -23,7 +22,7 @@
   "Latest news on the Vega blog.": "Latest news on the Vega blog.",
   "Github": "Github",
   "Explore our online repositories, or collaborate with the Vega teams.": "Explore our online repositories, or collaborate with the Vega teams.",
-  "Contribute": "",
+  "Contribute": "Contribute",
   "Feedback": "Feedback",
   "Feedback and feature requests": "Feedback and feature requests",
   "Contribute to the source code, and get building with our APIs.": "Contribute to the source code, and get building with our APIs.",

@@ -80,10 +80,10 @@ const CommunityPage = ({ data }) => {
             icon={getImage(data.iconTelegram)}
           />
           <ToolBox
-            title={t('Twitter')}
+            title="X"
             text="@vegaprotocol"
-            link="https://twitter.com/vegaprotocol"
-            icon={getImage(data.iconTwitter)}
+            link="https://x.com/vegaprotocol"
+            icon={getImage(data.iconX)}
           />
           <ToolBox
             title={t('Substack')}
@@ -247,7 +247,7 @@ export const query = graphql`
         )
       }
     }
-    iconTwitter: file(relativePath: { eq: "social-icons/twitter.png" }) {
+    iconX: file(relativePath: { eq: "social-icons/X.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 96
