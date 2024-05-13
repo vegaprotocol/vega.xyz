@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
   const { t, i18n } = useTranslation('page.index')
   const [missingTranslations, setMissingTranslations] = useState(false)
   i18n.on('missingKey', (lng) => {
-    setMissingTranslations(true)
+    i18n.language !== 'en' && setMissingTranslations(true)
   })
 
   return (

@@ -21,7 +21,7 @@ const BugBountiesPage = ({ data }) => {
   const form = useRef()
 
   i18n.on('missingKey', (lng) => {
-    setMissingTranslations(true)
+    i18n.language !== 'en' && setMissingTranslations(true)
   })
 
   const checkForm = () => {
