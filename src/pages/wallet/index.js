@@ -252,11 +252,11 @@ const WalletPageNew = ({ data }) => {
     className,
   }) => {
     let link =
-      'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-mainnet/'
+      'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-beta/'
 
     if (network === 'Testnet') {
       link =
-        'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-fairground/'
+        'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-beta/'
     }
     return (
       <div
