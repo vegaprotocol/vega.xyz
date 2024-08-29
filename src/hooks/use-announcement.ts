@@ -33,7 +33,7 @@ type State = {
   error: null | string
 }
 
-const checksum = (data: object) => sha256(Buffer.from(JSON.stringify(data)))
+const checksum = (data: object) => JSON.stringify(data)
 
 export const useDismissedAnnouncement = (): [
   string | null | undefined,
