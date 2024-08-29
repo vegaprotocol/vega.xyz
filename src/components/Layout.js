@@ -66,7 +66,7 @@ const Layout = ({ children, stickyHeader = true }) => {
               </GeorestrictedContext.Consumer>
               <div>
                 <AnnouncementBanner
-                  app="wallet"
+                  app="website"
                   configUrl={process.env.GATSBY_ANNOUNCEMENTS_CONFIG_URL}
                 />
                 {children}
