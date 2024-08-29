@@ -43,7 +43,7 @@ const Layout = ({ children, stickyHeader = true }) => {
                   }
 
                   return (
-                    <Banner>
+                    <Banner className="mb-2">
                       <div className="mx-auto max-w-2xl overflow-hidden text-sm leading-tight md:max-w-3xl">
                         <p>
                           This website provides information only about the open
