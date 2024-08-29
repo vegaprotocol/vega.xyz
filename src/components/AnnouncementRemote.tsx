@@ -102,7 +102,7 @@ export const AnnouncementBanner = ({
         )}
       </div>
       <button
-        className="absolute right-0 top-0 flex h-full w-10 items-center justify-center p-4 text-white"
+        className="absolute right-0 top-0 flex h-full items-center justify-center p-4 text-white"
         data-testid="app-announcement-close"
         onClick={() => {
           setVisible(false)
@@ -117,7 +117,12 @@ export const AnnouncementBanner = ({
 
 export const IconCross = ({ size = 16 }: { size: number }) => {
   return (
-    <svg width={size} height={size} viewBox="0 0 16 16">
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 16 16"
+      className="fill-current"
+    >
       <path d="M13.3745 3.37476L3.37453 13.3748L2.625 12.6252L12.625 2.62523L13.3745 3.37476Z" />
       <path d="M3.37453 2.62523L13.3745 12.6252L12.625 13.3748L2.625 3.37476L3.37453 2.62523Z" />
     </svg>
