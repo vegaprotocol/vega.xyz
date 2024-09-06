@@ -13,7 +13,6 @@ import Button from '../components/UI/Button'
 import PageSection from '../components/PageSection'
 import BackerLogos from '../components/Home/BackerLogos'
 import Calendar from '../components/Calendar'
-import AsSeenOn from '../components/AsSeenOn'
 import BoxLinkSimple from '../components/BoxLinkSimple'
 import Rip from '../components/Svg/Home/Rip/Responsive'
 import Audits from '../components/Home/Audits'
@@ -187,62 +186,49 @@ const IndexPage = ({ data }) => {
                 </GlitchTitle>
               </h2>
               <div className="py-8 lg:pt-16">
-                <div className="mb-12 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-12">
+                <div className="mb-12 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:gap-x-8 lg:gap-y-12">
                   <FeatureBox
                     title={t('Non-custodial and pseudonymous')}
-                    description={t('No third party has access to your funds.')}
+                    description={t(
+                      'All interactions are via public key cryptography with no backdoors or admin keys.'
+                    )}
                     icon={NonCustodialIcon}
                   />
                   <FeatureBox
-                    title={t('Purpose built proof of stake blockchain')}
+                    title={t('Purpose built appchain for trading')}
                     description={t(
-                      'Fully decentralised high performance peer-to-network trading.'
+                      'Vega can be deployed as a CometBFT based proof-of-stake chain.'
                     )}
                     icon={PurposeBuiltBlockChainIcon}
                   />
                   <FeatureBox
-                    title={t('Low fees and no cost to place orders')}
+                    title={t('Unique and configurable fee model')}
                     description={t(
-                      'Fees work like a CEX with no per-transaction gas for orders'
+                      'Trading optimised fees with no per-transaction “gas” costs for orders'
                     )}
                     icon={NoGasFeesIcon}
                   />
                   <FeatureBox
-                    title={t('Transparent and open source trading')}
+                    title={t('Open source protocol and software')}
                     description={t(
-                      'All Vega source code and trading data are publicly available.'
+                      'The protocol specs and software are open source.'
                     )}
                     icon={PseudononymousTradingIcon}
                   />
                   <FeatureBox
-                    title={t('Capital efficient margin trading')}
+                    title={t('Rich CEX-style order book and APIs')}
                     description={t(
-                      'Leveraged trading with full cross-margining.'
+                      'Data nodes provide order book and historic data APIs.'
                     )}
                     icon={HighCapitalEfficiencyIcon}
                   />
 
                   <FeatureBox
-                    title={t('Rich CEX-style order book and APIs')}
-                    description={t(
-                      'Fully decentralised limit order book (dCLOB) and historic data APIs.'
-                    )}
-                    icon={RichCEXStyleIcon}
-                  />
-                  <FeatureBox
-                    title={t('Decentralised liquidity incentivisation')}
-                    description={t(
-                      'Liquidity provision is fairly rewarded from fee revenue by the protocol.'
-                    )}
-                    icon={NativeLiquidityProvision}
-                  />
-
-                  <FeatureBox
                     title={t('Permissionless market creation')}
                     description={t(
-                      'Create any market on any underlying with on-chain governance'
+                      'Built in governance allows protocol users to create and manage markets.'
                     )}
-                    icon={PermissionlessMarketCreationIcon}
+                    icon={NativeLiquidityProvision}
                   />
                 </div>
               </div>
