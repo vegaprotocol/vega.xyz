@@ -73,7 +73,6 @@ const Header = ({ sticky }) => {
 
               <div className="flex items-center">
                 <ScreenMode />
-                <LanguageToggle />
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
                 {!menuIsOpen && (
                   <GeorestrictedContext.Consumer>
