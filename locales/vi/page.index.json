@@ -1,9 +1,8 @@
 {
   "Vega Protocol - Futures & Perpetuals DEX": "",
   "Discover Web3's native derivatives trading platform that is helping DeFi mature.": "Khám phá nền tảng giao dịch phái sinh gốc của Web3 đang giúp DeFi phát triển",
-  "Uncompromisingly Decentralised.": "Phi tập trung không thỏa hiệp",
-  "The world's most advanced DEX.": "Sàn DEX tiên tiến nhất thế giới",
-  "Cash settled futures and perpetuals are now live on Vega's Alpha Mainnet": "",
+  "Decentralised derivatives protocol": "Phi tập trung không thỏa hiệp",
+  "Vega is an open sourced protocol for creating and trading derivatives on a fully decentralised network.": "",
   "Launch console": "Mở bảng điều khiển",
   "Vega Wallet": "Ví Vega",
   "Docs": "Tài liệu",
@@ -28,11 +27,5 @@
   "View all": "Xem tất cả",
   "Programmatic trading on Vega": "Giao dịch có lập trình trên Vega",
   "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Kiến trúc nút dữ liệu phi tập trung của Vega cung cấp các API phong phú giống như CEX và dữ liệu giá lịch sử đầy đủ cho mọi người",
-  "Explore": "Khám phá",
-  "Events": "Sự kiện",
-  "Where next?": "Điểm đến tiếp theo",
-  "Learn about Vega": "",
-  "Read the docs": "",
-  "Launch Console": "",
-  "Staking & Governance": ""
+  "Explore": "Khám phá"
 }

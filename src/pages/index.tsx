@@ -72,16 +72,12 @@ const IndexPage = ({ data }) => {
                 <div className="md:pr-space-6 lg:pr-0">
                   <div className="mx-auto mb-space-7 max-w-[20.9375rem] md:mx-0 md:max-w-[28.75rem]">
                     <h1 className="mb-space-2 text-[2rem] leading-none md:text-[2.5rem] lg:text-[3rem]">
-                      <Trans t={t}>Uncompromisingly Decentralised.</Trans>
-                      <br />
-                      <span className="text-vega-dark-300">
-                        <Trans t={t}>The world's most advanced DEX.</Trans>
-                      </span>
+                      <Trans t={t}>Decentralised derivatives protocol</Trans>
                     </h1>
                     <div className="text-[1.125rem] leading-normal md:text-[1.5rem]">
                       <Trans t={t}>
-                        Cash settled futures and perpetuals are now live on
-                        Vega's Alpha Mainnet
+                        Vega is an open sourced protocol for creating and
+                        trading derivatives on a fully decentralised network.
                       </Trans>
                     </div>
                   </div>
@@ -140,7 +136,7 @@ const IndexPage = ({ data }) => {
                   <div className="absolute bottom-0 right-0 z-10 hidden h-[120px] w-[175px] translate-y-[5.625rem] md:block">
                     <PlanetB />
                   </div>
-                  <div className="relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:from-10% after:to-white/0 after:to-100% dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
+                  <div className="after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
                     <div className="w-full overflow-hidden md:h-[460px] 2xl:origin-right 2xl:scale-110">
                       <GatsbyImage
                         image={getImage(data.consoleDark)}
@@ -176,10 +172,6 @@ const IndexPage = ({ data }) => {
           </Container>
 
           <Container>
-            <div className="mb-space-10 mt-space-6 md:my-space-12 lg:my-space-14">
-              <Statistics />
-            </div>
-
             <div className="mb-space-10 mt-space-6 md:my-space-12 lg:my-space-14">
               <LatestNews
                 blogPosts={data.blogPosts}
@@ -253,11 +245,6 @@ const IndexPage = ({ data }) => {
                     icon={PermissionlessMarketCreationIcon}
                   />
                 </div>
-                <div className="text-center">
-                  <Button to="/key-concepts">
-                    <Trans t={t}>View all</Trans>
-                  </Button>
-                </div>
               </div>
             </div>
           </Container>
@@ -316,37 +303,6 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
             </PageSection> */}
-
-            <div className="mb-0 mt-space-10 md:my-space-12 lg:my-space-14">
-              <AsSeenOn />
-            </div>
-
-            <div className="my-space-10 md:my-space-12 lg:my-space-14">
-              <h2 className="title-l lg:title-xl mb-space-10 text-center text-center md:mb-space-10">
-                <GlitchTitle color="red">
-                  <Trans t={t}>Where next?</Trans>
-                </GlitchTitle>
-              </h2>
-
-              <div className="mx-auto grid max-w-[12rem] gap-6 md:max-w-[70rem] md:grid-cols-2 lg:grid-cols-4">
-                <BoxLinkSimple
-                  text={t('Learn about Vega')}
-                  link="/key-concepts"
-                />
-                <BoxLinkSimple
-                  text={t('Read the docs')}
-                  link="https://docs.vega.xyz/"
-                />
-                <BoxLinkSimple
-                  text={t('Launch Console')}
-                  link="https://console.vega.xyz/"
-                />
-                <BoxLinkSimple
-                  text={t('Staking & Governance')}
-                  link="/governance"
-                />
-              </div>
-            </div>
           </Container>
         </div>
       </main>

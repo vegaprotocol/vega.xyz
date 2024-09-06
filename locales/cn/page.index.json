@@ -1,9 +1,8 @@
 {
   "Vega Protocol - Futures & Perpetuals DEX": "",
   "Discover Web3's native derivatives trading platform that is helping DeFi mature.": "探索正在帮助 DeFi 成熟的 Web3 原生衍生品交易平台",
-  "Uncompromisingly Decentralised.": "去中心化",
-  "The world's most advanced DEX.": "全球最先进的DEX",
-  "Cash settled futures and perpetuals are now live on Vega's Alpha Mainnet": "",
+  "Decentralised derivatives protocol": "去中心化",
+  "Vega is an open sourced protocol for creating and trading derivatives on a fully decentralised network.": "",
   "Launch console": "启动控制台",
   "Vega Wallet": "Vega钱包",
   "Docs": "文件",
@@ -28,11 +27,5 @@
   "View all": "查看全部",
   "Programmatic trading on Vega": "Vega 上的程序化交易",
   "Vega's decentralised datanode architecture provides rich CEX-like APIs and full historic price data for everyone.": "Vega 的去中心化数据节点架构为每个人提供了丰富的类似 CEX 的 API 和完整的历史价格数据",
-  "Explore": "探索",
-  "Events": "事件",
-  "Where next?": "接下来",
-  "Learn about Vega": "",
-  "Read the docs": "",
-  "Launch Console": "",
-  "Staking & Governance": ""
+  "Explore": "探索"
 }
