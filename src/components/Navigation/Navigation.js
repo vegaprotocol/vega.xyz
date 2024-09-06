@@ -1,6 +1,5 @@
 import React from 'react'
 import Community from './items/Community'
-import Governance from './items/Governance'
 import About from './items/About'
 import Ecosystem from './items/Ecosystem'
 import Dropdown from './Dropdown'
