@@ -16,9 +16,10 @@ const Navigation = () => {
           <About />
         </Dropdown>
         <MainItem link="https://docs.vega.xyz/" text={t('Docs')} />
-        <Dropdown title={t('Governance')} link="/governance/">
-          <Governance />
-        </Dropdown>
+        <MainItem
+          link="https://governance.vega.xyz/proposals"
+          text={t('Governance')}
+        />
         <Dropdown title={t('Community')} link="/community/">
           <Community />
         </Dropdown>
