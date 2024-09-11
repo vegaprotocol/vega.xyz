@@ -1,9 +1,7 @@
 {
   "About": "",
   "Blog": "Блог",
-  "FAQs": "",
   "Articles": "",
-  "Key Concepts": "",
   "Vega Papers": "",
   "Docs": "",
   "Vega Docs": "",
@@ -41,6 +39,7 @@
   "Brand assets": "Активы бренда",
   "Contribute to Vega": "Внести вклад в Vega",
   "Privacy & Cookie Policy": "Политика конфиденциальности и использования файлов cookie",
+  "Key Concepts": "",
   "Papers": "",
   "Articles & Talks": "",
   "Fairground": "",

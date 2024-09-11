@@ -1,9 +1,7 @@
 {
   "About": "关于",
   "Blog": "博客",
-  "FAQs": "常见问题解答",
   "Articles": "",
-  "Key Concepts": "",
   "Vega Papers": "VEGA 论文",
   "Docs": "文档",
   "Vega Docs": "",
@@ -41,6 +39,7 @@
   "Brand assets": "品牌资产",
   "Contribute to Vega": "为Vega做出贡献",
   "Privacy & Cookie Policy": "隐私和 Cookie 政策",
+  "Key Concepts": "",
   "Papers": "",
   "Articles & Talks": "",
   "Fairground": "测试网Fairground",

@@ -1,9 +1,7 @@
 {
   "About": "About",
   "Blog": "Blog",
-  "FAQs": "FAQs",
   "Articles": "Articles",
-  "Key Concepts": "Key Concepts",
   "Vega Papers": "Vega Papers",
   "Docs": "Docs",
   "Vega Docs": "Vega Docs",
@@ -41,6 +39,7 @@
   "Brand assets": "Brand assets",
   "Contribute to Vega": "Contribute to Vega",
   "Privacy & Cookie Policy": "Privacy & Cookie Policy",
+  "Key Concepts": "Key Concepts",
   "Papers": "Papers",
   "Articles & Talks": "Articles & Talks",
   "Fairground": "Fairground",
