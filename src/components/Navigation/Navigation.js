@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <nav>
       <ul className="text-lg tracking-wide lg:flex">
-        <Dropdown title={t('About')} link="/key-concepts/">
+        <Dropdown title={t('About')} link="/papers/">
           <About />
         </Dropdown>
         <MainItem link="https://docs.vega.xyz/" text={t('Docs')} />

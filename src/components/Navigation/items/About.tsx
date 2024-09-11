@@ -7,7 +7,6 @@ const About = () => {
   const { t } = useTranslation('component.navigation')
   return (
     <NavigationList>
-      <NavigationItem text={t('Key Concepts')} link="/key-concepts/" />
       <NavigationItem text={t('Papers')} link="/papers/" />
       <NavigationItem text={t('Articles & Talks')} link="/articles/" />
       <NavigationItem text={t('Blog')} link="https://blog.vega.xyz" />

@@ -1,9 +1,7 @@
 {
   "About": "Về Vega",
   "Blog": "Blog",
-  "FAQs": "FAQs",
   "Articles": "",
-  "Key Concepts": "Các khái niệm chính",
   "Vega Papers": "Tài liệu Vega",
   "Docs": "Tài liệu",
   "Vega Docs": "Tài liệu của Vega",
@@ -41,6 +39,7 @@
   "Brand assets": "Tài sản thương hiệu",
   "Contribute to Vega": "Đóng góp cho Vega",
   "Privacy & Cookie Policy": "Chính sách quyền riêng tư & cookie",
+  "Key Concepts": "Các khái niệm chính",
   "Papers": "Tài liệu",
   "Articles & Talks": "",
   "Fairground": "Fairground",
