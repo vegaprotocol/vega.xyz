@@ -1,6 +1,5 @@
 import React from 'react'
 import Community from './items/Community'
-import Governance from './items/Governance'
 import About from './items/About'
 import Ecosystem from './items/Ecosystem'
 import Dropdown from './Dropdown'
@@ -16,9 +15,10 @@ const Navigation = () => {
           <About />
         </Dropdown>
         <MainItem link="https://docs.vega.xyz/" text={t('Docs')} />
-        <Dropdown title={t('Governance')} link="/governance/">
-          <Governance />
-        </Dropdown>
+        <MainItem
+          link="https://governance.vega.xyz/proposals"
+          text={t('Governance')}
+        />
         <Dropdown title={t('Community')} link="/community/">
           <Community />
         </Dropdown>

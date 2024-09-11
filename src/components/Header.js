@@ -6,7 +6,6 @@ import VegaLogo from '../components/Svg/VegaLogo'
 import MobileMenu from '../components/Navigation/MobileMenu'
 import MobileMenuButton from '../components/Navigation/MobileMenuButton'
 import HeaderCta from '../components/HeaderCta'
-import LanguageToggle from '../components/LanguageToggle'
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import { GeorestrictedContext } from '../context/georestricted'
@@ -73,7 +72,6 @@ const Header = ({ sticky }) => {
 
               <div className="flex items-center">
                 <ScreenMode />
-                <LanguageToggle />
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
                 {!menuIsOpen && (
                   <GeorestrictedContext.Consumer>

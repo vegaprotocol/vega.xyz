@@ -20,7 +20,6 @@ import GraphQL from '../../components/Svg/GraphQL'
 import CoreNodes from '../../components/RestAPI/CoreNodes'
 import DataNodes from '../../components/RestAPI/DataNodes'
 import VegaWallet from '../../components/RestAPI/VegaWallet'
-import NetworkParameter from '../../components/NetworkParameter'
 
 const ProgrammaticTrading = ({ data }) => {
   const { t, i18n } = useTranslation('page.programmatic-trading')
@@ -33,14 +32,9 @@ const ProgrammaticTrading = ({ data }) => {
   const MarketMakerText = () => {
     return (
       <Trans t={t}>
-        Users who place static or pegged order limit volume on the book will
-        receive{' '}
-        <NetworkParameter
-          param="market_fee_factors_makerFee"
-          expressPercentage
-          suffix="%"
-        ></NetworkParameter>{' '}
-        of the trade value when an incoming trade matches their order.
+        User who place static or pagged order limit volume on the book will
+        receive a percentage of the trade value when matched based on the maker
+        fee factor set on the network
       </Trans>
     )
   }
@@ -156,13 +150,15 @@ const ProgrammaticTrading = ({ data }) => {
 
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <h3 className="mb-space-4 text-[2rem] leading-none">
-            <Trans t={t}>2. Vega Wallet</Trans>
+            <Trans t={t}>2. CLI Wallet</Trans>
           </h3>
 
           <p className="body-xl mb-space-4">
             <Trans t={t}>
-              Download the CLI wallet for developer access to programmatically
-              sign transactions and access any dApps on the network.
+              A version of the command line wallet is shopped with every new
+              version of the protocol allowing developers to programmatically
+              sign transactions and access dApps on any network running the
+              protocol
             </Trans>
           </p>
 
@@ -176,7 +172,7 @@ const ProgrammaticTrading = ({ data }) => {
           <Callout
             title={t('Advanced: Set up your own test network')}
             subtitle={t(
-              'Experiment with the protocol by creating an instance of the Vega network on your computer.'
+              'Experiment with the protocol by creating your own network on your computer'
             )}
             link="https://github.com/vegaprotocol/vegacapsule#readme"
             linkText={t('Install Vega capsule')}
@@ -230,7 +226,7 @@ const ProgrammaticTrading = ({ data }) => {
                 variant="secondary"
                 to="https://docs.vega.xyz/mainnet/concepts/vega-wallet"
               >
-                <Trans t={t}>View Vega Wallet API</Trans>
+                <Trans t={t}>View wallet APIs</Trans>
               </Button>
             </div>
           </div>
