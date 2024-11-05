@@ -29,25 +29,6 @@ body {
   @apply bg-vega-box-grey;
 }
 
-/* sets correct placement of hover boxes in the contributors grid - a little too complex to do with tailwind */
-.contributor-block .contributor-block-detail {
-  left: 50%;
-  right: 0;
-  transform: translateX(-50%);
-}
-
-.contributor-block:nth-child(4n) .contributor-block-detail {
-  right: 0;
-  left: auto;
-  transform: none;
-}
-
-.contributor-block:nth-child(4n + 1) .contributor-block-detail {
-  left: 0;
-  right: auto;
-  transform: none;
-}
-
 body.georestricted #liquidity-provision,
 body.georestricted .liquidity-provision-page-section,
 body.georestricted .restricted-link {
@@ -87,7 +68,7 @@ body.georestricted .restricted-link {
   }
 
   .market-swiper .swiper-pagination {
-    @apply right-space-3 !left-auto w-1/2 text-right;
+    @apply !left-auto right-space-3 w-1/2 text-right;
   }
 
   .market-swiper .swiper-pagination-bullet {

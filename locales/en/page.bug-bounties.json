@@ -1,6 +1,4 @@
 {
-  "Your message was successfully encrypted and delivered.": "Your message was successfully encrypted and delivered.",
-  "Sorry, your submission failed, please try again later.": "Sorry, your submission failed, please try again later.",
   "Bug bounties": "Bug bounties",
   "Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.": "Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.",
   "If you believe that you have spotted a vulnerability in either the Vega protocol software (node, data node, wallet, etc.) or network or any supporting systems or code used by the project, please submit a bug report by email or the web-form as described below to have this situation resolved as soon as possible.": "If you believe that you have spotted a vulnerability in either the Vega protocol software (node, data node, wallet, etc.) or network or any supporting systems or code used by the project, please submit a bug report by email or the web-form as described below to have this situation resolved as soon as possible.",
@@ -18,12 +16,6 @@
   "As a decentralized system, we are entirely separate from any validators running the Vega protocol and vulnerabilities relevant to specific validators should be reported to them directly (though feel free to let us know if you think a validator is not responding appropriately). In addition, we have no influence on how the validators (or their cloud providers) might react if you poke their systems, so we cannot help you if you do so in any way that upsets them. For testing your discoveries, using a separate protocol instance that you can run for yourselves is advised. The best way to do this is via the <2><0></0>Vega Capsule tool</2>.": "As a decentralized system, we are entirely separate from any validators running the Vega protocol and vulnerabilities relevant to specific validators should be reported to them directly (though feel free to let us know if you think a validator is not responding appropriately). In addition, we have no influence on how the validators (or their cloud providers) might react if you poke their systems, so we cannot help you if you do so in any way that upsets them. For testing your discoveries, using a separate protocol instance that you can run for yourselves is advised. The best way to do this is via the <2><0></0>Vega Capsule tool</2>.",
   "Encrypted or anonymous submissions": "Encrypted or anonymous submissions",
   "If you want to send an encrypted message to security@vegaprotocol.io, you can use our PGP key, which is detailed below.": "If you want to send an encrypted message to security@vegaprotocol.io, you can use our PGP key, which is detailed below.",
-  "For anonymous submissions, you can use the following form:": "For anonymous submissions, you can use the following form:",
-  "Send Message": "Send Message",
-  "Submit bug report": "Submit bug report",
-  "Are you sure you want to submit the form?": "Are you sure you want to submit the form?",
-  "Cancel": "Cancel",
-  "Submit": "Submit",
   "PGP Key": "PGP Key",
   "This is the PGP key that can be used to securely submit security issues to the project team. Please note that this is the only usage of the key; especially, this key will never be used to issue signatures that are in any way meaningful or binding. We also may change the key at any time, so please make sure to check here for the current version.": "This is the PGP key that can be used to securely submit security issues to the project team. Please note that this is the only usage of the key; especially, this key will never be used to issue signatures that are in any way meaningful or binding. We also may change the key at any time, so please make sure to check here for the current version."
 }

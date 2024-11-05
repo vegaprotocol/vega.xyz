@@ -4,7 +4,6 @@ import Container from '../components/Container'
 import SquareBullet from '../components/Svg/SquareBullet'
 import IconDiscord from '../components/Svg/IconDiscord'
 import IconGithub from '../components/Svg/IconGithub'
-import IconTelegram from '../components/Svg/IconTelegram'
 import IconTwitter from '../components/Svg/IconTwitter'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
@@ -56,46 +55,6 @@ const Footer = () => {
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Vega Docs</Trans>
-                  </TextLink>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="mb-3 text-[0.9375rem] uppercase">
-                <SquareBullet size="11" />
-                <Trans t={t}>Governance</Trans>
-              </div>
-              <ul>
-                <li>
-                  <TextLink
-                    to="/governance/"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Intro</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://community.vega.xyz/c/governance/25"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Forums</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://governance.vega.xyz/"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Governance dApp</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://docs.vega.xyz/mainnet/concepts/governance"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Governance docs</Trans>
                   </TextLink>
                 </li>
               </ul>
@@ -216,13 +175,6 @@ const Footer = () => {
                 target="_blank"
               >
                 <IconGithub />
-              </a>
-              <a
-                href="https://t.me/vegacommunity/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <IconTelegram />
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
