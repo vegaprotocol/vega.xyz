@@ -23,10 +23,6 @@
       "destination": "/papers"
     },
     {
-      "source": "/who",
-      "destination": "/partners-backers"
-    },
-    {
       "source": "/assets/vega-technical-overview.pdf",
       "destination": "/papers/vega-technical-overview.pdf"
     },

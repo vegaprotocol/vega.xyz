@@ -103,70 +103,6 @@ const Footer = () => {
             <div>
               <div className="mb-3 text-[0.9375rem] uppercase">
                 <SquareBullet size="11" />
-                <Trans t={t}>Community</Trans>
-              </div>
-              <ul>
-                <li>
-                  <TextLink
-                    to="/community/contributors"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Contributors</Trans>
-                  </TextLink>
-                </li>
-                {/* <li>
-                  <TextLink
-                    to="/community/events"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Events & Meetups</Trans>
-                  </TextLink>
-                </li> */}
-                <li>
-                  <TextLink
-                    to="https://fairground.wtf/"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Fairground incentives</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="/community"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Community Home</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="/community#partners-backers"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Partners & Backers</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://github.com/vegaprotocol/feedback/discussions"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Provide Feedback</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="/bug-bounties"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Report a Security Issue</Trans>
-                  </TextLink>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="mb-3 text-[0.9375rem] uppercase">
-                <SquareBullet size="11" />
                 <Trans t={t}>Ecosystem</Trans>
               </div>
               <ul>
@@ -249,50 +185,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <TextLink
-                    to="https://community.vega.xyz/c/governance/25"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Forum</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://t.me/vegacommunity/"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Telegram</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
                     to="https://twitter.com/vegaprotocol"
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>X (Formerly Twitter)</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://vegacommunity.substack.com/"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Substack</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://www.youtube.com/vegaprotocol"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>YouTube</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://www.twitch.tv/vegaprotocol"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Twitch</Trans>
                   </TextLink>
                 </li>
                 <li>
@@ -354,12 +250,6 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-              <TextLink to="https://blog.vega.xyz/tagged/vega-incident-reports">
-                <Trans t={t}>Mainnet status and incidents</Trans>
-              </TextLink>
-              <TextLink to="/bug-bounties">
-                <Trans t={t}>Report a security issue</Trans>
-              </TextLink>
               <TextLink to="https://github.com/vegaprotocol/brand">
                 <Trans t={t}>Brand assets</Trans>
               </TextLink>

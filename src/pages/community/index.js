@@ -5,13 +5,11 @@ import Layout from '../../components/Layout'
 import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import ButtonLink from '../../components/ButtonLink'
-import Calendar from '../../components/Calendar'
 import Fairground from '../../components/Fairground'
 import PageHeader from '../../components/UI/PageHeader'
 import { getImage } from 'gatsby-plugin-image'
 import CommunityResponsive from '../../components/Svg/Community/Hero/Responsive'
 import ToolBox from '../../components/ToolBox'
-import PartnerBackers from '../../components/PartnerBackers'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const CommunityPage = ({ data }) => {
@@ -181,8 +179,6 @@ const CommunityPage = ({ data }) => {
           />
         </div>
       </Container>
-
-      <PartnerBackers />
 
       <Fairground />
     </Layout>

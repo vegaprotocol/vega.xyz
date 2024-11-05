@@ -6,14 +6,8 @@ import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Seo from '../components/Seo'
 import TranslationsBanner from '../components/TranslationsBanner'
-import Statistics from '../components/Home/Statistics'
 import GlitchTitle from '../components/UI/GlitchTitle'
-import LatestNews from '../components/LatestNews'
 import Button from '../components/UI/Button'
-import PageSection from '../components/PageSection'
-import BackerLogos from '../components/Home/BackerLogos'
-import Calendar from '../components/Calendar'
-import BoxLinkSimple from '../components/BoxLinkSimple'
 import Rip from '../components/Svg/Home/Rip/Responsive'
 import Audits from '../components/Home/Audits'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -23,15 +17,12 @@ import Explore from '../components/Svg/Home/Explore'
 import LogoGRPC from '../components/Svg/LogoGRPC'
 import LogoGraphQL from '../components/Svg/LogoGraphQL'
 import LogoRestAPI from '../components/Svg/LogoRestAPI'
-import PermissionlessMarketCreationIcon from '../images/feature-icons/permissionless-market-creation.svg'
 import NonCustodialIcon from '../images/feature-icons/non-custodial.svg'
 import PurposeBuiltBlockChainIcon from '../images/feature-icons/purpose-built.svg'
 import PseudononymousTradingIcon from '../images/feature-icons/pseudononymous-trading.svg'
 import HighCapitalEfficiencyIcon from '../images/feature-icons/high-capital-efficiency.svg'
 import NoGasFeesIcon from '../images/feature-icons/no-gas-fees.svg'
 import NativeLiquidityProvision from '../images/feature-icons/native-liquidity-provision.svg'
-import RichCEXStyleIcon from '../images/feature-icons/rich-cex-style.svg'
-// import { AnnouncementBanner } from '../components/AnnouncementRemote'
 
 const FeatureBox = ({ title, description, icon }) => {
   return (
@@ -119,13 +110,6 @@ const IndexPage = ({ data }) => {
                     </div>
                   </div>
                 </div>
-
-                <div className="lg:mt-space-16 mt-space-8 hidden md:block">
-                  <div className="heading-xxs !font-not-glitched mb-space-6 text-vega-dark-300">
-                    <Trans t={t}>Backed by:</Trans>
-                  </div>
-                  <BackerLogos />
-                </div>
               </div>
               <div className="md:col-span-6 xl:flex xl:justify-end">
                 <div className="relative">
@@ -135,7 +119,7 @@ const IndexPage = ({ data }) => {
                   <div className="absolute bottom-0 right-0 z-10 hidden h-[120px] w-[175px] translate-y-[5.625rem] md:block">
                     <PlanetB />
                   </div>
-                  <div className="after:from-10% after:to-100% relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:to-white/0 dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
+                  <div className="relative after:absolute after:bottom-0 after:right-0 after:top-0 after:w-[7.375rem] after:bg-gradient-to-l after:from-white after:from-10% after:to-white/0 after:to-100% dark:after:from-black dark:after:to-black/0 md:translate-x-4 md:translate-x-6 lg:translate-x-8 2xl:after:origin-right 2xl:after:scale-110">
                     <div className="w-full overflow-hidden md:h-[460px] 2xl:origin-right 2xl:scale-110">
                       <GatsbyImage
                         image={getImage(data.consoleDark)}
@@ -162,23 +146,9 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className="md:hidden">
-              <div className="heading-xxs !font-not-glitched mb-space-4 text-vega-dark-300">
-                <Trans t={t}>Backed by:</Trans>
-              </div>
-              <BackerLogos />
-            </div>
           </Container>
 
           <Container>
-            <div className="mb-space-10 mt-space-6 md:my-space-12 lg:my-space-14">
-              <LatestNews
-                blogPosts={data.blogPosts}
-                talks={data.talks}
-                articles={data.articles}
-              />
-            </div>
-
             <div className="mt-16 md:mt-32 lg:mt-40">
               <h2 className="title-l lg:title-xl mb-12 text-center">
                 <GlitchTitle color="orange">
@@ -275,20 +245,6 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
             </div>
-
-            {/* <PageSection>
-              <div className="lg:grid lg:grid-cols-12">
-                <div className="lg:col-span-4">
-                  <div className="title-l mb-8 hyphens-auto">
-                    <Trans t={t}>Events</Trans>
-                  </div>
-                </div>
-
-                <div className="lg:col-span-8">
-                  <Calendar limit={3} />
-                </div>
-              </div>
-            </PageSection> */}
           </Container>
         </div>
       </main>
