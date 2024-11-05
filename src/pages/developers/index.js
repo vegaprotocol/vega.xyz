@@ -64,7 +64,7 @@ const DevelopPage = ({ data }) => {
             <h2 className="mb-space-7 text-center text-[40px]">
               <Trans t={t}>Getting Started</Trans>
             </h2>
-            <div className="md:grid-cols-auto mx-auto mb-space-9 grid max-w-[72rem] grid-cols-12 gap-space-5 md:mb-space-14 lg:grid-cols-5">
+            <div className="md:grid-cols-auto mx-auto mb-space-9 grid max-w-[72rem] grid-cols-12 gap-space-5 md:mb-space-14 lg:grid-cols-4">
               <Box
                 title={t('Github')}
                 icon={<IconGithub />}
@@ -81,12 +81,6 @@ const DevelopPage = ({ data }) => {
                 link="/programmatic-trading"
               />
               <Box
-                title={t('Report a security issue')}
-                icon={<IconSecurity />}
-                link="/bug-bounties"
-              />
-              <Box
-                className="col-start-4"
                 title={t('Discord')}
                 icon={<IconDiscord />}
                 link="https://vega.xyz/discord"

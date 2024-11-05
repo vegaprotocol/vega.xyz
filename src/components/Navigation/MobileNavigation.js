@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 import About from './items/About'
-import Community from './items/Community'
-import Governance from './items/Governance'
-import Ecosystem from './items/Ecosystem'
 import MobileDropdown from './MobileDropdown'
 import Link from '../../components/UI/Link'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
@@ -35,30 +32,18 @@ const MobileNavigation = () => {
         >
           <Trans t={t}>Docs</Trans>
         </Link>
-        <MobileDropdown
-          title={t('Governance')}
-          id={2}
-          show={showId === 2}
-          onShow={handleShow}
+        <Link
+          to="/developers"
+          className="font-not-glitched block py-3 text-[2.125rem] uppercase"
         >
-          <Governance />
-        </MobileDropdown>
-        <MobileDropdown
-          title={t('Community')}
-          id={3}
-          show={showId === 3}
-          onShow={handleShow}
+          <Trans t={t}>Developers</Trans>
+        </Link>
+        <Link
+          to="https://discord.com/invite/3hQyGgZ"
+          className="font-not-glitched block py-3 text-[2.125rem] uppercase"
         >
-          <Community />
-        </MobileDropdown>
-        <MobileDropdown
-          title={t('Ecosystem')}
-          id={4}
-          show={showId === 4}
-          onShow={handleShow}
-        >
-          <Ecosystem />
-        </MobileDropdown>
+          <Trans t={t}>Docs</Trans>
+        </Link>
       </ul>
     </nav>
   )

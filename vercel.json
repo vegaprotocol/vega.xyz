@@ -11,18 +11,6 @@
       "destination": "https://discord.gg/3hQyGgZ"
     },
     {
-      "source": "/about",
-      "destination": "/key-concepts"
-    },
-    {
-      "source": "/insights",
-      "destination": "/articles"
-    },
-    {
-      "source": "/background",
-      "destination": "/papers"
-    },
-    {
       "source": "/assets/vega-technical-overview.pdf",
       "destination": "/papers/vega-technical-overview.pdf"
     },
@@ -37,14 +25,6 @@
     {
       "source": "/buildersclubform",
       "destination": "https://vegaprotocol.typeform.com/to/YgOgiGqF"
-    },
-    {
-      "source": "/apps",
-      "destination": "/ecosystem"
-    },
-    {
-      "source": "/apps/",
-      "destination": "/ecosystem"
     }
   ]
 }

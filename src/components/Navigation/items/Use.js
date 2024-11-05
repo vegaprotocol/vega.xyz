@@ -13,7 +13,6 @@ const Use = () => {
           <Trans t={t}>Infrastructure</Trans>
         </NavigationHeading>
         <NavigationList>
-          <NavigationItem text={t('Use the network')} link="/ecosystem" />
           <NavigationItem text={t('Get the Vega Wallet')} link="/wallet" />
           <NavigationItem
             text={t('Validate and secure the network')}
