@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import { GeorestrictedContext } from '../context/georestricted'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Seo from '../components/Seo'
-import TranslationsBanner from '../components/TranslationsBanner'
 import GlitchTitle from '../components/UI/GlitchTitle'
 import Button from '../components/UI/Button'
 import Rip from '../components/Svg/Home/Rip/Responsive'
@@ -39,11 +38,7 @@ const FeatureBox = ({ title, description, icon }) => {
 }
 
 const IndexPage = ({ data }) => {
-  const { t, i18n } = useTranslation('page.index')
-  const [missingTranslations, setMissingTranslations] = useState(false)
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
+  const { t } = useTranslation('page.index')
 
   return (
     <Layout>
@@ -53,7 +48,6 @@ const IndexPage = ({ data }) => {
           "Discover Web3's native derivatives trading platform that is helping DeFi mature."
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <main>
         <div data-cy="main">
           <Container>

@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Seo from '../../components/Seo'
 import Button from '../../components/UI/Button'
@@ -22,13 +21,7 @@ import DataNodes from '../../components/RestAPI/DataNodes'
 import VegaWallet from '../../components/RestAPI/VegaWallet'
 
 const ProgrammaticTrading = ({ data }) => {
-  const { t, i18n } = useTranslation('page.programmatic-trading')
-  const [missingTranslations, setMissingTranslations] = useState(false)
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
-
+  const { t } = useTranslation('page.programmatic-trading')
   const MarketMakerText = () => {
     return (
       <Trans t={t}>
@@ -47,7 +40,6 @@ const ProgrammaticTrading = ({ data }) => {
           'Programmatic trading on Vega is enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies.'
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="mx-auto mb-space-10 max-w-[60rem] pt-space-5 text-center md:mb-space-11 md:pt-space-6 lg:pt-space-10">
           <PageHeader
@@ -83,7 +75,7 @@ const ProgrammaticTrading = ({ data }) => {
           />
         </div>
 
-        <h2 className="mt-space-10 mb-space-6 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
+        <h2 className="mb-space-6 mt-space-10 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
           <Trans t={t}>Starter kit</Trans>
         </h2>
 
@@ -232,7 +224,7 @@ const ProgrammaticTrading = ({ data }) => {
           </div>
 
           <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-            <div className="mt-space-6 mb-space-6 mb-space-10 flex items-center gap-x-10">
+            <div className="mb-space-10 mb-space-6 mt-space-6 flex items-center gap-x-10">
               <div className="heading-s">
                 <Trans t={t}>Accessed via:</Trans>
               </div>
@@ -311,7 +303,7 @@ const ProgrammaticTrading = ({ data }) => {
         </div>
 
         <div className="mb-space-10 md:mb-space-11 md:grid-cols-2 lg:mb-space-14">
-          <h2 className="mt-space-10 mb-space-6 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
+          <h2 className="mb-space-6 mt-space-10 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
             <Trans t={t}>Key Resources</Trans>
           </h2>
 

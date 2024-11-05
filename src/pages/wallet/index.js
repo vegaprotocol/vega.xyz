@@ -12,7 +12,6 @@ import SectionScrollButton from '../../components/UI/SectionScrollButton/Section
 import Link from '../../components/UI/Link'
 import DropdownArrow from '../../components/Svg/DropdownArrow'
 import TeamTile from '../../components/UI/TeamTile'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Sticky from 'react-stickynode'
 import ScrollSpy from 'react-ui-scrollspy'
 import Tooltip from '../../components/UI/Tooltip'
@@ -27,13 +26,8 @@ import './wallet.css'
 import { useDesktopWalletFairgroundDownloads } from '../../hooks/use-desktop-wallet-fairground-downloads'
 
 const WalletPageNew = ({ data }) => {
-  const { i18n, t } = useTranslation('page.wallet')
-  const [missingTranslations, setMissingTranslations] = useState(false)
+  const { t } = useTranslation('page.wallet')
   const [userAgent, setUserAgent] = useState(false)
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
 
   const sections = [
     {
@@ -255,8 +249,7 @@ const WalletPageNew = ({ data }) => {
       'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-beta/'
 
     if (network === 'Testnet') {
-      link =
-        'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-beta/'
+      link = 'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-beta/'
     }
     return (
       <div
@@ -287,7 +280,6 @@ const WalletPageNew = ({ data }) => {
           "Connect to Vega dapps securely, deposit funds and approve or reject transactions with the Vega wallet. Download, set up and you're ready to connect"
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="xl:items-top mb-space-6 items-center gap-x-space-6 pt-6 md:mb-space-10 md:grid md:grid-cols-12 lg:pt-16">
           <div className="pb-space-10 md:col-span-6 md:py-space-6">

@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Seo from '../../components/Seo'
 import { graphql } from 'gatsby'
@@ -18,13 +17,8 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { useNetworkParams } from '../../hooks/use-network-params'
 
 const ValidatorsPage = ({ data }) => {
-  const { t, i18n } = useTranslation('page.validators')
-  const [missingTranslations, setMissingTranslations] = useState(false)
+  const { t } = useTranslation('page.validators')
   const { params } = useNetworkParams()
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
 
   const Arrow = () => {
     return (
@@ -98,7 +92,6 @@ const ValidatorsPage = ({ data }) => {
           "Vega is a delegated proof of stake network with a finite number of validators, rewarded for securing the network. Consensus validators run a node validating the blocks containing the network's transactions and Vega token holders nominate validators through staking - delegating their VEGA to their chosen validator."
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="mx-auto mb-space-8 pt-space-5 text-center md:pt-space-6 lg:pt-space-10">
           <PageHeader

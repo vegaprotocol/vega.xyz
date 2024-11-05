@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Seo from '../../components/Seo'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import ButtonLink from '../../components/ButtonLink'
 import Fairground from '../../components/Fairground'
@@ -13,12 +12,7 @@ import ToolBox from '../../components/ToolBox'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const CommunityPage = ({ data }) => {
-  const { i18n, t } = useTranslation('page.community')
-  const [missingTranslations, setMissingTranslations] = useState(false)
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
+  const { t } = useTranslation('page.community')
 
   return (
     <Layout>
@@ -28,7 +22,6 @@ const CommunityPage = ({ data }) => {
           'Learn, Test, Govern - where do you fit in the Vega Ecosystem?'
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="pt-6 lg:pt-10">
           <div className="mx-auto max-w-[61rem] pt-space-5 text-center">

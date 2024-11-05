@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Seo from '../../components/Seo'
 import { getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import MarketCreationResponsive from '../../components/Svg/MarketCreation/Hero/Responsive'
 import MarketCreationFooter from '../../components/Svg/MarketCreation/Footer'
@@ -23,12 +22,7 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import Callout from '../../components/UI/Callout'
 
 const MarketCreationPage = ({ data }) => {
-  const { i18n, t } = useTranslation('page.market-creation')
-  const [missingTranslations, setMissingTranslations] = useState(false)
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
+  const { t } = useTranslation('page.market-creation')
 
   const Phase3Text = () => {
     return (
@@ -176,7 +170,6 @@ const MarketCreationPage = ({ data }) => {
           "Bring the future of DeFi within reach - and create a futures market on any underlying. Attract liquidity with Vega's built-in incentive mechanism that matches traders and market makers."
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="mx-auto max-w-[52rem] pt-6 text-center lg:pt-24">
           <h1>

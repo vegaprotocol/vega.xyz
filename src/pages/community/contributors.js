@@ -2,20 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { graphql } from 'gatsby'
 import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Contributor from '../../components/Contributor'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import PageHeader from '../../components/UI/PageHeader'
 
 const Contributors = () => {
-  const { i18n, t } = useTranslation('page.community')
+  const { t } = useTranslation('page.community')
   const [contributors, setContributors] = useState(null)
-  const [missingTranslations, setMissingTranslations] = useState(false)
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
 
   useEffect(() => {
     async function fetchContributors() {
@@ -34,7 +28,6 @@ const Contributors = () => {
         title="Contributors"
         description="Explore the people who have made Vega the exciting DeFi solution that it is."
       />
-      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="mb-14 pt-6 lg:pt-16">
           <div className="mx-auto mb-6 max-w-[21.25rem] text-center md:mb-12 md:max-w-[40rem] lg:max-w-[44rem]">

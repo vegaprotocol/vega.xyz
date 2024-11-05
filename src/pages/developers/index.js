@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Developers from '../../components/Svg/Developers'
 import IconGithub from '../../components/Svg/OutlineIcons/Github'
 import IconDocumentation from '../../components/Svg/OutlineIcons/Documentation'
 import IconProgrammaticTrading from '../../components/Svg/OutlineIcons/ProgrammaticTrading'
 import IconDiscord from '../../components/Svg/OutlineIcons/Discord'
-import IconSecurity from '../../components/Svg/OutlineIcons/Security'
 import LinkWrapper from '../../components/UI/LinkWrapper'
 
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
@@ -28,12 +26,7 @@ const Box = ({ title, icon, link, className }) => {
 }
 
 const DevelopPage = ({ data }) => {
-  const { i18n, t } = useTranslation('page.develop')
-  const [missingTranslations, setMissingTranslations] = useState(false)
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
+  const { t } = useTranslation('page.develop')
 
   return (
     <Layout>
@@ -43,7 +36,6 @@ const DevelopPage = ({ data }) => {
           "Explore Vega's technical documentation, build integrations via APIs, or contribute to our open source repositories on Github"
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-10">
         <Container hideXOverflow={true}>
           <div className="mx-auto mb-space-9 text-center">
