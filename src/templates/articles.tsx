@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
@@ -10,6 +10,7 @@ import PageHeader from '../components/UI/PageHeader'
 
 const ArticlesPage = ({ data, pageContext }) => {
   const { t } = useTranslation('page.articles')
+  const [missingTranslations, setMissingTranslations] = useState(false)
   const { currentPage, numPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
@@ -98,7 +99,7 @@ const ArticlesPage = ({ data, pageContext }) => {
           </div>
 
           <div className="grid border-t border-vega-light-200 pt-space-6 dark:border-vega-dark-200 md:grid-cols-12 md:gap-space-8">
-            <div className="md:col-span-12">
+            <div className="col-span-12 md:col-span-12">
               {data.allMarkdownRemark.edges.map((content, idx) => (
                 <div key={idx}>
                   {content.node.collection === 'talks' ? (
