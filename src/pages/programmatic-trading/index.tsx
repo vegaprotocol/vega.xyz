@@ -57,7 +57,7 @@ const ProgrammaticTrading = ({ data }) => {
                 )}{' '}
                 <Link
                   className="text-vega-black underline hover:no-underline dark:text-vega-white"
-                  to="https://docs.vega.xyz/testnet/concepts/liquidity/provision"
+                  to="https://docs.vega.xyz/release/concepts/liquidity/provision"
                 >
                   Learn more
                 </Link>
@@ -147,7 +147,7 @@ const ProgrammaticTrading = ({ data }) => {
 
           <Button
             className="mb-space-6"
-            to="https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet"
+            to="https://docs.vega.xyz/release/tools/vega-wallet/cli-wallet/latest/create-wallet"
           >
             <Trans t={t}>Download CLI Wallet</Trans>
           </Button>
@@ -162,7 +162,7 @@ const ProgrammaticTrading = ({ data }) => {
             <InfoTile
               title={t('Getting started')}
               link={{
-                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/getting-started',
+                to: 'https://docs.vega.xyz/release/tutorials/building-a-bot/getting-started',
                 title: t('View'),
               }}
             >
@@ -177,7 +177,7 @@ const ProgrammaticTrading = ({ data }) => {
             <InfoTile
               title={t('Streaming data')}
               link={{
-                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/streaming-data',
+                to: 'https://docs.vega.xyz/release/tutorials/building-a-bot/streaming-data',
                 title: t('View'),
               }}
             >
@@ -190,7 +190,7 @@ const ProgrammaticTrading = ({ data }) => {
             <InfoTile
               title={t('Adding a liquidity commitment')}
               link={{
-                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/adding-a-liquidity-commitment',
+                to: 'https://docs.vega.xyz/release/tutorials/building-a-bot/adding-a-liquidity-commitment',
                 title: t('View'),
               }}
             >
@@ -203,7 +203,7 @@ const ProgrammaticTrading = ({ data }) => {
             <InfoTile
               title={t('Adding an external price feed')}
               link={{
-                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/adding-an-external-price',
+                to: 'https://docs.vega.xyz/release/tutorials/building-a-bot/adding-an-external-price',
                 title: t('View'),
               }}
             >
@@ -222,16 +222,16 @@ const ProgrammaticTrading = ({ data }) => {
           </h2>
 
           <div className="grid grid-cols-1 gap-space-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-space-7">
-            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/market-lifecycle">
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-on-vega/market-lifecycle">
               <Trans t={t}>Vega market lifecycle</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/trading-modes">
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-on-vega/trading-modes">
               <Trans t={t}>Vega trading modes</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/fees-rewards#">
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-on-vega/fees-rewards#">
               <Trans t={t}>Fees & trading rewards</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/liquidity/provision">
+            <ActionButton to="https://docs.vega.xyz/release/concepts/liquidity/provision">
               <Trans t={t}>Providing liquidity</Trans>
             </ActionButton>
           </div>

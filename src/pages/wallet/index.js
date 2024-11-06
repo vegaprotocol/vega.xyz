@@ -469,7 +469,7 @@ const WalletPageNew = ({ data }) => {
                 title={t('Integrate')}
                 body={t('Connect your dapp using the Vega wallet API')}
               >
-                <Button to="https://docs.vega.xyz/mainnet/category/api/wallet-api">
+                <Button to="https://docs.vega.xyz/release/category/api/wallet-api">
                   <Trans t={t}>Read the Docs</Trans>
                 </Button>
               </TeamTile>
@@ -479,7 +479,7 @@ const WalletPageNew = ({ data }) => {
                   'Interact directly via command line (CLI), customise, isolate keys and build and send commands'
                 )}
               >
-                <Button to="https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet">
+                <Button to="https://docs.vega.xyz/release/tools/vega-wallet/cli-wallet/create-wallet">
                   <Trans t={t}>Get the CLI app</Trans>
                 </Button>
               </TeamTile>

@@ -92,7 +92,7 @@ const MarketCreationPage = ({ data }) => {
       links: [
         {
           title: t('Read the docs to make a proposal'),
-          url: 'https://docs.vega.xyz/mainnet/tutorials/proposals/new-market-proposal',
+          url: 'https://docs.vega.xyz/release/tutorials/proposals/new-market-proposal',
         },
         {
           title: t('Check out the forum'),
@@ -108,7 +108,7 @@ const MarketCreationPage = ({ data }) => {
       links: [
         {
           title: t('Read the docs to make a proposal'),
-          url: 'https://docs.vega.xyz/mainnet/tutorials/proposals/new-market-proposal',
+          url: 'https://docs.vega.xyz/release/tutorials/proposals/new-market-proposal',
         },
       ],
       image: <Phase3 />,
@@ -134,7 +134,7 @@ const MarketCreationPage = ({ data }) => {
       links: [
         {
           title: t('Read the docs about liquidity provision'),
-          url: 'https://docs.vega.xyz/mainnet/concepts/liquidity/provision',
+          url: 'https://docs.vega.xyz/release/concepts/liquidity/provision',
         },
       ],
       image: <Phase5 />,
