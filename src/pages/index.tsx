@@ -260,29 +260,6 @@ export const query = graphql`
         }
       }
     }
-    blogPosts: allMediumPost(
-      limit: 1
-      sort: { fields: [firstPublishedAt], order: DESC }
-    ) {
-      edges {
-        node {
-          id
-          title
-          uniqueSlug
-          firstPublishedAt(formatString: "ll")
-          virtuals {
-            subtitle
-            readingTime
-            previewImage {
-              imageId
-            }
-          }
-          author {
-            name
-          }
-        }
-      }
-    }
     talks: allMarkdownRemark(
       limit: 1
       filter: {

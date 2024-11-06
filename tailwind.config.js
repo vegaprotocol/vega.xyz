@@ -26,13 +26,6 @@ const theme = {
   },
   backgroundImage: {
     'four-oh-four': "url('/404.png')",
-    fairground: "url('/fairground-bg.png')",
-    'experiment-on-fairground': "url('/experiment-on-fairground.svg')",
-    buildersClubHero: "url('/builders-club-hero-background.jpg')",
-    buildersClubFooter: "url('/builders-club-footer-background.jpg')",
-    buildersClubFooterLight:
-      "url('/builders-club-footer-background-light.jpg')",
-    countdownBar: "url('/countdown-marker.png')",
     moshed: "url('/moshed.jpg')",
     moshed2: "url('/moshed2.jpg')",
     moshed3: "url('/moshed3.jpg')",
@@ -294,15 +287,6 @@ const theme = {
       },
     },
   }),
-  keyframes: {
-    'fairground-marquee': {
-      from: { backgroundPositionX: 0 },
-      to: { backgroundPositionX: '-1326px' },
-    },
-  },
-  animation: {
-    'fairground-marquee': 'fairground-marquee 10s linear infinite;',
-  },
   gridTemplateColumns: {
     'auto-3': 'repeat(3, minmax(auto, auto))',
     'auto-4': 'repeat(4, minmax(auto, auto))',
