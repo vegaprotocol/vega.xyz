@@ -1,8 +1,7 @@
 {
   "functions": {
     "api/*.js": {
-      "maxDuration": 10,
-      "includeFiles": "vega-public-key.asc"
+      "maxDuration": 10
     }
   },
   "redirects": [
@@ -21,10 +20,6 @@
     {
       "source": "/assets/Wendy_Grows_Up.pdf",
       "destination": "/papers/Wendy_Grows_Up.pdf"
-    },
-    {
-      "source": "/buildersclubform",
-      "destination": "https://vegaprotocol.typeform.com/to/YgOgiGqF"
     }
   ]
 }

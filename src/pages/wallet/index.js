@@ -14,16 +14,12 @@ import DropdownArrow from '../../components/Svg/DropdownArrow'
 import TeamTile from '../../components/UI/TeamTile'
 import Sticky from 'react-stickynode'
 import ScrollSpy from 'react-ui-scrollspy'
-import Tooltip from '../../components/UI/Tooltip'
-import Tippy from '@tippyjs/react'
 import IconPlatformMac from '../../components/Svg/IconPlatformMac'
 import IconPlatformWindows from '../../components/Svg/IconPlatformWindows'
 import IconPlatformLinux from '../../components/Svg/IconPlatformLinux'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import './wallet.css'
-
-import { useDesktopWalletFairgroundDownloads } from '../../hooks/use-desktop-wallet-fairground-downloads'
 
 const WalletPageNew = ({ data }) => {
   const { t } = useTranslation('page.wallet')
@@ -33,10 +29,6 @@ const WalletPageNew = ({ data }) => {
     {
       title: t('Overview'),
       hash: 'overview',
-    },
-    {
-      title: t('Test on Fairground'),
-      hash: 'test-on-fairground',
     },
     {
       title: t('Developers'),
@@ -216,11 +208,6 @@ const WalletPageNew = ({ data }) => {
     let link =
       'https://chrome.google.com/webstore/detail/vega-wallet-mainnet/codfcglpplgmmlokgilfkpcjnmkbfiel'
 
-    if (network === 'Testnet') {
-      link =
-        'https://chrome.google.com/webstore/detail/vega-wallet/nmmjkiafpmphlikhefgjbblebfgclikn'
-    }
-
     return (
       <div
         className={className ? className : ''}
@@ -230,11 +217,7 @@ const WalletPageNew = ({ data }) => {
           <div className="relative -top-[2px] mr-3 inline-block w-[1.5rem] align-middle">
             <Chrome />
           </div>
-          {network === 'Testnet' ? (
-            <Trans t={t}>Get the Fairground Vega Wallet</Trans>
-          ) : (
-            <Trans t={t}>Get the Vega Wallet</Trans>
-          )}
+          <Trans t={t}>Get the Vega Wallet</Trans>
         </Button>
       </div>
     )
@@ -248,9 +231,6 @@ const WalletPageNew = ({ data }) => {
     let link =
       'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-beta/'
 
-    if (network === 'Testnet') {
-      link = 'https://addons.mozilla.org/en-GB/firefox/addon/vega-wallet-beta/'
-    }
     return (
       <div
         className={className ? className : ''}
@@ -269,8 +249,6 @@ const WalletPageNew = ({ data }) => {
   useEffect(() => {
     setUserAgent(getBrowser())
   }, [])
-
-  const { fairgroundDownloads } = useDesktopWalletFairgroundDownloads()
 
   return (
     <Layout stickyHeader={false}>
@@ -340,32 +318,6 @@ const WalletPageNew = ({ data }) => {
                 alt=""
                 className="mx-auto my-space-6 max-w-[18rem] dark:hidden md:hidden"
               />
-
-              <div className="mx-auto mt-space-8 flex max-w-[30rem] flex-wrap justify-center gap-x-8 gap-y-4 md:mx-0 md:justify-start">
-                <Button
-                  variant="secondary"
-                  to="#test-on-fairground"
-                  className="text-vega-light-300 dark:text-vega-dark-300"
-                >
-                  <Trans t={t}>Want to test on Fairground?</Trans>
-                </Button>
-
-                <Tippy
-                  content={
-                    <Tooltip>
-                      <div class="prose p-space-3">
-                        <p>
-                          Chrome and Firefox with more browsers coming soon.
-                        </p>
-                      </div>
-                    </Tooltip>
-                  }
-                >
-                  <div className="text-vega-light-300 underline underline-offset-8 dark:text-vega-dark-300">
-                    Supported browsers
-                  </div>
-                </Tippy>
-              </div>
             </div>
           </div>
           <div className="relative hidden h-[460px] justify-center md:col-span-6 md:flex xl:justify-end">
@@ -501,78 +453,6 @@ const WalletPageNew = ({ data }) => {
                       track of their status on the network.
                     </Trans>
                   </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="my-space-12 text-center md:my-space-14"
-            id="test-on-fairground"
-          >
-            <h2 className="mb-space-4 text-[2.5rem] leading-none md:text-[3.5rem]">
-              <Trans t={t}>Test on Fairground</Trans>
-            </h2>
-            <div class="prose mx-auto">
-              <p className="body-xl mb-space-6 md:mb-space-8">
-                <Trans t={t}>
-                  Head over to{' '}
-                  <a
-                    href="https://fairground.wtf/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Fairground
-                  </a>
-                  , Vega's testnet, and participate in incentives to earn
-                  rewards.
-                </Trans>
-              </p>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-x-8">
-              <div className="md:mb-space-0 mb-space-6 md:flex md:justify-end">
-                <div>
-                  {userAgent && userAgent === 'Chrome' && (
-                    <div>
-                      <ChromeDownloadButton network="Testnet" />
-                    </div>
-                  )}
-                  {userAgent && userAgent === 'Firefox' && (
-                    <div>
-                      <FirefoxDownloadButton network="Testnet" />
-                    </div>
-                  )}
-                  {userAgent && userAgent === 'Other' && (
-                    <div>
-                      <div className="mb-space-5">
-                        <ChromeDownloadButton
-                          network="Testnet"
-                          className="mb-3"
-                        />
-                        <FirefoxDownloadButton network="Testnet" />
-                      </div>
-                      <div className="prose mx-auto max-w-[30rem] md:mx-0">
-                        <p>
-                          <Trans t={t}>
-                            Vega Wallet browser extension officially supports
-                            Chrome or Firefox. Check the list of{' '}
-                            <Link to="https://github.com/vegaprotocol/vegawallet-browser/issues/360">
-                              supported browsers
-                            </Link>{' '}
-                            for latest guidance.
-                          </Trans>
-                        </p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-              <div className="md:flex md:justify-start">
-                <div>
-                  <DownloadButton
-                    binaries={fairgroundDownloads}
-                    variant="secondary"
-                    title={t('DOWNLOAD THE FAIRGROUND VEGA DESKTOP WALLET')}
-                  />
                 </div>
               </div>
             </div>

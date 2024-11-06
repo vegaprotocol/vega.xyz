@@ -11,7 +11,6 @@ import GlitchTitle from '../../components/GlitchTitle'
 import BoxLinkSimple from '../../components/BoxLinkSimple'
 import LeadingLine from '../../components/LeadingLine'
 import Accordion from '../../components/Accordion/Accordion'
-import NetworkParameter from '../../components/NetworkParameter'
 import Phase1 from '../../components/Svg/MarketCreation/Process/Phase1'
 import Phase2 from '../../components/Svg/MarketCreation/Process/Phase2'
 import Phase3 from '../../components/Svg/MarketCreation/Process/Phase3'
@@ -40,15 +39,9 @@ const MarketCreationPage = ({ data }) => {
             A proposal cannot be changed once submitted - it will be validated
             by the nodes and enter straight into the voting period - therefore
             it's important to submit only when you are happy with the proposal's
-            content. Anyone with{' '}
-            <NetworkParameter
-              param="governance_proposal_market_minProposerBalance"
-              suffix=" $VEGA"
-              formatForVega={true}
-            />{' '}
-            who has staked to a validator, can submit a new market proposal.
-            Once submitted, head back to the forum to rally the community to
-            vote.
+            content. Anyone with enough governance tokens who has staked to a
+            validator, can submit a new market proposal. Once submitted, head
+            back to the forum to rally the community to vote.
           </Trans>
         </p>
       </>
@@ -64,13 +57,7 @@ const MarketCreationPage = ({ data }) => {
             holders consider and vote for or against active proposals using the
             governance dApp. Share your market ideas on the Vega forum to get
             the community motivated to vote for your proposal. Note, each public
-            key with a minimum of{' '}
-            <NetworkParameter
-              param="governance_proposal_market_minVoterBalance"
-              suffix=" $VEGA"
-              formatForVega={true}
-            />{' '}
-            gets just one vote per proposal.
+            key with governance tokens gets just one vote per proposal.
           </Trans>
         </p>
       </>

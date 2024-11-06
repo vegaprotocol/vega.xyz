@@ -14,9 +14,7 @@ const BugBountiesPage = ({ data }) => {
     <Layout>
       <Seo
         title={t('Bug bounties')}
-        description={t(
-          'Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.'
-        )}
+        description={t('Found a software security issue? Report it to us!')}
       />
       <Container>
         <div className="pt-space-5 md:pt-space-6 lg:pt-space-10">
@@ -30,10 +28,7 @@ const BugBountiesPage = ({ data }) => {
               <div className="md:col-span-7 lg:col-span-8">
                 <div className="prose mb-16 max-w-none dark:prose-invert prose-headings:border-0">
                   <h2>
-                    <Trans t={t}>
-                      Found a software security issue? Report it to us and earn
-                      rewards by finding bugs that affect the Vega Network.
-                    </Trans>
+                    <Trans t={t}>Found a software security issue?</Trans>
                   </h2>
                   <p>
                     <Trans t={t}>
@@ -41,20 +36,12 @@ const BugBountiesPage = ({ data }) => {
                       either the Vega protocol software (node, data node,
                       wallet, etc.) or network or any supporting systems or code
                       used by the project, please submit a bug report by email
-                      or the web-form as described below to have this situation
                       resolved as soon as possible.
                     </Trans>
                   </p>
                   <h2>
                     <Trans t={t}>Scope</Trans>
                   </h2>
-                  <p>
-                    <Trans t={t}>
-                      Vega bug bounties are limited to the Core, Datanode, and
-                      all front end dApps including the desktop and hosted
-                      wallets.
-                    </Trans>
-                  </p>
                   <p>
                     <Trans t={t}>
                       The vega.xyz website or any bug related to the vega.xyz
@@ -81,10 +68,9 @@ const BugBountiesPage = ({ data }) => {
                   <ul>
                     <li>
                       <Trans t={t}>
-                        Submit a bug through email or, if you prefer,
-                        anonymously via the contact form below. If you want to
-                        send an encrypted message, use the Vega PGP key and send
-                        the email to security@vega.xyz.
+                        Submit a bug through email. If you want to send an
+                        encrypted message, use the Vega PGP key and send the
+                        email to security@vega.xyz.
                       </Trans>
                     </li>
 
@@ -111,20 +97,6 @@ const BugBountiesPage = ({ data }) => {
                     </Trans>
                   </p>
                   <h2>
-                    <Trans t={t}>Eligibility</Trans>
-                  </h2>
-                  <p>
-                    <Trans t={t}>
-                      Reward eligibility may be constrained by legal factors
-                      (e.g., not being allowed to make payments to certain
-                      countries or to transfer assets to anonymous accounts). We
-                      will do our best to find a way to reward submitters fairly
-                      for their discoveries, but may not be able to under all
-                      circumstances. Also, vulnerability abuse or sharing with
-                      third parties may disqualify you from any reward payment.
-                    </Trans>
-                  </p>
-                  <h2>
                     <Trans t={t}>We are not network operators</Trans>
                   </h2>
                   <p>
@@ -139,15 +111,7 @@ const BugBountiesPage = ({ data }) => {
                       systems, so we cannot help you if you do so in any way
                       that upsets them. For testing your discoveries, using a
                       separate protocol instance that you can run for yourselves
-                      is advised. The best way to do this is via the{' '}
-                      <a
-                        href="https://docs.vega.xyz/mainnet/tools#vega-capsule"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Trans t={t}></Trans>Vega Capsule tool
-                      </a>
-                      .
+                      is advised.
                     </Trans>
                   </p>
                   <h2>

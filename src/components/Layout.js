@@ -2,8 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Helmet } from 'react-helmet'
-import { AnnouncementBanner, Banner } from '../components/AnnouncementRemote'
-import { Analytics } from '@vercel/analytics/react'
+import { Banner } from '../components/Banner'
 import { GeorestrictedContext } from '../context/georestricted'
 
 const Layout = ({ children, stickyHeader = true }) => {
@@ -64,19 +63,12 @@ const Layout = ({ children, stickyHeader = true }) => {
                   )
                 }}
               </GeorestrictedContext.Consumer>
-              <div>
-                <AnnouncementBanner
-                  app="website"
-                  configUrl={process.env.GATSBY_ANNOUNCEMENTS_CONFIG_URL}
-                />
-                {children}
-              </div>
+              <div>{children}</div>
             </div>
           </div>
           <Footer />
         </div>
       </div>
-      <Analytics />
     </div>
   )
 }

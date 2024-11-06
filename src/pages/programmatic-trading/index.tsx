@@ -3,29 +3,21 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import Seo from '../../components/Seo'
-import Button from '../../components/UI/Button'
 import TeamTile from '../../components/UI/TeamTile'
 import InfoTile from '../../components/UI/InfoTile'
 import PageHeader from '../../components/UI/PageHeader'
-import Callout from '../../components/UI/Callout'
 import Link from '../../components/UI/Link'
 import ActionButton from '../../components/UI/ActionButton'
-import APIGraphic from '../../components/Svg/APIGraphic'
 import { getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import GRPC from '../../components/Svg/GRPC'
-import REST from '../../components/Svg/REST'
-import GraphQL from '../../components/Svg/GraphQL'
-import CoreNodes from '../../components/RestAPI/CoreNodes'
-import DataNodes from '../../components/RestAPI/DataNodes'
-import VegaWallet from '../../components/RestAPI/VegaWallet'
+import Button from '../../components/UI/Button'
 
 const ProgrammaticTrading = ({ data }) => {
   const { t } = useTranslation('page.programmatic-trading')
   const MarketMakerText = () => {
     return (
       <Trans t={t}>
-        User who place static or pagged order limit volume on the book will
+        Users who place static or pegged order limit volume on the book will
         receive a percentage of the trade value when matched based on the maker
         fee factor set on the network
       </Trans>
@@ -139,7 +131,6 @@ const ProgrammaticTrading = ({ data }) => {
             </div>
           </div>
         </div>
-
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <h3 className="mb-space-4 text-[2rem] leading-none">
             <Trans t={t}>2. CLI Wallet</Trans>
@@ -160,88 +151,11 @@ const ProgrammaticTrading = ({ data }) => {
           >
             <Trans t={t}>Download CLI Wallet</Trans>
           </Button>
-
-          <Callout
-            title={t('Advanced: Set up your own test network')}
-            subtitle={t(
-              'Experiment with the protocol by creating your own network on your computer'
-            )}
-            link="https://github.com/vegaprotocol/vegacapsule#readme"
-            linkText={t('Install Vega capsule')}
-          ></Callout>
-        </div>
-
-        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-          <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
-            <div>
-              <h3 className="mb-space-4 text-[2rem] leading-none">
-                <Trans t={t}>3. Explore the APIs</Trans>
-              </h3>
-            </div>
-            <APIGraphic className="w-full max-w-[16rem] self-end" />
-          </div>
-
-          <div className="grid grid-cols-1 gap-space-8 py-space-6 md:grid-cols-3">
-            <div>
-              <h2 className="heading-s mb-space-5">
-                <Trans t={t}>Core nodes</Trans>
-              </h2>
-              <CoreNodes />
-              <Button
-                className="mt-space-5"
-                variant="secondary"
-                to="https://docs.vega.xyz/mainnet/category/api/rest/core/core-service"
-              >
-                <Trans t={t}>View all core node APIs</Trans>
-              </Button>
-            </div>
-            <div>
-              <h2 className="heading-s mb-space-5">
-                <Trans t={t}>Data node</Trans>
-              </h2>
-              <DataNodes />
-              <Button
-                className="mt-space-5"
-                variant="secondary"
-                to="https://docs.vega.xyz/mainnet/api/rest/overview"
-              >
-                <Trans t={t}>View all data node APIs</Trans>
-              </Button>
-            </div>
-            <div>
-              <h2 className="heading-s mb-space-5">
-                <Trans t={t}>Vega wallet</Trans>
-              </h2>
-              <VegaWallet />
-              <Button
-                className="mt-space-5"
-                variant="secondary"
-                to="https://docs.vega.xyz/mainnet/concepts/vega-wallet"
-              >
-                <Trans t={t}>View wallet APIs</Trans>
-              </Button>
-            </div>
-          </div>
-
-          <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-            <div className="mb-space-10 mb-space-6 mt-space-6 flex items-center gap-x-10">
-              <div className="heading-s">
-                <Trans t={t}>Accessed via:</Trans>
-              </div>
-              <GRPC />
-              <REST />
-              <GraphQL />
-            </div>
-
-            <Button to="https://docs.vega.xyz/mainnet/api/overview">
-              <Trans t={t}>Integrate with the APIs</Trans>
-            </Button>
-          </div>
         </div>
 
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <h3 className="mb-space-6 text-[2rem] leading-none">
-            <Trans t={t}>4. Tutorials and code snippets</Trans>
+            <Trans t={t}>3. Tutorials and code snippets</Trans>
           </h3>
 
           <div className="grid grid-cols-1 gap-space-4 md:grid-cols-4 lg:gap-space-7">
