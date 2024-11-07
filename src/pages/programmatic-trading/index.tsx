@@ -17,9 +17,7 @@ const ProgrammaticTrading = ({ data }) => {
   const MarketMakerText = () => {
     return (
       <Trans t={t}>
-        Users who place static or pegged order limit volume on the book will
-        receive a percentage of the trade value when matched based on the maker
-        fee factor set on the network
+        The protocol can reward users for consistently placing volume on the book, and for engaging with markets by trading
       </Trans>
     )
   }
@@ -29,7 +27,7 @@ const ProgrammaticTrading = ({ data }) => {
       <Seo
         title={t('Programmatic Trading')}
         description={t(
-          'Programmatic trading on Vega is enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies.'
+          'The Vega protocol supports programmatic trading with rich CEX-style APIs that can be used to develop market making, liquidity provision, and directional trading strategies.'
         )}
       />
       <Container dataCy={'main'}>
@@ -37,7 +35,7 @@ const ProgrammaticTrading = ({ data }) => {
           <PageHeader
             title={t('Programmatic Trading')}
             description={t(
-              'Enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies'
+              'Enabled through rich CEX-style APIs for development of market making, liquidity provision, and directional trading strategies'
             )}
           />
         </div>
@@ -53,7 +51,7 @@ const ProgrammaticTrading = ({ data }) => {
             body={
               <div>
                 {t(
-                  "Users willing to commit a set bond amount to help ensure a market's liquidity additionally earn a liquidity provision fee set per market."
+                  "The protocool can be configured to reward users who ccommit to meeting a liquidity \"SLA\" with a share of fees and optionally additional token or stablecoin rewards."
                 )}{' '}
                 <Link
                   className="text-vega-black underline hover:no-underline dark:text-vega-white"
@@ -79,7 +77,7 @@ const ProgrammaticTrading = ({ data }) => {
           <p className="body-l mb-space-6 max-w-[38rem] md:mb-space-8">
             <Trans t={t}>
               Market making and liquidity provision is risky and for
-              sophisticated parties only. Users of this page should be able to:
+              sophisticated parties only. Users of these features should be able to:
             </Trans>
           </p>
 
@@ -133,23 +131,36 @@ const ProgrammaticTrading = ({ data }) => {
         </div>
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <h3 className="mb-space-4 text-[2rem] leading-none">
-            <Trans t={t}>2. CLI Wallet</Trans>
+            <Trans t={t}>2. CLI Wallet and signer libraries</Trans>
           </h3>
 
           <p className="body-xl mb-space-4">
             <Trans t={t}>
-              A version of the command line wallet is shopped with every new
+              A version of the command line wallet is shipped with every new
               version of the protocol allowing developers to programmatically
               sign transactions and access dApps on any network running the
-              protocol
+              protocol.
+            </Trans>
+          </p>
+
+          <p className="body-xl mb-space-4">
+            <Trans t={t}>
+              Alternastively, signer libraries for various languages allow
+              users to create and sign transactions using from within their applications
             </Trans>
           </p>
 
           <Button
             className="mb-space-6"
-            to="https://docs.vega.xyz/release/tools/vega-wallet/cli-wallet/latest/create-wallet"
+            to="https://docs.vega.xyz/release/tools/vega-wallet/cli-wallet/create-wallet"
           >
             <Trans t={t}>Download CLI Wallet</Trans>
+          </Button>        
+          <Button
+            className="mb-space-6"
+            to="https://docs.vega.xyz/release/tutorials/community-created#signer-libraries"
+          >
+            <Trans t={t}>Learn abouut signer libraries</Trans>
           </Button>
         </div>
 
@@ -169,7 +180,7 @@ const ProgrammaticTrading = ({ data }) => {
               <div className="prose mb-space-4 text-[1.125rem]">
                 <p>
                   <Trans t={t}>
-                    Start development of a bot to trade on Vega
+                    Start development of a bot for the Vega protocol
                   </Trans>
                 </p>
               </div>
@@ -222,14 +233,17 @@ const ProgrammaticTrading = ({ data }) => {
           </h2>
 
           <div className="grid grid-cols-1 gap-space-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-space-7">
-            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-on-vega/market-lifecycle">
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-framework/market-lifecycle">
               <Trans t={t}>Vega market lifecycle</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-on-vega/trading-modes">
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-framework/trading-modes">
               <Trans t={t}>Vega trading modes</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-on-vega/fees-rewards#">
-              <Trans t={t}>Fees & trading rewards</Trans>
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-framework/fees">
+              <Trans t={t}>Fees</Trans>
+            </ActionButton>
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-framework/discounts-rewards">
+              <Trans t={t}>Discounts & rewards</Trans>
             </ActionButton>
             <ActionButton to="https://docs.vega.xyz/release/concepts/liquidity/provision">
               <Trans t={t}>Providing liquidity</Trans>
