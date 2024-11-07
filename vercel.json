@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "api/*.js": {
-      "maxDuration": 10
-    }
-  },
   "redirects": [
     {
       "source": "/discord",
