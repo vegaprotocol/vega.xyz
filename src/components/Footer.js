@@ -54,22 +54,6 @@ const Footer = () => {
                     to="https://docs.vega.xyz/"
                     className="block py-1.5 leading-[1.3]"
                   >
-                    <Trans t={t}>Vega Docs</Trans>
-                  </TextLink>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="mb-3 text-[0.9375rem] uppercase">
-                <SquareBullet size="11" />
-                <Trans t={t}>Ecosystem</Trans>
-              </div>
-              <ul>
-                <li>
-                  <TextLink
-                    to="https://docs.vega.xyz/"
-                    className="block py-1.5 leading-[1.3]"
-                  >
                     <Trans t={t}>API Documentation</Trans>
                   </TextLink>
                 </li>
@@ -79,14 +63,6 @@ const Footer = () => {
                     className="block py-1.5 leading-[1.3]"
                   >
                     <Trans t={t}>Getting Started</Trans>
-                  </TextLink>
-                </li>
-                <li>
-                  <TextLink
-                    to="https://github.com/vegaprotocol"
-                    className="block py-1.5 leading-[1.3]"
-                  >
-                    <Trans t={t}>Github</Trans>
                   </TextLink>
                 </li>
                 <li>
