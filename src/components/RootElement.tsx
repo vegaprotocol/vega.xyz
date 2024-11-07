@@ -1,8 +1,7 @@
 import React from 'react'
-import { GeorestrictedProvider } from '../context/georestricted'
 
 const RootElement = ({ children }) => {
-  return <GeorestrictedProvider>{children}</GeorestrictedProvider>
+  return children
 }
 
 export default RootElement

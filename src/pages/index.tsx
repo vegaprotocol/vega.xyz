@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import { GeorestrictedContext } from '../context/georestricted'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Seo from '../components/Seo'
@@ -67,26 +66,7 @@ const IndexPage = ({ data }) => {
                   </div>
 
                   <div className="mb-space-8 md:mb-space-7 xl:flex xl:items-center xl:gap-x-6">
-                    <GeorestrictedContext.Consumer>
-                      {({ isGeorestricted }) => {
-                        if (isGeorestricted) {
-                          return null
-                        }
-                        return (
-                          <Button variant="hero" to="https://console.vega.xyz/">
-                            <Trans t={t}>Launch console</Trans>
-                          </Button>
-                        )
-                      }}
-                    </GeorestrictedContext.Consumer>
                     <div className="mt-space-4 flex items-center justify-center gap-x-6 md:justify-start xl:mt-0 xl:justify-center">
-                      <Button
-                        className="text-vega-dark-300"
-                        variant="secondary"
-                        to="/wallet"
-                      >
-                        <Trans t={t}>Vega Wallet</Trans>
-                      </Button>
                       <Button
                         className="text-vega-dark-300"
                         variant="secondary"

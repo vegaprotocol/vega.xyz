@@ -5,10 +5,8 @@ import ScreenMode from '../components/ScreenMode'
 import VegaLogo from '../components/Svg/VegaLogo'
 import MobileMenu from '../components/Navigation/MobileMenu'
 import MobileMenuButton from '../components/Navigation/MobileMenuButton'
-import HeaderCta from '../components/HeaderCta'
-import { Link, useTranslation } from 'gatsby-plugin-react-i18next'
+import { Link } from 'gatsby-plugin-react-i18next'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import { GeorestrictedContext } from '../context/georestricted'
 
 const Header = ({ sticky }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -29,8 +27,6 @@ const Header = ({ sticky }) => {
     })
   }, [])
 
-  const { t } = useTranslation('common')
-
   return (
     <div className="relative z-50">
       <header
@@ -50,46 +46,11 @@ const Header = ({ sticky }) => {
             </div>
 
             <div className="flex items-center">
-              {!menuIsOpen && (
-                <GeorestrictedContext.Consumer>
-                  {({ isGeorestricted }) => {
-                    if (isGeorestricted) {
-                      return null
-                    }
-
-                    return (
-                      <HeaderCta
-                        link="https://console.vega.xyz/"
-                        text={t('Launch App')}
-                        className="mr-3 hidden md:block lg:hidden"
-                      />
-                    )
-                  }}
-                </GeorestrictedContext.Consumer>
-              )}
-
               <MobileMenu toggleMenu={toggleMenu} isOpen={menuIsOpen} />
 
               <div className="flex items-center">
                 <ScreenMode />
                 <MobileMenuButton open={menuIsOpen} toggleMenu={toggleMenu} />
-                {!menuIsOpen && (
-                  <GeorestrictedContext.Consumer>
-                    {({ isGeorestricted }) => {
-                      if (isGeorestricted) {
-                        return null
-                      }
-
-                      return (
-                        <HeaderCta
-                          link="https://console.vega.xyz/"
-                          text={t('Launch App')}
-                          className="ml-3 hidden lg:block"
-                        />
-                      )
-                    }}
-                  </GeorestrictedContext.Consumer>
-                )}
               </div>
             </div>
           </div>

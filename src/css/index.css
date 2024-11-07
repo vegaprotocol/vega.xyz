@@ -29,12 +29,6 @@ body {
   @apply bg-vega-box-grey;
 }
 
-body.georestricted #liquidity-provision,
-body.georestricted .liquidity-provision-page-section,
-body.georestricted .restricted-link {
-  display: none !important;
-}
-
 @screen md {
   .contributor-block:nth-child(4n) .contributor-block-detail,
   .contributor-block:nth-child(4n + 1) .contributor-block-detail {

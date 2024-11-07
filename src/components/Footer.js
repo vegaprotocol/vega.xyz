@@ -73,11 +73,6 @@ const Footer = () => {
                     <Trans t={t}>Programmatic Trading</Trans>
                   </TextLink>
                 </li>
-                <li>
-                  <TextLink to="/wallet" className="block py-1.5 leading-[1.3]">
-                    <Trans t={t}>Wallet</Trans>
-                  </TextLink>
-                </li>
               </ul>
             </div>
             <div>
