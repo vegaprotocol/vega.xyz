@@ -1,30 +1,8 @@
 {
-  "functions": {
-    "api/*.js": {
-      "maxDuration": 10,
-      "includeFiles": "vega-public-key.asc"
-    }
-  },
   "redirects": [
     {
       "source": "/discord",
       "destination": "https://discord.gg/3hQyGgZ"
-    },
-    {
-      "source": "/about",
-      "destination": "/key-concepts"
-    },
-    {
-      "source": "/insights",
-      "destination": "/articles"
-    },
-    {
-      "source": "/background",
-      "destination": "/papers"
-    },
-    {
-      "source": "/who",
-      "destination": "/partners-backers"
     },
     {
       "source": "/assets/vega-technical-overview.pdf",
@@ -37,18 +15,6 @@
     {
       "source": "/assets/Wendy_Grows_Up.pdf",
       "destination": "/papers/Wendy_Grows_Up.pdf"
-    },
-    {
-      "source": "/buildersclubform",
-      "destination": "https://vegaprotocol.typeform.com/to/YgOgiGqF"
-    },
-    {
-      "source": "/apps",
-      "destination": "/ecosystem"
-    },
-    {
-      "source": "/apps/",
-      "destination": "/ecosystem"
     }
   ]
 }

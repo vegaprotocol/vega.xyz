@@ -1,40 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Seo from '../../components/Seo'
-import Button from '../../components/UI/Button'
 import TeamTile from '../../components/UI/TeamTile'
 import InfoTile from '../../components/UI/InfoTile'
 import PageHeader from '../../components/UI/PageHeader'
-import Callout from '../../components/UI/Callout'
 import Link from '../../components/UI/Link'
 import ActionButton from '../../components/UI/ActionButton'
-import APIGraphic from '../../components/Svg/APIGraphic'
 import { getImage } from 'gatsby-plugin-image'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
-import GRPC from '../../components/Svg/GRPC'
-import REST from '../../components/Svg/REST'
-import GraphQL from '../../components/Svg/GraphQL'
-import CoreNodes from '../../components/RestAPI/CoreNodes'
-import DataNodes from '../../components/RestAPI/DataNodes'
-import VegaWallet from '../../components/RestAPI/VegaWallet'
+import Button from '../../components/UI/Button'
 
 const ProgrammaticTrading = ({ data }) => {
-  const { t, i18n } = useTranslation('page.programmatic-trading')
-  const [missingTranslations, setMissingTranslations] = useState(false)
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
-
+  const { t } = useTranslation('page.programmatic-trading')
   const MarketMakerText = () => {
     return (
       <Trans t={t}>
-        User who place static or pagged order limit volume on the book will
-        receive a percentage of the trade value when matched based on the maker
-        fee factor set on the network
+        The protocol can reward users for consistently placing volume on the book, and for engaging with markets by trading
       </Trans>
     )
   }
@@ -44,16 +27,15 @@ const ProgrammaticTrading = ({ data }) => {
       <Seo
         title={t('Programmatic Trading')}
         description={t(
-          'Programmatic trading on Vega is enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies.'
+          'The Vega protocol supports programmatic trading with rich CEX-style APIs that can be used to develop market making, liquidity provision, and directional trading strategies.'
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <Container dataCy={'main'}>
         <div className="mx-auto mb-space-10 max-w-[60rem] pt-space-5 text-center md:mb-space-11 md:pt-space-6 lg:pt-space-10">
           <PageHeader
             title={t('Programmatic Trading')}
             description={t(
-              'Enabled through rich CEX-style APIs for deployment of market making, liquidity provision, and directional trading strategies'
+              'Enabled through rich CEX-style APIs for development of market making, liquidity provision, and directional trading strategies'
             )}
           />
         </div>
@@ -69,11 +51,11 @@ const ProgrammaticTrading = ({ data }) => {
             body={
               <div>
                 {t(
-                  "Users willing to commit a set bond amount to help ensure a market's liquidity additionally earn a liquidity provision fee set per market."
+                  "The protocool can be configured to reward users who ccommit to meeting a liquidity \"SLA\" with a share of fees and optionally additional token or stablecoin rewards."
                 )}{' '}
                 <Link
                   className="text-vega-black underline hover:no-underline dark:text-vega-white"
-                  to="https://docs.vega.xyz/testnet/concepts/liquidity/provision"
+                  to="https://docs.vega.xyz/release/concepts/liquidity/provision"
                 >
                   Learn more
                 </Link>
@@ -83,7 +65,7 @@ const ProgrammaticTrading = ({ data }) => {
           />
         </div>
 
-        <h2 className="mt-space-10 mb-space-6 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
+        <h2 className="mb-space-6 mt-space-10 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
           <Trans t={t}>Starter kit</Trans>
         </h2>
 
@@ -95,7 +77,7 @@ const ProgrammaticTrading = ({ data }) => {
           <p className="body-l mb-space-6 max-w-[38rem] md:mb-space-8">
             <Trans t={t}>
               Market making and liquidity provision is risky and for
-              sophisticated parties only. Users of this page should be able to:
+              sophisticated parties only. Users of these features should be able to:
             </Trans>
           </p>
 
@@ -147,123 +129,58 @@ const ProgrammaticTrading = ({ data }) => {
             </div>
           </div>
         </div>
-
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <h3 className="mb-space-4 text-[2rem] leading-none">
-            <Trans t={t}>2. CLI Wallet</Trans>
+            <Trans t={t}>2. CLI Wallet and signer libraries</Trans>
           </h3>
 
           <p className="body-xl mb-space-4">
             <Trans t={t}>
-              A version of the command line wallet is shopped with every new
+              A version of the command line wallet is shipped with every new
               version of the protocol allowing developers to programmatically
               sign transactions and access dApps on any network running the
-              protocol
+              protocol.
+            </Trans>
+          </p>
+
+          <p className="body-xl mb-space-4">
+            <Trans t={t}>
+              Alternastively, signer libraries for various languages allow
+              users to create and sign transactions using from within their applications
             </Trans>
           </p>
 
           <Button
             className="mb-space-6"
-            to="https://docs.vega.xyz/mainnet/tools/vega-wallet/cli-wallet/latest/create-wallet"
+            to="https://docs.vega.xyz/release/tools/vega-wallet/cli-wallet/create-wallet"
           >
             <Trans t={t}>Download CLI Wallet</Trans>
+          </Button>        
+          <Button
+            className="mb-space-6"
+            to="https://docs.vega.xyz/release/tutorials/community-created#signer-libraries"
+          >
+            <Trans t={t}>Learn abouut signer libraries</Trans>
           </Button>
-
-          <Callout
-            title={t('Advanced: Set up your own test network')}
-            subtitle={t(
-              'Experiment with the protocol by creating your own network on your computer'
-            )}
-            link="https://github.com/vegaprotocol/vegacapsule#readme"
-            linkText={t('Install Vega capsule')}
-          ></Callout>
-        </div>
-
-        <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-          <div className="border-b-2 border-current md:flex md:items-center md:justify-between">
-            <div>
-              <h3 className="mb-space-4 text-[2rem] leading-none">
-                <Trans t={t}>3. Explore the APIs</Trans>
-              </h3>
-            </div>
-            <APIGraphic className="w-full max-w-[16rem] self-end" />
-          </div>
-
-          <div className="grid grid-cols-1 gap-space-8 py-space-6 md:grid-cols-3">
-            <div>
-              <h2 className="heading-s mb-space-5">
-                <Trans t={t}>Core nodes</Trans>
-              </h2>
-              <CoreNodes />
-              <Button
-                className="mt-space-5"
-                variant="secondary"
-                to="https://docs.vega.xyz/mainnet/category/api/rest/core/core-service"
-              >
-                <Trans t={t}>View all core node APIs</Trans>
-              </Button>
-            </div>
-            <div>
-              <h2 className="heading-s mb-space-5">
-                <Trans t={t}>Data node</Trans>
-              </h2>
-              <DataNodes />
-              <Button
-                className="mt-space-5"
-                variant="secondary"
-                to="https://docs.vega.xyz/mainnet/api/rest/overview"
-              >
-                <Trans t={t}>View all data node APIs</Trans>
-              </Button>
-            </div>
-            <div>
-              <h2 className="heading-s mb-space-5">
-                <Trans t={t}>Vega wallet</Trans>
-              </h2>
-              <VegaWallet />
-              <Button
-                className="mt-space-5"
-                variant="secondary"
-                to="https://docs.vega.xyz/mainnet/concepts/vega-wallet"
-              >
-                <Trans t={t}>View wallet APIs</Trans>
-              </Button>
-            </div>
-          </div>
-
-          <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
-            <div className="mt-space-6 mb-space-6 mb-space-10 flex items-center gap-x-10">
-              <div className="heading-s">
-                <Trans t={t}>Accessed via:</Trans>
-              </div>
-              <GRPC />
-              <REST />
-              <GraphQL />
-            </div>
-
-            <Button to="https://docs.vega.xyz/mainnet/api/overview">
-              <Trans t={t}>Integrate with the APIs</Trans>
-            </Button>
-          </div>
         </div>
 
         <div className="mb-space-10 md:mb-space-11 lg:mb-space-13">
           <h3 className="mb-space-6 text-[2rem] leading-none">
-            <Trans t={t}>4. Tutorials and code snippets</Trans>
+            <Trans t={t}>3. Tutorials and code snippets</Trans>
           </h3>
 
           <div className="grid grid-cols-1 gap-space-4 md:grid-cols-4 lg:gap-space-7">
             <InfoTile
               title={t('Getting started')}
               link={{
-                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/getting-started',
+                to: 'https://docs.vega.xyz/release/tutorials/building-a-bot/getting-started',
                 title: t('View'),
               }}
             >
               <div className="prose mb-space-4 text-[1.125rem]">
                 <p>
                   <Trans t={t}>
-                    Start development of a bot to trade on Vega
+                    Start development of a bot for the Vega protocol
                   </Trans>
                 </p>
               </div>
@@ -271,7 +188,7 @@ const ProgrammaticTrading = ({ data }) => {
             <InfoTile
               title={t('Streaming data')}
               link={{
-                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/streaming-data',
+                to: 'https://docs.vega.xyz/release/tutorials/building-a-bot/streaming-data',
                 title: t('View'),
               }}
             >
@@ -284,7 +201,7 @@ const ProgrammaticTrading = ({ data }) => {
             <InfoTile
               title={t('Adding a liquidity commitment')}
               link={{
-                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/adding-a-liquidity-commitment',
+                to: 'https://docs.vega.xyz/release/tutorials/building-a-bot/adding-a-liquidity-commitment',
                 title: t('View'),
               }}
             >
@@ -297,7 +214,7 @@ const ProgrammaticTrading = ({ data }) => {
             <InfoTile
               title={t('Adding an external price feed')}
               link={{
-                to: 'https://docs.vega.xyz/mainnet/tutorials/building-a-bot/adding-an-external-price',
+                to: 'https://docs.vega.xyz/release/tutorials/building-a-bot/adding-an-external-price',
                 title: t('View'),
               }}
             >
@@ -311,21 +228,24 @@ const ProgrammaticTrading = ({ data }) => {
         </div>
 
         <div className="mb-space-10 md:mb-space-11 md:grid-cols-2 lg:mb-space-14">
-          <h2 className="mt-space-10 mb-space-6 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
+          <h2 className="mb-space-6 mt-space-10 text-center text-[2.5rem] leading-none md:mb-space-10 md:mt-space-11 md:text-[3.5rem] lg:mt-space-13">
             <Trans t={t}>Key Resources</Trans>
           </h2>
 
           <div className="grid grid-cols-1 gap-space-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-space-7">
-            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/market-lifecycle">
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-framework/market-lifecycle">
               <Trans t={t}>Vega market lifecycle</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/trading-modes">
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-framework/trading-modes">
               <Trans t={t}>Vega trading modes</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/trading-on-vega/fees-rewards#">
-              <Trans t={t}>Fees & trading rewards</Trans>
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-framework/fees">
+              <Trans t={t}>Fees</Trans>
             </ActionButton>
-            <ActionButton to="https://docs.vega.xyz/mainnet/concepts/liquidity/provision">
+            <ActionButton to="https://docs.vega.xyz/release/concepts/trading-framework/discounts-rewards">
+              <Trans t={t}>Discounts & rewards</Trans>
+            </ActionButton>
+            <ActionButton to="https://docs.vega.xyz/release/concepts/liquidity/provision">
               <Trans t={t}>Providing liquidity</Trans>
             </ActionButton>
           </div>

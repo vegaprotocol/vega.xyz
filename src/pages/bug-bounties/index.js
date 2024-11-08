@@ -1,91 +1,21 @@
-import React, { useState, useRef } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import Seo from '../../components/Seo'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Callout from '../../components/Callout'
-import axios from 'axios'
 import pgpKeyFile from '../../../vega-public-key.asc'
-import Loader from '../../components/Loader'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const BugBountiesPage = ({ data }) => {
-  const { t, i18n } = useTranslation('page.bug-bounties')
-  const [missingTranslations, setMissingTranslations] = useState(false)
-  const [message, setMessage] = useState('')
-  const [confirmDialog, setConfirmDialog] = useState(false)
-  const [formError, setFormError] = useState({ error: true, message: '' })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [confirmationMessage, setConfirmationMessage] = useState('')
-  const form = useRef()
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
-
-  const checkForm = () => {
-    if (confirmationMessage) {
-      setConfirmationMessage('')
-    }
-    if (form.current.value === '') {
-      setFormError({
-        error: true,
-        message: 'You cannot send an empty submission',
-      })
-    } else {
-      setFormError({ error: false, message: '' })
-    }
-    return false
-  }
-
-  const confirmSubmit = () => {
-    if (formError.error) {
-      checkForm()
-      return false
-    } else {
-      setConfirmDialog(true)
-    }
-  }
-
-  const send = (e) => {
-    e.preventDefault()
-
-    setIsSubmitting(true)
-    const functionPath = '/api/send-bug-report'
-
-    axios
-      .post(functionPath, {
-        message,
-      })
-      .then((res) => {
-        setIsSubmitting(false)
-        setConfirmDialog(false)
-        setFormError({ error: false, message: '' })
-        form.current.value = ''
-        setConfirmationMessage(
-          t('Your message was successfully encrypted and delivered.')
-        )
-      })
-      .catch((error) => {
-        setIsSubmitting(false)
-        setConfirmDialog(false)
-        setFormError({
-          error: false,
-          message: t('Sorry, your submission failed, please try again later.'),
-        })
-      })
-  }
+  const { t } = useTranslation('page.bug-bounties')
 
   return (
     <Layout>
       <Seo
         title={t('Bug bounties')}
-        description={t(
-          'Found a software security issue? Report it to us and earn rewards by finding bugs that affect the Vega Network.'
-        )}
+        description={t('Found a software security issue? Report it to us!')}
       />
-      {missingTranslations && <TranslationsBanner />}
       <Container>
         <div className="pt-space-5 md:pt-space-6 lg:pt-space-10">
           <div className=" border-t border-current">
@@ -96,12 +26,9 @@ const BugBountiesPage = ({ data }) => {
                 </h1>
               </div>
               <div className="md:col-span-7 lg:col-span-8">
-                <div className="prose mb-16 max-w-none prose-headings:border-0 dark:prose-invert">
+                <div className="prose mb-16 max-w-none dark:prose-invert prose-headings:border-0">
                   <h2>
-                    <Trans t={t}>
-                      Found a software security issue? Report it to us and earn
-                      rewards by finding bugs that affect the Vega Network.
-                    </Trans>
+                    <Trans t={t}>Found a software security issue?</Trans>
                   </h2>
                   <p>
                     <Trans t={t}>
@@ -109,20 +36,12 @@ const BugBountiesPage = ({ data }) => {
                       either the Vega protocol software (node, data node,
                       wallet, etc.) or network or any supporting systems or code
                       used by the project, please submit a bug report by email
-                      or the web-form as described below to have this situation
                       resolved as soon as possible.
                     </Trans>
                   </p>
                   <h2>
                     <Trans t={t}>Scope</Trans>
                   </h2>
-                  <p>
-                    <Trans t={t}>
-                      Vega bug bounties are limited to the Core, Datanode, and
-                      all front end dApps including the desktop and hosted
-                      wallets.
-                    </Trans>
-                  </p>
                   <p>
                     <Trans t={t}>
                       The vega.xyz website or any bug related to the vega.xyz
@@ -149,10 +68,9 @@ const BugBountiesPage = ({ data }) => {
                   <ul>
                     <li>
                       <Trans t={t}>
-                        Submit a bug through email or, if you prefer,
-                        anonymously via the contact form below. If you want to
-                        send an encrypted message, use the Vega PGP key and send
-                        the email to security@vega.xyz.
+                        Submit a bug through email. If you want to send an
+                        encrypted message, use the Vega PGP key and send the
+                        email to security@vega.xyz.
                       </Trans>
                     </li>
 
@@ -179,20 +97,6 @@ const BugBountiesPage = ({ data }) => {
                     </Trans>
                   </p>
                   <h2>
-                    <Trans t={t}>Eligibility</Trans>
-                  </h2>
-                  <p>
-                    <Trans t={t}>
-                      Reward eligibility may be constrained by legal factors
-                      (e.g., not being allowed to make payments to certain
-                      countries or to transfer assets to anonymous accounts). We
-                      will do our best to find a way to reward submitters fairly
-                      for their discoveries, but may not be able to under all
-                      circumstances. Also, vulnerability abuse or sharing with
-                      third parties may disqualify you from any reward payment.
-                    </Trans>
-                  </p>
-                  <h2>
                     <Trans t={t}>We are not network operators</Trans>
                   </h2>
                   <p>
@@ -207,15 +111,7 @@ const BugBountiesPage = ({ data }) => {
                       systems, so we cannot help you if you do so in any way
                       that upsets them. For testing your discoveries, using a
                       separate protocol instance that you can run for yourselves
-                      is advised. The best way to do this is via the{' '}
-                      <a
-                        href="https://docs.vega.xyz/mainnet/tools#vega-capsule"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Trans t={t}></Trans>Vega Capsule tool
-                      </a>
-                      .
+                      is advised.
                     </Trans>
                   </p>
                   <h2>
@@ -228,90 +124,7 @@ const BugBountiesPage = ({ data }) => {
                       is detailed below.
                     </Trans>
                   </p>
-                  <p>
-                    <Trans t={t}>
-                      For anonymous submissions, you can use the following form:
-                    </Trans>
-                  </p>
-
-                  <form className="mt-12">
-                    <textarea
-                      ref={form}
-                      required
-                      className="font-not-glitched mb-6 w-full border border-white/20 bg-vega-box-grey p-3 focus:border-white/20 focus:outline-vega-pink"
-                      data-cy={'bugBountyForm'}
-                      rows="15"
-                      onChange={(e) => {
-                        setMessage(e.target.value)
-                        checkForm()
-                      }}
-                    />
-                    {formError.message !== '' && (
-                      <div className="text-vega-pink">{formError.message}</div>
-                    )}
-                    {confirmationMessage !== '' && (
-                      <div
-                        className="text-vega-mint"
-                        data-cy={'confirmationMsg'}
-                      >
-                        {confirmationMessage}
-                      </div>
-                    )}
-                    <br />
-                    <button
-                      className="leading-1 inline-block border border-current px-8 py-3 text-[0.9375rem] uppercase tracking-[0.01rem] text-current"
-                      data-cy={'sendMsgBtn'}
-                      type="button"
-                      onClick={(e) => confirmSubmit()}
-                    >
-                      <Trans t={t}>Send Message</Trans>
-                    </button>
-                  </form>
                 </div>
-
-                {confirmDialog && (
-                  <div className="fixed top-0 left-0 right-0 bottom-0 grid place-items-center bg-vega-box-grey/80">
-                    <div
-                      className="w-full min-w-[17.5rem] max-w-[30rem] bg-black"
-                      data-cy={'submitDialog'}
-                    >
-                      <div className="p-6">
-                        <div className="title-s">
-                          <Trans t={t}>Submit bug report</Trans>
-                        </div>
-                      </div>
-
-                      <div className="px-6">
-                        <p className="text-m">
-                          <Trans t={t}>
-                            Are you sure you want to submit the form?
-                          </Trans>
-                        </p>
-                      </div>
-
-                      <div className="mt-6 flex items-center justify-end px-6 py-3">
-                        <button
-                          className="ml-6 cursor-pointer uppercase"
-                          data-cy={'cancelSubmitDiaglog'}
-                          onClick={(e) => setConfirmDialog(false)}
-                        >
-                          <Trans t={t}>Cancel</Trans>
-                        </button>
-                        {isSubmitting ? (
-                          <Loader className="ml-3" />
-                        ) : (
-                          <button
-                            className="ml-6 cursor-pointer uppercase"
-                            data-cy={'confirmSubmitDialog'}
-                            onClick={(e) => send(e)}
-                          >
-                            <Trans t={t}>Submit</Trans>
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )}
 
                 <Callout
                   title={t('PGP Key')}

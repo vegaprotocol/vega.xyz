@@ -55,13 +55,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `jobs`,
-        path: `${__dirname}/src/content/jobs`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `papers`,
         path: `${__dirname}/src/content/papers`,
       },
@@ -78,19 +71,6 @@ module.exports = {
       options: {
         name: `articles`,
         path: `${__dirname}/src/content/articles`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `faqs`,
-        path: `${__dirname}/src/content/faqs`,
-      },
-    },
-    {
-      resolve: `gatsby-source-medium`,
-      options: {
-        username: `vegaprotocol`,
       },
     },
     {
@@ -136,9 +116,6 @@ module.exports = {
               object.collection.slice(1).toLowerCase()
             : `Json`,
       },
-    },
-    {
-      resolve: '@vercel/gatsby-plugin-vercel-analytics',
     },
   ],
   graphqlTypegen: true,

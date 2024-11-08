@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
-import TranslationsBanner from '../components/TranslationsBanner'
 import Container from '../components/Container'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 import NewsListItem from '../components/UI/NewsListItem'
@@ -10,7 +9,7 @@ import Talk from '../components/Talk'
 import PageHeader from '../components/UI/PageHeader'
 
 const ArticlesPage = ({ data, pageContext }) => {
-  const { i18n, t } = useTranslation('page.articles')
+  const { t } = useTranslation('page.articles')
   const [missingTranslations, setMissingTranslations] = useState(false)
   const { currentPage, numPages } = pageContext
   const isFirst = currentPage === 1
@@ -21,10 +20,6 @@ const ArticlesPage = ({ data, pageContext }) => {
   const prevPage =
     currentPage - 1 === 1 ? '/articles' : `/articles/${currentPage - 1}`
   const nextPage = `/articles/${currentPage + 1}`
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
 
   const Pagination = () => {
     return (
@@ -88,7 +83,6 @@ const ArticlesPage = ({ data, pageContext }) => {
           'Articles about Vega and recordings of past talks, events and podcasts'
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-7">
         <Container>
           <div className="mb-space-8 text-center md:mb-space-10 lg:mb-space-11">
@@ -105,7 +99,7 @@ const ArticlesPage = ({ data, pageContext }) => {
           </div>
 
           <div className="grid border-t border-vega-light-200 pt-space-6 dark:border-vega-dark-200 md:grid-cols-12 md:gap-space-8">
-            <div className="md:col-span-12">
+            <div className="col-span-12 md:col-span-12">
               {data.allMarkdownRemark.edges.map((content, idx) => (
                 <div key={idx}>
                   {content.node.collection === 'talks' ? (

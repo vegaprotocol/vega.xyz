@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
-import TranslationsBanner from '../../components/TranslationsBanner'
 import Container from '../../components/Container'
 import Developers from '../../components/Svg/Developers'
 import IconGithub from '../../components/Svg/OutlineIcons/Github'
 import IconDocumentation from '../../components/Svg/OutlineIcons/Documentation'
 import IconProgrammaticTrading from '../../components/Svg/OutlineIcons/ProgrammaticTrading'
 import IconDiscord from '../../components/Svg/OutlineIcons/Discord'
-import IconSecurity from '../../components/Svg/OutlineIcons/Security'
 import LinkWrapper from '../../components/UI/LinkWrapper'
 
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
@@ -28,12 +26,7 @@ const Box = ({ title, icon, link, className }) => {
 }
 
 const DevelopPage = ({ data }) => {
-  const { i18n, t } = useTranslation('page.develop')
-  const [missingTranslations, setMissingTranslations] = useState(false)
-
-  i18n.on('missingKey', (lng) => {
-    i18n.language !== 'en' && setMissingTranslations(true)
-  })
+  const { t } = useTranslation('page.develop')
 
   return (
     <Layout>
@@ -43,7 +36,6 @@ const DevelopPage = ({ data }) => {
           "Explore Vega's technical documentation, build integrations via APIs, or contribute to our open source repositories on Github"
         )}
       />
-      {missingTranslations && <TranslationsBanner />}
       <div data-cy={'main'} className="pt-space-5 md:pt-space-6 lg:pt-space-10">
         <Container hideXOverflow={true}>
           <div className="mx-auto mb-space-9 text-center">
@@ -64,7 +56,7 @@ const DevelopPage = ({ data }) => {
             <h2 className="mb-space-7 text-center text-[40px]">
               <Trans t={t}>Getting Started</Trans>
             </h2>
-            <div className="md:grid-cols-auto mx-auto mb-space-9 grid max-w-[72rem] grid-cols-12 gap-space-5 md:mb-space-14 lg:grid-cols-5">
+            <div className="md:grid-cols-auto mx-auto mb-space-9 grid max-w-[72rem] grid-cols-12 gap-space-5 md:mb-space-14 lg:grid-cols-4">
               <Box
                 title={t('Github')}
                 icon={<IconGithub />}
@@ -81,12 +73,6 @@ const DevelopPage = ({ data }) => {
                 link="/programmatic-trading"
               />
               <Box
-                title={t('Report a security issue')}
-                icon={<IconSecurity />}
-                link="/bug-bounties"
-              />
-              <Box
-                className="col-start-4"
                 title={t('Discord')}
                 icon={<IconDiscord />}
                 link="https://vega.xyz/discord"
